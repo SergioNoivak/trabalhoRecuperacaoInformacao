@@ -1,0 +1,4109 @@
+© Casa do Código
+Todos os direitos reservados e protegidos pela Lei nº9.610, de
+10/02/1998.
+Nenhuma parte deste livro poderá ser reproduzida, nem transmitida, sem
+autorização prévia por escrito da editora, sejam quais forem os meios:
+fotográficos, eletrônicos, mecânicos, gravação ou quaisquer outros.
+Casa do Código
+Livros para o programador
+Rua Vergueiro, 3185 - 8º andar
+04101-300 – Vila Mariana – São Paulo – SP – Brasil
+
+Casa do Código
+
+Agradecimentos
+Escrever um livro não é tarefa fácil. São várias reescritas, conceitos que na
+sua cabeça são claros, mas na hora de escrever, sempre escapa um detalhe,
+um tópico importante, uma palavra mal colocada. Aí que entram a Cléo Silva
+e a Vivian Matsui. A primeira lendo o livro de cabo a rabo e fazendo uma
+miniciosa revisão técnica em todo o conteúdo e a segunda por corrigir minhas
+atrocidades com o nosso idioma.
+Além disso, os profissionais que me apoiam diariamente na Caelum, Casa
+do Código e Alura, três empresas das quais faço parte com orgulho.
+E por último e mais importante, para a Suzana, LH e José Orlando (pais) e
+irmãos, que já estão comigo por décadas sempre me ensinando coisas novas.
+Também gostaria de deixar minha lembrança póstuma ao grande Luca
+Bastos, grandíssimo desenvolvedor de software que deixou um enorme
+legado na comunidade de TI nacional.
+
+i
+
+Casa do Código
+
+Prefácio
+Quando comecei a estudar SEO, as meta tags, inclusive a extinta keywords,
+eram suficientes para fazer com que as páginas de um site ficassem bem posicionadas nas SERPs (Search Engine Results Pages). Naquela época, os algoritmos de buscas do Google e dos outros buscadores não eram tão complicados, os links conseguidos de “farm links” eram uma benção, pois também te
+colocavam na primeira posição em muito pouco tempo. Era muito fácil! Por
+conta dessa facilidade, mergulhei de cabeça na área. Lia tudo que encontrava
+em blogs, seguia as pessoas de SEO no Twitter, comprei livros. No entanto,
+as empresas ainda não confiavam no retorno do serviço, pois infelizmente
+não se tem garantias no SEO, não tem como prometer para o cliente que sua
+página vai ficar em primeiro com algumas alterações no site.
+Mas o tempo passou e esse cenário mudou e muito. Ainda bem! As empresas estão preocupadas com sua posição nos sites de buscas, elas querem
+que sua marca, produto ou serviço sejam vistos e acessados por essa grande
+parcela de internautas - pelo menos 92% das pessoas que usam a internet
+fazem pesquisas antes de comprar alguma coisa na internet.
+No entanto, hoje em dia temos vários desafios, a começar pela concorrência e as mudanças dos algoritmos de busca. O Google mesmo tem de 500 a
+600 pequenas alterações no seu algortmo por mês, porém as que mais preocupam os SEOs são as de bichos como Panda e Penguin. Dessas mais importantes atualizações, só no ano de 2014, foram divulgadas 15. Já perdi meses
+de trabalho por causa de uma dessas atualizações e não foi por punição, mas
+em como o Google decidiu beneficiar o máximo possível seus usuários em
+relação ao que eles buscam.
+Mesmo assim, não desanimei. A área de SEO é fantástica e é incrível como
+iii
+
+Casa do Código
+
+a cada dia você se depara com situações e resultados de ações e estratégias
+que você aplicou. Isso é satisfatório. Ver no final que você bateu 30% além das
+metas estipuladas, que conseguiu vender 300% a mais que no ano anterior
+por conta dos acessos orgânicos. E o melhor, não é pago! Você não paga para
+aparecer nos resultados orgânicos, logo seu lucro pode ser maior do que se
+investir em resultados pagos, já que você tem que pagar por esses acessos.
+O melhor e o que facilita ainda mais, é que hoje em dia temos acessos a
+informações que, quando eu comecei, não eram tão simples de encontrar! Os
+bons livros disponíveis eram em inglês, o Google não divulgava muito suas atualizações, tinha-se poucos blogs sobre o assunto e, dos livros em português,
+o material não era tão bom. Diferente desse livro, que apresenta uma ótima
+didática e é um ótimo ponto de partida para você que se interessou por SEO.
+Use esse livro como checklist e aprofunde-se mais ainda nos assuntos. Faça
+como eu fiz, pesquise, siga as pessoas certas nas redes sociais, leia os blogs e
+leia esse livro de cabo a rabo!
+SEO é influenciado por tudo que é feito no site, desde o design até a infra estrutura e também influenciado por todos que trabalham nele. Aproveite
+esse novo conhecimento para catequisar seus colegas no assunto e seja um
+especialista na área. No mercado, é uma área pouco explorada e bons profissionais ainda são raridades.
+Então, boa sorte na sua nova jornada! Espero que, como eu, você consiga
+se destacar. Comecei como uma analista de SEO em uma agência em BH, hoje
+trabalho para o terceiro maior e-commerce do mundo como especialista de
+SEO. Espero esbarrar com você algum dia nesse mundo de resultados orgânicos, mudanças e desafios contínuos. Aposto que você não vai se arrepender.
+O que está esperando para começar?!
+Cléo (@cleomorgause) - Especialista de SEO no Walmart.com
+
+iv
+
+Casa do Código
+
+Sobre o autor
+Adriano Almeida é CEO da Editora Casa do Código desde 2012, antes disso
+foi desenvolvedor web, trabalhando em diversos sites e sistemas em diferentes
+linguagens e frameworks, como Java, PHP, Ruby on Rails etc. Durante toda
+a carreira (que começou em 2002), sempre se interessou por como os buscadores funcionam e ficava encantado a cada novidade que aparecia nesse
+sentido.
+Trabalhou no projeto de SEO de diversos sites, incluindo o da Caelum
+(http://www.caelum.com.br) , GUJ (http://www.guj.com.br) e o da própria
+Casa do Código (http://www.casadocodigo.com.br) , tendo em todas elas
+conseguido rankear em primeiro lugar para diversas palavras-chaves cruciais
+para os negócios. Trabalhou também na implantação do projeto do portal da
+Secretaria da Saúde do Estado de São Paulo, incluindo seu trabalho de SEO.
+Além disso, é coautor do livro de Lógica de Programação, também
+lançado pela Casa do Código, com o intuito de ensinar as pessoas a programarem e começarem a dar os primeiros passos nesse vasto universo.
+
+v
+
+Casa do Código
+
+Sobre o livro
+Escrever sobre SEO não é tarefa fácil. As possibilidades são imensas, as novidades constantes e muitas coisas não podem ser afirmadas com precisão.
+Tudo depende. Esse é o mundo das otimizações para as engines de busca
+e é ele que você vai aprender a domar nas próximas páginas.
+Eu preparei esse livro de forma que ele seja extremamente prático e que
+logo nos primeiros capítulos você tenha conhecimento suficiente para saber
+como esse universo funciona, entender sua importância e já sair aplicando os
+conceitos aprendidos em suas próprias páginas.
+Para isso, eu dividi o livro em algumas partes. Logo no começo, precisamos definir uma base inicial de conhecimento. Temos que saber como
+as buscas funcionam, o que é levado em consideração e o que não é quando
+uma pessoa procura por determinado assunto.
+A partir desse conhecimento, estamos preparados para começar um projeto de SEO. Vamos estudar o processo de Keyword Research para um site
+culinário. Vamos desenvolver esse estudo, desde a etapa zero até colocarmos no ar um site para ajudar pessoas a cozinharem e também para vender
+um serviço de “chef em domicílio”. Passaremos pelos desafios tradicionais de
+qualquer projeto de SEO. Identificaremos palavras-chaves importantes para
+nós, faremos uma análise competitiva e vamos colocar uma primeira versão
+do nosso site no ar.
+Aqui você vai aprender a configurar as principais ferramentas que vão
+auxiliá-lo no trabalho de SEO: Google Analytics, Webmaster Tools do Google
+e do Bing.
+Passada essa etapa, vamos partir para melhorias pontuais. Vamos ver
+como fazer as otimizações on-page. Passaremos por um longo checklist de
+vii
+
+Casa do Código
+
+otimizações que você vai poder implementar em suas páginas com um pouco
+de conhecimento de HTML. Aliás, esse checklist foi pensado de uma maneira
+que você possa adotá-lo em todos os projetos que fizer.
+Vamos fazer também otimizações off-page, que são maneiras saudáveis de
+promover seu site, tornando-o relevante dentro de um determinado assunto.
+Nesse universo, está englobado também o famigerado link building, mas você
+verá que não é só isso. Existe muito mais que pode ser feito e o faremos.
+De quebra, vamos ver também diversas otimizações técnicas que podem
+influenciar no rankeamento dos seus sites. Velocidade de carregamento, configuração adequada do robots.txt, redirecionamentos e muito mais.
+Mas, antes de tudo isso, precisamos do básico. Você precisa saber por que
+as buscas na internet são tão importantes e como elas funcionam. Dica: não
+é uma simples pesquisa num banco de dados :).
+Preparado para começar? Então vamos lá!
+
+viii
+
+Casa do Código
+
+Sobre Search Engine
+Optimization
+Eu sou fascinado por tecnologia, por desenvolvimento de software e também
+por marketing digital. Adoro ver a correlação de todas essas áreas e a sinergia
+que há entre elas. O mundo de desenvolvimento está fortemente atrelado à
+evolução tecnológica. Hoje em dia, falamos muito de desenvolvimento para
+celulares, com sites responsivos, aplicativos e cada vez mais os desenvolvedores precisam se reinventar e evoluir.
+O mesmo acontece no mundo do Marketing Digital. Sua relação com a
+tecnologia é íntima, como o próprio nome indica através do termo “Digital”.
+Hoje vivemos uma época em que é possível fazer marketing no Google, no
+Facebook e no site que você quiser, em aplicativos mobile.
+Mas nisso tudo, eu acho o SEO Search Engine Optimization especial. Ele
+leva essa multidisciplinaridade além. Somado à relação com tecnologia e desenvolvimento, ele traz à tona também uma forte ligação com o conteúdo,
+podendo incorporar nesse mundo, onde já habitam os marketeiros e os tecnólogos, os jornalistas e os designers.
+Esse batalhão trabalhando junto para fazer com que um site seja bem
+rankeado, converta bem e traga resultados positivos para um negócio é motivador e prova que SEO não é simples. Mas precisa ser prático. Juntar todas
+essas diferentes habilidades, pessoas e papéis para fazer algo bom para o negócio é o papel do profissional de SEO. Não parece nada fácil, não é?
+
+ix
+
+Casa do Código
+
+Sumário
+
+Sumário
+1
+
+A internet gira em torno dos buscadores
+1.1
+1.2
+1.3
+
+2
+
+1
+
+Por que eu deveria me preocupar em aparecer no resultado
+das buscas? . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3
+
+Só aparecer nas buscas não é suficiente. É preciso aparecer de
+verdade . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5
+
+E o que eu posso fazer? . . . . . . . . . . . . . . . . . . . . . .
+
+8
+
+Uma busca não é uma simples busca
+
+11
+
+2.1
+
+Saiba o que fazem os spiders . . . . . . . . . . . . . . . . . . .
+
+12
+
+2.2
+
+Mas esse Google é um gênio! . . . . . . . . . . . . . . . . . . .
+
+14
+
+2.3
+
+Entenda o PageRank . . . . . . . . . . . . . . . . . . . . . . . .
+
+16
+
+2.4
+
+E onde entra o SEO nessa história e o Panda, Penguin e Hummingbird? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+17
+
+Começando um projeto de SEO
+
+19
+
+3
+
+21
+
+Então você quer ter um site?
+
+4 Faça o keyword research
+
+25
+
+4.1
+
+Saiba como funcionam as palavras-chaves e os termos de busca 26
+
+4.2
+
+Entenda a cabeça do usuário . . . . . . . . . . . . . . . . . . .
+
+29
+
+4.3
+
+Busque pelos termos que você quer rankear . . . . . . . . . .
+
+32
+
+4.4
+
+Explore a cauda longa . . . . . . . . . . . . . . . . . . . . . . .
+
+38
+xi
+
+Casa do Código
+
+Sumário
+
+5
+
+4.5
+
+Começando a pesquisa das palavras-chaves . . . . . . . . . .
+
+39
+
+4.6
+
+Relacionando as palavras-chaves relevantes . . . . . . . . . .
+
+49
+
+4.7
+
+O impacto do nome do negócio e do domínio no SEO . . . .
+
+60
+
+4.8
+
+O fator do código do país no domínio . . . . . . . . . . . . .
+
+61
+
+4.9
+
+E agora que tenho as palavras chave mapeadas e domínio registrado, o que faço? . . . . . . . . . . . . . . . . . . . . . . . .
+
+63
+
+As ferramentas básicas para o SEO
+
+65
+
+5.1
+
+Entendendo e configurando o Google Analytics . . . . . . . .
+
+66
+
+5.2
+
+Os relatórios do Analytics para SEO . . . . . . . . . . . . . . .
+
+71
+
+5.3
+
+Configurando o Webmaster Tools . . . . . . . . . . . . . . . .
+
+75
+
+5.4
+
+Relatórios para SEO no Webmaster Tools e no Analytics . . .
+
+79
+
+5.5
+
+Mas como melhoro meus resultados? . . . . . . . . . . . . . .
+
+82
+
+Onpage SEO
+
+83
+
+6 Trabalhe corretamente o HTML do seu site
+
+85
+
+7
+
+xii
+
+6.1
+
+Mostre o que é importante no seu site com h1, h2 e h3 . . . .
+
+86
+
+6.2
+
+Use a tag title para identificar o título da sua página . . . . .
+
+88
+
+6.3
+
+Mais informações com as meta tags . . . . . . . . . . . . . . .
+
+89
+
+6.4
+
+Otimize suas imagens . . . . . . . . . . . . . . . . . . . . . . .
+
+92
+
+6.5
+
+Mas é só isso? . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+93
+
+Design, estrutura e organização do site
+
+95
+
+7.1
+
+A regra dos 3 cliques . . . . . . . . . . . . . . . . . . . . . . . .
+
+96
+
+7.2
+
+Trabalhando com URLs . . . . . . . . . . . . . . . . . . . . . .
+
+96
+
+7.3
+
+Organização e estrutura do seu site . . . . . . . . . . . . . . .
+
+98
+
+7.4
+
+O peso de se ter um site mobile . . . . . . . . . . . . . . . . .
+
+101
+
+7.5
+
+O código da minha página, o meu layout e agora as páginas
+de buscas? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+103
+
+Casa do Código
+
+8
+
+Sumário
+
+Enriquecendo seus resultados com microformatos e localização
+8.1 Entenda os microformatos . . . . . . . . . . . . . . . . . . . .
+8.2 Breadcrumbs para organização . . . . . . . . . . . . . . . . .
+8.3 Mais possibilidades você tem de microformatos . . . . . . . .
+8.4 Entendendo os sitelinks . . . . . . . . . . . . . . . . . . . . . .
+8.5 As otimizações onpage não são tudo... . . . . . . . . . . . . .
+
+105
+106
+107
+109
+112
+113
+
+Offpage SEO
+
+115
+
+9 Faça o link building adequadamente
+9.1 Linkando e sendo linkado corretamente . .
+9.2 Onde posiciono meus links? . . . . . . . . .
+9.3 Trabalhando com nofollow . . . . . . . . . .
+9.4 Links de novos domínios e a idade . . . . .
+9.5 Lidando com links internos . . . . . . . . .
+9.6 Qual a importância do Facebook e Twitter?
+9.7 Mas como consigo os links? . . . . . . . . .
+
+.
+.
+.
+.
+.
+.
+.
+
+117
+119
+120
+121
+121
+122
+122
+123
+
+10 Estratégias para conseguir mais links naturalmente
+10.1 Marketing de conteúdo: a criação de conteúdo de qualidade
+10.2 Guest blogging: como aparecer em outros canais . . . . . . .
+10.3 Comentários em artigos: dê o seu pitaco . . . . . . . . . . . .
+10.4 Fórum marketing: apareça para a comunidade . . . . . . . .
+10.5 Troca de links, parcerias e promoções . . . . . . . . . . . . . .
+10.6 Press releases para divulgar seu site . . . . . . . . . . . . . . .
+10.7 Divulgar, divulgar, divulgar... . . . . . . . . . . . . . . . . . . .
+
+125
+126
+128
+129
+129
+129
+130
+131
+
+Detalhes técnicos para SEO e ferramentas úteis
+
+133
+
+11 Detalhes técnicos de SEO
+11.1 Faça redirecionamentos e evite links quebrados . . . . . . . .
+11.2 Evite URLs duplicadas com o Canonical . . . . . . . . . . . .
+
+135
+136
+139
+
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+
+xiii
+
+Casa do Código
+
+Sumário
+
+11.3
+11.4
+11.5
+11.6
+11.7
+
+Lidando com conteúdo paginado . . . . .
+Faça um site mobile friendly . . . . . . . .
+Configure seu robots.txt e o sitemaps.xml
+Seu site tem que abrir rápido! . . . . . . .
+Melhoria contínua... . . . . . . . . . . . . .
+
+12 Ferramentas úteis e SEO para WordPress
+12.1 Webmaster Tools e Google Analytics .
+12.2 SEMRush . . . . . . . . . . . . . . . . .
+12.3 Open Site Explorer . . . . . . . . . . . .
+12.4 SEOQuake . . . . . . . . . . . . . . . .
+12.5 keywordtool.io . . . . . . . . . . . . . .
+12.6 robots.txt Generator . . . . . . . . . . .
+12.7 SEO no WordPress: use o Yoast plugin
+12.8 Existe muito mais... . . . . . . . . . . .
+13 E tudo para por aí?
+
+xiv
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+141
+141
+142
+145
+146
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+147
+148
+148
+148
+149
+150
+150
+151
+152
+153
+
+Capítulo 1
+
+A internet gira em torno dos
+buscadores
+“The best place to hide a dead body is the second page of Google search”
+– Autor desconhecido
+Uma criança acaba de nascer. Ela precisa se acostumar com cores, sons,
+sensações, tato, respiração, alimentação. E ela aprende tudo naturalmente.
+Com o tempo, ela vai aprimorando seus sentidos e aprende a fazer coisas por
+conta própria, comer, andar, necessidades e assim por diante. Ela explora toda
+a base que ela teve de aprendizado e evolui. Por exemplo, com a respiração
+como base, ela aprende a falar.
+Agora, imagine-se na seguinte situação: um parente seu, que nunca usou
+a internet antes, acabou de comprar um notebook e está acessando a internet
+pela primeira vez. Você está incumbido da tarefa de mostrar a essa pessoa o
+
+Casa do Código
+
+que é possível fazer nesse lugar gigantesco. Quais são as primeiras coisas que
+você mostraria para esse parente?
+Dou 10 segundos para você pensar!
+Provavelmente, você deve ter chegado em algumas opções como criar
+uma conta no Facebook e curtir fotos das pessoas, aprender a enviar um email, acessar a página inicial de um portal de notícias. E em algum lugar
+dessa sua lista de coisas a ensinar deve estar “pesquisar algo no Google”. Todas são tarefas básicas para quem está começando com a internet e, a partir
+do aprendizado dessas, a pessoa provavelmente vai derivar novas atividades
+para se fazer na internet.
+Mas é bem capaz que, de todas essas, o Google seja a ferramenta que
+vai dar mais possibilidades para que ela explore a internet, para que aprenda
+coisas novas, para que tire dúvidas sobre os mais variados assuntos, encontre
+lojas, saiba chegar a determinado lugar, aprenda uma receita boa para fazer no
+almoço de família no final de semana. Enfim, as possibilidades são infinitas.
+Só dependem da necessidade.
+Se tem algo que acompanha para sempre a vida de alguém que usa a internet, isso com certeza são as buscas. Você pode cansar da sua conta no
+Facebook e deletá-la, pode viver sem uma conta no Instagram, pode trocar
+o acesso a um portal de notícias por um feed. Porém, dificilmente você vai
+deixar de usar um buscador quando precisar saber de algo que não conhece
+ou de que não se lembra.
+Todo mundo usa buscas. Não acredita? Dê uma olhada no relatório do
+Alexa, órgão que provê dados sobre o acesso a internet no mundo todo, com
+os principais sites acessados em 2014:
+
+2
+
+Casa do Código
+
+Capítulo 1. A internet gira em torno dos buscadores
+
+Fig. 1.1: Relatório do Alexa com os sites mais acessados
+
+Dos 5 primeiros, dois são apenas buscadores: Google e Baidu, um buscador chinês. Já o Yahoo também é um buscador, mas em sua página inicial
+traz também notícias atuais.
+Ou seja, dos 5 sites mais acessados do mundo, 3 são buscadores. O mundo
+inteiro usa os buscadores para encontrar algo.
+Agora, imagina você, dono de um negócio, precisando de clientes e sem
+ser visto por cliente nenhum?
+
+1.1
+
+Por que eu deveria me preocupar em aparecer no resultado das buscas?
+
+Seu chefe acabou de colocá-lo em um novo projeto. Você vai criar um novo
+sistema para sua empresa usando o framework Ruby on Rails, tecnologia que
+você não conhece e vai ter que aprender. Você decide procurar um livro para
+aprender, vai ao Google e procura por “livro de rails”.
+
+3
+
+1.1. Por que eu deveria me preocupar em aparecer no resultado das buscas?
+
+Casa do Código
+
+Fig. 1.2: Busca por ‘livro de rails’ no Google
+
+Se nenhuma dessas lojas aparecesse na busca, como elas conseguiriam
+vender?
+Imagine você em uma tarde de sábado andando na Rua 25 de Março
+fazendo compras na véspera de Natal. Vários vendedores tentando, de diversas maneiras, chamar sua atenção para que você entre nas lojas deles. Quando
+alguém procura por algo no Google é exatamente a mesma coisa (exceto que
+ninguém vai ficar puxando você pelo braço de forma inconveniente).
+Para quem tem um site, uma das melhores formas de conseguir clientes
+e audiência (pessoas que acessam seu site) é através dos resultados de busca.
+Ser encontrado pelas pessoas é primordial, seja você um comércio eletrônico,
+físico ou um prestador de serviço.
+Apenas para que você tenha uma ideia, em média 40% dos acessos aos
+4
+
+Casa do Código
+
+Capítulo 1. A internet gira em torno dos buscadores
+
+sites que mantenho vêm de buscas. Um deles é o site da editora desse livro,
+a Casa do Código, que também é um e-commerce. É impossível imaginar a
+empresa com 40% menos de acessos e, por que não, 40% menos clientes e
+40% menos faturamento. Tudo está relacionado. Se as pessoas não têm como
+saber sobre seu site, elas não vão acessá-lo e você não terá clientes. Se você
+não tiver clientes, não vai vender o seu produto ou serviço e, com isso, não
+terá faturamento.
+
+Fig. 1.3: Contribuição das buscas no site da Casa do Código
+
+Aparecer nos resultados do Google é o passo 0 pra quem quer conseguir
+mais acessos e mais clientes para seu site.
+
+1.2
+
+Só aparecer nas buscas não é suficiente. É
+preciso aparecer de verdade
+
+Estar no Google é importante, mas, claro, muitos outros fatores influenciam
+no sucesso do seu site. Algumas delas podem até parecer óbvias no começo.
+5
+
+1.2. Só aparecer nas buscas não é suficiente. É preciso aparecer de verdade
+
+Casa do Código
+
+Lembra da história da véspera de Natal na 25 de Março? Pois então, você
+ainda está lá no começo da sua saga para comprar uma linda árvore de natal. No começo da rua, você vê uma loja que parece ser bacana e, pelo que
+o vendedor que está do lado de fora da loja diz, parece que ali tem a árvore
+que você está procurando. Você é convencido a entrar naquela loja por dois
+motivos:
+1) Convencimento: antes de você entrar, o vendedor o convenceu de que ali
+é o lugar ideal para você achar o que procurava;
+2) Conveniência: é o primeiro lugar interessante que apareceu.
+Agora já imaginou a loja que fica no final da rua? Quantas pessoas vão
+andar até lá? Poucas.
+Nos sites de busca, a ideia é a mesma. Não basta só estar nos resultados de
+busca. Você precisa estar nos primeiros resultados. No mínimo na primeira
+página você tem que estar. Poucas pessoas vão até a segunda página dos resultados da busca. Terceira página, então? Você praticamente não existe.
+Em junho de 2013, a Chitika, uma empresa especializada em marketing
+digital, divulgou um estudo mostrando que, quanto melhor a posição em que
+seu site aparece nas buscas do Google, mais pessoas clicam para entrar no seu
+site. Os 3 primeiros resultados possuem juntos 50% dos cliques.
+
+6
+
+Casa do Código
+
+Capítulo 1. A internet gira em torno dos buscadores
+
+Fig. 1.4: Porcentagem de tráfego via Google por posição. Fonte: http://www.
+chitika.com
+
+Quando você observa no estudo a quantidade de tráfego de acordo com
+a página em que o resultado aparece na busca, temos um número que parece
+mais absurdo ainda, mas que faz todo o sentido: 91% dos sites acessados
+através de uma busca estão na primeira página dos resultados (considerando
+que o padrão do Google é mostrar 10 resultados por página).
+
+7
+
+1.3. E o que eu posso fazer?
+
+Casa do Código
+
+Fig. 1.5: Porcentagem de tráfego via Google por página. Fonte: http://www.
+chitika.com
+
+Ou seja, é primordial ter uma forte presença nos resultados de busca.
+Claro, cada tipo de negócio poderá ter uma expectativa diferente com relação aos seus resultados. Negócios que tradicionalmente são offline ainda
+podem levar algum tempo para gerar bons retornos diretamente pelas buscas, mas ainda assim, sites, lojas e serviços estarem disponíveis na internet é
+uma tendência para o futuro e sem volta. Portanto, quanto antes você estiver
+preparado para se dar bem nisso, melhor.
+
+1.3
+
+E o que eu posso fazer?
+
+Você deve ter percebido que aparecer nos resultados de busca é importante,
+mas aparecer bem é primordial. E tenha em mente que você terá concorrência. Então, como conseguir aparecer bem?
+Uma primeira possibilidade é através das resultados patrocinados, como
+o Adwords. Nesse caso, você paga uma quantia por clique, que pode variar
+desde de poucos centavos até muitos reais, de acordo com a palavra chave.
+Quanto mais concorrência pelo termo, mais caro custará o clique. Note como
+normalmente é feita a distribuição quando há resultados patrocinados:
+
+8
+
+Casa do Código
+
+Capítulo 1. A internet gira em torno dos buscadores
+
+Fig. 1.6: Resultados patrocionados e orgânicos
+
+A primeira vista pode parecer interessante pagar para ter seu site nos
+primeiros resultados sempre, no entanto, a longo prazo pode não ser uma
+estratégia financeiramente sustentável, já que pode facilmente se tornar cara
+de acordo com o número de cliques que há.
+A estratégia barata e que funcionará sempre a longo prazo é rankear bem
+organicamente, sem depender de pagamentos. Aliás, geralmente até mesmo
+o retorno é mais interessante com o ranking orgânico, justamente pelo baixo
+custo de implementação.
+Existem diversas técnicas para conseguir ter um bom ranking organicamente. São vários detalhes que em conjunto farão com que você tenha um site
+interessante, usável e, como consequência, aparecerá bem nas buscas. Isso é
+importante. O importante para que seu site apareça bem nas buscas é ter um
+site bom (você vai aprender durante esse livro as características que fazem um
+site bom) e, como brinde, você aparecerá bem nas buscas e terá mais acessos.
+Mas para isso, você precisará se preparar, estudar e entender como entrar
+nesse jogo. Aliás, eu falo que é um jogo, pois uma vez que você entende os
+princípios, fazer um site bom se torna algo viciante e você quer cada vez mais
+deixá-lo melhor.
+Todas essas técnicas que como consequência fazem com que seu site
+rankeie bem são as famosas SEO Search Engine Optimization, que você vai
+9
+
+1.3. E o que eu posso fazer?
+
+Casa do Código
+
+aprender durante esse livro.
+Você vai perceber durante essa nossa descoberta do mundo do SEO que
+muitas coisas são subjetivas. São muitas variáveis e fatores envolvidos e com
+frequência teremos que tomar decisões em trade-off, ou seja, teremos que
+abrir mão de algumas coisas para ganhar em outras coisas. São decisões com
+que teremos que aprender a lidar. Além disso, no mundo do SEO, as coisas
+mudam com muita velocidade. Portanto, sempre desconfie do que lê e, se ficar
+em dúvida de algo, apele para o bom senso e pense em como seria melhor para
+o usuário de suas páginas. Esse é o caminho que os buscadores estão seguindo
+para saber como rankear as páginas. Se for bom para o usuário, o ranking será
+bom.
+O primeiro passo para saber como fazer seu site aparecer bem rankeado
+nos buscadores é saber como as buscas funcionam. E garanto, não é algo
+trivial. Preparado?
+
+10
+
+Capítulo 2
+
+Uma busca não é uma simples
+busca
+“The success of a page should be measured by one criteria: Does the visitor do
+what you want them to do?”
+– Aaron Wall, do SEObook.com
+Como já falamos, qualquer usuário com um mínimo de conhecimento de
+como usar a internet já deve ter feito uma pesquisa no Google. Acredito que
+seja o local da internet com melhor usabilidade e onde toda complexidade
+está mais bem abstraída do usuário final.
+Você só acessa uma tela com um único campo para digitar o que quer
+e, em menos de um segundo, ele já mostra vários resultados para aquela sua
+pesquisa, sugere variações para ela, caso não saiba exatamente o que estava
+procurando e assim por diante.
+
+2.1. Saiba o que fazem os spiders
+
+Casa do Código
+
+Fig. 2.1: Pesquisa sendo feita, quantidade de resultados, tempo e sugestões
+
+Para a grande maioria dos usuários da internet, isso é só mais um serviço
+interessante que a internet tem pra nos oferecer. No entanto, para um profissional de SEO não é bem assim. Há muito acontecendo quando o usuário faz
+uma simples pesquisa no Google. Aliás, há muito acontecendo bem antes de
+essa pesquisa ser feita!
+Como você acha que o Google decide qual página mostrar primeiro ou
+qual deixar de mostrar? E como ele faz tão rápido uma busca como essa dentro de 1 bilhão de sites possíveis? E considere que cada site tem em média bem
+mais do que apenas uma página.
+
+2.1
+
+Saiba o que fazem os spiders
+
+Enquanto você lê esse livro, o Google (e os outros buscadores também) está
+acessando e analisando, sem parar, as diversas páginas dos mais de 1 bilhão
+de sites disponíveis no mundo. Os programas que fazem esse trabalho são
+conhecidos como spiders.
+Esses spiders começam acessando algumas poucas páginas e recolhem
+informações sobre o seus conteúdos, como texto, imagens usadas, frequência
+de atualização, links e muito mais. A partir dos links, eles começam a navegar
+para as páginas que estão linkadas e fazem o mesmo processo de análise em
+cada página acessada.
+Dessa forma, ele consegue analisar praticamente toda a web, afinal, como
+a própria definição da world wide web diz: “... permite que documentos sejam
+interligados uns aos outros através de hyperlinks...”.
+
+12
+
+Casa do Código
+
+Capítulo 2. Uma busca não é uma simples busca
+
+Sentindo na pele como funciona um spider
+Um pequeno exercício que você pode fazer para sentir um pouco
+como funciona um spider e matar a curiosidade, é: abra um site de sua
+preferência e escolha um link dele para clicar. Nessa nova página que
+for carregada, faça o mesmo. Você vai perceber que, depois de fazer isso
+por 5 vezes, é possível que o assunto da quinta página não tenha a menor
+relação com a primeira.
+Um exemplo que eu fiz foi começando da página da Casa do Código,
+http://www.casadocodigo.com.br. Cinco links depois, eu estava na
+página oficial do David Bowie, http://davidbowie.com.
+Durante esse processo de análise de cada página, os spiders fazem a indexação de todas essas páginas e guardam toda essa indexação nos servidores
+do buscador.
+Quando uma pessoa faz a pesquisa, por exemplo no Google, tudo é processado dentro dos servidores do Google. Ou seja, na prática, você não está
+fazendo uma pesquisa na internet, e sim nos índices do Google.
+
+Consigo ver quando o spider acessa minha página?
+Uma das formas mais fáceis de saber quando um spider está acessando a sua página é através dos logs de acesso do seu servidor.
+O modo de visualizá-lo depende do seu servidor e de como ele está
+configurado para formatar os logs, mas bastaria procurar pelo User
+Agent chamado Googlebot, para encontrar o spider do Google acessando o seu site.
+66.249.64.13 - - [19/Nov/2014:11:07:48 +1000]
+"GET /robots.txt HTTP/1.0" 200 468 "-" "Googlebot/2.1"
+
+Por sinal, bot é um outro nome, um pouco mais técnico, para nos
+referirmos aos spiders.
+
+13
+
+2.2. Mas esse Google é um gênio!
+
+Casa do Código
+
+Como ele decide o que deve me mostrar? Como ele sabe o que é importante pra mim?
+
+2.2
+
+Mas esse Google é um gênio!
+
+Não sei você, mas eu, mais de uma vez, já falei essa frase em voz alta na frente
+do computador após pesquisar algo na internet para o qual eu achava que
+dificilmente encontraria uma resposta.
+Na realidade, o Google (e outros buscadores) fazem uma criteriosa análise
+dos seus índices de acordo com o termo buscado, para saber quais são as páginas mais relevantes para o que eu estou buscando. Por sinal, essa á a premissa
+do Google: devolver resultados relevantes.
+Quando a busca é submetida, o Google faz mais de 200 considerações
+sobre cada página, para saber se ela deve ser mostrada ou não, e para saber o
+que é mais relevante entre os resultados encontrados e, dessa forma, saber o
+que priorizar no resultado.
+
+14
+
+Casa do Código
+
+Capítulo 2. Uma busca não é uma simples busca
+
+Fig. 2.2: Resultados que o Google achou relevante me mostrar
+
+Esses 200 critérios são o ponto vital para conseguir fazer com que seu site
+apareça bem nas buscas. Eles vão desde fatores ligados ao domínio, como a
+idade do domínio (quanto mais antigo, melhor) ou então se a palavra-chave
+(falaremos mais disso mais à frente) faz parte do nome do domínio; passando por fatores ligados com a página em si, como títulos que são dados
+para as páginas através da tag <title> do HTML, existência e densidade
+da palavra-chave no conteúdo, uso adequado das tags <h1>, <h2> e <h3>,
+exibição adequada de imagens; passa também por uma avaliação dos links,
+verificando a relevância dos sites para os quais o seu site faz links, existência
+de links quebrados, contextualização; e também passa por diversos outros fatores como velocidade de carregamento da página, existência de certificado
+de que o site é seguro (SSL), análise de relevância nas redes sociais e muito
+mais.
+15
+
+2.3. Entenda o PageRank
+
+Casa do Código
+
+A lista é extensa e bem maior do que a do parágrafo anterior, mas não
+se preocupe. Naturalmente vamos passar por esses fatores durante o livro e
+aprender como usá-los a nosso favor.
+Mas uma coisa eu já posso antecipar... dentro desses vários fatores, os
+links têm um papel muito importante. Mas por que será?
+
+2.3
+
+Entenda o PageRank
+
+Imagine que um brasileiro, cidadão comum, dê uma entrevista em uma televisão dizendo que viu um alienígena e que há vida em Marte. Você acreditaria? Provavelmente não, né? Mas e se esse mesmo anúncio fosse feito pela
+NASA? Possivelmente sua opinião mudaria, ou ao menos ficaria com uma
+pulga atrás da orelha.
+Repare como há uma diferença de relevância (e naturalmente de confiança) entre a pessoa que disse ver o extraterrestre e a NASA.
+Levando essa ideia além, o que aconteceria se um jogador de futebol da
+quinta divisão desse uma entrevista elogiando como você joga bola. E se a
+mesma entrevista fosse dada pelo Neymar?
+Essas relações sobre quem linka para quem também é analisada pelos buscadores, em especial o Google. É importante que outros sites linkem para
+você, como uma espécie de corroboração sobre o que você diz ou faz em seu
+site. Porém, volume de links não é o mais importante aqui. É preciso focar na
+qualidade dos links que são conseguidos.
+Além disso, o Google leva em consideração a contextualização dos links.
+Isso significa que o Obama falar que você é um grande jogador de futebol
+tem menos relevância do que o Neymar falar o mesmo. Ou seja, a contextualização dá prioridade para os sites que fazem parte da sua área de atuação.
+Se você possui um site de culinária, receber um link do site de uma página
+de um banco, explicando como fazer cálculos financeiros, não terá muito impacto no seu PageRank.
+Todos esses critérios formam um algoritmo criado por um dos fundadores do Google, Larry Page. Esse algoritmo é o PageRank e também é
+usado como fator para definir posicionamento nas buscas.
+
+16
+
+Casa do Código
+
+2.4
+
+Capítulo 2. Uma busca não é uma simples busca
+
+E onde entra o SEO nessa história e o Panda,
+Penguin e Hummingbird?
+
+É importante notar que lá no começo dos anos 2000 os algoritmos de busca
+eram extremamente simples, fazendo um simples matching das palavraschaves e sem tanto foco em retornar resultados que fossem necessariamente
+relevantes.
+Com o passar do tempo, esse cenário mudou e hoje temos todos esses diversos fatores que impactam o que vai ser devolvido como resultado na busca.
+Saiba de antemão que essa evolução vai continuar existindo.
+Essa evolução de algoritmos foi acontecendo aos poucos, conforme necessidades foram sendo sentidas para que o rankeamento fosse justo e de acordo
+com bons critérios. De lá pra cá o Google já lançou diversos algoritmos e atualizações ods mesmos do seu motor de buscas. O que isso significa? Primeiro
+que eles estão constantemente tentando servir o melhor resultado possível
+para os usuários que pesquisam. Como consequência, isso também quer dizer
+que regras que um dia eram seguidas, de um dia para o outro podem se tornar
+obsoletas ou até mesmo más práticas. Dessas mudanças e algoritmos, podemos destacar 3:
+• Panda: Essa atualização foi lançada em Fevereiro de 2011 e seu objetivo principal era priorizar os sites com conteúdo de qualidade. Mas
+como ele pode saber isso? Analisando alguns fatores, como a qualidade da escrita do conteúdo (sim, erros de gramática são penalizados),
+a profundidade com que o assunto é coberto, o conteúdo é original ou
+duplicado. Em resumo, o Panda é uma atualização intimamente ligada
+com a qualidade do conteúdo oferecido em seu site.
+• Penguin: O Penguin é uma atualização lançada em Abril de 2012 com o
+objetivo de identificar e reduzir a importância dos links feitos para seu
+site de forma não natural. Como vamos ver durante o livro, os links
+existentes para suas páginas são uma forma de indicar o quão relevante
+essa sua página é em determinado assunto. Com isso em mente, muitos
+webmasters passaram a colocar links para suas páginas em sites que
+serviam apenas como um diretório de links. Uma estratégia simples
+17
+
+2.4. E onde entra o SEO nessa história e o Panda, Penguin e Hummingbird?
+
+Casa do Código
+
+para conseguir bons rankings, não? Não depois do Penguin. Com essa
+atualização, esses sites com diretórios de links perderam relevância e
+passou a prevalecer a naturalidade e a contextualização com que o link
+aparece.
+• Hummingbird: Em meados de setembro de 2013 o Google lançou essa
+atualização para entender de uma forma mais precisa a intenção do
+usuário nas buscas. Como assim? Se você digitar “pizzaria belo horizonte” em uma busca, ele vai reconhecer que você esteja interessado
+nos endereços de pizzarias dentro ou próximo de Belo Horizonte. Com
+isso, ele vai te sugerir endereços e pizzarias bem avaliadas da região.
+Dessa forma ele tenta descobrir o que o usuário quer com aquela busca
+e devolve resultados indicados para isso.
+Vale reforçar que esses algoritmos ainda são constantemente atualizados,
+portanto, fique sempre atento às novidades.
+Além disso, é importante reforçar que os detalhes do algoritmo dos buscadores são guardados a 7 chaves. Ou seja, muito do que temos hoje em SEO
+é baseado em resultados empíricos, ou seja, testes que foram feitos e resultados que foram avaliados. Existem diversas empresas focadas em SEO, cujo
+objetivo é realizar mudanças em sites e monitorar as variações existentes nos
+resultados do rankeamento, para aí determinar o que é relevante ou não para
+SEO.
+Fazer com que um site apareça bem nos resultados de busca, eu diria que
+é o principal papel de um profissional de SEO (Search Engine Optimization).
+Porém, para isso, é preciso se manter atualizado, estar atento às novidades dos
+algoritmos e é preciso experimentar, monitorar e analisar os resultados dos
+seus sites. Pode parecer muita coisa, mas garanto que é algo muito divertido.
+Os resultados não são imediatos e surtem efeito com o passar do tempo, você
+vai ver, mas são de suma importância para qualquer negócio.
+E então, está preparado para começar?
+
+18
+
+Parte I
+
+Começando um projeto de SEO
+Um projeto de SEO envolve várias etapas e com distintas tarefas. Algumas
+mais de compreensão de negócio, outras que lidam com codificação, outras
+mais relacionadas à divulgação da marca e link building, e também algumas
+ligadas a detalhes técnicos, configuração da aplicação etc.
+Um profissional de SEO precisa ter essa versatilidade para ser completo.
+É preciso ir além do conhecimento técnico. Também é necessário conhecer
+o negócio para saber como adequar o site e as páginas desse negócio para os
+buscadores, para que os possíveis clientes consigam encontrá-lo facilmente.
+Na prática, em um projeto de SEO começado do zero, como o que você
+irá fazer comigo neste processo de avaliação do negócio e keyword research,
+o começo de tudo se dá na compreensão do negócio. O que será divulgado?
+Qual é o público alvo e qual seu interesse? Como essas pessoas vão buscar
+pelo que vai ser divulgado? Essas são só algumas das perguntas que vamos
+precisar responder.
+
+Capítulo 3
+
+Então você quer ter um site?
+“It is not the job of Search Engine Optimization to make a pig fly. It is the job
+of the SEO to genetically re-engineer the web site so that it becomes an eagle”
+– Bruce Clay
+Eu sou um viciado em cozinhar. Sempre que vejo que estou entediado,
+arrisco-me na cozinha e consigo me virar relativamente bem (confesso que
+algumas vezes as coisas dão errado). Mas na verdade eu não sabia cozinhar
+até uns 4 anos antes de eu escrever este livro. Foi aí que eu decidi fazer um
+curso de culinária para quem nunca havia sequer fritado um ovo antes na
+vida.
+Nesse curso foi que aprendi a fazer um risoto. Para quem não conhece,
+risoto é um arroz cremoso, que pode ser feito em conjunto de qualquer outra
+coisa: camarão, aspargos, cogumelos, bacon. Enfim, a s p ossibilidades são
+infinitas.
+
+Casa do Código
+
+Com o passar do tempo e após alguns risotos feitos, percebi que na verdade ele é um prato excelente para quem está começando na cozinha. O
+preparo é simples, poucos ingredientes são utilizados, o resultado geralmente
+é saboroso e, com uma apresentação bem feita, tem o poder de impressionar
+algumas pessoas.
+
+Fig. 3.1: Se você ficou com fome... desculpa
+
+Então decidi criar um site (fictício). Quero que seja um local onde as
+pessoas tenham acesso a receitas, aprendam a fazer, vejam dicas e ideias de
+acompanhamentos e sobremesas. Além disso, o site também servirá para divulgar um serviço de “jantar em casa”, dessa forma, a pessoa que contratar
+o serviço escolherá um cardápio e um chef irá preparar o jantar na casa da
+pessoa.
+Em termos de negócio, as receitas e dicas de culinária serão uma forma
+de atrair pessoas para o site e que acabam se interessando também no “chef
+em casa”, que é o que torna o negócio rentável.
+22
+
+Casa do Código
+
+Capítulo 3. Então você quer ter um site?
+
+No site, deveremos ter receitas, dicas, imagens, avaliações e muitos outros
+fatores técnicos e não técnicos que vamos explorar durante todo o projeto de
+SEO.
+Mas como será que teremos que estruturar nosso site para que sejamos
+encontrados? Como as pessoas nos encontrariam? Qual domínio devo comprar? E com quais palavras-chave devemos trabalhar?
+
+23
+
+Capítulo 4
+
+Faça o keyword research
+“The perfect search engine would understand exactly what you mean and give
+you back exactly what you want.”
+– Larry Page, cofundador do Google
+Para conseguir fazer com que as pessoas nos encontrem nas buscas, precisamos descobrir como ela procurará pelo nosso produto ou serviço. Mas
+há muita coisa envolvida nessa descoberta e todas elas giram em torno das
+palavras-chaves (keywords) que vamos decidir utilizar nas nossas páginas e
+que serão determinantes no rankeamento das nossas páginas.
+Mas descobrir quais palavras-chaves atacar não é uma tarefa tão simples.
+É preciso um estudo cuidadoso, conhecido como keyword research (estudo de
+palavras-chaves) para podermos decidir a quais palavras queremos associar
+nosso site ou não.
+
+4.1. Saiba como funcionam as palavras-chaves e os termos de busca
+
+Casa do Código
+
+Durante o estudo que faremos neste capítulo, vamos responder várias perguntas, como:
+• O que será que a pessoa digitaria nas buscas para nos encontrar?
+• O que já está sendo devolvido nos resultados por essas buscas?
+• Quais palavras-chaves devo utilizar?
+• Devo priorizar palavras-chaves populares ou a cauda longa?
+• Como saber se vale a pena rankear para determinada palavra-chave?
+• Como calcular o Keyword Effectiveness Index KEI (Índice de efetividade da palavra-chave) para saber se ela é uma palavra interessante ou
+não?
+• Quais palavras devo atacar no começo e quais guardar para o futuro?
+• E várias outras que serão naturalmente respondidas durante o capítulo.
+Pronto para começar?
+
+4.1
+
+Saiba como funcionam as palavras-chaves e
+os termos de busca
+
+Quando submetemos uma pesquisa ao buscador, os termos utilizados na
+pesquisa são confrontados com os índices do banco de dados desse motor
+de busca. Quando usamos o termo “como cozinhar um risoto”, o buscador
+vai identificar o que pode ser devolvido para ele.
+O termo “como cozinhar um risoto” vai ser quebrado palavra por palavra
+para que o motor de busca identifique o que dentro dele pode ter mais ou
+menos relevância. Geralmente, preposições e artigos como “o”, “a”, “um”,
+“uma” e seus plurais possuem pouca relevância e são descartados da busca.
+Dessa forma, sobraram “como”, “preparar” e “risoto” com alta relevância.
+
+26
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Fig. 4.1: Resultado da busca por ‘como cozinhar um risoto’
+
+Quando o resultado é devolvido, os termos encontrados nas páginas são
+mostrados para nós em negrito. Quando esse termo importante é encontrado
+27
+
+4.1. Saiba como funcionam as palavras-chaves e os termos de busca
+
+Casa do Código
+
+dentro da página, ele é uma palavra-chave. Ou seja, na figura 4.1, ele encontrou a palavra-chave risoto no endereço da página (URL) e também
+encontrou as palavras-chaves cozinhar e risoto dentro do seu conteúdo.
+O fato de a página conter essas palavras-chaves, seja na URL, seja no seu
+conteúdo, as torna minimamente relevante nesse assunto. Claro, como já vimos e ainda vamos ver muito mais durante o livro, existem vários outros fatores que influenciaram para que esses resultados aparecessem primeiro, mas,
+com certeza, a existência dessas palavras-chaves dentro da página foram primordiais para que eles estivessem aí nesses resultados.
+Outro ponto a que podemos prestar bastante atenção na figura 4.1 é que a
+existência da palavra-chave na URL também tem importância. Teremos ainda
+uma longa discussão sobre como projetar as URLs dos seus sites, mas essa já
+é uma dica do que está por vir.
+
+Má prática: keyword stuffing
+Há algum tempo atrás, quando os webmasters descobriram que as
+palavras-chaves tinham papel fundamental para que seu site aparecesse no
+resultado de buscas, uma prática comum era repetir várias vezes a palavrachave no texto, a fim de fazê-la se tornar mais relevante naquele assunto. Essa
+é uma prática chamada keyword stuffing.
+Ou seja, era muito comum ver sites com textos como:
+“Para você fazer um risoto, você precisa comprar o arroz para risoto. O
+primeiro passo para fazer o risoto é derreter a manteiga na panela onde fará o
+risoto.”
+–
+Em apenas duas frases, eu consegui fazer a palavra risoto aparecer quatro vezes. Se nesse pequeno trecho a leitura já é horrível, imagine um site inteiro assim? Impossível de ler e não querer encher o autor do texto de xingamentos.
+Justamente para combater isso (e outras más práticas), em abril de 2012
+o Google lançou uma atualização chamada Penguin, que possuía diversos
+ajustes no algoritmo para combater o webspam, ou seja, sites que usam
+28
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+brechas para fazer conteúdo ruim e irrelevante e ainda assim conseguirem
+se manter no topo das buscas.
+Atualmente, se você quer mostrar que sua página é importante em determinado assunto, não é necessário repetir a palavra-chave várias vezes pela sua
+página. Na prática, ela aparecer duas ou três vezes é suficiente. Após isso, ela
+passa a quase não ter importância e caso a repetição seja excessiva, sua página
+pode ser penalizada, sendo até retirada do índice do Google.
+Agora que sabemos que as palavras-chaves são os termos relevantes que
+aparecem dentro do nosso site e de nossas páginas; e que não devemos fazer
+keyword stuffing, como sei quais palavras-chaves devo usar para o meu site?
+
+4.2
+
+Entenda a cabeça do usuário
+
+Você sabe o que as pessoas que vão procurar pelo seu site ou serviço vão digitar nas buscas? Aposto que não. A cabeça dos usuários é uma das coisas
+mais imprevisíveis que existem. As pessoas que procuram por “risoto” podem
+muito bem fazer essa busca, que seria a busca perfeita, mas será que algumas
+pessoas não procurariam por “arroz cremoso"?
+Outro exemplo interessante de escolha de palavras-chaves é do site da
+Casa do Código, onde muitas pessoas possuem o hábito de procurar por tutoriais de Ruby on Rails (uma famosa biblioteca para desenvolver sistemas e
+sites web) na internet. Apesar de ser interessante o uso do tutorial, a empresa
+posicionou o livro como sendo um material que vai além do tutorial e fez essa
+palavra-chave aparecer na descrição do livro, como na figura:
+
+29
+
+4.2. Entenda a cabeça do usuário
+
+Casa do Código
+
+Fig. 4.2: Repare a palavra ‘tutorial’ no primeiro parágrafo
+
+Com essa decisão, foi possível posicionar o livro de Ruby on Rails nas
+pesquisas por tutoriais. Será que essa foi uma boa decisão? As estatísticas
+dos resultados de busca dizem que sim. Repare nos números das buscas relacionadas com “rails” em um período pequeno de tempo:
+
+Fig. 4.3: Busca por tutoriais possui menos impressões, mas quase o mesmo
+número de cliques
+
+É interessante notar que apesar de ter um CTR (Click Through Rate Taxa
+de cliques por impressão) menor, a busca por “ruby on rails tutorial” possui
+quase o mesmo número de cliques que o termo “livro ruby on rails”. Ou seja,
+nesse caso foi uma decisão acertada posicionar o livro em uma busca por
+tutoriais.
+Evidentemente, essa é uma decisão que envolve o conhecimento do seu
+produto e o mercado dele. Nessa situação, tínhamos conhecimento desse
+comportamento dos usuários, por isso tomamos essa decisão. Sempre tenha
+30
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+em mente as diversas possibilidades que uma pessoa pode ter ao buscar pelos
+seus produtos e serviços na internet, inclusive em alguns casos indo além do
+que realmente é o seu produto. Marketing puro.
+Mas e no caso dos risotos? Pelo que as pessoas buscariam? Se você estiver
+com tempo, dê uma parada aqui, pegue um papel e uma caneta e comece
+a anotar as possibilidades que você imagina que as pessoas buscariam por
+“como fazer risotos”, na internet.
+Provavelmente sua lista será diferente da minha, mas em 5 minutos de
+brainstorming cheguei em 30 termos, incluindo possibilidades como:
+• como fazer risoto
+• como preparar risoto
+• receitas de risoto
+• receitas de arroz gourmet
+• como fazer arroz gourmet
+• melhores receitas de risoto
+• (e vários outros termos)
+Essa é uma boa estratégia para começar a definir em quais palavras-chaves
+você deverá investir. No entanto, ainda falta um detalhe muito importante aí.
+Será que esse é o comportamento de quem vai usar seu site?
+Geralmente, nós que estamos do outro lado do balcão temos uma visão
+enviesada sobre como os nossos clientes e usuários pensam. Sempre os subestimamos ou os superestimamos e raramente sabemos como eles pensam de
+verdade. Por isso, uma outra boa estratégia é perguntar para as pessoas. Fale
+com um amigo imparcial e que tenha o mínimo de interesse naquele negócio
+para fazer esse mesmo brainstorm pra você. Com certeza aparecerão resultados surpreendentes.
+Com essa primeira lista de palavra-chave em mãos, você já pode até saber
+com quem você vai competir para rankear bem.
+
+31
+
+4.3. Busque pelos termos que você quer rankear
+
+4.3
+
+Casa do Código
+
+Busque pelos termos que você quer rankear
+
+Você começa a se preparar para a batalha. Já tem uma ideia de em quais
+palavras-chaves começar a investir seu tempo, mas contra quem você vai
+competir pelo espaço nos resultados da busca? O único jeito de saber é
+pesquisando.
+Pegue a sua lista de palavras-chaves e busque por elas no Google. Repare
+com bastante atenção nos resultados. Dessa forma, você vai ter uma ideia de
+como os seus concorrentes estão trabalhando e também saberá o mínimo que
+deverá fazer.
+Vamos procurar por “como fazer risoto":
+
+32
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Fig. 4.4: Resultados da busca por ‘como fazer risoto’
+
+33
+
+4.3. Busque pelos termos que você quer rankear
+
+Casa do Código
+
+Com relação às receitas, já podemos ter uma ideia de que alguns dos principais concorrentes serão o http://www.cybercook.com.br e o http://www.
+tudogostoso.com.br, dois sites nacionais de receitas bem famosos. Competir com grandes sites é uma tarefa um pouco mais difícil, mas também não
+impossível, desde que o site seja promovido e estruturado de uma forma adequada. Uma prova disso é que vários outros resultados são blogs de culinária.
+Isso já é um bom indicativo de que podemos tentar entrar aí :).
+Existem também outros pontos importantes que podemos notar na busca,
+como a existência de imagens, avaliações e vídeos em alguns resultados. Durante o livro vamos aprender como colocar essas informações no resultado
+da busca do nosso site também, porém é importante ter em mente que isso
+não afetará diretamente no rankeamento da sua página nos resultados, mas
+vai influenciar muito na conversão, ou seja, na quantidade de pessoas que vão
+ver sua página no resultado e vão clicar para acessar seu site.
+Repare também no endereço dos sites. Todos eles possuem a palavrachave “risoto” nas URLs. Será que é por pura coincidência? Veremos.
+Note também na quantidade de adjetivos usados nos diferentes resultados: delicioso, perfeito, rápidos, práticos, simples e vários outros. Esses também são bons indicativos de possíveis palavras-chaves que não havíamos explorado antes.
+E se simplesmente pesquisarmos por “risoto rápido"?
+
+34
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Fig. 4.5: Resultados de busca por ‘risoto rápido’
+
+Temos muitos resultados devolvidos ainda e também me parece bastante
+35
+
+4.3. Busque pelos termos que você quer rankear
+
+Casa do Código
+
+plausível uma pessoa procurar por esses termos. Mas note que, quanto mais
+vamos ficando específicos, menos sites “grandes” vão aparecendo nos resultados. E se fizermos o caminho inverso e procurarmos apenas por “risoto"?
+
+36
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Fig. 4.6: Resultados de busca por ‘risoto’
+37
+
+4.4. Explore a cauda longa
+
+Casa do Código
+
+Repare que aqui já temos mais sites famosos, de grandes portais e cozinheiros com grande reputação nessa área. Como já discutimos um pouco lá
+atrás, essa reputação é um grande diferencial na hora do rankeamento dos resultados. Nesse caso, teremos mais dificuldades em competir com esses sites
+por uma boa posição, então, será que vale a pena?
+Não há uma resposta definitiva para essa pergunta. É preciso analisar
+caso a caso. Geralmente, os termos mais abrangentes são os mais concorridos
+e geralmente as primeiras posições são ocupadas por grandes portais e sites
+famosos.
+Claro, isso não é uma regra. Podem existir palavras abrangentes e ainda
+não muito exploradas. Por exemplo, se você está trabalhando no site de
+uma oficina mecânica, talvez “carburadores” seja um bom termo abrangente e
+viável de se rankear. Ou seja, é preciso analisar caso a caso, entendendo muito
+bem a situação e os concorrentes.
+Mas se eu não vou rankear para uma palavra-chave mais abrangente, vou
+ter menos acessos?
+
+4.4
+
+Explore a cauda longa
+
+• carne X como fazer carne moída
+• carne X receitas sem carne
+• carne X quais os cortes de carne mais macios
+À primeira vista pode parecer um contra senso querer rankear bem para
+as palavras-chaves que possuem menos buscas, mas, na verdade, não é algo
+tão ruim assim. Pelo contrário.
+Ao tentar rankear bem para um termo genérico, como “carne”, além de a
+concorrência ser muito maior, com possivelmente grandes empresas com um
+budget muito mais generoso que o seu, não necessariamente você atingirá seu
+público alvo. Uma busca por “carne” pode devolver muitos resultados, sobre
+os mais variados assuntos, como cortes de carne, carne de boi, dietas sem
+carne e até como desinfetar machucados que estão em carne viva. Enquanto
+isso, você só poderia estar querendo dar publicidade ao site de um açougue
+online.
+38
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Sempre que trabalhamos o SEO de um site, é preciso ficar atento não somente ao rankeamento do site. É claro que aparecer nos primeiros resultados
+é importante. Mas não é tudo, se você não está aparecendo para as pessoas
+certas. Outra medida que você deve sempre avaliar é a conversão. Será que as
+pessoas que me veem no Google realmente clicam para acessar meu site? A
+chance de isso acontecer ao rankear para termos cauda longa é muito maior
+e dependendo do caso é bem possível que com menos aparições nas buscas
+você mesmo assim consiga mais pessoas acessando seu site.
+Evidentemente, as mesmas regras para rankear bem para termos específicos funcionam para a cauda longa. Você é quem vai precisar decidir isto: onde
+investir seu esforço baseado no assunto do seu projeto. Mas como tenho uma
+ideia de em quais palavras-chaves devo ou não investir?
+
+Dica de leitura
+Caso se interesse por essa discussão de cauda longa, um livro que recomendo é o The Long Tail, de Chris Anderson, onde ele discute como os
+negócios do futuro vão ter mais sucesso atacando a venda de itens cauda
+longa.
+
+4.5
+
+Começando a pesquisa das palavras-chaves
+
+Agora que já sabemos a nossa palavra-chave principal, podemos começar a
+procurar variações para ela. A partir de agora vamos usar várias ferramentas.
+No seu dia a dia, você poderá decidir quais prefere usar e quais pode deixar
+de usar. O mais importante aqui é saber o que as ferramentas dizem, já que
+existem várias ferramentas que lhe dirão as mesmas informações. Você usará
+no seu dia a dia a que preferir.
+
+Conheça as tendências com o Google Trends
+Um bom começo para começar a se decidir em quais palavras-chaves investir nosso trabalho é saber a diferença entre a quantidade de buscas entre a
+cauda longa e a palavra-chave principal, no nosso caso, “risoto”.
+39
+
+4.5. Começando a pesquisa das palavras-chaves
+
+Casa do Código
+
+Uma boa ferramenta para fazer essa análise é o Google Trends http:
+//trends.google.com, que também nos diz o nível de interesse (buscas) por
+determinados termos de acordo com o tempo.
+
+Fig. 4.7: Página inicial do Trends (que muda a cada dia)
+
+No campo de busca podemos digitar o nosso termo principal, “risotos”, e
+vermos o resultado.
+
+40
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Fig. 4.8: Trends de risoto
+
+Algo que já podemos inferir nesse resultado é que, apesar de alguns picos
+positivos e negativos, no geral a demanda por esse assunto é constantemente
+maior com o tempo. Dependendo do termo que você pesquisa, é claramente
+possível notar uma queda ou aumento da demanda.
+
+41
+
+4.5. Começando a pesquisa das palavras-chaves
+
+Casa do Código
+
+Cuidado com a localização no Google Trends
+Quando for visualizar os resultados das tendências no Trends, sempre
+tome cuidado com a localização que está definida. Por padrão, o Google
+mostra resultados para buscas do mundo inteiro. Para alguns casos pode
+ser interessante, para outros nem tanto. Durante este capítulo vamos considerar apenas para o Brasil. Par fazer essa mudança, basta selecionar o
+país correto no Google Trends:
+
+Fig. 4.9: Escolhendo país no Google Trends
+
+Na minha época de pós-adolescência eu vivia jogando jogos clássicos
+de Mega Drive e Super Nintendo (SNES) no computador, através dos emuladores. Quem nunca jogou os clássicos Sonic e Super Mario não sabe o
+42
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+que está perdendo :). Nessa época, cheguei até a criar um site para hospedar
+ROMs (jogos) e emuladores, assim as pessoas podiam baixar, já que um problema nesses sites era a grande quantidade de links quebrados. Mas uma coisa
+eu não percebi: as pessoas estavam deixando de se interessar por “emuladores”
+de SNES ou Mega Drive. Repare na comparação pelo Google Trends:
+
+Fig. 4.10: Trends de emuladores
+
+Não é preciso dizer que depois de pouco tempo o site passou a ter cada
+vez menos visitas e downloads, até que chegou o momento de tirá-lo do ar.
+Claro, eu era inexperiente. Talvez uma mudança de foco poderia resolver a
+situação. Será que as pessoas estavam se interessando por outros termos ou
+até mesmo algum jogo específico e menos pelo termo “emulador"?
+
+43
+
+4.5. Começando a pesquisa das palavras-chaves
+
+Casa do Código
+
+Fig. 4.11: Emulador de Mega Drive versus Sonic 2
+
+O interesse pelo clássico “Sonic 2”, do Mega Drive, entre 2006 e 2010 só
+cresceu. Eu poderia ter investido mais aí. Talvez otimizar minhas páginas
+para focar nos clássicos jogos e não nos emuladores em si. Todas essas são
+questões que podemos analisar com o Trends. Quais termos parecem em alta?
+Quais parecem em baixa?
+Voltando aos risotos, vimos que o termo principal está crescente, mas e
+os termos mais cauda longa? Será que seguem a mesma tendência? Será que
+a cauda longa possui muito menos buscas que a palavra-chave principal?
+
+44
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Fig. 4.12: Comparativo de risoto com alguns termos mais cauda longa
+
+Evidentemente, a cauda longa possui menos buscas, como já esperávamos, mas também é importante notar que as buscas são estáveis. Uma última
+coisa a se notar no Trends é que ele sugere também alguns outros termos.
+Para isso, basta ir ao final da tela do resultado e ver o que é sugerido para
+cada termo usado na comparação:
+
+45
+
+4.5. Começando a pesquisa das palavras-chaves
+
+Casa do Código
+
+Fig. 4.13: Sugestões de outros termos
+
+Podemos usar essas sugestões para expandir ainda mais nosso leque de
+possibilidades. Mas, para isso, temos algumas ferramentas que acredito serem
+melhores.
+
+Conheça o keywordtool.io
+É praticamente impossível saber todas as possibilidades de termos que
+podemos usar sobre um determinado assunto. Muitas vezes, nem um especialista sobre o assunto sabe dizer quais as possibilidades. Justamente para
+esses casos, em que queremos conhecer e explorar as diferentes opções de
+palavras-chaves, podemos usar um serviço como o http://keywordtool.io.
+
+46
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Fig. 4.14: Página inicial do http://keywordtool.io
+
+O objetivo desse site é fornecer sugestões de palavras-chaves de acordo
+com alguns termos que nós informarmos para ele. É como se você falasse
+“risoto de camarão” e ele lhe desse outras 100 possibilidades de termos.
+O interessante do keywordtool.io é que ele gera as combinações através
+do Google Autocompleter, que são aquelas sugestões que aparecem no Google
+quando você está digitando um termo de busca. Essas sugestões são baseadas
+nas buscas de outras pessoas; termos com bastante busca e bem relacionados
+com o que está sendo buscado possuem maior precedência.
+Quando pedimos os termos relacionados a “risoto”, recebemos uma infinidade de sugestões:
+
+47
+
+4.5. Começando a pesquisa das palavras-chaves
+
+Casa do Código
+
+Fig. 4.15: Sugestões do keywordtool para ‘risoto’
+
+Para cada sugestão do keywordtool, é possível clicar ao lado dela, no botão
++ e ele vai mantendo o histórico do que escolhermos. No final, podemos clicar
+em Copy, no canto inferior direito da tela e tudo será copiado para nosso
+clipboard, onde podemos colocar em uma planilha Excel.
+No entanto, é muito fácil se perder no meio de tantas opções. No nosso
+processo de pesquisa de palavras-chaves, vamos dividir quais são as palavraschaves que vão servir de ideias para novos conteúdos, receitas e posts no blog
+para rankearmos bem em mais termos, e quais são as palavras-chaves diretamente relacionadas ao serviço que queremos vender, o “chef em casa”.
+Vamos começar essa catalogação.
+
+Para saber mais: Google Keyword Planner e Ubersuggest
+Muitos SEOs no mercado utilizam o Google Keyword Planner para ter
+ideias de palavras-chaves para rankear bem. Ela é uma ferramenta interessante, mas na minha opinião, com uma usabilidade bem menos agradável
+que o keywordtool. Muitos ainda não gostam do Keyword Planner por conta
+de sua associação dos resultados com o Google Adwords e anúncios patrocinados. De qualquer forma, é uma boa ferramenta, gratuita e que vale a pena
+48
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+ser testada: https://adwords.google.com/KeywordPlanner
+Já o Ubersuggest foi o precursor do keyword tool. Eles funcionam exatamente igual, mas diferem na usabilidade, na qual o keywordtool é incomparavelmente melhor.
+
+4.6
+
+Relacionando as palavras-chaves relevantes
+
+Com a infinidade de palavras-chaves devolvidas pela keywordtool, fica até
+difícil sabermos o que fazer com elas. Um bom início é separarmos as
+palavras-chaves em dois grandes grupos: conteúdo e venda.
+As palavras-chaves de conteúdo serão usadas para que se tenha ideias de
+novos conteúdos a serem criados para o site. É importante ter em mente que
+uma das formas para conseguir mais acessos para seu site é ter bastante conteúdo relevante. Essas palavras-chaves vão ser importantes para termos ideias
+desses assuntos.
+Já as palavras-chaves de venda são usadas para nossa página de vendas:
+como descreveremos nosso serviço de uma forma que as pessoas realmente
+busquem por ele.
+Imagine que você tenha um e-commerce que venda capacetes com desenhos estilizados para motociclistas. Para conseguir atrair pessoas para essa
+loja online, você poderia escrever artigos sobre capacetes em um blog. No
+entanto, existe um universo de pessoas que podem conhecer sua loja através
+de outros conteúdos, como reviews de motos, dicas de corrida e várias outras
+possibilidades. Essa pulverização de conteúdos torna o alcance da marca bem
+maior. É essa a estratégia que seguiremos.
+
+Palavras-chaves de conteúdo
+Vamos usar o keywordtool.io para encontrar palavras-chaves que possam
+nortear a criação de novos conteúdos para o site e, com essas ideias de conteúdo, teremos um bom backlog de artigos e receitas que podem ser atacados.
+Como já fizemos há pouco, podemos começar pedindo sugestões para o
+termo mais genérico, “risotos”, e a partir dele vamos descobrindo termos mais
+49
+
+4.6. Relacionando as palavras-chaves relevantes
+
+Casa do Código
+
+específicos. Não se esqueça de definir o idioma e localização do buscador,
+antes de pedir as sugestões, assim teremos um resultado mais apurado.
+
+Fig. 4.16: Sugestões do keywordtool para ‘risoto’
+
+Dado um termo, ele nos devolve sugestões de acordo com uma ordem
+alfabética, onde cada caixa representa um grupo de sugestões. Ele começa
+sugerindo apenas os que contêm o termo exato, para depois partir para sugestões onde o próximo termo começa com espaço, depois a, b, c e assim por
+diante, indo até os números.
+Nesse caso, já vemos logo de cara uma infinidade de receitas possíveis
+que poderiam servir de conteúdo. Fique atento também a resultados que são
+perguntas, já que podem indicar dúvidas comuns das pessoas:
+
+50
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Fig. 4.17: Perguntas podem indicar dúvidas comuns das pessoas
+
+Durante esse processo de procurar os termos no keywordtool.io, guarde
+todas as palavras-chaves que for encontrando. Para isso, recomendo usar uma
+planilha Excel. Vá marcando as palavras que acha interessante com o + e copie
+o resultado (através do botão Copy) e cole no Excel.
+
+Fig. 4.18: Catalogar no Excel é importante para agrupar os termos
+
+O próximo passo é agrupar os termos encontrados. Dessa forma poder51
+
+4.6. Relacionando as palavras-chaves relevantes
+
+Casa do Código
+
+emos saber facilmente quais são relativos a receitas, quais são conteúdos geográficos, receitas vistas em programas de televisão e assim por diante. Isso é
+importante, pois gerará ideias de novos conteúdos. Por exemplo, a partir do
+termo “risoto bh”, é possível falar sobre indicações de restaurantes em Belo
+Horizonte, ou então explicar como é feita uma receita de algum restaurante
+importante de BH.
+Evidentemente, os termos encontrados e o agrupamento vão variar de
+acordo com o domínio em que será trabalhado, por isso é importante conhecer bem o domínio, dessa forma fica mais fácil e seguro pensar nas diferentes possibilidades.
+
+Fig. 4.19: Agrupamento das palavras-chaves no Excel
+
+A partir dessas primeiras palavras-chaves, você pode ir refinando a busca.
+Por exemplo, o que será que é sugerido quando colocamos o termo “como
+fazer risoto"? E o “risoto bh"?
+É fundamental repetir esse ciclo de busca, até que se tenha uma boa ideia
+52
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+inicial de como se trabalhar o conteúdo do site para atrair pessoas através das
+buscas por esses conteúdos. Ainda assim, as pessoas podem procurar diretamente pelo termo que descreva o seu negócio. Mas como será que descobrimos isso?
+
+Palavras-chaves de negócio
+Precisamos conhecer bem o negócio. Saber o que queremos vender,
+para depois descobrirmos como as pessoas querem comprar. Sabemos que
+o serviço que vai ser oferecido é o de um chef, que vai até a casa da pessoa,
+prepara o risoto, harmoniza com um bom vinho e deixa a cozinha organizada antes de ir embora. Havíamos pré-batizado esse serviço de “chef em
+casa”. Será que esse é um bom termo para começarmos? Vamos ver.
+Primeiramente, quando procuramos por “chef em casa” no Google, quais
+são os resultados devolvidos?
+
+53
+
+4.6. Relacionando as palavras-chaves relevantes
+
+Casa do Código
+
+Fig. 4.20: Resultado das buscas por ‘chef em casa’
+
+Procurando pelos termos que nos interessa no Google, temos uma ideia
+do que há de concorrentes e o que eles estão fazendo. O fato de existir ao
+menos um concorrente pode ser um bom indício de que há espaço nesse mercado. Desses primeiros resultados, além do serviço que queremos oferecer,
+também há cursos e assim por diante.
+54
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Poderíamos tentar também outras variações, como “chef a domicílio"(sic)
+ou “personal chef ”. Em ambos os termos você vai notar que a concorrência é
+menor. Mas vamos ver se o keywordtool.io nos sugere algo melhor? Vamos
+começar pelo “chef em casa":
+
+Fig. 4.21: Não há sugestões para ‘chef em casa’
+
+O keywordtool.io não consegue nos sugerir nada para chef em casa, pois
+não há variações disponíveis, o que é bem interessante. Nesse caso, podemos
+tentar as outras alternativas e ver se há sugestões. Vamos agora para o “chef a
+domicílio":
+
+55
+
+4.6. Relacionando as palavras-chaves relevantes
+
+Casa do Código
+
+Fig. 4.22: Mais sugestões para ‘chef a domicílio’
+
+Agora ficou mais interessante. De cara, já é possível notar a regionalização, já que a grande maioria das sugestões envolvem cidades. É justamente
+por isso que estávamos procurando. Mas também é possível encontrar termos
+como “quanto custa um chef a domicilio”, que indica uma possível demanda
+e também uma dúvida em um termo que poderíamos explorar no nosso site,
+para conseguirmos mais acessos. Existe inclusive um programa de TV na
+Discovery Home & Health com esse nome.
+No caso das palavras-chaves de negócio, ou seja, as que estão mais relacionadas ao serviço, também faremos o mesmo processo de agrupamento das
+palavras-chaves no Excel. Podemos chegar a categorias como “preço”, “localização”, “ideias de cardápio” e assim por diante.
+Sempre que fizer essa pesquisa, faça também seu refinamento. Você
+começou por um termo mais genérico, então um próximo passo é se aprofundar e tentar alternativas de descrição para o seu negócio, como o “personal
+chef ”, que também devolve uma infinidade de opções pelo keywordtool.io.
+
+56
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Para saber mais: como saber em qual termo devo investir primeiro
+e o Keyword Effectiveness Index?
+Nesse momento, você deve estar com várias palavras-chaves e possivelmente com dúvida de qual atacar primeiro. Uma possibilidade é você usar o
+seu conhecimento do negócio para saber a qual ir primeiro. No entanto, nem
+sempre isso pode ser possível e aí uma abordagem mais direta talvez seja a
+melhor alternativa.
+Para esses casos, você pode usar uma espécie de cálculo para tentar “prever” o quão interessante é rankear naquela palavra-chave. Esse índice é um
+balanço entre a competitividade e o número de buscas.
+Concorrer em uma palavra-chave com baixa competitividade, mas também sem praticamente nenhuma busca, pode ser bem pouco interessante. Da
+mesma forma que com um termo com alta concorrência e pouca busca. O
+ideal é encontrar um meio termo interessante entre esses dois fatores.
+Mas como sei quantas buscas o termo tem? Para isso, você pode usar o
+Google Keyword Planner: https://adwords.google.com/KeywordPlanner.
+
+Fig. 4.23: Volume de buscas por ‘chef a domicilio’
+
+57
+
+4.6. Relacionando as palavras-chaves relevantes
+
+Casa do Código
+
+Fig. 4.24: Volume de buscas por ‘chef em casa’
+
+Nesse caso, repare que mensalmente a pesquisa por “chef em casa” tem
+sensivelmente mais buscas: 720 contra 480. Mas será que isso significa que
+ela é melhor? Precisamos cruzar com o número de resultados disponíveis
+para cada palavra-chave:
+
+Fig. 4.25: Volume de resultados por ‘chef a domicilio’
+
+58
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Fig. 4.26: Volume de resultados por ‘chef em casa’
+
+A busca por “chef em casa” possui 1 milhão e meio de resultados, enquanto
+“chef a domicílio” possui 747 mil. Fica difícil saber qual é mais interessante,
+não é? Afinal um possui mais resultados, mas em compensação mais buscas
+e o outro o inverso.
+Podemos ver qual é melhor através de um simples cálculo que leva em
+consideração ambos os fatores. Esse cálculo é bastante conhecido na comunidade SEO e muitos profissionais o utilizam: o KEI Keyword Effectiveness
+Index (Índice de efetividade da palavra-chave). É uma fórmula bem simples:
+KEI = buscas por dia ^ 2 / número de resultados
+
+Podemos usar essa fórmula para conseguir esse valor. Por exemplo, para
+o “chef em casa”, ficaria:
+KEI
+KEI
+KEI
+KEI
+
+=
+=
+=
+=
+
+720/30 ^ 2 / 1500000
+24 ^ 2 / 1500000
+576 / 1500000
+0.000384
+
+Vamos fazer o mesmo para o “chef a domicílio":
+KEI = 480/30 ^ 2 / 747000
+KEI = 16 ^ 2 / 747000
+
+59
+
+4.7. O impacto do nome do negócio e do domínio no SEO
+
+Casa do Código
+
+KEI = 256 / 747000
+KEI = 0.000342
+
+Se adicionar aí a conta para o “personal chef ”, podemos ter uma surpresa
+(negativa):
+KEI
+KEI
+KEI
+KEI
+
+=
+=
+=
+=
+
+720/30 ^ 2 / 19000000
+24 ^ 2 / 19000000
+576 / 19000000
+0.00003
+
+Ou seja, o ranking ficou como:
+KEI do chef em casa = 0.000384
+KEI do chef a domicílio = 0.000342
+KEI do personal chef = 0.00003
+
+Quanto maior o índice, melhor. O resultado ruim do “personal chef ” é
+facilmente explicado pela existência do termo “personal” em outras palavraschaves, como “Personal Trainer”, “Personal Stylist” e vários outros, além de
+poder competir com resultados de outros idiomas, o que aumenta demais a
+concorrência (por isso 19 milhões de resultados para “personal chef ”).
+
+4.7
+
+O impacto do nome do negócio e do domínio
+no SEO
+
+Agora já temos algumas ideias de palavras-chaves que podemos usar no nosso
+site, além de ideias de conteúdos para criar. Estamos prontos para começar
+o nosso site e, para isso, já temos que tomar uma importante decisão: “Qual
+domínio devemos escolher pro nosso site?”.
+Não é uma decisão fácil, já que isso também vai impactar no nome do site
+e do negócio e vai nos acompanhar possivelmente por toda a vida.
+De antemão, é evidente que há um peso levemente maior para domínios
+que possuam a palavra-chave ou as palavras-chaves no nome, porém, saiba
+que não é isso que fará suas páginas serem bem rankeadas, já que existem muitos outros fatores que podem ter peso até maior que o nome do
+
+60
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+domínio. Além disso, é importante saber até que ponto vale a pena colocarmos a palavra-chave no nome do domínio.
+É comum empresas terem nomes que não possuem uma relação direta
+com as palavras-chaves, como por exemplo Caelum (empresa de treinamento de tecnologia) http://www.caelum.com.br, Ponto Frio (famoso rede
+de varejo) http://www.pontofrio.com.br e várias outras. Isso é extremamente
+positivo no ponto de vista do negócio, pois cria uma identidade para a marca.
+No fundo, é uma decisão de negócio. Usar o seu nome de negócio como
+sendo algo que o descreva traz o risco de que, caso no futuro você precise se
+reinventar ou diversificar, tenha que carregar esse nome para sempre, como
+no clássico caso da Fototica, que atualmente não tem mais relação com fotos
+e é apenas ótica.
+Um outro balanço interessante é mistura da palavra-chave com o nome
+do negócio. Esse é o caso da Minds, uma franquia de ensino de idiomas.
+O domínio http://www.mindsidiomas.com.br consegue realçar os dois lados,
+rankeando tanto o nome Minds como a palavra-chave “idiomas”.
+Para negócios que não possuem palavra-chave no nome ou no domínio,
+existem outras maneiras de realçar as palavras-chaves, como os subtítulos,
+que veremos mais adiante.
+No nosso caso, o negócio vai se chamar “Guste”, que é quase uma tradução
+do catalão para a palavra “sabor” (na verdade, a tradução é “gust”, mas para
+funcionar melhor no português, foi adicionado o “e” no final). Para realçar as
+palavras-chaves e até descrever melhor a atuação, ele terá um slogan, no caso:
+“um chef para sua casa”, que realçaremos no site.
+Agora precisamos reservar um domínio para o “Guste”. Mas esse domínio
+será .com, .com.br, .net, ou alguma outra opção?
+
+4.8
+
+O fator do código do país no domínio
+
+Para fatores de rankeamento, ao definir um domínio, mais importante do que
+o nome em si, é o código do país no domínio, também conhecido como country code top level domain ccTLD. Os ccTLDs são os códigos de país que sucedem o domínio, como .br, .it, .es, .io, .li, .ar, .co, .jp e assim
+por diante.
+61
+
+4.8. O fator do código do país no domínio
+
+Casa do Código
+
+Atualmente, com o aumento do número de startups, é comum ver o
+uso de diferentes códigos de país nos domínios, como o http://vine.co, uma
+famosa rede de publicação e visualização de vídeos. Um outro caso famoso
+foi o http://bit.ly, conhecido encurtador de URLs, que usava o ccTLD .ly,
+da Líbia, que eventualmente foi bloqueado por razões políticas.
+Mas é importante ficar atento. Caso seu negócio tenha um apelo local, ou
+seja, ele é focado em um determinado país ou região, é importante escolher
+o ccTLD adequado. Isso acontece porque os buscadores utilizam o código do
+país no domínio para decidir se o site é relevante ou não. Com isso, caso decidíssemos fazer um domain hack com o domínio http://gust.ar, para formar
+o termo “Gustar”, estaríamos indicando que é um site local à Argentina, o que
+não seria o caso.
+Mas também, nem todos os ccTLDs possuem um apelo local. Existem
+códigos que não são referentes a uma região relevante, como por exemplo o
+.io, que se refere ao Oceano Índico, .co que se refere à Colômbia, .tv
+de Tuvalu e entre alguns outros. Esses códigos são conhecidos como Generic
+ccTLDs.
+No nosso caso, como queremos rankear bem especificamente para o
+Brasil, vamos ficar com o domínio .com.br.
+
+Devo preferir o domínio .com ou o .com.br?
+Para o rankeamento, não fará diferença, já que o .com é global,
+ou seja, genérico. No entanto, é mais difícil encontrar bons nomes de
+domínios .com, ou seja, domínios curtos e fáceis de memorizar.
+Em termos de negócio também, muitas empresas que encontram
+o .com, já reservam também o domínio .com.br (caso ambos estejam disponíveis) e fazem o redirecionamento de um domínio para o
+outro (veremos ao decorrer do livro como fazer esse redirecionamento
+de forma adequada).
+Demos a sorte de o domínio guste.com.br estar disponível, então fizemos seu registro:
+
+62
+
+Casa do Código
+
+Capítulo 4. Faça o keyword research
+
+Fig. 4.27: Domínio disponível no registro.br
+
+Já estamos prontos para ir adiante com nosso projeto.
+
+4.9
+
+E agora que tenho as palavras chave mapeadas e domínio registrado, o que faço?
+
+É no processo de keyword research que você começa a entender quais conteúdos são necessários para seu site. Percebemos que as pessoas procuram
+muito por receitas de risoto, dos mais variados tipos e ingredientes. Vamos
+usar essas ideias para criar conteúdo mais para a frente.
+Por outro lado, no ponto do negócio, vimos que há uma busca interessante
+por “chef em domicílio” e “personal chef ” de acordo com as cidades e também
+percebemos que para “chef em casa” não há tanta variação.
+Com essas palavras-chaves listadas, escolhemos um nome para o domínio
+e vamos colocar nosso site no ar, já fazendo as devidas otimizações.
+Vamos lá?
+
+63
+
+Capítulo 5
+
+As ferramentas básicas para o
+SEO
+“We shape our tools and afterwards our tools shape us”
+– Marshall McLuhan
+
+5.1. Entendendo e configurando o Google Analytics
+
+Casa do Código
+
+Fig. 5.1: Página inicial do guste.com.br
+
+Uma vez que o site está no ar, precisamos medir seus resultados. As
+pessoas estão realmente acessando minha página? Em qual página elas permanecem? Por quanto tempo? De onde elas vêm? O que elas pesquisam nas
+buscas? E muitas outras questões a que precisamos ficar atentos para sabermos se estamos no caminho certo.
+Um bom serviço para começarmos a monitorar vários desses números é o
+Google Analytics, que é uma ferramenta relativamente simples de configurar.
+
+5.1
+
+Entendendo e configurando o Google Analytics
+
+Uma das maiores curiosidades de quem possui um site é saber quem são as
+pessoas que estão acessando-o. É difícil responder essa questão com precisão, mas com a ferramenta adequada, é possível ter uma ideia de quem é
+esse público. Justamente com esse intuito foi criado o Google Analytics.
+
+66
+
+Casa do Código
+
+Capítulo 5. As ferramentas básicas para o SEO
+
+Fig. 5.2: Página inicial do Google Analytics
+
+O Google Analytics é uma ferramenta gratuita, criada para fornecer insights sobre o público que acessa o seu site. Com ele, você pode saber o
+navegador, origem, páginas mais acessadas, campanhas efetivas de marketing, tempo que as pessoas passam no seu site e muitas outras coisas, inclusive
+até assistir os acessos ao seu site em tempo real.
+O processo de configuração do Google Analytics é bem simples. O
+primeiro passo é ter uma conta no Google. Caso você já tenha um e-mail
+do gmail, é o suficiente.
+Ao se logar no Google Analytics, vamos criar as configurações para o
+nosso site. Basta acessar o menu Admin, no topo da tela e, nas opções de
+Accounts, clicar em Create new account:
+
+67
+
+5.1. Entendendo e configurando o Google Analytics
+
+Casa do Código
+
+Fig. 5.3: Criando uma nova conta no Analytics
+
+Na próxima tela, podemos escolher o que queremos rastrear: um site ou
+uma app mobile. Vamos escolher que queremos rastrear um site e definir as
+outras informações solicitadas:
+• Account name: é um agrupador. Dentro do mesmo site, você pode
+ter vários subsites que podem gerar estatísticas em separado. Todos
+esses subsites precisam ficar agrupados dentro de uma account;
+• Website name: identificação para o subsite cujas estatísticas você
+quer gerar dentro da account informada anteriormente;
+• Website URL: endereço desse subsite;
+• Industry Category: do que seu site trata? Vendas? Artes? Comidas? Empregos? Atualidades?
+• Reporting Time Zone: informe o país e o fuso horário a que se refere o site. Isso é importante pois o Analytics vai gerar estatísticas de
+horário de acesso.
+
+68
+
+Casa do Código
+
+Capítulo 5. As ferramentas básicas para o SEO
+
+Fig. 5.5: Um usuário online, isso significa que tudo está configurado
+
+Agora podemos explorar um pouco do Google Analytics.
+
+5.2
+
+Os relatórios do Analytics para SEO
+
+O Google Analytics é uma ferramenta maravilhosa e que a princípio parece
+ser simples, no entanto, para domá-la por completo e tirar o máximo proveito
+dos relatórios, é preciso tempo. Mesmo assim, alguns relatórios cruciais para
+SEO podem ser rapidamente aprendidos.
+
+71
+
+5.2. Os relatórios do Analytics para SEO
+
+Casa do Código
+
+Aprendendo o Analytics por completo
+O Google Analytics é bastante complexo e um livro completo poderia
+ser escrito ao seu respeito. Não é meu intuito aqui torná-lo um expert
+na ferramenta, mas sim dar-lhe a base necessária para conseguir tirar
+proveito dela.
+Para ir além e aprender mais ainda do Analytics, recomendo os cursos
+online do Google, que são em inglês, mas explicam bem as funcionalidades mais avançadas da ferramenta.
+http://www.google.com/analytics/learn/index.html
+Os relatórios interessantes para SEO ficam dentro da opção
+Acquisition -> Search Engine Optimization. Lá poderemos
+ver as queries utilizadas pelos usuários, as páginas acessadas através das
+buscas e um resumo de dados geográficos das pessoas. No entanto, esses
+relatórios vêm por padrão desabilitados. Isso porque quem agrega esses
+dados para o Google Analytics é outra ferramenta gratuita do Google, o
+Webmaster Tools.
+
+72
+
+Casa do Código
+
+Capítulo 5. As ferramentas básicas para o SEO
+
+Diferença entre o Google Analytics e o Webmaster
+tools
+O Analytics e o Webmaster Tools são ferramentas quase que completamente diferentes. O Analytics provê dados gerais sobre os acessos ao
+seu site, enquanto o Webmaster Tools provê informações e ferramentas
+para compreender melhor as buscas por seu ele.
+Elas possuem um único ponto em comum: ambas mostram informações sobre as buscas pelo seu site. Justamente para não fazer esse trabalho duas vezes em duas ferramentas, o Google decidiu mostrar no Analytics os dados agregados pelo Webmaster tools.
+Mas vale lembrar que no Analytics é possível cruzar os dados das buscas com outras informações, como quem comprou, quem visualizou determinada página no seu site, quanto tempo a pessoa ficou no seu site
+ou em cada página, o que não é possível fazer apenas com o Webmaster
+tools, já que ele não possui todas as informações necessárias.
+Em contrapartida, no Webmaster tools você também tem recursos
+exclusivos, como solicitar indexação de páginas, submeter sitemaps, remover páginas do índice e vários outros comandos.
+Ao tentar acessar os relatórios de SEO do Analytics, você verá a seguinte
+tela pedindo para habilitar o Webmaster tools no seu site:
+
+73
+
+5.2. Os relatórios do Analytics para SEO
+
+Casa do Código
+
+Fig. 5.6: Analytics pedindo para habilitar o Webmaster tools
+
+Clicando em Set up Webmaster tools data sharing, seremos
+redirecionados para a página de configurações do Analytics, no final da qual
+haverá a opção para fazer a habilitação:
+Indo a Edit, uma nova tela aparecerá, agora já dentro do Webmaster
+Tools. Basta clicar em Add a site to Webmaster Tools.
+
+74
+
+Casa do Código
+
+Capítulo 5. As ferramentas básicas para o SEO
+
+Fig. 5.7: Clicando no Add site...
+
+Já estamos prontos para configurar nosso novo site no Webmaster tools.
+
+5.3
+
+Configurando o Webmaster Tools
+
+No dashboard do Webmaster tools, basta clicar em Add a site no canto
+superior direito e informar o endereço do site, no nosso caso http://www.
+guste.com.br.
+Você precisará “provar” que o site é seu para conseguir habilitar o Webmaster Tools. Para isso, basta seguir as instruções recomendadas e clicar em
+Verify.
+Após a confirmação de que o site é seu, você será redirecionado para o
+dashboard do Webmaster Tools.
+
+75
+
+5.3. Configurando o Webmaster Tools
+
+Casa do Código
+
+Fig. 5.8: Dashboard do Webmaster Tools
+
+Se você já quiser, pode inclusive nesse momento pedir para o Google indexar o seu site, dessa forma ele já vai começar a aparecer nas buscas. Para
+isso, vá em Crawl -> Fetch as google e clique em Fetch. Após isso,
+basta clicar na opção Submit to index, que aparecerá na sua lista de
+fetches:
+
+Fig. 5.9: Pedindo para o Google indexar nosso site
+
+Depois de algumas horas, seu site estará indexado e você poderá pesquisar
+por ele no Google. Sempre que adicionar novas páginas, ou fizer alguma mudança que queira que seja rapidamente indexada, venha para essa função.
+76
+
+Casa do Código
+
+Capítulo 5. As ferramentas básicas para o SEO
+
+Apenas fique atento, pois há um limite mensal para solicitação de indexação.
+Para indexar o site inteiro, o limite é de 10 vezes por mês. Para solicitar reindexação de uma página específica, o limite é de 100 mensal. Caso prefira,
+você pode simplesmente aguardar o crawler visitar novamente seu site. Geralmente não demora mais do que 1 ou 2 dias, no entanto, esse prazo deixa de
+ser tão previsível como é com a submissão.
+
+Pedir para indexar ou esperar ele ser indexado?
+Em vez de pedir para o Google indexar o seu site, você pode simplesmente aguardar que ele seja indexado. Isso em algum momento vai
+acontecer, no entanto, há menos o controle de quando.
+
+Fig. 5.10: Depois de alguns minutos (ou horas) seu site aparecerá na busca do
+Google
+
+Vamos voltar ao Analytics, para terminar de habilitar os relatórios de SEO
+por lá. Pedindo novamente para visualizar os relatórios de SEO, você vai
+voltar para a tela que havia passado anteriormente, porém desta vez a página
+do seu site estará disponível para ser escolhida. Faça isso.
+77
+
+5.3. Configurando o Webmaster Tools
+
+Casa do Código
+
+Fig. 5.11: Adicionando os relatórios de SEO no Analytics
+
+Agora indo aos relatórios do Analytics você já conseguirá visualizar os
+resultados para as buscas:
+
+78
+
+Casa do Código
+
+Capítulo 5. As ferramentas básicas para o SEO
+
+Fig. 5.12: Relatório de SEO no Analytics
+
+Com o passar do tempo e as pesquisas acontecendo, esses relatórios terão
+muitos dados e você vai poder acompanhar os termos pesquisados, efetividade, posição média e muitos outros recursos, dos quais vamos falar na seção
+5.4.
+Apenas fique atento, pois o Google Analytics e o Webmaster Tools
+mostram apenas os detalhes para as buscas feitas no Google e, como consequência, você pode perder eventuais informações de outros buscadores.
+Para esses casos, é recomendado configurar as ferramentas específicas desses
+buscadores, como o Bing Webmaster Tools, cujo processo de configuração é
+muito similar ao do Google Webmaster Tools.
+
+5.4
+
+Relatórios para SEO no Webmaster Tools e
+no Analytics
+
+Depois de alguns dias, seus relatórios começarão a ter dados para mostrar.
+Eventualmente, as pessoas vão procurar pelo serviço que você oferece e vão
+encontrá-lo no Google. Tenha em mente que se for o começo de um site e
+você ainda não tiver feito muitas otimizações (que vamos começar a fazer no
+próximo capítulo para o http://guste.com.br) , seu rankeamento ainda não
+79
+
+5.4. Relatórios para SEO no Webmaster Tools e no Analytics
+
+Casa do Código
+
+será muito bom. Com o passar das semanas, aliado às otimizações que você
+vai aprender, ele irá melhorar.
+O Webmaster tools traz alguns indicadores importantes que precisamos
+acompanhar periodicamente, para podermos saber o impacto das mudanças
+que faremos.
+Logo ao entrar nele, no dashboard, já teremos informações sobre a variação recente do volume das buscas e cliques (quantas pessoas clicaram para
+visitar nosso site), quantidade de páginas indexadas e uma visão geral do
+crawling e dos erros que aconteceram durante as visitas do Google ao site.
+
+Fig. 5.13: Dashboard do Webmaster Tools com dados
+
+Essa visão geral é interessante para se ter uma ideia das melhorias. Eventualmente, quando fazemos algo errado e caímos no ranking ou somos penalizados (geralmente por tentar burlar o Google através de técnicas black
+hat), acabamos sentindo a queda nas visualizações e cliques, que pode ser
+facilmente percebida por esses gráficos.
+Mas, ainda assim, dentro do próprio Webmaster tools, podemos ver os
+termos e páginas mais buscadas, igual no Analytics, através do menu Search
+Traffic -> Search Queries.
+
+80
+
+Casa do Código
+
+Capítulo 5. As ferramentas básicas para o SEO
+
+Fig. 5.14: Termos buscados
+
+Mais importante do que os números em si que estão no Analytics e no
+Webmaster Tools é a interpretação desses números e para isso não há uma
+regra. Você precisa conhecer o negócio e usar isso para entender o que os
+dados das ferramentas lhe dizem.
+Número de impressões por si só pode enganar, já que pode ser um termo
+muito genérico que acaba aparecendo em muitas buscas, mas que não tem
+relação com o produto ou serviço que está sendo oferecido. O número de
+cliques vai lhe dizer quantas pessoas viram o seu site na busca e clicaram nele
+para ir ao seu site. Quais serão as palavras-chaves mais efetivas, ou seja, aquelas que aparecem menos e convertem mais pessoas para o seu site? É isso que
+o CTR (Click through rate Razão de cliques por visualizações) vai lhe dizer.
+Enquanto isso, a posição média vai dizer qual é a posição em que seu site
+aparece para esse termo na busca.
+No Webmaster Tools você pode acompanhar também os sites que linkam
+para páginas suas, seus links internos (links entre páginas dentro do seu
+próprio site), palavras-chaves que aparecem no seu site, estatísticas, erros de
+crawling e muito mais.
+Por outro lado, nos relatórios de SEO do Analytics é possível visualizar
+apenas os termos buscados, as páginas acessadas através das buscas e informações sobre os locais de onde as pessoas estão buscando.
+
+81
+
+5.5. Mas como melhoro meus resultados?
+
+Casa do Código
+
+Fig. 5.15: Informações sobre localidade das buscas
+
+5.5
+
+Mas como melhoro meus resultados?
+
+Agora que já temos as ferramentas preparadas para medir nossa evolução,
+estamos prontos para mexer nas nossas páginas e fazer otimizações direto
+no nosso site. Vamos trabalhar bastante com HTML para saber como deixar
+nosso código o melhor possível para que o site fique bem rankeado. Vamos
+lá?
+
+82
+
+Parte II
+
+Onpage SEO
+Os buscadores modernos funcionam como pessoas que acessam seu site.
+Eles são críticos, querem conteúdo de qualidade, um site usável, organização
+de informações e o mais claro possível. Uma parte importante disso é a forma
+como estruturamos o código das páginas do nosso site, afinal de contas, tudo
+o que aparece para o usuário está descrito ali.
+Ter um código de página bem organizado, identificado e claro irá ajudar
+muito nisso. Essas técnicas que envolvem diretamente o código das páginas
+é o que chamamos de Onpage SEO. O mais legal é que, seguindo as dicas que
+estão nessa parte do livro, você estará à frente da grande maioria dos sites
+existentes, com pouquíssimo esforço. São todas técnicas simples, que podem
+ser aplicadas a qualquer página em questão de poucas horas de trabalho.
+Estes capítulos foram escritos com o intuito de lhe explicar as técnicas
+de Onpage SEO de forma detalhada e com exemplos de código, mostrando
+como aplicar na prática cada conceito. Além disso, ele também está organizado de forma que sirva como um checklist para seguir quando você estiver
+trabalhando em seus sites.
+
+Capítulo 6
+
+Trabalhe corretamente o HTML
+do seu site
+“There’s no such thing as ‘perfectly optimized’ SEO”
+– Rand Fishkin, fundador da Moz
+O código HTML do seu site é fundamental para o SEO. É ele que os spiders veem. Justamente por isso eles precisam ser bem definidos e descritivos.
+Tenha sempre em mente que “quanto mais informações o seu HTML conseguir passar sobre o conteúdo da página, melhor”. Aqui não estamos falando
+de estética do site, apenas da estrutura do código.
+É preciso saber trabalhar corretamente com as tags h1, h2, h3, img,
+títulos, meta dados, links e muito mais.
+
+6.1. Mostre o que é importante no seu site com h1, h2 e h3
+
+6.1
+
+Casa do Código
+
+Mostre o que é importante no seu site com
+h1, h2 e h3
+
+Quando os spiders dos buscadores acessam seu site, eles veem apenas o
+HTML que lá está, com isso não conseguem distinguir visualmente qual informação na página é mais importante do que a outra. Repare na página de
+um livro do site da Casa do Código:
+
+Fig. 6.1: Página de um livro da Casa do Código
+
+Note que visualmente o nome do livro possui um peso maior do que a
+descrição, os preços e o nome do autor. Mas é justamente isso que o spider
+não consegue ver e precisamos informá-lo.
+Mostramos para os spiders que as informações são títulos ou possuem
+destaque através das tags h1, h2 e h3 (as demais tags hx já possuem menos
+impacto).
+86
+
+Casa do Código
+
+Capítulo 6. Trabalhe corretamente o HTML do seu site
+
+No caso da página de livros da Casa do Código, a informação que possui
+mais destaque é o nome do livro, portanto, ela deve ser colocada na tag h1:
+<h1>Introdução e boas práticas em UX Design</h1>
+
+É importante que exista apenas uma tag h1 na sua página para indicar
+a hierarquia do conteúdo e que a palavra-chave para qual você quer rankear
+apareça nesse h1. Nesse caso, as palavras-chaves são UX Design.
+Para elementos que ainda são títulos, mas menos primordiais, é possível
+utilizar as tags h2 e h3, nesse caso, sim, podendo haver mais de uma na
+mesma página.
+Na página dos livros do site da Casa do Código, o h2 é usado para o nome
+do autor e para o título dos detalhes do livro.
+
+Uso de classes e estilos CSS impacta no SEO?
+O uso dos nomes de classes e estilos inline de CSS através do atributo
+style, como em:
+<h1 class="destaque" style="line-height:1em">
+Introdução...
+</h1>
+
+não vai impactar no SEO do seu site. No entanto, é importante ficar
+atento pois, dependendo do que for feito no CSS, isso pode impactar no
+tempo de abertura e carregamento da sua página, o que, por sua vez,
+pode implicar em um peso negativo para o ranking do seu site, caso mais
+pesado e demorada a abertura.
+Com as tags hX podemos também indicar uma hierarquia das informações dentro da página, indicando ao buscador qual trecho de conteúdo
+possui mais preponderância quando comparado a outro trecho. Por exemplo,
+em um artigo falando sobre técnicas para cozinhar, podemos ter a seguinte
+hierarquia de conteúdo, dentro da mesma página:
+<h1>Como fritar um ovo</h1>
+<p>As diferentes técnicas para se fritar um ovo possuem ...</p>
+
+87
+
+6.2. Use a tag title para identificar o título da sua página
+
+Casa do Código
+
+<h2>Utilizando manteiga</h2>
+<p>Ao fritar um ovo com manteiga, temos...</p>
+<h3>Fritando com manteiga com sal</h3>
+<p>...</p>
+<h3>Fritando com manteiga sem sal</h3>
+<p>...</p>
+<h2>Utilizando óleo</h2>
+<p>Ao fritar um ovo com óleo...</p>
+
+Nessa estrutura, a tag h1 e o seu conteúdo possuem maior preponderância ao conteúdo de h2 e seus h3. Os buscadores sabem que os textos dentro
+de h2 possuem relação com aquele elemento “pai”. Assim, no exemplo anterior, o buscador sabe que o conteúdo de texto imediatamente a seguir do h3
+de como fritar ovo com manteiga com sal está relacionado a esse assunto.
+
+6.2
+
+Use a tag title para identificar o título da
+sua página
+
+Quando você vê o resultado de busca para uma página, você visualiza algo
+como:
+
+Fig. 6.2: Um dos resultados para ‘receita frango thai’
+
+Note que a primeira informação que aparece nesse resultado é um título.
+Esse título é recuperado através do título da página e possui um peso importante para o indexador, na identificação do conteúdo a que se refere a página.
+Esse título é exatamente o mesmo título definido no HTML da página através
+da tag title.
+No caso dessa página, o código é:
+88
+
+Casa do Código
+
+Capítulo 6. Trabalhe corretamente o HTML do seu site
+
+<title>
+Receita de Frango Thai - As mais deliciosas Receitas de Frango
+</title>
+
+No entanto, note que na exibição o final do título ficou cortado. Para
+evitar essa situação, utilize sempre títulos de no máximo 55 caracteres. Assim
+o conteúdo irá aparecer corretamente. Porém, ainda assim fique atento, pois
+com atualizações futuras de design dos buscadores, sempre é possível que esse
+número aumente ou (mais provável) diminua.
+No título, é importante que apareça pelo menos uma palavra-chave referente ao conteúdo da página e o mais próximo do começo do título possível,
+dessa forma você indica aos bots sobre o que ela se refere e traz clareza ao
+usuário que está buscando pelo seu conteúdo. Aliás, caso seu título acabe
+extrapolando o limite de caracteres e ele realmente precise extrapolar, por exemplo como em um título de uma notícia ou um nome grande de um produto,
+faça com que as palavras chaves apareçam no começo do título e que também,
+de alguma maneira chamem a atenção do usuário.
+Outra característica importante para todo o seu site é que cada página
+existente nele tenha um título único. Assim você especifica corretamente a
+que se refere cada página, o que é bom para o usuário.
+Por fim, lembre-se de criar um título que chame a atenção do usuário.
+Da mesma forma que fizemos a analogia com as lojas da 25 de Março lá no
+começo do livro, o título vai ser o primeiro contato de muitos usuários com
+o seu site. Começa aí o seu processo de convencimento do potencial cliente.
+
+6.3
+
+Mais informações com as meta tags
+
+Para todos os sites mostrados no resultado das buscas, temos uma descrição
+sobre a página, que pode ser inferida pelo buscador, de acordo com o que ele
+julgar relevante mostrar para o usuário a partir dos termos usados por ele na
+busca, ou então podemos informar o que queremos que apareça.
+
+89
+
+6.3. Mais informações com as meta tags
+
+Casa do Código
+
+Fig. 6.3: Buscas com termos diferentes, descrições diferentes
+
+Quando uma busca é feita apenas pelos termos “Casa do Código”, o conteúdo devolvido é o que informamos que deve ser usado, através da tag meta,
+para definirmos uma description:
+<meta name="description"
+content="Os melhores livros sobre Java, Ruby, Rails, Android,
+iPhone, SOA, HTML, CSS, Empreendedorismo e muito mais.
+Feitos por programadores para programadores.">
+
+Essa tag deve estar dentro do head da página. Note também que o mesmo
+problema de truncagem que acontece com o título acontece também com a
+descrição. Ela ficou cortada no final. Para evitar esse problema, faça com que
+a sua descrição possua até 150 caracteres. Além disso, também é fortemente
+recomendado que cada página possua a sua própria descrição e que o texto
+seja interessante o suficiente para convencer o usuário a acessar seu site.
+Vale notar que a descrição não possui um peso direto no rankeamento,
+mas é um fator importante de SEO, pois influencia diretamente na conversão
+de cliques para o seu site. Além disso, existem relatos de que um bom CTR
+Click Through Rate influencia no rankeamento positivo do seu site. Ou seja,
+na dúvida, faça um texto convidativo :).
+Mas, como vimos na imagem anterior, existem casos em que o próprio
+buscador decide mostrar outro conteúdo, que não o da descrição informada.
+Não possuímos controle sobre como ou quando isso acontece, mas sabemos
+que tudo depende dos termos usados na busca do usuário. No caso da segunda busca, foi utilizado “Casa do Código Caelum” e isso foi o suficiente
+90
+
+Casa do Código
+
+Capítulo 6. Trabalhe corretamente o HTML do seu site
+
+para que o Google decidisse mostrar um trecho do conteúdo do site. Caso ele
+não encontrasse nada relevante para mostrar, a descrição informada na tag
+meta seria utilizada.
+Outro controle importante que podemos fazer através da tag meta é
+instruir os bots sobre como eles devem proceder tanto na indexação, como
+na exibição da página como resultado. Isso é feito através da tag meta
+name="robots". Seu uso poderia ficar como em:
+<meta name="robots" content="noindex" />
+
+As indicações para os robôs são feitas através do atributo content. No
+caso anterior, o valor noindex indica que essa página não deverá ser indexada. Geralmente fazemos isso para páginas de um sistema, telas de login de
+intranet e afins.
+Algumas outras opções importantes para o instruções aos bots são:
+• nofollow: indica que o bot não deve seguir para nenhum link a partir
+da página em que ele estiver. Seu uso é indicado para quando uma
+página possui link para páginas que não têm relação com seu conteúdo
+principal. Veremos mais sobre isso ainda no livro, ao falarmos sobre
+Link Building;
+• noarchive: impossibilita que uma cópia cacheada desse site seja devolvida como resultado;
+• nosnippet: diz que não deve ser mostrada uma descrição para o site
+no resultado da busca;
+• noodp: desabilita o uso do Open Directory Project como alternativa
+para escolher o conteúdo a ser usado para exibir a descrição do site no
+resultado da busca;
+• none: equivalente ao nodeindex mais nofollow.
+Você pode usar esses valores em conjunto, caso necessário:
+<meta name="robots" content="nofollow,noarchive" />
+
+91
+
+Casa do Código
+
+Capítulo 6. Trabalhe corretamente o HTML do seu site
+
+Além de cuidar do nome do arquivo, no seu site, sempre dê atenção às
+descrições das imagens, através da tag alt. Sempre coloque uma descrição
+interessante e bem escrita, usando alguma palavra-chave relacionada ao assunto:
+<img src="/imagens/decoracao-banheiro-pequeno-verde.png"
+alt="Decoração de banheiro pequeno com tons de verde" />
+
+Com essas alterações, suas imagens estarão mais suscetíveis a aparecer
+nas buscas pelas imagens, além de que isso naturalmente torna as imagens
+da sua página acessíveis para deficientes visuais, já que leitores de tela leem o
+conteúdo do atributo alt para as pessoas. O site ser acessível é um fator importante para rankeamento, além de, evidentemente, você estar contribuindo
+para a inclusão digital.
+
+6.5
+
+Mas é só isso?
+
+As otimizações que envolvem alterações diretas no HTML da sua página são
+bem simples. Muitas não precisam nem de um programador para que sejam
+feitas. Basta um pouco de conhecimento de HTML e pronto. Fazendo essas
+mudanças, você estará à frente de grande parte do mercado. Mas, ainda assim,
+isso não é o suficiente para ter uma página bem rankeada. Ainda existem
+diversos fatores com os quais precisamos tomar cuidado, principalmente com
+relação à estrutura e organização do nosso site.
+
+93
+
+Capítulo 7
+
+Design, estrutura e organização
+do site
+Fazer as otimizações para SEO de um site é um trabalho multidisciplinar. Nas
+otimizações HTML que vimos no capítulo anterior, precisamos de um pouco
+de programação para realizarmos as melhorias. A partir de agora vamos precisar de algum trabalho de usabilidade e estruturação da informação no nosso
+site, além algum trabalho com o design.
+Sempre tenha em mente que, quanto mais usável site for para o usuário,
+melhor ele também será para os indexadores e para o rankeamento.
+
+Casa do Código
+
+Capítulo 7. Design, estrutura e organização do site
+
+Fig. 7.1: Exemplo de URL a se evitar. Repare como esse endereço não diz nada
+sobre a página
+
+O endereço é uma das primeiras formas de indicar para os crawlers sobre
+o que a página diz respeito. Aproveite para já deixar visível para ele no que
+você quer rankear, com o uso de alguma palavra-chave que seja interessante
+para seu site.
+No site da Casa do Código, percebemos que gostaríamos de rankear para
+“Livro de XXX”, onde XXX é o assunto principal do livro. Dessa forma, fizemos nossas URLs seguirem o padrão:
+http://www.casadocodigo.com.br/products/livro-xxx
+
+No caso do livro de SEO, a URL válida é http://www.casadocodigo.com.
+br/products/livro-seo. A URLs podem ter até aproximadamente 2000 caracteres (esse número pode variar um pouco de acordo com o navegador).
+
+Fig. 7.2: Na busca por ‘arte da guerra’, Google destaca o nome do livro na URL
+
+Sempre procure manter suas URLs as mais concisas e descritivas possíveis. Lembre-se que a URL é exibida no momento da busca e também é
+algo que pode chamar a atenção do usuário que visualiza sua página no resultado da busca. Por outro lado, uma URL com caracteres estranhos pode
+até mesmo desmotivá-lo, passando uma sensação de algo pouco profissional
+e até mesmo abaixando o seu CTR.
+97
+
+7.3. Organização e estrutura do seu site
+
+7.3
+
+Casa do Código
+
+Organização e estrutura do seu site
+
+Um bom processo de arquitetura da informação para a criação do conteúdo
+fará com que você economize a paciência do usuário e também a dos spiders dos buscadores. Muitas vezes entramos em sites onde não conseguimos
+encontrar as informações de que precisamos. Sabemos que elas estão lá, em
+algum lugar, mas temos muita dificuldade em achar.
+Isso é muito comum acontecer em e-commerces. Quantas vezes eu já me
+peguei tentando procurar os novos lançamentos de jogos para PlayStation e
+me vi andando em círculos pelos menus do site.
+Pensar na estrutura de um site é igual pensar na planta de uma casa. Hoje
+em dia você não faria uma casa com um banheiro do lado de fora, com difícil acesso. Atualmente muitos apartamentos “agrupam” ambientes, como a
+cozinha americana, que de certa forma junta a sala com a cozinha, ou as
+varandas gourmets, juntando a sacada com a cozinha. Enfim, são diferentes
+combinações com um único objetivo comum: tornar a movimentação pelo
+ambiente o melhor possível e mantendo ainda uma organização lógica dos
+ambientes.
+Um dos casos que eu acredito que melhor faz esse trabalho é o site do G1:
+
+98
+
+Casa do Código
+
+Capítulo 7. Design, estrutura e organização do site
+
+Fig. 7.3: Agrupamentos do site do G1
+
+Ali é possível acessar os diversos níveis de agrupamentos de informações
+pelo portal e é facil saber aonde ir caso você queira ver todas as notícias sobre
+“Economia”. Se eu quiser ver o que foi notícia no Jornal Nacional de ontem,
+eu só preciso ir ao menu na tv e escolher o programa. Lá eu terei todos os
+vídeos e conteúdos sobre o programa que eu quiser. Esse agrupamento poupa
+esforço intelectual dos usuários e também serve para SEO.
+Na Casa do Código, esse agrupamento é bastante importante. Há a divisão dos livros por assuntos. Percebemos durante um tempo que muitas
+pessoas procuravam pelo termo “livros de mobile” e para rankearmos bem
+para essas buscas, fizemos uma seção só com os livros relacionados a mobile:
+
+99
+
+7.3. Organização e estrutura do seu site
+
+Casa do Código
+
+Fig. 7.4: Categoria de livros de mobile na Casa do Código
+
+Dessa forma, além de facilitar o usuário que acessa o site e está interessado
+apenas em determinadas informações, criamos mais uma página onde podemos rankear. Outro ponto importante a notar, complementando o assunto
+das URLs, da seção 7.2, é que podemos refletir esse agrupamento na URL de
+diferentes formas.
+Na Casa do Código, utilizamos o endereço http://www.casadocodigo.
+com.br/collections/livros-de-mobile. No entanto, várias outras opções são
+possíveis, desde que mantendo uma organização também da informação.
+Por exemplo, poderíamos também usar os seguintes endereços http://www.
+casadocodigo.com.br/livros/mobile para refletir essa mesma organização. A
+decisão é sua, escolha uma estrutura com que mais se identificar, lembrando
+de que ela deve ser clara e concisa.
+
+100
+
+Casa do Código
+
+7.4
+
+Capítulo 7. Design, estrutura e organização do site
+
+O peso de se ter um site mobile
+
+Desde o final de 2014, o Google passou a reconhecer também a importância
+dos dispositivos mobiles nas buscas. Se você pesquisar por um termo no seu
+computador e fizer a mesma pesquisa no seu celular, é bem provável que terá
+resultados diferentes. Mas por que isso?
+Frequentemente tentamos acessar alguns sites que não funcionam corretamente nos nossos tablets e celulares. E não é interesse do Google fazer com
+que acessemos, nesses dispostivos, esses sites. Justamente por isso, o Google
+dá preferência para sites que funcionam corretamente no mobile.
+Para conseguir fazer um site que abra adequadamente no computador e
+no celular, existem diversas estratégias. Eu particularmente recomendo seguir
+a concepção de um site responsivo, já que o trabalho geralmente é menor e
+o resultado acaba sendo mais satisfatório do que as outras abordagens, como
+replicar o site em um outro domínio mobile (geralmente conhecido como
+http://m.site.com) . Além disso, recomendo fortemente a leitura dos livros
+Web Design Responsivo, do Tárcio Zemel, e A Web Mobile, do Sérgio Lopes,
+que são focados justamente nesse assunto.
+Para se ter uma ideia, o peso que o Google dá para isso é tão grande, que
+atualmente ele mostra nas buscas feitas no celular uma indicação visual para
+o site que é Mobile-friendly.
+
+101
+
+7.4. O peso de se ter um site mobile
+
+Casa do Código
+
+Fig. 7.5: Site mobile-friendly é indicado no resultado da busca no celular
+
+Portanto, sempre tenha atenção com a qualidade do seu site nos celulares,
+já que, além de ser importante para o SEO, ele é cada vez mais um mercado
+em crescimento e algo que você não quer perder no site de que você cuida.
+
+102
+
+Casa do Código
+
+Capítulo 7. Design, estrutura e organização do site
+
+Fig. 7.6: Na esquerda o site aberto visualizado no computador e na direita a
+mesma página vista do celular
+
+7.5
+
+O código da minha página, o meu layout e
+agora as páginas de buscas?
+
+Vimos no capítulo anterior que o código HTML da sua página possui importância no rankeamento das suas páginas. Agora acabamos de ver que a
+estrutura da informação e o layout também influenciam nisso. No final do
+capítulo, vimos que o próprio resultado da busca dá algumas informações a
+mais sobre a página, como foi o caso do Mobile-friendly. Mas o leitor atento
+deve ter percebido que existia uma informação a mais ali. No caso do site
+da Casa do Código, havia o preço do produto direto no resultado da busca.
+Como isso é feito? Será que podemos passar mais informações ali?
+
+103
+
+Capítulo 8
+
+Enriquecendo seus resultados
+com microformatos e localização
+Ao visualizar a página nos resultados de busca, os usuários precisam tomar a
+decisão de entrar ou não no seu site. Para convencê-lo disso, já vimos que um
+bom conteúdo, um texto de descrição chamativo e um título interessante para
+o site são fatores importantes. No entanto, existe mais. Podemos controlar
+muito mais informações para serem exibidas nas páginas de resultado das
+buscas, passar mais confiança ao usuário final e, consequentemente, aumentar
+o nosso CTR, que é a quantidade de usuários que convertemos para nosso site.
+Boa parte do segredo para conseguirmos isso é através do uso dos microformatos. Veja o que é possível:
+
+8.1. Entenda os microformatos
+
+Casa do Código
+
+Fig. 8.1: Exemplo de microformatos do comparegames.com.br
+
+Repare como nesse caso as notas, reviews, preço, estrutura do site, enfim,
+tudo chama a atenção para esse resultado, além de trazer credibilidade. Como
+fazer isso para nossas próprias páginas?
+
+8.1
+
+Entenda os microformatos
+
+Para que o Google entenda a que se referem as informações da sua página,
+é preciso passar uma indicação a ele. Essa indicação não precisa, e nem
+deve, ficar visível para o usuário final, mas deve estar disponível para o spider
+que vai visitar sua página. Ou seja, precisamos passar um trecho de código
+que fique invisível para o usuário. É justamente esse o papel dos microformatos. São pequenas tags HTML que colocamos nas nossas páginas e que
+servem para definir as informações que estão no nosso site. Se você pensou
+em metadados, acertou. Os microformatos são metadados para sua página.
+Existem microformatos para diferentes informações, como produtos, reviews, músicas, receitas e assim por diante. A lista é relativamente grande, mas
+não se preocupe. Assim que você pegar o funcionamento de 2 ou 3 metadados,
+o processo para usar os próximos no seu site é muito similar. Basta encontrar
+o metadado adequado para a informação que você quer descrever. Você consegue ver uma lista completa referente a isso no suporte do Webmaster Tools:
+http://bit.ly/google-microformatos.
+No capítulo anterior, vimos que organizar o site com grupos de informações é uma boa prática. Esses grupos de informações também podem estar
+visíveis no resultado da busca da sua página. Repare novamente no resultado
+da Casa do Código para a página de um livro. Note como há a definição da
+organização ali no resultado:
+106
+
+Casa do Código
+
+Capítulo 8. Enriquecendo seus resultados com microformatos e. . .
+
+Fig. 8.2: Resultados com breadcrumbs
+
+Esses agrupamentos nas visualizações são chamados de breadcrumbs (rastro de pão), e podemos defini-los no nosso HTML.
+
+8.2
+
+Breadcrumbs para organização
+
+Usar os microformatos disponíveis pode ser um pouco complicado na
+primeira vez, mas depois que se acostuma e pega o jeito, fica fácil.
+Para fazermos os breadcrumbs, o primeiro passo é que as partes do agrupamento estejam disponíveis na sua página. Ou seja, se quisermos indicar o
+agrupamento para Vídeo Games -> PS3 -> Jogos, faríamos algo como:
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="http://www.site.com.br/video-games" itemprop="url">
+<span itemprop="title">Vídeo Games</span>
+</a>
+
+</div>
+
+107
+
+8.2. Breadcrumbs para organização
+
+Casa do Código
+
+Repare que começamos indicando na primeira tag div que ela é um escopo, com o atributo itemscope e, em seguida, dizemos ao que ela se refere,
+com o atributo itemtype, indicando que ela é um Breadcrumb. A URL
+no valor desse atributo representa a identificação desse microformato.
+Dentro desse escopo, teremos o link para onde esse breadcrumb aponta.
+Precisamos identificá-lo com a opção itemprop="url". Por fim, marcamos também o title, que identificará a informação.
+Podemos fazer o mesmo para as próximas informações do breadcrumb.
+Aí teremos o código HTML para esse trecho da página:
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="http://www.site.com.br/video-games" itemprop="url">
+<span itemprop="title">Vídeo Games</span>
+</a>
+
+</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="http://www.site.com.br/video-games/ps3"
+itemprop="url">
+<span itemprop="title">PS3</span>
+</a>
+
+</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="http://www.site.com.br/video-games/ps3/jogos"
+itemprop="url">
+<span itemprop="title">Jogos</span>
+</a>
+</div>
+
+Você pode testar a visualização dos seus novos microformatos através da
+própria ferramenta do Google em http://bit.ly/google-microformatos. Basta
+a em http://bit.ly/richsnippet-test.
+
+108
+
+Casa do Código
+
+8.3
+
+Capítulo 8. Enriquecendo seus resultados com microformatos e. . .
+
+Mais possibilidades você tem de microformatos
+
+Você pode descrever basicamente qualquer informação com os microformatos, mas algumas chamam a atenção, em especial as de produtos e avaliações.
+Lembra do resultado do http://www.comparegames.com.br na página de
+resultados do Google, trazendo diversas informações?
+
+Fig. 8.3: De novo o exemplo de microformatos do comparegames.com.br
+
+Repare como é interessante o visual das notas, produto (contendo o preço)
+e quantidade de reviews para determinado produto. Primeiro, vamos aprender como fazer adicionar os microformatos para o preço.
+Considere que em sua página há a exibição do preço em um código
+HTML similar a:
+<div class="produto">
+<span class="nome">Uncharted 3</span>
+<span class="preco">R$ 120,90</span>
+</div>
+
+Precisamos enriquecer esse trecho de HTML com o microformato para o
+produto. Para isso, vamos indicar que estamos falando de um produto dentro
+do escopo da div, através do atributo itemscope:
+<div class="produto"
+itemscope itemtype="http://data-vocabulary.org/Product">
+</div>
+
+109
+
+8.3. Mais possibilidades você tem de microformatos
+
+Casa do Código
+
+Em seguida, no span com o nome do produto, podemos indicar o seu
+nome com o atributo itemprop="name":
+<div class="produto"
+itemscope itemtype="http://data-vocabulary.org/Product">
+<span class="nome" itemprop="name">Uncharted 3</span>
+</div>
+
+Existem várias outras informações que podem ser dadas para o produto
+além do nome, como uma imagem, marca, e identificador.
+O preço precisamos envolver dentro de um novo escopo, chamado de
+Offer:
+<div class="produto"
+itemscope itemtype="http://data-vocabulary.org/Product">
+<span class="nome" itemprop="name">Uncharted 3</span>
+<span class="preco" itemprop="offerDetails"
+itemscope itemtype="http://data-vocabulary.org/Offer">
+R$ 120,90
+</span>
+</div>
+
+Por fim, precisamos indicar que o valor R$120,90 é o preço dessa “oferta”.
+Vamos indicar isso através de uma tag chamada meta, útil apenas para delimitar alguma informação específica, mas sem efeito visual na página:
+<div class="produto"
+itemscope itemtype="http://data-vocabulary.org/Product">
+<span class="nome" itemprop="name">Uncharted 3</span>
+<span class="preco" itemprop="offerDetails"
+itemscope itemtype="http://data-vocabulary.org/Offer">
+
+110
+
+Casa do Código
+
+Capítulo 8. Enriquecendo seus resultados com microformatos e. . .
+
+<meta itemprop="priceCurrency" content="BRL" />
+<meta itemprop="price" content="120.9" />
+R$ 120,90
+</span>
+</div>
+
+Note que a ideia do uso para a definição do produto é idêntica ao dos
+breadcrumbs. Você possui um elemento na tela e precisa indicar o que ele é. O
+primeiro passo é sempre definir o escopo da informação (delimitar onde está
+a informação) e, em seguida, começar a identificar cada uma das informações.
+A lista de microformatos suportados está em constante evolução e atualização. Recomendo fortemente que você acompanhe com frequência a lista
+com as opções suportadas, disponível em http://bit.ly/google-microformatos
+e siga a documentação para saber quais informações são passíveis de serem
+passadas.
+Se você seguir uma estrutura completa de microformatos, adicionando
+endereços, informações sobre seus negócios, reviews e várias outras informações relevantes, será possível chegar a uma página com resultado similar
+à que fizemos na Caelum.
+
+Fig. 8.4: Resultado da Caelum no Google
+
+111
+
+8.4. Entendendo os sitelinks
+
+Casa do Código
+
+Note a variedade das informações e descrições e perceba o destaque que
+ela possui sobre os outros resultados.
+
+8.4
+
+Entendendo os sitelinks
+
+Quando as pessoas procuram diretamente pelo seu site no Google, ele geralmente exibe vários links para diferentes páginas do seu site. Esses links são
+conhecidos como sitelinks e podem ser potenciais pontos de conversão de
+acesso para seu site.
+
+Fig. 8.5: Sitelinks da Casa do Código
+
+Os sitelinks são gerados automaticamente pelo Google, no entanto, eventualmente você pode querer que uma página não apareça, pois representa algum evento antigo, ou informação qualquer outra informação que não deve
+ser publicada.
+Para bloquear determinadas páginas de aparecerem nos sitelinks, basta
+acessar o menu Search Appearance -> Sitelinks no Webmaster Tools
+do seu site, e indicar quais páginas devem ser desabilitadas.
+112
+
+Casa do Código
+
+Capítulo 8. Enriquecendo seus resultados com microformatos e. . .
+
+Fig. 8.6: Tela para desabilitar páginas de aparecerem no sitelinks
+
+Vale reforçar que as páginas que aparecem no sitelinks são decidas pelo
+Google, a partir dos números de impressões e de conversão das outras páginas
+do seu site. Portanto, uma boa prática é confiar que ele exiba os melhores
+resultados para quem faz as buscas pelo seu site. De qualquer maneira, vale
+sempre ficar atento a páginas que não devem em hipótese nenhuma aparecer.
+No caso de um e-commerce, por exemplo, dependendo do caso, não vale mais
+tanto a pena exibir ali a página de um produto que não é mais comercializado.
+
+8.5
+
+As otimizações onpage não são tudo...
+
+Nos últimos 3 capítulos passamos por diversas otimização onpage para nossos
+sites. São mudanças que se feitas de forma adequada, trazem melhor rankeamento e melhor conversão para nossas páginas quando elas aparecem nas
+buscas.
+No entanto, existe ainda um outro fator que influencia muito nossos resultados. Quem linka para nós? Para quem nós linkamos? Isso faz parte das
+otimizações offpage, que não envolvem mudanças diretas no código HTML
+do nosso site.
+
+113
+
+Parte III
+
+Offpage SEO
+Fazer SEO envolve também um bom trabalho de marketing. Fazer com
+que as pessoas saibam de você é fundamental. Melhor ainda é quando as
+outras pessoas falam de você (e, se possível, falem bem). Ou seja, você precisa
+de popularidade.
+O mesmo preceito vale para os sites. Quanto mais os outros sites falem
+do seu, melhor para o seu rankeamento. Mas qual o critério para saber que
+outros sites estão falando do meu site? Nada melhor do que os links.
+Mas, cuidado! Apenas fazer com que outros sites façam links para você
+não é suficiente. Nesse aspecto, qualidade é muito mais importante do que
+quantidade e as otimizações offpage se resumem basicamente à importância
+dos links, o processo de link building e estratégias para conseguir links de
+qualidade.
+
+Capítulo 9
+
+Faça o link building
+adequadamente
+“The objective is not to ‘make your links appear natural’; the objective is that
+your links are natural”
+– Matt Cutts
+Ser popular é um passo para conseguir dar um boost no rankeamento do
+seu site. Para isso, é preciso que outras páginas façam referência para páginas
+suas. Porém, para isso, não basta simplesmente conseguir o maior número
+de links possíveis para suas páginas. É preciso conseguir links de qualidade.
+Justamente para isso é que existe o processo de link building (construção de
+links).
+Lembra da história da relevância de quem faz o link? Imagine que eu,
+Adriano Almeida, dê uma entrevista na televisão falando que você, caro leitor,
+
+Casa do Código
+
+é um bom jogador de futebol. Impactante? Não muito. Agora imagine que
+o Neymar dê uma entrevista falando que você joga bem. Bem mais impactante, não? Note como quem se refere a nós muda completamente o peso da
+referência.
+Isso resume bem o processo de link building. Você precisa ser linkado
+pelas páginas certas. Pelas referências em determinados assuntos. Não que os
+não referências não sejam importantes, claro que são, mas eles naturalmente
+terão peso menor. Ou seja, se você tem uma página no seu site falando sobre
+uma dieta, caso ela seja linkada em alguma notícia no site da Men’s Health,
+será um ótimo boost para sua página, já que o site da Men’s Health possui
+reputação nesse assunto.
+Agora considere que o Bill Gates e o Neymar deram uma entrevista falando que você é um bom programador. Ambos possuem grande reputação.
+Mas será que algum deles terá um peso maior? Se você pensou no Bill Gates,
+acertou. Apenas ser linkado por alguém importante não é suficiente. É preciso ser linkado por alguém importante no assunto em que sua página se refere. Seu blog sobre táticas de futebol pode ser linkado por um site famoso
+de concurso de designs de blogs, mas nada se compara se ele for linkado no
+http://globoesporte.com. Percebe a diferença?
+Talvez você esteja pensando: “Mas como é que os indexadores dos mecanismos de buscas sabem sobre o meu assunto?”.
+Nem sempre foi assim. Muitos anos atrás, apenas ter páginas linkando
+para seu site era o suficiente para conseguir um bom rankeamento. Não havia
+a preocupação com a reputação de quem linkasse. Com isso, houve uma
+grande onda de “compra de links”. Assim surgiram sites que eram apenas
+agregadores de links, sem nada de conteúdo relevante para as pessoas. Péssimo para os usuários, não?
+Justamente para evitar que esses sites se proliferassem, os buscadores passaram a levar em consideração não mais a quantidade de links, e sim sua
+relevância. Com isso, eles precisaram se tornar mais modernos, com analisadores de conteúdo para saber sobre o que cada página fala e verificar a
+relação dos links com esses assuntos. Para atribuir essa qualidade nos links,
+diversos fatores também passaram a ser considerados:
+• A página que faz o link para mim possui relevância maior que a minha
+118
+
+Casa do Código
+
+Capítulo 9. Faça o link building adequadamente
+
+página?
+• Meu site possui muitos links importantes linkando pra ele?
+• Vários sites diferentes estão fazendo links para mim?
+• Qual é a descrição desses links?
+• Os conteúdos das duas páginas possuem relação?
+• Qual é a posição do link dentro da página?
+• Os links são recentes ou antigos?
+Já vimos que a relevância de quem faz link para nós é importante. Mas e
+os demais fatores? Vamos entender como lidar com eles e atacá-los da melhor
+maneira.
+
+9.1
+
+Linkando e sendo linkado corretamente
+
+Quando é feito um link para uma página, ele deve surgir da forma mais natural possível dentro do conteúdo. Isso significa que devem ser evitados links
+como “clique aqui”, “veja lá”, “veja aqui” e afins. Mas como fazer isso?
+É preciso tomar bastante cuidado na escrita do conteúdo para que ele
+apareça naturalmente. Por exemplo, em um artigo em que a Coca Cola esteja sendo citada, podemos utilizar a seguinte abordagem para a linkagem:
+<p>
+
+</p>
+
+Uma das bebidas mais vendidas no mundo, a
+<a href="http://www.cocacola.com.br">Coca Cola</a> aparece
+também como uma das principais causas de obesidade.
+
+Nesse caso, estamos apenas linkando com a palavra-chave “Coca Cola”.
+Isso já é substancialmente melhor do que termos que não possuem relação
+nenhuma com o conteúdo, como os derivados de “clique aqui”. No entanto,
+ainda é possível fazer melhor.
+Outra boa prática para a criação de links é que o texto dele possua contexto. Em um texto sobre a Liga dos Campeões de 2013, podemos linkar para
+o site do Real Madrid, ao citarmos que ele foi o campeão daquele ano.
+119
+
+9.2. Onde posiciono meus links?
+
+<p>
+
+</p>
+
+Casa do Código
+
+A Champions League de 2013 teve uma final um pouco menos
+disputada do que em anos anteriores. Dessa vez, o
+<a href="http://www.realmadrid.com">
+Real Madrid foi campeão
+</a>.
+
+Agora estamos dando mais peso também para o termo “campeão”,
+abrindo novas possibilidades de palavras-chaves.
+É fundamental que os links existentes soem sempre os mais naturais possíveis. Assim, quanto mais diferente for o texto do link, melhor. Mas é evidente que em algum momento haverá uma repetição. Dois sites diferentes vão
+acabar linkando para uma página sua com o mesmo texto. Não se preocupe,
+mas sempre tente favorecer a diversidade.
+A regra para os links é: mantenha-os o mais natural possível, com variações do texto sendo linkado e aproveitando o uso de diferentes palavraschaves dentro dele.
+
+9.2
+
+Onde posiciono meus links?
+
+Nem todos os links são iguais. Alguns são mais importantes, outro menos.
+Percebemos isso naturalmente quando estamos acessando um site. Um link
+no rodapé não possui o mesmo apelo de um link no cabeçalho. Aliás, essa é
+justamente uma das regras da venda de espaço publicitário em grandes portais. Quanto melhor posicionada a mídia, mais caro será o espaço.
+Os links que terão mais peso serão os que estão mais próximos do conteúdo original, geralmente no começo e centro da página. Por isso, é importante linkar para sites relevantes dentro ou próximo do seu conteúdo. Em
+contrapartida, links em rodapé ou barras laterais possuem menos peso.
+Nos sites da Casa do Código e da Caelum mantemos links para outros
+serviços e sites nossos nos rodapés, mas eventualmente em páginas internas
+ou em nossos blogs, mantemos links para esses mesmos serviços, aí já no
+conteúdo principal e com o devido destaque.
+
+120
+
+Casa do Código
+
+9.3
+
+Capítulo 9. Faça o link building adequadamente
+
+Trabalhando com nofollow
+
+Ao linkarmos para uma página, estamos referendando-a. No caso do link
+building, estamos falando que aquele site também é um site bom, possui conteúdo relevante para quem acessou nossa página e vai eventualmente clicar
+no link. Porém, nem sempre isso é verdade.
+Muitos sites possuem páginas onde é possível deixar comentários. Geralmente esses comentários podem ser assinados, alguns podem conter até links,
+como para a empresa onde o comentarista trabalha. Se a pessoa está comentando em um site de receitas e coloca um link para o site da FIAT, há pouca
+relação sobre esses conteúdos.
+Justamente para esses casos é que existe o atributo rel="nofollow"
+nos links HTML. Com ele, estamos indicando que não queremos que o spider
+leve em consideração esse nosso link, de forma que ele não dará peso nenhum
+para o que está sendo linkado.
+O uso do rel="nofollow" é muito útil para casos em que você não
+possui muito controle do que vai ser linkado, como comentários. Muitas engines de blogs, como o WordPress, podem colocar o nofollow automaticamente para você nos comentários, dessa forma você não precisa ficar se
+preocupando em colocá-los nas suas páginas.
+
+9.4
+
+Links de novos domínios e a idade
+
+É importante termos sites que sempre se refiram a nós, no entanto, é mais
+importante ainda que mais sites falem de nós. Como dito no começo do capítulo, nossas páginas precisam ser populares e popularidade só se consegue
+com muita gente falando de nós.
+Os buscadores dão peso maior para uma página nossa quando um novo
+site faz link para ela. Isso é mais importante do que um mesmo site que já
+linkava para uma página nossa fazer outro link para a mesma página. Justamente por isso é importante criar sempre conteúdos novos e diversificados, assim sempre será possível atingir novos públicos, conseguir melhor reputação com os indexadores e, com o tempo, garantir melhores posições nos
+rankeamentos.
+
+121
+
+9.5. Lidando com links internos
+
+9.5
+
+Casa do Código
+
+Lidando com links internos
+
+Da mesma forma que os links de páginas externas, ou seja, de outros sites,
+são fundamentais para o rankeamento, os links internos também são importantes. É fundamental que a navegabilidade e o uso das suas páginas seja claro
+e simples o suficiente para qualquer usuário e, para isso, você vai precisar ter
+links para suas páginas.
+Todas as regras que citamos para os links externos se aplicam para os internos. Procure sempre fazer com que os links se pareçam naturais e bem
+descritos. Claro, existem casos em que temos menus ou links do rodapé, que
+são um pouco menos naturais. Não tente evitar esses casos. Apenas estrutureos de forma que eles sejam usáveis e claros para os usuários.
+
+9.6
+
+Qual a importância do Facebook e Twitter?
+
+Existe muita controvérsia sobre a importância ou não das principais redes
+sociais no rankeamento dos sites. Existe um ponto fundamental a considerar
+aqui. Se a rede social é aberta ou não. Nas redes abertas, como o Twitter,
+a indexação ocorre normalmente, no entanto, os todos os links colocados lá
+são marcados como nofollow, ou seja, ele não nos passará sua autoridade.
+Já no Facebook, que é uma rede social quase toda fechada, as únicas páginas
+que aparecem vão para o resultado da busca são as páginas abertas, como as
+páginas de negócios.
+Mas e se minha página é muito curtida? Ela possui alguma vantagem?
+Essa é uma pergunta que muitas pessoas fazem nos fóruns de SEO. Uma resposta curta e direta é: nenhuma. Isso mesmo, quantidade de curtidas e
+seguidores no Facebook e Twitter não são levados em conta nos algoritmos de
+indexação e rankeamento dos buscadores e isso já foi confirmado pela própria
+equipe do Google. No entanto, muitas empresas focadas em monitoria de
+ranking notaram variações decorrentes do número de compartilhamentos e
+likes das páginas, além da atividade na conta do Twitter. No fundo, acabamos
+com a palavra de um contra a palavra do outro.
+A minha opinião é de que mesmo que as reputações nessas principais redes sociais não sejam levadas em consideração, elas são um meio que deve ser
+fortemente considerado. Isso porque grande parcela do público alvo do seu
+122
+
+Casa do Código
+
+Capítulo 9. Faça o link building adequadamente
+
+negócio pode estar presente nessas redes e você deve conseguir alcançá-las.
+Caso seja bem feito, o marketing nessas redes sociais pode trazer potenciais novos clientes, que naturalmente poderão falar sobre seu site em outros
+meios, inclusive linkando para suas páginas.
+
+9.7
+
+Mas como consigo os links?
+
+Fazer os links de forma adequada pode parecer simples à primeira vista, no
+entanto é uma das tarefas mais complicadas de serem feitas. Saber quais termos devem ser usados no link, onde o posicionar, fazê-lo parecer o mais
+natural possível são desafios que muitas vezes nos fazem investir muito mais
+tempo do que gostaríamos. Mas é um investimento que paga o retorno.
+Linkar para outros sites é importante, pois mostra que somos bem relacionados e estamos falando de sites relevantes, trazendo também naturalmente relevância para nossas páginas. Mas também é importante ser referenciado. Ser linkado por diferentes sites não é uma tarefa fácil, demanda tempo
+e, dependendo do caso, algum dinheiro. Mas tenha certeza, é onde estará
+o seu principal diferencial para o seu rankeamento. Vamos conseguir mais
+links?
+
+123
+
+Capítulo 10
+
+Estratégias para conseguir mais
+links naturalmente
+Conseguir que diferentes sites saibam sobre suas páginas e façam links para
+ela é uma tarefa árdua e que exige diferentes competências. É preciso ter habilidades sociais, se relacionar bem, mas também são necessárias uma boa
+escrita e visão de negócio.
+Em compensação, quando essa tarefa é bem feita, o resultado é rapidamente visível, seja no número de acessos do seu site, na conversão, no faturamento do negócio e também, evidentemente, no rankeamento da sua página.
+Tudo isso anda em conjunto, mas onde começar a agir?
+
+10.1. Marketing de conteúdo: a criação de conteúdo de qualidade
+
+10.1
+
+Casa do Código
+
+Marketing de conteúdo: a criação de conteúdo de qualidade
+
+Regra número zero: marketing de conteúdo não é só criar um blog.
+Evidentemente, o primeiro passo para se destacar e surgir como referência em determinado assunto é escrever sobre ele. Se você tem um e-commerce
+de produtos de beleza para homens, uma boa forma de você ganhar acessos
+e evidência é escrevendo sobre esse assunto. Um exemplo de site que faz isso
+muito bem é o http://www.mensmarket.com.br. Através da escrita de diversos artigos em seu blog, utilizando palavras-chaves adequadas, fazendo reviews de produtos, foi possível rankear para diferentes termos, levando novos
+usuários para o site. Um exemplo disso é a busca por “como aparar barba”, que
+me devolveu o segundo resultado na busca, à frente de sites expressivos, como
+o da revista Men’s Health:
+
+126
+
+Casa do Código
+
+Capítulo 10. Estratégias para conseguir mais links naturalmente
+
+Fig. 10.1: Busca por ‘como aparar barba’
+
+Esse trabalho de criação de conteúdo para o site precisa levar em conta
+também diversos outros fatores, como:
+• Originalidade;
+• Relevância;
+• Qualidade do texto.
+
+127
+
+10.2. Guest blogging: como aparecer em outros canais
+
+Casa do Código
+
+Sempre que você for colocar um conteúdo novo em seu site, seja um artigo, uma descrição de um produto ou qualquer outro que seja, faça-o de
+forma original. Evite copiar o de outros sites, pois dessa forma tanto você
+quanto o outro site perderão.
+Para e-commerces, caso você venda seus produtos em diferentes lojas,
+faça com que a descrição dos seus produtos fique diferente em cada site. Atualmente, os indexadores são capazes de reconhecer o menor traço de cópia
+de informação, portanto, é importante ficar bastante atento.
+Outra estratégia que muitas empresas seguem é terceirizar a parte de marketing de conteúdo para agências especializadas. Existem diversas agências
+no mercado, focadas em gerar conteúdo original para diferentes áreas. Dependendo do orçamento e da necessidade, pode ser uma boa escolha a se
+seguir.
+Independente da estratégia que você utilizar, é importante que o conteúdo
+seja relevante. Fuja do mais do mesmo, crie uma discussão em volta do assunto e ele naturalmente será linkado por diferentes sites.
+Por fim, para um conteúdo poder se destacar, é imprescindível que ele esteja bem escrito e estruturado, portanto, sempre antes de publicar um artigo,
+faça uma cuidadosa revisão do texto.
+
+10.2
+
+Guest blogging: como aparecer em outros
+canais
+
+Uma estratégia interessante também de marketing de conteúdo é a prática do
+guest blogging, na qual você escreve sobre um determinado assunto, mas o
+conteúdo é publicado em outro site que não o seu. Se você tem, por exemplo,
+um site sobre uma clínica de fisioterapia, uma possibilidade de estratégia para
+divulgá-la é escrever um artigo sobre técnicas de corrida de rua e publicar em
+um site especializado. No final do texto, deixe os links para seus contatos.
+Invariavelmente, cada negócio possui uma área onde é possível explorar
+o guest blogging. Para isso, é preciso conhecer o assunto, saber quem são as
+referências de conteúdo sobre determinado tema e explorar nichos diferentes,
+como o exemplo do fisioterapeuta, sondando o nicho das corridas de rua.
+
+128
+
+Casa do Código
+
+10.3
+
+Capítulo 10. Estratégias para conseguir mais links naturalmente
+
+Comentários em artigos: dê o seu pitaco
+
+Seja se você escreveu um artigo em um site seu, seja se você fez guest blogging e publicou um artigo no site de um terceiro, ou seja até mesmo se você
+não publicou nada, uma boa estratégia é comentar em artigos publicados na
+internet.
+Caso você tenha escrito o artigo, sempre comente respondendo dúvidas
+ou agradecendo o comentário de outras pessoas. No caso de comentários em
+artigos de outras pessoas, tente acrescentar algo à discussão. Comentários
+relevantes chamam a atenção e as ferramentas de comentários nos sites atuais
+possuem um grande apelo social, de modo que, dependendo do serviço lá
+utilizado, é possível linkar para seus perfis ou sites e, mesmo caso não seja,
+não custa adicionar uma assinatura indicando com o nome seu site/serviço.
+
+10.4
+
+Fórum marketing: apareça para a comunidade
+
+É cada vez mais comum a existência de comunidades virtuais para discussão
+de assuntos de um determinado nicho. Na área de Marketing Digital e SEO,
+temos várias fontes interessantes, sendo que uma das minhas favoritas é o
+fórum http://www.growthhackers.com. No mundo dos desenvolvedores Java,
+existe o http://www.guj.com.br. Até para discussão de reformas residenciais
+existe um fórum na internet.
+Nessas comunidades virtuais se encontram boa parte do público consumidor do seu serviço ou produto e, justamente por esse motivo, aparecer nesses
+locais é uma oportunidade que você não pode perder. Comentar, iniciar discussões relevantes e tirar dúvidas são todas formas de contribuir com essas comunidades e naturalmente vender o seu peixe. No entanto, fique atento, pois
+diversas comunidades não aceitam propagandas explícitas nas mensagens.
+
+10.5
+
+Troca de links, parcerias e promoções
+
+Muitas vezes queremos que nosso site seja linkado em algum outro, mas não
+temos a possibilidade de fazer um guest blogging ou alguma outra forma de
+emplacarmos um conteúdo nosso naquele site. Para esses casos, sempre é
+129
+
+10.6. Press releases para divulgar seu site
+
+Casa do Código
+
+possível entrar em contato com o administrador da página em questão perguntando qual a possibilidade de ele adicionar um link para uma página sua.
+Geralmente, você deverá dar algo em troca, como um link de volta, ou
+uma divulgação do site dele em uma campanha de email marketing ou algo
+nesse sentido. Essa parceria entre as diferentes marcas é benéfica e, se bem
+cuidada e feita, pode lhe render enormes frutos.
+Na Casa do Código patrocinamos diversos eventos, liberando livros para
+sorteios, cupons de desconto e diversos brindes. Em troca, geralmente pedimos um link para nosso site. O resultado dessa troca é aumento da nossa rede
+de links, impactando no nosso rankeamento, além de que naturalmente esses
+links trazem acessos para o site da empresa. Ou seja, nessas parcerias, todos
+saem ganhando. O cliente final do evento que vai ganhar um brinde ou um
+código de desconto, o organizador do evento que levará uma força maior na
+divulgação do mesmo e a editora, que alcançará potenciais novos clientes.
+Outro exemplo interessante que fazemos de link building na Casa do
+Código é o envio de brindes para quem escreve um review sobre um livro
+nosso em seus blogs pessoais. Dessa forma, além de estimular os leitores a
+publicarem em seus blogs (e quem sabe um dia virarem autores de novos
+livros), aumentamos o número de sites linkando para nossas páginas.
+
+10.6
+
+Press releases para divulgar seu site
+
+Fazer com que seu site apareça em algum grande portal é o sonho de consumo
+de qualquer empreendedor. No entanto, não é tarefa fácil de ser realizada.
+Com quem devemos falar para conseguir emplacar uma matéria sobre nosso
+produto? Ou talvez uma matéria sobre um assunto relacionado ao nosso produto? Seja qual for a opção, geralmente o caminho não é fácil e dentro da
+estrutura da empresa, é bem possível que uma pessoa sem os contatos adequados dificilmente consiga sucesso na empreitada.
+Justamente para esses casos existem diversas agências de relações públicas especializadas em preparar matérias sobre um determinado assunto ou
+produto e encaminhá-las aos jornalistas que podem publicá-las em grandes
+canais de divulgação. Essas matérias encaminhadas, geralmente prontas para
+serem publicadas, são os famosos press releases. Geralmente não é uma es130
+
+Casa do Código
+
+Capítulo 10. Estratégias para conseguir mais links naturalmente
+
+tratégia barata, mas pode sim ser uma excelente alternativa em muitos casos.
+
+10.7
+
+Divulgar, divulgar, divulgar...
+
+A base de fazer um bom link building é conseguir divulgar o seu produto.
+Essa divulgação o tornará conhecido e naturalmente fará com que as pessoas
+linkem para suas páginas e seus produtos. Mas esse trabalho é difícil, consome
+tempo, e às vezes nos rende alguns “não” como resposta. O mais importante
+é perseverar, continuar em frente.
+Eventualmente você vai se deparar com novas estratégias para divulgar
+seu site ou produto. Muitas vão ser variações do que você acabou de ver aqui,
+outras serão situações específicas para o seu mercado, e outras até novidades
+que vamos descobrindo com o tempo. Mas independente das estratégias adotadas, a essência de todas elas está na divulgação do seu site (e naturalmente,
+da sua marca).
+
+131
+
+Parte IV
+
+Detalhes técnicos para SEO e
+ferramentas úteis
+Técnicas onpage e offpage s ão e xcelentes p ara c onseguir t er u m bom
+rankeamento do seu site. Se seguidas corretamente, em questão de dias deverá
+ser possível verificar melhorias no resultado da p ágina. No entanto, existem
+alguns detalhes que podem fazer com que seu ranking despenque facilmente.
+O lado bom disso é que, com alguns poucos ajustes técnicos feitos no seu site,
+você vai poder evitá-los.
+Além disso, é sempre bom ficar a tento p ara n ão d e e squecer d e nada.
+Links quebrados, duplicidades, página sem título e vários outros pequenos
+itens que podem passar despercebidos. Para esses casos, podemos lançar mão
+de diversas ferramentas que vão nos ajudar a pegar esses lapsos.
+
+Capítulo 11
+
+Detalhes técnicos de SEO
+Depois de todo o trabalho que vimos que precisamos levar em conta nos
+capítulos anteriores, ser pego de surpresa por algo que faça nosso rankeamento desabar é muito desagradável. Justamente para isso, precisamos tomar
+cuidado com alguns detalhes que podem nos salvar alguns bons cabelos brancos.
+Cuidar para que não haja links quebrados, fazer redirecionamentos
+quando adequado, evitar URLs duplicadas, ter um site mobile friendly, configurar apropriadamente o robots.txt são ações que fazem diferença no
+SEO e que você não vai se arrepender de tomar.
+O lado positivo? São todas ações que podem ser feitas em poucos minutos.
+
+11.1. Faça redirecionamentos e evite links quebrados
+
+11.1
+
+Casa do Código
+
+Faça redirecionamentos e evite links quebrados
+
+Possivelmente uma das coisas que mais influenciam negativamente os rankings (depois das técnicas maliciosas de black hat) são os links quebrados.
+Muitas vezes acessamos um site e nos deparamos com desagradáveis telas de
+erro, escrito Error 404, page not found e algumas até contendo a descrição
+do erro. Imagina uma pessoa com nenhum conhecimento de informática
+vendo uma tela escrita 404. O que esse número significa para ela? É muito
+possível que nada!
+O passo básico para evitar que isso aconteça é você ter uma página de erro
+customizada para seu site, que seja clara o suficiente e leve-o para algum lugar
+de volta em seu site.
+
+Fig. 11.1: Tela de página não encontrada no guj.com.br
+
+Fizemos isso no site do GUJ. Note como é muito mais agradável para o
+usuário ver essa tela, que o conduz para outros lugares do site, do que uma
+tela que diz pouco:
+136
+
+Casa do Código
+
+Capítulo 11. Detalhes técnicos de SEO
+
+Fig. 11.2: Página de erro padrão de um servidor
+
+Esse ajuste das páginas de erro geralmente é feito através de uma configuração no servidor web que está sendo utilizado e pode variar para os diferentes servidores existentes. Portanto, recomendo que veja a documentação
+do servidor em uso.
+Uma vez que a página de erro foi configurada, é preciso fazer com que
+ela seja acessada o mínimo possível. Você não quer que seu usuário acesse
+endereços que não existem no seu site. No capítulo 12 veremos algumas ferramentas que nos auxiliam a encontrar esses links quebrados.
+Mesmo assim, eventualmente existem situações em que precisamos alterar a URL de algumas páginas. Imagine que na Casa do Código tivemos criado o seguinte endereço para a página desse livro: http://www.casadocodigo.
+com.br/products/livro-search-engine-optimization. Nesse caso, eu estaria
+deixando de lado uma palavra-chave fundamental para promover o livro, que
+é “SEO”. Talvez ela seja até mais importante do que o termo “Search Engine
+Optimization”. Mas, uma vez que essa URL está no ar e ela já foi indexada, os
+resultados de busca passarão a contê-la.
+Mesmo assim, a primeira coisa que fazemos é trocar a URL para a nova,
+http://www.casadocodigo.com.br/products/livro-seo. Dessa forma, destacamos no endereço o termo “SEO”. Mas e a URL antiga? E as pessoas que
+a guardaram nos favoritos? E o que ficou indexado nos buscadores? O que
+acontece com tudo isso?
+Basicamente, quem acessar pela URL antiga verá a página de erro, indicando que aquela página que estava sendo acessada não existe. E para os
+137
+
+11.1. Faça redirecionamentos e evite links quebrados
+
+Casa do Código
+
+buscadores, qual o impacto?
+
+Fig. 11.3: Página de erro foi indexada
+
+Note como o Google indexa o conteúdo da página de erro para aquele endereço. Queremos evitar que isso aconteça. É justamente para essas situações
+que precisamos fazer o redirecionamento. Temos que dizer aos buscadores
+que esse endereço mudou.
+Da mesma forma que o 404 é um código devolvido pelo servidor para
+indicar que a página que tentamos abrir não foi encontrada, também precisamos de um código para indicar que o endereço mudou. Esse código é
+o 301, chamado de Moved Permanently (movido permanentemente). Na
+Casa do Código fizemos isso para o livro de iOS (programação para iPhone
+e iPad), cujo endereço anterior era http://www.casadocodigo/products/ios.
+Mudamos para explorar melhor outras palavras-chaves e agora o endereço
+é http://www.casadocodigo.com.br/products/livro-iphone-ipad-ios. Note a
+visualização dos cabeçalhos do protocolo HTTP (usado na web), indicando
+o redirecionamento:
+
+138
+
+Casa do Código
+
+Capítulo 11. Detalhes técnicos de SEO
+
+Fig. 11.4: Cabeçalhos HTTP para o redirecionamento 301
+
+Veja que o cabeçalho indica na linha Request URL o endereço que foi
+chamado e, lá no final, em location o endereço que foi realmente acessado
+no servidor.
+Quando os spiders acessam nossa página, eles verão exatamente isso e
+acabarão indexando apenas a URL final, já que indicamos que o primeiro
+endereço não existe mais (Moved Permanently).
+
+11.2
+
+Evite URLs duplicadas com o Canonical
+
+Muitos sites atualmente usam URLs pouco amigáveis e o ideal é que elas fossem migradas para aproveitar o impacto existente no rankeamento para esses
+endereços mais elegantes. Fizemos isso alguns anos atrás com o fórum do
+GUJ. Tínhamos para um determinado tópico a seguinte URL: http://www.guj.
+com.br/posts/list/204576.java e queríamos passar a suportar uma URL mais
+elegante: http://www.guj.com.br/java/204576-arquitetura-de-jogos.
+Mesmo com o novo endereço, era obrigatório mantermos funcionando
+os endereços antigos, dessa forma, quem os mantivessem em favoritos ou algum outro bookmark conseguiria acessar o endereço normalmente. Ou seja,
+passaríamos a ter dois endereços ativos, apontando para o mesmo conteúdo.
+139
+
+11.2. Evite URLs duplicadas com o Canonical
+
+Casa do Código
+
+Só que assim, ambos os endereços passariam a ser concorrentes pelo ranking
+no resultado da busca. Não faz muito sentido, não é?
+Justamente para esses casos, em que temos dois endereços diferentes que
+devolvem a mesma página, e precisamos falar para o Google que apenas uma
+URL é a que irá valer, utilizamos o Canonical. Trata-se de um cabeçalho que
+adicionamos no HTML da nossa página, indicando qual é o endereço que
+deverá ser indexado.
+No caso do GUJ, queríamos que a URL indexada fosse a mais nova, que
+é mais elegante e amigável para SEO, então adicionamos o seguinte endereço
+no header da página:
+<html>
+<head>
+<link
+href="http://www.guj.com.br/java/204576-arquitetura-de-jogos"
+rel="canonical" />
+</head>
+</html>
+
+E com isso ele passou a entender que o novo endereço é o principal.
+
+Quando devo usar o 301 e o Canonical?
+Na essência, os dois fazem a mesma coisa. Indicam que um endereço
+antigo não deve mais ser utilizado na indexação. A grande diferença entre eles está na implementação. O Canonical tende a ser mais fácil de ser
+adicionado, já que basta a adição de uma linha de código ao cabeçalho
+da página e por isso, também, mais rápida de ser feita.
+Por outro lado, a configuração dos redirecionamentos, dependendo
+de como feita, tende a ficar centralizada em apenas um lugar no servidor,
+dessa forma, mais organizada.
+Em suma, são estratégias diferentes para resolver o mesmo problema.
+Escolha a que você acreditar ser a melhor na sua situação.
+
+140
+
+Casa do Código
+
+11.3
+
+Capítulo 11. Detalhes técnicos de SEO
+
+Lidando com conteúdo paginado
+
+É comum vermos em sites onde as notícias são muito grandes, uma paginação, onde temos que clicar para ir para a continuação do conteúdo e assim
+sucessivamente até o final, ou caso queiramos, também é possível voltar atrás.
+Mas também quando isso acontece, precisamos avisar o Google que se
+trata do mesmo conteúdo, apenas quebrado em N partes. Precisamos avisálo da paginação.
+Podemos fazer isso através da adição da tag <link> no cabeçalho das
+suas páginas. Com ela, podemos dizer quais são as próximas páginas e anteriores. Por exemplo, na primeira página de um conteúdo paginado, temos
+que indicar qual é a próxima. Fazemos isso através do atributo rel com o
+valor next, além do href para indicar onde está o próximo conteúdo:
+<link rel="next" href="http://www.guste.com.br/cozinhando-2" />
+
+Já na segunda página, podemos indicar qual é a próxima, no caso a terceira página e qual é a anterior, a primeira, através do valor prev, no atributo
+rel:
+<link rel="next" href="http://www.guste.com.br/cozinhando-3" />
+<link rel="prev" href="http://www.guste.com.br/cozinhando-1" />
+
+Adicionando esse código no head do HTML da sua página, os buscadores tratarão o conteúdo das diferentes páginas como sendo um único
+resultado.
+
+11.4
+
+Faça um site mobile friendly
+
+Já falamos sobre a vantagem que sites mobile friendly possuem quando a busca
+é realizada no celular do usuário. Se você sabe HTML ou tem uma equipe
+que conheça HTML, fazer um site que seja mobile friendly não está muito
+distante. Basta a adaptação de algumas tags.
+De antemão, uma boa dica para saber se seu site já está funcionando bem
+no mobile é usar o próprio developer tools do Google Chrome, que já possui
+uma ferramenta para fazer essa visualização. Com o developer tools aberto,
+141
+
+11.5. Configure seu robots.txt e o sitemaps.xml
+
+Casa do Código
+
+basta clicar no ícone do celular (do lado esquerdo de Elements), chamado
+device mode. Nesse modo, você pode escolher visualizar seu site de acordo
+com o tamanho de tela de diferentes aparelhos.
+
+Fig. 11.5: Device mode configurado para visualização no iPhone 6
+
+No Brasil temos diversos desenvolvedores que se especializaram nessa
+técnica, entre eles o Sérgio Lopes, autor do livro A Web Mobile. Recomendo
+fortemente seu livro e o seu blog: http://sergiolopes.org.
+
+11.5
+
+Configure seu robots.txt e o sitemaps.xml
+
+Eventualmente queremos que algumas páginas do nosso site não sejam indexadas. Por exemplo, no site da Casa do Código, não queremos que os buscadores indexem a página do carrinho de compras, já que não há nada útil
+ali.
+Para isso, podemos criar o arquivo robots.txt no nosso domínio, indicando que o carrinho de compras deve ser desabilitado da indexação:
+142
+
+Casa do Código
+
+Capítulo 11. Detalhes técnicos de SEO
+
+User-agent: *
+Disallow: /cart
+
+Com isso, estamos falando que para qualquer User-agent (indicado
+pelo *), ou seja, qualquer buscador, o endereço /cart deve ser desabilitado
+da indexação e não deve jamais aparecer nos resultados da busca do usuário.
+Caso você queira bloquear apenas um buscador específico, basta especificá-lo
+no User-agent, como:
+User-agent: Googlebot
+Disallow: /cart
+
+É possível também fazer o bloqueio de um grupo de páginas específicas,
+dado um trecho em comum da URL:
+[code]
+User-agent: *
+Disallow: /*.pdf$
+
+Nesse caso estamos falando que todos os arquivos (indicado pelo *) que
+contêm .pdf no seu final (indicado pelo $ ) não devem ser indexados.
+Vale lembrar que é necessário que o robots.txt esteja na raiz do seu
+site, como em http://casadocodigo.com.br/robots.txt.
+Uma das linhas que você deve colocar no robots.txt é a indicação
+do mapa do seu site, dessa forma os buscadores têm uma dica de como eles
+poderão fazer o crawling do seu site e por quais páginas devem passar.
+Sitemap: http://www.casadocodigo.com.br/sitemap.xml
+
+Dentro desse arquivo XML, haverá, como o próprio nome do arquivo diz,
+um mapeamento com todas as páginas do seu site que você gostaria que fosse
+seguida pelos spiders.
+Dentro do sitemap.xml você irá agrupar os diferentes mapeamentos
+por categorias que fizerem sentido para o seu site:
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+
+143
+
+11.5. Configure seu robots.txt e o sitemaps.xml
+
+Casa do Código
+
+<loc>http://www.casadocodigo.com.br/produtos_map.xml</loc>
+</url>
+<url>
+<loc>http://www.casadocodigo.com.br/categorias_map.xml</loc>
+</url>
+<!-- outras categorias que façam sentido para o seu negócio-->
+</urlset>
+
+Em seguida, basta indicar dentro de cada sitemap quais são as suas páginas através da tag url. Dentro de cada URL você especifica também a frequência com que sua página é modificada, dando uma dica para que o buscar
+deve visitá-la dentro dessa frequência. Além disso, você também pode especificar detalhes da página, como imagens, vídeos, se é uma página mobile
+etc:
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>
+http://www.casadocodigo.com.br/products/livro-startup-guia
+</loc>
+<lastmod>2014-11-18T11:22:28-02:00</lastmod>
+<changefreq>daily</changefreq>
+<image:image>
+<image:loc>
+https://www.casadocodigo.com.br/capaGuiaStartup.png
+</image:loc>
+<image:title>
+Guia da Startup: Como startups e empresas
+estabelecidas podem criar produtos web
+rent&#xE1;veis
+</image:title>
+</image:image>
+</url>
+<!-- outras páginas -->
+
+144
+
+Casa do Código
+
+Capítulo 11. Detalhes técnicos de SEO
+
+</urlset>
+
+Usando o robots.txt em conjunto com o sitemaps.xml, você pode
+controlar melhor como os indexadores passarão pelo seu site.
+
+11.6
+
+Seu site tem que abrir rápido!
+
+Existe um estudo muito interessante da Amazon que mostra como 1 segundo a mais do tempo de carregamento no site deles faz com que eles percam mais de 1.6 bilhões de dólares em vendas. Você pode vê-lo em http:
+//bit.ly/estudo-amazon. Agora imagine você perdendo todo esse dinheiro?
+Talvez isso não aconteça com você nessa magnitude, no entanto, saiba que
+você também pode estar sendo “punido” pelo Google pelo quanto o seu site
+demora para carregar. Qual é a punição? Um ranking ruim, é claro.
+Cada vez mais o tempo de carregamento é um fator fundamental para o
+posicionamento dos sites nos resultados de busca. Mas como saber em que
+pé seu site está?
+Para responder essa questão, existem diversas ferramentas livres, que auxiliam qualquer administrador de um site e o mais legal, elas inclusive apontam
+as soluções. As duas principais são o Google PageSpeed e o YSlow!, do Yahoo!. Ambas ferramentas possuem plugins para os principais navegadores o
+seu uso é extramente intuitivo.
+Uma vez com o plugin instalado, acessar seu site e clicar no seu ícone para
+que ele faça uma inspeção em seu site e te mostre um relatório. Fácil não? A
+partir daí é começar a agir nas soluções.
+
+145
+
+Casa do Código
+
+11.7. Melhoria contínua...
+
+Fig. 11.6: Relatório do YSlow!
+
+Dessa forma, você terá um caminho para começar a melhorar a performance do seu site e consequentemente, ganhar mais alguns degraus nas
+posições.
+
+11.7
+
+Melhoria contínua...
+
+Todas as configurações que vimos são relativamente simples de serem feitas
+e não precisam de muito trabalho (talvez exceto a configuração dos redirecionamentos 301). São todas ações que você pode rapidamente começar a
+tomar.
+Por fim, falta apenas uma forma de monitorarmos que estamos no caminho certo e vermos onde mais podemos melhorar.
+
+146
+
+Capítulo 12
+
+Ferramentas úteis e SEO para
+WordPress
+Durante o livro, utilizamos algumas ferramentas para nos ajudar no processo
+de SEO, incluindo o Webmaster Tools, o Google Analytics e também o keywordtool.io. Além delas, existem diversas outras ferramentas que não usamos
+aqui, mas que podem ser utilizadas por você em diversos momentos do seu
+trabalho de SEO.
+Segue uma lista das minhas preferidas, algumas das quais já trabalhamos
+bastante durante o livro, como o WebMaster Tools e o Google Analytics.
+
+12.1. Webmaster Tools e Google Analytics
+
+12.1
+
+Casa do Código
+
+Webmaster Tools e Google Analytics
+
+O Webmaster Tools é uma ferramenta obrigatória para se ter. Deve ser a
+primeira configuração que você faz para o seu site, assim que ele vai para
+o ar, junto do Google Analytics.
+O Google Analytics provê informações gerais sobre o acesso ao seu site,
+dando diversas informações, como faixa etária, localização, meio de acesso,
+tecnologias utilizadas pelos seus usuários e várias informações interessantes
+sobre como os usuários acessaram seu site.
+Ele é uma ferramenta bastante complexa, mas uma vez que você aprende
+a domá-la, ela se torna muito poderosa também.
+Já o Webmaster Tools, tanto do Google quanto do Bing, possui recursos
+específicos para SEO, como saber quais termos estão aparecendo e sendo clicados nas buscas, além de possíveis melhorias que podemos fazer no nosso
+site, como arrumar títulos e descrições duplicadas.
+
+12.2
+
+SEMRush
+
+O SEMRush - http://www.semrush.com - é uma ferramenta completa para
+quem quer trabalhar com SEO. Ele faz desde a análise das palavras chaves de
+concorrentes, trazendo informações dos mais variados fatores, além de servir
+como uma excelente ferramenta para fazer Keyword Research.
+
+12.3
+
+Open Site Explorer
+
+No processo de link building é sempre importante saber como e por quem os
+seus concorrentes estão sendo linkados, dessa forma você pode tentar aparecer nos mesmos canais que eles, ou até explorar alguma parceria com eles.
+Para isso, você pode usar o Open Site Explorer, ferramenta web da Moz,
+que informa um relatório bastante completo sobre os links existentes para um
+dado site.
+Basta acessar o site https://moz.com/researchtools/ose/ e informar o site
+pelo qual você quer pesquisar.
+
+148
+
+Casa do Código
+
+Capítulo 12. Ferramentas úteis e SEO para WordPress
+
+Fig. 12.1: Alguns resultados do Open Site Explorer para a Casa do Código
+
+Repare que no relatório ele informa o Page Authority, que indica o peso
+que a página de onde vem o link possui de acordo com os seus links, e o
+Domain Authority, que é o mesmo cálculo para o domínio todo. Essa escala
+vai de zero a 100 e quanto maior o número, melhor.
+
+12.4
+
+SEOQuake
+
+O SEOQuake é um plugin gratuito para o Chrome e Firefox que traz diversas
+informações sobre suas páginas, como links, page rank, dados do domínio e
+até mídias sociais.
+
+149
+
+12.5. keywordtool.io
+
+Casa do Código
+
+Fig. 12.2: Relatório do SEOQuake para a Casa do Código
+
+Ele é extremamente simples de usar e de simples instalação.
+
+12.5
+
+keywordtool.io
+
+O http://keywordtool.io é o site que utilizamos para fazer nosso processo de
+keyword research. Ele é extremamente interessante para nos dar novas ideias
+de termos a utilizarmos no nosso site, seja para o conteúdo principal ou para
+a criação de novas páginas que nos ajudem a rankear bem.
+
+12.6 robots.txt Generator
+Vimos no capítulo anterior que criar o robots.txt é importante para instruir os robôs de busca sobre o que não deve ser indexado no nosso site.
+No entanto, para alguns sites é possível que esse arquivo fique extremamente
+grande, tornando sua manutenção muito complicada.
+
+150
+
+Casa do Código
+
+Capítulo 12. Ferramentas úteis e SEO para WordPress
+
+Para esses casos, você pode utilizar um gerador de robots.txt. Recomendo o http://tools.seobook.com/robots-txt/generator/, que é uma ferramenta online, gratuita e que lhe ajudará nesse processo.
+
+12.7
+
+SEO no WordPress: use o Yoast plugin
+
+Muitos sites atualmente utilizam o WordPress como gerenciador de conteúdo,
+permitindo que a inserção de novas páginas, alteração de textos e assim por
+diante sejam simplificadas e feitas através de uma interface gráfica amigável.
+É importante saber também que por padrão o WordPress faz muito pouco
+para o SEO. Nele é possível configurar o estilo das URLs, para se trabalhar
+com endereços amigáveis e pouquíssima coisa a mais.
+Para potencializar o SEO das suas páginas com o WordPress, é obrigatório
+o uso do plugin Yoast: https://yoast.com/wordpress/plugins/seo/
+Ele vai lhe ajudar com diversas tarefas, como encontrar erros nas configurações, editor de robots.txt, criação de breadcrumbs e muito mais.
+Sua instalação é extremamente simples; basta ir à tela de Plugins do
+WordPress e solicitar sua instalação.
+
+Fig. 12.3: Instalação do Yoast SEO
+
+151
+
+12.8. Existe muito mais...
+
+Casa do Código
+
+Após a instalação, você terá novas opções para a edição dos seus posts e
+páginas.
+
+12.8
+
+Existe muito mais...
+
+Há muitas outras ferramentas além das mostradas aqui no livro. Essas são
+minhas preferidas, mas não significa que devem ser as suas. Conforme for
+explorando o universo do SEO, você descobrirá suas próprias preferências e,
+aliás, eu o encorajo a isso.
+Sua vida no mundo do SEO não termina por aqui, ela vai seguir com você
+a partir de agora, mesmo que você não trabalhe diretamente com SEO.
+
+152
+
+Capítulo 13
+
+E tudo para por aí?
+Durante as páginas deste livro eu espero que você tenha aprendido coisas novas, tenha tido ideias para seus sites e esteja com os dedos coçando de vontade
+de abrir o seu computador e fazer algo novo. Tudo o que foi visto durante o
+livro pode ser feito de maneira isolada. Não é preciso fazer tudo de uma vez.
+Faça um de cada vez, aos poucos, e vá acompanhando os resultados. Eles
+virão, mas saiba que não imediatamente e, quando eles começarem a vir, algo
+vai mudar e vai fazer você correr atrás de novas técnicas.
+Eu vou manter este livro atualizado com as principais novidades que surgirem, então se você comprou o e-book, eventualmente verifique se está com a
+versão mais nova. Se você só tem o impresso, recomendo fortemente a versão
+digital, para ter acesso às atualizações (é mais barato do que ficar comprando
+um livro impresso a cada vez que sair uma atualização).
+Mesmo com eu mantendo este livro atualizado, também recomendo que
+você busque os conteúdos por conta própria. Existem diversos sites espe-
+
+Casa do Código
+
+cializados e que são atualizados diariamente, com artigos, atualizações, novidades, testes, enfim, tudo do que um bom profissional de SEO precisa. Fica
+aqui a minha lista de recomendação para você:
+• http://moz.com/blog A Moz é na minha opinião a principal empresa
+no mercado de SEO e o blog é constantemente atualizado com conteúdos interessantíssimos.
+• http://searchenginewatch.com/ É um portal focado em SEO, com notícias, artigos e tudo quanto é novidade na área.
+• https://www.mattcutts.com/blog Site oficial do Matt Cutts, líder do
+time do Google que trabalha com a qualidade das buscas e SEO. O blog
+é atualizado com bastante frequência.
+• https://www.youtube.com/channel/UCWf2ZlNsCGDS89VBF_
+awNvA É o canal de youtube do Google Webmasters, possui vídeos
+com dicas e novidades vindo diretas do Google. Também é o local
+onde novos vídeos do Matt Cutts são postados.
+• http://www.searchenginejournal.com/ Outro famoso portal focado em
+SEO.
+• http://www.quicksprout.com/blog/ Blog focado em Marketing Digital,
+não apenas em SEO. Abrange conteúdos de Growth Hacking, Content
+Marketing, Conversion Rate Optimization e várias outras técnicas.
+Sim, se você quer se manter atualizado e ser um cara bom nessa área, você
+vai ter que seguir pelo menos todos esses sites.
+Depois que você terminar de ler, mande suas impressões para mim. Todo
+feedback é bem-vindo. Você pode mandar para a lista de discussão do livro,
+disponível em https://groups.google.com/d/forum/livro-seo-pratico.
+Lá nessa lista você também vai poder tirar dúvidas, discutir novidades e
+falar sobre tudo o que está acontecendo no mundo do SEO. Espero você lá
+para continuarmos mantendo contato.
+
+154
+
+

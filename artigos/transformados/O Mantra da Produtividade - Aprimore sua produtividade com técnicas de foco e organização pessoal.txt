@@ -1,0 +1,2127 @@
+© Casa do Código
+Todos os direitos reservados e protegidos pela Lei nº9.610, de 10/02/1998.
+Nenhuma parte deste livro poderá ser reproduzida, nem transmitida, sem
+autorização prévia por escrito da editora, seja quais forem os meios: fotográficos, eletrônicos, mecânicos, gravação ou quaisquer outros.
+
+Edição
+Adriano Almeida
+Vivian Matsui
+Revisão e diagramação
+Bianca Hubert
+Vivian Matsui
+
+[2016]
+Casa do Código
+Livro para o programador
+Rua Vergueiro, 3185 – 8º andar
+04101-300 – Vila Mariana – São Paulo – SP – Brasil
+www.casadocodigo.com.br
+
+Atenção: as informações sobre saúde física e alimentar contidas nos capítulos deste livro não excluem a consulta de um médico, nutricionista,
+profissional da saúde física e/ou qualquer outro profissional
+
+da
+
+saúde,
+
+especialmente se a pessoa tiver qualquer tipo de restrição.
+A editora e o autor não se responsabilizam sobre os efeitos e os resultados
+das técnicas e informações neste livro.
+
+PREFÁCIO
+por Daniel
+
+Wildt
+
+David Allen, autor do Getting Things Done, fala que temos
+que sair do piloto automático.
+Em 2006, eu estava vivendo no piloto automático ao esquecer
+que a vida não é apenas trabalho. Ao escolher trabalhar muitas vezes 12-18 horas por dia, abdiquei de outras demandas
+que a vida me ofertava.
+Depois de priorizar “a vida” ao invés de seguir na loucura
+de excesso de trabalho e visitas em emergências de hospitais,
+passo a ter metas diferentes. Entre elas: conseguir ser produtivo entre 6 e 9 horas de trabalho e passar a ter hábitos esportivos efetivos. Neste processo, começo a testar diferentes
+técnicas e usar abordagens a que já tinha acesso nos métodos
+ágeis e outras técnicas para organização das prioridades.
+Passo a definir contextos de interesse, envolvendo trabalho,
+esporte, a possibilidade de não fazer nada, entre outros. Passo a buscar ter foco nos momentos de trabalho, e desenvolvo
+um processo de definição de prioridades, reflexão e melhoria contínua. De tanto ouvir música, passo a usar listas de
+músicas para gerar foco nos meus momentos de trabalho,
+
+com os songdoros.
+É muito legal poder ver este conjunto de técnicas que o Dionatan trouxe para este livro, permitindo diferentes abordagens, da montagem de uma lista de tarefas até estabelecer momentos de meditação.
+Confesso que prefiro rock na lista de música ao invés de música clássica, mas o importante no final do dia é que você
+consiga alcançar fluxo para realizar e alcançar seus objetivos.
+E que seja assim na sua leitura deste livro também. :)
+
+Daniel Wildt
+@dwildt
+CTO na uMov.me e Mentor/Instrutor pela Wildtech
+http://danielwildt.com/
+
+P o r G u i l h e r m e L a c e r da
+No meu primeiro estágio, em 1995, ouvia as pessoas dizendo:
+“Se queres que alguma coisa seja feita, dê esta tarefa para o
+mais ocupado”.
+Todo mundo quer ser produtivo. Queremos, quando realizamos as nossas atividades diárias, concluí-las e entregá-las no
+prazo e com qualidade.
+Fato é que nossa vida está cada vez mais corrida. Eu costumo
+dizer que não existe dia de 30 horas ou semanas de 8 dias.
+Assim, a maioria das pessoas procura separar atividades profissionais de atividades pessoais.
+Mas, a verdade é que temos uma única vida, em que precisamos assumir muitos papéis (pai/mãe, filho(a), irmão(ã), marido, namorado(a), professor(a), aluno(a), entre outros) e a
+entrada de nossas demandas/atividades é uma só. Ao longo
+do tempo, também aprendi que é importante saber dizer sim,
+tanto quanto saber dizer não.
+Há muito tempo, já se discutem técnicas e ferramentas que
+possam ajudar nesta empreitada, seja em atividades individuais ou em equipes. Dionatan reuniu neste livro ferramentas
+existentes e conhecidas para a produtividade e outras que ele
+mesmo criou. Ele traz uma forma consciente de adotá-las na
+prática, além de exemplos e dicas extremamente úteis.
+Eu mesmo sou um adepto de várias destas ferramentas e téc-
+
+nicas. Só assim consigo atuar em diferentes papéis, como professor de graduação (cerca de 6 turmas) e pós-graduação (3
+disciplinas em 3 instituições diferentes), coordenar um curso
+de especialização, estudar (faço doutorado), atuar como coach (quase duas dezenas de equipes, cerca de 200 pessoas),
+ser empreendedor, escrever livros (estou no meu segundo),
+participar de vários eventos como palestrante e, os mais importantes: ser pai e marido.
+Você está recebendo um livro nas suas mãos que certamente
+poderá ajudá-lo. Agora pense: a ferramenta você já tem, mas
+a principal mudança está em você.
+Boa leitura!
+
+Guilherme Lacerda
+Agile Coach (Wildtech) e Professor Universitário (UniRitter,
+Unisinos e UFRGS)
+Site: http://www.guilhermelacerda.net
+Twitter: @guilhermeslac
+
+P r e fá c i o d o a u t o r
+Na década de 90, uma professora pediu para que a mãe de um
+aluno assinasse um papel para garantir que ele tivesse atenção
+às aulas do próximo ano, porque ele não parava quieto por
+muito tempo, e já seria a primeira série do ensino fundamental. Aproximadamente dez anos depois, esse aluno fez o concurso vestibular para a universidade federal, e sua pontuação
+ficou muito abaixo da média para passar em qualquer curso.
+Ele não aprendeu realmente o conteúdo da escola por não
+ter se concentrado nas aulas, nem prestado atenção suficiente
+nos estudos. Por volta de quinze anos depois, ele já tinha feito
+curso técnico, graduação e mestrado na universidade federal, havia passado em três concursos públicos nos primeiros
+cinco lugares, tinha feito onze certificações em sua área de
+Tecnologia da Informação, enquanto estagiava e trabalhava
+desde o começo da graduação. Além disso, participava de diversas conferências como organizador ou palestrante, e estava publicando seu segundo livro.
+Afinal, o que ele fez para conseguir ter uma boa produtividade? Ele aprendeu e utilizou continuamente diversas técnicas
+de produtividade pessoal para poder ter foco, concentração e
+organização, assim podendo alcançar seus objetivos e metas.
+Aquele aluno era eu, o autor deste livro.
+O propósito deste livro está em ajudar as pessoas a terem mais
+
+produtividade, por meio de técnicas de produtividade pessoal
+para foco e organização. A ideia de escrevê-lo surgiu em uma
+conferência em 2015, em um painel no qual participei sobre a
+importância da troca de conhecimento e de experiências, ao
+vivo, face a face, na era digital.
+Um dos assuntos que surgiram foi de como ter foco e concentração em meio a tantas interferências dos meios digitais
+e da internet. Então, falei de algumas dicas e de técnicas que
+utilizava. Ao final do painel, algumas pessoas me falaram que
+eu deveria palestrar ou escrever sobre elas. Assim, comecei a
+organizar este livro.
+Já ajudei diversas pessoas com essas técnicas de produtividade pessoal, e o resultado foi muito bom para elas. Isso me diz
+que este livro pode ser útil para muitos.
+O que este livro traz de realmente novo? A maioria dos livros
+que conheço sobre produtividade pessoal fala muito mais de
+dicas, porém, pouco sobre técnicas. Ou seja, fala-se do que é
+preciso fazer, mas não sobre como fazer.
+Além disso, misturam conceitos de gestão de tempo com gestão de tarefas e de energia. Já fiz um curso sobre gestão de
+tempo que nem citava a Técnica Pomodoro. Aqui, temos foco
+na prática das técnicas. Uma coletânea de técnicas de produtividade pessoal que, para mim, é muito valiosa.
+E essas técnicas não são novidades, existem há anos, há déca-
+
+das, e algumas há séculos ou milênios. Três das técnicas são
+de minha autoria, que são a Flowtime, a Tarefa Mínima Viável e a Tarefas Enxutas. Certamente, existem mais técnicas,
+metodologias e métodos de produtividade pessoal, porém o
+conteúdo deste livro trata das que já usei e com as quais tive
+uma boa produtividade.
+A novidade deste livro está em ter uma visão mais completa
+da produtividade pessoal com a gestão de tempo, a de tarefas
+e a de energia. E pelo fato de a produtividade ser um caminho
+contínuo a ser buscado, o livro tem o nome de O Mantra da
+Produtividade©.
+Essas técnicas são bastante usadas por estudantes, concurseiros, trabalhadores, gestores, desenvolvedores de software, cientistas, artistas, esportistas, e por qualquer pessoa que
+busque ter uma boa produtividade, seja nos estudos, no trabalho ou em projetos pessoais. Nos estudos, para quem está
+no colégio, curso pré-vestibular, curso técnico, faculdade ou
+pós-graduação. Já no trabalho, há uma infinidade de áreas
+de atuação e possibilidades de uso destas técnicas, inclusive
+algumas para serem utilizadas em equipe.
+Já trabalhei por três anos auxiliando diariamente diversos times de desenvolvimento de software a usarem estas técnicas de produtividade, principalmente o Backlog de Tarefas,
+Kanban, entre outras específicas para a produtividade no desenvolvimento de software.
+
+Na minha percepção, se eu não as tivesse utilizado, não teria
+alcançado nem 20% do que fiz até hoje após o colégio. Se
+eu não tivesse usado o planejamento semanal, provavelmente
+não teria passado no vestibular da universidade federal. Se eu
+não tivesse utilizado a técnica Pomodoro, provavelmente não
+teria escrito a tempo o meu trabalho de conclusão de curso
+da graduação. Se eu não tivesse usado o Backlog de Tarefas e o
+gráfico de Burnup, não teria sequer começado a estudar para
+uma certificação.
+Se eu não tivesse utilizado Kanban para a gestão do desenvolvimento da dissertação de mestrado, além das técnicas Pomodoro
+e Flow, provavelmente eu teria demorado dois ou três meses a
+mais para me formar no mestrado. Se eu não tivesse usado as
+técnicas Pomodoro, Chunking, Flowtime, Backlog de Tarefas e
+gráfico Burnup, provavelmente não estaria nem na metade da
+escrita deste segundo livro que está sendo publicado.
+Aprender sobre produtividade pessoal é cada vez mais necessário. As interferências aumentam cada vez mais, seja pela
+internet, redes sociais, telefone, televisão, rádio, no trabalho
+ou na aula — sendo desafiador ter foco e concentração para
+poder ter produtividade. O que eu espero é que, assim como
+eu consegui ter uma boa produtividade com estas técnicas,
+outras pessoas e você também podem ter uma ótima produtividade com o conteúdo deste livro.
+O link do Mantra da Produtividade© é http://dionatanmoura.
+com/o-mantra-da-produtividade/. Lá existem templates, ma-
+
+teriais e uma lista de ferramentas online para auxiliar no uso
+dessas técnicas de produtividade pessoal.
+Existe também o fórum da editora Casa do Código deste livro, para tirar dúvidas e fazer comentários sobre a prática das
+técnicas. O link é http://forum.casadocodigo.com.br/. Não
+deixe de submeter uma avaliação deste livro na sua biblioteca
+on-line da Casa do Código, em https://biblioteca.casadocodigo.com.br, seu feedback é muito importante. Caso você deseje submeter alguma errata ou sugestão, acesse http://erratas.
+casadocodigo.com.br/.
+A leitura deste livro pode ser realizada diretamente no conteúdo de interesse, pois tem um conteúdo prático. Na gestão
+de tempo, uma técnica simples e rápida para começar a ter
+uma boa produtividade é a Pomodoro; na gestão de tarefas é a
+técnica de Backlog de Tarefas; e na gestão de energia a de Ambiente Produtivo. Sugiro ao menos ler o capítulo Introdução e
+o O Mantra da Produtividade. Então, faça uma leitura rápida
+de cada técnica, para depois ler e praticar o que mais pode
+ser útil para a sua produtividade. E após isso, leia e pratique
+outras técnicas de produtividade pessoal.
+Foco!
+
+Dionatan Moura, autor do livro.
+Site: http://dionatanmoura.com/
+
+AGRADECIMENTOS
+Dedico este livro aos meus pais, aos meus irmãos e à minha
+irmã, que sempre me deram suporte e incentivo na vida.
+Agradeço aos gurus de desenvolvimento ágil de software
+Daniel Wildt e Guilherme Lacerda pelos prefácios. Eles são
+minhas referências em produtividade pessoal. Também são
+autores do meu primeiro livro sobre a metodologia ágil de
+software eXtreme Programming, focada na produtividade de
+times.
+Agradeço à amiga Rosane Michele D. Soares, que, mesmo durante seu pós-doutorado nos Estados Unidos, foi a beta reader deste livro, lendo e realizando ótimas sugestões para o
+conteúdo, e trocando diversas ideias, especialmente de que a
+produtividade é um caminho a ser percorrido.
+Agradeço à amiga e coach Gisela Fontoura, pelo grande incentivo e pelas muitas ideias trocadas sobre metas, coaching,
+produtividade, gestão de energia pessoal e sobre todo o conteúdo do livro.
+Agradeço a todas as pessoas que incentivam a cultura de métodos ágeis em desenvolvimento de software no Brasil e no
+mundo, sempre pensando na produtividade de times e em
+
+como tornar um ambiente melhor de trabalho nas organizações.
+Agradeço à editora Casa do Código e ao Adriano Almeida
+pela oportunidade e pelo suporte para a publicação deste livro. E especialmente à Vivian Matsui e à Bianca Hubert, pela
+revisão do texto e por todas as sugestões de melhoria do conteúdo deste livro.
+Agradeço também a você, leitor, pelo interesse no conteúdo
+sobre técnicas de produtividade pessoal deste livro.
+
+SOBRE O AUTOR
+Dionatan Moura trabalha com engenharia de software desde
+2006, tendo bacharelado e mestrado em Ciência da Computação na Universidade Federal do Rio Grande do Sul (UFRGS),
+em 2009 e 2013, respectivamente. Trabalhou para organizações privadas e públicas em Porto Alegre, sendo desenvolvedor de software por sete anos, e coach ágil por três, auxiliando times de desenvolvimento de software a utilizar métodos
+ágeis. Foi professor visitante na pós-graduação da UniRitter
+Laureate International Universities em Porto Alegre.
+É coordenador do Grupo de Usuário de Métodos Ageis do
+RS (GUMA-RS) e do Grupo de Usuários Java do RS (RSJUG).
+Foi coordenador das trilhas Java da conferência The Developers Conference em Porto Alegre em 2013, 2014 e 2015. Já
+palestrou sobre métodos ágeis e motivação pessoal em conferências regionais e nacionais, tais como Agile Brazil, The
+Developers Conference e XPConf.
+Em 2015 e 2016, foi revisor de publicações na conferência
+Agile Brazil. Possui onze certificações na área de Tecnologia
+da Informação (TI), sobre métodos ágeis, desenvolvimento de
+software, gerência de projetos e gestão de TI. Tem formação
+em coaching pessoal e organizacional pelo Instituto de Coaching Avançado.
+
+Em 2015, publicou seu primeiro livro eXtreme Programming:
+práticas para o dia a dia no desenvolvimento ágil de software,
+uma metodologia ágil para desenvolvimento de software, escrevendo o livro com mais três autores referências da área de
+métodos ágeis. Em 2016, está publicando este livro, O Mantra
+da Produtividade©, sobre técnicas de produtividade pessoal.
+Técnicas das quais utiliza continuamente para produtividade
+pessoal, também auxiliando pessoas a terem mais produtividade pessoal com coaching e mentoring, além de ajudar times
+de desenvolvimento de software como coach ágil.
+Tem um website, http://dionatanmoura.com, e pode ser encontrado no Twitter como @dionatanmoura.
+
+SUMÁRIO
+1. I n t ro d u ç ã o 
+O que é a produtividade?
+Os problemas relacionados à produtividade
+Técnicas de produtividade pessoal
+
+2. O M a n t r a da P ro d u t i v i da d e 
+A principal dica!
+
+3. G e s tã o d e t e m p o 
+Técnica Pomodoro: método simples para ter foco
+Técnica Chunking: método flexível para ter foco
+Técnica Flowtime: método para otimizar o foco
+Planejamento do próximo dia
+Planejamento semanal
+Agenda pessoal
+O tempo no Mantra da Produtividade
+
+4. G e s tã o d e ta r e fa s 
+Definindo metas para alcançar objetivos
+Backlog de tarefas
+Gestão visual com quadro de Kanban
+
+23
+24
+26
+34
+37
+40
+41
+43
+47
+50
+55
+59
+63
+65
+69
+71
+76
+96
+21
+
+Visualizando o progresso com gráfico de Burnup
+Resolvendo tarefas com Rubber Duck Debugging
+Realizando a Tarefa Mínima Viável
+Tarefas enxutas
+As tarefas no Mantra da Produtividade
+
+5. G e s tã o d e e n e r g i a 
+Alta produtividade com o estado de flow
+Ambiente produtivo
+Tarefas em par ou em time
+Mantendo o foco com músicas produtivas
+Respirando profundamente
+Exercícios físicos
+Alongamento corporal diário
+Alimentação saudável
+Dormir bem
+Mindfulness para aprimorar a atenção e o foco
+Meditação para auxiliar a concentração
+A energia no Mantra da Produtividade
+
+6. G e s tã o d e h á b i t o s 
+Hábitos produtivos
+Os hábitos no Mantra da Produtividade
+
+7. I n d o a l é m d o m a n t r a 
+22
+
+105
+109
+112
+115
+121
+123
+128
+131
+139
+143
+148
+151
+154
+158
+167
+177
+189
+195
+197
+198
+218
+219
+
+Referências
+
+223
+
+Versão Especial Pocket
+
+23
+
+24
+
+1.
+INTRODUÇÃO
+
+“Quando tudo é prioritário, nada é prioritário.”
+— Autor desconhecido
+
+Ouvimos muito que precisamos ter uma alta produtividade
+para não procrastinar e adiar tarefas importantes, entre outras dicas, e concordamos com praticamente todos os conselhos sobre produtividade. Sabemos o que fazer, mas nem
+sempre como fazer.
+Como efetivamente podemos ter produtividade na prática?
+É necessária a utilização de técnicas. Este livro traz diversas técnicas de produtividade pessoal, além de dicas, fazendo
+com que você utilize melhor seu tempo e energia em tarefas
+alinhadas com metas e objetivos pessoais, seja nos estudos,
+no trabalho ou em projetos pessoais.
+
+O QUE É A PRODUTIVIDADE?
+Para falarmos como melhorar a produtividade, primeiramente precisamos entender melhor o que é a produtividade. Existem diversas visões sobre o que ela é, e cada um pode ter o
+seu próprio entendimento sobre isso. Não basta apenas fazer
+as tarefas certas, é necessário fazer as tarefas certas de uma
+forma exata e produtiva, sendo eficaz e eficiente.
+A produtividade existe para obter mais e melhores resultados.
+26
+
+Dessa forma, a produtividade pessoal pode nos fazer:
+Como está o foco na produtividade?
+Como o tempo está sendo gerenciado?
+Como as tarefas estão sendo gerenciadas?
+Como as tarefas são priorizadas?
+A energia está sendo suficiente?
+Como a energia está sendo gerenciada?
+O que pode ser feito para aumentar a produtividade?
+Como o aumento da produtividade pode melhorar a
+vida tanto no presente quanto no futuro?
+Quanto de tempo e de energia pode ser economizado
+para termos um bom nível de produtividade?
+
+Eficácia e eficiência
+A eficácia está em realizar as tarefas certas, com as metas
+certas e com os objetivos certos. A eficácia tem foco no que
+deve ser feito, já a eficiência está em realizar as tarefas da forma certa, na forma mais produtiva. A eficiência tem foco em
+como a tarefa deve ser feita.
+Ao meu ver, a produtividade depende tanto da eficácia quanto da eficiência, pelo fato de obter resultados otimizados (eficácia), com maior quantidade, qualidade, velocidade e/ou
+menor custo (eficiência).
+A chave da produtividade é o foco, que nada mais é do que
+a canalização da capacidade e da energia em uma única
+27
+
+atividade. Quando se tem foco, a produtividade flui facilmente, fazendo com que o tempo passe rapidamente.
+Quando não se tem foco, a produtividade praticamente
+não existe, e o tempo passa lentamente.
+
+OS PROBLEMAS RELACIONADOS À
+PRODUTIVIDADE
+A produtividade depende de diversos fatores para existir de
+uma forma suficientemente boa. Alguns fatores atrapalham a
+produtividade, tais como: distrações, interferências, falta de
+organização, cansaço, desmotivação, ausência de metas e ser
+multitarefas.
+
+Perder o foco com distrações
+Quando estamos sem foco, qualquer distração é uma excelente desculpa para procrastinarmos.
+
+Quais são as distrações que tiram seu foco no dia a dia?
+Por muitas vezes, qualquer distração já pode ser uma boa desculpa para pararmos de realizar a tarefa. Por exemplo, imagine que faz 10 minutos que você iniciou a escrita de um texto
+28
+
+importante, e de repente surge uma pequena vontade de beber um suco de laranja. Então, você para de escrever o texto e
+vai buscar o suco de laranja no refrigerador.
+Ao servir um copo deste suco, você lembra-se de que precisa
+fazer uma ligação. Então, você faz a ligação, e surgem novas
+atividades a serem realizadas. Ao desligar o celular, existem
+duas pessoas falando com você por mensagens de texto, logo,
+você responde e troca mais algumas mensagens. Meia hora depois, você sente fome e decide sair para almoçar. Uma hora depois, você volta e olha para o texto redigido (apenas o início), e
+não sabe mais o que estava escrevendo, então deixa a tarefa do
+texto para outro momento. E assim você procrastina.
+Uma das nossas maiores distrações está na internet. Em média, o internauta brasileiro fica 2.023 minutos por semana conectado na internet, mais do que um dia inteiro, o qual possui
+1.440 minutos (BRASIL, 2014). São 33 horas e 43 minutos a
+cada semana! São 4 horas e 49 minutos por dia. Isso não é
+muito diferente em outros países, sendo a média mundial de
+4 horas e 25 minutos (KEMP, 2015). Entre todo este tempo,
+apenas 24% é dedicado para estudo e aprendizagem. Em um
+ano, é como passar dois meses e meio (73 dias) seguidos estando na internet sem parar, 24 horas por dia.
+E você, quantas horas por semana passa na internet? Quantas
+destas horas nela realmente são úteis? Quantas destas poderiam ter sido utilizadas para a produtividade?
+29
+
+F a lta d e o r g a n i z a ç ã o e m u i ta s i n t e r f e r ê n c i a s
+O que é preciso para ter organização nas suas tarefas? Quais
+são as interferências que você tem durante a realização delas?
+Ter o ambiente desorganizado, seja no trabalho, na faculdade ou em casa, dificulta a produtividade. Em cima da mesa,
+podemos ter muitos materiais sem utilidade no momento,
+como livros, revistas e folhas, tornando difícil a localização
+do que é necessário. Pense também nos arquivos e pastas do
+seu computador. Pode haver centenas ou milhares de arquivos, misturados com arquivos importantes e outros não mais
+úteis.
+Mesmo quando você quer ser produtivo, você ainda terá interferências de outras pessoas, seja ligando em seu celular, no
+telefone do trabalho, enviando um e-mail, ou conversando
+por mensagem no celular ou no computador. Estamos hiperconectados, então temos interferências constantes.
+
+E s ta r s e m e n e r g i a , c a n s a d o a o n í v e l da e x a u s tã o
+Como está sua energia física e mental? Quanto tempo por dia
+você sente cansaço?
+Até mesmo quando estamos sendo produtivos, ficamos cansados, tanto físico quanto mentalmente, e não notamos. Tentamos passar horas sem parar em uma atividade importante, e
+depois de um tempo parece que nada mais sai do lugar. Com
+30
+
+o tempo, diminuímos as horas de sono para aumentar a produtividade a curto prazo, e não damos importância nem para
+a alimentação nem para nosso bem-estar.
+Depois de um tempo, em longo prazo, a produtividade diminui tanto que não sabemos o que houve. Então, foram meses
+ou até anos sem cuidar da energia física e mental, o que pode
+levar a uma produtividade baixa.
+
+N ã o p o s s u i r m e ta s , nã o p o s s u i r u m p ro p ó s i t o , e s ta r
+s e m m ot i va ç ã o
+Quais são as metas que você deseja realizar? Qual o propósito
+que você deseja construir na vida?
+De que adianta empenhar-se ao máximo, se não soubermos
+para onde vamos quando atingirmos as metas? Esta questão
+fica bem fácil de entender no filme Alice no País das Maravilhas, no momento em que Alice está perdida, encontra o Gato
+de Cheshire e conversa com ele o seguinte:
+­­— Alice: “[...] eu só queria saber que caminho seguir...”
+— Gato de Cheshire: “Isto depende do lugar aonde quer ir.”
+— Alice: “Oh, isso realmente não importa, desde que eu...
+(interrupção)”
+— Gato de Cheshire: “Então não importa que caminho tomar!”
+31
+
+Ter um propósito definido para realizar as tarefas gera motivação, o que nos traz energia e nos inspira a ser mais produtivos. Quando não temos um propósito bem definido, nos sentimos sem vontade e sem motivação de realizar as tarefas, até
+mesmo tarefas importantes. A própria palavra “motivação” já
+diz seu significado, que é ter motivos para ter ação.
+
+S e r m u lt i ta r e fa s
+Quais são as tarefas que você realiza ao mesmo tempo?
+Realizar diversas tarefas ao mesmo tempo (ou seja, ser multitarefas) e achar ser mais produtivo é um mito. As pessoas
+podem, de fato, fazer duas ou mais coisas ao mesmo tempo,
+tal como caminhar e falar no telefone, ou lanchar e ler um
+livro, porém não podemos nos focar em mais de uma coisa
+no mesmo momento exato. É o que os autores Gary Keller e
+Jay Papasan falam em seu livro A única coisa (KELLER; PAPASAN, 2014).
+É preciso de foco para ser altamente produtivo em tarefas que
+exijam raciocínio e memória. Neste livro, falamos das tarefas
+que precisam de foco e de atenção. A pessoa pode se sentir
+contente por estar fazendo três tarefas ao mesmo tempo, mas
+o resultado não é melhor se fizesse cada tarefa de cada vez.
+Certamente, há tarefas que podemos paralelizar. Por exemplo, enquanto você espera o download de um arquivo ser feito, você pode fazer uma ligação. Porém, as tarefas que exigem
+32
+
+o raciocínio e a memória precisam de foco e atenção, como
+conversar com alguém no telefone e, ao mesmo tempo, redigir
+um e-mail sobre outro assunto. É possível? Sim, certamente é
+possível. Vai ser eficaz? Provavelmente não. Vai ser eficiente?
+Provavelmente também não.
+Ser multitarefas não economiza tempo pelo fato de haver o
+tempo extra de troca e de preparação da mesma tarefa. Veja
+os passos de uma ação multitarefa:
+1. Preparação da tarefa A;
+2. Realização da tarefa A;
+3. Interrupção;
+4. Troca;
+5. Preparação da tarefa B;
+6. Realização da tarefa B;
+7. Troca;
+8. Preparação da tarefa A;
+9. Realização da tarefa A.
+E com foco em apenas uma tarefa por vez, há menos passos:
+1. Preparação da tarefa A;
+2. Realização da tarefa A;
+3. Troca;
+4. Preparação da tarefa B;
+5. Realização da tarefa B.
+Para verificar como ser multitarefa atrapalha a produtivida33
+
+de, existe um exercício que exige um raciocínio simples para
+escrever sequências de letras, dígitos e números romanos. Na
+primeira parte do exercício, escreve-se uma sequência por
+vez. Na segunda parte do exercício, escreve-se um item de
+cada sequência por vez.
+
+Exercício multitarefas (5 minutos de duração)
+Passo 1: Pegue uma folha de papel, um lápis ou uma caneta, e um *timer* (contador regressivo com alarme).
+Passo 2: Cronometre 30 segundos. Enquanto o tempo passa, escreva a sequência de letras do C ao J. Repita a mesma
+sequência continuamente até acabar o tempo.
+Passo 3: Cronometre 30 segundos. Enquanto o tempo passa, escreva a sequência de dígitos do 5 ao 13. Repita a mesma sequência continuamente até acabar o tempo.
+Passo 4: Cronometre 30 segundos. Enquanto o tempo passa, escreva a sequência de números romanos do VIII ao
+XV. Repita a mesma sequência continuamente até acabar
+o tempo.
+Passo 5: Cronometre 1 minuto e 30 segundos. Enquanto o
+tempo passa, escreva um item por vez de cada sequência,
+repetindo continuamente, até acabar o tempo: C, 5, VIII,
+D, 6, IX, E, 7, IX, e assim por diante.
+34
+
+Passo 6: Some a quantidade de itens escritos nos passos
+2, 3 e 4.
+Passo 7: Some a quantidade de itens escritos no passo 5.
+Passo 8: Verifique a proporção das quantidades de itens
+escritos. O que valeu mais para a produtividade?
+
+L e i de P a rk ins o n : co ns u m ind o t o d o o t e m po d is po níve l
+A Lei de Parkinson foi publicada na revista The Economist em
+1955, por Cyril Northcote Parkinson — professor, historiador, escritor e administrador inglês. Esta lei diz: “O trabalho
+se expande de modo a preencher o tempo disponível para a sua
+realização”.
+Ou seja, tendemos a utilizar todo o tempo possível atribuído
+a uma tarefa. O problema é que comumente adicionamos uma
+margem de segurança no prazo, e então a usamos totalmente.
+Lembro de ex-colegas de trabalho em reuniões sobre projetos
+dizendo: “nossas estimativas foram ótimas, pois utilizamos o
+tempo estimado em cada tarefa”. Porém, utilizaram também
+as margens de segurança.
+Podemos também dizer: “Tudo será utilizado de modo a preencher sua estimativa prevista.”. Ou seja, tendemos a usar tudo
+o que é atribuído e estimado à tarefa, o que nos tira tempo e
+35
+
+energia para a realização de outras.
+
+TÉCNICAS DE PRODUTIVIDADE PESSOAL
+Primeiramente é necessário entender que a produtividade é
+um estado a ser atingido, um caminho a ser buscado, e não
+uma característica que nasce completa com as pessoas. Certamente, existem pessoas que conseguem mais facilmente atingir um bom nível de produtividade, porém, de certo modo,
+isso acontece porque elas aprenderam a ser produtivos.
+Com técnicas de produtividade pessoal, é possível termos
+foco e organização para evitarmos distrações e interferências,
+e também de sermos multitarefas. Além disso, é possível ter
+mais energia para realizar metas, com um propósito e motivação. Assim, podemos ser mais produtivos, entretanto, é
+necessário buscar técnicas e dicas para seguir esse caminho
+da produtividade.
+Este livro traz um framework de produtividade pessoal, o
+Mantra da Produtividade©, que traz diversas técnicas de produtividade pessoal para a gestão de tempo, gestão de tarefas,
+gestão de energia e gestão de hábitos.
+O Mantra da Produtividade© é descrito no capítulo seguinte.
+Logo após, é detalhado no capítulo 3. Gestão de tempo, com
+técnicas de gestão de tempo; no capítulo 4. Gestão de tarefas,
+36
+
+com técnicas de gestão de tarefas; no capítulo 5. Gestão de
+energia, com técnicas de gestão de energia; e, finalmente, no
+capítulo 6. Gestão de hábitos, com a técnica de hábitos produtivos.
+Técnicas para a gestão de tempo:
+Técnica Pomodoro
+Técnica Chunking
+Técnica Flowtime
+Planejamento do próximo dia
+Planejamento semanal
+Agenda pessoal
+Técnicas para a gestão de tarefas:
+Definindo metas para alcançar objetivos
+Backlog de tarefas
+Gestão visual com quadro de Kanban
+Visualizando o progresso com gráfico de Burnup
+Resolvendo tarefas com Rubber Duck Debugging
+Realizando a Tarefa Mínima Viável
+Tarefas enxutas
+Técnicas para a gestão de energia:
+Alta produtividade com o estado de flow
+Ambiente produtivo
+Tarefas em par ou em time
+Mantendo o foco com músicas produtivas
+Respirando profundamente
+Exercícios físicos
+37
+
+Alongamento corporal diário
+Alimentação saudável
+Dormir bem
+Mindfulness para aprimorar a atenção e o foco
+Meditação para auxiliar a concentração
+Técnica para a gestão de hábitos:
+Hábitos produtivos
+
+38
+
+2.
+O MANTRA DA
+PRODUTIVIDADE
+
+O Mantra da Produtividade© é um framework composto de
+quatro grandes partes: a gestão de tempo, a gestão de tarefas,
+a gestão de energia e a gestão de hábitos.
+Cada uma dessas partes possui técnicas e métodos para melhorar a produtividade por meio do foco e da organização
+pessoal. A gestão de tempo gerencia uma melhor utilização
+de minutos, horas, dias, semanas e meses. A gestão de tarefas define técnicas para metas, prioridades, tarefas e estratégias para suas realizações. A gestão de energia administra a
+energia física e mental. Por fim, tem a gestão de hábitos para
+gerenciar os hábitos produtivos. Dessa forma, o Mantra da
+Produtividade© é um modelo que busca ter a produtividade
+como um todo.
+O termo Mantra vem do sânscrito Man (mente) e Tra (controle). O termo Mantra da Produtividade© significa que precisamos estar focados na produtividade, sempre gerenciando
+o nosso tempo, tarefas, energia e hábitos. Assim como um
+mantra, é repetido continuamente, sendo ele contínuo para
+sempre estarmos analisando o que precisamos para sermos
+mais produtivos.
+
+40
+
+O Mantra da Produtividade©, um framework de produtividade
+pessoal composto de gestão de tempo, de gestão de tarefas, de
+gestão de energia e gestão de hábitos
+
+A importância de gerenciar o tempo para a produtividade
+vem da necessidade de otimizar o tempo para as tarefas a serem realizadas. Além do tempo gerenciado, administrá-las é
+importante para saber o que exatamente deve ser feito, e em
+que ordem de prioridade.
+A prioridade é dada através da importância e da urgência de
+cada tarefa, sendo priorizada de acordo com as metas definidas. Além do tempo e tarefas, é preciso gerenciar a energia
+41
+
+para que o corpo e a mente tenham o suficiente para cada
+tarefa. Centralizando o tempo, tarefas e energia, os hábitos
+produtivos são importantes para ter uma produtividade em
+médio e longo prazo.
+
+A PRINCIPAL DICA!
+O Mantra da Produtividade© tem o objetivo de ser flexível,
+por ser um framework. Ou seja, uma estrutura na qual você
+pode utilizar partes ou o todo. Desta forma, você pode adaptá-lo da melhor maneira possível.
+Se o Mantra fosse uma metodologia, não permitiria tantas
+modificações, melhorias e evoluções. A melhor maneira de
+ser produtivo é buscar sua própria forma de produtividade. A
+principal dica está em descobrir o seu melhor método de produtividade. Para isso, você pode experimentar as técnicas e
+métodos neste livro que achar mais condizentes, observando
+qual a sua melhor maneira de ter rendimento.
+
+42
+
+3.
+GESTÃO DE TEMPO
+
+Estou sem tempo. Esta é uma frase que costumamos dizer (e
+ouvir) bastante. Seu significado é “não tenho prioridade suficiente para isso neste momento”. Todos temos tempo, exatamente 24 horas por dia. O que podemos fazer então é gerenciar o tempo para otimizá-lo.
+E como o gerenciamos? Tendo foco, realizando uma tarefa de
+cada vez, diminuindo distrações e interferências, e melhorando nossa organização. Porém, precisamos é de técnicas para
+nos orientar a atingir esses itens. Seria um tanto simplório
+dizer *basta ter foco* sem dizer *como* ter foco.
+
+O que é o tempo?
+Pela ciência da física, o tempo é apenas uma das 11 dimensões do Universo, de acordo com a Teoria-M, teoria que
+unifica todas as versões consistentes da Teoria das Supercordas (ABDALLA, 2005). Destas 11 dimensões, podemos
+perceber quatro delas: uma é temporal — o tempo —, e as
+outras três são dimensionais — altura, largura e comprimento.
+O tempo depende da nossa percepção: quanto mais estamos presentes no que estamos fazendo, mais rápido parece passar o tempo, pois damos foco na atividade com a
+máxima produtividade e não prestamos atenção no tempo
+passando.
+44
+
+Nas próximas seções deste capítulo, serão apresentadas técnicas para utilizar o tempo a favor de você em todos os níveis
+de granularidade de tempo: minutos, horas, dias, semanas,
+meses e anos. As técnicas Pomodoro, Chunking e Flowtime
+são para a gestão do tempo no nível de minutos a horas. Já
+o planejamento do próximo dia é para a gestão do tempo no
+nível de dias, o planejamento semanal para a gestão do tempo
+no nível de semanas, e a agenda pessoal para a gestão do tempo no nível de meses.
+
+TÉCNICA POMODORO:
+MÉTODO SIMPLES PARA TER FOCO
+O tempo parece ser seu adversário? Você trabalha ou estuda
+sem parar por horas, e mesmo assim se sente sem foco e que
+as coisas não vão para a frente? Suas distrações andam consumindo seu tempo e sua energia? Você procrastina com o que
+deveria estar sendo feito logo, deixando tarefas importantes
+para depois?
+A técnica Pomodoro, desenvolvida em 1980 por Francesco
+Cirillo, é um método simples e poderoso com o objetivo de
+ajudar pessoas a terem foco e a gerenciarem seu tempo de um
+modo efetivo (CIRILLO, 2015). Pomodoro é o nome do período de tempo com duração de 25 minutos no qual se realiza
+somente uma tarefa por vez, evitando ao máximo todo e qual45
+
+quer tipo de distração e interferência. A cada pomodoro realizado, você faz uma pausa curta de até 5 minutos. A cada quatro pomodoros, você faz uma pausa longa de até 30 minutos.
+
+O pomodoro é um período de 25 minutos focados, com intervalos de 3 a 5 minutos. A cada 4 pomodoros, é feito um intervalo
+maior de 15 a 30 minutos.
+
+A p l i c a n d o p o m o d o ro s
+Use Pomodoro principalmente quando se tem pouco foco,
+e a procrastinação é forte e constante.
+
+Para aplicar a técnica Pomodoro, siga as instruções a seguir:
+Antes de começar o pomodoro, procure ao máximo possível não ter interrupções. Coloque seu celular no silencioso e desligue a internet dele, feche os aplicativos
+de e-mail e de conversação no computador, desligue a
+televisão ou o que mais puder interromper seu foco e
+sua atenção.
+Comece um pomodoro com uma duração exata de 25
+46
+
+minutos.
+Utilize um alarme para ter foco total na atividade e não
+precisar verificar o tempo no relógio. A maioria dos celulares possui aplicativos de contagem de tempo e alarme. Diversos websites oferecem essas funcionalidades, e
+você pode vê-los no box mais à frente.
+Trabalhe na tarefa até quando o pomodoro acabar.
+Caso a tarefa acabe durante esse pomodoro, prossiga
+nele pegando a próxima tarefa.
+A cada pomodoro realizado, você faz uma pausa curta
+de 3 a 5 minutos (você escolhe).
+A cada 4 pomodoros, você faz uma pausa mais longa, de
+15 a 30 minutos (você escolhe).
+A quantidade de pomodoros é ilimitada, ou seja, você
+pode realizar quantos pomodoros forem necessários.
+Durante o pomodoro, caso você lembre que precisa fazer algo não relacionado à tarefa atual, anote isso e continue na tarefa.
+Para ver seu progresso, você pode anotar cada pomodoro e cada tarefa realizada ao longo do tempo.
+Para realizar bons pomodoros, veja as dicas:
+Sua produtividade pode ser medida na quantidade de
+pomodoros que são realizados por dia. Desse modo,
+você poderá se motivar com sua produtividade.
+Tenha foco durante cada pomodoro. Interrupções internas e externas sempre existirão, então tente ao máximo
+evitá-las. Não leia e-mails, não abra redes sociais e não
+47
+
+olhe o celular, exceto quando isso fazer parte da tarefa.
+Espere um pouco até a chegada do intervalo entre pomodoros para isso. Você pode esperar também a pausa
+entre pomodoros para ir buscar água ou um lanche.
+Você notará que muitas interrupções não urgentes poderão aguardar até o final de cada pomodoro, ou até
+mais tempo ainda.
+Sua mente estará sempre buscando por algo, e isso muitas vezes é apenas uma boa desculpa para procrastinar.
+Utilize os intervalos de pausa. Eles vão se tornando mais
+necessários a cada pomodoro realizado no dia. Não acumule cansaço físico ou mental. Cuide da sua energia.
+Aproveite os intervalos de pausa para se alimentar, respirar profundamente algumas vezes, ir ao banheiro, se
+levantar da cadeira, se espreguiçar, se alongar ou meditar. É a sua recompensa por ter cumprido um pomodoro
+completo (vide a técnica sobre hábitos neste livro). :-)
+Melhore continuamente a qualidade de seus pomodoros. Ao final do dia, reflita quantos pomodoros você
+conseguiu fazer e qual foi a qualidade do foco neles. Use
+essa reflexão para melhorar a técnica e diminuir interrupções.
+Anote todas as tarefas a serem feitas que você se lembra,
+não precisando mais se relembrar o que deve ser feito.
+Caso esteja sem motivação e sem foco, comece apenas
+com um pomodoro para realizar uma tarefa fácil, simples e/ou rápida para começar. Essa tarefa vai ajudar a
+trazer a recompensa de ter realizado algo, gerando motivação e mais foco para os próximos pomodoros.
+48
+
+E x e m p l o d o u s o p o m o d o ro s
+Toda vez que preciso de um foco imediato, uso um pomodoro
+para começar logo. O primeiro pomodoro já quebra a procrastinação e me dá uma sensação de progresso, que me faz
+ter mais motivação para seguir nos próximos.
+Utilizo o timer do meu celular para contar os 25 minutos,
+e então tocar o alarme. Normalmente, as tarefas que realizo
+com pomodoro duram mais que 25 minutos, então uso alguns
+pomodoros para cada tarefa e faço as pausas curtas para fazer
+algo rápido (pegar uma água, lanchar, se alongar etc.).
+Para cronometrar os pomodoros, você pode utilizar as ótimas ferramentas gratuitas na web, que são: http://e.ggtimer.com/25min, http://marinaratimer.com, http://tomato-timer.com/ e http://www.tickcounter.com/25minutes.
+
+49
+
+50
+
+4.
+GESTÃO DE TAREFAS
+
+Este capítulo vai lhe ajudar a responder questões como:
+Como
+Como
+Como
+Como
+Como
+Como
+Como
+Como
+Como
+
+ter metas?
+ter uma lista de tarefas?
+priorizá-las?
+dimensionar e estimar tarefas?
+gerenciá-las visualmente?
+ver o progresso delas?
+realizar logo tarefas prioritárias?
+fluir em tarefas em que não se consegue evoluir?
+realizar o mínimo necessário de uma tarefa?
+
+No capítulo anterior, vimos técnicas sobre como gerenciar
+melhor o tempo. A gestão de tarefas, além da gestão do tempo, é importante para que saibamos o que fazer exatamente
+no nosso período produtivo. Da mesma forma que o tempo
+é dividido para ser mais bem gerenciado, as tarefas também
+são divididas para obtermos maior detalhamento e entendimento.
+O ponto central deste capítulo está em concentrar-se em
+uma lista de tarefas priorizadas chamada de backlog. As
+tarefas podem estar alinhadas com uma meta. Ou seja, é
+feita uma divisão de uma meta em diversas tarefas, e suas
+prioridades estão diretamente relacionadas com o valor que
+elas têm para a meta. Cada tarefa pode possuir um tamanho
+estimado e dimensionado.
+
+52
+
+BACKLOG DE TAREFAS
+Quais são as próximas tarefas a serem realizadas? Você sabe
+qual tarefa está fazendo exatamente no momento? Você tem
+bem definidas todas as tarefas necessárias para a realização
+de alguma meta?
+O backlog de tarefas é uma lista priorizada das tarefas a serem realizadas para atingir uma ou mais metas. Cada tarefa é
+uma ação necessária para construir e completar uma meta. A
+meta existirá de alguma forma, mesmo que não exista de um
+modo claro.
+Esta lista pode ser dinâmica e pode não um ter limite, ou
+seja, a quantidade de tarefas pode crescer ou diminuir com
+o passar do tempo. O backlog deve refletir a realidade se
+surgirem novas tarefas, ou se outras tarefas forem realizadas
+ou removidas por não serem mais necessárias. É semelhante
+a uma lista de afazeres (TO-DO list), porém mais completa, pois leva em conta a priorização delas e a classificação
+por assuntos. Tendo o backlog priorizado, realize sempre as
+mais prioritárias.
+
+53
+
+Ilustração de um backlog de tarefas
+
+C o n s t ru i n d o s e u ba c k l o g d e ta r e fa s
+O backlog pode ser construído de três formas:
+
+1.
+
+Abordagem top-down, ou de cima para baixo. Inicia-se
+com metas e tarefas grandes, então são dividas em tarefas menores, que são mais fáceis de ser gerenciadas, entendidas e realizadas. Esta abordagem é útil quando se tem metas e tarefas
+grandes já definidas. A criação de tarefas menores auxiliará
+54
+
+o entendimento, o desenvolvimento e o acompanhamento de
+progresso da meta.
+
+2. Abordagem bottom-up, ou de baixo para cima. Inicia-se
+com tarefas menores, então são organizadas em uma visão de
+metas e tarefas maiores. Esta abordagem é útil quando se tem
+diversas tarefas pequenas já definidas. A criação de metas auxiliará a priorizar e alinhar as tarefas, projetando também a
+conclusão delas.
+
+3. Abordagem híbrida, de cima para baixo e vice-versa. Usa-se, ao mesmo tempo, as duas abordagens top-down e bottom-up, partindo de metas e tarefas menores, dividindo metas e
+unindo tarefas, de um modo dinâmico. É útil quando se possuem metas e tarefas já definidas.
+O modelo simplificado para a escrita de um backlog possui a
+prioridade e o nome da tarefa:
+
+Prioridade (%)
+
+Nome da tarefa
+
+100
+80
+50
+15
+...
+
+Tarefa A
+Tarefa C
+Tarefa B
+Tarefa D
+Tarefa ...
+
+55
+
+G e r e n c i a n d o s e u ba c k l o g d e ta r e fa s
+
+Gerenciar e priorizar seu backlog de tarefas é semelhante a dirigir em uma estrada, é preciso priorizar a atenção aos detalhes
+do que está próximo e planejar-se para aonde está indo. Imagem
+de WEi WEi, sob a licença Attribution 2.0 Generic (CC BY 2.0).
+Adaptado de: https://creativecommons.org/licenses/by/2.0/
+
+Todas as tarefas do backlog devem estar em um único
+lugar. Pode ser no meio físico, tal como uma agenda,
+um bloco de papel, um caderno ou um quadro branco.
+Ou então pode ser no meio digital, no computador, tal
+como uma planilha eletrônica ou um documento texto.
+A vantagem de ter o backlog em meio físico é que podemos levá-lo para qualquer lugar, enquanto a vantagem
+de tê-lo em meio digital é facilitar a sua edição e atualização.
+Trabalhe com priorização no horizonte. Defina e detalhe
+56
+
+as tarefas que forem prioritárias, deixando as não prioritárias para depois. Isso ajuda a enxergar o horizonte
+de trabalho. É como viajar de carro em uma estrada: o
+que está próximo possui bastantes detalhes e o que está
+distante possui poucos detalhes. Caso contrário, se você
+quisesse conhecer todos os detalhes da estrada, você não
+sairia tão cedo do lugar com o carro.
+Use verbos no início das tarefas. Visto que elas são ações
+a serem realizadas, utilize verbos no início de cada. Por
+exemplo: “Realizar uma reunião de apresentação do
+novo sistema de contabilidade da empresa”, ou então
+“Realizar os exercícios de português sobre pontuação”.
+Criar tarefas com verbos ajuda também a entendê-las e
+dividi-las melhor.
+Verifique se suas tarefas possuem todas as informações
+essenciais, como: o que é exatamente a tarefa? A quem é
+destinada? Quando será necessária? Onde ela deverá ser
+feita? Por que ela será feita? Como, de que forma? A que
+custo? Em qual quantidade? As respostas dessas perguntas auxiliarão a criação e o refinamento das tarefas.
+Cada tarefa pode ter uma data de prazo de validade.
+Essa data é o tempo de expectativa de permanência no
+backlog, e ajuda a remover ou priorizá-la, caso ainda
+não tenha sido priorizada. O prazo de validade é útil
+para manter limpo o backlog. Por exemplo: “Realizar os
+exercícios de português sobre pontuação até o dia 10 de
+57
+
+julho”. Após essa data, a tarefa não é mais necessária,
+pois a prova de português seria no dia 11 de julho.
+Mantenha seu backlog revisado e atualizado. Defina
+uma frequência para refiná-lo, adicionando, removendo e atualizando tarefas. Você pode revisar seu backlog
+diariamente, semanalmente, quinzenalmente, ou mensalmente. Dependerá do tamanho e da quantidade de
+mudanças dele. A frequência comum para revisá-lo é semanalmente, e você pode utilizar em conjunto ao backlog de tarefas a técnica de planejamento semanal (vide
+capítulo anterior).
+Visto que você pode ter diversas metas em um backlog
+apenas, você pode categorizar cada uma com uma marcação indicando que ela é relacionada com tal meta.
+Na minha área, que é a de desenvolvimento de software,
+usamos a técnica de backlog para todas as tarefas e itens
+necessários para o produto final. Ele pode ser por produto
+ou por time de desenvolvimento.
+Por produto, o backlog representa todos os itens necessários para desenvolver um produto. Por time de desenvolvimento, ele representa todos os produtos desenvolvidos e
+mantidos por aquele time de desenvolvedores de software.
+Esta técnica é bastante conhecida no framework chamado
+Scrum, um método ágil para desenvolvimento de software
+focado em trabalho em time e melhoria contínua. Para
+58
+
+conhecer mais, o site http://www.scrumguides.org/ possui
+o guia oficial do Scrum, em português.
+
+C h e c k l i s t pa r a a s ta r e fa s d i á r i a s :
+o s e u ba c k l o g d i á r i o
+Você costuma fazer diversas tarefas ao mesmo tempo? Você
+às vezes esquece do que estava fazendo exatamente? Você deixa para depois tarefas urgentes e importantes a serem feitas?
+O checklist para as tarefas diárias nada mais que é um backlog diário. Ele auxilia a acompanhar o andamento do progresso das tarefas no dia a dia. Também nos ajuda a realizar
+apenas uma tarefa por vez, pelo fato de ter uma visão de todas
+as tarefas a fazer no dia. Ao longo do dia, caso surja alguma
+tarefa urgente inesperada que precise ser realizada no próprio
+dia, você pode anotá-la também.
+Esta técnica de checklist pode ser feita durante a técnica do
+planejamento do próximo dia, descrita no capítulo 3. Gestão
+de tempo. As anotações podem ser feitas em um papel, caderno de anotações, agenda (ótima neste caso por conter o dia
+exato) ou post-it. Elas também podem ser feitas em ferramentas eletrônicas, tais como um documento de texto ou uma
+planilha, ou em aplicativos específicos.
+
+59
+
+Para automatizar o gerenciamento do backlog de tarefas,
+existem ótimas ferramentas gratuitas na web, que são o
+Todoist (https://todoist.com/), o Google Keep (https://
+www.google.com/keep) e o Evernote (http://www.evernote.com). Elas possuem website e aplicativos para smartphones, o que agiliza ainda mais a produtividade.
+
+B a c k l o g na p r át i c a
+Um exemplo que usei e me beneficiei bastante com o backlog
+de tarefas foi o da minha dissertação no ano de 2013. A minha meta era escrevê-la e entregá-la em oito meses, incluindo
+a aplicação do estudo de caso. Eu precisava saber tudo o que
+seria necessário para realizar e escrever. Então, cada capítulo
+foi representado por uma tarefa macro no backlog.
+Com o capítulo de maior prioridade, eu dividia a tarefa macro relativa em diversas tarefas, normalmente uma tarefa por
+seção do capítulo. Deste modo, conseguia gerenciar todas as
+tarefas macro e menores necessárias para completar a meta,
+que era entregar a dissertação para a banca de professores.
+Utilizei essa técnica de backlog com a técnica de gestão visual
+com Kanban, que será apresentada mais adiante neste capítulo, onde cada capítulo (tarefa macro) era representada por um
+post-it grande, e cada seção (tarefa menor) era representada
+por um post-it pequeno.
+60
+
+P r i o r i z a ç ã o d e ta r e fa s
+“Se tudo é prioritário, nada é prioritário.”
+— Autor desconhecido
+
+A maioria de suas tarefas são prioritárias? Como descobrir
+quais são as tarefas mais prioritárias? Para cada tarefa, são
+analisadas a importância e a urgência?
+Para a produtividade, pensar em prioridade é essencial. É difícil ser produtivo sem trabalhar com priorização. A priorização é necessária quando temos tarefas no backlog além da
+nossa capacidade, o que é bastante comum.
+Quando começamos a pensar em priorização, naturalmente
+deixamos de lado tarefas que não são importantes, e começamos a realizar tarefas que realmente agreguem valor às nossas
+metas. E sempre temos metas de alguma forma, mesmo que
+estas não estejam explícitas. A prioridade de cada tarefa está
+alinhada com a meta. Quanto mais necessária para a meta,
+maior será a prioridade da tarefa.
+O ponto-chave para priorizar está em avaliar duas características para cada tarefa:
+
+1. A importância, a qual tem impacto relevante no resultado
+da tarefa. Em outras palavras, representa o valor, o retorno,
+61
+
+que aquela tarefa vai trazer para a meta.
+
+2. A urgência, a qual tem impacto na nossa atenção, nos fazendo reagir rapidamente à tarefa, sendo algo necessário para
+ser feito imediatamente para não comprometer a meta. Uma
+tarefa que não seja urgente poderá se tornar urgente com o
+tempo, e caso passe o tempo e não seja realizada, pode perder
+o valor.
+A prioridade, a importância e a urgência de cada tarefa são
+relativas às outras tarefas. Podemos dizer que uma prioridade alta é na verdade uma prioridade mais alta, da mesma
+forma para a importância e para a urgência. Assim, o backlog de tarefas terá aquelas com maiores e menores prioridades. O ideal é que as mais prioritárias fiquem no início do
+backlog, em uma ordem até que a última tenha a menor das
+prioridades.
+“Trabalho é infinito”. Eu costumo dizer esta frase quando
+vejo alguém cheio de trabalho, estressado, e querendo se
+apressar ao fazer mais de uma tarefa ao mesmo tempo,
+inclusive comprometendo a qualidade delas, pelo fato de
+ter muitas tarefas a serem realizadas. O fato é, quando acabarem, surgirão novas tarefas. Temos que ter consciência
+de que elas são contínuas, mesmo quando atingirmos uma
+meta, haverá novas metas. Visto isso, a priorização se torna essencial para evitarmos ser multitarefa e conseguirmos nos focar em uma por vez.
+62
+
+A m at r i z d e g e r e n c i a m e n t o d o t e m p o
+A Matriz de Gerenciamento do Tempo é apresentada no livro
+Os 7 hábitos das pessoas altamente eficazes, de Stephen R. Covey (2005). A matriz classifica as tarefas em quatro categorias
+de prioridade, chamadas de quadrantes. A meu ver, ela poderia ser chamada de Matriz de Gerenciamento de Prioridades,
+visto que não trata do tempo, e sim da importância e da urgência das tarefas.
+A matriz é dividida em quatro quadrantes:
+
+Urgente
+
+Não urgente
+
+Importante
+
+Quadrante Q1
+
+Quadrante Q2
+
+Não importante
+
+Quadrante Q3
+
+Quadrante Q4
+
+A ideia central é que nem tudo que é urgente é também importante, e nem tudo que é importante é também urgente. As
+dicas trazidas pelo autor Stephen R. Covey sobre os quadrantes desta matriz são:
+
+1. Aumentar ao máximo o foco nas tarefas do quadrante
+Q2 (não urgente - importante).
+2. Reduzir as tarefas do quadrante Q1 (urgente - importante), porém não as ignore por serem importantes.
+63
+
+3. Afastar-se das tarefas dos quadrantes Q3 e Q4 (não
+importantes).
+Ela é uma ótima ferramenta para começar a entender priorização por importância e urgência. Entretanto, conforme comecei a usá-la, notei que precisava de mais flexibilidade além
+de quatro quadrantes para priorizar tarefas.
+Algumas vezes torna-se difícil dizer se a tarefa é urgente ou é
+não urgente, ou se é importante ou é não importante. Ou seja,
+existem apenas dois valores: ‘é’ ou ‘não é’. Conforme a prática,
+é fácil notar que existem diversos níveis de importância e de
+urgência, por exemplo: tarefas pouco importantes, importantes, muito importantes e extremamente importantes, tendo o
+mesmo para urgência.
+Então, criei uma outra forma de priorizar, na qual possui diversos níveis de importância e urgência, que é a Fórmula de
+Priorização de Tarefas. Ela não possui esse problema da Matriz de Gerenciamento do Tempo, tornando a importância e a
+urgência flexíveis. Veja a seguir.
+
+F ó r m u l a d e p r i o r i z a ç ã o d e ta r e fa s
+A Fórmula de Priorização de Tarefas é um cálculo que criei
+para flexibilizar e simplificar a ordenação de prioridades, obtida a partir da média entre a importância e a urgência de
+uma tarefa. O cálculo é dado na porcentagem da prioridade,
+resultante da média aritmética entre a porcentagem da im64
+
+portância e a porcentagem da urgência.
+Ficando com a fórmula: PRIORIDADE(Tx) = (IMPORTÂNCIA(Tx) + URGÊNCIA(Tx)) ÷ 2; onde Tx representa a tarefa
+em si. Veja a fórmula a seguir:
+
+Por exemplo, veja a priorização para as cinco tarefas a seguir:
+
+T arefa
+
+I mportância
+
+U rgência
+
+C álculo
+
+P rioridade
+
+Preparar um
+manual
+
+100%
+
+50%
+
+(100+50) ÷ 2
+
+75%
+
+Agendar
+uma reunião
+
+10%
+
+90%
+
+(10+90) ÷ 2
+
+50%
+
+Organizar
+fichários
+
+10%
+
+5%
+
+(10+5) ÷ 2
+
+7,5%
+
+Organizar
+e-mails
+
+50%
+
+20%
+
+(50+20) ÷ 2
+
+35%
+
+Enviar um
+relatório
+
+100%
+
+100%
+
+(100+100) ÷ 2
+
+100%
+
+65
+
+Dessa forma, descobre-se que a tarefa de maior prioridade é a
+Enviar um relatório (100%). A ordem de realização das tarefas
+no backlog será:
+
+T arefa
+
+I mportância
+
+U rgência
+
+P rioridade
+
+Enviar um
+relatório
+
+100%
+
+100%
+
+100%
+
+Preparar
+um manual
+
+100%
+
+50%
+
+75%
+
+Agendar uma
+reunião
+
+10%
+
+90%
+
+50%
+
+Organizar
+e-mails
+
+50%
+
+20%
+
+35%
+
+Organizar
+fichários
+
+10%
+
+5%
+
+7,5%
+
+Agora com o backlog já priorizado, seguem algumas dicas sobre priorização:
+Tenha foco nas tarefas importantes.
+Crie estratégias para diminuir ou eliminar a urgência
+das tarefas, independente de elas serem importantes ou
+não.
+Faça planejamentos e revisões frequentes para não permitir que as tarefas não urgentes se tornarem urgentes,
+além de garantir a importância das tarefas.
+66
+
+Utilize o Princípio de Pareto 80/20 (visto a seguir) para
+ter mais foco nas tarefas prioritárias do backlog.
+
+F o c a n d o na s p r i o r i da d e s c o m o P r i n c í p i o d e P a r e t o
+80/20
+Você percebe que algumas tarefas possuem muita importância, enquanto diversas outras possuem pouca importância?
+Você gostaria de ter mais foco em suas tarefas de valor?
+O Princípio de Pareto baseia-se no que o economista italiano
+Vilfredo Pareto descobriu em 1906: 80% das terras na Itália pertenciam a 20% da população. O mais importante nesta
+descoberta é que essa proporção 80/20 é frequente em outras
+áreas. Por exemplo, 80% das vendas são feitas para 20% dos
+clientes em uma empresa. É uma medida aproximada que faz
+sentido. Desse modo, podemos falar no contexto da produtividade:
+20% do seu tempo produzem 80% de seu resultado;
+80% restantes de seu tempo produzem 20% de seu resultado;
+20% de suas tarefas possuem 80% das prioridades;
+80% das tarefas possuem 20% das prioridades.
+
+U s a n d o o P r i n c í p i o d e P a r e t o 80/20
+Reconheça no seu backlog de tarefas quais são os 20%
+67
+
+das mais prioritárias, isso lhe permitirá reconhecer o
+que deve ser feito de mais importante.
+Tenha foco nos próximos 20%, vez por vez.
+Pareto Extremo com 96/4 e 99/1. Caso haja muitas tarefas nos 20% mais importante, você pode selecionar
+os 20% mais importante dos 20% mais importante, resultando em 4% mais importante de todas as tarefas. E
+ao selecionar mais uma vez, os 20% dos 20% dos 20%
+resultará em aproximadamente 1% mais importante de
+seu backlog.
+Regra 80/15/5: Kent Beck, um dos maiores programadores de software do mundo, criador da metodologia
+ágil de desenvolvimento de software chamada eXtreme
+Programming, tem uma ideia interessante, o Princípio
+de Pareto, a regra 80/15/5. Utilize 80% de seu tempo
+em tarefas de resultados garantidos, 15% em tarefas de
+grande risco e grandes resultados, e 5% em tarefas de
+coisas malucas sem algum resultado previsível. É a forma que ele encontrou para priorizar as tarefas padrão
+do dia a dia (80%), além das tarefas grandes com alto
+valor (15%), e tarefas experimentais (5%).
+De certo modo, se você concentrar 20% de seu tempo
+nas tarefas mais importantes, você terá 80% de seu tempo sobrando para realizar mais quatro vezes as próximas
+tarefas mais importantes, totalizando 400% de resultado.
+
+P r i o r i z e a ta r e fa m a i s i m p o rta n t e d o d i a
+Por muitas vezes você posterga uma tarefa importante? Você
+68
+
+não sabe como começar, e então prefere deixar para depois
+para encontrar uma solução?
+A estratégia está em começar seu dia realizando a tarefa MIT
+(do inglês, Most Important Task), a tarefa mais importante do
+dia. Esta pode ser a maior, a mais difícil e mais importante de
+todas que você precisa fazer. Deste modo, você vence a barreira daquela tarefa e ganha motivação para realizar as outras.
+A tarefa importante é aquela com maior prioridade para ser
+realizada do backlog. Reflita: qual tarefa terá maior impacto?
+Independentemente de ser urgente ou não, pois pode ser de
+longo prazo.
+Brian Tracy, autor do livro Eat That Frog! (2007), faz uma
+analogia da tarefa MIT com engolir um sapo. Ele diz que o
+sapo é a sua maior e mais importante tarefa, aquela que você
+tem mais disposição a procrastinar, a deixar para depois. Engolir o sapo é, então, realizar a tarefa sapo. Em seu blog, ele
+traz também algumas dicas (TRACY, 2015):
+Se você tiver que comer dois sapos, coma o mais feio
+primeiro;
+Se você tiver que comer um sapo vivo, não pare e fique
+olhando isso por muito tempo, coma-o logo;
+Tome uma atitude imediatamente sobre a tarefa sapo.
+Experimente ao menos uma vez esta abordagem. Alguns
+exemplos de tarefas MIT (sapos):
+69
+
+Caso você esteja no final da faculdade e esteja terminando seu trabalho de conclusão de curso, uma de suas
+tarefas MIT poderá ser a escrita do projeto para seu
+orientador avaliar.
+Caso você esteja estudando para concursos, realizar o
+planejamento semanal poderá ser sua tarefa MIT.
+Caso você seja um estudante de curso pré-vestibular,
+duas tarefas MIT poderão ser realizar os trinta exercícios de matemática e escrever uma redação.
+
+D i m e n s i o na m e n t o da s ta r e fa s
+Você conhece o tamanho das suas tarefas? Você inicia uma
+tarefa sem ter uma estimativa de conclusão dela?
+Conhecer o tamanho das tarefas é útil para conhecê-las e gerenciá-las. Quando paramos para analisar e definir o tamanho de uma tarefa, precisamos conhecer mais detalhes que,
+até então, podem ser desconhecidos. Desta forma, é possível
+ter uma estimativa de quanto esforço e tempo precisaremos
+ter para completá-la. A ideia está em aumentar a certeza sobre a tarefa, porque, quanto mais conhecimento tivermos sobre ela, maior será a produtividade por não ter impedimentos
+e bloqueios ao longo de sua realização.
+
+U n i da d e s d e m e d i da d e ta r e fa s
+Você pode definir a unidade de medida das tarefas em:
+70
+
+Pontos de tarefa: é uma unidade de medida abstrata e
+aproximada. Você define o tamanho de uma tarefa em
+comparação às outras. Primeiramente, encontre uma tarefa suficientemente pequena e defina-a como tamanho
+de um ponto. Logo após, dimensione as outras em relação a esta de tamanho um. Pergunte-se: quantas vezes
+essa tarefa é maior que a de tamanho um? Duas vezes?
+Cinco vezes? Dez vezes? Cinquenta vezes?
+Pomodoros: representa a quantidade estimada de pomodoros (25 minutos) que você precisará para realizar a
+tarefa. É uma unidade fácil para planejar tarefas, encaixando muito bem com a técnica Pomodoro.
+Tempo ideal: é o tempo ideal estimado que você precisa
+para realizar a tarefa sem interrupções. Ou seja, é o tempo ideal possuindo foco. O tempo pode ser em minutos,
+horas, turnos ou dias. Tenha consciência de que é uma
+estimativa, não um prazo.
+
+D i m e n s i o na n d o a s ta r e fa s
+1. Busque ter todas as tarefas estimadas, incluindo as tarefas
+não priorizadas.
+2. Estabeleça uma única unidade de medida para todas as suas
+tarefas.
+3. Utilize o horizonte. Preocupe-se em dimensionar com detalhes as tarefas que estão priorizadas. Já as tarefas não prioritárias, deixe-as com um dimensionamento mais macro, mais
+71
+
+para ter uma ideia do seu tamanho.
+4. Divida as tarefas grandes priorizadas em tarefas menores.
+Desta forma, é possível ter mais detalhes e uma estimativa
+com mais certeza.
+5. Utilize uma sequência exponencial para suas unidades de
+medida. Desse modo, quanto maior for sua medida, maior
+distância ela terá, acompanhando a incerteza da estimativa.
+Fibonacci é uma excelente sequência exponencial que oferece
+inicialmente valores pequenos e próximos, e depois valores
+grandes e distantes: 1, 2, 3, 5, 8, 13, 21, 34 etc. Você pode também escolher a sequência de potência de dois (1, 2, 4, 8, 16,
+32, 64, ...), que é mais simples. A diferença entre essas duas
+sequências é que a de Fibonacci cresce mais lentamente no
+início, e a de potência de dois cresce mais rapidamente.
+
+E x e m p l o s d e d i m e n s i o na m e n t o d e ta r e fa s
+Na minha dissertação do mestrado, dimensionei todas as tarefas com a unidade de medida de pomodoros. O tamanho de
+um capítulo variava de 13 a 100 pomodoros. O capítulo era
+representado por uma tarefa macro e dividido em seções, que
+eram tarefas menores. O tamanho de uma seção variava de 2
+a 13 pomodoros, incluindo a revisão do conteúdo e a revisão
+gramatical.
+Usando o horizonte, o capítulo mais priorizado a ser escrito
+era dividido em tarefas menores, que eram dimensionadas e
+cuja soma representava aproximadamente o tamanho da tarefa maior. Os capítulos não priorizados no momento não eram
+72
+
+divididos e ficavam com uma estimativa aproximada.
+
+M o d e l o co m ple t o pa ra e s crita d e u m ba ck l o g d e ta re fa s
+O modelo completo para escrita de um backlog possui a prioridade da tarefa, além da importância, da urgência, do tamanho (em pomodoros) e do seu nome:
+
+Prioridade (%) Importância (%) Urgência (%) Tamanho Nome da tarefa
+100
+
+100
+
+100
+
+5p
+
+Tarefa A
+
+80
+
+100
+
+60
+
+13p
+
+Tarefa C
+
+50
+
+60
+
+40
+
+3p
+
+Tarefa B
+
+15
+
+20
+
+10
+
+2p
+
+Tarefa D
+
+...
+
+...
+
+...
+
+...
+
+...
+
+Veja o template de backlog de tarefas para download em
+http://dionatanmoura.com/o-mantra-da-produtividade/.
+
+73
+
+74
+
+5.
+GESTÃO DE ENERGIA
+
+Gerenciar o nosso tempo e as nossas tarefas é essencial, entretanto a energia é o que nos fará produzir muito bem a tarefa durante o período de tempo. Essa energia está associada
+à capacidade de produzir algo, de realizar tarefas.
+A energia física, bem como a mental e a emocional, serve
+como base para a produtividade. A física depende do nosso
+corpo, de um modo orgânico, para realizar algo. Já a energia mental vem do cérebro e da mente, atuando na cognição,
+na aprendizagem, no raciocínio e na memória. A emocional
+vem da motivação e do engajamento na realização das tarefas.
+De certa forma, essas energias são interdependentes, ou seja,
+dependem umas das outras, e a soma delas gera um estado
+energético que pode nos deixar mais produtivos. Visto isso,
+gerenciar a energia também é essencial para a produtividade.
+Imagine que você vai ser o motorista de uma viagem de carro
+no verão. Existe o tempo necessário para viajar sem pressa,
+e a estrada até o destino é bem conhecida e segura. Porém,
+o carro não está em bom estado. O motor está fazendo um
+barulho estranho, os faróis não funcionam, o para-brisa não
+está secando o vidro quando chove, os pneus precisam ser
+trocados e o ar-condicionado não está resfriando.
+O carro pode andar, com certeza, mas será que ele consegue ir muito longe? Será possível dirigir quando chover? E
+ao anoitecer? E quando fizer muito calor? O tempo e a tarefa
+estão muito bem, mas o carro não pode ir muito longe. Isso
+também é igual com a nossa energia para a produtividade,
+76
+
+precisamos estar suficientemente bem também nessa parte.
+A intenção de atingir um bom nível de produtividade está em
+ter foco no que realmente interessa no momento, em estar
+presente totalmente no que estamos realizando. Para sermos
+produtivos, algumas vezes ignoramos em curto prazo a nossa energia. Fazemos as tarefas com estresse, dormimos mal e
+cada vez menos, nos alimentamos mal, não nos hidratamos
+adequadamente, produzidos as tarefas em qualquer local e
+de qualquer forma, estamos com a mente agitada, sem atenção nem foco, não respiramos adequadamente, temos dores
+no corpo por estarmos cansados, com uma postura ruim, e
+ainda mais criamos hábitos com esses comportamentos improdutivos.
+A questão são os efeitos colaterais na produtividade. Uma dívida com a produtividade vai sendo criada e acumulada no
+corpo e na mente. E com o tempo, de alguma forma vai ser
+preciso ser paga, seja mudando para melhor ou tornando-se
+improdutivo.
+O tempo é um recurso finito e limitado, pois temos 24 horas
+exatas todos os dias. Já a energia é algo que pode ser pequena
+ou grande, nos permitindo produzir muito em pouco tempo
+(ou o inverso, pouco em muito tempo). O artigo da Harvard
+Business Review defende que devemos gerenciar nossa energia, não nosso tempo (SCHWARTZ, 2007). A meu ver, precisamos gerenciar não somente o tempo, mas também a energia
+e as tarefas.
+77
+
+Este artigo classifica a energia em quatro tipos:
+A energia física está relacionada com a alimentação,
+sono e exercícios físicos.
+A energia emocional está relacionada com o bem-estar.
+A energia mental na concentração e no foco.
+A energia espiritual com ter um propósito de vida, com
+a motivação e a autorrealização alinhadas com os valores internos da pessoa.
+Em uma visão geral, a produtividade de uma empresa pode
+ser vista como a soma da produtividade pessoal de seus funcionários. O custo da produtividade relacionado à energia
+dos funcionários é alto, sendo relacionado pela falta de engajamento, distração, demissões e custos de afastamentos médicos. Veja alguns dados de empresas americanas sobre custos
+da produtividade relacionados à energia de seus funcionários:
+As distrações no ambiente de trabalho, como smartphones e redes sociais, chegam a custar aos negócios americanos 650 bilhões de dólares (BARBOSA, 2010).
+Os problemas com estresse ao ano em ambientes de trabalho custam entre 200 e 300 bilhões de dólares (GOLDSCHEIN, 2011).
+É estimado anualmente 1.967 dólares por funcionário
+por perdas de produtividade relacionadas à fadiga (ROSEKIND, 2010).
+Este capítulo é o que possui mais técnicas e práticas, pois es78
+
+tas são a base da produtividade. Para a gestão de energia, são
+apresentadas as técnicas e práticas sobre:
+O estado de flow, o estado máximo de produtividade;
+Ambientes de produtividade;
+O melhor horário para cada tipo de tarefa no dia;
+Realizar tarefas em pares ou em time;
+Meditação para acalmar a mente;
+Mindfulness para aprimorar o foco e a atenção;
+Respirar e oxigenar o cérebro;
+Músicas produtivas;
+Alongamento corporal;
+Exercícios físicos;
+Alimentação saudável e hidratação;
+Dormir bem.
+
+Atenção
+As informações sobre saúde física e alimentar contidas nas
+próximas seções deste capítulo não excluem a consulta de
+um médico, nutricionista, profissional da saúde física e/
+ou qualquer outro profissional da saúde, especialmente se
+a pessoa tiver qualquer tipo de restrição.
+
+79
+
+AMBIENTE PRODUTIVO
+Como seu ambiente de estudos ou trabalho lhe ajuda a produzir suas tarefas? Nele, você consegue se concentrar e manter
+a produtividade?
+A vantagem de ter um ambiente produtivo específico é que
+você possa produzir com foco por mais tempo. A ergonomia
+de sua mesa e de sua cadeira é importante para não gerar
+desconfortos que, mais adiante, atrapalharão na sua produtividade.
+Escolha o melhor local para estudar ou trabalhar, e trate-o
+como um templo sagrado da produtividade, um lugar especial
+para desenvolver suas atividades. Caso não se tenha escolha,
+adapte o melhor possível. Se for preciso, invista nele com a
+infraestrutura necessária para sua produtividade.
+Por exemplo uma cadeira confortável que não se canse facilmente ao ficar sentado, ou uma mesa que não dê dores nos
+braços e ombros. Alexandre Meirelles, em seu livro Como estudar para concursos, fala que é preciso organizar o ambiente
+de estudo para poder ter produtividade e passar em concursos.
+
+80
+
+Ter um ambiente produtivo com um conforto físico mínimo é
+importante para realizar as tarefas com concentração e organização. Imagem de Markus Spiske, sob a licença Attribution 2.0
+Generic (CC BY 2.0). Adaptado de: https://creativecommons.org/
+licenses/by/2.0/.
+
+“Mesa barata, cadeira agradável” (Cheap Desk, Nice Chair)
+é uma dica do Kent Beck (2002), um dos programadores
+de software mais famosos do mundo, em seu livro Desenvolvimento Guiado por Testes. A dica é para os programadores, que passam bastante tempo por dia sentados e concentrados escrevendo código no computador.
+Ele defende que não é possível programar se as costas
+doem, além de que existem organizações que gastam uma
+grande quantia de dinheiro por mês em um time de programadores e não gastam em cadeiras decentes. A solução
+está em economizar na mesa, mas não na cadeira. Também
+deixando espaço livre ao redor do teclado, além de dispo81
+
+nibilizar os melhores computadores para os programadores, pois utilizam softwares que exigem bastante processamento e memória do computador.
+
+D i c a s pa r a t e r u m a m b i e n t e m a i s p ro d u t i v o
+Seguem algumas dicas para criar ou tornar seu ambiente mais
+produtivo:
+Tenha uma cadeira boa e confortável. Esse é um dos requisitos básicos para quem vai, por dias, meses ou anos, passar
+dezenas, centenas ou até milhares de horas sentado buscando
+o foco em suas tarefas. A cadeira precisa ter regulagem de
+altura, um bom estofado, um bom encosto para as costas e
+braços laterais. Caso não tenha algum desses itens, fará falta
+de alguma forma ao longo do tempo. Trate isso como um investimento para você, seu trabalho e seus estudos. É um bom
+adicional se a cadeira for inclinável e giratória.
+Tenha uma mesa na altura apropriada, nem alta nem baixa.
+Use a cadeira com regulagem de altura para ajustar-se com a
+altura da mesa. Deixe espaço livre em sua mesa.
+Caso utilize um computador para estudos ou trabalho, busque possuir um que seja suficientemente rápido para suas
+tarefas. Tenha um monitor de um bom tamanho, que não fique nem muito longe nem muito perto de você. É preciso ter
+82
+
+um teclado de fácil digitação. Um mouse com três ou cinco
+botões são mais produtivos: o botão do meio é para rolagem
+e serve para clicar também, os botões laterais servem para
+navegação em pastas e em páginas na internet. Usar atalhos
+do sistema operacional e dos aplicativos ajuda a economizar
+um bom tempo.
+Concentre-se em locais silenciosos. Você pode ouvir música, desde que não seja alta, que não lhe agite e nem desvie a
+atenção. Caso você não tenha outra opção de ambiente, você
+pode usar protetor auditivo (abafador de ruído ou tampões de
+ouvido). Fones de ouvido intra-auriculares ajudam bastante a
+abafar ruídos, além de poder tocar música (veja mais na seção
+deste capítulo sobre manter o foco com a música).
+Caso seus olhos estejam cansando facilmente e talvez lhe
+causando dor de cabeça, procure um oftalmologista. Talvez
+você precise usar óculos, nem que seja um de descanso. Eu
+uso óculos de descanso com um baixo grau de aumento, que
+foi recomendado por um oftalmologista, pois tinha dores nos
+olhos por ficar muitas horas no computador.
+Tenha o ambiente iluminado adequadamente. A NBR ISO
+8995-1 segue padrões internacionais de níveis de iluminação
+e aborda aspectos quantitativos e qualitativos da iluminação em diversos tipos de ambientes (GIACOBBO, 2014). Ela
+define que, para escritórios, bibliotecas e áreas de leitura, é
+preciso ter uma luminosidade de 500 lux (duas lâmpadas fluorescentes com cerca de 30 watts cada podem ser suficientes,
+83
+
+dependendo do espaço e das cores do ambiente). Utilize lâmpadas com o Índice de Reprodução de Cores (IRC) entre 80
+e 100. Esse índice representa o quão real será a cor refletida
+dos objetos iluminados pela lâmpada. Lâmpadas de luz clara
+(luz fria, branca, branca azulada e do dia) tornam o ambiente
+mais estimulante. Elas possuem a temperatura chamada de
+6500K. Evite as lâmpadas amareladas (luz suave e quente),
+pois tornam o ambiente mais aconchegante para descanso.
+Caso possua uma luminária, não deixe que o direcionamento
+da luz ofusque a visão.
+Se precisar ler e consultar muitos livros ou apostilas impressos, avalie obter um suporte para livros. É improdutivo
+ficar lendo e consultando enquanto precisa segurar a folha
+para que ela não se solte. Se não encontrar o suporte de livros
+em papelarias, existe para vender na internet.
+Não estude deitado, o corpo vai relaxar demais, e se não
+dormir, a produtividade não flui bem. Se você estiver cansado, descanse um pouco, e depois estude. Veja mais sobre na
+seção deste capítulo sobre dormir bem, especialmente sobre
+power naps (cochilos poderosos).
+Tenha um ambiente bem arejado, preferencialmente o ar
+puro. Veja mais neste capítulo na seção sobre respiração profunda.
+Busque ter plantas verdes na sua volta. Esta ideia vem de
+uma pesquisa realizada pela Universidade de Queensland
+84
+
+na Austrália, que mostra que um ambiente enriquecido com
+plantas verdes pode tornar os funcionários mais felizes e potencializar a produtividade em 15% (BURDON, 2014).
+
+P o s t u r a c o r r e ta
+Tenha atenção constante em sua postura. Uma má postura lhe
+cansará mais rápido do que o normal, além de diminuir gradualmente sua produtividade. Uma boa postura gasta menos
+energia física e auxilia na respiração, facilitando o cérebro a
+ficar mais oxigenado e menos cansado. Um fato que observo
+em mim é que, quando estou com uma postura ruim, minha
+produtividade não está boa. E vice-versa também, quando estou com uma boa postura, minha produtividade está boa.
+
+E x e m p l o s d e a m b i e n t e s p ro d u t i v o s
+Os exemplos de ambientes produtivos mais comuns são o local de trabalho e de estudos, como em um curso, pré-vestibular, universidade e em casa. Muitos outros locais podem ser
+produtivos, tais como bibliotecas, livrarias, parques e cafés.
+Bibliotecas são excelentes ambientes de produtividade, pois
+são silenciosas, possuem mesas e cadeiras suficientes para
+leitura e estudos, além de terem livros à disposição e um
+toque cultural. Gosto de ir a livrarias que possuem poltronas para ler os próprios livros à venda. Parques são locais
+agradáveis para leitura e estudos, porém pode não ser confortável por um longo tempo, e é preciso disciplina para ter
+85
+
+foco e não se distrair.
+
+A m b i e n t e p ro d u t i v o e m c a f é s
+Um lugar bastante inspirador são os cafés, ou cafeterias. Normalmente, possuem acesso à internet e uma infraestrutura
+suficiente para estudos e trabalho, além de terem o próprio
+café e opções de lanches.
+Uma curiosidade é que os cafés tiveram um grande papel no
+surgimento do Iluminismo, o movimento intelectual surgido
+no século XVIII na Europa, o qual defendia o uso da razão
+(a luz) contra o antigo regime (as trevas), buscando maior
+liberdade econômica e política (JOHNSON, 2010). Como os
+cafés auxiliaram nisso? Porque, antes da propagação do café
+e do chá através da cultura britânica, a água não era segura
+para beber nas cidades e a opção mais saudável era a cerveja,
+o vinho ou o gin.
+O que houve foi que o café se tornou uma opção que estimulava as pessoas, fazendo com que as ficassem mais despertas,
+tendo mais e melhores ideias. Outro impacto que os cafés
+tiveram foi porque reuniam pessoas de diferentes camadas
+sociais e conhecimentos; muitas inovações surgiram nos cafés. Então os cafés, ou cafeterias, são ambientes produtivos
+ótimos para quem precisa de inspiração na sua produtividade. Veja a figura a seguir de um café inglês no século XVII.
+
+86
+
+Ilustração de um café inglês no século XVII onde muitas ideias
+eram discutidas. Fonte: https://en.wikipedia.org/wiki/Coffeehouse.
+
+A m b i e n t e p ro d u t i v o na p r a i a
+Que tal unir o útil ao agradável? No ano de 2014, eu precisava
+estudar para uma certificação de gerenciamento de projetos.
+A prova estava marcada para início de dezembro. O conteúdo era extenso, e eu precisava de um estudo muito focado. Já
+fazia quase dois meses que estava estudando no tempo livre,
+porém precisava de mais foco.
+O que eu fiz foi pegar dez dias de férias do trabalho e ir para
+uma casa na praia, emprestada por um familiar. Fiquei nove
+dias seguidos estudando pela manhã, tarde e noite. Obviamente, fazia diversas pausas para descansar, cochilar, fazer
+lanches, olhar a natureza. Porém, conciliava os estudos com
+o que me era muito agradável, de estar no clima da praia. Era
+87
+
+novembro e havia poucas pessoas, apenas alguns moradores,
+então eu não tinha interrupções, e mantinha o celular com a
+internet desligada na maior parte do tempo.
+Felizmente, consegui vencer todo o conteúdo e realizar diversos exercícios. Consegui passar na prova, e ter escolhido o
+ambiente produtivo foi essencial para isso.
+
+88
+
+6.
+GESTÃO DE HÁBITOS
+
+A gestão de hábitos acontece através da técnica de hábitos
+produtivos, a qual é apresentada a seguir.
+
+HÁBITOS PRODUTIVOS
+Você já pensou como um hábito pode influenciar sua produtividade? Você gostaria de mudar e melhorar alguns hábitos
+para poder ter mais produtividade?
+“Até que você torne consciente o inconsciente, isso direcionará sua vida e você chamará de destino.” — Carl Jung,
+psiquiatra e psicoterapeuta suíço (1875-1961)
+
+O que Carl Jung estava querendo dizer com essa frase de tornar consciente o inconsciente? Em outras palavras, falava que
+nossos hábitos inconscientes tomam conta da vida até que
+tomamos consciência deles. Porém, como veremos, conhecer
+nossos hábitos é apenas o primeiro passo para mudá-los e
+melhorá-los.
+Criar um hábito inconsciente é fácil, basta apenas deixar o
+tempo passar, e fazemos isso constantemente. Entretanto,
+criar um hábito que realmente desejamos pode ser desafiador e dependender de um longo tempo. Estamos criando e
+mudando hábitos desde criança. Porém, quantos destes hábitos realmente desejamos? Quais deles nos ajudam e quais nos
+90
+
+atrapalham na produtividade?
+Um hábito é uma forma natural de realizarmos algo automaticamente, sem muita consciência. O ponto-chave de um hábito
+é a automaticidade. Eles são desenvolvidos através de aprendizado e do princípio da repetição de respostas recompensadas. Desse modo, nada melhor do que termos hábitos que nos
+tornem produtivos e que não nos exijam esforço.
+Entretanto, para termos hábitos produtivos, é preciso um esforço inicial, porque a sua criação é um processo. A consciência e a disciplina são necessárias no processo do seu desenvolvimento. É preciso que a atividade do hábito se repita por
+algumas dezenas, ou até centenas de dias, para que então se
+torne um hábito.
+Stephen R. Covey, em seu livro Os 7 hábitos das pessoas altamente eficazes, fala que os hábitos possuem uma força de
+gravidade muito forte, maior do que a maioria das pessoas
+percebe ou admite. Essa força de gravidade pode nos ajudar
+ou nos atrapalhar na produtividade, então precisamos direcionar essa força ao nosso favor.
+Um hábito é a intersecção entre o conhecimento, a habilidade e o desejo (COVEY, 2005). Dessa forma, é preciso de três
+itens:
+Do conhecimento do que fazer exatamente;
+Da habilidade de como fazer exatamente;
+91
+
+Do desejo de querer fazer.
+Este livro apresentou diversas técnicas e práticas para a produtividade, dizendo o que e como fazer, além de dicas. Porém,
+o desejo de querer fazer, de experimentar as técnicas e práticas, é preciso que venha de cada pessoa.
+A Síndrome do Estudante, descrita no capítulo 1. Introdução,
+nada mais é do que um hábito ou um conjunto de hábitos de
+procrastinação, que nos fazem deixar o prazo chegar perto
+para então começar a realizar a tarefa. A Lei de Parkinson,
+também descrita nesse capítulo, é vista como um ou mais hábitos que fazem com que usemos o máximo de tempo atribuído para uma tarefa.
+Algumas questões sobre hábitos serão respondidas a seguir:
+Qual é a ciência do hábito?
+Do que são formados?
+Qual é um método para mudá-los ou criá-los?
+É possível mudar qualquer hábito?
+Qual a importância de ter um plano de mudança de hábitos?
+Quais são os hábitos produtivos?
+
+É p o s s í v e l m u da r q ua l q u e r h á b i t o ?
+Somente podemos mudar conscientemente um hábito se a
+persistência para mudá-lo seja maior que a persistência dele
+92
+
+próprio, se não o hábito antigo permanecerá. O cérebro naturalmente cria hábitos por questões de economia de energia
+e fluidez dos pensamentos e ações, e alguns deles podem ser
+muito fortes para serem mudados.
+Para investigar a formação de hábitos no dia a dia, uma pesquisa científica utilizou 96 participantes, os quais escolhiam
+um comportamento a ser repetido diariamente, podendo ser
+comer, beber ou fazer exercícios físicos (LALLY, 2010). Os
+resultados da pesquisa mostraram que o tempo médio para
+criar um novo hábito foi de 66 dias, variando entre 18 e 254
+dias.
+A variação foi bastante grande, mesmo que a média possa ter
+parecido algo razoável. Visto essa grande variação no tempo de criação de um hábito, quando se consegue, permanece
+mais uma dúvida: o que potencializa ou diminui o tempo da
+criação dele?
+Existem diversos fatores que influenciam a criação ou na mudança de um hábito. O custo/benefício é um fator importante,
+pois temos a tendência de diminuir os custos de atividades, e
+buscar maximizar suas recompensas. Além disso, outros hábitos existentes podem facilitar ou dificultar o processo de
+sua criação ou mudança.
+Somos uma rede complexa de hábitos interligados. Um hábito
+influencia no outro. Temos estes desde crianças, herdados de
+outras pessoas de nosso convívio, além de hábitos da nos93
+
+sa cultura e dos ambientes onde convivemos. Por essa razão,
+nem sempre um hábito poderá ser criado ou mudado pelo
+fato da influência de outros hábitos nossos e de outras pessoas. Nesse caso, o que sobra é apenas a possibilidade de mudar
+de ambiente, ou de fazer uma grande transformação pessoal,
+o que nem sempre é simples e fácil de se fazer.
+A regra de ouro de mudança de hábitos é de que não é possível extinguir um mau hábito, mas apenas mudá-lo para um
+melhor. Tendo conseguido estabelecê-lo, não será mais preciso depender da disciplina e da vontade, e sim do hábito, que
+é algo mais forte e eficiente.
+Um hábito pode ser aprendido, desaprendido e mudado, porém não é tão fácil. Implica em um processo de dedicação,
+persistência, disciplina e vontade. Da mesma forma que um
+hábito levou um bom tempo para se fortalecer, é preciso de
+um bom tempo para ser substituído.
+Um hábito que criei ao longo dos anos foi o de escrever.
+Isso iniciou quando fiz meu trabalho de conclusão de curso na graduação. Ele foi se fortalecendo quando precisava
+escrever algum artigo, e virou realmente um hábito quando escrevi minha dissertação de mestrado.
+Com ele moldado, foi mais simples começar a escrever um
+livro. Tenho o hábito de escrever nas horas livres, inclusive aos finais de semana e feriados. Busco escrever diariamente, mesmo que seja um pouco. Esse é o segundo
+94
+
+livro que escrevo neste ano, porque tenho o hábito ligado
+a outros que consegui unir.
+
+O m i t o d o s 21 d i a s
+James Clear, escritor sobre hábitos e mudança de comportamento, explica o mito dos 21 dias pra estabelecer um hábito
+(CLEAR, 2015). A história inicia-se com Maxwell Maltz, um
+cirurgião plástico da década de 1950 que notou um padrão
+em seus pacientes. Estes, a partir da cirurgia plástica, levavam cerca de 21 dias para se acostumarem com seu novo rosto ou se de ajustarem a uma nova situação corporal. Então
+este doutor publicou em 1960 um livro chamado Psycho-Cybernetics (MALTZ, 1989), vendendo trinta milhões de cópias.
+Este livro falava do padrão de 21 dias que ele havia evidenciado. A partir disto, algumas pessoas começaram a interpretar
+errado, até se popularizar o mito de que um hábito precisa de
+21 dias para se estabelecer.
+
+O loop do hábito
+Charles Duhigg, em seu livro O poder do hábito (2012), apresenta o loop (ciclo) do hábito deixa-rotina-recompensa. Esse
+loop foi descoberto por pesquisadores do MIT (Massachusetts Institute of Technology), que representa um ciclo neurológico que é o núcleo de todo hábito.
+Esse ciclo se inicia com o que é chamado de deixa, que serve
+95
+
+como gatilho que dispara automaticamente uma rotina. A atividade da rotina então é realizada de forma automática, sem
+esforço, pois está formada em um hábito. Essa atividade pode
+ser física, mental e/ou emocional. Após a rotina ser realizada,
+vem a recompensa, que é uma emoção que fortalece a memória do hábito.
+Um guia para experimentar o modo que os hábitos possam
+mudar é sugerido pelo autor Charles Duhigg. A ideia está em
+manter a deixa e a recompensa, inserindo uma nova rotina.
+A explicação é que a deixa faz parte do cotidiano, e a recompensa é algo que o cérebro já espera obter. Então, o que pode
+ser mudado conscientemente é a rotina, que é a atividade realizada.
+Alguns hábitos podem ser facilmente analisados e influenciados, enquanto outros são mais complexos e persistentes,
+além de outros em que mudança é um processo que jamais se
+conclui. Esse guia para experimentar a mudança de hábitos
+proposto por Charles Duhigg possui quatro passos:
+
+1. Identifique a rotina. Descreva primeiramente a rotina, que
+é o aspecto mais óbvio, pois é o comportamento que se deseja
+mudar. Por exemplo, ir até a cafeteria comprar um cookie.
+2. Experimente com recompensas. Identificar qual é a recompensa do hábito, através da experimentação de recompensas diferentes. O objetivo é testar hipóteses para encontrar o anseio que impulsiona a rotina. Por exemplo, em vez de
+ir até a cafeteria, saia do prédio e volte para a mesa sem comer
+96
+
+nada. No outro dia, vá até a cafeteria e compre um chocolate.
+No dia seguinte, vá à cafeteria e compre uma maçã. E então,
+experimente com uma xícara de café. Cada hipótese testada
+vai informar se a recompensa é aquela ou não.
+3. Isole a deixa. As deixas são o que disparam a rotina, e podem ser um lugar, um horário do dia, um estado emocional,
+outras pessoas, uma ação imediatamente anterior, ou uma
+combinação desses itens. Por exemplo, pode ser o lugar do
+trabalho, o horário do meio da tarde que pede um cookie, o
+estado emocional de ansiar por algo, querer conversar com
+algum amigo no trabalho e/ou ter finalizado um relatório
+diário.
+4. Tenha um plano. Com a rotina, a recompensa e a deixa
+identificadas, o hábito então é completamente conhecido.
+Para mudá-lo, é preciso fazer novas escolhas. Assim, é possível começar a alterar o comportamento do hábito planejando
+uma nova rotina. Por exemplo, em vez de realizar a rotina de
+ir até a cafeteria comer um cookie e após ir conversar com
+os amigos no trabalho, a nova rotina poderá ser a de ir até a
+mesa de um amigo no trabalho e conversar por dez minutos,
+programando um alarme no relógio para auxiliar a deixa.
+
+O c o n t e x t o ta m b é m é i m p o rta n t e
+Complementando o modelo de Charles Duhigg, vejo que detalhar o contexto ajuda a entender melhor o hábito. Dessa
+forma, o contexto são todas as condições para que a ação da
+deixa seja disparada. Assim, podemos chamar a deixa de gatilho ou âncora.
+97
+
+Por exemplo, o contexto é o chegar em casa com fome e cansado depois de uma aula, o gatilho está na vontade de comer
+uma pizza, deitar no sofá e dormir. Uma dica é aproveitar
+para mudar hábitos quando estamos de férias ou em feriados.
+
+M u da n d o h á b i t o s
+Para mudar um hábito, é necessário que se altere um de seus
+componentes: contexto, gatilho (deixa), rotina ou recompensa. Alterar o contexto ou a rotina é mais acessível. Já alterar o
+gatilho ou a recompensa é mais difícil. O contexto e a rotina
+podem ser escolhidos e planejados de uma forma consciente.
+Mudar a rotina é a técnica mais direta.
+Pelo fato de estarem munidos de significados e emoções, a
+alteração do gatilho ou da recompensa necessita de métodos
+mais avançados, tais como a Terapia Cognitiva-Comportamental, Programação Neurolinguística e Hipnose (FITZPATRICK, 2013), itens que não são abordados neste livro.
+Sobre mudar o contexto, podemos dizer que é mudar a raiz
+do todo o hábito. Jeremy Dean, em seu livro Making Habits,
+Breaking Habits, diz que uma das melhores maneiras de mudar um hábito existente é mudar a situação, ou seja, o contexto. Visto que os gatilhos dependem do contexto, estes serão
+evitados ao mudar de contexto (DEAN, 2013). Deste modo,
+buscar ter um ambiente produtivo específico para estudar ou
+trabalhar pode ajudar a criar ótimos hábitos — ambientes estes como bibliotecas e cafeterias.
+98
+
+99
+
+100
+
+7.
+INDO ALÉM DO MANTRA
+
+O Mantra da Produtividade©, por ser um framework, traz um
+conjunto de técnicas de produtividade pessoal adaptáveis,
+seja nos estudos, no trabalho ou em projetos pessoais. Estas
+trazem a gestão de tempo, gestão de tarefas, gestão de energia
+e gestão de hábitos de um modo prático. Cada técnica pode
+ser usada em combinação com outras além deste livro.
+Diversas destas técnicas são especialmente para o foco, que é
+a chave da alta produtividade, utilizando toda a capacidade e
+energia em uma só tarefa de cada vez, evitando interferências,
+distrações e ser multitarefas. Tendo foco, a produtividade flui
+facilmente, enquanto a procrastinação e a Síndrome do Estudante diminuem. Além disso, o uso de todo o tempo disponível para uma tarefa (Lei de Parkinson) também diminui.
+As principais técnicas de foco neste livro são: as de gestão de
+tempo Pomodoro, Chunking, Flowtime; a de gestão de tarefas definindo metas para atingir objetivos; e as de gestão de
+energia de estado de flow, realizar tarefas em par ou em time,
+ouvir música, meditação e Mindfulness.
+As outras técnicas são para a organização e gestão do tempo, das tarefas e da energia para auxiliar no foco. Na gestão
+de tempo, são as técnicas de planejamento do próximo dia,
+planejamento semanal e agenda pessoal, possibilitando a organização de dias, semanas e meses. Na gestão de tarefas, são
+as técnicas de Backlog de Tarefas, quadro de Kanban, gráfico
+Burnup, Rubber Duck Debugging, Tarefa Mínima Viável e Tarefas Enxutas. Na gestão de energia, as técnicas de ambiente
+102
+
+produtivo, respirar profundamente, fazer exercícios físicos e
+alongamento corporal diário, ter uma alimentação saudável,
+dormir bem. Na gestão de hábitos, administrar os hábitos
+produtivos.
+Para tirar dúvidas sobre o conteúdo, realizar sugestões ou falar de como as técnicas deste livro te auxiliaram na produtividade, além de apontar outros métodos e técnicas de produtividade pessoal, use o fórum da Casa do Código, em http://
+forum.casadocodigo.com.br/.
+Para obter mais informações sobre outros métodos e técnicas
+de produtividade, tais como Getting Things Done™ (GTD™),
+organização pessoal, estudos para concursos públicos, além
+de templates e materiais, e também conhecer mais ferramentas online para a produtividade, acesse o site http://dionatanmoura.com/o-mantra-da-produtividade/.
+Para ir além do Mantra da Produtividade©, é necessário
+aprender e praticar as técnicas de produtividade pessoal, para
+então adaptar e evoluí-las. É um caminho a ser buscado, um
+estado a ser atingido, então é essencial também conhecer novas técnicas e dicas.
+
+Foco!
+— Dionatan Moura, autor do livro
+(http://dionatanmoura.com/)
+103
+
+104
+
+REFERÊNCIAS
+
+ABDALLA, Elcio. Teoria quântica da gravitação: cordas e teoria M. Rev. Bras. Ensino Fís., São Paulo, v. 27, n. 1, p. 147-155,
+março de 2005. Disponível em: http://dx.doi.org/10.1590/
+S1806-11172005000100017.
+ADAN, Ana. Cognitive Performance and Dehydration. Journal
+of the American College of Nutrition, Vol. 31, No. 2, 71–78,
+2012.
+AMABILE, Teresa. O princípio do progresso: como usar pequenas vitórias para estimular satisfação, empenho e criatividade no trabalho. Rio de Janeiro: Rocco, 2013.
+ALLEN, David. A arte de fazer acontecer. São Paulo: Sextante,
+2015.
+APPELO, Jurgen. How to Be More Productive: The Chunking
+Technique. 30 de março de 2015. Disponível em: http://noop.
+nl/2015/03/how-to-be-more-productive-the-chunking-technique.html. Acesso em: agosto de 2015.
+BARBOSA, Christian. O custo da falta de foco: US$ 650 bilhões/
+ano. 11 de outubro 2010. Disponível em: http://exame.abril.
+com.br/rede-de-blogs/senhor-do-seu-tempo/2010/10/11/o-custo-da-falta-de-foco-us-650-bilhesano/. Acesso em: novembro de 2015.
+BECK, Kent. Test Driven Development: By Example. Addison-Wesley Professional, 2002.
+BOEG, Jesper. Kanban em 10 passos - Otimizando o fluxo de
+trabalho em sistemas de entrega de software. InfoQ Brasil.
+2012. Disponível em: http://www.infoq.com/br/minibooks/
+priming-kanban-jesper-boeg. Acesso em: agosto de 2015.
+BRASIL. Presidência da República. Secretaria de Comunicação Social. Pesquisa brasileira de mídia 2015 - hábitos de
+106
+
+consumo de mídia pela população brasileira. Brasília: Secom,
+2014.
+BROOKS, Amber; LACK, Leon. A brief afternoon nap following
+nocturnal sleep restriction: which nap duration is most recuperative? Sleep, v. 29, n. 6, p. 831-840, jun. 2006.
+BURDON, Helen. Leafy-green better than lean. Universidade de Queensland, setembro de 2014. Disponível em: http://
+www.uq.edu.au/news/article/2014/09/leafy-green-better-lean. Acesso em: setembro de 2015.
+CLEAR, James. How Long Does it Actually Take to Form a New
+Habit? (Backed by Science). Disponível em: http://jamesclear.
+com/new-habit. Acesso em: dezembro de 2015.
+CIRILLO, Francesco. Why Pomodoro? Disponível em: http://
+pomodorotechnique.com/. Acesso em: agosto de 2015.
+CONFEF. Conselho Federal de Educação Física. Disponível
+em: http://www.confef.org.br/extra/clipping/view.asp?id=42.
+Acesso em: dezembro de 2015.
+COVEY, Stephen. Os 7 hábitos das pessoas altamente eficazes.
+Best Seller, 2005.
+CONNER, Tamlin S.; et al. On carrots and curiosity: eating
+fruit and vegetables is associated with greater flourishing in
+daily life. British Journal of Health Psychology, v. 20, n. 2, p.
+413-427, maio 2015.
+CNS Clinic-Jordan. Cerebral blood flow and oxygen consumption. 2007. Disponível em: http://www.humanneurophysiology.com/cbfo2consumption.htm. Acesso em: setembro de
+2015.
+CSIKSZENTMIHALYI, Mihaly. Flow: The Psychology of Op107
+
+timal Experience. Harper Perennial Modern Classics, 2008.
+CY, Chang; DS, Ke; JY, Chen. Essential fatty acids and human
+brain. Acta Neurol Taiwan, v. 18, n. 4, p. 231-241, dezembro
+2009.
+DEAN, Jeremy Dean. Making Habits, Breaking Habits.
+Oneworld, 2013.
+DIENSTMANN, Giovanni. Scientific Benefits of Meditation –
+76 things you might be missing out on. 2015. Disponível em:
+http://liveanddare.com/benefits-of-meditation/. Acesso em:
+setembro de 2015.
+DUHIGG, Charles. O poder do hábito - Por que fazemos o que
+fazemos na vida e nos negócios. Objetiva, 2012.
+EDMONDS, Caroline J.; CROMBIE, Rosanna; GARDNER,
+Mark R. Subjective thirst moderates changes in speed of responding associated with water consumption. Front. Hum. Neurosci., v. 7, p. 363, 2013.
+FERLAND, Guylaine. Vitamin K and the Nervous System: An
+Overview of its Actions. Adv. Nutr., v. 3, p. 204-212, março
+2012.
+FERREIRA, Karina da Silva; DOS SANTOS, André Pereira.
+Os benefícios da ginástica laboral e os possíveis motivos da não
+implantação. Revista Educação Física UNIFAFIBE, ano II, n.
+2, p. 56-72, dezembro 2013.
+FERRISS, Timothy. Trabalhe 4 horas por semana. São Paulo:
+Planeta do Brasil, 2008.
+FITZPATRICK, Owen. Change Habits: Breaking Bad Behaviours. Vídeo. Publicado em 4 de dezembro de 2013. Disponível em: https://www.youtube.com/watch?v=CojSlsMwDOg.
+108
+
+Acesso em: novembro de 2015.
+FOSTER, Russell. Por que dormimos? TEDGlobal, 2013. Disponível em: https://www.ted.com/talks/russell_foster_why_
+do_we_sleep?language=pt-br.
+FRIEDMAN, Ron. What You Eat Affects Your Productivity.
+Harvard Business Review, 17 de outubro de 2014. Disponível
+em: https://hbr.org/2014/10/what-you-eat-affects-your-productivity/. Acesso em: outubro de 2014.
+GIACOBBO, Junior. Estudos de caso comparativos entre normas de iluminação: NBR 5413 e NBR ISO 8995-1. Universidade Federal do Rio Grande do Sul, Escola de Engenharia, 2014.
+Disponível em: http://hdl.handle.net/10183/105051.
+GODMAN, Heidi. Regular exercise changes the brain to improve memory, thinking skills. Harvard Health Blog, Harvard Health Publications, abril de 2014. Disponível em: http://www.
+health.harvard.edu/blog/regular-exercise-changes-brain-improve-memory-thinking-skills-201404097110. Acesso em:
+outubro de 2015.
+GOLDSCHEIN, Eric; BHASIN, Kim. 14 Surprising Ways Employees Cost Their Companies Billions In The Workplace. 29 de
+novembro de 2011. Disponível em: http://www.businessinsider.com/surprising-costs-to-the-work-place-2011-11?op=1.
+Acesso em: novembro de 2015.
+HOMUTH, Chuck. Melhorando a Função Cerebral. Disponível em: http://www.cerebromente.org.br/n14/opinion/improving_p.htm. Acesso em: setembro de 2015.
+HUNT, A.; THOMAS, D. O programador pragmático: de
+aprendiz a mestre. Porto Alegre: Bookman, 2010.
+ILIFF, Jeff. Uma razão a mais para ter uma boa noite de sono.
+109
+
+TEDMED, 2014. Disponível em: https://www.ted.com/talks/
+jeff_iliff_one_more_reason_to_get_a_good_night_s_sleep?language=pt-br.
+JENKINS, J. S. The Mozart effect. Journal of the Royal Society
+of Medicine, v. 94, n. 4, p. 170–172, abril 2001.
+JOHNSON, Steven. De onde vêm as boas ideias. TEDGlobal,
+2010. Disponível em: http://www.ted.com/talks/steven_johnson_where_good_ideas_come_from?language=pt-br. Acesso
+em: setembro de 2015.
+KELLER, Gary; PAPASAN, Jay. A única coisa: o foco pode
+trazer resultados extraordinários para sua vida. Novo Século,
+2014.
+KEMP, Simon. Digital, Social & Mobile Worldwide in 2015.
+We Are Social. 2015. Disponível em: http://wearesocial.net/
+blog/2015/01/digital-social-mobile-worldwide-2015/.
+KING, Stephen. Sobre a escrita: a arte em memórias. Objetiva, 2015.
+KRIKORIAN, Robert; et al. Blueberry Supplementation Improves Memory in Older Adults. J Agric Food Chem. 14 de
+abril de 2010; 58(7): 3996–4000. doi: 10.1021/jf9029332.
+LAHL, O.; WISPEL, C.; WILLIGENS, B.; PIETROWSKY, R.
+An ultra short episode of sleep is sufficient to promote declarative memory performance. Journal of Sleep Research, v. 17, p.
+3–10, 2008.
+LALLY, Phillippa; JAARSVELD, Cornelia H. M. van; POTTS,
+Henry W. W.; WARDLE, Jane. How are habits formed: Modelling habit formation in the real world. European Journal of
+Social Psychology, v. 40, issue 6, p. 998–1009, October 2010.
+
+110
+
+MALTZ, Maxwell. Psycho-Cybernetics: A New Way to Get
+More Living Out of Life. Pocket Books, 1989.
+MEDICINE (U.S.). Institute of. Panel on Dietary Reference
+Intakes for Electrolytes and Water. Dietary reference intakes
+for water, potassium, sodium, chloride, and sulfate. 2005. p.
+640.
+MEIRELLES, Alexandre. Como estudar para concursos. 3. ed.
+Método, 2014.
+NEFF, K. D.; KIRKPATRICK, K. L.; RUDE, S. S. Self-compassion and adaptive psychological functioning. Journal of Research in Personality, v. 41, p. 139–154, 2007.
+OAKLEY, Barbara; SEJNOWSKI, Terrence. Learning How to
+Learn: Powerful mental tools to help you master tough subjects. University of California, San Diego. Coursera Inc. Disponível em: https://www.coursera.org/learn/learning-how-to-learn. Acesso em: novembro de 2015.
+PAUL, Gill. Alimentos que energizam: superalimentos e receitas para aumentar a disposição e manter o vigor. Publifolha,
+2015.
+PORTO, Amélia P. B.; RAMOS, Lízia M. P. A presença do ar
+no corpo humano. Novembro de 2010. Disponível em: http://
+portaldoprofessor.mec.gov.br/fichaTecnicaAula.html?aula=25382. Acesso em: setembro de 2015.
+RIES, Eric. A startup enxuta: como os empreendedores atuais
+utilizam a inovação contínua para criar empresas extremamente bem-sucedidas. São Paulo: Leya Brasil, 2012.
+ROSEKIND, Mark R.; et al. The cost of poor sleep: workplace productivity loss and associated costs. J. Occup. Environ.
+Med., jan. 2010, v. 52, n. 1, p. 91-98.
+111
+
+SCHWARTZ, Tony; MCCARTHY, Catherine. Manage Your
+Energy, Not Your Time. Outubro de 2007. Disponível em: https://hbr.org/2007/10/manage-your-energy-not-your-time.
+Acesso em: novembro de 2015.
+SECOM. Brasil. Presidência da República. Secretaria de Comunicação Social. Pesquisa brasileira de mídia 2015: hábitos
+de consumo de mídia pela população brasileira. Brasília: Secom, 2014.
+SEPPÄLÄ, Emma M. 20 Scientific Reasons to Start Meditating
+Today. Setembro de 2013. Disponível em: https://www.psychologytoday.com/blog/feeling-it/201309/20-scientific-reasons-start-meditating-today. Acesso em: setembro de 2015.
+SHINGO, Shigeo. Kaizen e a arte do pensamento criativo - O
+mecanismo do pensamento científico. Bookman, 2010.
+STANGL, Doris; THURET, Sandrine. Impact of diet on adult
+hippocampal neurogenesis. Genes Nutr., dez. 2009, v. 4, n. 4,
+p. 271–282.
+STILLMAN, Jessica. Secrets of the Productive Nap. Setembro
+de 2012. Disponível em: http://www.inc.com/jessica-stillman/secrets-of-the-perfect-nap.html. Acesso em: novembro
+de 2015.
+SWAIN, R. A.; BERGGREN, K. L.; KERR, A. L.; et al. On Aerobic Exercise and Behavioral and Neural Plasticity. Brain Sci.,
+2012, v. 2, p. 709-744.
+TAN, Chade-Meng. Busque dentro de você. Novo Conceito,
+2014.
+
+112
+
+TRACY, Brian. Eat That Frog!: 21 Great Ways to Stop Procrastinating and Get More Done in Less Time. 2. ed. Berrett-Koehler Publishers, 2007.
+TRACY, Brian. The Truth About Frogs. Disponível em: http://
+w w w.br i ant rac y.com/blog/t ime-management/t he-t r ut h-about-frogs/. Acesso em: dezembro de 2015.
+WILDT, Daniel. Songdoro! Ganhe tempo ouvindo música! Abril de 2013. Disponível em: http://blog.danielwildt.
+com/2013/04/15/songdoro-ganhe-tempo-ouvindo-musica/.
+Acesso em: setembro de 2015.
+WILLIAMS, Mark; PENMAN, Danny. Atenção plena. Mindfulness. Como encontrar a paz em um mundo frenético. Sextante, 2015.
+
+113
+
+Gostou do conteúdo, ou achou que algo poderia melhorar?
+Então, nos dê sua opinião sobre o livro.
+Isso nos ajudará a garantir um mateial de qualidade para você!
+É só entrar na sua biblioteca da Casa do Código,
+em https://biblioteca.casadocodigo.com.br/, e avaliar.
+Ou você também pode escanear o QR Code a seguir
+com a câmera do seu celular
+
+Perguntas frequentes
+Possui alguma dúvida sobre nós? Acesse:
+http://suporte.casadocodigo.com.br/
+
+Fórum da Casa do Código
+Para tirar dúvidas e deixar comentários sobre os nossos livros, acesse
+http://forum.casadocodigo.com.br/
+
+Quer ser um autor da Casa do Código?
+É só seguir as instruções em
+https://www.casadocodigo.com.br/pages/quero-ser-um-autor
+
+

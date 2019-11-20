@@ -1,0 +1,3275 @@
+computação nas nuvens Windows Azure. Tudo será mostrado de
+forma didática e prática.
+Aos leitores mais experientes, principalmente nas outras
+tecnologias da plataforma .NET, aproveitem para fazerem os
+exercícios propostos, com alguns desafios mais avançados.
+O código-fonte dos exemplos que serão desenvolvidos ao longo
+do livro estão no GitHub, no seguinte endereço:
+https://github.com/siecola/WebAPIBook/
+Você também pode participar do grupo de discussão deste livro,
+deixando comentários, dúvidas ou sugestões. O link é:
+http://forum.casadocodigo.com.br/
+
+Sobre o autor
+Paulo César Siécola é Mestre em Ciência da Computação pelo
+Instituto de Matemática e Estatística da Universidade de São Paulo
+(2011). Possui graduação em Engenharia Elétrica pelo Instituto
+Nacional de Telecomunicações - INATEL (2005). Atualmente, é
+Especialista em Sistemas Sênior no Inatel Competence Center e
+Professor em cursos de Pós-Graduação no INATEL. Tem
+experiência em desenvolvimento de software em C, Java e C#,
+atuando principalmente nos seguintes temas: desenvolvimento
+Web, sistemas embarcados, análise de protocolos de redes de
+computadores e desenvolvimento de aplicações para GNU/Linux
+embarcado.
+
+Agradecimentos
+Gostaria de agradecer ao Adriano Almeida, pela oportunidade
+de publicar um livro na Casa do Código, e também agradecer à
+Vivian Matsui, pelo empenho e dedicação nas revisões didáticas.
+
+Agradeço aos meus professores e mestres, pois sem eles, não
+poderia compartilhar o conhecimento.
+Agradeço aos meus pais, que são a fonte da minha motivação
+para o trabalho.
+Obrigado meu Deus, pelos dons que de Ti recebi. Espero estar
+utilizando-os com sabedoria e equilíbrio.
+Finalmente, agradeço à minha amada esposa Isabel, pela
+paciência, apoio e incentivo sem igual.
+
+Casa do Código
+
+Sumário
+
+Sumário
+1 Criando o primeiro projeto Web API no Visual Studio
+
+1
+
+1.1 Configurando o Visual Studio para se conectar ao Windows
+2
+Azure
+1.2 Primeiro projeto Web API
+
+3
+
+1.3 Estrutura do projeto Web API
+
+5
+
+1.4 Conclusão
+
+8
+
+2 Como depurar o projeto localmente com o IIS Express
+
+10
+
+2.1 Acessando o serviço Values com o REST Console
+
+15
+
+2.2 Depurando o serviço Values no Visual Studio
+
+19
+
+2.3 Conclusão
+
+21
+
+3 Criando, configurando e gerenciando recursos no Windows
+Azure
+22
+3.1 Criando recursos no Windows Azure
+
+23
+
+3.2 Gerenciando o site criado no Windows Azure
+
+27
+
+3.3 Formas de criar recursos no Windows Azure
+
+34
+
+3.4 Conclusão
+
+35
+
+4 Publicando o projeto Exemplo1 no Windows Azure
+
+36
+
+4.1 Monitorando o projeto publicado no Windows Azure
+
+41
+
+4.2 Conclusão
+
+43
+
+Sumário
+
+Casa do Código
+
+5 Depurando o projeto Exemplo1 no Windows Azure
+
+45
+
+5.1 Visualizando mensagens de log no Windows Azure
+
+49
+
+5.2 Conclusão
+
+54
+
+6 Serviço de gerenciamento de produtos
+
+56
+
+6.1 Entity Framework
+
+57
+
+6.2 Criação do serviço de gerenciamento de produtos
+
+58
+
+6.3 Tipo de retorno dos métodos do serviço de Produtos
+
+66
+
+6.4 Criação da tabela de Produtos
+
+67
+
+6.5 Testando o serviço de produtos
+
+70
+
+6.6 Visualizando o banco de dados da aplicação
+
+76
+
+6.7 Documentação do serviço de produtos com WADL
+
+77
+
+6.8 Conclusão
+
+79
+
+7 LINQ, Lambda e validação de campos
+
+80
+
+7.1 LINQ e Lambda
+
+80
+
+7.2 Validação do modelo e seus campos
+
+82
+
+7.3 Conclusão
+
+85
+
+8 Publicando no Windows Azure e alterando o serviço de
+produtos
+
+86
+
+8.1 Publicando o serviço de produtos no Windows Azure
+
+86
+
+8.2 Alterando o modelo de produtos
+
+89
+
+8.3 Conclusão
+
+91
+
+9 Gerenciando recursos criados no Windows Azure
+9.1 Gerenciando o banco de dados pelo Windows Azure
+
+92
+92
+
+9.2 Configurando o Visual Studio para acessar o banco de dados
+no Windows Azure
+96
+9.3 Conclusão
+
+10 Autenticação e autorização de usuários com OAuth2
+
+99
+
+101
+
+Casa do Código
+
+Sumário
+
+10.1 Conceitos de autenticação e autorização de usuários em
+102
+serviços REST
+10.2 Criação do projeto com autenticação e autorização de
+usuários utilizando OAuth2
+
+104
+
+10.3 Acessando operações de um serviço com autenticação
+OAuth2 com o REST Console
+
+107
+
+10.4 Criando papéis e o usuário ADMIN
+
+111
+
+10.5 Alterando o método de registro para cadastrar usuários com
+112
+o papel USER
+10.6 Adicionando o serviço de produtos com autenticação
+
+114
+
+10.7 Autenticação e autorização no Web API 2
+
+120
+
+10.8 Conclusão
+
+122
+
+11 Criando o serviço de pedidos
+
+124
+
+11.1 Execução no Windows Azure
+
+128
+
+11.2 Conclusão
+
+130
+
+12 Criando novas operações em serviços
+12.1 Conclusão
+
+13 Consultando serviços SOAP de uma aplicação Web API
+13.1 Conclusão
+
+14 Consultando serviços REST
+14.1 Conclusão
+
+15 Algo mais sobre Web API
+
+131
+133
+
+134
+137
+
+139
+146
+
+147
+
+CAPÍTULO 1
+
+CRIANDO O PRIMEIRO
+PROJETO WEB API NO
+VISUAL STUDIO
+
+Neste livro, será utilizado como IDE o Visual Studio
+Community 2015, a ferramenta da Microsoft para trabalhar com
+toda a plataforma .NET. Para baixá-la, acesse o endereço
+https://www.visualstudio.com/en-us/products/visual-studiocommunity-vs.aspx, e siga as orientações de instalação.
+Essa versão do Visual Studio é gratuita para as seguintes
+situações e públicos: desenvolvedores individuais, projetos de
+código-fonte aberto, pesquisas acadêmicas, estudantes e professores.
+Para maiores informações sobre os termos da licença de uso, acesse:
+https://www.visualstudio.com/support/legal/mt171547.
+Depois de instalar o Visual Studio, você estará pronto para criar
+projetos com o ASP.NET Web API.
+
+1 CRIANDO O PRIMEIRO PROJETO WEB API NO VISUAL STUDIO
+
+1
+
+REQUISITOS DE INSTALAÇÃO DO VISUAL STUDIO COMMUNITY
+O Visual Studio Community 2015 pode ser instalado no
+Windows 7 ou superior.
+Para maiores detalhes sobre os requisitos de sistema, consulte:
+https://www.visualstudio.com/en-us/visual-studio-2015system-requirements-vs#1.
+
+1.1 CONFIGURANDO O VISUAL STUDIO PARA
+SE CONECTAR AO WINDOWS AZURE
+É interessante conectar o Visual Studio no Windows Azure
+desde o começo dos trabalhos, pois assim ficará mais fácil
+desempenhar as tarefas em conjunto com essa plataforma de cloud
+computing (computação nas nuvens) da Microsoft, algo que será
+feito várias vezes durante o livro. Para isso, siga os seguintes passos:
+1. Crie uma conta no Windows Azure, se já não tiver feito, pelo
+site: https://manage.windowsazure.com. Aproveite o plano de
+avaliação gratuita ou contrate um.
+2. No Visual Studio, vá no menu Tools -> Connect to Microsoft
+Azure Subscription.
+3. Na janela que abrir, digite as credenciais de acesso criadas
+para o Windows Azure.
+Deixar o Visual Studio configurado para a conta do Windows
+Azure, que será usada para a publicação das aplicações, tornará esse
+trabalho mais fácil, além de permitir a configuração de acesso ao
+banco de dados e outros serviços de uma forma mais rápida, como
+depuração de aplicações hospedadas lá.
+
+2
+1.1 CONFIGURANDO O VISUAL STUDIO PARA SE CONECTAR AO WINDOWS
+AZURE
+
+Pronto, agora o Visual Studio já está instalado e configurado!
+Você já pode começar a criar o primeiro projeto!
+
+1.2 PRIMEIRO PROJETO WEB API
+Para criar um projeto Web API no Visual Studio, siga os passos:
+1. Clique em File -> New Project.
+2. Na janela New Project, selecione a opção Installed ->
+Templates -> Visual C# -> Web e então, a opção ASP.NET
+MVC Web Application.
+
+Figura 1.1: Novo projeto Web API
+
+3. Desmarque a opção Add Application Insights to Project. Esta é
+utilizada para adicionar ao código pontos para análise de
+desempenho da aplicação.
+4. Escolha o caminho e o nome do projeto, bem como o nome
+da solução onde ele será criado.
+5. Na janela seguinte, escolha o template Web API e certifiquese de que a opção Add unit tests esteja desmarcada. Essa
+1.2 PRIMEIRO PROJETO WEB API
+
+3
+
+opção, quando marcada, adiciona um segundo projeto à
+solução do Visual Studio, com testes unitários do projeto que
+você está criando.
+6. Ainda nessa janela, clique no botão Change Authentication, e
+escolha a opção No Authentication.
+7. Desmarque a opção Host in the cloud.
+
+Figura 1.2: Configurando as opções do projeto
+
+8. Em seguida, clique em OK para que o Visual Studio crie a
+solução contendo o novo projeto Web API.
+As opções de autenticação e hospedagem na nuvem, que foram
+desmarcadas anteriormente, serão explicadas em capítulos mais
+adiante, quando um novo projeto for criado com controle de acesso
+aos serviços, e também for hospedado no Windows Azure, com a
+ajuda do Visual Studio na criação de recursos de cloud computing.
+
+4
+
+1.2 PRIMEIRO PROJETO WEB API
+
+A partir do capítulo 6. Serviço de gerenciamento de produtos
+será criado um projeto de uma loja virtual de produtos. Até lá,
+será criado um outro projeto de exemplo, para explicar
+conceitos importantes ao longo dos próximos capítulos.
+
+1.3 ESTRUTURA DO PROJETO WEB API
+Depois que o projeto for criado, no lado direito do Visual
+Studio, deverá aparecer a janela Solution Explorer, contendo a
+estrutura de pastas e os arquivos do projeto recém-criado.
+
+Figura 1.3: Estrutura do projeto
+
+Com esses passos, tem-se um projeto ASP.NET Web API básico,
+1.3 ESTRUTURA DO PROJETO WEB API
+
+5
+
+{
+public class ValuesController : ApiController
+{
+// GET api/values
+public IEnumerable<string> Get()
+{
+return new string[] { "value1", "value2" };
+}
+// GET api/values/5
+public string Get(int id)
+{
+return "value";
+}
+// POST api/values
+public void Post([FromBody]string value)
+{
+}
+// PUT api/values/5
+public void Put(int id, [FromBody]string value)
+{
+}
+// DELETE api/values/5
+public void Delete(int id)
+{
+}
+}
+}
+
+No Web API, um controller (controlador) é uma classe como a
+mostrada anteriormente, que trata as requisições HTTP. Os
+métodos públicos do controller são chamados de actions (ações).
+Quando o Web API recebe uma requisição HTTP, ele a redireciona
+para ser tratada por uma ação. Porém, o que determina qual ação
+será invocada é a tabela de roteamento localizada no arquivo
+WebApiConfig.cs , dentro da pasta App_Start . No projeto
+criado, essa tabela é como a seguinte:
+config.Routes.MapHttpRoute(
+name: "DefaultApi",
+routeTemplate: "api/{controller}/{id}",
+defaults: new { id = RouteParameter.Optional }
+1.3 ESTRUTURA DO PROJETO WEB API
+
+7
+
+dados e um controlador para implementar os métodos que tratarão
+as ações desse novo serviço.
+
+1.4 CONCLUSÃO
+
+9
+
+CAPÍTULO 2
+
+COMO DEPURAR O
+PROJETO LOCALMENTE
+COM O IIS EXPRESS
+
+O IIS (Internet Information Service) Express da Microsoft
+permite que as aplicações Web API sejam executadas e depuradas
+na máquina local, sem a necessidade de um ambiente de
+hospedagem terceiro. Para tal, dentro do Visual Studio, basta clicar
+no nome do navegador padrão, na barra de ferramentas superior,
+que o projeto abrirá em execução no IIS Express.
+O projeto que se abre no navegador na verdade é uma página
+web padrão criada pelo template do projeto, semelhante à figura a
+seguir:
+
+10
+
+2 COMO DEPURAR O PROJETO LOCALMENTE COM O IIS EXPRESS
+
+Figura 2.1: Página inicial
+
+No menu API dessa página, pode ser encontrada uma
+documentação de ajuda muito útil, como pode ser visto na figura:
+
+2 COMO DEPURAR O PROJETO LOCALMENTE COM O IIS EXPRESS
+
+11
+
+Figura 2.3: Descrição da operação GET Values por ID
+
+Como pode ser visto na tabela URI Parameters dessa página,
+há uma descrição do parâmetro id , assim como seu tipo, que deve
+ser inteiro , e obrigatório para acessar essa operação.
+Nesse exemplo, a operação GET api/values/{id} é usada
+para retornar o valor correspondente ao ID passado pelo parâmetro
+id na URL de acesso. Nessa mesma página de exemplo, há
+também o modelo do dado que é retornado por essa operação, em
+formato JSON e XML, como mostra a figura:
+
+2 COMO DEPURAR O PROJETO LOCALMENTE COM O IIS EXPRESS
+
+13
+
+Figura 2.4: Formato do dado de retorno
+
+Como esse serviço de exemplo é bem simples, não há muito o
+que ver nessa sua página de documentação, mas para serviços com
+várias operações e tipos de dados complexos, ela se torna muito útil
+para testes, depuração e, principalmente, como documentação para
+os desenvolvedores que vão criar aplicações para consumir essa API.
+
+Nos capítulos que tratarão dos serviços de gerenciamento de
+produtos e pedidos, haverá operações e tipos de dados mais
+complexos. Nesse momento, será interessante acessar a página
+de documentação desses serviços para ter um exemplo um
+pouco mais completo.
+
+A questão mais interessante dessa página é que ela é gerada
+automaticamente, sem que se tenha de escrever código para que ela
+apareça. No Web API, mediante apenas algumas configurações e
+14
+
+2 COMO DEPURAR O PROJETO LOCALMENTE COM O IIS EXPRESS
+
+opções que serão vistas mais à frente, basta apenas criar um novo
+serviço, por meio de uma classe controller com seus métodos
+públicos como operações desse serviço, para que ele apareça na
+página de documentação com todos os dados necessários, incluindo
+as operações HTTP, URLs e exemplos de tipos de dados.
+
+2.1 ACESSANDO O SERVIÇO VALUES COM O
+REST CONSOLE
+O serviço criado nesse projeto pode ser acessado através da URL
+api/values . Se esse endereço for acessado pelo Google Chrome, a
+resposta seria como mostrado na figura a seguir:
+
+Figura 2.5: Acessando a operação GET values
+
+Essa é a resposta que uma requisição HTTP GET retorna para a
+operação: duas strings de valores, como pode ser observado em sua
+implementação.
+// GET api/values
+public IEnumerable<string> Get()
+{
+return new string[] { "value1", "value2" };
+}
+
+Para observar melhor como a requisição foi montada pelo
+2.1 ACESSANDO O SERVIÇO VALUES COM O REST CONSOLE
+
+15
+
+navegador, dentro do Google Chrome, acesse as ferramentas do
+desenvolvedor pressionando
+Ctrl+Shift+I
+e carregando
+novamente a URL api/values . Uma janela semelhante à figura a
+seguir deverá ser exibida:
+
+Figura 2.6: Detalhes do acesso à operação GET values
+
+O campo Accept , na requisição, indica à aplicação Web API
+qual o formato de dados que o cliente está esperando na resposta.
+Por isso, no teste realizado anteriormente, a resposta foi em formato
+XML, pois esse campo possuía o valor application/xhtml+xml .
+Embora o Google Chrome possua boas opções para o
+desenvolvedor, é necessário utilizar uma ferramenta que permita
+customizar valores de campos na requisição, bem como escolher
+qual o método HTTP a ser usado, como PUT , POST ou DELETE .
+Para isso, será utilizado o plugin chamado REST Console.
+Para
+16
+
+instalá-lo,
+
+basta
+
+acessar
+
+2.1 ACESSANDO O SERVIÇO VALUES COM O REST CONSOLE
+
+a
+
+URL
+
+Como já foi explicado anteriormente, os métodos públicos da
+classe ValuesController correspondem às operações do serviço
+Values . No Visual Studio, tais métodos podem ser depurados e
+executados passo a passo, assim como em qualquer aplicação em
+C#, bastando apenas colocar um breakpoint em uma linha desse
+método. Como exemplo, configure o REST Console para acessar a
+operação GET api/values/5 , de acordo com a figura a seguir:
+
+Figura 2.10: Acessando operação com parâmetro
+
+Dessa forma, ao colocar-se um breakpoint na execução do
+public
+string
+Get(int
+id)
+da classe
+método
+ValuesController , e pressionar o botão GET do REST Console,
+a execução será paralisada no ponto selecionado no código, como
+mostra a figura a seguir.
+
+Figura 2.11: Depurando operação no Visual Studio
+
+Também é possível verificar o valor do parâmetro id que foi
+passado na URL de acesso à operação do serviço no REST Console,
+20
+
+2.2 DEPURANDO O SERVIÇO VALUES NO VISUAL STUDIO
+
+CAPÍTULO 3
+
+CRIANDO,
+CONFIGURANDO E
+GERENCIANDO RECURSOS
+NO WINDOWS AZURE
+
+Utilizar o IIS Express pode ser interessante durante a fase dos
+testes iniciais e de prova de conceito, porém, não muito tarde, será
+necessário lançar mão de uma infraestrutura semelhante à que será
+usada em ambiente de produção, para conclusão do
+desenvolvimento, testes funcionais e de carga. Para isso, a Microsoft
+criou o Windows Azure, um ambiente de cloud computing para
+hospedagem de sites, serviços, base de dados e outros recursos para
+pequena e grande escala.
+Durante o desenvolvimento do provedor de serviços de vendas,
+será utilizado o Windows Azure para a sua hospedagem. Este
+capítulo cobre pontos chaves para criação de um site para que seja
+possível publicar o projeto Exemplo1 .
+
+22
+3 CRIANDO, CONFIGURANDO E GERENCIANDO RECURSOS NO WINDOWS
+AZURE
+
+A interface de criação, configuração e gerenciamento de
+recursos do Windows Azure é muito simples e intuitiva, não
+havendo necessidade de explicações extensas e profundas sobre
+o tema. Além disso, por se tratar de uma interface Web, que
+pode ser atualizada pela Microsoft a qualquer momento, pode
+haver diferenças nos menus, campos e aparências no site do
+Windows Azure em relação ao que será mostrado neste
+capítulo.
+
+Conta no Windows Azure
+A Microsoft possui algumas políticas de ofertas e planos para o
+Windows Azure, dependendo do tipo de público, como estudantes,
+por exemplo. Essas políticas podem variar ao longo do tempo, mas
+de forma geral, é comum encontrar no próprio site do Windows
+Azure (https://azure.microsoft.com/pt-br/) planos gratuitos de
+avaliação, com todos, ou praticamente todos, os recursos
+disponíveis por um período de tempo.
+Caso você já tenha utilizado o período de testes e não possua
+outra vantagem, como estudar em uma universidade com acordos
+com a Microsoft, você terá de contratar algum plano oferecido no
+Windows Azure. A vantagem, como característica de uma
+plataforma de cloud computing, é que você pagará somente pelo uso
+e durante os meses que desejar.
+
+3.1 CRIANDO RECURSOS NO WINDOWS
+AZURE
+Para hospedagem da aplicação Exemplo1 no Windows Azure,
+será necessário realizar os seguintes passos:
+3.1 CRIANDO RECURSOS NO WINDOWS AZURE
+
+23
+
+1. Criar uma conta no Windows Azure, se já não o tiver feito;
+2. Estando
+dentro
+da
+interface
+de
+gerenciamento
+(https://manage.windowsazure.com/), clique em Novo ->
+Computação -> Aplicativo Web -> Criação Rápida , que
+pode ser acessado no canto inferior esquerdo da página.
+
+CRIAÇÃO RÁPIDA DE SITES DO WINDOWS AZURE
+Essa opção permite criação de um site com as
+configurações básicas e sem um banco de dados.
+Algumas telas podem oferecer opções diferentes, caso o
+usuário possua uma conta de avaliação gratuita ou paga.
+
+3. Uma tela como a figura a seguir deverá aparecer:
+
+Figura 3.1: Criação rápida de sites no Windows Azure
+
+4. Digite uma URL de sua preferência para que o sistema
+verifique a disponibilidade;
+5. Caso a URL digitada seja, por exemplo, webapi-exemplo1 , o
+endereço
+completo
+do
+site
+ficará
+webapiexemplo1.azurewebsites.net ;
+6. Escolha a região onde o site será criado, se desejar;
+
+24
+
+3.1 CRIANDO RECURSOS NO WINDOWS AZURE
+
+ESCOLHA DA REGIÃO DO SITE
+A escolha da região do site deve levar em consideração
+alguns fatores como custo de hospedagem e distância
+geográfica do público-alvo. Quanto maior a distância,
+maior a latência na comunicação, e isso pode impactar
+na experiência do usuário.
+
+7. Clique no botão Criar aplicativo Web , localizado no
+canto inferior direito, para concluir a operação e criar o site;
+8. Após alguns instantes, aparecerá no console principal do
+Windows Azure o site recém-criado. Ele será utilizado no
+projeto Exemplo1 que foi construído no capítulo anterior.
+Quando o processo de criação do novo site for concluído pela
+plataforma, você será redirecionado para a tela principal do console
+de administração do Windows Azure. Nessa tela, é possível verificar
+os serviços que ele oferece pelo menu no canto esquerdo da tela. O
+site criado aparecerá na seção Aplicativos Web , em uma lista
+semelhante à da figura a seguir, que nesse caso já possui um outro
+site criado, além do webapi-exemplo1 :
+
+Figura 3.2: Lista de sites no Windows Azure
+
+Nessa tabela, que mostra os sites existentes, é possível ter a
+seguintes informações adicionais:
+3.1 CRIANDO RECURSOS NO WINDOWS AZURE
+
+25
+
+O objetivo dos projetos que forem sendo criados neste livro é
+de oferecer web services REST, por isso, não é necessário se
+preocupar com a página Web do projeto.
+
+3.2 GERENCIANDO O SITE CRIADO NO
+WINDOWS AZURE
+As tarefas de gerenciar e configurar os recursos criados no
+Windows Azure depende muito, obviamente, do que foi criado. Por
+isso essa questão será trazida novamente à tona no decorrer dos
+próximos capítulos do livro, quando outros recursos mais
+avançados forem criados.
+No site criado, para acessar o seu console de gerenciamento,
+basta clicar sobre seu nome na lista de aplicativos Web, que uma
+tela semelhante à seguinte aparecerá, trazendo todas as opções à
+disposição do administrador:
+
+Figura 3.4: Console de administração do site
+
+3.2 GERENCIANDO O SITE CRIADO NO WINDOWS AZURE
+
+27
+
+Na parte superior do console de gerenciamento do site, é
+possível acessar todas as opções disponíveis, como:
+
+Ferramentas
+Aqui há ferramentas e dicas de como utilizar a plataforma, além
+de informações de publicação do site, que serão mostradas no
+capítulo seguinte.
+
+Painel
+Nessa seção, é exibido um gráfico com estatísticas de entrada e
+saída de dados, erros do servidor HTTP, requisições ao site e tempo
+de CPU consumido por ele, como vemos na figura:
+
+Figura 3.5: Painel com estatísticas do site
+
+As informações podem ser colocadas ou retiradas no gráfico,
+marcando ou desmarcando-as no checkbox do lado esquerdo de seu
+nome.
+Nessa mesma seção, é possível ter ainda outras informações de
+uso, como taxa de utilização de disco e memória:
+
+28
+
+3.2 GERENCIANDO O SITE CRIADO NO WINDOWS AZURE
+
+Figura 3.6: Informações de uso do site
+
+Monitoramento
+Nessa seção, há um gráfico com estatísticas, semelhante ao da
+seção anterior, porém há também uma tabela com o detalhamento
+delas, como pode ser visto:
+
+Figura 3.7: Detalhes das estatísticas de monitoramento do site
+
+Nessa mesma página, na parte superior, é possível adicionar
+várias outras métricas a serem monitoradas, por exemplo, o tempo
+médio de resposta, erros com o código HTTP 401, 403, 404 e 406.
+
+3.2 GERENCIANDO O SITE CRIADO NO WINDOWS AZURE
+
+29
+
+Figura 3.8: Adicionando métricas ao monitoramento do site
+
+Depois de adicionar uma nova métrica, basta habilitá-la na
+tabela ou no gráfico. Se desejar, é possível desabilitar alguma outra
+métrica para melhorar a visualização no gráfico.
+Ainda é possível adicionar regras para geração de alertas
+baseado em alguma métrica. Para isso, basta clicar na métrica
+desejada e clicar no botão Adicionar regra , localizado na barra
+inferior dessa página. O exemplo a seguir mostra a criação de um
+alerta para o número de requisições ao site. Esse é um bom
+parâmetro para se monitorar em um site como esse, que vai oferecer
+serviços que basicamente respondem às requisições HTTP nos Web
+Services:
+
+30
+
+3.2 GERENCIANDO O SITE CRIADO NO WINDOWS AZURE
+
+Figura 3.9: Criação de regra de alerta
+
+Nessa tela, deve ser dado um nome para a nova regra de alerta e
+uma descrição.
+Na tela seguinte é onde se define a condição, o valor e a janela de
+medição do número de requisições para a geração do alerta, além
+das ações que devem ser tomadas quando ele acontecer, como
+enviar um e-mail para o administrador do site.
+
+3.2 GERENCIANDO O SITE CRIADO NO WINDOWS AZURE
+
+31
+
+Figura 3.10: Parâmetros da regra de alerta
+
+Quando um alerta é criado, ele poderá ser visto associado à
+regra na seção de monitoramento do aplicativo Web, na última
+coluna da tabela com os detalhes das estatísticas. Se você clicar nessa
+regra de alerta, será encaminhado para a parte de Serviços de
+Gerenciamento do Windows Azure, onde poderá editar, apagar ou
+desabilitar a regra.
+
+Trabalhos Web
+Nessa seção, é possível configurar trabalhos para execução de
+arquivos executáveis ou scripts sob demanda, de forma contínua ou
+agendada.
+
+Configurar
+32
+
+3.2 GERENCIANDO O SITE CRIADO NO WINDOWS AZURE
+
+CAPÍTULO 4
+
+PUBLICANDO O PROJETO
+EXEMPLO1 NO WINDOWS
+AZURE
+
+Após ter criado o projeto Exemplo1 no Visual Studio e os
+recursos necessários no Windows Azure para hospedá-lo, é
+necessário publicá-lo. Os passos a seguir descrevem o que deve ser
+feito, tendo em vista que nada ainda foi publicado no site criado no
+Windows Azure no capítulo anterior.
+1. No console do Windows Azure, clique no site que foi criado
+no capítulo anterior;
+, clique no link
+Baixar o perfil de publicação , como mostra a figura a
+seguir:
+
+2. Na opção
+
+Publicar
+
+seu
+
+aplicativo
+
+Figura 4.1: Perfil de publicação
+
+36
+
+4 PUBLICANDO O PROJETO EXEMPLO1 NO WINDOWS AZURE
+
+Esse é um arquivo com as instruções necessárias ao Visual
+Studio para que ele possa publicar o projeto no Windows
+Azure. Esse arquivo contém, entre outras coisas, as
+informações de login (não criptografadas), conexões com o
+banco de dados (quando existirem) e a URL de publicação.
+3. Após ter baixado o arquivo, vá ao Visual Studio, clique com o
+botão direito sobre o projeto Exemplo1 , e depois na opção
+Publish . Uma janela semelhante à mostrada na figura a
+seguir deverá aparecer:
+
+Figura 4.2: Publicação do projeto no Windows Azure com o Visual Studio
+
+Nessa janela, há um menu no lado esquerdo que acompanha o
+processo de publicação. É possível voltar em qualquer passo
+do processo clicando nas opções desse menu.
+4. Na janela que se abrirá, clique no botão Import e selecione o
+arquivo baixado do Windows Azure. Se o arquivo foi
+4 PUBLICANDO O PROJETO EXEMPLO1 NO WINDOWS AZURE
+
+37
+
+importado com sucesso, o processo de publicação passa para o
+segundo passo, como mostra a figura:
+
+Figura 4.3: Segundo passo da publicação no Windows Azure
+
+Nessa tela, é possível observar informações como: método de
+publicação a ser utilizado, nome do servidor onde o projeto
+será hospedado, nome do site, usuário de acesso e URL de
+destino. Também é possível validar as informações de
+conexão clicando no botão Validate Connection .
+5. Agora, clique em Next para ir para a próxima etapa do
+processo de configuração, como mostra a figura a seguir:
+
+38
+
+4 PUBLICANDO O PROJETO EXEMPLO1 NO WINDOWS AZURE
+
+Figura 4.4: Terceiro passo da publicação no Windows Azure
+
+Nessa tela, é possível configurar se o projeto será publicado no
+modo Release ou Debug . No capítulo seguinte, será
+mostrado quando isso deverá ser alterado, quando as opções
+de depuração forem ativadas.
+Ainda é possível verificar que não há nenhum banco de dados
+associado ao site. Com isso, as opções de banco de dados não
+aparecem nesse passo de configuração do processo de
+publicação. No capítulo Serviço de gerenciamento de produtos,
+será possível visualizar os parâmetros de configuração do
+banco de dados nesse passo.
+6. Em seguida, clique em Next para ir para a etapa de prévisualização do projeto publicado, como vemos a seguir:
+
+4 PUBLICANDO O PROJETO EXEMPLO1 NO WINDOWS AZURE
+
+39
+
+Figura 4.5: Quarto passo da publicação no Windows Azure
+
+Esse passo é opcional, pois apenas mostra o que será
+publicado, em termos de estrutura de diretórios e arquivos.
+7. Finalmente, clique em Publish para que o Visual Studio
+comece o processo de publicação do projeto no Windows
+Azure, que deve demorar alguns minutos;
+8. Quando o processo estiver concluído, o navegador padrão
+abrirá com a página do site, já publicada no Windows Azure.
+O processo de publicação pode ser acompanhado na janela
+Output , localizada na parte inferior do Visual Studio:
+
+40
+
+4 PUBLICANDO O PROJETO EXEMPLO1 NO WINDOWS AZURE
+
+Figura 4.6: Log da publicação no Windows Azure
+
+9. Como até o momento o projeto só possui o serviço Values ,
+complete a URL no navegador com o endereço api/values .
+Deverá aparecer um XML com os dois valores value1 e
+value2 , como testado anteriormente.
+
+PUBLICAÇÃO DE PROJETO COM O ARQUIVO DE PERFIL DE PUBLICAÇÃO
+É importante lembrar de que os passos descritos anteriormente
+são válidos quando o site for criado na plataforma Web do
+Windows Azure, e deseja-se publicar um projeto criado no
+Visual Studio nesse site através do arquivo com o perfil de
+publicação.
+
+4.1 MONITORANDO O PROJETO PUBLICADO
+NO WINDOWS AZURE
+Agora, com o REST Console, é possível acessar o serviço
+Values hospedado no Windows Azure. Para isso, basta configurálo com a URL onde o seu projeto foi publicado, como na figura a
+seguir:
+
+4.1 MONITORANDO O PROJETO PUBLICADO NO WINDOWS AZURE
+
+41
+
+Figura 4.7: Acessando o serviço `Values` no Windows Azure
+
+Lembre-se de colocar a URL do site que você criou.
+Como visto no capítulo anterior, a aba Monitoramento do
+console de gerenciamento do site no Windows Azure possui várias
+ferramentas de monitoramento interessantes. Como exemplo e
+como forma de fixar e praticar o conhecimento adquirido, realize os
+passos a seguir para monitorar o site e simular alertas de falhas:
+1. Realize algumas requisições de GET na URL api/values ,
+utilizando o REST Console, e veja que a estatística
+Solicitações da aba Monitoramento do Windows Azure
+vai aumentar. Pode demorar um pouco até que o site atualize
+os valores;
+2. Habilite a métrica Erros 404 de HTTP na aba de
+Monitoramento . Esse erro será gerado quando uma
+requisição for feita para o site em uma URL que ele não
+conhece. O erro HTTP 404 tem o significado Not Found (não
+encontrado);
+3. Crie uma nova regra para a métrica Erros 404 de HTTP ,
+para enviar um e-mail de alerta quando esse erro acontecer
+mais de 5 vezes dentro de um intervalo de 5 minutos;
+42
+
+4.1 MONITORANDO O PROJETO PUBLICADO NO WINDOWS AZURE
+
+administrador sobre comportamentos anômalos do
+site.
+No próximo capítulo, será mostrado como depurar a aplicação
+Exemplo1 de forma remota no Windows Azure usando o Visual
+Studio. Também será mostrado como gerar mensagens de log para
+serem geradas enquanto a aplicação estiver executando no Windows
+Azure, conectando o Visual Studio para que elas possam ser vistas
+em tempo de execução.
+No capítulo 6. Serviço de gerenciamento de produtos, onde será
+criada uma outra aplicação contendo um banco de dados, será
+possível realizar outros tipos de monitoramento dos recursos
+criados no Windows Azure.
+
+44
+
+4.2 CONCLUSÃO
+
+CAPÍTULO 5
+
+DEPURANDO O PROJETO
+EXEMPLO1 NO WINDOWS
+AZURE
+
+Imagine uma situação na qual você precisa testar uma conexão
+com o banco de dados ou um web service, que só são acessíveis da
+máquina de produção e, por algum motivo desconhecido, não estão
+funcionando. Imagine ainda que você necessite rodar um algoritmo
+passo a passo, a fim de descobrir um comportamento errôneo dele,
+com dados que não estão disponíveis em sua máquina de
+desenvolvimento. O que fazer? Como executar métodos passo a
+passo, dentro da aplicação hospedada no Windows Azure?
+Neste capítulo, será apresentado um mecanismo interessante,
+que permitirá a depuração de uma aplicação Web API que esteja
+publicada e em execução no Windows Azure. Essa funcionalidade é
+muito importante quando for necessário descobrir defeitos e
+comportamentos do software no ambiente real de produção,
+hospedado na infraestrutura de cloud computing.
+Para fazer a depuração de uma aplicação Web API e resolver
+problemas como os citados anteriormente, realize os passos a seguir:
+1. Acesse o menu View -> Server Explorer do Visual
+Studio, expanda a opção Azure , e depois a opção App
+Service , para ver o site onde o projeto Exemplo1 foi
+5 DEPURANDO O PROJETO EXEMPLO1 NO WINDOWS AZURE
+
+45
+
+publicado. Pode ser que o Visual Studio peça para que você
+digite suas credenciais de acesso ao Windows Azure
+novamente.
+
+Figura 5.1: Server Explorer
+
+2. Com o botão direito, clique sobre o site do projeto Exemplo1
+e escolha a opção View Settings .
+3. Altere a opção Remote Debugging para o valor On , como
+mostra a figura seguir.
+
+46
+
+5 DEPURANDO O PROJETO EXEMPLO1 NO WINDOWS AZURE
+
+Figura 5.2: Depuração remota
+
+4. Salve todo o projeto.
+5. Coloque um breakpoint no retorno do método Get() em
+ValuesController , como mostra a figura seguir:
+
+Figura 5.3: Breakpoint da depuração remota
+
+6. Na aba Solution Explorer , abra a janela para publicação
+no Windows Azure, clicando com o botão direito sobre o
+projeto e selecionando a opção Publish .
+
+5 DEPURANDO O PROJETO EXEMPLO1 NO WINDOWS AZURE
+
+47
+
+7. Na seção Settings da tela de publicação, escolha a opção
+Debug para o item Configuration , como mostra a figura:
+
+Figura 5.4: Publicando projeto em modo de depuração
+
+8. Clique em Publish para publicar a aplicação com as
+configurações realizadas para depuração remota.
+9. Feche a janela do browser que vai aparecer quando a aplicação
+estiver em execução no Windows Azure.
+10. Volte à aba Server Explorer , clique com o botão direito no
+site em que o projeto foi publicado e escolha a opção Attach
+Debugger .
+11. Acesse a operação api/values , através da operação GET ,
+com o REST Console apontando para onde a aplicação foi
+publicada no Windows Azure, e veja que o código é
+interrompido no Visual Studio, no ponto onde o breakpoint
+foi inserido, porém, a aplicação está em execução no Windows
+48
+
+5 DEPURANDO O PROJETO EXEMPLO1 NO WINDOWS AZURE
+
+Azure. Fantástico!
+12. Use os controles de depuração do Visual Studio para
+continuar a execução do código.
+Esses passos mostram como é possível depurar uma aplicação
+Web API hospedada no Windows Azure pelo Visual Studio, com
+todas as ferramentas que ele já possui para depuração local.
+Depois de habilitada a depuração remota do Visual Studio para
+a aplicação Exemplo1 , é possível verificar em seu console de
+gerenciamento no Windows Azure, na aba Configurar , que essa
+opção ficará ativada por até 48 horas, como vemos na figura a
+seguir:
+
+Figura 5.5: Depuração remota habilitada
+
+5.1 VISUALIZANDO MENSAGENS DE LOG NO
+WINDOWS AZURE
+A geração de mensagens de log para análise é um recurso muito
+importante para qualquer tipo de sistema computacional,
+independentemente do nível de complexidade.
+No Web API, é possível colocar mensagens de trace nos
+métodos que tratam as operações dos serviços. Tais mensagens
+podem ser visualizadas pelo Visual Studio em tempo real quando a
+aplicação está rodando localmente, ou quando está sendo executada
+no Windows Azure. Além disso, esses logs são salvos em arquivos
+5.1 VISUALIZANDO MENSAGENS DE LOG NO WINDOWS AZURE
+
+49
+
+de texto na estrutura de diretórios da aplicação, sendo possível
+recuperá-los para visualização posterior.
+As características citadas são muito importantes para depuração
+do código, principalmente quando elas estão rodando no Windows
+Azure. Porém, é importante ressaltar que tais técnicas devem ser
+usadas de forma ponderada, principalmente em um ambiente de
+produção real com alto tráfego, pois isso pode consumir muito
+processamento e espaço de armazenamento.
+Para fazer com que a aplicação gere mensagens de logs, realize
+os passos a seguir:
+1. Coloque as mensagens nos pontos desejados, como no trecho
+seguinte.
+// GET api/values
+public IEnumerable<string> Get()
+{
+Trace.TraceInformation("INFO - Get all values");
+Trace.TraceWarning("WARN - Get all values");
+Trace.TraceError("ERROR - Get all values");
+return new string[] { "value1", "value2" };
+}
+// GET api/values/5
+public string Get(int id)
+{
+Trace.TraceInformation("INFO - Get one value: " + i
+d);
+return "value";
+}
+
+As mensagens possuem níveis de prioridade, na sequência:
+Error , Warning e Information . Os métodos para gerar
+as mensagens são os que estão no trecho de código mostrado
+anteriormente, da classe Trace . Para acessá-la, é necessário
+usar System.Diagnostics .
+2. Execute a aplicação localmente, e depois acesse as operações
+
+50
+
+5.1 VISUALIZANDO MENSAGENS DE LOG NO WINDOWS AZURE
+
+onde as mensagens de trace foram colocadas.
+3. Veja que as mensagens são geradas na janela de Debug , como
+na figura a seguir:
+
+Figura 5.6: Logs de depuração
+
+Para configurar a aplicação para geração e monitoramento de
+logs no Windows Azure, realize os passos a seguir:
+1. Pare a aplicação, se estiver em execução na máquina local.
+2. Na aba Server Explorer , clique com o botão direito no
+website do projeto e acesse a opção View Settings .
+3. Configure a opção
+Application Log
+para o valor
+Verbose , como na figura a seguir. Dessa forma, todas as
+mensagens de todos os níveis serão exibidas.
+
+5.1 VISUALIZANDO MENSAGENS DE LOG NO WINDOWS AZURE
+
+51
+
+Figura 5.7: Configuração para geração e monitoramento de log remoto
+
+4. Salve as configurações realizadas nessa janela.
+5. Publique a aplicação no Windows Azure. Tenha certeza de
+que, na tela de publicação, esteja configurada como Debug na
+aba Settings .
+6. Quando a aplicação estiver em execução, vá na aba Server
+Explorer , clique com o botão direito no website do projeto e
+acesse a opção View Streaming Logs .
+7. Na janela Output , aparecerão as mensagens de log quando as
+operações que possuem o comando de trace forem acessadas.
+Se nenhum trace aparecer dentro do intervalo de 1 minuto, o
+console exibe uma mensagem de que nada foi gerado nesse
+intervalo.
+8. Acesse alguma operação, que tenha o comando de trace, da
+52
+
+5.1 VISUALIZANDO MENSAGENS DE LOG NO WINDOWS AZURE
+
+aplicação que foi publicada no Windows Azure. Veja que as
+mensagens vão aparecer na tela de Output , como na figura:
+
+Figura 5.8: Exibição de mensagens de trace remoto
+
+9. Por último, para visualizar os arquivos de log que são gerados,
+acesse a estrutura de diretórios da aplicação na aba Server
+Explorer , como a seguir:
+
+Figura 5.9: Arquivos de log da aplicação no Windows Azure
+
+Esses arquivos são gerados em intervalos de tempo predefinidos,
+5.1 VISUALIZANDO MENSAGENS DE LOG NO WINDOWS AZURE
+
+53
+
+aplicação na máquina local, com um banco de dados que será criado
+na própria máquina de desenvolvimento.
+Na prática, deveríamos começar a aplicação da loja virtual
+criando um novo projeto no Visual Studio com o recurso de
+autenticação de usuários, mas didaticamente isso traria algumas
+complicações, por questões de ordem de apresentação de conceitos.
+Por isso, neste capítulo será criado um novo projeto de exemplo,
+chamado Exemplo2 , com as tecnologias e conceitos relativos
+somente ao novo serviço de gerenciamento de produtos. Quando o
+projeto da loja virtual for realmente iniciado, bastará copiar apenas
+algumas classes.
+
+ATUALIZAÇÃO DO VISUAL STUDIO
+É extremamente importante que você tenha certeza de que
+seu Visual Studio está totalmente atualizado, pois alguns
+problemas podem acontecer durante o processo de criação de
+recursos no Windows Azure, assim como outros problemas em
+tempo de execução, principalmente no acesso ao banco de
+dados. Por isso, vá ao menu Tools -> Extension and
+Updates , abra a aba Updates e faça todas as atualizações
+recomendadas.
+
+Vale lembrar de que o código-fonte de todos os projetos deste
+livro estão no GitHub, no seguinte endereço:
+https://github.com/siecola/WebAPIBook/
+
+6.1 ENTITY FRAMEWORK
+O Entity Framework é um poderoso Object Relational Mapper
+6.1 ENTITY FRAMEWORK
+
+57
+
+(ORM), que gera objetos de negócios e entidades de acordo com as
+tabelas do banco de dados. Veja o diagrama de sua estrutura:
+
+Figura 6.1: Arquitetura do Entity Framework. Fonte: MSDN
+
+A partir desse ponto, será utilizado o Entity Framework para
+integrar os serviços criados com o banco de dados que será gerado
+no Windows Azure. Dessa forma, serão construídos serviços muito
+mais interessantes, complexos e elaborados.
+
+6.2
+CRIAÇÃO
+DO
+SERVIÇO
+GERENCIAMENTO DE PRODUTOS
+
+DE
+
+Para proceder com a criação do serviço de gerenciamento de
+produtos utilizando o Entity Framework, será necessário criar:
+
+58
+
+6.2 CRIAÇÃO DO SERVIÇO DE GERENCIAMENTO DE PRODUTOS
+
+Figura 6.2: Criação no projeto `Exemplo2`
+
+Isso fará com que os recursos (web site e banco de dados) já
+sejam criados no Windows Azure pelo Visual Studio,
+facilitando o processo de publicação e gerenciamento.
+4. Na tela seguinte, na aba Hosting , configure as opções
+solicitadas, como na figura a seguir, mudando os valores para
+se adequar às suas credenciais e à URL de publicação. Pode ser
+que você tenha de criar um App Service Plan . Você será
+avisado se isso for necessário e se mais alguma coisa necessitar
+ser criada:
+
+60
+
+6.2 CRIAÇÃO DO SERVIÇO DE GERENCIAMENTO DE PRODUTOS
+
+Figura 6.3: Criação do site no Windows Azure pelo Visual Studio
+
+5. Nessa mesma tela, na aba Services , adicione um banco de
+dados SQL, clicando no botão + . Preencha a tela que abrir
+com as opções solicitadas, como na figura a seguir:
+
+6.2 CRIAÇÃO DO SERVIÇO DE GERENCIAMENTO DE PRODUTOS
+
+61
+
+Figura 6.4: Criação do banco de dados no Windows Azure, através do Visual Studio
+
+Nesse ponto do processo, serão criados no Windows
+Azure: um web application com o domínio
+webapiexemplo2.azurewebsites.net e um servidor
+de
+banco
+de
+dados
+chamado
+webapiexemplo2dbserver , ambos recursos na região
+Sul do Brasil.
+Lembre-se de guardar as credenciais de acesso ao
+banco de dados, pois você vai precisar delas depois.
+
+62
+
+6.2 CRIAÇÃO DO SERVIÇO DE GERENCIAMENTO DE PRODUTOS
+
+6. Clique em Create para proceder com a criação do projeto, já
+atrelado aos recursos criados no Windows Azure (site e banco
+de dados), o que facilitará o processo de publicação. Se algum
+erro ocorrer, apague todos os recursos criados no Windows
+Azure e refaça o procedimento, verificando os passos com
+cuidado.
+7. Crie a classe Product dentro da pasta Models , clicando
+com botão direito nessa pasta e acessando o menu Add ->
+Class . Essa classe será o modelo de dados do produto,
+contendo as propriedades: nome, descrição, código, preço e
+um identificador. No final, a classe modelo de produto deverá
+ficar como o trecho a seguir:
+using
+using
+using
+using
+using
+
+System;
+System.Collections.Generic;
+System.ComponentModel.DataAnnotations;
+System.Linq;
+System.Web;
+
+namespace Exemplo2.Models
+{
+public class Product
+{
+public int Id { get; set; }
+[Required]
+public string nome { get; set; }
+public string descricao { get; set; }
+[Required]
+public string codigo { get; set; }
+public decimal preco { get; set; }
+}
+}
+
+A identificação do produto, nesse caso como a propriedade de
+nome Id , deve seguir esse padrão de nome, para que o Entity
+Framework possa saber que esse é o atributo que representa a
+
+6.2 CRIAÇÃO DO SERVIÇO DE GERENCIAMENTO DE PRODUTOS
+
+63
+
+identificação única da entidade, ou seja, a chave primária no
+banco de dados.
+As anotações Required , nas propriedades nome e código,
+sinalizam que são de preenchimento obrigatório, não
+podendo ter valores nulos. Serão vistas mais adiante outras
+anotações importantes que podem ser usadas durante a
+construção dos modelos.
+8. Tendo o modelo de produto criado, compile o projeto.
+9. Agora é possível criar o controlador, que terá as operações de
+inserção, remoção, listagem e outras, a partir do modelo
+criado utilizando o Entity Framework. Para isso, clique com o
+botão direito do mouse na pasta Controllers e acesse o
+menu Add -> Controller .
+10. Selecione a opção Web API 2 Controller with actions,
+using Entity Framework .
+11. Preencha os dados da tela de criação de um novo controlador
+conforme a figura a seguir:
+
+Figura 6.5: Criação do controlador de produtos
+
+64
+
+6.2 CRIAÇÃO DO SERVIÇO DE GERENCIAMENTO DE PRODUTOS
+
+A CLASSE DE CONTEXTO DE DADOS
+A classe de contexto a ser criada com o nome de
+Exemplo2Context na pasta Models será usada pelos
+controladores para acessarem as entidades no banco de
+dados.
+
+12. Após ter preenchido os dados na janela de criação do
+controlador, clique em Add .
+13. Se tudo for feito corretamente, uma nova classe chamada
+ProductsController será criada no arquivo de mesmo
+nome na pasta Controllers , contendo os seguintes
+métodos públicos, que na verdade são as possíveis operações
+do serviço de produtos, conforme os comentários com o
+verbo e URL acima de cada método:
+// GET: api/Products
+public IQueryable<Product> GetProducts()
+// GET: api/Products/5
+[ResponseType(typeof(Product))]
+public IHttpActionResult GetProduct(int id)
+// PUT: api/Products/5
+[ResponseType(typeof(void))]
+public IHttpActionResult PutProduct(int id, Product product
+)
+// POST: api/Products
+[ResponseType(typeof(Product))]
+public IHttpActionResult PostProduct(Product product)
+// DELETE: api/Products/5
+[ResponseType(typeof(Product))]
+public IHttpActionResult DeleteProduct(int id)
+
+Dentro de cada método, já foi criado o acesso ao banco de dados
+6.2 CRIAÇÃO DO SERVIÇO DE GERENCIAMENTO DE PRODUTOS
+
+65
+
+e à tabela Products . Ou seja, quando a operação GET na URL
+api/product for invocada, por exemplo, o método GetProducts
+acessará a tabela Products e retornará todos os produtos
+cadastrados nela. O mesmo princípio vale para as demais operações.
+O acesso ao banco de dados é feito por
+Exemplo2Context db = new Exemplo2Context(); .
+
+private
+
+O Exemplo2Context foi criado na pasta Models , juntamente
+com o primeiro controlador
+ProductsController . Ele é
+responsável por acessar todas as tabelas existentes no banco de
+dados, por meio dos modelos que são criados. Quando novos
+modelos e controladores forem criados, ele será atualizado para
+poder acessá-los.
+Calma que você já vai poder testar esse novo projeto. Por
+enquanto, familiarize-se com o código do controlador de produtos
+que foi criado. Seus detalhes serão apresentados ao longo dos
+próximos capítulos. Neste momento, há mais conceitos que devem
+ser explicados e passos a serem executados antes de testar o projeto
+que foi criado.
+
+6.3 TIPO DE RETORNO DOS MÉTODOS DO
+SERVIÇO DE PRODUTOS
+As operações do serviço de produtos, com exceção da que
+retorna a lista de produtos, retornam um objeto do tipo
+IHttpActionResult . Esse tipo foi introduzido na versão do Web
+API 2, facilitando a criação de operações com códigos de retorno,
+com mensagens e tipos complexos. Como exemplo, segue o método
+que implementa a operação de busca de um produto por seu ID:
+// GET: api/Products/5
+[ResponseType(typeof(Product))]
+public IHttpActionResult GetProduct(int id)
+{
+66
+
+6.3 TIPO DE RETORNO DOS MÉTODOS DO SERVIÇO DE PRODUTOS
+
+executada pela primeira vez. Eles serão responsáveis pela criação,
+alteração das tabelas na base de dados e preenchimento com dados
+válidos iniciais. Para isso, devem ser executados os seguintes passos
+no Visual Studio:
+1. No menu
+
+Tools
+
+, selecione a opção
+
+NuGet
+
+Package
+
+. Uma janela na
+parte inferior da tela abrirá para a execução dos comandos.
+Lembre-se de selecionar o projeto Exemplo2 para a
+execução dos comandos.
+Manager -> Package Manager Console
+
+2. Digite o comando 1: enable-migrations . Ele, que só deve
+ser executado uma única vez, cria a pasta Migrations e
+coloca dentro dela o arquivo Configuration.cs , que
+poderá ser editado para configurar as migrações necessárias.
+3. Em seguida, digite o comando 2: add-migration Initial .
+Ele cria outro arquivo dentro da mesma pasta Migrations ,
+com um timestamp e a palavra Initial em seu nome, onde
+o código de inicialização vai criar as tabelas no banco de
+dados, de acordo com os modelos atuais existentes no projeto
+no momento da execução desse comando.
+4. Nesse momento, se desejável, pode-se adicionar código dentro
+do método Seed do arquivo Configuration.cs para
+adicionar produtos na tabela Products quando a aplicação
+for executada pela primeira vez, como no exemplo a seguir:
+context.Products.AddOrUpdate(
+p => p.Id,
+new Product { Id = 1, nome = "produto 1",
+1", descricao = "descrição produto 1", preco =
+new Product { Id = 2, nome = "produto 2",
+2", descricao = "descrição produto 2", preco =
+new Product { Id = 3, nome = "produto 3",
+3", descricao = "descrição produto 3", preco =
+);
+
+68
+
+6.4 CRIAÇÃO DA TABELA DE PRODUTOS
+
+codigo = "COD
+10 },
+codigo = "COD
+20 },
+codigo = "COD
+30 }
+
+Não se esqueça de adicionar using Models; junto com as
+outras importações, no início do arquivo.
+5. Por último, execute o comando 3: update-database . Ele vai
+executar o código de migração criado no comando 2 que,
+nesse caso, criará a tabela Products no banco de dados local,
+e o método Seed , para preenchê-la com dados iniciais.
+Quando a aplicação for publicada no Windows Azure, esse
+mesmo código será executado e a tabela, então, será criada no banco
+de dados que foi criado nele.
+Quando qualquer alteração for feita nos modelos criados ou
+mesmo quando outros modelos forem criados, devem-se executar
+somente os comandos 2 e 3, para que os códigos de migração sejam
+atualizados, assim como a base de dados local. No caso do comando
+2, é necessário passar um outro nome para o código de migração,
+por exemplo, se o modelo de pedidos foi adicionado ao projeto:
+add-migration Pedidos .
+Dessa forma, haverá um arquivo para cada execução desse
+comando, que representa uma alteração substancial no modelo do
+banco de dados. Quando a aplicação for executada novamente, será
+feita uma checagem para ver qual código de migração ainda não foi
+executado, atualizando assim a estrutura do banco de dados. O
+timestamp no início do nome do arquivo serve justamente para
+fazer essa conferência. Isso será detalhado com maior profundidade
+no capítulo Publicando no Windows Azure e alterando o serviço de
+produtos.
+Depois da execução de todos os passos descritos até o momento
+neste capítulo, veja como ficou a estrutura do projeto:
+
+6.4 CRIAÇÃO DA TABELA DE PRODUTOS
+
+69
+
+Figura 6.6: Nova estrutura do projeto
+
+6.5 TESTANDO O SERVIÇO DE PRODUTOS
+Agora que os códigos de inicialização e a tabela de produtos já
+foram criados com a execução dos comandos 1, 2 e 3, é possível
+testarmos a aplicação Exemplo2 utilizando o REST Console. Para
+isso, execute os passos a seguir:
+1. Execute a aplicação Exemplo2 .
+70
+
+6.5 TESTANDO O SERVIÇO DE PRODUTOS
+
+2. Quando o navegador web abrir, copie o endereço em que o
+site foi publicado no IIS Express da sua máquina de
+desenvolvimento.
+Será
+algo
+do
+tipo
+http://localhost:55565/ , mas a porta poderá ser
+diferente.
+
+PORTA DE EXECUÇÃO DA APLICAÇÃO WEB API NO IIS EXPRESS
+Como já foi dito algumas vezes nos capítulos anteriores,
+o Visual Studio utiliza uma porta aleatória para executar
+a aplicação Web API no IIS Express.
+Realize os testes propostos a seguir com a porta em que
+sua aplicação foi publicada no IIS Express e fique sempre
+atento para ver se a porta não mudou.
+Daqui por diante, as URLs exibidas dos serviços terão
+uma porta qualquer, para você se lembrar de que
+também deve utilizar a sua porta no momento da
+publicação da aplicação. Não se esqueça disso para não
+ficar tentando acessar uma porta em que não haja
+nada.
+
+3. Abra o REST Console no Google Chrome.
+4. Configure o REST Console para acessar a operação para listar
+todos os produtos que foram cadastrados no código de
+inicialização (método Seed da classe Configuration
+localizado na pasta
+Migrations ), pelo endereço
+http://localhost:55565/api/products .
+5. Pressione o botão GET do REST Console.
+
+6.5 TESTANDO O SERVIÇO DE PRODUTOS
+
+71
+
+Nesse momento, o método public IQueryable<Product>
+GetProducts()
+da classe
+ProductController
+será
+executado.
+6. Todos os produtos cadastrados na tabela Products deverão
+ser listados na seção Response do REST Console, em
+formato JSON, como na figura a seguir:
+
+Figura 6.7: Listando os produtos
+
+72
+
+6.5 TESTANDO O SERVIÇO DE PRODUTOS
+
+Repare que a resposta, em formato JSON, traz uma lista de
+produtos, delimitada por [ e ] .
+
+FORMATO JSON
+Se você não está acostumado com o formato JSON,
+acesse seu site (http://json.org/) para aprender como os
+dados são representados.
+Um outro site interessante para ajudar na compreensão
+de dados em formato JSON e também para ajudar a
+montar representações, principalmente de objetos
+complexos,
+é
+o
+Online
+JSON
+Viewer
+(http://jsonviewer.stack.hu/).
+
+7. Para pegar um produto específico pelo seu ID (por exemplo,
+o produto com ID 2), basta fazer uma requisição com o
+método
+GET
+na
+URL
+http://localhost:55565/api/products/2 . Dessa vez, isso
+retornará não uma lista de produtos delimitados por [ e ] ,
+mas sim somente o produto de identificação 2, delimitado por
+{ e } . Essa requisição faz com que o método public
+IHttpActionResult GetProduct(int id) seja executado
+na classe ProductController .
+8. Para criar um novo produto, antes de fazer a requisição POST
+no endereço http://localhost:55565/api/products , é
+necessário configurar o REST Console na seção Target ,
+como na figura a seguir:
+
+6.5 TESTANDO O SERVIÇO DE PRODUTOS
+
+73
+
+Figura 6.8: POST com REST Console
+
+Além disso, é necessário configurar também a sessão Body ,
+principalmente com o que vai no corpo da mensagem, que,
+nesse caso, é o novo produto a ser cadastrado:
+
+Figura 6.9: POST com REST Console - Body
+
+Repare que, no corpo da mensagem de POST a ser enviada,
+há o produto em formato JSON, contendo os campos, com
+exceção do ID do produto, que será gerado automaticamente
+pelo banco de dados:
+{
+"nome": "produto 4",
+"descricao": "novo produto 4",
+"codigo": "COD4",
+"preco": 40.00
+}
+74
+
+6.5 TESTANDO O SERVIÇO DE PRODUTOS
+
+Essa
+
+requisição
+
+faz
+
+com
+
+que
+
+o
+
+método
+
+public
+
+seja
+executado na classe ProductController . Repare que ele
+recebe um parâmetro do tipo Product , que será passado no
+corpo da requisição, com o produto em formato JSON. O
+Web API trata de interpretar o produto em formato JSON e
+passar o parâmetro Product para o método.
+IHttpActionResult PostProduct(Product product)
+
+A resposta dessa requisição será o próprio produto inserido
+em formato JSON, com o ID que ele foi cadastrado no banco.
+9. Depois de inserir um novo produto, repita o passo para listar
+todos os produtos e veja se o novo que você criou já aparece.
+10. Para alterar um produto já existente, basta executar os
+mesmos passos para inserir um novo, porém, fazendo uma
+requisição PUT e passando o ID do produto que deverá ser
+alterado
+na
+URL.
+Por
+exemplo,
+http://localhost:55565/api/products/4 para alterar o
+produto de ID 4. Isso fará com que o método public
+IHttpActionResult
+
+PutProduct(int
+
+id,
+
+Product
+
+seja executado na classe ProductController ,
+alterando o produto com o ID fornecido.
+product)
+
+11. Por fim, para excluir um produto existente, faça uma
+requisição DELETE passando o ID do produto a ser apagado
+na
+URL.
+Por
+exemplo,
+http://localhost:55565/api/products/2 para apagar o
+produto de ID 2. Isso fará com que o método public
+IHttpActionResult
+DeleteProduct(int
+id)
+seja
+executado na classe ProductController . O produto
+excluído será retornado como resposta, juntamente com o
+código HTTP 200 OK.
+
+6.5 TESTANDO O SERVIÇO DE PRODUTOS
+
+75
+
+6.6 VISUALIZANDO O BANCO DE DADOS DA
+APLICAÇÃO
+Por meio do Visual Studio, é possível visualizar o banco de
+dados da aplicação Exemplo2 pela ferramenta SQL Server
+Object Explorer , que permite realizar qualquer tipo de operação
+nas tabelas e em seus dados, como uma ferramenta cliente de banco
+de dados comum. Para acessá-la, proceda com os passos a seguir:
+1. No Visual Studio, acesse o menu
+Object Explorer .
+
+View -> SQL Server
+
+2. Na janela que se abrir, expanda os itens até ficar como na
+figura a seguir:
+
+Figura 6.10: Visualizando o banco de dados
+
+Como você pode notar, a tabela Products está presente
+nessa listagem, assim como a tabela __MigrationHistory ,
+responsável pelo controle da execução dos códigos de
+migração (como foi visto neste capítulo). No capítulo 8.
+76
+
+6.6 VISUALIZANDO O BANCO DE DADOS DA APLICAÇÃO
+
+Publicando no Windows Azure e alterando o serviço de
+produtos, o funcionamento da tabela __MigrationHistory
+será melhor detalhado.
+3. Para visualizar os dados da tabela Products (ou seja, os
+produtos que lá estão cadastrados), clique com o botão direito
+sobre ela e acesse o menu View Data . Uma janela como da
+figura a seguir será mostrada, contendo todos os produtos
+cadastrados nessa tabela:
+
+Figura 6.11: Visualizando os produtos cadastrados
+
+Provavelmente, haverá dados diferentes na sua tabela, se você
+cadastrou, alterou ou apagou produtos durante os
+procedimentos de testes do serviço de gerenciamento de
+produtos. Nessa tela, é possível realizar qualquer tipo de
+operação, como inclusão, alteração ou exclusão de dados.
+Vale ressaltar que esses dados estão armazenados na sua
+máquina local de desenvolvimento, pois nada ainda foi publicado
+no Windows Azure relativo ao projeto Exemplo2 . Porém, no
+capítulo 9. Gerenciando recursos criados no Windows Azure, será
+possível acessar o banco de dados da aplicação que será criado no
+Windows Azure, também através do Visual Studio.
+
+6.7
+
+DOCUMENTAÇÃO
+
+DO
+
+SERVIÇO
+
+6.7 DOCUMENTAÇÃO DO SERVIÇO DE PRODUTOS COM WADL
+
+DE
+77
+
+PRODUTOS COM WADL
+Como já foi mostrado no capítulo 2. Como depurar o projeto
+localmente com o IIS Express, o projeto criado com o Web API gera
+uma página de documentação para cada serviço criado. Agora que o
+novo serviço de gerenciamento de produtos foi adicionado no
+projeto Exemplo2 , acesse a página de Help da aplicação para ver
+a documentação referente a esse novo serviço.
+Com o Web API, também é possível adicionar suporte à geração
+do WADL (Web Application Description Language), que é uma nova
+forma para contratos de serviços REST, bem difundida e com
+suporte de várias ferramentas e IDEs. Para fazer isso, realize os
+seguintes passos:
+1. Instale o pacote para geração do WADL no Package
+Manager Console , através do comando: Install-Package
+leeksnet.AspNet.WebApi.Wadl .
+2. Compile a aplicação e execute-a. Se acontecer o seguinte erro,
+dependendo da versão da biblioteca do WADL:
+Severity
+Code
+Description
+Project
+File
+Line
+Error
+CS0260
+Missing partial modifier on declaration o
+f type 'HelpController'; another partial declaration of this
+type exists
+Exemplo2
+C:\web_api\WebAPI\Exemplo2\Areas
+\HelpPage\Controllers\HelpController.cs
+12
+
+Dê um duplo clique na linha com o erro e altere a declaração
+da classe
+HelperController
+para
+partial class
+HelpController : Controller .
+3. Acesse a URL /help/wadl para ver o contrato de todos os
+serviços criados.
+4. Para excluir algum serviço ou operação da página de Help e
+do WADL, basta adicionar a seguinte linha na declaração da
+classe ou no método: [ApiExplorerSettings(IgnoreApi =
+78
+
+6.7 DOCUMENTAÇÃO DO SERVIÇO DE PRODUTOS COM WADL
+
+CAPÍTULO 7
+
+LINQ, LAMBDA E
+VALIDAÇÃO DE CAMPOS
+
+Imagine que você precise criar uma operação no serviço de
+produtos para retornar um produto usando seu código como chave
+de pesquisa. Como isso pode ser feito do ponto de vista do código
+que realiza a pesquisa no banco? Utilizando LINQ e Lambda!
+Agora pense na situação em que você deseja validar o tamanho
+máximo da string do atributo descrição , ou ainda, definir valores
+limites inferiores e superiores para o preço . No Web API, isso
+pode ser feito simplesmente com anotações no modelo de dados do
+produto.
+Este capítulo explica isso e alguns truques a mais que
+economizam muita escrita de código!
+
+7.1 LINQ E LAMBDA
+LINQ (Language-Integrated Query) é uma característica do C#
+que permite que dados sejam buscados ou filtrados pela escrita de
+códigos. Isso pode ser feito de duas formas: como queries e como
+fluent API*.
+Repare
+
+no
+
+método
+ProductController :
+
+GetProduct(int
+
+// GET: api/Products/5
+80
+
+7 LINQ, LAMBDA E VALIDAÇÃO DE CAMPOS
+
+id)
+
+de
+
+[ResponseType(typeof(Product))]
+public IHttpActionResult GetProduct(int id)
+{
+Product product = db.Products.Find(id);
+if (product == null)
+{
+return NotFound();
+}
+return Ok(product);
+}
+
+A linha de código que consulta o produto no banco, baseado em
+seu ID, é uma chamada utilizando LINQ do tipo fluent API. Ela usa
+métodos prontos para executar operações mais comuns.
+Esse método também poderia ser escrito utilizando a linguagem
+de queries, como no trecho a seguir:
+// GET: api/Products/5
+[ResponseType(typeof(Product))]
+public IHttpActionResult GetProduct(int id)
+{
+var product = from p in db.Products
+where p.Id == id
+select p;
+if (product == null)
+{
+return NotFound();
+}
+return Ok(product);
+}
+
+E ainda poderia usar um outro método do tipo fluent API, como
+no trecho a seguir:
+// GET: api/Products/5
+[ResponseType(typeof(Product))]
+public IHttpActionResult GetProduct(int id)
+{
+var product = db.Products.Where(p => p.Id == id);
+if (product == null)
+{
+7.1 LINQ E LAMBDA
+
+81
+
+public string descricao { get; set; }
+[Required]
+public string codigo { get; set; }
+public decimal preco { get; set; }
+}
+}
+
+A anotação [Required] significa que os campos são de
+preenchimento obrigatório. Se um POST for feito para a criação de
+um novo produto, a seguinte mensagem será retornada pela
+aplicação, com o código HTTP 400 Bad Request :
+{
+"Message": "The request is invalid.",
+"ModelState": {
+"product.nome": ["O campo nome é obrigatório."]
+}
+}
+
+Essa mensagem de resposta foi gerada pelo método que trata a
+operação em questão, como pode ser visto no trecho:
+// POST: api/Products
+[ResponseType(typeof(Product))]
+public IHttpActionResult PostProduct(Product product)
+{
+if (!ModelState.IsValid)
+{
+return BadRequest(ModelState);
+}
+db.Products.Add(product);
+db.SaveChanges();
+return CreatedAtRoute("DefaultApi", new { id = product.Id }, p
+roduct);
+}
+
+É feito um teste logo na entrada do método para verificar se o
+modelo de dados está dentro do que foi definido. Caso não esteja, a
+resposta será com o código HTTP 400 Bad Request , com a
+mensagem gerada pela serialização do objeto ModelState , que
+7.2 VALIDAÇÃO DO MODELO E SEUS CAMPOS
+
+83
+
+}
+
+7.3 CONCLUSÃO
+Algumas técnicas no Web API, se aprendidas e usadas
+corretamente, fazem com que o desenvolvedor escreva menos
+código para realizar as mesmas tarefas. Apesar de muitos
+programadores adorarem escrever códigos (e até alguns se
+orgulharem pela sua complexidade), é importante se lembrar de
+que: linha de código = tempo = dinheiro .
+Recursos como LINQ e Lambda podem ser usados para realizar
+consultas complexas, escrevendo-se muito menos código. Da
+mesma forma, as anotações nos atributos da classe de modelo, como
+foi mostrado no modelo de produtos, utilizam recursos poderosos
+de validação que já estão presentes no framework do Web API,
+deixando o desenvolvedor mais preocupado com a sua lógica de
+negócio.
+No próximo capítulo, serão mostrados conceitos importantes
+para a publicação de um projeto no Windows Azure contendo um
+banco de dados. Também será visto como fazer alterações no
+modelo de produtos, por exemplo, inserção de novos campos e
+criação de anotações, utilizando as ferramentas do Entity
+Framework para que tais alterações se reflitam no banco.
+
+7.3 CONCLUSÃO
+
+85
+
+CAPÍTULO 8
+
+PUBLICANDO NO
+WINDOWS AZURE E
+ALTERANDO O SERVIÇO
+DE PRODUTOS
+
+Até o momento, os serviços foram desenvolvidos, executados e
+testados na máquina local. Entretanto, é necessário publicá-los no
+Windows Azure para que possam ser acessados por qualquer
+máquina conectada à internet.
+
+8.1 PUBLICANDO O SERVIÇO DE PRODUTOS
+NO WINDOWS AZURE
+Para publicar o recém-criado serviço de gerenciamento de
+produtos da aplicação Exemplo2 no Windows Azure, assim como
+os códigos de inicialização e criação da tabela Products , execute
+os seguintes passos:
+1. Certifique-se de ter compilado toda a aplicação.
+2. Clique com o botão direito sobre o projeto Exemplo2
+acesse a opção Publish .
+
+e
+
+3. Na tela que aparecerá, acesse a opção Settings .
+4. Configure a conexão com o banco de dados, acessando a
+86
+8 PUBLICANDO NO WINDOWS AZURE E ALTERANDO O SERVIÇO DE
+PRODUTOS
+
+primeira opção em Exemplo2Context , e marque a opção
+Execute Code First Migrations , que instrui a execução
+do código de criação da tabela Products . A tela deverá ficar
+parecida com a figura a seguir. Essa opção deverá ser
+desmarcada quando for publicar uma alteração no projeto que
+não necessite executar os códigos de inicialização:
+
+Figura 8.1: Publicando o serviço de gerenciamento de produtos no Windows Azure
+
+5. Para finalizar, clique no botão Publish e aguarde até que o
+navegador abra com o site já publicado.
+Após o site ter sido publicado, será possível acessar todas as
+operações do serviço de gerenciamento de produtos pela URL
+api/product . Os produtos que foram criados dentro do método
+Seed deverão estar cadastrados na tabela do banco no Windows
+Azure e acessíveis pelas operações do serviço.
+Para cadastrar um outro produto na tabela, pode-se fazer um
+8.1 PUBLICANDO O SERVIÇO DE PRODUTOS NO WINDOWS AZURE
+
+87
+
+8.2 ALTERANDO O MODELO DE PRODUTOS
+Alterações na classe de um modelo de dados podem acontecer,
+principalmente, em tempo de desenvolvimento e manutenção.
+Além disso, outros modelos podem ser criados, e tais alterações
+devem ser refletidas no banco de dados.
+Quando se trabalha com o Entity Framework Code First
+Migrations, essa tarefa fica mais simples, pois sempre que um
+modelo é alterado ou outro é adicionado, basta criar um novo
+código de migração, dando um novo nome a ele (por exemplo, pelo
+comando: add-migration AlteracaoEmProduto ).
+Isso fará com que um novo código de migração, com o final do
+nome contendo AlteracaoEmProduto , seja criado na pasta
+Migrations do projeto. Ele conterá todas as alterações feitas em
+todos os modelos, desde a última execução do comando addmigration .
+Em seguida, basta executar o comando: update-database .
+Isso fará com que o banco de dados local seja atualizado, e o método
+Seed seja executado novamente.
+Toda aplicação que for desenvolvida com o Code First
+Migrations terá uma tabela em seu banco de dados chamada
+__MigrationHistory . Ela será responsável por armazenar os
+códigos de migração que já foram executados naquele banco.
+Com isso, se ela estiver vazia ou não existir, significa que todas
+as alterações deverão ser aplicadas no banco. Mas, caso ela já
+contenha algum registro de execução, somente será executado o que
+ela ainda não possuir, deixando o banco de dados atualizado com as
+últimas alterações. Veja na figura a seguir um exemplo dessa tabela:
+
+8.2 ALTERANDO O MODELO DE PRODUTOS
+
+89
+
+CAPÍTULO 9
+
+GERENCIANDO RECURSOS
+CRIADOS NO WINDOWS
+AZURE
+
+Durante o desenvolvimento e testes de uma aplicação Web API
+na máquina local, é possível acessar a base de dados, como vimos no
+capítulo 6. Serviço de gerenciamento de produtos. De forma
+semelhante, o mesmo pode ser feito para acessar a base de dados de
+uma aplicação hospedada no Windows Azure.
+
+9.1 GERENCIANDO O BANCO DE DADOS
+PELO WINDOWS AZURE
+Uma das formas de se acessar o banco de dados no Windows
+Azure é através do console, que fornece uma enorme variedade de
+ferramentas de monitoração dos sites, banco de dados e todos os
+serviços que ele oferece. Para acessar a ferramenta de gerenciamento
+de tabelas de bancos de dados, execute os seguintes passos:
+1. Abra o console do Windows Azure.
+2. Acesse o bando de dados que foi criado para a aplicação
+Exemplo2 .
+
+92
+
+9 GERENCIANDO RECURSOS CRIADOS NO WINDOWS AZURE
+
+Figura 9.1: Banco de dados no Windows Azure
+
+3. Clique no botão Gerenciar , na parte inferior da tela.
+
+Figura 9.2: Gerenciar banco de dados no Windows Azure
+
+4. Provavelmente, o Windows Azure questionará você para
+adicionar o seu endereço IP do público nas regras de acesso ao
+firewall do banco de dados. Isso é uma proteção para evitar
+que qualquer máquina acesse o banco de dados, deixando
+apenas que a aplicação vinculada a ele tenha permissão de
+acesso. Aceite a solicitação para poder acessar o banco de
+dados pelo console do Windows Azure.
+5. Assim que a tela de login aparecer, entre com suas credenciais
+de acesso a esse banco de dados, que foram criadas no
+capítulo 6. Serviço de gerenciamento de produtos, na seção
+Criação do serviço de gerenciamento de produtos.
+
+9.1 GERENCIANDO O BANCO DE DADOS PELO WINDOWS AZURE
+
+93
+
+Figura 9.3: Acesso ao banco de dados no Windows Azure
+
+6. Na tela de administração do banco de dados, há várias
+ferramentas, dentre elas a que se pode ver e alterar a estrutura
+da tabela Products , que está acessível no menu Design , no
+canto inferior esquerdo.
+7. Clique no botão Editar da linha que contém a tabela
+Products para abrir a tela de gerenciamento dessa tabela,
+como mostra a figura:
+
+94
+
+9.1 GERENCIANDO O BANCO DE DADOS PELO WINDOWS AZURE
+
+Figura 9.4: Edição da tabela Products no Windows Azure
+
+Nessa aba Colunas , é possível incluir ou excluir colunas, além
+de alterar de alterar seu nome, tipo, valor padrão e outras opções.
+Na aba Índices e Chaves , é possível ver um diagrama da
+tabela e os relacionamentos, caso existam, com outras tabelas.
+
+Figura 9.5: Índices e chaves da tabela Products no Windows Azure
+
+Na última aba, Dados , é onde os dados da tabela podem ser
+alterados, incluídos ou excluídos.
+
+9.1 GERENCIANDO O BANCO DE DADOS PELO WINDOWS AZURE
+
+95
+
+Figura 9.6: Dados da tabela Products no Windows Azure
+
+Nessa aba também podem-se fazer consultas nos dados da
+tabela.
+A ferramenta de administração de banco de dados do Windows
+Azure, embora simples, oferece bons recursos para consultas
+rápidas por meio de um navegador Web comum, sem a instalação
+de nenhum software adicional, a não ser o plugin do Silverlight,
+tecnologia utilizada na construção da interface gráfica.
+
+9.2 CONFIGURANDO O VISUAL STUDIO PARA
+ACESSAR O BANCO DE DADOS NO
+WINDOWS AZURE
+O Visual Studio também possui uma ferramenta para gerenciar
+bancos de dados criados no Windows Azure. Para acessá-la, execute
+os passos a seguir:
+1. No Visual Studio, acesse o menu Server Explorer .
+2. Expanda o item Azure .
+3. Expanda o subitem SQL Databases .
+
+96
+9.2 CONFIGURANDO O VISUAL STUDIO PARA ACESSAR O BANCO DE
+DADOS NO WINDOWS AZURE
+
+Figura 9.7: Server Explorer - SQL Databases
+
+4. Selecione o banco de dados desejado na lista exibida.
+5. Com o botão direito, selecione a opção Open in SQL Server
+Object Explorer .
+6. Poderá aparecer uma tela solicitando a inserção do seu
+endereço IP público nas regras de firewall do banco de dados.
+Caso apareça, confirme a ação.
+7. Na próxima tela, confirme os dados e digite as credenciais de
+acesso ao banco de dados.
+
+9.2 CONFIGURANDO O VISUAL STUDIO PARA ACESSAR O BANCO DE DADOS NO
+WINDOWS AZURE
+97
+
+Figura 9.8: Credenciais e dados de acesso
+
+8. Na aba SQL Server Object Explorer deverá aparecer uma
+tela semelhante à figura:
+
+98
+9.2 CONFIGURANDO O VISUAL STUDIO PARA ACESSAR O BANCO DE
+DADOS NO WINDOWS AZURE
+
+Figura 9.9: SQL Server Object Explorer
+
+Repare que a tabela __MigrationHistory também está
+presente no banco de dados da aplicação, armazenando todas as
+migrações que ocorreram nas tabelas.
+Essa ferramenta possui todos os recursos para gerenciamento de
+banco dados que foram mostrados no capítulo 6. Serviço de
+gerenciamento de produtos, na seção Visualizando o banco de dados
+da aplicação.
+
+9.3 CONCLUSÃO
+Neste capítulo, você aprendeu a acessar o banco de dados
+hospedados no Windows Azure pelo seu console e também pelo
+Visual Studio. Esses conhecimentos são importantes e
+9.3 CONCLUSÃO
+
+99
+
+indispensáveis, tanto para o desenvolvedor quanto para o
+administrador do sistema.
+O próximo capítulo será muito desafiador! Você começará a
+construir a aplicação da loja virtual para valer! Também será
+apresentado algo essencial para aplicações Web: autenticação
+OAuth2 para acesso aos serviços REST. Ainda serão apresentados
+outros conceitos interessantes do Web API. Prepare-se e continue
+aproveitando a leitura e os exercícios do livro.
+
+100
+
+9.3 CONCLUSÃO
+
+10.1 CONCEITOS DE AUTENTICAÇÃO E
+AUTORIZAÇÃO DE USUÁRIOS EM SERVIÇOS
+REST
+Na próxima seção, serão explicados os passos para a criação de
+um novo projeto para utilizar autenticação de usuários no Web API.
+Entretanto, antes é necessário apresentar alguns conceitos.
+Na segunda tela de criação de projetos no Visual Studio, há uma
+opção para a escolha do tipo de autenticação que será usada no
+projeto, como pode ser visto na figura:
+
+Figura 10.1: Escolha do tipo de autenticação
+
+Será utilizado o tipo Individual User Accounts , que permite
+o uso de uma base de dados própria para o armazenamento dos
+usuários e os papéis que eles podem assumir. Dessa forma, o Web
+102
+10.1 CONCEITOS DE AUTENTICAÇÃO E AUTORIZAÇÃO DE USUÁRIOS EM
+SERVIÇOS REST
+
+Figura 10.2: Authorization and resource server. Fonte: http://www.asp.net/webapi/overview/security/individual-accounts-in-web-api
+
+10.2
+CRIAÇÃO
+DO
+PROJETO
+COM
+AUTENTICAÇÃO E AUTORIZAÇÃO DE
+USUÁRIOS UTILIZANDO OAUTH2
+Para criar o projeto segundo o modelo proposto neste capítulo,
+execute os passos a seguir:
+1. No Visual Studio, crie um novo projeto com o nome que você
+desejar. Aqui ele será chamado de Exemplo3 .
+2. Escolha a opção Individual Users Accounts .
+3. Marque a opção Host in the cloud .
+4. Clique em OK para criar o projeto.
+5. Configure as opções de hospedagem do projeto no Windows
+Azure, com um novo site com um banco de dados. Se tiver
+dúvidas de como fazer isso, volte ao capítulo 6. Serviço de
+gerenciamento de produtos, onde esses passos são detalhados.
+6. Clique em OK , e aguarde até que o projeto e os recursos no
+Windows Azure sejam criados.
+O projeto montado com esse template possui as seguintes partes
+104
+10.2 CRIAÇÃO DO PROJETO COM AUTENTICAÇÃO E AUTORIZAÇÃO DE
+USUÁRIOS UTILIZANDO OAUTH2
+
+Isso diz que as requisições de acesso a esse serviço e,
+consequentemente, a suas operações devem ser autorizadas.
+Posteriormente, serão detalhadas algumas outras opções de
+utilização dessa anotação.
+
+10.3 ACESSANDO OPERAÇÕES DE UM
+SERVIÇO COM AUTENTICAÇÃO OAUTH2
+COM O REST CONSOLE
+Para acessar algum serviço autenticado nesse projeto que foi
+criado, é necessário primeiramente registrar um usuário. Utilizando
+o REST Console, execute os passos a seguir. Se tiver dúvidas de
+como configurar o REST Console, volte ao capítulo 2. Como
+depurar o projeto localmente com o IIS Express, na seção Acessando o
+serviço Values com o REST Console.
+1. Execute a aplicação Exemplo3 no Visual Studio, que fará
+com que ela rode no IIS Express da sua máquina de
+desenvolvimento.
+2. Acesse a operação api/Account/Register , com o método
+HTTP POST e com os dados do usuário a ser cadastrado,
+usando um modelo como no exemplo a seguir:
+{
+"Email": "matilde@siecola.com",
+"Password": "Matilde#7",
+"ConfirmPassword": "Matilde#7"
+}
+
+A figura seguinte mostra como a seção Target do REST
+Console deve ser configurada:
+
+10.3 ACESSANDO OPERAÇÕES DE UM SERVIÇO COM AUTENTICAÇÃO OAUTH2
+COM O REST CONSOLE
+107
+
+Figura 10.5: Criação de usuário - Target
+
+A figura seguinte mostra como a seção
+Console deve ser configurada:
+
+Body
+
+do REST
+
+Figura 10.6: Criação de usuário - Body
+
+3. A operação deve retornar o código HTTP 200 OK , indicando
+que o usuário foi registrado. Nesse momento, as tabelas de
+controle de usuários e papéis foram criadas no banco de
+dados.
+
+108
+10.3 ACESSANDO OPERAÇÕES DE UM SERVIÇO COM AUTENTICAÇÃO
+OAUTH2 COM O REST CONSOLE
+
+Figura 10.7: Tabelas de papéis e usuários
+
+Em especial, a tabela AspNetUsers , que contém os usuários
+que podem ter acesso à aplicação. Para acessar um serviço
+autenticado, é necessário obter o token de acesso. Para isso,
+continue executando os passos.
+4. Acesse a operação /token com o método HTTP POST . No
+corpo da mensagem, passe a seguinte informação:
+grant_type=password&username=matilde@siecola.com&p
+assword=Matilde#7
+
+5. Guarde a resposta da operação, que deverá ter o seguinte
+formato:
+{
+"access_token": "token",
+"token_type": "bearer",
+"expires_in": 1209599,
+"userName": "matilde@siecola.com",
+".issued": "Thu, 24 Dec 2015 12:56:41 GMT",
+".expires": "Thu, 07 Jan 2016 12:56:41 GMT"
+}
+
+Nesse momento, o token está armazenado no servidor de
+autorização, com um tempo de expiração. Ele deverá ser
+10.3 ACESSANDO OPERAÇÕES DE UM SERVIÇO COM AUTENTICAÇÃO OAUTH2
+COM O REST CONSOLE
+109
+
+armazenado pelo cliente que for acessar os serviços
+autenticados da aplicação.
+Como exemplo, para acessar o método GET do serviço
+Values pelo REST Console, execute os passos a seguir:
+1. No REST Console, adicione um header às requisições,
+chamado
+Authorization . Como valor, coloque a
+informação Bearer , acrescentando o access token
+recebido no passo anterior.
+
+Figura 10.8: Acessando o serviço Values com autenticação
+
+2. Configure o REST Console para acessar a operação
+api/values com o método HTTP GET . Essa requisição
+deverá ser autorizada pela aplicação, e a resposta, contendo os
+dois valores ["value1", "value2"] , deverá ser enviada
+para o REST Console.
+
+110
+10.3 ACESSANDO OPERAÇÕES DE UM SERVIÇO COM AUTENTICAÇÃO
+OAUTH2 COM O REST CONSOLE
+
+PUBLICAÇÃO NO WINDOWS AZURE
+Antes de prosseguir com os próximos passos da próxima seção,
+publique a aplicação no Windows Azure e crie um usuário lá,
+da mesma forma como foi feito na máquina local de
+desenvolvimento. Isso será importante para que as tabelas
+sejam criadas no banco de dados hospedado no Windows
+Azure.
+
+10.4 CRIANDO PAPÉIS E O USUÁRIO ADMIN
+Em uma aplicação Web, com autenticação e usuários, é
+interessante ter pelo menos dois papéis, por exemplo: USER , com
+permissões restritas; e ADMIN , com permissões totais.
+Os passos a seguir detalharão a criação dos papéis na aplicação
+Exemplo3 :
+1. Abra a tabela AspNetRoles , que armazena os possíveis
+papéis que os usuários podem assumir, e crie os papéis USER
+e ADMIN , colocando índices distintos para cada um deles.
+2. Abra a tabela AspNetUsers , que armazena os usuários
+criados, e copie o valor do campo ID e do usuário que foi
+criado na seção anterior.
+3. Abra a tabela AspNetUserRoles , que associa os usuários
+com seus papéis, e faça a associação do usuário criado na
+seção anterior com ID do papel ADMIN .
+
+10.4 CRIANDO PAPÉIS E O USUÁRIO ADMIN
+
+111
+
+CRIAÇÃO DOS PAPÉIS DE USUÁRIO NO WINDOWS AZURE
+Antes de prosseguir com os próximos passos da próxima seção,
+execute os passos descritos nessa seção no banco de dados do
+Windows Azure, para que ele também passe a ter os papéis de
+usuários criados na máquina local de desenvolvimento.
+Se você tiver dúvidas de como acessar o banco de dados
+hospedado no Windows Azure por meio do Visual Studio,
+consulte o capítulo 9. Gerenciando de recursos criados no
+Windows Azure, na seção Configurando o Visual Studio para
+acessar o banco de dados no Windows Azure.
+
+Na próxima seção, será mostrado como fazer com que somente
+o usuário ADMIN crie novos usuários, e como fazê-lo somente com
+o papel USER .
+
+10.5 ALTERANDO O MÉTODO DE REGISTRO
+PARA CADASTRAR USUÁRIOS COM O PAPEL
+USER
+O método criado pelo template para registro de usuários não
+restringe o usuário a um papel, além de permitir que qualquer
+usuário faça tal operação.
+Nos passos a seguir, será demonstrado como fazer com que a
+operação de registro de usuário só seja acessada por usuários do tipo
+ADMIN , e também fazer com que ela crie usuários atrelando-os ao
+papel USER . Para isso, execute os passos a seguir:
+1. Em
+
+, no método
+AllowAnonymous pela
+
+Controllers\AccountController.cs
+
+Register
+
+, substitua a anotação
+
+112
+10.5 ALTERANDO O MÉTODO DE REGISTRO PARA CADASTRAR USUÁRIOS
+COM O PAPEL USER
+
+anotação [Authorize(Roles = "ADMIN")] . Isso fará com
+que somente usuários registrados com o papel ADMIN possam
+acessar essa operação. Há uma seção mais adiante que detalha
+esse tipo de anotação e suas variações.
+2. Altere o método, citado no passo anterior, para incluir o
+código de cadastramento do usuário com o papel USER ,
+como mostrado no trecho a seguir:
+// POST api/Account/Register
+[Authorize(Roles = "ADMIN")]
+[Route("Register")]
+public async Task<IHttpActionResult> Register(RegisterBindi
+ngModel model)
+{
+if (!ModelState.IsValid)
+{
+return BadRequest(ModelState);
+}
+var user = new ApplicationUser() { UserName = model.Ema
+il, Email = model.Email };
+IdentityResult result = await UserManager.CreateAsync(u
+ser, model.Password);
+if (!result.Succeeded)
+{
+return GetErrorResult(result);
+}
+else
+{
+var addToRoleResult = await UserManager.AddToRoleAs
+ync(user.Id, "USER");
+if (!addToRoleResult.Succeeded)
+{
+return GetErrorResult(result);
+}
+}
+return Ok();
+}
+
+O trecho do else ” do segundo if foi adicionado para
+10.5 ALTERANDO O MÉTODO DE REGISTRO PARA CADASTRAR USUÁRIOS COM O
+PAPEL USER
+113
+
+seguinte.
+Como já existem algumas tabelas na aplicação Exemplo3 , o
+processo de deploy da aplicação com o Code First Migration
+será ligeiramente diferente. Para adicionar o serviço de CRUD de
+produtos, execute os passos a seguir:
+1. Crie a classe Product de modelo do produto, na pasta
+Models , como o trecho a seguir:
+public class Product
+{
+public int Id { get; set; }
+[Required(ErrorMessage = "O campo nome é obrigatório")]
+public string nome { get; set; }
+public string descricao { get; set; }
+[Required]
+[StringLength(8, ErrorMessage = "O tamanho máximo do có
+digo é 8 caracteres")]
+public string codigo { get; set; }
+[Range(10, 999, ErrorMessage = "O preço deverá ser entr
+e 10 e 999.")]
+public decimal preco { get; set; }
+[StringLength(80, ErrorMessage = "O tamanho máximo da u
+rl é 80 caracteres")]
+public string Url { get; set; }
+}
+
+Lembre-se
+
+de
+
+adicionar
+
+System.ComponentModel.DataAnnotations;
+
+using
+
+no início do
+
+arquivo.
+2. Compile toda a aplicação.
+3. Adicione um novo controller para o serviço de CRUD de
+produtos. Se você tiver dúvidas de como fazer isso, consulte o
+capítulo 6. Serviço de gerenciamento de produtos, do passo 9 ao
+10.6 ADICIONANDO O SERVIÇO DE PRODUTOS COM AUTENTICAÇÃO
+
+115
+
+13 da seção Criação do serviço de gerenciamento de produtos.
+4. Nesse momento, crie um novo contexto, por exemplo, com o
+nome Exemplo3Context , que servirá para as outras tabelas
+além das que já existem para autenticação de usuário.
+5. Recompile a aplicação novamente.
+6. Habilite o
+
+Code
+
+First
+
+Migrations
+
+enable-migrations
+
+pelo comando:
+-ContextTypeName
+
+. Este foi o contexto
+criado durante a criação do controller de produtos, pois já
+existe um outro contexto responsável pelas tabelas de usuários
+e papéis. Por isso, agora é necessário especificar qual contexto
+será usado nesse comando, por meio do parâmetro
+ContextTypeName .
+Exemplo3.Models.Exemplo3Context
+
+7. Digite o comando add-migration AddProducts para a
+criação do código responsável pela tabela de produtos.
+8. Se desejar, preencha o método Seed de Configuration.cs
+para criar alguns produtos na tabela, como no trecho a seguir:
+protected override void Seed(Exemplo3.Models.Exemplo3Contex
+t context)
+{
+context.Products.AddOrUpdate(
+p => p.Id,
+new Product { Id = 1, nome = "produto 1", codigo =
+"COD1", descricao = "descrição produto 1", preco = 10, Url =
+"www.siecolasystems.com/produto1" },
+new Product { Id = 2, nome = "produto 2", codigo =
+"COD2", descricao = "descrição produto 2", preco = 20, Url =
+"www.siecolasystems.com/produto2" },
+new Product { Id = 3, nome = "produto 3", codigo =
+"COD3", descricao = "descrição produto 3", preco = 30, Url =
+"www.siecolasystems.com/produto3" }
+);
+}
+
+9. Agora, execute o comando update-database para que os
+116
+
+10.6 ADICIONANDO O SERVIÇO DE PRODUTOS COM AUTENTICAÇÃO
+
+passos realizados sejam aplicados no banco local.
+10. Execute a aplicação e acesse o serviço de produtos.
+Repare que, ao acessar o serviço de produtos, nenhuma
+autenticação foi exigida, mesmo com todo o mecanismo já criado na
+aplicação. Isso se deve ao fato de que, para que um serviço ou
+operação exija autenticação, é necessário colocar anotações
+explícitas, como será visto na seção seguinte.
+Com os passos executados, foi criado um novo contexto para a
+aplicação Exemplo3 , à parte do que já existia, de controle de
+usuários e papéis, utilizado pelo mecanismo de autenticação. Isso
+pode ser visto na figura a seguir:
+
+10.6 ADICIONANDO O SERVIÇO DE PRODUTOS COM AUTENTICAÇÃO
+
+117
+
+Figura 10.9: Contextos da aplicação Exemplo3
+
+Isso traz uma grande vantagem, pois qualquer alteração que for
+feita a partir de agora, no modelo de produtos ou em outros que
+forem criados, não afetará as tabelas já existentes utilizadas pelo
+mecanismo de autenticação.
+Para publicar essa aplicação no Windows Azure, execute os
+seguintes passos:
+1. Tenha certeza de ter recompilado toda a aplicação.
+2. Clique com o botão direito sobre a aplicação e escolha a opção
+118
+
+10.6 ADICIONANDO O SERVIÇO DE PRODUTOS COM AUTENTICAÇÃO
+
+Publish
+
+.
+
+3. Antes de publicar, vá à aba de Settings .
+4. Repare que está diferente, pois agora a aplicação possui dois
+contextos:
+ApplicationDefaultContext: usado para as tabelas do
+mecanismo de autenticação.
+Exemplo3Context: usado para as demais tabelas da
+aplicação, como a de produtos.
+
+Figura 10.10: Publicação de Exemplo3
+
+5. Marque a opção Execute Code First Migrations para o
+contexto Exemplo3Context , que fará com que a tabela de
+produtos seja criada e preenchida com as entidades iniciais
+escritas no método Seed de Configuration.cs , sem
+alterar as tabelas do outro contexto.
+
+10.6 ADICIONANDO O SERVIÇO DE PRODUTOS COM AUTENTICAÇÃO
+
+119
+
+mais operações do que as que serão criadas nesse exemplo. Porém, o
+que será mostrado é a base para uma evolução maior, mas que ainda
+garantirá uma boa dose de desafios.
+O intuito deste capítulo é mostrar como ter modelos, por
+exemplo, como o de pedidos, com referências a outros modelos,
+assim como o de itens, que possui uma referência para o modelo de
+produtos. E ainda, que o modelo de item possui uma chave para a
+identificação única do pedido, para saber a qual ele pertence.
+Para maiores informações sobre relacionamentos, propriedades
+de navegação e chaves estrangeiras, consulte a referência sobre o
+assunto em http://msdn.microsoft.com/en-us/data/jj713564.aspx.
+O primeiro modelo a ser criado será o de itens do pedido. Para
+isso, execute os passos a seguir:
+1. Crie a classe OrderItem na pasta Models , de acordo com o
+trecho de código:
+public class OrderItem
+{
+public int Id { get; set; }
+// Foreign Key
+public int ProductId { get; set; }
+// Navigation property
+public virtual Product Product { get; set; }
+public int OrderId { get; set; }
+}
+
+Não será necessário criar um controlador para essa classe, pois
+não haverá um serviço que acessa diretamente os itens. O
+acesso será feito por meio do serviço de pedidos. Porém,
+existirá uma tabela para armazenar esses itens.
+Repare que o modelo possui um objeto do tipo Product , que
+apenas faz uma referência ao produto que possui dentro do
+11 CRIANDO O SERVIÇO DE PEDIDOS
+
+125
+
+item do pedido, assim como o ProductId , que será a chave
+estrangeira para a tabela de produtos. A propriedade
+OrderId também será uma chave estrangeira para a tabela
+de pedidos.
+2. Crie a classe Order na pasta Models , de acordo com o
+trecho de código:
+public class Order
+{
+public Order()
+{
+this.OrderItems = new HashSet<OrderItem>();
+}
+public int Id { get; set; }
+public string userName { get; set; }
+public decimal precoFrete { get; set; }
+public virtual ICollection<OrderItem> OrderItems { get;
+set; }
+}
+
+Esse modelo é o mais complexo visto até o momento, pois
+possui uma lista de itens de pedidos, representado pela
+OrderItems
+do
+tipo
+propriedade
+ICollection<OrderItem> , que será criada toda vez que um
+objeto do tipo Order for instanciado.
+O funcionamento desse modelo é bem interessante, pois toda
+vez que um pedido for criado contendo uma lista de itens,
+esses serão automaticamente criados na tabela de itens de
+pedidos. Da mesma forma, toda vez que um pedido for
+apagado da tabela, todos os itens que ele possui serão
+apagados da tabela de itens.
+3. Compile toda a solução para certificar-se de não haver erros.
+
+126
+
+11 CRIANDO O SERVIÇO DE PEDIDOS
+
+4. Crie um controlador chamado OrdersController do
+mesmo tipo dos outros que você já criou, tendo como base o
+modelo Order e o contexto Exemplo3Context .
+5. Recompile toda a aplicação.
+add-migration
+6. Execute
+o
+comando
+AddOrderAndOrderItem no Package Manager Console .
+7. Abra o último arquivo criado na pasta Migrations . Você
+pode saber qual foi o último criado pelo início de seu nome,
+que está no formato de data/hora YYYYMMDD (por exemplo,
+20151225 , que é um arquivo do ano 2015, mês 12 do dia 25).
+Esse é o código de criação das tabelas
+Orders
+e
+OrderItems . Repare nesse último, que as chaves estrangeiras
+para a tabela de produtos e pedidos foram criadas, baseadas
+simplesmente nos nomes dos atributos.
+.ForeignKey("dbo.Products", t => t.ProductId, cascadeDelete
+: true)
+.ForeignKey("dbo.Orders", t => t.OrderId, cascadeDelete: tr
+ue)
+
+8. Execute o comando
+Manager Console .
+
+update-database
+
+no
+
+Package
+
+9. Vá ao SQL Server Explorer e veja que as tabelas Orders
+e OrderItems foram criadas.
+10. Adicione alguns dados válidos nas novas tabelas para termos
+um pedido completo com alguns itens.
+11. Execute a aplicação e acesse a URL api/orders para listar
+todos os pedidos existentes. Deverá aparecer uma estrutura
+semelhante à que é exibida a seguir:
+[{
+"OrderItems": [{
+"Product": {
+"Id": 1,
+"nome": "produto 1",
+"descricao": "descrição produto 1",
+11 CRIANDO O SERVIÇO DE PEDIDOS
+
+127
+
+"codigo": "COD1",
+"preco": 10.00,
+"Url": "www.siecolasystems.com/produto1"
+},
+"Id": 1,
+"ProductId": 1,
+"OrderId": 1
+}, {
+"Product": {
+"Id": 2,
+"nome": "produto 2",
+"descricao": "descrição produto 2",
+"codigo": "COD2",
+"preco": 20.00,
+"Url": "www.siecolasystems.com/produto2"
+},
+"Id": 2,
+"ProductId": 2,
+"OrderId": 1
+}],
+"Id": 1,
+"userName": "doralice@siecola.com",
+"precoFrete": 0.00
+}]
+
+Esse é o JSON de resposta listando todos os pedidos existentes.
+Nesse caso, somente um pedido com dois itens (produtos).
+
+11.1 EXECUÇÃO NO WINDOWS AZURE
+Publique a aplicação no Windows Azure e faça alguns testes
+com o novo serviço de gerenciamento de pedidos, cadastrando e
+excluindo alguns itens e pedidos. Lembre-se de marcar a opção
+Code First Migration na tela de publicação da aplicação.
+
+128
+
+11.1 EXECUÇÃO NO WINDOWS AZURE
+
+ALTERAÇÃO NO SERVIÇO DE PEDIDOS PARA O WINDOWS AZURE
+Para que o serviço de pedidos funcione adequadamente no
+Windows Azure, é necessário realizar uma alteração na
+operação de listagem de todos os pedidos, ou seja, no método
+public IQueryable<Order> GetOrders()
+da classe
+OrdersController .
+
+A alteração necessária na classe OrdersController , na
+verdade, se refere a qualquer operação de um serviço que retorne
+uma lista com objetos complexos, como é o caso do modelo de
+pedidos. É preciso alterar o tipo do retorno do método para List e
+retornar a lista de pedidos com os itens incluídos em cada um deles,
+como pode ser visto no trecho de código:
+public List<Order> GetOrders()
+{
+return db.Orders.Include(order => order.OrderItems).ToList();
+}
+
+Repare que o serviço de pedidos está todo desprotegido, ou seja,
+não exige autenticação de usuário. E ainda, qualquer usuário pode
+apagar ou alterar um pedido de qualquer outro, o que é um absurdo
+se tratando de uma loja virtual! No exercício a seguir, você poderá
+corrigir esses pequenos problemas com algumas anotações e com
+um pouco de código nos métodos que implementam as operações
+do serviço de pedidos.
+
+Exercício proposto 5
+1. Faça com que todas as operações do serviço de pedidos só
+possam ser acessadas por usuários autenticados;
+2. Faça com que a operação de cadastramento de pedidos
+11.1 EXECUÇÃO NO WINDOWS AZURE
+
+129
+
+3.
+4.
+5.
+
+6.
+
+verifique se o usuário cadastrado é o mesmo do pedido;
+Faça com que a operação de listagem de todos os pedidos só
+possa ser acessada por um usuário com papel ADMIN ;
+Faça com que as demais operações só possam ser acessadas
+pelo usuário dono do pedido;
+Obviamente, todas as operações poderão ser acessadas por um
+usuário ADMIN , mesmo que ele não seja o dono de um
+pedido;
+Caso alguma operação seja acessada por um usuário que não
+tenha permissão, retorne com o código
+HTTP 403
+Forbidden .
+
+Você pode encontrar a resolução desse exercício no repositório
+de
+código
+do
+livro,
+no
+endereço:
+https://github.com/siecola/WebAPIBook/.
+
+11.2 CONCLUSÃO
+Parabéns! Você criou o novo serviço de gerenciamento de
+pedidos com um modelo de dados complexo e com
+relacionamentos. Viu como é fácil fazer isso com Web API?
+No próximo capítulo, você aprenderá como criar novas
+operações em um serviço, usando os conceitos de rotas no Web
+API.
+
+130
+
+11.2 CONCLUSÃO
+
+também podendo ser
+HttpDelete e outros.
+
+HttpPost
+
+,
+
+HttpPut
+
+,
+
+Como exemplo, para criar uma nova operação para buscar um
+produto pelo seu nome, execute os passos a seguir:
+1. Acrescente a anotação RoutePrefix na definição da classe
+do serviço de produtos:
+[Authorize]
+[RoutePrefix("api/products")]
+public class ProductsController : ApiController
+{
+private Exemplo3Context db = new Exemplo3Context();
+
+2. Crie o método GetProductByName com as anotações
+HttpGet e Route , como no trecho a seguir:
+[ResponseType(typeof(Product))]
+[HttpGet]
+[Route("byname")]
+public IHttpActionResult GetProductByName(string name)
+{
+var product = db.Products.Where(p => p.nome == name);
+if (product == null)
+{
+return NotFound();
+}
+return Ok(product);
+}
+
+3. Compile e execute a aplicação.
+4. Entre na página de documentação do serviço, e verifique que
+foi adicionada uma nova operação no serviço de produtos,
+que deve ser acessada pela URI api/products/byname?
+name={name} , como no exemplo:
+
+132
+
+12 CRIANDO NOVAS OPERAÇÕES EM SERVIÇOS
+
+Figura 12.1: Acessando nova operação de busca de produto pelo nome
+
+12.1 CONCLUSÃO
+Adicionar novas operações em um serviço é tão simples quanto
+criar um novo método em uma classe. As únicas preocupações a
+mais ficam por conta da definição da URL de acesso, verbo HTTP e
+seus parâmetros.
+O próximo capítulo mostrará como consultar um serviço SOAP
+de dentro de uma operação de um serviço REST. Algo que pode ser
+muito útil, principalmente em integração de sistemas.
+
+12.1 CONCLUSÃO
+
+133
+
+CAPÍTULO 13
+
+CONSULTANDO SERVIÇOS
+SOAP DE UMA APLICAÇÃO
+WEB API
+
+Dentro de uma aplicação Web API, pode ser útil acessar outros
+serviços, principalmente no caso de integração de sistemas. Um
+exemplo é você desejar acessar um serviço disponível na Web para
+fazer algum cálculo, ou simplesmente agregar outras informações na
+resposta da operação do seu serviço REST com Web API.
+Este capítulo mostra os passos para acessar um serviço SOAP
+dos Correios para cálculo de preço e prazo de encomendas. Todas as
+informações sobre esse serviço dos Correios podem ser encontradas
+em http://www.correios.com.br/webservices.
+
+Um serviço SOAP (Simple Object Access Protocol) é uma forma
+diferente de implementação de serviços Web. Um irmão mais
+velho do REST, pode-se assim dizer. Ele possui um contrato,
+chamado WSDL (Web Service Definition Language), no qual
+os modelos de dados e métodos que são providos são definidos.
+Todas as mensagens são trafegadas usando XML, e também
+através de requisições HTTP. Para informações detalhadas
+sobre o SOAP, consulte https://www.w3.org/TR/soap/.
+
+134
+
+13 CONSULTANDO SERVIÇOS SOAP DE UMA APLICAÇÃO WEB API
+
+Para poder acessar esse serviço, siga os seguintes passos:
+1. No projeto Exemplo3 , clique com o botão direito no item
+References e, em seguida, na opção de menu Add Service
+Reference... .
+2. Na tela que abrirá, clique em Advanced .
+3. Na próxima tela, clique em Add Web Reference .
+4. Na nova tela, coloque no campo URL o endereço do serviço
+(http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx)
+e pressione ENTER . O Visual Studio faz uma consulta e
+mostra as operações que o serviço possui, como vemos na
+figura a seguir:
+
+Figura 13.1: Adicionando reference de um serviço SOAP
+
+5. Clique em Add Reference . Uma nova pasta chamada Web
+Reference será criada, com o item br.com.correios.ws .
+6. Crie uma nova operação no controller de pedidos para
+poder testar a chamada ao serviço SOAP de cálculo de preço e
+13 CONSULTANDO SERVIÇOS SOAP DE UMA APLICAÇÃO WEB API
+
+135
+
+prazo de entrega dos Correios, com dados fixos para teste,
+como mostra o trecho:
+[ResponseType(typeof(string))]
+[HttpGet]
+[Route("frete")]
+public IHttpActionResult CalculaFrete()
+{
+string frete;
+CalcPrecoPrazoWS correios = new CalcPrecoPrazoWS();
+cResultado resultado = correios.CalcPrecoPrazo("", "",
+"40010", "37540000", "37002970", "1", 1, 30, 30, 30, 30, "N"
+, 100, "S");
+if (resultado.Servicos[0].Erro.Equals("0"))
+{
+frete = "Valor do frete: " + resultado.Servicos[0].
+Valor + " - Prazo de entrega: " + resultado.Servicos[0].Praz
+oEntrega + " dia(s)";
+return Ok(frete);
+}
+else
+{
+return BadRequest("Código do erro: " + resultado.Se
+rvicos[0].Erro + "-" + resultado.Servicos[0].MsgErro);
+}
+}
+
+Para
+
+resolver
+
+Essa
+
+operação
+
+as
+
+dependências, adicione
+using
+Exemplo3.br.com.correios.ws; no início do arquivo.
+poderá ser acessada pela URL
+api/orders/frete . Mas, para isso, é necessário adicionar a
+anotação [RoutePrefix("api/orders")] no início da
+classe OrdersController , como explicado no capítulo
+anterior. Veja como deve ficar:
+[Authorize]
+[RoutePrefix("api/orders")]
+public class OrdersController : ApiController
+
+136
+
+13 CONSULTANDO SERVIÇOS SOAP DE UMA APLICAÇÃO WEB API
+
+com outros serviços REST.
+
+138
+
+13.1 CONCLUSÃO
+
+"country": "Brasil",
+"zip": "12345000",
+"email": "matilde@siecolasystems.com",
+"mobile": "+551112345678"
+}
+
+A seguir, será mostrado como acessar o serviço de consulta de
+clientes do CRM por meio de uma operação de um serviço
+construído com Web API. Esse serviço poderia ser útil para
+consultar do CEP do cliente, parâmetro necessário para o cálculo de
+preço do frete e prazo de entrega do pedido da loja virtual.
+Para poder acessar o serviço REST do CRM, execute os passos a
+seguir:
+1. Crie uma pasta chamada CRMClient no projeto Exemplo3 .
+2. Crie o modelo Customer , que será a resposta da operação
+que será acessada no CRM, de acordo com o trecho de código:
+public class Customer
+{
+public int Id { get; set; }
+[Required]
+[MaxLength(12)]
+public string cpf { get; set; }
+[Required]
+public string name { get; set; }
+[Required]
+public string address { get; set; }
+[Required]
+public string city { get; set; }
+[Required]
+public string state { get; set; }
+[Required]
+public string country { get; set; }
+[Required]
+public string zip { get; set; }
+14 CONSULTANDO SERVIÇOS REST
+
+143
+
+[Required]
+[EmailAddress]
+public string email { get; set; }
+public string mobile { get; set; }
+}
+
+Para
+
+resolver
+
+as
+
+dependências,
+
+adicione
+using
+System.ComponentModel.DataAnnotations; no início do
+arquivo.
+3. Na mesma pasta, crie a classe CRMRestClient , que será
+responsável por acessar o serviço de CRM, de acordo com o
+trecho:
+using
+using
+using
+using
+using
+using
+
+System;
+System.Collections.Generic;
+System.Linq;
+System.Net.Http;
+System.Net.Http.Headers;
+System.Web;
+
+namespace Exemplo3.CRMClient
+{
+public class CRMRestClient
+{
+private HttpClient client;
+}
+}
+
+4. Crie o construtor da classe, responsável por preparar o objeto
+do tipo HttpClient , configurando o endereço do serviço e
+preenchendo os headers de formato de resposta aceitável e
+o de autenticação, como no trecho:
+public CRMRestClient()
+{
+client = new HttpClient();
+//TODO - configure o endereço do CRM
+client.BaseAddress = new Uri("http://localhost:12345/ap
+i/");
+
+144
+
+14 CONSULTANDO SERVIÇOS REST
+
+// Add an Accept header for JSON format.
+client.DefaultRequestHeaders.Accept.Add(
+new MediaTypeWithQualityHeaderValue("application/js
+on"));
+//Mount the credentials in base64 encoding
+byte[] str1Byte = System.Text.Encoding.UTF8.GetBytes(st
+ring.Format("{0}:{1}", "crmwebapi", "crmwebapi"));
+String plaintext = Convert.ToBase64String(str1Byte);
+//Set the authorization header
+client.DefaultRequestHeaders.Authorization = new Authen
+ticationHeaderValue("Basic", plaintext);
+}
+
+Aqui será necessário que você altere o código na linha
+marcada com o TODO , para configurar o endereço onde o
+CRM está sendo executado, seja na sua máquina de
+desenvolvimento ou no Windows Azure (se você hospedá-lo
+lá).
+5. Crie
+
+o
+
+método
+
+public
+
+Customer
+
+, que vai executar a
+operação de GET na URL customer/id , retornando um
+objeto de tipo Customer com as informações do usuário, que
+contém o CEP a ser utilizado no cálculo do frete.
+GetCustomerByEmail(string email)
+
+public Customer GetCustomerByEmail(string email)
+{
+// Get a customer by ID
+HttpResponseMessage response = client.GetAsync("custome
+rs/byemail?email=" + email).Result;
+if (response.IsSuccessStatusCode)
+{
+// Parse the response body. Blocking!
+Customer customer = (Customer)response.Content.Read
+AsAsync<Customer>().Result;
+return customer;
+}
+return null;
+}
+
+6. Crie uma operação no serviço de pedidos para testar o acesso
+
+14 CONSULTANDO SERVIÇOS REST
+
+145
+
+ao CRM e obter o CEP do usuário autenticado, como no
+trecho a seguir:
+[ResponseType(typeof(string))]
+[HttpGet]
+[Route("cep")]
+public IHttpActionResult ObtemCEP()
+{
+CRMRestClient crmClient = new CRMRestClient();
+Customer customer = crmClient.GetCustomerByEmail(User.I
+dentity.Name);
+if (customer != null)
+{
+return Ok(customer.zip);
+}
+else
+{
+return BadRequest("Falha ao consultar o CRM");
+}
+}
+
+Adicione
+arquivo.
+
+using
+
+Exemplo3.CRMClient;
+
+no início do
+
+Obviamente, para que a requisição ao CRM retorne um
+cliente, é necessário que o usuário autenticado no acesso dessa
+operação esteja cadastrado nele, com o mesmo e-mail.
+
+14.1 CONCLUSÃO
+A técnica mostrada neste capítulo foi apenas um exemplo de
+como realizar integração entre uma aplicação Web API com
+sistemas que proveem serviços REST. Porém, é possível usar os
+mesmos passos para consumir serviços REST de qualquer outro tipo
+de aplicação.
+
+146
+
+14.1 CONCLUSÃO
+
+API. Para entender como isso pode ser feito com o Web
+API,
+visite
+http://www.asp.net/webapi/overview/advanced/http-cookies.
+Para finalizar, vale lembrar de que você pode participar do
+Fórum
+da
+Casa
+do
+Código,
+em
+http://www.forum.casadocodigo.com.br/.
+E também baixar o código-fonte de tudo o que foi realizado
+neste
+livro,
+no
+repositório:
+https://github.com/siecola/WebAPIBook/.
+Obrigado e até a próxima!
+
+148
+
+15 ALGO MAIS SOBRE WEB API
+
+

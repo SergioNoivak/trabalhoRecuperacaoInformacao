@@ -1,0 +1,2343 @@
+© Casa do Código
+Todos os direitos reservados e protegidos pela Lei nº9.610, de 10/02/1998.
+Nenhuma parte deste livro poderá ser reproduzida, nem transmitida, sem autorização prévia por escrito da editora, seja quais forem os meios: fotográficos,
+eletrônicos, mecânicos, gravação ou quaisquer outros.
+
+Edição
+Adriano Almeida
+Vivian Matsui
+Revisão e diagramação
+Bianca Hubert
+Vivian Matsui
+
+[2016]
+Casa do Código
+Livro para o programador
+Rua Vergueiro, 3185 – 8º andar
+04101-300 – Vila Mariana – São Paulo – SP – Brasil
+www.casadocodigo.com.br
+
+OS AUTORES
+Edson Rigonatti é um dos sócios da Astella Investimentos e serve
+nos conselhos de várias empresas de software e internet no Brasil
+e América Latina. É um entusiasta de pessoas talentosas e ideias
+extraordinárias. Foi sócio da Cicerone Capital, vice-presidente da
+Lucent Technologies e trabalhou durante muitos anos na empresa
+de varejo da família. Crescido em São Paulo, formou-se pela Columbia Business School.
+Laura Mello é uma dos sócios da Astella Investimentos e conselheira de algumas das empresas do portfolio da Astella. Formada
+em Administração de Empresas pela Fundação Getúlio Vargas,
+foi vice-presidente da Cicerone Capital e fez longa carreira como
+responsável por equity research com foco em Telecom e Tecnologia em diversas instituições financeiras. A busca por eficiência e
+um relacionamento saudável entre empresas e investidores foi o
+que sempre a entusiasmou e por isso Laura foca sua atuação em
+transparência e governança corporativa nas empresas.
+Martino Bagini é um dos sócios da Astella Investimentos. Participa dos conselhos de várias empresas de software e internet no
+Brasil e na Europa. É apaixonado por tecnologia, marketing, videogames, e pela ideia da singularidade. Trabalhou por muitos
+anos com consumer internet, a maioria deles na Realmedia Latin
+America. Foi também vice-presidente do IAB Brasil, além de conselheiro do CONAR. Formou-se em Administração de Empresas
+e Comércio Exterior, e tem especialização em Finanças pela FIA/
+FEA. Atualmente vive entre Milão e São Paulo.
+
+PREFÁCIO
+P or r icardo K anitz
+
+A Astella, nas figuras de Edson, Laura e Martino, é composta por
+alguns dos melhores comunicadores que conheço. Possuem o que
+acredito ser uma rara capacidade de conseguir transmitir conceitos complexos de forma simples, mas não simplista. Seu constante
+processo de leitura das melhores práticas internacionais gera um
+repertório rico de temas e conceitos a serem adaptados para nossa
+realidade, que são ricamente utilizados por eles.
+Além disso, desenvolveram uma capacidade única de processualizar atividades. Como investidores em empresas, esse atributo
+lhes servem bem como forma de alavancar seu tempo, principal
+recurso escasso da Astella.
+A jornada do empreendedor: o herói da nossa Era combina as habilidades únicas da Astella de comunicação e processualização ilustradas aqui através da construção de Máquinas de Negócio.
+As Máquinas (Produto, Vendas, Amor, Talentos e Comportamento) são um excelente mapa para empreendedores que estão
+desenvolvendo seus negócios. Permitem enxergarmos diferentes
+atributos do negócio de forma clara e que facilitam o entendimento do todo. Além disso, a percepção e o tratamento de negócios
+como grandes Máquinas permitem que, por meio da constante
+otimização de seus inúmeros processos, gere-se a escalabilidade
+necessária, de forma a terem um impacto efetivo e realizarem o
+7
+
+ideal dos empreendedores.
+Como um investidor da Astella, impressiona-me observar a diferença organizacional das companhias que já conseguiram adotar
+o modelo de Máquinas para aquelas que ainda estão no processo de sua construção. Quem já as tem desenvolvidas apresenta
+um negócio muito mais “lubrificado”, com os fatores críticos para
+crescimento mapeados e endereçados e, por isso, tende a apresentar resultados substancialmente superiores.
+Aos empreendedores atuais e futuros, este livro serve de inspiração para o aperfeiçoamento dos seus negócios e leva-os para a
+construção de seus sonhos.
+Espero que daqui a alguns anos, seus colegas e parceiros possam
+olhar para seu negócio e digam:
+ma che bell a macchina !
+
+8
+
+A JORNADA
+Uma jornada é uma busca por um ideal, por um grande desafio.
+Para uns, a motivação é a recompensa financeira. Para outros, o
+desejo de fazer algo maior que si mesmos. Seja qual for o seu objetivo, para chegar lá você precisará de força de vontade sobre-humana. É preciso ter humildade e sabedoria para aprender e tomar
+as decisões certas, e paixão e disciplina para suportar as dores
+típicas de cada fase. É preciso ser um verdadeiro herói.
+Você decide qual o destino e se vale a pena. Você decide quando vai partir. Você decide quem vai acompanhá-lo, e quais serão
+seus papéis e suas recompensas. Você decide o que fazer com os
+recursos disponíveis. Heróis perseguem seus ideais, a despeito de
+pessoas, conhecimentos e dinheiro que têm à mão.
+Alguns começam a caminhada com uma equipe pequena (ou até
+mesmo sozinhos), partindo apenas de uma ideia ou problema. É a
+fase da descoberta. Outros já estão um passo à frente, na etapa de
+validação, trabalhando em um produto rudimentar. Há, ainda, os
+que já chegam até nós com uma base inicial de consumidores e estão caminhando rumo à eficiência. E há, por fim, aqueles que têm
+um produto maduro, uma boa base de clientes e já estão prontos
+para escalar.
+Cada etapa da jornada traz um novo tipo de desafio e, consequentemente, requer estratégias diferentes. As dores indicam que seu
+corpo (a estrutura da sua empresa) não está pronto, e que você
+precisa desenvolver musculatura física e mental (sistemas, pro9
+
+lista é longa.
+Mas quando somos a própria régua com o qual mediremos nosso
+sucesso, passamos a ter total controle dos inputs e, consequentemente, total responsabilidade pelos outputs. John Wooden, um
+dos maiores técnicos esportivos de todos os tempos, definia sucesso como: “a paz de espírito resultante da satisfação em saber que
+você se esforçou para se tornar o melhor de que é capaz”. Ou seja,
+que você tenha dado o seu máximo, o seu melhor, que você tenha
+sido profissional.
+Todas profissões tem uma definição do que é profissionalismo,
+um código de conduta. Em muitos casos, como na medicina, ela
+é explícita; em outros, completamente implícita. Mas todas têm
+ao menos 4 elementos básicos que definem o que se espera de um
+profissional:
+1. Abnegação: aceitar a responsabilidade que temos
+pelos outros, e colocar as necessidades e preocupação
+daqueles que buscam nosso profissionalismo acima das
+nossas próprias;
+2. Habilidade: buscar continuamente a excelência nas
+nossas habilidades e do nosso conhecimento;
+3. Confiança: assumir a responsabilidade pela estabilidade dos resultados esperados ao longo do tempo;
+4. Disciplina: ter autocontrole para seguir o padrão de
+comportamento esperado.
+Se você espera isso do seu médico, do seu advogado e do seu ídolo
+12
+
+do futebol, por que não esperar de você mesmo e aceitar que são
+essas características que serão esperadas de você?
+Além da abnegação, da confiança e da disciplina que você precisa
+domar, como CEO (Chief Entrepreneur Officer) você tem 4 principais habilidades a serem desenvolvidas e aprimoradas:
+1. Articular a visão e comunicá-la a todos envolvidos:
+clientes, associados, parceiros e investidores (o atributo
+Steve Jobs);
+2. Recrutar e desenvolver os melhores talentos, tanto associados quanto advisors (o atributo Larry Page);
+3. Construir e gerenciar a máquina que vai executar a
+visão (o atributo Andy Grove);
+4. Garantir que sua empresa tenha dinheiro e recursos
+necessários (o atributo Warren Buffett).
+Que tal eleger como principal meta para o futuro próximo superar você mesmo e ser o melhor de que é capaz? Que tal pensar nos
+“4 elementos básicos” e nas “4 principais habilidades” como a sua
+régua do seu sucesso?
+Esperamos caminhar lado a lado com você ao longo desta jornada
+que se inicia, compartilhando melhores práticas dos elementos e
+habilidades, e assim contribuindo para você acelerar e otimizar
+sua trajetória.
+b oa
+
+batalha contra você mesmo !
+
+s ucesso !
+
+13
+
+
+
+o:
+
+
+
+17
+21
+
+o:
+o
+:
+o:
+
+
+o: 
+o: 
+o: 
+o:
+o: 
+o: 
+o: 
+o: 
+o: 
+o: 
+o:
+o
+:
+
+o: 
+o: 
+o: 
+o: 
+o: 
+o: 
+o: 
+o: 
+o : v antaGeM cOMpetitiva para startups
+
+31
+37
+43
+49
+55
+67
+73
+77
+83
+85
+89
+
+99
+103
+107
+111
+115
+119
+123
+127
+131
+135
+15
+
+talento pleno, precisamos treinar, ou como dizem os estudiosos
+do assunto, precisamos “praticar deliberadamente”: quando executamos alguma ação no limiar da nossa capacidade, nos permitindo a errar, dar alguns passos atrás, nos corrigir e nos regozijar
+com a dificuldade e o esforço.
+Mas o que um CEO deve treinar para refinar e aperfeiçoar suas
+habilidades (os atributos Steve Jobs, Larry Page, Andy Grove e
+Warren Buffett)? Na base de todas essas habilidades, temos três
+fundamentos:
+1. Obter informações: a maior parte do nosso dia é dedicada a
+obter informações. Nós lemos jornais, revistas, blogs, newsletters, relatórios. Conversamos com nossos empregados, clientes,
+investidores, fornecedores, consultores. Escutamos conselhos, sugestões, reclamações. Nós obtemos informações de fontes verbais
+e escritas. As informações verbais são geralmente “manchetes”,
+e nos aprofundamos no assunto lendo relatórios, interpretando
+dashboards, analisando estudos. É a atividade mais fácil e tem um
+enorme impacto nas demais.
+2. Comunicar: nós estamos continuamente comunicando nosso
+entendimento das informações que obtemos do mundo ao nosso
+redor, nossos objetivos, preferências e prioridades. Assim, estamos contribuindo (ou influenciando) para que nossos clientes,
+empregados e investidores tomem suas decisões. Fazemos isso de
+maneira verbal e escrita. Mas principalmente dando o exemplo
+através de nossas atitudes diárias. É uma atividade de dificuldade
+moderada.
+18
+
+3. Tomar decisões: após obter informações e nos comunicar, deparamo-nos geralmente com dois tipos de decisões: ex ante e ex
+post. A primeira são decisões que vão impactar o futuro, como
+a aprovação de um investimento. A segunda são decisões que se
+originaram no passado, tipicamente problemas que temos de endereçar. É a atividade mais difícil por termos de lidar com as nossas emoções e controlar nossa intuição. Para evitar as armadilhas
+que nossa mente nos prega, temos de aprender a pensar duas vezes antes de decidir.
+MAS COMO TREINAR ESSES FUNDAMENTOS?
+1. Obter informações: i) Faça pelo menos 1 busca todo dia no
+Google sobre algo que o incomoda. Recomendo fortemente que
+você siga esse tutorial de busca: The Art of SEO, de Stephan Spencer, em https://www.youtube.com/watch?v=368SNSlwhBU. Você
+vai se surpreender com a quantidade de novas fontes de informações que descobrirá e como resolverá seus problemas de forma
+mais rápida; ii) Crie uma desculpa toda semana para sentar ao
+lado de alguém no escritório com quem você normalmente não
+interaja. Busque saber algo sobre a função, seu mercado, ou sua
+empresa que você ainda não conhece. Aprenda a escutar.
+2. Comunicar: i) Prepare pelo menos uma apresentação por mês
+(para clientes, parceiros, investidores, ou sua equipe). O simples
+fato de você colocar as ideias no papel é um excelente treino. Siga
+o blog e leia os livros do Carmine Galo (http://www.carminegallo.
+com/); ii) Aproveite qualquer oportunidade para fazer um pitch
+da sua empresa (eventos, potenciais investidores, sua família, na
+19
+
+que as pessoas e a sua empresa superem seus próprios limites.
+Para buscar essa superação coletiva, você deve conquistar os atributos Andy Grove, delineados no livro High Output Management.
+Sua filosofia está calcada em três pilares:
+1. Gestão (management) pode ser comparada a um processo produtivo, a uma máquina;
+2. Uma empresa é um tipo de esporte coletivo, não individual;
+3. A máquina só funciona em seu pico se todos os elementos performarem no seu pico.
+Assim como uma fábrica, a sua gestão tem de produzir e entregar
+um determinado volume de unidades, com uma certa qualidade,
+dentro do prazo acordado e com o menor custo possível.
+Mas, para criar uma máquina produtiva, que seja escalável, você
+precisa criar um arcabouço replicável e automatizável. Isso, por
+sua vez, requer uma atividade padronizada, que para tal necessita
+de um processo.
+Segundo os preceitos básicos de produção, um processo é o procedimento utilizado para se fazer alguma coisa. Em posse de um
+processo, a primeira coisa que um gerente de produção faria seria
+determinar qual o passo limitante (ou gargalo) de produção, o
+passo que leva mais tempo, ou o mais difícil, ou o mais caro, ou o
+22
+
+mais sensível. Então, desenhar a linha de produção de acordo com
+este elemento, escalonando todos os demais.
+De posse de um fluxo escalonado de produção, nosso engenheiro
+desenharia a operação fabril em três etapas operacionais:
+1. Manufatura, que transforma física ou quimicamente
+a matéria-prima;
+2. Montagem, onde os componentes são combinados
+para formar o produto final; e
+3. Teste, quando as matérias-primas, componentes e
+produto são verificados.
+No passo seguinte, o engenheiro estipularia quais são os indicadores de cada fase para medir o fluxo que permitiria otimizar a
+máquina ao longo do tempo e guiaria as decisões quanto às limitações do processo. Por exemplo, preciso de mais estoque de
+matéria-prima? Novas ferramentas? Mais recursos humanos?
+Segundo as melhores práticas da engenharia de produção, qualquer indicador é melhor que nenhum indicador. Mas um indicador eficiente medirá o output do processo e não apenas a atividade
+em si, e como tal, deve ser uma unidade passível de ser contada.
+Por fim, para evitar distorções no processo decisório, qualquer indicador ou medida deve vir acompanhado do seu alter ego, assim
+efeito e contraefeito andam em uníssono.
+
+23
+
+chegada (built-to-order), enquanto a primeira funciona na base da
+previsão da demanda (built-to-forecast).
+Se você pensou em colocar em prática o conceito de transformar
+em uma máquina a sua empresa, antes de tudo, você tem de deixar
+de ser um sapateiro e se transformar em uma fábrica de sapatos.
+Ou seja, você precisa ser mais produtivo.
+A produtividade de qualquer função pode ser definida como o
+resultado (output) dividido pelo trabalho necessário para gerar
+este resultado. A sua produtividade, ou o resultado do seu trabalho por unidade de tempo, pode ser aumentada de três maneiras:
+1. Fazer mais rápido;
+2. Alavancar suas atividades, mudando a natureza do
+seu trabalho;
+3. Mudar o mix das suas atividades, delegando.
+Partindo do princípio de que você já trabalha em um ritmo frenético assim como o personagem do Randy Glasbergen mostrado
+anteriormente, só nos resta alavancar e delegar. Para alavancar o
+seu trabalho, ou fazer mais com menos, você pode contar com seis
+táticas:
+1. Disseminar suas ideias e percepções para muitas pessoas ao mesmo tempo (pense na minha alavancagem ao
+escrever este livro!).
+26
+
+2. Engatilhar mudanças duradouras de comportamento
+na sua equipe por meio de ações e palavras breves e focadas (você tem de se tornar o Waze da sua equipe: vire
+à direita, agora à esquerda, perigo reportado à frente).
+3. Difundir cápsulas de conhecimento e informação que
+possam afetar o trabalho de um grande grupo de pessoas. Sabe aquelas indicações de posts, relatórios e livros
+que você recebe de investidores chatos?
+4. Simplificar as suas tarefas, criando fluxogramas simples das suas principais tarefas, questionando os passos
+executados e introduzindo o elemento de planejamento
+em tudo o que você faz.
+5. A melhor maneira de prever e planejar o seu trabalho
+é gerenciar sua agenda. Use-a ativamente como ferramenta de produtividade, tomando a iniciativa de preencher os horários com as atividades importantes, e aprender dizer não a reuniões e calls não produtivos.
+6. Automatizar suas tarefas.
+Já para delegar, você tem de endereçar os maiores obstáculos nessa árdua tarefa:
+1. A pessoa a quem você está delegando TEM de saber
+o que vai fazer, como você quer que ela faça e qual o
+27
+
+resultado esperado. Afinal, foi você que contratou ou
+se associou a ela, e é você que tem responsabilidade por
+treiná-la!
+2. Delegar sem acompanhar é abdicar. Mesmo depois de
+delegar, a responsabilidade pelo resultado ainda é sua,
+você não pode lavar as mãos. Se em uma fábrica inspeções de qualidade são feitas no começo, meio e fim do
+processo, por que você não faria o mesmo?
+Existem também alguns princípios da engenharia de produção
+que você pode aplicar às suas tarefas para aumentar sua alavancagem e poder de delegação:
+1. Testes de qualidade são mais eficientes nos estágios
+iniciais do processo. Não espere o seu co-founder ou diretor acabar a tarefa. Revise o plano e rascunhos iniciais.
+2. A frequência dos testes de qualidade deve ser variável. Por isso eles são chamados de testes, e não de processo produtivo.
+3. Procure agrupar as atividades similares em lotes (batching), criando a hora de leitura de newsletters, o dia
+de estar na rua com clientes, a manhã de feedbacks com
+os gestores etc.
+4. Você precisa de um pouco de flexibilidade (slack) na
+sua agenda, para garantir que sua carga máxima de tra28
+
+balho não seja arruinada por uma ligação inesperada ao
+longo do dia.
+5. Você também precisa de regularidade, ou seja, evitar
+ser interrompido. Crie respostas padrões para as interrupções mais comuns (sabe aqueles e-mails tipo não-responda-esse-email-recebemos-sua-reclamação-e-entraremos-em-contato-assim-que-possível?);
+6. Você tem de ter um estoque de projetos e uma metodologia para lidar com eles, à la LIFO (Last in, First
+out), FIFO (First in, First out).
+7. A consistência do processo produtivo emana dos procedimentos, métodos e frameworks. Adote o máximo
+deles que puder!
+
+COLOCANDO EM PRÁTICA
+A SUA FÁBRICA DE SAPATO
+•
+•
+•
+•
+
+Reveja a sua agenda da semana passada. Quais foram as atividades de baixa/média/alta alavancagem?
+Qual o plano de ação para alavancar mais suas atividades semana que vem?
+Qual sua tarefa mais onerosa, demorada, chata? Como você
+pode simplificá-la semana que vem?
+Que tal delegar uma atividade nova, mas antes de comunicar
+ao seu colaborador, planejar como você vai explicar a tarefa?
+29
+
+de manufatura (transformação), montagem e teste. No caso de
+vendas, teríamos então:
+
+Máquina de Vendas
+
+O próximo passo é definir o output desejado. No caso de vendas,
+nosso output é definido pelo ticket médio gasto (average revenue
+per user). Você quer produzir baleias ou micróbios?
+
+8 WAYS TO BUILD A $100M BUSINESS
+Traduzido
+de http://
+christophjanz.blogspot.
+de/2014/11/
+three-more-ways-to-build-100-million.
+html
+
+32
+
+A partir do output desejado, você pode desenhar o seu processo
+de manufatura (marketing), de montagem (vendas) e, principalmente, o ponto crítico de teste de qualidade, que é a qualificação
+do lead. Existe um tipo de fábrica (complexidade de venda) e consequentemente um custo de produção (CAC – Cost of acquisition)
+para cada tipo de output:
+
+Cost of acquisition
+
+•
+•
+•
+•
+•
+
+No Touch – Self-Service: autoatendimento, sem contato humano;
+Light Touch – Inside Sales: algumas ligações por telefone;
+High Touch – Inside Sales: várias e demoradas ligações por telefone;
+Field Sales: venda presencial;
+Field Sales + SEs: venda consultiva envolvendo vendedor e técnico (system engineer).
+
+MONTANDO A SUA
+MÁQUINA DE VENDAS
+1. Prospecção: qual a melhor maneira de garantir um suprimento
+constante e crescente de matéria prima para que sua fábrica nun33
+
+ca pare? Quanto melhor você especificar exatamente que matéria
+prima você busca (persona do comprador), melhor você poderá
+escolher o fornecedor ideal (Google, Facebook, revistas, televisão,
+listas etc.).
+2. Diagnosticar: como garantir que aquilo que seus fornecedores
+entregam pode entrar na sua linha de produção? De que adianta
+ter 1 milhão de uniques no site, ou uma lista de 100 nomes para
+ligar, se ninguém quer comprar o seu produto? Para separar o joio
+do trigo, você precisa definir os requisitos mínimos de qualidade
+e um processo de teste de qualidade (closed-loop marketing).
+3. Apresentar: ao longo do ciclo de compra, você precisa endereçar as dúvidas e ansiedades de seus potenciais clientes com
+palavras, frases, imagens que ajudem o processo de percepção,
+consideração e compra. Você precisa desenvolver os colaterais de
+marketing e venda para que seus clientes possam fazer tudo sozinhos (autosserviço), ou seus atendentes e vendedores possam ser
+efetivos.
+4. Vender: seja por meio de uma página na internet, uma ligação telefônica ou um aperto de mão, você precisa fechar a venda. Você precisa desenvolver uma lista de técnicas de fechamento
+mais apropriada para a situação e tipo de cliente.
+
+ERROS MAIS COMUNS NA CONSTRUÇÃO DA MÁQUINA DE VENDAS
+34
+
+Modelo de produto simplificado (traduzido e adaptado de Crossing the
+Chasm, de Geoffrey Moore)
+
+Baseando-se nos conceitos de gestão como processo produtivo,
+discutidos no atributo Andy Grove, para construir uma Máquina
+de Produto na qual os inputs são as especificações de funcionalidades e o output um whole product, teríamos:
+
+Fluxo do produto
+
+38
+
+A Máquina começa com o processo de transformação de ideias
+em especificações de funcionalidades, chamado de Ideação. As
+ideias vêm de diversas fontes: os empreendedores, a equipe, os
+investidores, os potenciais clientes e, principalmente, os atuais
+clientes e usuários que comentam ou reclamam sobre o produto.
+Estas ideias precisam ser avaliadas e especificadas para que seu
+conjunto possa criar um novo whole product, ou a evolução de
+diferentes funcionalidades de um produto existente.
+As ideias podem ser um novo SKU (um móvel, um óculos, um
+pneu, uma jóia, uma barrinha de cereal), um novo tipo de embalagem, um serviço, ou ainda uma funcionalidade em um software.
+E cada ideia de funcionalidade deve objetivar e aumentar o preço
+do whole product, aumentar o volume de vendas, reduzir o custo de
+montagem, reduzir o custo de venda, aumentar o life-time value dos
+clientes, ou ainda reduzir a necessidade de capital de giro.
+O principal teste de qualidade deste processo produtivo acontece
+ainda na fase de Ideação. Isso porque o risco de uma ideia de uma
+funcionalidade não resultar em um dos objetivos anteriores é enorme, enquanto o custo de validar esses objetivos é muito baixo.
+
+39
+
+Quatro estágios
+
+Por isso, cada ideia deve possuir uma narrativa de por que ela
+deveria existir. Na Amazon, cada funcionalidade ou produto novo
+sendo introduzido precisa de um press release fictício para provar
+a sua utilidade. Além da narrativa, é imperativo fazer pesquisas,
+testes e mockups para validar as ideias.
+E cada ideia deve se tornar uma especificação. Assim, garantir-se-á que fornecedores, desenvolvedores e prestadores de serviço
+saibam exatamente o que você espera e possam reduzir os erros,
+defeitos e falhas inerentes a qualquer processo.
+A fase de Produção é o processo em que o whole product começa
+a virar realidade. É quando a equipe de compras negocia com fornecedores, e a equipe de desenvolvimento programa o software
+que vai compor o core product. E é quando outras equipes elencam os parceiros e fornecedores para os demais elementos que
+vão compor o whole product.
+40
+
+A Entrega é a fase quando se pode gradualmente tornar as funcionalidades disponíveis para 100% dos clientes e consumidores.
+Ao entregar o novo produto, serviço ou funcionalidade para pequenos grupos, podemos experimentar e testar até que ele esteja
+provado.
+Por fim, nenhum produto está totalmente concluído. A fase de
+Ajustes permite o aprimoramento contínuo da solução, gerando
+novas ideias de melhora, correções e até mesmo novas funcionalidades.
+
+COLOCANDO A MÁQUINA
+DE PRODUTO PARA FUNCIONAR
+1. Qual a definição do seu whole product e quem é responsável por ele (o famoso Product Manager)?
+2. Qual o processo para coletar as ideias, validá-las e
+especificá-las (processo conhecido como stage-gate)?
+3. Como você testa e especifica as funcionalidades para
+maximizar as chances de sucesso?
+4. Quem é responsável pela produção do core product, e
+quem é responsável por garantir que os demais elementos componham o whole product?
+5. Como você lança novos produtos, serviços e funcio41
+
+Assim como a fábrica do Andy Grove, a Máquina do Amor tem
+de produzir clientes felizes (output que pode ser medido através
+de pesquisas como o NPS, o Net Promoter Score) e índices como
+o LTV (Lifetime Value), a partir da adição de novos clientes e da
+atividade de clientes existentes (inputs).
+
+Máquina do Amor
+
+Para padronizar a atividade, de maneira que possa ser replicável e
+automatizável, poderíamos descrever a Máquina do Amor como:
+1. On-boarding: é o primeiro contato do seu cliente
+com seu produto após o pagamento. É a primeira vez
+que alguém liga o aparelho, ou instala o software, ou
+experimenta o produto, ou se encontra com o prestador
+de serviço, ou recebe um e-mail avisando quando o produto será entregue. É nesse momento que você define o
+tom do relacionamento e reforça quais deveriam ser as
+expectativas.
+2. Engajamento inicial: é quando o cliente ou usuário
+começa a perceber o valor do produto que comprou. É o
+44
+
+momento em que as expectativas criadas com a Máquina
+de Vendas são atendidas ou não.
+3. Suporte funcional: são os recursos disponíveis ao
+longo do On-boarding e Engajamento inicial para momentos nos quais algum tipo de ajuda se faz necessário.
+Pode ser algo reativo, quando o usuário se perde ou fica
+ansioso em relação ao próximo passo; ou algo proativo,
+quando você sabe por experiência que dificuldades podem aparecer, e oferece ajuda.
+4. Suporte técnico: é quando algum problema acontece,
+seja um erro, uma falha ou um defeito. Algo precisa ser
+feito para corrigir o problema e garantir que o cliente ou
+usuário possa continuar a usufruir do seu produto.
+
+COLOCANDO A MÁQUINA
+DO AMOR EM PRÁTICA
+1. Quem na sua equipe da Máquina de Produto é responsável por desenhar e planejar as ações de On-boarding, Engajamento inicial e Suporte funcional?
+2. Como você avaliaria o seu processo de On-boarding
+hoje?
+3. Quais recursos (online help, tutorials, forums, knowledge base, webinars etc.) você disponibiliza hoje como
+45
+
+48
+
+A Máquina de Talentos tem por objetivo garantir que você contrate colaboradores (inputs), maximize o potencial deles (manufatura ou transformação), mantenha-os produtivo (montagem), e que
+obtenha o máximo de produtividade dos seus recursos (outputs).
+Mas o que é um talento produtivo? Do ponto de vista teórico, a
+produtividade de uma pessoa pode ser medida em termos do resultado (output) do trabalho ao longo de um período, relativo a
+média de outras pessoas realizando trabalho similar.
+Do ponto de vista prático, avaliar a produtividade de um colaborador envolve entender se ele pode e vai fazer as atividades necessárias, ou seja, se ele é capaz e motivado.
+Para criar a máquina, de maneira replicável e automatizável, poderíamos descrevê-la como:
+
+Máquina de Talentos
+
+1. Contratar: assim como em vendas, a melhor maneira
+de garantir um suprimento perfeito para sua fábrica é
+especificar exatamente a matéria prima que você bus50
+
+ca através de um Job Description, e buscar os melhores
+fornecedores (agências de recrutamento, LinkedIn etc.)
+de maneira proativa e constante, e não apenas quando
+cria-se uma vaga, já que esse é o maior gargalo do processo. E para garantir a qualidade da matéria prima, o
+processo de entrevistas deve buscar qualificar os leads
+em relação às suas capacidades e motivações.
+2. On-boarding: novos talentos chegam com uma série
+de expectativas. Para que eles possam colocar suas capacidades e motivações em prática para atingir o ponto de produtividade esperado, temos de garantir que
+entendam com clareza seus papéis e expectativas, que
+incorporem as políticas da empresa e que conheçam as
+pessoas e se conectem o mais rápido possível.
+3. Desenvolvimento: podemos buscar a produtividade
+máxima de cada talento apenas através de treinamento
+e motivação. Para determinar qual delas é preciso atacar
+primeiro, Andy Grove propõe um simples teste mental
+— se a vida dessa pessoa dependesse em realizar determinada tarefa, ela conseguiria? Se a resposta for sim,
+a pessoa precisa de motivação. Se a resposta for não,
+treinamento.
+4. Avaliar: avaliar, remunerar e promover formam a base
+do seu sistema motivacional. Não apenas porque esses
+são elementos básicos para seus colaboradores, mas
+também por serem os principais veículos para a propa51
+
+gação da sua cultura. Seja através de avaliações diárias
+com pequenos acertos de rota, ou avaliações anuais com
+revisão dos objetivos e resultados do ano, o feedback
+loop é a melhor ferramenta para garantir a produtividade da sua máquina.
+
+COLOCANDO A MÁQUINA
+DE TALENTOS EM PRÁTICA
+1. Que tal estipular uma meta pessoal de entrevistar pelo
+menos uma pessoa por semana para as áreas mais críticas da sua empresa, mesmo sem ter vagas em aberto?
+2. Por que não adotar um software de recrutamento
+(conhecido como applicant tracking system ou ATS)? O
+RecruiterBox (http://recruiterbox.com), por exemplo, é
+uma ferramenta freemium que lhe permite formar um
+banco de dados de talentos.
+3. Você pode desenhar um processo simples de recrutamento se baseando nesse guia: http://offers.openviewpartners.com/acquiring-top-talent-guide.
+4. Como você definiria a produtividade dos seus colaboradores diretos? Quais são os OKRs (Objectives and Key
+Results) que lhe permitiriam medi-la?
+5. Que tal criar um processo básico de on-boarding?
+52
+
+mentos para que todos possamos decidir e agir consistentemente
+de maneira alinhada com os objetivos. O que buscamos é motivar
+e aumentar a probabilidade que o comportamento seja adequado.
+Para isto, precisamos de um sistema de informações que nos permita entender o que está acontecendo, quais são os problemas e o
+que precisa ser feito. Só assim podemos coordenar os esforços das
+mais diversas partes da empresa.
+Nossa Máquina de Comportamento, que tem como inputs as métricas e outputs as mudanças de comportamento, precisa então de
+3 elementos para cumprir seu papel:
+
+Máquina do Comportamento
+
+1. Planejamento: para definir o padrão de performance esperada, precisamos definir os resultados desejados da empresa, dos departamentos e dos indivíduos.
+As ferramentas de planejamento estratégico, orçamento e modelagem financeira servem para instrumentalizar e apontar os resultados esperados. O insumo básico
+56
+
+nessa etapa são as métricas. Uma boa métrica muda o
+seu comportamento e das pessoas em todos os níveis.
+A principal questão a ser feita quando se define uma
+métrica é: o que vou fazer de diferente conforme esta
+métrica estabelecida for mudando? Toda métrica tem de
+ser um ensejo para uma ação!
+2. Medição: é o processo de representar as propriedades
+e qualidades de uma ação de forma quantitativa. Existem dois blocos de medição: o operacional (os famosos
+KPIs ou key performance indicators) e o contábil/financeiro (antes de você bocejar, você sabia que os sumérios
+desenvolveram a escrita cuneiforme para contabilizar
+sua produção? Ou seja, você escreve e se comunica hoje
+por causa de um contador!). O grande desafio nessa etapa é coletar as informações (apontamentos contábeis e
+operacionais). É na coleta que devemos focar nossos esforços de qualidade, para garantir que os dados sejam
+capturados. A medição por si só tem uma enorme importância comportamental. O simples fato de estarmos
+medindo uma ação faz com que nós mesmos e nossos
+colaboradores prestemos mais atenção aos aspectos do
+trabalho sendo medidos.
+3. Avaliação: os relatórios (demonstrativos contábeis,
+dashboards) formam a linha de frente na avaliação dos
+resultados e são uma das formas mais relevantes e frequentes de feedback para as pessoas e departamentos.
+Assim, contribuem para a avaliação, remuneração e pro57
+
+moção dos talentos (ver Máquina de Talentos). Quaisquer sejam os mecanismos de avaliação e remuneração,
+eles devem reforçar a boa performance e modificar a má.
+
+COLOCANDO A MÁQUINA
+DE COMPORTAMENTO EM AÇÃO
+1. 5 passos para o planejamento financeiro e operacional
+da sua empresa, seguindo este artigo: http://vcwithme.
+co/2014/07/22/why-forecasting-matters-to-startups-and-how-to-do-it/.
+2. Em dúvida sobre quais as melhores métricas para o
+seu modelo de negócio ou para os diferentes departamentos? O livro Lean Analytics é uma excelente fonte
+de métricas para os diferentes modelos de negócio, e o
+Klipfolio é um SaaS que fornece exemplos e templates
+de KPIs por departamento, também conhecidos como
+máquinas! :)
+3. Que tal rever a dinâmica de apontamentos contábeis
+e operacionais? Eu tenho certeza de que você não sabe
+o que é, ou se surpreenderá com a quantidade de erros
+no processo.
+tá
+
+58
+
+esPerando o quê ?
+
+60
+
+Um hábito surge a partir de um estímulo que indica ao cérebro
+que padrão de comportamento usar, seja de maneira física, mental ou emocional. Se a ação adotada surtir efeito e for apropriada
+ao estímulo, o cérebro se sente recompensado. E quanto maior a
+recompensa, mais o cérebro busca maneiras de lembrar o que tem
+de fazer no futuro.
+Com o tempo, esse ciclo de estímulo, ação, recompensa e reafirmação se torna cada vez mais automático, e cria um sistema poderoso
+de antecipação e ansiedade (as motivações). Quando isso acontece,
+o cérebro deixa de participar do processo de tomada de decisão.
+As rotinas são para as organizações o que os hábitos são para nós
+indivíduos. Portanto, precisamos reorientá-las de acordo com
+cada máquina, alinhando as motivações, estímulos, ações, recompensas e reafirmações.
+
+Traduzido de “The hook”, por Nir Eyal (NirAndFar.com)
+
+62
+
+ENTENDENDO OS ELEMENTOS
+DA ROTINA/HÁBITO
+1. Motivação: todos nós temos três pares de anseios básicos, que guiam quase tudo que buscamos/evitamos —
+prazer/dor, esperança/medo e aceitação/rejeição.
+2. Estímulo: podem ser qualquer coisa, de um chocolate
+na gôndola, a um comercial na TV, um momento específico do dia, um determinado lugar, uma sequência de
+pensamentos, ou a presença de uma pessoa. Em algumas
+circunstâncias, o estímulo é externo, como o som do
+despertador; em outras, é interno, como quando nosso
+estômago ronca de fome.
+3. Ação: é o ato de realizar a tarefa. Está relacionada à
+habilidade da pessoa em executá-la.
+4. Recompensa: pode ser uma coisa tangível, como comida ou remédio que responda aos estímulos de fome
+ou dor; ou intangível, como o sentimento de orgulho
+que segue um elogio.
+5. Reafirmação: o amor é fruto do trabalho. Quanto
+mais nos esforçamos em uma determinada atividade ou
+rotina, mais a amamos e a valorizamos. Nosso cérebro
+busca ser consistente com nossas ações passadas.
+
+63
+
+MUDANDO AS ROTINAS
+E IMPLEMENTANDO AS MÁQUINAS
+1. Ninguém sente prazer com a expectativa de mudanças. Fazemos o possível para evitar a dor que elas possam causar. Por isso não mudamos! A melhor maneira
+de criar motivação para a mudança é provocar a esperança de um futuro melhor, mostrando que esse futuro
+existe. Visite como seu time alguma empresa que tenha
+uma das máquinas funcionando.
+2. Uma das maneiras mais eficientes de estimular o comportamento certo (dar aquele empurrãozinho!) no mundo corporativo é usar Poka-Yokes. Sabe aqueles adesivos
+tipo “empregados devem lavar as mãos”? São dispositivos à prova de erros! Que tal uma home screen com
+“CEOs devem gerar 10 leads por dia”, ou “empreendedores devem conversar com 10 clientes por semana”, ou até
+mesmo “founders never give up”?
+3. Existem duas maneiras de aumentar a capacidade de
+uma pessoa executar uma rotina: treinando-a ou tornando a tarefa mais simples e fácil. Quanto mais simples e
+intuitivo, menor a necessidade de treinamento. Por que
+não eliminar as fricções — tempo, dinheiro, esforço físico, esforço mental, esforço social — que dificultam as
+rotinas?
+4. Genericamente, podemos dizer que há 3 tipos de re64
+
+Para construir uma máquina (seja Vendas, Amor, Produto, Talentos ou Comportamento), você precisa dominar a arte e a ciência
+de Gerenciamento de Projetos. Embora o tema seja extenso, existem 3 pilares de gestão de projeto que podem mudar o rumo da
+sua empresa.
+
+ESPECIFICAÇÕES E REQUERIMENTOS
+Uma especificação (carinhosamente chamada de spec) é a explicitação de um conjunto de requerimentos que um material, produto
+ou serviço deve satisfazer. Já um requerimento é um atributo ou
+característica que preenche um desejo ou necessidade de quem
+usa o material, produto ou serviço.
+Sem especificar exatamente todos os requerimentos que você espera, é impossível que uma máquina produza o que você deseja.
+Isso se aplica ao tipo de cliente, de talento e de processos que
+você busca.
+Portanto, seu projeto precisa detalhar e documentar todos os requerimentos esperados. Um bom requerimento tem as seguintes
+características:
+•
+•
+•
+•
+68
+
+Unitário: endereçar apenas um desejo ou necessidade.
+Completo: descrição detalhada, sem faltar nenhuma informação.
+Consistente: um requerimento não pode contradizer outro
+requerimento.
+Rastreável: a funcionalidade do requerimento pode ser me-
+
+•
+•
+
+dida e verificada.
+Inequívoco: a explicação do requerimento é simples e qualquer leigo o entende.
+Importante: existe uma ordem de importância para priorização.
+
+OS CONFLITOS DA ESCOLHA
+
+Triângulo da qualidade
+
+Assim como tudo na vida, projetos são executados em circunstâncias restritivas. Essas restrições são classificadas em escopo,
+qualidade, tempo e custo, e comumente representadas por um triângulo. Um lado não pode ser alterado sem afetar os demais lados
+e a área do triângulo.
+Como não é possível otimizar todas as restrições ao mesmo tem69
+
+po, temos de escolher uma delas como âncora do projeto, e ajustar
+as demais de acordo. Assim, se queremos algo rápido, sabemos
+que o escopo não pode ser tão complexo, a qualidade não tão alta
+e o custo não tão baixo.
+
+GESTOR DE PROJETO
+O gestor de projeto é a pessoa que tem a responsabilidade por
+iniciar, planejar, desenhar, executar, monitorar, controlar e fechar
+um projeto. É tipicamente aquela pessoa que faz as perguntas chatas e difíceis de responder. Tem uma combinação de competências e habilidades que incluem disciplina, resolução de conflitos
+e priorização.
+É uma pessoa neurótica com a gestão de risco, já que reconhece
+que riscos impactam na probabilidade de sucesso, e sabe medi-lo,
+formalmente e informalmente, durante todo o tempo de duração
+de um projeto. É uma personalidade indispensável para o sucesso
+de qualquer empresa.
+Quem já trabalhou com um bom project manager nunca mais vive
+sem esse tipo de talento. Não tem espaço no seu orçamento para
+um? Que tal um freela?
+be
+
+70
+
+on
+
+t ime . b e
+
+on
+
+s Pec . b e
+
+on
+
+b udget !
+
+72
+
+regadas de fortes emoções, pois existem para endereçar problemas e gerar algum tipo de decisão. Para lidar com os problemas,
+é preciso caminhar pelos estágios de resolução de conflitos. Para
+produzir uma resolução, é necessário navegar pelos estágios de
+tomada de decisão.
+O estresse e a ansiedade envolvidos na resolução de conflitos são
+tamanhos, que o primeiro passo busca lidar com o fato de termos a tendência de ignorar problemas. É necessário juntar fatos e
+exemplos, para trazer a situação para a realidade.
+Trabalhar a negação é o segundo passo, já que mesmo vendo a
+verdade nua e crua, resistimos em aceitá-la. Começamos, em um
+mecanismo natural de defesa, a culpar os outros, mesmo admitindo a existência de um conflito. Quando conseguimos nos responsabilizar e suplantar a dor da culpa, e do entendimento que
+vai ser trabalhoso resolver o pepino, chegamos ao último estágio
+que é: encontrar uma solução, saindo dos estágios emocionais e
+recaindo em uma análise intelectual.
+Encontrar uma solução também não é fácil: é difícil nos expressarmos de maneira firme, dado o desafio de tomar decisões impopulares, e de ser muito duro ao suportarmos resoluções com
+as quais podemos não concordar. Lidar com o orgulho, ambição,
+medo e insegurança não é para qualquer um.
+Para evitar ou aliviar todas essas emoções, é útil caminharmos
+conscientemente pelos estágios de tomada de decisão. O primeiro
+passo é conduzir uma discussão aberta, quando todos os aspec74
+
+tos de uma situação são ventilados e abertamente debatidos, com
+a opinião de todos envolvidos.
+O estágio seguinte é chegar a uma decisão clara e, quanto maior o
+nível de desentendimento entre os participantes, mais importante
+é a clareza da resolução. O último passo é obter de todos o suporte total, o que não quer dizer que todos estejam de acordo, mas
+que estão sim comprometidos em suportar a decisão.
+Em algumas circunstâncias, apesar das infindáveis discussões, é
+impossível chegar a um consenso, mesmo chegada a hora de uma
+decisão. É neste momento que o líder ou gestor deve usar legitimamente a sua autoridade. Muitas vezes relutamos, por questões
+culturais, em exercer nosso poder de maneira explícita e deliberada; mas seria ilegítimo, e muitas vezes destrutivo, abrirmos mão
+deste artifício. É bem mais fácil ser legal e bonzinho.
+Para buscar tal assertividade, é saudável que o líder se prepare de
+antemão resolvendo:
+•
+•
+•
+•
+•
+•
+
+Que decisão deve ser tomada?
+Até quando ela tem de ser tomada?
+Quem vai decidir?
+Quem deveria ser consultado antes?
+Quem vai ratificar ou vetar?
+Quem deve ser informado da decisão?
+
+E caso você queira se tornar um Top Pepino Manager:
+
+75
+
+se você não está contratando e desenvolvendo talentos, você não
+está crescendo! Portanto, você está...
+Nesta jornada, o seu maior investimento — portanto, destino dos
+recursos — será: salários, bônus, benefícios e tudo mais necessário para seus talentos produzirem o máximo. Na média, de 50%
+a 70% de todos os recursos gerados ou captados por empresas de
+software e internet são usados para este fim. Portanto, é bom você
+estar preparado para ser “o cara” ou “a tal”, no que tange à gestão
+de talentos. Ou seja, você precisa dominar o atributo Larry Page.
+Dentre as inúmeras qualidades do Google e do Larry Page, nenhuma é tão significativa quanto o PageRank como a gestão de
+talentos implantada por eles. Da adoção da Teoria Y a uma das
+mais invejadas implantações práticas da Pirâmide de Maslow,
+Larry Page e sua equipe conquistaram uma disciplina ímpar em
+todos os aspectos da gestão de talentos:
+1. Atitude: o propósito e a intenção que se aplicam a
+gestão de talentos, e se manifestam no dia a dia nas relações com as pessoas.
+2. Estrutura organizacional: a arquitetura que estabelece o papel de cada talento, a dinâmica de organização
+e comunicação entre os vários elementos.
+3. Ambiente de trabalho: o nível de complexidade, incerteza e ambiguidade que permeiam as tarefas e o local
+de trabalho.
+78
+
+4. Objetivos e resultados chaves (OKRs): a dinâmica
+que desencadeia os resultados esperados para cada talento, dentro de suas capacidades.
+5. Contratação (e On-boarding): a construção de um
+pipeline constante de possíveis candidatos, e a maneira
+de recebê-los quando contratados.
+6. Desenvolvimento: todo gestor é um mentor e um
+professor, e busca desenvolver seus talentos através de
+orientações diárias, feedback constante e treinamentos
+regulares.
+7. Avaliação de desempenho: a maneira de memorializar o processo de desenvolvimento, identificar pontos
+a serem trabalhados, justificar aumentos e promoções.
+8. Remuneração: dinheiro é obviamente importante, um
+pré-requisito para as necessidades da vida, um elemento
+basal que garante a atratividade e competitividade de
+qualquer empresa.
+9. Reconhecimento: uma vez ultrapassadas as necessidades básicas, todo mundo deseja se sentir querido,
+apreciado e pertencente.
+10. Demissão: a hora da verdade que separa os homens
+dos meninos (ou mulheres das meninas), seja quando
+alguém quer se desligar de você ou você dele.
+79
+
+82
+
+>
+>
+>
+
+Quais serão exatamente os papéis e as responsabilidades
+de cada posição;
+Qual será o arranjo de coordenação e supervisão dentro
+dos grupos (hierarquia);
+Quais serão as relações entre os grupos (funcional, matricial ou holocrático).
+
+É relativamente fácil definir os papéis do goleiro (financeiro),
+da defesa (produto) e do ataque (marketing e vendas). Mas determinar a função do líbero (product manager) em relação ao
+zagueiro (developer), ou do meia-atacante (marketing) com o
+centroavante (vendas), é um enorme desafio. E quando o clube
+não tem dinheiro para contratar todas as posições, e os jogadores têm de preencher mais de uma posição ao mesmo tempo, fica
+mais complicado ainda.
+E quem decide qual jogador vai bater a falta ou o pênalti? Que
+funcionalidade vai entrar no sprint dessa semana? Que nicho de
+mercado a empresa vai atender? São mais de 35.000 decisões por
+dia. Não seria ótimo automatizá-las?
+Como orquestrar os diferentes grupos? 1-1-8, 3-2-2-3, 4-2-4, 4-33, 4-4-2 ou 3-5-2?
+Marketing junto com vendas? Vendas e produto? Produto e desenvolvimento? Pessoas e financeiro?
+As três decisões básicas (papéis/responsabilidades, hierarquia e
+organograma) definem o fluxo de informação e conhecimento,
+86
+
+facilitando os processos decisórios. Esse é exatamente o propósito
+de delinear a estrutura organizacional. Tomar decisões difíceis de
+maneira estruturada, algumas vezes no ano, para que milhares de
+pequenas decisões no dia a dia fluam de maneira a não travar a
+empresa com suas “Máquinas”.
+
+CRIANDO O SEU ESQUEMA TÁTICO
+1. Por que não se inspirar (famoso copy-and-paste) em
+job descriptions prontos? E sim, existe um SaaS para isto
+(http://www.hrtms.com).
+2. Ou listar 4 ou 5 tarefas básicas para cada função em
+um arquivo no Google Docs para torná-las vivas e editáveis?
+3. Que tal uma reunião essa semana com todos seus diretos para entender quais são as “bolas divididas” existentes entre as pessoas e as equipes?
+4. Aceitar que na era do Agile, Scrum, Customer Development, Lean Startup etc. é quase inimaginável pensar
+que os papéis, hierarquia e organograma vão ficar estáticos por mais de um trimestre?
+5. Considerar a holocracia como uma alternativa para
+esse fluxo contínuo de mudanças, assim como Zappos,
+Medium e outras?
+6. Adicionar aos rituais da sua equipe uma revisão trimestral das questões relacionadas à estrutura organizacional?
+v ai
+
+que é tua ,
+
+t aFFarel !
+87
+
+carreira e uns poucos um “chamado divino”.
+Essa relação com o trabalho e o consequente potencial de cada
+talento estão intimamente ligados à conjunção do significado DO
+trabalho: o que o meu trabalho significa para mim; com o significado NO trabalho: como me sinto na empresa em que trabalho.
+
+Do x No
+
+Como empreendedores na batalha contra El Enemigo, a maneira
+como construímos o ambiente de trabalho espelha nossas atitudes
+em relação aos talentos, bem como ao mundo que queremos criar.
+Afinal, estamos nessa jornada para mudar o mundo, não?
+O desafio do herói é maximizar os dois significados para todos
+90
+
+aqueles que o acompanham na jornada. O trabalho deve propiciar
+tanto o pão nosso de cada dia como o significado nosso de cada
+dia. É sim dinheiro, mas reconhecimento e realização também.
+Podemos contar com duas ferramentas para enfrentar esse desafio. Para gerenciar o significado DO trabalho, podemos contar
+com a Pirâmide de Maslow. Para influenciar o significado NO trabalho, temos de gerenciar o fator VUCA (volatility, uncertainty,
+complexity and ambiguity).
+Tanto Larry Page (vide capítulo 12° passo — O atributo Larry
+Page) quanto Andy Grove (vide capítulo 2º passo — O atributo
+Andy Grove), assim como a maioria dos líderes e empresas que
+dominaram a gestão de talentos, se guiavam pela Pirâmide de
+Maslow para arquitetar e manter o ambiente de trabalho.
+Para Maslow, a motivação de um indivíduo está relacionada com
+seus desejos, que se tornam necessidades, que por sua vez impulsionam a vontade de agir. Na base da pirâmide, temos os desejos
+básicos de sobrevivência. Conquistada essa segurança, partimos
+em busca do sucesso nas nossas relações sociais. E então seguimos
+em busca da nossa autorrealização.
+Como um desejo realizado para de servir de fonte de motivação,
+temos de constantemente provocar desejos insatisfeitos em todos
+os nossos colaboradores. O nosso esforço em provocar apenas
+cessa quando os talentos atingem o topo da pirâmide. A partir
+daí, o motor motivacional passa ser o desejo do próprio indivíduo
+de buscar o seu melhor, a sua autorrealização.
+91
+
+94
+
+O que determina o TRM de cada pessoa é justamente o seu preparo para lidar com a volatilidade, incerteza, complexidade e ambiguidade (o fator VUCA) de cada tarefa. Assim, quando o TRM
+de um talento é baixo, a melhor maneira de tirar o máximo dele é
+oferecer instruções precisas e detalhadas, colocando exatamente
+o que deve ser feito de maneira estruturada. Conforme o TRM
+aumenta, podemos ser menos estruturados, focando no incentivo
+e suporte emocional, focando mais no indivíduo do que na tarefa.
+
+Diagrama TRM
+
+O segredo é não julgarmos se o estilo de gestão mais estruturado
+é melhor ou pior, mais legal ou menos cool que um estilo comunicativo. O que importa é o que funciona ou não com cada pessoa.
+Construir as Máquinas é sua responsabilidade, assim como tratar
+cada talento conforme sua maturidade e exigir apenas o que o
+Mihaly Csikszentmihalyi estipula como os 7% de dificuldade que
+vão deixar a pessoa em “fluxo”. Se o seu time está apático, ansioso,
+preocupado ou relaxado demais, adivinhe de quem é a culpa?
+96
+
+Desafio versus habilidade
+
+Com esses elementos em mãos, para cada um dos seus colaboradores diretos, você estará pronto para estabelecer um sistema
+formal de gestão, composto pelos: resultados esperados para sua
+empresa pelos departamentos, times e indivíduos (Key Results), e
+os objetivos específicos, mensuráveis e datados (Objectives); em
+conjunto, Objective Key Results ou OKRs. Essa é uma metodologia
+para monitorar o andamento dos objetivos, a frequência dos feedbacks e o método de avaliação de performance, reconhecimento
+e remuneração.
+
+COLOCANDO EM PRÁTICA
+•
+•
+
+Que tal listar os principais desafios de cada área da sua empresa?
+Você já tem uma Máquina que funciona para lidar com cada
+97
+
+ration), na qualificação e engajamento dos mais promissores (lead
+qualification and nurturing) e no fechamento da venda (closing).
+Esse exercício nos dá a segurança de que o investimento na aquisição de um cliente vai ser amortizado ao longo do tempo. Assim,
+começamos a construir uma máquina escalável de crescimento.
+Da mesma maneira, podemos partir do princípio de que cada talento produz um ticket médio (produtividade do trabalho ao longo do ano), um churn (tempo médio de permanência na empresa)
+e uma margem bruta (a diferença entre os salários pagos e o que
+o talento produziu). Isso nos permite calcular o TLTV: talent lifetime value.
+Uma boa aproximação para o valor da produtividade do trabalho
+por talento é a sua média de faturamento por associado. Se sua
+média de faturamento/associado é de R$50 mil/ano, seus talentos
+ficam na média 3 anos na sua empresa, e o custo por associado
+é de R$30 mil/ano (salários + custos CLT + infraestrutura). Seu
+TLTV é de R$60 mil [(50-30)*3].
+Nós deveríamos estar dispostos a investir até R$20 mil para contratar esse talento (nosso talent acquisition cost, ou TAC) ou ⅓ do
+nosso TLTV. Esses R$20 mil deveriam cobrir os custos de lead-generation (anúncios), lead qualification and nurturing (tempo das
+pessoas gasto nas entrevistas) e closing (custos da equipe de RH).
+A produtividade média por empregado do Google é de
+US$1.320.000,00. Agora você já sabe como calcular o porquê de
+100
+
+o Google ter mais de 1.000 pessoas no mundo dedicadas a contratar talentos (TAC). Além de poder pagar os melhores salários
+da indústria, e dos escritórios à la Disney e todas as amenidades
+oferecidas (TLTV).
+O grande paradigma a ser quebrado é: não tratar a aquisição de
+talentos como resultado no processo de crescimento. Geralmente,
+esperamos crescer para depois contratar, quando na verdade os
+talentos são insumos (inputs) do crescimento. Esse viés se dá por
+não termos a mínima ideia da relação causa-efeito que um talento
+tem no nosso negócio. Então, nunca nos sentimos confortáveis
+em investir.
+
+MONTANDO A MÁQUINA
+CAÇA-TALENTOS
+•
+•
+
+•
+•
+•
+
+Que tal calcular, mesmo que de maneira grosseira, o seu
+TLTV?
+Por que não utilizar as mesmas táticas que você usa para gerar
+lead de vendas (inbound marketing, webinars, referrals etc.)
+no processo de leads de talentos?
+Que tal medir o processo de contratação com a mesma dinâmica do seu funil de vendas? Qual deveria ser o seu TAC?
+Você já pensou em um CRM só para talentos?
+Por que não otimizar esse processo com o mesmo bojo analítico de marketing e vendas?
+A final ,
+
+você é ou não é um
+
+G rowth H acker ?
+101
+
+e energia. Afinal, temos de vender, falar com investidores, yada,
+yada, yada. Criar, então, um treinamento e passar horas treinando é impossível; mas estar muito ocupado para treinar seria o
+equivalente a estar muito faminto para comer!
+A única maneira de estabelecer uma cultura de treinamento em
+sua empresa de bilhão (caso não seja isso o que você busque,
+desconsidere esses conselhos!) é você ser o professor! E para se
+tornar um bom professor e/ou mentor, temos de lembrar que os
+grandes mestres:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Tornam o aprendizado engajante;
+Amam o tema que ensinam;
+Têm um conhecimento profundo sobre o tema;
+São superorganizados;
+São intensos;
+Sabem que seus alunos merecem reconhecimento a cada pequeno passo;
+Tratam todos os alunos com respeito;
+Acreditam que todos querem aprender (só precisam descobrir
+como!);
+Adoram estar com seus alunos;
+Sabem que devem customizar o ensino para cada aluno.
+
+COMO SE TORNAR UM MESTRE NINJA
+PARA SUA EQUIPE
+1. Defina com cada subalterno qual a necessidade imediata de treinamento funcional. Que conhecimento ou
+104
+
+ferramenta nova mais ajudaria ele/ela no curto prazo?
+2. Busque trilhas de aprendizado (learning paths) para o
+tópico em questão. Por exemplo, se o seu CTO desejasse
+incrementar suas habilidades de gestão de projeto, bastaria você buscar “learning path project management”
+no Google e, voilà, temos um currículo pronto.
+3. Achou caro o curso online? Que tal buscar no YouTube a primeira aula da trilha Introduction to Project
+Management?
+4. Defina uma pauta de treinamento gerencial (learning
+path) para aplicar a toda sua organização, como por
+exemplo, a Pirâmide de Desenvolvimento de Liderança.
+5. Que tal replicar os passos 3 e 4 para um dos temas da
+Pirâmide ao mês para toda sua equipe?
+6. Defina uma pauta e frequência de feedback. Não limite feedbacks às críticas. Não tenha medo de ser prolixo
+em correções diárias (vire à direita, siga reto).
+7. Quando correções mais significativas (e críticas) se
+tornarem necessárias, faça-as de maneira estruturada:
+veja o post How to give McKinsey-style feedback a seguir.
+8. Lembre-se de que, para cada crítica, antes você tem de
+fazer três elogios!
+105
+
+sendo avaliado. Então, como ser objetivo sem temer usar nosso
+julgamento, que por natureza é algo subjetivo?
+Bill Campbell, que foi técnico de futebol americano na Universidade de Columbia, mentor do Steve Jobs e Ben Horowitz, e presidente do conselho da Intuit, sugere abordar a performance de um
+talento em quatro partes:
+•
+•
+
+•
+
+•
+
+Resultados contra objetivos: uma vez estabelecidos OKRs,
+fica fácil mensurar a performance.
+Gestão: além de atingir seus objetivos, um gestor precisa
+construir e desenvolver uma equipe. Como essa pessoa desempenha esse quesito?
+Inovação: também é possível atingir as metas sacrificando o
+futuro da empresa. Como esse talento balanceia as necessidades de curto e longo prazo?
+Interação com pares: realizar as metas sozinho é uma coisa,
+mas como ele/ela se porta diante dos companheiros e com as
+metas da empresa?
+
+Uma vez compilado nosso julgamento sobre estes quatro pilares,
+podemos nos preparar para apresentar a nossa avaliação. Andy
+Grove sugere três princípios para nortear este encontro:
+•
+
+•
+
+Honestidade: a credibilidade e integridade da interação depende de sermos totalmente honestos e transparentes. Discursos vazios e rodeios sem fim dispersam a atenção e nos
+desqualificam como avaliador.
+Desprendimento: a pessoa sendo avaliada deve ser o centro
+
+108
+
+•
+
+das atenções neste encontro. O encontro é por ela e para ela.
+Entendimento: as emoções são intensas para ambos os lados.
+A responsabilidade de escutar e ser escutado é nossa, não de
+quem está sendo avaliado.
+
+Existem três tipos clássicos de encontros de avaliação:
+•
+
+•
+
+•
+
+“Por um lado... Mas de outro lado...”: são as avaliações que
+contêm pontos bons e pontos ruins. O erro mais comum cometido nesse tipo de encontro é apresentar listas intermináveis de pontos a serem trabalhados. Novamente, o foco é a
+pessoa sendo avaliada, portanto, temos de considerar qual a
+dose certa de pontos que realmente podem ajudá-la a melhorar sua performance.
+“A explosão”: são encontros nos quais existe um problema tão
+grande, que podemos estar prestes a nos despedirmos da pessoa. Simplesmente elencar o problema sem ajudá-la a caminhar pelos estágios da resolução de conflitos provavelmente
+não criará consenso necessário para resolver a situação.
+“O superstar”: geralmente, deixamos nossas estrelas passar
+incólumes pelo processo de avaliação. Afinal de contas, eles
+são as estrelas! Mas mesmo eles podem e devem ser aprimorados. Temos de evitar ser lenientes com aqueles que melhor
+podem nos ajudar a escalar.
+
+Uma maneira de tornar o encontro ainda mais produtivo e reduzir
+as tensões emocionais pré-avaliação é dividir com a pessoa sendo
+avaliada nossa avaliação por escrito. Assim, ela pode ler, digerir e
+se preparar, tornando a conversa o mais racional possível. Quanto
+109
+
+motivado pelo aspecto basal do dinheiro; o segundo pela necessidade de reconhecimento e estima. Ambos devem ser atendidos!
+Para garantir que possamos atrair e motivar as pessoas certas, temos de ter claro como a remuneração funciona na nossa empresa.
+As pessoas têm de entender como se definem os salários, como a
+bonificação é calculada, quando e como podem receber aumentos, e se e como podem ter ações da nossa empresa.
+Além disto, gastamos mais tempo lidando com questões pontuais
+relacionadas a remuneração do que deveríamos. Quantas vezes ao
+ano nos pegamos pensando o quanto pagar por um novo talento?
+E até quanto aumentar a oferta se ele pedir mais? E quando aquele
+talento especial pede um reajuste? Devemos ou não fazer uma
+contraoferta quando alguém da equipe recebe uma proposta?
+
+COLOCANDO EM PRÁTICA UM PLANO
+DE REMUNERAÇÃO
+•
+
+•
+
+Remuneração total: o primeiro passo é definir uma base comparativa de remuneração total (salário + benefícios + bônus +
+equity). Embora não existam pesquisas específicas de salários
+em startups no Brasil, podemos tomar como referência o mercado americano (veja o post Startup Salary & Equity Compensation no box).
+Salário base: uma das maneiras mais simples de criar transparência e previsibilidade é criar 3 níveis de salário base para
+cada cargo. Assim, temos espaço para os talentos crescerem e
+para que haja equivalência entre os diferentes times. Isso vai
+
+112
+
+114
+
+Um gestor que se importa com seus talentos estabelece expectativas claras através de um arcabouço de OKRs, encoraja sua equipe
+com um plano de desenvolvimento e fortalece a qualidade do seu
+relacionamento com seu time por meio de constante reconhecimento.
+Não é à toa que os gestores de RH dizem que ‘as pessoas não deixam a empresa, mas sim o seu chefe’, e que quase 70% da variabilidade da satisfação dos talentos com a nossa empresa é atribuída à
+qualidade da relação com seus chefes. Por isso, não existe maneira melhor de definir a cultura de uma empresa do que entender
+como as pessoas são reconhecidas, formal e informalmente.
+
+COMO RECONHECER SUA EQUIPE?
+•
+
+•
+
+•
+
+•
+
+Por que não promover uma maneira informal de qualquer
+pessoa na sua empresa dar um like (ou deslike) nas atitudes das
+outras pessoas? Ou pelo menos criar o hábito de elogiar membros da equipe por e-mail para que todos possam apreciar?
+Que tal criar um mecanismo formal de reconhecimento? Um
+jantar ou evento anual para celebrar os feitos dos que se destacaram? Colaborador do mês?
+Que tal um encontro mensal com seus gestores para discutir
+maneiras de reconhecer os talentos? E não precisa ficar preocupado com a falta de orçamento ou ideias.
+Você sabe quais são os hobbies ou atividades que seus talentos
+mais curtem fora do trabalho? Por que não fazer uma lista de
+preferências de cada um e distribuir pequenos prêmios de reconhecimento alinhados com os gostos pessoais?
+
+116
+
+118
+
+nosso trabalho tenha um grande propósito.
+Todos queremos dinheiro, todos buscamos reconhecimento, mas
+o que realmente perseguimos é aquele algo a mais. E quando atendemos ao nosso chamado, à nossa razão de ser, a fonte da nossa
+motivação é inesgotável.
+No livro Business as a Calling, Michael Novak aponta quatro elementos que caracterizam um “chamado divino” no trabalho:
+
+>
+>
+>
+>
+
+Cada chamado é único para cada pessoa. Podemos estar todos perseguindo a mesma missão, mas o que move
+cada um de nós é diferente.
+Um chamado requer muito mais do que desejo. É preciso ter talento. É preciso amar o fardo das coisas chatas,
+mas imprescindíveis.
+O verdadeiro chamado nos enche de prazer e energia,
+mesmo nos momentos mais difíceis e fatigantes.
+O chamado não é algo fácil de ser descoberto. Pesquisas
+apontam que aproximadamente 20% dos adultos nunca
+experimentaram a sensação de “fluxo” advinda de um
+chamado, enquanto 20% experienciam essa sensação todos os dias. Os demais 60% dizem sentir essa sensação
+entre uma vez por semana a uma vez a cada par de meses.
+
+Embora não exista uma maneira sistemática de ajudar os talentos
+a encontrarem o seu chamado no trabalho, os estudos neurológicos apontam para três tipos de pontapé inicial:
+
+120
+
+•
+•
+•
+
+Um gatilho motivador — Geralmente uma situação envolvendo uma pessoa idolatrada;
+A necessidade do trabalho — Após muito tempo de prática,
+acabamos nos apaixonando pelo o que fazemos;
+Quando o trabalho é uma fonte de prazer ou desafio — Similar a situações esportivas ou militares.
+
+Esse é justamente o motivo pelo qual muitos líderes buscam
+transformar o ambiente de trabalho comparando seus talentos a
+atletas ou soldados, que devem se dedicar a alcançar o limite de
+suas capacidades, que só é atingido quando lutamos contra algo
+ou alguém.
+Comparar o trabalho a um esporte ou uma campanha militar
+também é útil para ensinar as pessoas a lidar com o fracasso, já
+que, na média, 50% de todos os jogos ou batalhas são derrotas.
+Todos jogadores e soldados estão conscientes disso e, mesmo assim, continuam lutando até o fim.
+Não é à toa que líderes acabam adotando posturas de técnicos ou
+generais, já que esses papéis representam líderes que geralmente
+não tomam para si o sucesso de sua equipe, que têm a confiança
+total dos seus soldados, e que são duros com seus talentos porque
+buscam tirar o máximo da capacidade de cada um.
+
+IDEIAS PARA ACHAR O CHAMADO
+DIVINO
+121
+
+sono perdidas quando nos remoemos por ter alguém no time que
+não está funcionando. Se estende também ao impacto que essa
+procrastinação tem em toda a equipe, que não vê seu líder fazendo o que deveria ser feito, mesmo sabendo haver algo errado. Isto
+gera dívida e juros organizacionais que, se não endereçados logo,
+se tornam impagáveis.
+Aprender a dizer adeus é uma parte importante e natural do processo de construir uma empresa e esculpir a cultura desejada. Afinal, apenas o tempo nos ensina quais pessoas se encaixam ou não
+em nossa empresa. Para esculpir, precisamos aprender a talhar: o
+que fica e o que se vai.
+Este aprendizado requer preparação e treinamento para lidar com
+as quatro formas de despedida:
+•
+•
+
+•
+
+•
+
+Atitude: quando alguém comete um deslize ético ou moral. É
+a despedida mais fácil e clara de comunicar.
+Performance: quando o talento não consegue produzir o esperado, mesmo depois de alertado e suportado na busca de
+melhora. É uma decisão mais delicada, mas se a comunicação
+for clara durante a tentativa de recuperação, pode ser menos
+dolorosa.
+Inadequado: quando a pessoa, mesmo performando, não escala junto com a empresa, e faz-se necessário ter alguém com
+maior potencial para suportar a próxima fase de crescimento.
+É uma decisão muito complicada e difícil de lidar e comunicar.
+Desistência: quando o talento decide buscar outro desafio.
+Ou ele não acredita mais no futuro do time ou não se sente
+
+124
+
+apreciado e aproveitado. Em qualquer caso, se for um talento
+importante, é preciso uma ação incisiva para tentar retê-lo.
+Se aprendermos a tratar com respeito as pessoas durante essa etapa de transição; a sermos diretos e justos com o pagamento, e
+proativos na relocação destes talentos, descobriremos que não é
+um processo tão difícil assim. Além de criarmos uma cultura saudável, e evitarmos processos trabalhistas.
+Os melhores ambientes de trabalho são construídos com base em
+expectativas claras e feedbacks constantes. Em um ambiente assim, tirar alguém do time pode ser desconfortável, mas não um
+choque, já que as revisões constantes de performance indicariam
+ao longo do tempo que as coisas não caminham bem.
+
+COMO SE PREPARAR PARA O “ADEUS”
+•
+•
+•
+•
+•
+
+Alerte seu talento que algo está errado. Seja claro durante as
+avaliações de performance sobre a situação e as consequências.
+Crie um plano de recuperação, estabelecendo objetivos claros
+e mensuráveis em um prazo determinado.
+Aumente significativamente a sua dedicação a esse talento,
+para que ele tenha todo o suporte durante a recuperação.
+Não transfira a sua responsabilidade para o time de RH ou
+qualquer outro membro da equipe.
+Minimize a humilhação, protegendo a confidencialidade da
+situação e garantindo que a pessoa não se sinta mal na frente
+dos outros, dentro e fora da empresa.
+
+125
+
+articulada. Em qualquer cenário, ela é uma consequência direta
+de como os líderes (os tais founders!) se comportam, em que eles
+prestam mais atenção, com quem eles conversam, e como eles alocam o seu tempo, sua atenção e seus recursos.
+
+COMO ARTICULAR A CULTURA DA SUA
+EMPRESA?
+•
+
+•
+
+•
+
+•
+
+•
+
+Como você lida com os talentos que não produzem o esperado? Você demora para mandá-los embora? Você tenta recuperá-los? Você os trata com respeito? As pessoas que saem da
+sua empresa são o sinal mais claro de como as coisas funcionam na sua empresa.
+Como você recruta talentos? O pedigree é o mais importante?
+Ou é a aderência ao seu modus operandi que importa? Quem
+participa do processo de contratação, só você? A atitude de
+quem chega e a sua aderência ao ambiente são muito mais importantes do que você imagina.
+Como você orquestra o seu time? Como você define os objetivos e tarefas (OKRs)? Como você treina sua equipe? A maneira como você coloca as peças no tabuleiro faz toda a diferença!
+Como você avalia a performance da sua equipe? E depois,
+como você a remunera? Afinal, que tipo de queijo você colocou no final do labirinto?
+Qual o seu propósito maior? Com que atividades você gasta
+o seu tempo (clientes, equipe, investidores etc.)? Como quem
+da equipe você se relaciona diariamente? Como você passa as
+orientações e feedbacks no dia a dia)?
+
+128
+
+130
+
+entrevista com o Oráculo sobre startups brasileiras, muito da sua
+filosofia pode nos nortear em nossa batalha contra El Enemigo:
+
+>
+
+>
+
+>
+
+>
+
+132
+
+A busca pela vantagem competitiva — Buffet investe em
+empresas que têm fossos estratégicos ou moats (economia de escala, marca, patentes etc.), impedindo a entrada de novos concorrentes. Startups não têm fossos
+estratégicos. Aliás, nem castelos elas têm. Mas elas têm
+velocidade, foco e “armas secretas”.
+A construção de um modelo de negócio — Arquitetar e
+continuamente refinar uma operação que alavanque velocidade, foco e “armas secretas”, permitindo conquistar
+o castelo e ganhar dinheiro com isso, é a arte do empreendedorismo.
+Cash is King! — Se existe um Rei nesse reino, o nome
+dele é Bufunfa. Seja por meio de modelos de pagamento-adiantado, de escassez, de assinatura, de intermediação
+ou de serviço-a-produto, um bom bárbaro sabe como
+dominar o Rei.
+Dominando as três tensões — Qualquer empresa em
+qualquer estágio se debate com as tensões naturais entre crescer mais rápido ou gerar mais lucro; priorizar o
+curto prazo ou o longo prazo; e focar no todo ou só em
+parte. O guerrilheiro não faz a escolha entre um ou outro. Ele faz os dois ao mesmo tempo!
+
+>
+
+>
+
+>
+
+>
+
+>
+
+Raposa ou porco-espinho? — Assim como na parábola
+grega, vivemos em um mundo no qual temos de escolher
+entre: saber um pouco de muitas coisas, a raposa; ou
+saber muito de uma coisa só, o porco-espinho. O herói
+sabe traduzir um mundo complexo em uma única e simples ideia, e esta métrica é a que importa.
+O sistema de informação — Para medir, monitorar e
+garantir que a “métrica que importa” seja alcançada, é
+preciso ter um sistema de informações consistente, e o
+apontamento dos dados operacionais e financeiros, incluindo a parte mais amada por qualquer empreendedor: a contabilidade.
+O stack operacional e financeiro — Para automatizar a
+coleta e visualização das informações financeiras e operacionais, é recomendável sair do mundo do excel e adotar ferramentas que padronizem o workflow e tragam
+melhores práticas para o dia a dia.
+O modelo financeiro — Encadear as principais premissas do negócio e entender as suas causa-e-efeito é a
+melhor maneira de entender como tudo realmente funciona. Este equacionamento permite guiar a sua equipe
+com os recursos corretos.
+O planejamento — Embora a visibilidade no mundo das
+startups seja extremamente baixa, dado o grau de incerteza e volatilidade, planejar e orçar são as únicas manei133
+
+não tem economia de escala, base instalada com alto custo de troca, marcas ou patentes. Uma startup só pode ter foco, velocidade
+e “armas secretas”.
+Na verdade, a narrativa da jornada de qualquer empreendedor é
+muito parecida com histórias como a de Davi e Golias, na qual um
+joão-ninguém — franzino e sem armas — luta contra um gigante
+implacável, experiente e armado até os dentes. Embora esta situação injusta seja vivenciada todos os dias por milhares de empreendedores, assim como o foi por guerrilheiros e heróis ao longo
+da história da humanidade, muitos de nós ainda entram na arena
+como se fosse a primeira vez que isso acontecesse.
+Hoje em dia, só entra despreparado para lutar na arena quem
+quer:
+•
+
+•
+
+•
+
+•
+
+Steve Blank oferece no Anexo I, do livro The Four Steps to the
+Epiphany, um passo a passo para qualquer Jedi focar no cliente (e não no produto), tirar sua ideia do papel e desenvolver
+um produto que venda.
+Geoffrey Moore elenca em Crossing the Chasm como, uma vez
+desenvolvido o produto, devemos nos armar e focar em um
+ponto (um e só um apenas) de ataque para conquistar a primeira vitória.
+O mesmo Geoffrey Moore apresenta estratégias e táticas em
+Inside the Tornado, em como focar no ataque em um inimigo
+por vez até a conquista da liderança de um segmento, uma vez
+cruzado o abismo.
+Serviços como o Mattermark (http://mattermark.com/) ou
+
+136
+
+•
+
+Compass (https://www.compass.co/) nos permitem comparar
+nossa performance e tração com outras empresas ao redor do
+mundo, portanto, medir o quão ágeis e velozes somos.
+Growth Hacking é a “arma secreta” de qualquer empreendedor. Sem ela, você vai estar usando os mesmos artifícios de
+seus competidores.
+
+Ser empreendedor, de uma certa maneira, é saber lidar no dia a
+dia com essas situações injustas, seja no mercado, nas relações
+com o governo, ou até mesmo com investidores. Embora o senso
+comum postule que essas desvantagens devam ser evitadas, elas
+deveriam ser abraçadas e cultivadas. É o que alguns cientistas
+chamam de “dificuldades desejadas”.
+Não gaste seu tempo e sua energia pensando nas suas vantagens
+competitivas de defesa por enquanto. Você vai ter de construí-las
+aos poucos. Invista a totalidade do seu tempo e energia no ataque:
+focando em um tipo de cliente por vez, agindo e aprendendo o
+mais rápido e compulsivamente possível, desenvolvendo seus canais de vendas e distribuição — suas armas secretas!
+Não gaste seu tempo e sua energia sofrendo com a falta de recursos e ambiente ideal. Isso faz parte de um mundo que não existe.
+Aproveite a energia gerada pela falta de ar que cerca uma startup. Essa “privação relativa” é a fonte da sua verdadeira vantagem
+competitiva: o ataque!
+B anzai !
+
+137
+
+dida pelo ROI ou CAC); e iii) número de clientes.
+
+>
+
+A Máquina de Produto: engloba 2 inputs e 2 outputs —
+i) volume de investimentos nos recursos do time de desenvolvimento (software, R&D) ou de compras (produtos físicos); ii) a eficiência desses recursos (medida em
+funcionalidades ou SKUs); iii) periodicidade de compra
+(pontual ou recorrente); e iv) preço ou ticket médio.
+
+>
+
+A Máquina do Amor: composta por 4 inputs e 1 output
+— i) o custo de mercadorias/serviços; ii) a eficiência
+desses custos; iii) volume de investimentos nos recursos
+do time de customer success; iv) eficiência desses investimentos; v) custo das vendas.
+
+>
+
+A Máquina Registradora: tem 2 inputs e 1 output — i)
+o prazo de pagamento dos fornecedores, folha etc.; ii)
+o prazo de recebimento dos clientes; e iii) o capital de
+giro.
+
+Destilar esses inputs e outputs nos força a entender exatamente
+como nosso negócio funciona e, consequentemente, quais são os
+mecanismos para pilotá-lo na direção desejada. Podemos, portanto, derivar as principais métricas do negócio:
+•
+
+Crescimento do faturamento: que controle temos sobre a
+Máquina de Vendas e a que taxa conseguimos aumentar os
+investimentos nos recursos de venda e, principalmente, aumentar a eficiência deles.
+
+140
+
+•
+
+•
+
+Margem bruta: a diferença entre vendas e custos, mostra o
+controle que temos sobre a Máquina de Produto e do Amor,
+e representa a capacidade que uma empresa tem para investir
+ainda mais no crescimento e lucratividade.
+Geração de caixa: mais importante que qualquer métrica contábil, é quanto sobra de dinheiro no banco no final do mês e,
+consequentemente, a melhor representação da sua posição na
+cadeia alimentar. Se você precisa dar 12 meses de prazo de
+pagamento para seus clientes e paga seus fornecedores adiantado, você é uma presa. Se você recebe dos seus clientes adiantado e paga seus fornecedores em 12 meses, você é o caçador.
+Isso sim é vantagem competitiva.
+
+Esse exercício nos permite também simular as principais premissas contempladas no nosso negócio, permitindo assim avaliar o
+impacto de potenciais mudanças de rumo, ou até mesmo priorizar ideias e projetos baseando-se no impacto que possam vir a ter
+no negócio. E a partir dos inputs, podemos estabelecer os OKRs,
+enquanto os outputs nos subsidiam no planejamento financeiro.
+
+COLOCANDO O MODELO DE
+NEGÓCIO NA PRÁTICA
+1. Rabisque mesmo de maneira imprecisa quais você
+acha que são os inputs e outputs do seu negócio.
+2. Teste os inputs e outputs em uma planilha. Você pode
+criar um excel ou usar algum desses recursos:
+a) Startup Financial Model:
+141
+
+diência para conseguirem monetizar (Facebook, Instagram, 99taxis etc.). Mas isso não é desculpa para a maioria das estratégias
+do tipo.
+Existem inúmeros exemplos de startups de software e internet que
+conseguiram construir empresas incríveis, contando com investimentos de fundos de venture capital, mas inicialmente construídas com o dinheiro de clientes ou consumidores:
+
+>
+
+Modelos de marketplace: algumas empresas apenas intermediam a transação entre compradores e vendedores,
+ficando com uma taxa (take-rate), o que requer pouco
+comprometimento de capital de giro. Empresas como
+Airbnb e upWork (ex-oDesk) se financiaram inicialmente com seus fornecedores.
+
+>
+
+Modelos financiados pelo cliente: em alguns segmentos, é comum clientes pagarem adiantado, parcial ou totalmente. As empresas de telecomunicações se financiaram com o celular pré-pago, assim como o Threadless,
+The Loot e muitas das empresas SaaS.
+
+>
+
+Modelos financiados por fornecedores: empresas como
+Gilt Groupe e Vente-Privee se utilizam da escassez de
+suas ofertas para receber de clientes antes de pagar fornecedores, e outras como a Wayfair, atuam em segmentos compostos por pequenos fornecedores que acabam
+financiando suas operações.
+
+144
+
+>
+
+Modelos financiados por serviços: tanto a Microsoft
+quanto a Salesforce iniciaram suas operações com grandes contas que pagaram por algum tipo de serviço antes
+do produto estar pronto.
+
+Seja porque uma pessoa ou empresa precisa muito de alguma
+coisa (uma dor latente); ou deseja muito algo (uma necessidade
+premente); ou está acostumada com o valor de uma categoria de
+produto (cultura); ou percebe uma vantagem oportunística (desconto); são várias as razões para você tentar se apropriar do valor
+criado pelo seu produto.
+É na gestão de preços e prazo de pagamento de clientes e fornecedores que reside a sua vantagem competitiva. É justamente nesse
+entroncamento que as 5 Forças de Porter entram em ação. Já que
+temos o Growth Hacking, por que não o Cash-Flow Hacking?
+
+COLOCANDO O CASH-FLOW
+HACKING EM PRÁTICA
+•
+•
+•
+•
+
+Entenda o que é o cash conversion cycle;
+Calcule o seu cash conversion cycle;
+Experimente maneiras diferentes de apresentar preços e condições de pagamento no momento da venda;
+Busque aumentar seu prazo de pagamento paulatinamente
+com seus fornecedores. Você pode usar táticas mais agressivas
+como o 3G Capital, ou simplesmente começar por uniformizar um dia único de pagamento por mês para todos fornece145
+
+fará as duas coisas ao mesmo tempo.”
+— Benjamin Franklin
+Todo líder de qualquer tipo de organização se depara constantemente com o desafio de prosperar diante de objetivos concomitantes, aparentemente conflitantes. De todos os objetivos que
+competem entre si, três pares se destacam: crescimento versus
+lucratividade, curto prazo versus longo prazo; e otimizar o todo
+versus otimizar as partes.
+Assim como na busca por desvendar o enigma dos dois caminhos
+para a felicidade, o Chief Entrepreneur Officer não deve buscar
+o caminho mais fácil, escolhendo apenas um dos dois objetivos.
+Ele deve buscar a sabedoria de como perseguir ambos ao mesmo
+tempo, derivando um terceiro objetivo que vincule e enderece os
+dois anteriores.
+Acelerar o crescimento das vendas ou gerenciar a lucratividade?
+O Customer Success, ou Máquina do Amor, é a liga entre o dilema
+do crescimento vs. lucratividade. Quando a satisfação do cliente
+é alta, a probabilidade de ele recomendar nosso produto e continuar comprando aumenta drasticamente, impactando as duas
+principais variáveis do crescimento: o customer acquisition cost
+(CAC) e o life-time value (LTV).
+Da mesma maneira, quando otimizamos a operação na busca da
+realização do cliente, criamos os pilares da lucratividade eliminando as duas principais fontes de despesas inúteis: funcionalidades e sortimento sem propósito claro, e campanhas de marketing
+148
+
+sem um Quality Score relevante.
+Implantar os elementos mínimos de um projeto rapidamente, ou
+gestar uma versão completa de forma mais alongada? O vínculo entre o dilema do curto prazo vs. longo prazo é um conjunto
+de métricas apropriadas para o estágio no qual você se encontra. Não adianta construir um produto sem saber se existe a dor.
+Não adianta adicionar funcionalidades ou sortimento sem antes
+provar que as pessoas voltam. Não adianta escalar marketing e
+vendas antes de ter uma fórmula de crescimento pronta. E assim
+por diante.
+Como cada etapa tem o seu conjunto de desafios, mirar o alvo
+apropriado é a única maneira de construir o potencial de longo
+prazo enquanto busca-se o melhor resultado possível no curto
+prazo. Esta otimização é a base do crescimento sustentável, eliminando as dívidas técnicas e organizacionais. Além de ser a fonte
+da eficiência de capital, que acontece quando investimos apenas o
+necessário para atingirmos um determinado objetivo.
+Otimizar o desempenho de um departamento ou melhorar o fluxo entre departamentos? A cultura, ou Máquina do Talentos, é a
+cola que conecta o otimizar o todo vs. otimizar as partes. Todos
+os seus gestores têm influência significativa, positiva ou negativa,
+tanto em suas áreas de atuação quanto nas demais. Todos devem
+se responsabilizar por estes dois trabalhos ao mesmo tempo. É
+preciso estabelecer consequências claras para que todos criem valor horizontal e verticalmente.
+
+149
+
+Mas ser um ouriço, ou fazer apenas uma coisa muito bem feita,
+parece ser uma heresia para a maioria de nós, empreendedores.
+Afinal, são tantas oportunidades, tantas possibilidades, tantas alternativas, que não faz sentido algum perseguir apenas um tipo de
+cliente, um tipo de canal de vendas, ou um mercado.
+Fazer apenas uma coisa só bem feita — também conhecido como
+focar — não quer dizer fazer a mesma coisa do dia da fundação da
+empresa até o dia de fazer o IPO. Focar significa fazer uma coisa
+bem feita por vez, iterando de oportunidade em oportunidade,
+possibilidade em possibilidade. É entender ser melhor correr o
+risco de focar demais do que jogar um monte de alternativas na
+parede e esperar que alguma fique de pé.
+Uma excelente maneira de colocar o foco em prática é escolher
+uma única métrica, a One Metric that Matters (ou OMTM) do
+Lean Analytics Book. Para se chegar em uma métrica, é importante levar em conta o tipo de negócio e o estágio de desenvolvimento da empresa.
+Um negócio transacional (varejo, e-commerce) é diferente de um
+negócio de assinatura (revista, SaaS), que é diferente de uma negócio de plataforma (meio de pagamento, marketplace). Assim
+como uma empresa na fase da descoberta tem objetivos distintos
+de uma na etapa de validação, os objetivos de uma empresa em
+busca de eficiência divergem de uma em busca da escala.
+Assim como em um óculos, é a combinação destas duas lentes
+que cria o foco. Foco que vai ajudar a responder às questões mais
+152
+
+154
+
+te exato momento e agir para mitigá-lo. É por isso que uma boa
+métrica é aquela que nos causa uma mudança em nosso comportamento e nos diz se o risco foi ou não endereçado.
+Existem dois tipos de sinais que nos ajudam a identificar os riscos: os indicadores de tendência (leading) e os indicadores de resultados (lagging). Esses últimos são os que nos mostram o que
+aconteceu no passado (por exemplo, demonstrativos contábeis) e
+são importantes para confirmar se existe um padrão (por exemplo, comparativos de orçado vs. realizado). Os primeiros são os
+que nos indicam a evidência de eventos futuros (dashboard operacional), e são importantes para apontar se algum padrão está
+prestes a ocorrer.
+
+COMO CRIAR UM SISTEMA DE
+INFORMAÇÃO
+•
+
+•
+
+Planejamento: para arquitetar um sistema de informações, é
+imprescindível mapear o formato como os dados serão capturados e as informações apresentadas. Quando foi a última vez
+que você reviu com seu contador o seu plano de contas e os
+seus centros de custos? Você tem um dashboard operacional,
+seja para SaaS, marketplace ou e-commerce?
+Capturando dados: o maior desafio para ter um sistema de
+informações funcional é garantir que transações financeiras e
+eventos operacionais sejam capturados. A melhor maneira de
+lidar com tal desafio é municiar nossa empresa com ferramentas de workflow para as mais diversas finalidades (ERP, CRM,
+
+156
+
+recolhe inputs, processa e gera outputs. Os inputs são gerados
+pelo Sistema Nervoso. Os outputs gerados são principalmente os
+sitreps (situation reports, também conhecidos como demonstrativos contábeis) e os progreps (progress reports, também conhecidos como comparativos de orçado vs. realizado). O processamento é o papel do Chief Financial Officer (CFO).
+Seja o Chief Entrepreuner Officer, um co-founder CFO, ou um
+gerente financeiro, alguém tem de executar todas essas funções,
+que se não bem planejadas e equipadas com ferramentas, podem
+tomar quase 100% do seu tempo.
+
+OS PAPÉIS E FERRAMENTAS
+DE UM STARTUP CFO
+
+>
+
+Chief Fundraising Officer: para garantir que sua empresa sempre tenha o combustível necessário, você vai
+precisar interagir constantemente com bancos e fundos
+de investimento. É um processo longo, demorado, que
+nunca acontece quando precisamos, e que, portanto,
+não tem fim. Suas ferramentas são um pitch impecável e
+uma ferramenta de CRM.
+
+>
+
+Chief Accounting Officer: para assegurar que sua empresa pague os impostos devidos, contabilize todas as
+transações e mantenha o seu Sistema Nervoso em dia,
+você precisa de um ERP como o Omie (empresa do nosso portfólio) e um bom relacionamento com o seu con-
+
+160
+
+tador. Quantas vezes por ano você se encontra pessoalmente com o seu contador?
+
+>
+
+Chief Operations Officer: a única maneira de controlar as atividades e instilar a disciplina é ter um dashboard operacional. Ferramentas como SaaSmetrics (http://
+www.saasmetrics.co/), Kissmetrics (https://kissmetrics.
+com/) e Geckoboard (https://www.geckoboard.com/)
+podem ajudá-lo a dar conta do recado.
+
+>
+
+Chief HR Officer: para que sua máquina de talento não
+pare, você precisa garantir que os salários, férias e benefícios sejam pagos sempre no dia certo e sem erros. Não
+existe nada que irrite mais um talento do que falhas na
+folha de pagamento. Suas ferramentas são um workflow
+de gestão de talentos como o Convenia (http://www.
+convenia.com.br/), e um sistema de folha de pagamentos como o SinergyRH (http://www.sinergyrh.com.br/).
+
+>
+
+Chief Risk Officer: existe risco maior do que não ter
+dinheiro no final do mês? Para controlar seu caixa, além
+de conciliar suas contas bancárias, você precisa olhar
+30, 60 e até 90 dias adiante nas contas a pagar e receber.
+Suas ferramentas essenciais são um sistema de gestão
+de caixa como o CashMonitor (http://cashmonitor.com.
+br/), e um sistema de gestão de despesas como o ExpenseMobi (http://www.expensemobility.com.br/).
+
+>
+
+Chief Strategy Officer: você precisa estabelecer metas,
+161
+
+164
+
+qualquer investidor, mesmo nos momentos mais desesperadores,
+nunca é a maneira mais assertiva de se atingir o objetivo.
+Para ser mais eficiente, basta seguir as três regras de ouro de vendas: qualificar, qualificar e qualificar. Do universo potencial de
+investidores, quais se interessam pelo tipo do seu negócio, no estágio em que está a sua empresa? Dessa lista de possíveis alvos, ou
+topo do funil no jargão de vendas, quais têm recursos disponíveis
+e que valem a pena o investimento de tempo e energia?
+AUTHORIT Y — IDENTIFICANDO O TOMADOR DE
+DECISÃO E SEUS INFLUENCIADORES
+Uma vez qualificado o grupo de “prospects”, é preciso mapear o
+processo decisório e identificar quem tem autoridade para aprovar a transação. Normalmente, investidores e fundos adotam um
+formato de comitê de investimentos, seja apenas entre os sócios
+ou com membros externos para avaliar oportunidades e aprovar
+investimentos.
+Portanto, é importante planejar sua “campanha” endereçando:
+• O primeiro contato: você pode contatar diretamente um
+investidor (outbound), ou receber um contato de um fundo
+(inbound). Para ser achado, é importante manter presença nas
+publicações relevantes do setor, fazer pitches em eventos e estar listados em bancos de dados. Para abordar diretamente,
+a primeira escolha deveria ser a busca por uma recomendação de algum empreendedor já investido pelo fundo, ou pelo
+menos alguém de relacionamento mútuo. Quando nenhuma
+166
+
+•
+
+dessas alternativas for possível e só restar a opção do cold call,
+que esse seja o mais quente possível, demonstrando que você
+sabe quem está do outro lado e o que ele está buscando.
+Construindo a relação: toda venda consultiva requer um alto
+envolvimento com as pessoas envolvidas no processo decisório. É preciso construir uma Matriz de Relacionamento e se
+relacionar profissional e pessoalmente o máximo possível com
+todos. Não espere que o processo se resuma ao envio de um
+pitch e uma apresentação. Assim como no processo de vendas
+para os clientes da sua empresa (seja ela voltada a consumidores ou empresas) você busca “nutrir” o relacionamento com
+conteúdo, referências, demos, ligações, e-mails, e inúmeras
+outras estratégias de marketing, você precisa, além de ter um
+pitch matador, de todos colaterais possíveis e imagináveis para
+suportar as diversas interações necessárias.
+
+NEED — IDENTIFICANDO AS NECESSIDADES DOS
+POSSÍVEIS INVESTIDORES
+Com o seu “funil de vendas” progredindo, é preciso entender as
+necessidades dos seus potenciais investidores. Quais informações
+eles precisam para analisar a oportunidade e preparar uma análise
+do investimento? Você já tem todas essas informações prontas?
+Qual o prazo do fundo e em quanto tempo esse investidor precisaria vender sua participação? Quais seriam os requisitos para
+sua empresa fazer a próxima rodada de investimento? Que tipo de
+relação o investidor espera ter com você e sua empresa após o investimento? A sua “oferta” está de acordo com essas necessidades?
+167
+
+170
+
+Planejar, ou fazer uma previsão, não é tentar adivinhar o que vai
+acontecer no futuro, mais sim nos prepararmos para os diversos
+caminhos que podem nos levar do ponto A ao ponto B. É um
+exercício de entender os riscos e como podemos lidar com eles.
+Essa preparação requer avaliar quais esforços devem ser empenhados para atingirmos determinado objetivo, levando em conta o que conseguimos produzir hoje (dados), e o que temos de
+adicionar ou melhorar para produzir o que esperamos no futuro
+(premissas).
+
+COMO PLANEJAR O SEU FUTURO
+1. Defina quais são as alavancas do seu negócio.
+2. Reproduza o seu histórico financeiro baseado nessas
+alavancas, criando assim um algoritmo de como sua empresa funciona.
+3. Defina as premissas que farão essas alavancas mudarem ao longo do tempo. Busque justificar o porquê de
+seus investimentos em marketing darão mais retorno no
+futuro, ou ainda, por que seus vendedores vão vender
+mais, ou sua equipe de suporte vai endereçar um volume
+maior de atendimento.
+4. Busque evidências ou benchmarks para suportar essas premissas. Liste as empresas que você admira, especialmente aquelas listadas em bolsa, já que elas têm de
+172
+
+divulgar um volume enorme de informações. Pesquise o
+histórico financeiro e operacional delas em documentos
+conhecidos como S1 e 10K, disponíveis nas páginas de
+investor relations dessas empresas. Assim, você pode estabelecer metas que sejam possíveis serem alcançadas.
+5. Crie uma planilha com seu modelo operacional e financeiro.
+Existem três tipos de planejamento: i) quando tentamos prever o
+futuro com os recursos (dinheiro e talentos) que temos disponíveis; ii) quando conseguimos novos recursos e pensamos como
+utilizá-los da melhor maneira possível; e iii) quando imaginamos
+o que é possível fazer dado as realidades de mercado e as possibilidades de melhoras operacionais (premissas), e calculamos qual
+quantidade de recursos seria necessária.
+O primeiro é o mais realista e conservador, mas não permite a
+liberdade poética de imaginarmos o que nossa empresa poderia
+produzir. O segundo é inconsequente, já que os recursos são alocados sem bases de causa e efeito. O terceiro nos força a concatenar o que acontece hoje com o que esperamos do futuro, de
+maneira a orientar cada membro da equipe com as métricas necessárias para orientá-los na execução e aumentar as chances de
+atingirmos o planejado.
+O futuro será certamente diferente do planejado. O que importa é
+o raciocínio crítico aplicado no processo e o aprendizado que ele
+traz para o seu processo de gestão e liderança.
+173
+
+uma Máquina de Produto que entregue o produto desejado pelos
+clientes, uma Máquina de Vendas que produza o faturamento planejado, e uma Máquina do Amor que assegure que os clientes vão
+receber e pagar pelo produto.
+Mas quais são as oportunidades que essa situação limítrofe da capacidade humana proporciona?
+•
+
+•
+
+•
+•
+
+•
+
+A possibilidade de você conhecer tão profundamente clientes,
+seus desejos, necessidades e vontades, que possa oferecer um
+produto melhor do que qualquer outro — a vantagem do conhecimento.
+A possibilidade de você saber experimentar diferentes canais
+de marketing e vendas, e achar um meio de distribuição ímpar
+— a vantagem da informação.
+A possibilidade de você decidir e agir rapidamente, sem burocracia — a vantagem da velocidade.
+A possibilidade de você ter um sonho tão legal e uma cultura
+tão bacana que os talentos não resistiriam a sua proposta — a
+vantagem dos recursos.
+A possibilidade de você conhecer as pessoas certas, que possam ajudá-lo nos momentos exatos — a vantagem dos relacionamentos.
+
+Explorar oportunidades é construir vantagens competitivas e colocar as chances do sucesso ao seu favor. É preciso, acima de tudo,
+saber separar o que é risco do que é incerteza, do que é ignorância
+ou, como popularizado por Donald Rumsfeld, os “known knowns,
+known unknowns, and unknown unknowns”. Ou seja, o que a gente
+176
+
+178
+
+a Maria de hora em hora, tentando entender o que estava acontecendo.
+Maria não entendia aquela ansiedade toda, afinal, esse tipo de coisa acontece, e ela estava certa de que tudo não passava de algo
+temporário. E na ânsia de resolver logo o problema e voltar a vender, Maria esquecia de retornar as ligações.
+O Zé ficava cada vez mais nervoso, pois não sabia o que estava
+acontecendo e ainda achava que a Maria estava ignorando-o. Ele
+então resolveu notificar a Maria formalmente, chamando uma
+reunião de conselho de administração.
+Como se já não tivesse coisas suficientes para resolver, Maria agora teria de preparar uma apresentação sobre a situação e o futuro
+da empresa. Que saco! O que era para ser um problema do dia a
+dia, estava virando uma crise. Maria começou a ficar estressada.
+Bom, a reunião de conselho foi um desastre. Argumentos de cá,
+argumentos de lá, muita discussão, pouca resolução, um canta de
+galo, o outro mia de gato. Até que o membro independente do
+conselho resolveu apartar a briga e propôs que Zé e Maria fizessem terapia de casal.
+Terapia de casal? O Zé e a Maria acharam aquilo ridículo, mas
+no espírito de resolver logo a coisa e cada um poder voltar para
+o seu cotidiano, resolveram marcar um call por Skype com o tal
+terapeuta.
+
+180
+
+Depois de algumas tentativas de conectar todo mundo por Skype-que-nunca-funciona e o Hangout-que-tem-de-instalar, resolveram fazer o bate-papo por conferência telefônica mesmo.
+O terapeuta escutou as longas reclamações dos dois lados e chegou ao brilhante diagnóstico de que Maria e Zé precisavam de um
+guia ou playbook de relações com investidores. Como o livro Empreendedores são de Marte e investidores são de Vênus ainda não
+foi publicado, o terapeuta redigiu o seguinte receituário enviado
+por e-mail:
+PACIENTE MARIA
+•
+
+•
+•
+
+•
+
+3 pílulas de 8 em 8 horas de comunicação com investidores.
+Na dúvida, tome mais 2 pílulas. Pode ser por telefone, SMS,
+WhatsApp, e-mail.
+1 dose diária de auscultamento. Apenas escute seu investidor.
+Exercícios semanais de encontros presenciais com seu investidor. Pode ser café, almoço, suco, chopinho. Com todos, inclusive os estagiários.
+5 Ave-marias e 10 pai-nossos.
+
+PACIENTE ZÉ
+•
+•
+•
+
+Abstinência de encheção de saco. Na dúvida, não encha o saco
+do empreendedor.
+1 colher de sopa de chá de realidade: tem coisas que o empreendedor pode controlar, a maioria não.
+Na hora da ansiedade aguda, reveja seu investment memo e
+181
+
+O 26° passo — Vantagem competitiva para startups) realmente tem
+algum poder de fogo.
+Infelizmente, o processo de precificação não é bem reconhecido e,
+muitas vezes, acaba negligenciado. Algumas vezes essa é uma responsabilidade do CEO, outras de marketing, ou até produto; mas
+na maioria das vezes, as decisões são feitas de maneira ad hoc.
+Existem dois motivos que causam tal dificuldade: i) definir preços
+é uma atividade de alto risco com consequências imediatas, para
+o bem ou para o mal, seja por acertar ou errar na precificação; e
+ii) definir preços é um processo complexo, já que é necessário ter
+muitas informações e dados, além de experiência em como estas
+decisões podem impactar clientes.
+O resultado é que acabamos por seguir o caminho mais fácil, precificando nossos produtos com base em custos (cost-based pricing) ou com base nos competidores (competition-based pricing).
+Assim, ficamos com uma sensação de segurança, já que nossos
+preços são iguais aos dos competidores, e o mark-up nos garante
+que, pelo menos, cobriremos nossos custos.
+Acabamos assim deixando de lado todo o potencial de nos diferenciarmos — como diria Peter Thiel em Zero to One: “No mundo
+real, fora da teoria econômica, uma empresa é bem sucedida na
+exata medida que consegue fazer algo que os demais não conseguem”.
+Precificar é a maneira de capturar o valor que a sua empresa ou
+184
+
+produto criam. Se o seu produto oferece aos seus clientes algo
+melhor ou mais barato que as alternativas disponíveis no mercado, você cria valor e deveria ser capaz de incorporar isto ao seu
+modelo de precificação.
+De maneira intuitiva ou calculada, seus clientes sempre vão tentar pagar menos que o valor por eles percebido de quão útil o seu
+produto é. Portanto, para capturar valor, é preciso entender estas
+duas variáveis: preço e valor percebido.
+Valor percebido é a comparação subjetiva das qualidades do seu
+produto em relação a qualquer outra alternativa disponível, seja
+um competidor diretor, ou qualquer outra solução que enderece
+a necessidade do seu cliente. Preço não é só o valor monetário de
+troca, mas todas as condições promocionais e de pagamento.
+
+ENTÃO, PARA CRIAR E CAPTURAR
+VALOR, TEMOS DE SER O MELHOR EM...
+•
+•
+•
+
+Capturar as reais necessidades e os requerimentos do job-to-be-done dos nossos clientes;
+Transformar esses requerimentos em um produto;
+Gerenciar o valor percebido e o valor de troca.
+
+Depois de aprendermos com Andy Grove, Larry Page e Warren
+Buffet, chegou a hora do último capítulo na batalha contra El
+Enemigo: Steve Jobs.
+
+185
+
+Jobs possuía um entendimento profundo dos desejos, necessidades e vontades humanas. Ele conhecia intimamente quais problemas as pessoas estavam buscando resolver; assim como a tecnologia, tanto em hardware quanto software, poderia resolvê-los. No
+fundo de sua alma, ele era um Product Manager.
+Nós poderíamos destilar a sua sabedoria (talvez sua magia?) em
+11 elementos eternizados por suas célebres frases, a quais vamos
+explorar nos próximos passos:
+•
+
+•
+
+•
+
+•
+•
+
+•
+
+Product Management: “Inovação não tem nada a ver com
+quantos dólares de P&D você tem. Quando a Apple criou o
+Mac, a IBM investia 100 vezes mais em P&D. Não é o dinheiro
+que importa. O que importa são as pessoas que você tem no
+time e como você as lidera”.
+Whole Product: “O design de um produto é a alma de uma
+criação feita pelo homem que se expressa em diversas camadas de um produto ou serviço”.
+Positioning: “Um iPod, um telefone celular, um aparelho de
+dados móvel... esses NÃO são três aparelhos separados! Nós o
+chamamos de iPhone! Hoje, a Apple está reinventando o telefone. E aqui está ele”.
+Job-to-be-done: “Quanto mais profundo o entendimento do
+comportamento humano, melhor será o design de um produto”.
+User Experience: “O design não é apenas a forma ou a aparência de um produto. Design é como ele funciona na mão de
+alguém.”
+Market Requirements: “Você pode apenas perguntar o que os
+consumidores querem e tentar produzir e entregar o que foi
+
+188
+
+•
+
+•
+
+•
+
+•
+
+•
+
+pedido. Mas quando você estiver terminando de produzir, eles
+já vão querer algo diferente”.
+Idea Management: “É preciso muita disciplina para transformar ideias interessantes e novas tecnologias em uma empresa
+que pode continuar inovando por anos. É preciso aprender a
+dizer não”.
+Prioritization: “Foco e simplicidade têm sido meus mantras.
+O simples pode ser bem mais difícil que o complexo: você tem
+que dar duro para limpar seu pensamento e torná-lo simples”.
+Roadmapping: “Primeiro veio o mouse. Depois o click-wheel.
+E agora, vamos levar o multi-touch a mercado. Cada uma dessas interfaces revolucionárias permitiu a criação de um produto revolucionário — o Mac, o iPod e agora o iPhone”.
+Specification: “Os consumidores nos pagam por uma coisa
+apenas — destilar com afinco todos esses detalhes de uma maneira fácil e gostosa para que eles possam usar nossos computadores”.
+Product Requirements: “O motivo principal pelo qual a
+Apple foi capaz de criar produtos como o iPad foi porque nós
+sempre buscamos estar na intersecção entre a tecnologia e as
+artes liberais”.
+
+Pronto para o nosso último sprint?
+“S tay
+
+hungry .
+
+S tay
+
+foolish .”
+
+189
+
+guém precisasse daquilo. Ao “produtizar” aquela tarefa, ele criara
+o primeiro produto.
+A iniciativa foi tão bem-sucedida, que ele resolveu recrutar mais
+pessoas para produzir mais daquele produto. Na esteira do sucesso, ele decidiu então “produtizar” outras tarefas e contratar ainda mais talentos, para cuidar de uma linha de produtos cada vez
+maior. Novas ideias de tarefas a serem “produtizadas” não paravam de chegar. As perspectivas não poderiam ser melhores.
+Mas aí tudo começou a dar errado. As ideias de novos produtos e
+funcionalidades não eram tão boas e relevantes, a equipe não produzia exatamente o que era pedido, e o Vizir, vendo todo aquele
+sucesso, resolveu competir investindo sua vasta riqueza para contratar muito mais gente do que ele tinha disponível.
+Deprimido, desolado e preocupado, ele subiu até o pico da montanha mais próxima em busca de um sinal divino. Deus, em sua
+infinita bondade, ajudou-o a talhar em pedra Good Product Manager, Bad Product Manager.
+Aquele momento de epifania o ensinou que era seu dever, e de
+mais ninguém, definir quais tarefas deveriam ser “produtizadas”;
+e gerenciar aquelas pessoas tinhosas que desenvolviam e melhoravam continuamente os produtos.
+Ele teria de aprender a conhecer melhor as necessidades e vontades daqueles que buscavam terceirizar suas tarefas, a influenciar e
+liderar todos os envolvidos, a tolerar a ambiguidade inerente das
+192
+
+O seu segundo achado foi descobrir que as tarefas deveriam ser
+definidas como um processo, ou melhor, uma atividade que consiste de uma série de passos para atingir um objetivo. Tal função
+do job-to-be-done de garantir o resultado esperado, ele chamou de
+‘funcionalidade’.
+Mas ele também notou que, quando as pessoas compravam alguma coisa, elas buscavam não somente a tal da funcionalidade, mas
+também algo que apaziguasse seus anseios emocionais e sociais,
+e que fosse também mais barato do que as alternativas existentes.
+Como eram tinhosos estes clientes da antiguidade!
+Foi então que ele percebeu que todo produto deveria ter uma Proposta de valor capaz de endereçar ao mesmo tempo: as necessidades funcionais, emocionais, sociais e econômicas.
+Reconhecendo que acima de tudo seu papel era o de um “psicólogo”, ele passou a estudar e pesquisar sobre o comportamento
+humano. Vagando pelo mundo antigo em busca de respostas, ele
+chegou a um mago de Stanford, B.J. Fogg, que lhe ensinou o quão
+simples é o modelo de comportamento humano. Então, ele lhe
+entregou uma fórmula mágica para criar produtos que as pessoas
+realmente amassem:
+• Tempo: reduza o tempo necessário para alguém realizar uma
+ação;
+• Dinheiro: reduza o custo monetário para alguém realizar a
+tarefa;
+• Esforço físico: reduza a quantidade de trabalho físico necessária para executar a ação;
+196
+
+ou inconscientemente, as etapas e extratos de uma experiência.
+As fases pareciam ser o “antes”, o “durante” e o “depois” de uma
+determinada tarefa. Ele e Dr. Jones concluíram então que: o “antes” eram os passos dados durante o processo de compra, que deveriam ser endereçados pela Máquina de Vendas; o “durante”, a
+experiência do produto em si, que deveria ser endereçada pela
+Máquina de Produto; e o “depois”, os passos esperados pós-uso
+do produto, que deveriam ser abarcados pela Máquina do Sucesso
+do Cliente.
+Eles ainda descobriram que o “durante” era composto por camadas: um núcleo que representava o principal benefício ou funcionalidade requisitada por um cliente; e elementos orbitando aquela
+essência, que por sua vez complementavam e tornavam a experiência completa.
+Ficava claro que, para chegarem à Arca Perdida, seria imperativo desenvolverem as funcionalidades do núcleo, mas poderiam
+contar com parceiros para completar os benefícios adjacentes,
+ou elementos orbitando a oferta. Nascia, assim, a necessidade de
+criarem um roadmap e de identificar parceiros chave.
+P ronto
+
+200
+
+para o resto da jornada , I ndiana ?
+
+202
+
+Tendo entendido o que eram as fases e as camadas da tarefa-a-ser-executada e decididos a mapear o caminho que os levaria à
+Arca Perdida, ele e o Dr. Henry “Indiana” Jones partiram para
+Alexandria, a fim de consultar a maior sumidade em cartografia
+do mundo antigo, Claudius Ptolomeu.
+Como o professor Ptolomeu havia recém-publicado os oito volumes de Geographia, que continham todo o conhecimento geográfico greco-romano, eles estavam certos de conseguir o caminho
+das pedras. Mas depois de horas escutando o professor discorrendo sobre o conceito da projeção cônica equidistante meridiana,
+que em nada os ajudava, o Dr. “Indiana” Jones resolveu interrompê-lo para pedir orientações de como fazer um mapa.
+Ptolomeu explicou então que todo mapa começa com a definição
+dos traços do objeto sendo mapeado: como as características físicas e políticas de um terreno (os passos e gatilhos de um cliente
+em sua jornada) e a infraestrutura disponível para percorrer o
+terreno, como estradas e rios (as funcionalidades de um produto).
+Segundo o professor, o maior desafio seria como capturar, analisar e priorizar as inúmeras possibilidades de percorrer cada terreno. Cada possibilidade era uma ideia. E o que não faltava eram
+ideias! Seria preciso dizer não a muitas ideias, e a muitas pessoas,
+inclusive nós mesmos.
+Todo mundo, dentro e de fora da equipe, tinha sugestões de novas ideias. Os clientes tinham inúmeras reclamações que deveriam ser endereçadas. As funcionalidades existentes tinham de
+204
+
+206
+
+preendentemente útil de pensar sobre como priorizar as decisões
+relacionadas às possíveis funcionalidades de um produto. Se e é
+o número de usuários a ser impactado por uma funcionalidade,
+p a importância daquela funcionalidade para os usuários, e c o
+custo de desenvolvê-la, tem-se uma maneira simples de ranquear
+as inúmeras possibilidades, e então priorizar.
+Mas o Dr. “Indiana” Jones não se contentou com aquela fórmula, já
+que embora resolvesse o dilema da priorização, não endereçava o
+paradigma de como dizer não às inúmeras ideias. Foi quando eles
+ficaram sabendo que o Dr. Robert G. Cooper, que séculos depois
+inventaria o processo de Stage-Gate, também estava na cidade.
+A teoria do Dr. Cooper era de que o Stage-Gate poderia ser, ao
+mesmo tempo, uma ferramenta de gestão de ideias e de gestão de
+projeto. Assim, era possível criar estágios (o tal dos stage) para
+avaliação de ideias, separados por portões (o tal dos gates). Em
+cada portão, um gestor ou um comitê decide se a ideia deve ou
+não passar para a próxima fase, baseado em um critério predeterminado, e nas informações disponíveis naquele determinado
+momento.
+Os portões permitiam que as ideias fossem sendo peneiradas
+enquanto eram exploradas, validadas, conceituadas, planejadas,
+desenvolvidas e aprimoradas. Em cada portão, era decidido se a
+ideia deveria seguir adiante (go), ser descartada (kill), ser reciclada (recycle) ou se deveria esperar (hold).
+Eles ainda puderam ver como esse processo funcionava na prática
+208
+
+214
+
+te mapeadas, o desafio agora seria superar os inúmeros obstáculos
+ao longo do caminho.
+Será que as pessoas usariam o produto ou suas novas funcionalidades? Quanto elas pagariam por elas? E quantas pessoas se interessariam? Cansado de ouvir tantas indagações, o Dr. “Indiana”
+Jones sugere então uma visita ao Oráculo para tentar obter as respostas. Mas antes que a equipe pudesse se sentir aliviada, o Dr. Jones os alerta: interpretar as respostas do Oráculo não seria trivial.
+Para entender as sábias palavras, seria necessário preparar um
+MRD (Market Requirements Document) para descrever claramente qual a dor ou problema a ser resolvido pelo produto ou funcionalidade, assim como a justificativa de negócio e a métrica que
+apontaria o sucesso (ou fracasso) da empreitada.
+Percebendo que todos estavam ainda mais confusos, o Dr. lembrou já haver uma abordagem simples de engenharia reversa usada pela deusa do e-commerce, a Amazon. Em vez de começar por
+uma ideia e imaginar como o cliente se encaixa a ela, a deusa trabalhava de trás para a frente, começando pelo cliente.
+Esse formato começava com um press release anunciando o novo
+produto ou funcionalidade. Descrevendo uma narrativa ao redor
+da dor ou problema, de como as alternativas existentes deixam a
+desejar, e como o novo produto ou funcionalidade iria melhorar
+a vida de quem a usasse. Era uma maneira inteligente e barata de
+testar e iterar:
+
+216
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Título — Nomeie o produto ou funcionalidade de maneira
+que o leitor (o tal do cliente) o entenda.
+Subtítulo — Uma sentença descrevendo o mercado para o
+produto e o respectivo benefício.
+Sumário — Se o leitor não ler mais nada, o que você gostaria
+que ele lembrasse?
+Problema — Descreva a dor ou problema sendo endereçado.
+Solução — Descreva como as funcionalidades apaziguam a
+dor definitivamente.
+Citação da empresa — Uma citação direta de um representante da sua empresa.
+Por onde começar? — Apresente o quão fácil é começar usar
+o produto.
+Citação do cliente — Uma citação hipotética de um cliente
+descrevendo o quão maravilhoso é o produto.
+Call-to-Action — Onde clico para comprar?
+
+Se o press release for difícil de escrever, é porque o produto ou
+funcionalidade provavelmente não presta. É imprescindível perguntar exaustivamente e aprender interpretar o Oráculo, até se
+obter um press release perfeito.
+Já
+
+consultou seu
+
+O ráculo
+
+hoje ?
+
+217
+
+equipe. Embora ainda houvesse diferenças no entendimento exato do que seria necessário para satisfazer os clientes, o caminho a
+ser trilhado já era um consenso.
+Chegava a hora de especificar, de maneira clara e inequívoca, o
+propósito, as características, as funcionalidades e os comportamentos esperados, para que os desenvolvedores pudessem construir e testar o produto.
+Foi quando o Dr. “Indiana” Jones concluiu que: assim como o
+MRD capturava os desejos do Oráculo, as especificações deveriam ser anotadas em um PRD (Product Requirements Document).
+E ninguém sabia fazer um PRD melhor de seu velho amigo Leonardo da Vinci.
+Da Vinci era um mestre em combinar o entendimento do que as
+tecnologias disponíveis em sua época eram capazes de fazer com
+a beleza da estética dos sentidos (séculos depois denominada de
+User Experience, ou UX).
+Em seus PRDs, Da Vinci partia de uma persona, suas dores ou
+desejos, e desenhava as tarefas que as ajudaria a atingir seus objetivos. Esse era o cerne do processo de especificação de um produto, e a intersecção na qual criatividade e tecnologia se tocam. A
+maioria de suas obras-primas apenas endereçavam um problema
+existente sob uma nova ótica.
+Durante esses momentos criativos, Da Vinci experimentava com
+várias combinações. E a maneira mais eficiente que ele encontra220
+
+222
+
+interesses, um outro diretório de empresas, e por fim um mapa
+conduzindo as relações entre todos esses elementos. Era uma maneira simples e clara de descrever o produto e sua relação com a
+missão e visão da empresa.
+Da Vinci defendia que o diferencial de suas obras estava no fato
+dele ser um designer estratégico, sendo portanto responsável por
+influenciar as decisões de como o produto evoluiria. Segundo ele,
+seus concorrentes tinham designers táticos — que eram parte do
+time de produto — ou designers operacionais — que eram meros
+implantadores de UX (User Experience).
+Só um Chief Entrepreneur Officer, com a sensibilidade de um designer, poderia conduzir sua empresa e, consequentemente, o seu
+produto a navegarem pelas camadas estratégicas do design:
+•
+
+•
+•
+
+•
+
+Resultado: o que exatamente você espera que a pessoa faça
+com o seu produto? Como ela realiza essa tarefa e como a vida
+dela será melhor e mais fácil com o seu produto?
+Estrutura: quais são os componentes que produzirão o resultado esperado e como eles interagem para tal?
+Interação: qual é a sequência de comportamentos e eventos
+que leva a pessoa a realizar essa tarefa? Como ela vai interagir
+e manipular os componentes?
+Físico: quais serão as interfaces utilizadas para manipular os
+componentes?
+V ocê
+
+224
+
+é um designer estratégico , tático ou operacional ?
+
+226
+
+O Guilherme, o Mauricio e o Ricardo nos colocaram em cheque
+no final de 2014, questionando nossa tese, nosso processo de criação de valor e nosso posicionamento competitivo. E quando você
+é desmontado e desnudado por investidores, o que você faz?
+Nós fomos beber vinho. Entre taças de angústia, goles de dúvidas
+e um leve paladar de desespero, deparamo-nos com o rótulo da
+garrafa que nos saciava: “No final da jornada, só lembrarás de uma
+batalha. Aquela que lutaste contigo mesmo, o verdadeiro inimigo; a
+batalha que te fizeste único” — El Enemigo.
+Estava estampada ali a nossa luta, não contra nossos competidores, mas contra nós mesmos. Seja pelo efeito do vinho ou pela
+epifania de entender e sentir nossa missão, entramos em 2015
+confiantes de que, a despeito de qualquer resultado, lutaríamos
+uma boa luta.
+O que era a princípio uma soberba peça de marketing de conteúdo virou uma diário das nossas descobertas. Escrever esses 47
+passos foi uma das maiores lições de humildade que poderíamos
+ter. Descobrimos fissuras em nossa tese, falhas no nosso modelo
+mental e buracos nos serviços que prestamos aos empreendedores
+e investidores.
+Mas toda boa história termina assim. Você comicamente não
+consegue o que buscava, mas conquista algo que é muito mais
+apropriado. Você olha para a frente e percebe o quão mais alta a
+montanha em frente ainda é. Mas olha para trás e fica abismado
+de ter conseguido subir até aqui.
+228
+
+

@@ -1,0 +1,3933 @@
+© Casa do Código
+Todos os direitos reservados e protegidos pela Lei nº9.610, de 10/02/1998.
+Nenhuma parte deste livro poderá ser reproduzida, nem transmitida, sem autorização prévia por escrito da editora, sejam quais forem os meios: fotográficos,
+eletrônicos, mecânicos, gravação ou quaisquer outros.
+Casa do Código
+Livros para o programador
+Rua Vergueiro, 3185 - 8º andar
+04101-300 – Vila Mariana – São Paulo – SP – Brasil
+
+Casa do Código
+
+Prefácio
+Desde muito tempo não se observava uma mudança tão grande e significativa no
+workflow da maioria dos fotógrafos atuais. A fotografia digital chegou e, com ela,
+uma série de novos estudos e técnicas para apresentarmos os mais diferenciados tipos de imagem. Os fotógrafos analógicos, se assim podemos chamá-los, estão cada
+vez mais sendo vistos como uma espécie em extinção. Todo dia aparecem novas ferramentas tecnológicas proporcionando soluções antes inimagináveis a alguns cliques
+de distância.
+Todo o processo está ficando, dia após dia, mais intuitivo e acessível, com isso
+uma completa nova safra de fotógrafos está surgindo, não necessariamente melhores,
+mas com linguagens das mais variadas possíveis e, algumas vezes, com resultados
+fantásticos. Coisa que há algum tempo seria bem difícil de acontecer.
+O Lightroom é uma dessas ferramentas que nos proporciona infinitas possibilidades, desde a indexação de arquivos até a própria impressão de imagens. Cabe a
+cada um estudá-lo e assim, utilizá-lo da forma mais adequada. Ele será o seu laboratório com direito a erros infinitos sem custo.
+Comecei a utilizar o lightroom desde sua primeira versão, ainda com várias limitações, mas desde sempre percebi o potencial do software e ele se provou, agora
+na versão 5, com robustez e facilidade no gerenciamento de tudo. Seu excelente conjunto de ferramentas, aliado a uma forte integração com outros programas de edição,
+em particular o Photoshop, torna o Lightroom um dos mais poderosos e completos
+programas disponíveis a fotógrafos.
+Tomás Arthuzzi http://arthuzzi.com
+
+i
+
+Casa do Código
+
+Sumário
+
+Sumário
+1
+
+2
+
+3
+
+Introdução
+
+1
+
+1.1
+
+Em que o Lightroom irá lhe ajudar . . . . . . . . . . . . . . . . . . . .
+
+2
+
+1.2
+
+O que você irá aprender neste livro . . . . . . . . . . . . . . . . . . . .
+
+3
+
+1.3
+
+Diferenças com outros programas . . . . . . . . . . . . . . . . . . . . .
+
+3
+
+1.4
+
+Como o livro está organizado e focado . . . . . . . . . . . . . . . . . .
+
+4
+
+1.5
+
+Uma nota sobre os demais módulos . . . . . . . . . . . . . . . . . . . .
+
+5
+
+1.6
+
+Versão do Lightroom utilizada neste livro . . . . . . . . . . . . . . . .
+
+5
+
+Primeiro contato com o Lightroom
+
+7
+
+2.1
+
+Configurar o comportamento dos painéis . . . . . . . . . . . . . . . .
+
+9
+
+2.2
+
+Onde armazenar as fotos . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+2.3
+
+Como organizar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+11
+
+Importar fotos, o “abrir” do Lightroom
+
+13
+
+3.1
+
+Passo 1 – Selecionar a origem das fotos . . . . . . . . . . . . . . . . . .
+
+15
+
+3.2
+
+Passo 2 – Selecionar as fotos a serem importadas . . . . . . . . . . . . 16
+
+3.3
+
+Passo 3 – Definir o destino das fotos . . . . . . . . . . . . . . . . . . . 20
+
+3.4
+
+Importar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+
+4 Organize-se com o módulo Biblioteca
+
+25
+
+4.1
+
+Modo de exibição em Grade . . . . . . . . . . . . . . . . . . . . . . . . 26
+
+4.2
+
+Veja a foto grande com a exibição em Lupa . . . . . . . . . . . . . . . 27
+
+4.3
+
+Comparar duas fotos e escolher uma preferida . . . . . . . . . . . . .
+
+4.4
+
+Escolher a melhor entre múltiplas fotos com o modo de Pesquisa . . 34
+
+4.5
+
+Ordenar as fotos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+
+31
+
+iii
+
+Casa do Código
+
+Sumário
+
+4.6
+
+Organização com sinalizadores, cores e estrelas . . . . . . . . . . . . . 37
+
+4.7
+
+Sinalizadores . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+
+4.8
+
+Exclua facilmente fotos rejeitadas por sinalizador . . . . . . . . . . . . 39
+
+4.9
+
+Rótulos de cor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+
+4.10 Avaliação com estrelas . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+4.11 Teclas de atalho . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+5
+
+Cores e efeitos essenciais
+
+51
+
+5.1
+
+Preto e branco . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+51
+
+5.2
+
+Mais estilo com vinhetas . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+
+5.3
+
+Remover o efeito de vinheta causado pela lente . . . . . . . . . . . . . 57
+
+5.4
+
+Equilíbrio de branco . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+
+5.5
+
+Sombras e realces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+
+6 Exportar fotos – o “Salvar” do Lightroom
+
+7
+
+8
+
+iv
+
+71
+
+6.1
+
+Definir como as fotos serão exportadas . . . . . . . . . . . . . . . . . . 72
+
+6.2
+
+Nomeação de arquivos . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
+
+6.3
+
+Vídeo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
+
+6.4
+
+Selecionar o formato do arquivo . . . . . . . . . . . . . . . . . . . . . . 74
+
+6.5
+
+Especificar as dimensões e resolução . . . . . . . . . . . . . . . . . . . 74
+
+6.6
+
+Nitidez, metadados e pós-processamento . . . . . . . . . . . . . . . . 74
+
+6.7
+
+Bônus: crie suas próprias predefinições . . . . . . . . . . . . . . . . . . 75
+
+Ajustes estruturais
+
+77
+
+7.1
+
+Remover manchas e elementos indesejados . . . . . . . . . . . . . . . 77
+
+7.2
+
+Recortes, proporções, rotação e linha do horizonte . . . . . . . . . . . 87
+
+7.3
+
+Corrigir olhos vermelhos . . . . . . . . . . . . . . . . . . . . . . . . . . 94
+
+Encontre qualquer foto com filtros
+
+97
+
+8.1
+
+Pesquisa por texto . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 98
+
+8.2
+
+Filtro de atributos utilizando sinalizadores . . . . . . . . . . . . . . . . 99
+
+8.3
+
+Filtro de atributos utilizando estrelas . . . . . . . . . . . . . . . . . . . 100
+
+8.4
+
+Filtro de atributos utilizando rótulos de cor . . . . . . . . . . . . . . . 100
+
+8.5
+
+Pesquisa por metadados . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+
+Casa do Código
+
+Sumário
+
+9 Organize-se com coleções
+9.1 Coleções manuais . . . . . . . . . . . . . . . . . . . . .
+9.2 Maior organização com conjunto de coleções . . . . .
+9.3 Adicionar e remover fotos de uma coleção . . . . . . .
+9.4 Coleções inteligentes . . . . . . . . . . . . . . . . . . .
+9.5 Ideias criativas para coleções inteligentes . . . . . . . .
+9.6 Agrupe fotos temporariamente com a Coleção rápida
+10 Categorização por palavras-chave
+10.1 Como inserir palavras-chave . . . . . . . . . . .
+10.2 Procurar fotos por palavras-chave . . . . . . . .
+10.3 Sugestões de palavras-chave . . . . . . . . . . .
+10.4 Conjunto de palavras-chave . . . . . . . . . . .
+10.5 Gerencie tudo na seção Lista de palavras-chave
+10.6 Organizar as palavras por hierarquia . . . . . .
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+103
+104
+106
+108
+110
+113
+114
+
+.
+.
+.
+.
+.
+.
+
+119
+119
+120
+123
+123
+126
+128
+
+11 Registre sua assinatura com Marca d’água
+131
+11.1 Inserir marcas de texto . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
+11.2 Inserir marcas de gráfico . . . . . . . . . . . . . . . . . . . . . . . . . . 133
+12 Gerenciamento avançado das fotos
+135
+12.1 Alta produtividade com edição de várias fotos simultaneamente . . . 139
+12.2 Ajustes pontuais de cores com HSL . . . . . . . . . . . . . . . . . . . . 143
+13 Edição sem os arquivos originais com as Visualizações Inteligentes
+13.1 O que são as visualizações inteligentes . . . . . . . . . . . . . . .
+13.2 Diferenças e limitações com outra funcionalidade do Lightroom
+13.3 Quando utilizar . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+13.4 Como criar visualizacões inteligentes . . . . . . . . . . . . . . . .
+13.5 Como identificar quando existem . . . . . . . . . . . . . . . . . .
+13.6 Remover visualizações inteligentes . . . . . . . . . . . . . . . . .
+14 Tutorial — deixando o pôr do sol ainda mais bonito
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+147
+149
+149
+151
+152
+154
+156
+159
+
+v
+
+Capítulo 1
+
+Introdução
+O Lightroom, cujo nome oficial é Adobe Photoshop Lightroom, é um programa lançado oficialmente no início de 2007, embora seus pilares tenham começado por meados de 2002. Seu principal intuito é auxiliar os usuários a gerenciar fotografias,
+especialmente se for em grande quantidade, e realizar o trabalho de pós-produção
+de maneira extremamente efetiva. Ele contém uma gama completa de ferramentas
+para edição, porém não almeja ser um substituto ao Photoshop – e é justamente aí
+que reside um dos seus grandes diferenciais.
+Tenha em mente que o Lightroom é um programa destinado tanto a fotógrafos
+profissionais quanto hobistas, e que ele não é um programa de edição de imagens nos
+mesmos moldes do Photoshop, embora tenha diversas e excelentes ferramentas para
+tratar as fotos – ou, utilizando o termo do mercado, pós-produzir. As pessoas que
+fotografam ocasionalmente e sem grandes pretensões provavelmente farão melhor
+uso de aplicativos como o iPhoto ou Picasa, que também são excelentes, mas com
+objetivos distintos do Lightroom.
+Se você – como muita gente – está acostumado a um fluxo de trabalho que en-
+
+1.1. Em que o Lightroom irá lhe ajudar
+
+Casa do Código
+
+volve gerenciar manualmente arquivos pelo Windows Explorer ou Finder (no caso
+de Mac) e fazer ajustes nas imagens, mesmo que superficiais, utilizando o Photoshop,
+talvez considerará o Lightroom um tanto complicado em um primeiro contato. Esta
+“reclamação” é frequentemente encontrada em fóruns da internet. Contudo, o ganho em produtividade e aumento na qualidade do seu trabalho justiça a curva de
+aprendizado.
+O Lightroom é o principal programa para quem deseja organizar, catalogar e
+editar (pós-produzir) fotografias de maneira profissional. Ele ajuda enormemente
+nestes passos, e se você alguma vez já tentou manualmente dar um jeito nas fotos que
+tem espalhadas em diversos lugares sabe que esta não é uma tarefa muito simples,
+especialmente quando são dezenas de milhares de arquivos que ocupam centenas de
+gigabytes.
+
+1.1
+
+Em que o Lightroom irá lhe ajudar
+
+Independentemente se você já tem um fluxo de trabalho com outros aplicativos,
+como a dobradinha Photoshop + Bridge (ambos também da Adobe), ou se mantém tudo manualmente, o Lightroom pode ser visto como um aplicativo orientado
+a fluxos de trabalho sem depender de ferramentas externas. Ele auxilia deste a importação das fotos do cartão de memória da máquina fotográfica ou de algum disco
+do computador, passando pelo gerenciamento dos arquivos, organização, edição e
+correções em lote, separação por palavras-chave, cores e coleções, publicação, impressão, exportação para diversos serviços e formatos.
+Como dito anteriormente, o Lightroom se destaca por ter tudo em um único
+lugar e permitir acesso rápido às ferramentas, de maneira consistente durate todo o
+trabalho – ele foi criado para oferecer o máximo de produtividade. Por exemplo, no
+Photoshop são necessários alguns cliques ou menus a mais para fazer certas coisas
+de edição, e se for necessário modificar metadados ou rótulos de cor, é preciso ir para
+algum outro programa (como o Adobe Bridge).
+Porém, não encare estas diferenças como uma forma de competição entre os
+aplicativos, pois da mesma forma que o Photoshop não faz tudo o que o Lightroom
+faz, o Lightroom não faz tudo o que o Photoshop faz.
+
+2
+
+Casa do Código
+
+Capítulo 1. Introdução
+
+A motivação por trás da criação do Lightroom
+O Photoshop foi criado por um time de pessoas especializadas em
+processamento de imagens, que com o passar dos anos foram adicionando suporte a ferramentas para atender a outros profissionais, tanto
+que hoje em dia ele é sinônimo de edição de imagens, sendo possível
+fazer virtualmente qualquer coisa com ele. Lá atrás nunca houve uma
+definição precisa sobre para quem o Photoshop era destinado.
+Já o Lightroom foi criado por fotógrafos, para fotógrafos, e toda evolução dele é feita em cima desta premissa.
+
+1.2
+
+O que você irá aprender neste livro
+
+Este livro é destinado tanto a pessoas que trabalham com fotografia profissionalmente — ou seja, tendo ela como sua principal fonte de renda —, assim como para
+os hobistas. Eu mesmo me incluí na categoria de hobista. Não é necessario nenhum
+conhecimento anterior com o programa, e ao final dele você será capaz de organizar
+e editar suas fotos de maneira bastante eficiente e prática. Não entraremos em detalhes técnicos profundos de fotografia em geral, e sim manteremos o foco nas partes
+práticas e mais utilizadas no dia a dia.
+
+1.3
+
+Diferenças com outros programas
+
+Usuários de aplicativos como o Picasa, iPhoto, ACDSee e similares frequentemente
+questionam qual a vantagem do Lightroom, e na prática a resposta depende dos seus
+objetivos. A lista abaixo compila alguns dos principais pontos.
+
+Lightroom
+• É considerado um aplicativo para profissionais e hobistas sérios;
+• Integração com outros aplicativos da Adobe, especialmente o Photoshop;
+• Ferramentas mais sofisticadas de edição e organização;
+• Processamento em lote;
+3
+
+1.4. Como o livro está organizado e focado
+
+Casa do Código
+
+• Edição não-destrutiva;
+• Extensão via plugins e predefinições;
+• É mais caro;
+• Excelente suporte a arquivos RAW.
+
+Picasa e similares
+• Geralmente grátis ou com preço bem mais baixo;
+• Destinado a fotógrafos casuais, que apenas querem um pouco de organização
+e compartilhar as fotos com parentes e redes sociais;
+• Ferramentas de edição mais simplificadas em termos de controle;
+• Requer menos recursos de hardware;
+• Menos eficiente com arquivos RAW (porém, isso tem melhorado gradativamente).
+
+1.4
+
+Como o livro está organizado e focado
+
+Este livro aborda os pilares fundamentais do Lightroom, dando grande ênfase a um
+fluxo de trabalho eficiente, passando por detalhes das diversas ferramentas disponíveis no programa. Todo o conteúdo será focado nos módulos Biblioteca e Revelação, que são os mais importantes e essenciais para o dia a dia.
+Uma das principais preocupações que tive ao escrever o livro foi balancear a profundidade com a qual assuntos mais básicos e fundamentais são abordados, porém
+sem deixar de lado os leitores mais ávidos por detalhes profundos. A apresentação de
+funcionalidades e recursos é feita de maneira orgânica, de tal forma que seja possível
+tirar proveito do Lightroom desde das primeiras páginas.
+Foi dada muita atenção para a criação de material que o instigue a sempre querer
+continuar adiante.
+
+4
+
+Casa do Código
+
+Capítulo 1. Introdução
+
+Termos em inglês versus tradução
+A tradução de termos em inglês, especialmente os mais técnicos, é
+sempre um assunto delicado. Como o Lightroom permite configurar em
+qual língua os menus, botões e telas são apresentados, optamos por utilizar o Português brasileiro em todos os exemplos, e quando pertinente
+o termo original em inglês é apresentado para que sirva de referência em
+pesquisas na Internet.
+
+1.5
+
+Uma nota sobre os demais módulos
+
+Este livro trata exclusivamente dos dois principais módulos do Lightroom: Biblioteca
+e Revelação, não sendo abordados os demais – Mapa, Livro, Slides, Web e Impressão. O motivo disso é principalmente a objetividade e foco nos dois módulos que
+permeiam a quase totalidade do tempo em que passamos no Lightroom, enquanto
+os demais módulos têm uso bastante específicos e, após a leitura deste livro, você
+com certeza terá total desenvoltura para utilizá-los por conta própria.
+
+1.6
+
+Versão do Lightroom utilizada neste livro
+
+Este livro cobre a versão 5 do Lightroom, tanto para Windows quanto para Mac. As
+teclas de atalho são sempre mencionadas levando em consideração os dois sistemas
+operacionais, e não há diferença de funcionalidade entre um e outro. Como via de
+regra, a tecla CTRL do Windows equivale a tecla COMMAND do Mac.
+
+5
+
+Capítulo 2
+
+Primeiro contato com o Lightroom
+Apesar dos seus muitos painéis, configurações e possibilidades, o uso do Lightroom
+não precisa ser complexo, e como veremos durante o livro, existem algumas maneiras de simplificar bastante o fluxo de trabalho. Aliás, esta é uma regra de ouro: uma
+das coisas que você mais irá querer fazer é tornar o seu fluxo de trabalho simples
+e eficiente; quanto mais sucesso tiver nesta tarefa, mais tempo terá para outras coisas, como dar mais atenção a cliente, cuidar dos negócios da empresa, dar atenção à
+família ou simplesmente fotografar.
+A imagem 2.1 mostra uma visão geral da interface do Lightroom, com todos os
+painéis ativos, que serão apresentados gradativamente no decorrer do livro – portanto, não se preocupe para compreendê-los por completo.
+
+Casa do Código
+
+Figura 2.1: A interface do Lightroom
+
+Existem sete painéis principais:
+1) Painel seletor de módulos (tecla de atalho F5);
+2) Barra de filtros da biblioteca (tecla \);
+3) Painel esquerdo (tecla F7);
+4) Área principal de conteúdo;
+5) Painel direito (tecla F8);
+6) Barra de ferramentas (tecla T);
+7) Tira de filme, ou miniaturas (tecla F6).
+
+8
+
+Casa do Código
+
+Capítulo 2. Primeiro contato com o Lightroom
+
+Vá se acostumando com as teclas de atalho
+Teclas de atalho são grande aliadas de produtividade, e o Lightroom
+faz uso extenso delas. Durante todo o livro mostraremos as teclas realizar certas operações. Quanto mais cedo você começar a utilizá-las, mais
+rápido as dominará.
+Com exceção da área principal de conteúdo, indicada pelo número 4 na imagem
+2.1, todos os outros painéis e barras podem ser escondidos, o que aumenta muito a
+área útil de trabalho, além de deixar a interface menos poluída.
+
+2.1
+
+Configurar o comportamento dos painéis
+
+A imagem 2.2 aponta os pequenos ícones para esconder ou mostrar os painéis do
+Lightroom, bastando um clique do mouse para alternar o estado (o que tem o mesmo
+efeito das teclas de atalho mencionadas anteriormente). Clique com o botão direito
+para configurar a ação que deverá ser feita quando o painel em questão estiver escondido e você mover o mouse naquela região, conforme mostrado na imagem 2.3. A
+opção Ocultar e mostrar automaticamente faz com que o Lightroom mostre automaticamente o painel quando você mover o mouse na região dele, e o esconda quando o mouse sair da área. Já a opção Ocultar automaticamente irá
+esconder o painel quando você mover o mouse para outra região da tela, porém,
+para abri-lo, será necessário clicar na barra. O item Manual instrui o Lightroom
+para que mostre ou esconda o painel somente quando clicarmos com o mouse, sem
+tomar qualquer medida automática. Por último, Sincronizar com o painel
+oposto aplica ao mesmo tempo as regras para os painéis que estiverem em posições
+opostas – ou seja, se um dos verticais ou horizontais for ocultado ou exibido, o da
+posição oposta também será automaticamente ocultado ou exibido.
+
+9
+
+2.2. Onde armazenar as fotos
+
+Casa do Código
+
+Figura 2.2: Localização dos botões para mostrar ou ocultar os painéis
+
+Figura 2.3: Opções de botão direito, disponíveis para cada painel
+
+2.2
+
+Onde armazenar as fotos
+
+Um dos principais desafios dos fotógrafos digitais é decidir onde e como armazenar
+e organizar as milhares de fotos produzidas em uma sessão e ao longo dos anos de
+trabalho. Mesmo quem não trabalha profissionalmente na área (por “profissionalmente”, aqui, entenda-se como alguém que faça da fotografia a sua principal fonte
+de renda) sabe muito bem como é fácil perder-se entre dezenas de diretórios com
+nomes enigmáticos e fotos não catalogadas corretamente. Algumas pessoas saemse melhores que outras na organização do material, porém esta não costuma ser a
+10
+
+Casa do Código
+
+Capítulo 2. Primeiro contato com o Lightroom
+
+regra – pelo contrário, não raramente as pessoas simplesmente transferem as fotos
+diretamente do cartão de memória para um diretório qualquer.
+Além de requerer um mínimo de disciplina, para ter e manter as fotos organizadas é necessário um bom roteiro de organização e, o mais importante de tudo, que
+sigamos este roteiro à risca.
+As formas mais comuns de armazenamento de imagens costumam ser o próprio disco do computador, ou um disco externo. Armazenar as fotos diretamente
+no disco do computador tem a vantagem que os arquivos estarão sempre o mais
+acessíveis possível e, no caso de notebooks, acessíveis em qualquer lugar que você
+esteja. Contudo, as imagens irão competir por espaço com centenas de aplicativos
+e arquivos variados, e eventualmente tal espaço irá acabar, sendo necessário fazer
+uma atualização na máquina ou movê-los para outro lugar. Por outro lado, discos
+externos, geralmente conectados via USB, são bem baratos e têm uma grande capacidade de armazenamento, talvez até mais que o computador. Por outro lado, é um
+periférico a mais para manter e carregar, caso você precise levar as fotos consigo para
+diversos lugares.
+Lembre-se que quanto maior a resolução da máquina fotográfica, maior será o
+tamanho de cada arquivo. A Canon 5D Mark III (22 MP) gera arquivos RAW na
+faixa dos 32MB, enquanto que a Nikon D800 (36 MP) gera facilmente arquivos de
+50MB – em alguns casos, até maiores.
+É obrigatório armazenar as fotos em um disco externo? Certamente, não. Especialmente se você ainda não tiver um e não quiser ter o gasto adicional no momento.
+É puramente uma questão de preferência, e sempre há a possibilidade de transferir
+para um outro lugar eventualmente.
+
+2.3
+
+Como organizar
+
+Embora o Lightroom não estabeleça regras sobre como organizar os diretórios das
+imagens, existe uma maneira de facilitar o trabalho – o nosso próprio trabalho, digase de passagem. E é algo muito simples: ao invés de manter diretórios espalhados
+pelo computador (ou pelo disco externo), tenha uma pasta principal onde todas
+as outras subpastas ficarão. Esta pasta pode-se chamar “Fotos”, “Imagens”, “Maria”,
+“Trabalho”, o nome que você preferir. Fotos é um bom nome, se estiver na dúvida
+de algo mais criativo.
+
+11
+
+2.3. Como organizar
+
+Casa do Código
+
+Faça isso fora do Lightroom
+Tudo o que é descrito aqui deve ser feito fora do Lightroom, diretamente pelo Windows Explorer ou Finder (no caso de Mac). Mais tarde
+veremos como importar estas fotos para dentro do Lightroom, e ver
+como ele faz um excelente trabalho de ajudá-lo a continuar a ser organizado.
+Dentro desta pasta você irá colocar todas as outras com as fotos propriamente
+ditas. De novo, não há uma regra, mas é boa prática utilizar um diretório para cada
+sessão ou tema – por exemplo, Casamento Bia & Alexandre, Natal 2012,
+Ensaio Maria Rita etc. Há quem prefira organizar por data, inclusive, mas fica
+a seu critério.
+Organizando desta maneira – uma pasta principal Fotos (ou qualquer que tenha sido o nome escolhido) e as demais pastas dentro desta principal – você mantém
+em um único lugar todo o seu trabalho e, se necessário, pode mover para outro lugar
+sem o menor esforço.
+O importante é manter a consistência deste fluxo, evitando desvios como colocar
+apenas algumas pastas nesta principal, e deixar o resto espalhado em outros discos.
+Se atualmente você tem fotos espalhadas por todo o computador, pegue um bom
+copo de café, reserve algumas horas em um dia em que estiver com a cabeça fresca,
+e organize na estrutura discutida aqui. No longo prazo você se sentirá aliviado por
+ter feito isso.
+
+12
+
+Capítulo 3
+
+Importar fotos, o “abrir” do
+Lightroom
+Como mencionado no início do livro, o Lightroom é um programa aprimorado para
+trabalhar com inúmeras fotos simultaneamente, centenas, milhares, sem o menor
+problema. Algo que pega de surpresa os marinheiros de primeira viagem é que ele
+não contém aquela velha conhecida ação de “abrir” um arquivo como fazemos com
+o Word ou Photoshop, e sim “importar” para dentro dele o material a ser trabalhado.
+Desta forma, a primeira coisa a ser feita para trabalhar com fotos no do Lightroom é importá-las para dentro do programa. Isso pode parecer algo chato ou desnecessário, afinal, “se já tenho as fotos no disco, por que eu deveria fazer outro passo
+para importá-las?”.
+Contudo, aos poucos esta necessidade irá ficar mais clara para você. Por hora,
+tenha em mente que o processo de importar para o Lightroom consiste apenas em
+dizer onde as suas fotos estão, para que o ele possa acessar e gerenciá-las, especialmente no momento da edição, porém sua função não é atuar como o Windows
+
+Casa do Código
+
+Explorer ou Finder.
+A importação de fotos dá-se pelo botão Importar do módulo Biblioteca
+conforme mostra a imagem 3.1, ou então através do menu Arquivo -> Importar
+fotos e vídeo.. (tecla de atalho CTRL/CMD + SHIFT + I).
+
+Figura 3.1: Localização do botão de importar fotos
+
+A tela de importar fotos, mostrada na imagem 3.2, pode assustar um pouco de
+início, mas apesar de ter diversas opções, seu uso é relativamente simples. Podemos
+dividi-la em 3 etapas: seleção da origem das fotos (item 1), seleção das fotos e o que
+fazer com elas (item 2) e seleção do destino das fotos (item 3).
+
+14
+
+Casa do Código
+
+Capítulo 3. Importar fotos, o “abrir” do Lightroom
+
+Figura 3.2: Tela de importar fotos
+
+Repare que estas três etapas ficam bem explícitas na parte superior da janela,
+conforme a imagem 3.3.
+
+Figura 3.3: A separação dos três passos para importar as fotos no Lightroom
+
+3.1
+
+Passo 1 – Selecionar a origem das fotos
+
+O primeiro passo consiste em selecionar o lugar de origem das fotos a serem importadas, que pode ser tanto um diretório qualquer do computador quanto o cartão de
+memória da sua máquina fotográfica, sendo que a única diferença entre eles é que ao
+importar do cartão de memória precisamos necessariamente informar ao Lightroom
+para onde ele deverá copiar as fotos.
+Supondo que você já tenha fotos em disco, informe a localização delas no painel
+da esquerda, conforme exemplifica a imagem 3.4. Se o cartão de memória estiver
+conectado ao computador, o Lightroom irá listá-lo na seção Dispositivos.
+15
+
+3.2. Passo 2 – Selecionar as fotos a serem importadas
+
+Casa do Código
+
+Figura 3.4: Painel para selecionar a origem das fotos
+
+Ao escolher o diretório, as miniaturas de todas as fotos serão mostradas no painel
+central.
+
+3.2
+
+Passo 2 – Selecionar as fotos a serem importadas
+
+O painel central mostra as fotos disponíveis para importação, conforme mostra a
+imagem 3.5. As imagens marcadas com um pequeno “check” no canto superior esquerdo serão importadas, enquanto as não marcadas serão ignoradas – neste caso,
+repare que, conforme a imagem 3.6, a borda da foto fica com uma cor mais escura
+que as selecionadas, o que facilita a identificação visual do que efetivamente será importado. Para selecionar ou remover a seleção de uma foto, clique com o mouse no
+pequeno quadrado do canto superior direito dela.
+
+16
+
+Casa do Código
+
+Capítulo 3. Importar fotos, o “abrir” do Lightroom
+
+Figura 3.5: Painel de seleção de fotos
+
+Figura 3.6: As fotos da segunda linha não serão importadas. Repare na cor mais
+escura
+
+Se você tem uma grande quantidade de fotos mas não deseja importar todas, os
+17
+
+3.2. Passo 2 – Selecionar as fotos a serem importadas
+
+Casa do Código
+
+botões Marcar tudo e Desmarcar tudo existentes na parte de baixo do painel
+facilitam bastante o trabalho de seleção parcial.
+
+Marcar ou desmarcar múltiplas fotos ao mesmo tempo
+O processo para marcar ou desmarcar múltiplas fotos simultaneamente é o mesmo que para uma única foto: selecione as desejadas, e clique em qualquer um dos pequenos quadrados no canto superior direito,
+que o Lightroom se encarregará de marcar as demais. Alternativamente é
+possível dar um toque na barra de espaços do teclado para obter o mesmo
+resultado.
+No canto inferior direito do painel há o slider Miniaturas (vide imagem 3.7),
+que, quanto mais para a esquerda estiver, mais imagens irá mostrar (tornando-as pequenas), e quanto mais para direita, menos imagens irá mostrar (tornando-as grandes e facilitando a visualização).
+
+Figura 3.7: Slider para modificar o tamanho das miniaturas
+
+Para visualizar uma única foto por vez, utilize a tecla de atalho E (modo “lupa”,
+ou “zoom”), ou através do ícone de um retângulo simples no canto inferior esquerdo.
+18
+
+Casa do Código
+
+Capítulo 3. Importar fotos, o “abrir” do Lightroom
+
+Já para alternar para o modo de exibição em grade (“Grid”) utilize a tecla G, ou pelo
+ícone com diversos pequenos quadrados no canto inferior esquerdo.
+
+Defina a operação a ser feita
+Ainda no painel central, é possível definir o que o Lightroom deverá fazer com
+as fotos assim que o processo de importação começar. Conforme mostra a imagem
+3.8, existem 4 opções: Copiar como DNG, Copiar, Mover ou Adicionar.
+
+Figura 3.8: Operações que podem ser feitas durante a importação
+
+A opção Copiar faz justamente o que o nome indica – copia as fotos de um
+lugar para outro. É o que deverá ser utilizado quando a origem das imagens for o
+cartão de memória da máquina fotográfica, o que faz bastante sentido, já que é um
+dispositivo que fica apenas temporariamente conectado ao computador. Esta opção
+também pode ser utilizada com fotos que já estejam em algum disco.
+A opção Mover também é autodescritiva, sendo muito útil para organizar fotos
+espalhadas em diversos diretórios ao mesmo tempo que as importamos para dentro
+do Lightroom. Ou seja, você pode especificar que os arquivos deverão ser movidos
+dos diretórios de origem (passo 1 visto anteriormente) para uma única pasta (passo
+3, adiante).
+Já a opção Adicionar mantém as fotos em seus diretórios de origem, o que é
+útil quando tem-se uma estrutura mais organizada ou, claro, quando simplesmente
+não queremos alterar o lugar onde os arquivos se encontram, por qualquer motivo
+que seja. Utilizando esta opção, o Lightroom irá apenas referenciá-las, ou seja, adicionar ao seu catálogo.
+Por último, a opção Copiar como DNG faz o processo de cópia regular, porém
+convertendo as imagens para o tipo de arquivo DNG – ou Digital Negative, que é um
+formato aberto criado pela Adobe.
+19
+
+3.3. Passo 3 – Definir o destino das fotos
+
+3.3
+
+Casa do Código
+
+Passo 3 – Definir o destino das fotos
+
+A última etapa varia um pouco de acordo a opção escolhida: Copiar, Mover ou
+Adicionar. A imagem 3.9 mostra os painéis possíveis para as opções Copiar e
+Mover, enquanto a imagem 3.10 mostra os painéis da opção Adicionar. Repare
+que este último tem dois painéis a menos.
+
+Figura 3.9: Painéis das opções ‘Copiar’ e ‘Mover’
+
+Figura 3.10: Painéis da opção ‘Adicionar
+
+Como o funcionamento deles não se altera, veremos separadamente cada um.
+
+Tratamento de arquivos
+
+Figura 3.11: Painel ‘Tratamento de arquivos’
+
+20
+
+Casa do Código
+
+Capítulo 3. Importar fotos, o “abrir” do Lightroom
+
+Para visualizar uma foto em tamanho grande no Lightroom, ele primeiro precisa
+ter uma imagem de tamanho apropriado para mostrar. O que difere é quando ele irá
+obter isso, e a escolha que você faz no item Renderizar visualizações tem
+impacto direto no tempo que o programa levará para completar esta tarefa. Existem quatro formas: Mínimas, Incorporados e auxiliares, Padrão e 1:1.
+Mínimas faz com que a importação das fotos seja mais rápida, porém você terá que
+esperar alguns segundos para visualizar em tamanho grande a foto pela primeira
+vez. Em contrapartida, ao selecionar 1:1 o Lightroom criará um cache de alta qualidade durante o processo de importação, mas a visualização das fotos em tamanho
+grande será instantânea. Ou seja, a lista vai de “Importar mais rápido, porém demorar mais para ver as imagens pela primeira vez” para “Demorar mais para importar,
+porém ver instantaneamente as imagens depois”. A escolha é sua. Pessoalmente,
+utilizo 1:1.
+O item Não importar possíveis duplicatas é autodescritivo, indicando que o Lightroom deverá ignorar a importação de fotos que sejam claramente
+duplicatas de outras que já estejam no catálogo.
+Por último, caso queira fazer uma cópia de segurança para algum outro lugar,
+como um disco de backup, marque a opção Fazer uma segunda cópia para,
+e informe o diretório.
+
+Renomeação de arquivo
+As máquinas fotográficas gravam os arquivos com nomes genéricos, que não têm
+qualquer relação com o assunto fotografado. Pensando nisso, o Lightroom permite
+que você renomeie-os para algo melhor durante o processo de importação, conforme
+mostra a imagem 3.12. O menu Modelo contém uma série de regras possíveis, como
+um nome personalizado seguido de um contador incremental ou do número original
+do arquivo, por data, nome original mais sequência e assim por diante. Insira no
+campo Texto personalizado o prefixo que você quer que os arquivos tenham.
+
+21
+
+3.4. Importar
+
+Casa do Código
+
+Figura 3.12: Painel com opções para renomear arquivos na importação
+
+Se nenhuma das opções existentes no menu lhe agradar, é possível ir ainda mais
+longe e criar a sua própria regra de nomenclatura, bastando para isso selecionar a
+opção Editar no menu Modelo.
+
+Aplicar durante a importação
+Neste painel, você opcionalmente pode selecionar alguma predefinição de efeito,
+ou aplicar metadados (como informações de direitos autorais) e palavras-chave a
+todas imagens que serão importadas.
+
+Destino
+Aqui você informa o diretório de destino das fotos quando a operação for
+Copiar ou Mover. A opção Na subpasta é um atalho para não precisar criar
+manualmente o diretório de destino, o que também pode ser feito clicando com o
+botão direito do mouse na estrutura de pastas e selecionar Criar nova pasta.
+Em Organizar, é altamente recomendável a utilização da opção Em uma
+pasta, pois o item Por data automaticamente cria uma estrutura não muito útil,
+que muito provavelmente lhe causará dores de cabeça futuramente, pois as imagens
+ficarão em diretórios sem qualquer semântica que remeta ao que as fotos se referem.
+
+3.4
+
+Importar
+
+Feito tudo isso, clique no botão Importar no canto inferior direito da tela. Aos
+poucos as fotos irão começar a aparecer na sua Biblioteca, ficando automatica22
+
+Casa do Código
+
+Capítulo 3. Importar fotos, o “abrir” do Lightroom
+
+mente no catálogo Importação anterior, conforme mostra a imagem 3.13.
+
+Figura 3.13: Localização padrão das fotos após a importação
+
+23
+
+Capítulo 4
+
+Organize-se com o módulo
+Biblioteca
+Fotografar é algo extremamente fascinante e cada trabalho representa um novo desafio. A luz nunca é a mesma, as pessoas são outras, e as expectativas e resultados
+sempre dão um frio na barriga. E após cada seção de fotos, seja ela em estúdio, no
+parque, na rua ou onde quer que a imaginação tenha lhe levado, a primeira coisa que
+queremos fazer é pegar aquelas centenas de fotos e editá-las.
+A tentação de começar o fluxo de trabalho pela edição é gigante – afinal, tanto
+o cliente como nós próprios queremos ver o resultado. Contudo, por maior que
+seja o instinto de querer acertar a cor, recorte, correção de lente, exposição e tudo
+o mais, o fluxo de trabalho profissional e eficiente (independentemente de você se
+considerar “profissional” ou não) começa não pela edição das fotos, mas sim pela
+revisão e organização.
+Pare e pense por um minuto: quantas das fotos de determinado ensaio são realmente boas, quantas delas realmente valem a pena serem mantidas? Muitas, espera-
+
+4.1. Modo de exibição em Grade
+
+Casa do Código
+
+se. Mas, igualmente, muitas serão descartadas, seja por não terem ficado tecnicamente boas (alguém piscou, equilíbrio de branco incorreto, visual sem graça e tantas
+outras imperfeições impossíveis de serem corrigidas ou não justificadas para correção), seja porque existam várias parecidas (múltipla exposição, detalhes no enquadramento, horário diferente do mesmo ponto de vista...).
+O módulo Biblioteca é, juntamente com o módulo Revelação, onde passamos
+a maior parte do tempo trabalhando no Lightroom. Ele é utilizado para revisar e
+organizar todas as fotos do catálogo – que, idealmente, deveria conter todas as suas
+fotos. Além disso, é o que mais diferencia o Lightroom do Photoshop, o qual não
+tem nada equivalente.
+Existem 4 maneiras de visualizar e navegar entre as fotos no Lightroom, acessíveis pela barra de ferramentas (tecla T), conforme figura 4.1.
+
+Figura 4.1: Ícones com as formas de navegar
+
+4.1
+
+Modo de exibição em Grade
+
+A primeira forma de navegação é a em grade (tecla G), que mostra miniaturas das fotos arranjadas lado a lado em diversas linhas, conforme a imagem 4.2. Esta forma de
+visualização é bastante útil para ter uma rápida visão de todas as imagens. Note que
+a tecla de atalho G funciona em qualquer lugar do Lightroom, mesmo em outro módulo, o que serve como uma maneira muito útil de voltar para o módulo Biblioteca
+rapidamente.
+
+26
+
+Casa do Código
+
+Capítulo 4. Organize-se com o módulo Biblioteca
+
+Figura 4.2: Visualização em grade. Tecla G
+
+Caso você queira aumentar ou diminuir o tamanho das imagens mostradas na
+grade, utilize o slider Miniaturas localizado no canto inferior direito – arraste
+para a esquerda para mostrar mais fotos, e arraste para a direita para mostrar menos
+fotos (porém maiores).
+
+4.2
+
+Veja a foto grande com a exibição em Lupa
+
+Embora o modo grade seja útil para visualizar várias fotos ao mesmo tempo, o tamanho limitado das miniaturas não permite ver muitos detalhes da imagem. Para
+este caso, a visualização em lupa (tecla E, imagem 4.3) é bem mais apropriada, pois
+mostra o arquivo em toda área disponível do Lightroom, além de possibilitar o zoom.
+
+27
+
+4.2. Veja a foto grande com a exibição em Lupa
+
+Casa do Código
+
+Figura 4.3: Acesso ao modo lupa. Tecla E
+
+Clique uma vez na foto para fazer zoom, clicando novamente para voltar a ver
+a imagem toda. Se quiser voltar ao modo grade rapidamente, clique duas vezes rapidamente. Uma coisa bem bacana do zoom é que a área será aumentada na região
+onde clicarmos – ou seja, clique uma vez perto do ponto que deseja aumentar, e o
+Lightroom irá diretamente para aquela parte da foto.
+O modo lupa contém algumas opções no item Navegador, localizado no painel
+da esquerda (tecla de atalho F7), conforme a imagem 4.4. No navegador, podemos
+configurar a maneira como a imagem deve preencher o espaço útil da tela, e o nível
+padrão de zoom.
+
+Figura 4.4: Navegador do modo lupa. Repare nas opções na parte superior
+
+A primeira opção é Ajust. (abreviação de “Ajustar”), seguida de Preench.
+28
+
+Casa do Código
+
+Capítulo 4. Organize-se com o módulo Biblioteca
+
+(de “Preencher”), e indicam a maneira como o Lightroom deverá mostrar a foto
+na área útil disponível. A primeira delas, Ajustar, mostra a foto respeitando as
+proporções da área disponível e da imagem em si, de tal forma que seja possível vêla por inteira. Repare que na imagem 4.5 existe uma porção da tela com fundo cinza
+(indicado pelas setas), e a foto ao meio.
+
+Figura 4.5: Modo ‘Ajustar’, que respeita as proporções. Repare nas partes cinzas.
+
+Já o modo Preencher utiliza todo o espaço disponível, porém, dependendo
+do tamanho da imagem e do seu monitor, será necessário arrastar a foto (clique +
+arrastar o mouse) para ver outras partes dela.
+
+29
+
+4.2. Veja a foto grande com a exibição em Lupa
+
+Casa do Código
+
+Figura 4.6: Modo ‘Preencher’. Note que não há partes cinza.
+
+O modo padrão é o Ajustar, já que permite ver a foto por completo, porém o
+modo Preencher pode ser bastante útil em situações em que é preferível ver a foto
+em tamanho maior, mas sem entrar em zoom.
+
+Esconda os painéis para aproveitar mais espaço
+Os painéis laterais ocupam um espaço precioso da tela e, embora frequentemente utilizados, não é necessário que estejam constantemente visíveis, principalmente quando precisamos trabalhar em detalhes de uma
+determinada foto. Uma maneira muito prática de escondê-los é através
+da tecla TAB (aperte novamente para voltar a mostrá-los).
+O modo zoom, representado pelo item 1:1 do navegador, mostra a foto em
+seu tamanho original (ou seja, 100%). Clique uma vez na imagem para habilitar o
+zoom, ou então utilize a tecla de atalho Z. Durante o zoom, a miniatura da foto
+localizada no navegador à esquerda contém um pequeno retângulo indicando qual
+parte da foto está sendo mostrada, conforme a imagem 4.7. Arraste o retângulo para
+ir a diferentes partes da foto.
+30
+
+Casa do Código
+
+Capítulo 4. Organize-se com o módulo Biblioteca
+
+Existe um outro nível de zoom que permite exibir acima de 100% da foto, na
+opção à direita do elemento 1:1, onde há um pequeno ícone com duas setinhas
+verticais. Clique nelas e aparecerá um menu com diferentes proporções. Selecione
+o tamanho desejado e a partir daí, toda vez que você entrar em zoom, o Lightroom
+renderizará a imagem para aquele tamanho. Repare que ao fazer isso esta configuração passará a ser a padrão; clique no item 1:1 para torná-lo o padrão novamente
+(e vice-versa).
+
+Figura 4.7: Modo zoom e o retângulo de referência à esquerda.
+
+4.3
+
+Comparar duas fotos e escolher uma preferida
+
+No processo de filtragem e escolha das fotos, eventualmente chegamos em um momento em que precisamos decidir qual foto entre as existentes deve ser a selecionada como preferida (ou seja, a melhor dentre as opções). Enquanto é perfeitamente
+possível fazer isso individualmente pelo modo lupa, tal abordagem nos força a ficar
+lembrando qual foi a foto vista anteriormente, o que acaba se tornando um processo
+cansativo, pois é necessário ficar indo e voltando pelas fotos para compará-las.
+O modo de exibição de comparação (tecla C, representado pelo ícone X Y)
+permite visualizar duas fotos lado a lado, sendo que uma delas é marcada como sendo
+a preferida, e outra como sendo a candidata a nova foto preferida, entre as duas. A
+ideia desta tela é manter a imagem preferida fixada à esquerda (indicada pelo texto
+31
+
+4.3. Comparar duas fotos e escolher uma preferida
+
+Casa do Código
+
+“Selecionar”), e a imagem candidata à direita, e ir trocando a imagem candidata até
+encontrar a nova preferida (ou concluir que não há imagem melhor). A imagem 4.8
+mostra este modo de visualização.
+
+Figura 4.8: Modo de exibição de comparação
+
+Não se assuste se parecer confuso
+O modo de exibição de comparação é bastante útil para escolher qual
+foto entre duas possíveis é a melhor, porém seu uso pode parecer um
+pouco complicado nas primeiras tentativas, já que não é o tipo de interface que estamos acostumados a utilizar no dia a dia. Contudo, passado o
+susto inicial, o esforço é recompensado pelo aumento na produtividade.
+
+Para começar, selecione uma ou duas fotos no modo grade e aperte a tecla C. A
+primeira foto selecionada será colocada como preferida (posicionada à esquerda), e
+a outra foto será colocada à direita como candidata. Se você selecionou apenas um
+arquivo, o Lightroom irá automaticamente mostrar a foto que se encontra ao lado da
+primeira na grade.
+Para ir trocando a foto candidata, use as setas do teclado para direita ou esquerda,
+ou então os ícones de seta ao lado do botão Concluído (vide canto inferior direito
+da imagem 4.8). Faça isso até eventualmente encontrar uma foto de que goste mais.
+32
+
+Casa do Código
+
+Capítulo 4. Organize-se com o módulo Biblioteca
+
+Quando (e se) encontrar uma foto de que goste mais, clique no ícone Criar
+seleção, representado pelo ícone XY com uma seta apontando para o lado esquerdo (do Y para o X). Veja a imagem 4.9 no caso de dúvidas (pessoalmente considero o nome “Criar seleção” muito ruim).
+
+Figura 4.9: Localização da ação ‘Criar seleção’
+
+Ao fazer isso, a foto atualmente da direita irá passar para o lado esquerdo,
+tornando-se a nova preferida, e o processo de escolhe recomeça, se assim você desejar. Caso contrário, se concluir que encontrou a melhor foto dentre todas as outras,
+simplesmente volte para a grade ( G) ou para o modo de lupa ( E), que a foto escolhida
+será automaticamente selecionada.
+Se por outro lado você desejar apenas trocar as fotos de posição, sem descartar
+umas delas como ocorre na ação Criar seleção descrita acima, basta clicar no
+ícone Trocar ao lado, conforme a imagem 4.10. Esta ação pode ser útil quando
+estiver particularmente indeciso sobre qual das fotos utilizar, antes de avançar para
+a próxima candidata.
+Por último a tecla de atalho Z (a mesma que funciona no modo lupa) aumenta
+o zoom de ambas as imagens, e ao arrastar uma delas a outra automaticamente é
+arrastada para a mesma posição.
+
+Figura 4.10: Ação para trocar as imagens de lugar
+
+33
+
+4.4. Escolher a melhor entre múltiplas fotos com o modo de Pesquisa
+
+4.4
+
+Casa do Código
+
+Escolher a melhor entre múltiplas fotos com o
+modo de Pesquisa
+
+Quantas vezes você já se encontrou na situação de ter várias fotos parecidas e não
+conseguir escolher qual delas é a melhor? Nós fotografamos o mesmo assunto múltiplas vezes, em diferentes exposições, ISO, horário e enquadramento – com digital,
+ao contrário de filme, isso é muito fácil e barato. Contudo, chegada a hora de fazer a seleção de quais manter e quais descartar (ou mesmo a melhor dentre todas) o
+tamanho do trabalho é proporcional à quantidade de fotos.
+Para ajudar nesta tarefa o Lightroom contém um modo chamado Pesquisa (tecla de atalho N) que, diferentemente do modo de comparação visto na seção anterior,
+permite selecionar e visualizar várias fotos ao mesmo tempo, descartando facilmente
+as menos desejadas.
+Seu uso é bastante simples: selecione duas ou mais fotos e aperte a tecla N para
+abrir o modo Pesquisa, ou então clique no ícone com 3 retângulos e reticências,
+conforme a imagem 4.11.
+
+Figura 4.11: Acesso ao modo ‘Pesquisa’. Tecla de atalho ‘N’
+
+34
+
+Casa do Código
+
+Capítulo 4. Organize-se com o módulo Biblioteca
+
+Uma vez no modo Pesquisa, o Lightroom irá organizar em uma grade todas
+as fotos selecionadas, e aí basta clicar em um pequeno ícone com o símbolo X, no
+canto inferior direito de cada imagem, para descartá-la da seleção. Repita o processo
+até que sobre apenas uma – a sua preferida. Veja a imagem 4.12 para referência.
+
+Figura 4.12: Tela do modo Pesquisa. Repare no ‘X’ para descartar uma foto
+
+Para sair desta exibição simplesmente use o ícone da grade ou lupa, ou as respectivas teclas de atalho ( G e E). A foto escolhida já estará automaticamente selecionada.
+
+4.5
+
+Ordenar as fotos
+
+Além de todas as maneiras de visualizar e selecionar fotos que vimos nas seções anteriores, o Lightroom permite facilmente ordenar as fotos por uma série de opções,
+e todas em ordem alfabética natural ou reversa (de A para Z, ou de Z para A). A
+imagem 4.13 mostra a localização do menu com as opções de ordenação, na barra de
+ferramentas (tecla T). Clique no primeiro ícone AZ para escolher entre A para Z ou
+vice-versa. Já o menu Classificar tem as diferentes formas de ordenação em si,
+dentre elas horário de captura,que é a configuração padrão, “ordem do usuário” para
+35
+
+4.5. Ordenar as fotos
+
+Casa do Código
+
+deixar organizado da maneira que você preferir, horário de edição que, ao contrário
+do horário de captura, ordena pela hora em que a foto sofreu algum tipo de modificação, qualquer que tenha sido ele. Isso é bem interessante para manter próximas
+umas das outras as fotos editadas.
+
+Figura 4.13: Localização do menu de ordenação, na barra de ferramentas
+
+Dentre as inúmeras maneiras de ordenar fotos, o último elemento da lista,
+Ordem do usuário, permite que você deixe as fotos na ordem que preferir, como
+
+colocar em primeiro lugar as melhores fotos. Para isso, basta selecionar esta opção
+no menu e arrastar as fotos com o mouse para a posição desejada. Note que enquanto
+você arrasta o Lightroom mostra uma pequena miniatura da foto, e desenha uma linha vertical preta na posição que ele irá colocar a foto de acordo com a localização
+atual do mouse.
+
+Se as fotos não estiverem como deveriam
+Caso eventualmente você note que as fotos não estão na ordem esperada, lembre-se de verificar o tipo de classificação escolhido no menu,
+pois eventualmente podemos mudá-lo por engano (ou simplesmente esquecer).
+
+36
+
+Casa do Código
+
+4.6
+
+Capítulo 4. Organize-se com o módulo Biblioteca
+
+Organização com sinalizadores, cores e estrelas
+
+Um dos principais motivos para usar o Lightroom é a sua enorme eficiência em organizar e catalogar fotos das mais variadas maneiras, indo muito além dos ajustes
+comuns nas fotos, sendo inclusive o que mais o destaca de softwares como o Adobe
+Bridge e o próprio Photoshop.
+No imenso emaranhado de arquivos que podemos ter, frequentemente é necessário distinguir as fotos boas das fotos ruins, especialmente logo após uma sessão,
+onde se faz necessário manter apenas aquelas fotos aproveitáveis, descartando as duplicadas e ruins.
+O Lightroom dispõe de três métodos distintos de organizar as fotos, cada um
+com seus pontos fortes, fracos e, acima de tudo, fãs. A primeira e mais popular
+forma de organização são os sinalizadores (flags, em inglês), que são três pequenas
+bandeiras para definir as fotos boas das neutras e das ruins. A segunda maneira são
+as estrelas, que vão numa escala de 1 (ruim) até 5 (excelente) – esta, aliás, deve ser
+o que as pessoas mais estão acostumadas a ver, pois diversos sites disponibilizam
+algum tipo de métrica via estrelas. A última maneira (e mais subjetiva de todas) é
+através de cores, onde agrupa-se as fotos através de determinada cor.
+É possível combinar as três maneiras – ou seja, uma única foto pode ter alguma
+sinalização, cor e certa quantidade de estrelas. O Lightroom não impõe qualquer
+limitação, embora seja pouco comum combiná-las.
+
+4.7
+
+Sinalizadores
+
+Os sinalizadores (“flags”) são representados por três pequenas bandeiras com diferentes propósitos: um para marcar as fotos ruins ou que serão rejeitadas, um para
+fotos que boas ou que devem ser mantidas, e outro neutro, para quando estiver em
+dúvida sobre o que fazer com o arquivo. O fluxo de trabalho é o seguinte: para cada
+foto, seja no modo grade ( G) ou lupa ( E) você aperta a tecla P (do inglês “pick”,
+escolher) para marcar a foto como boa, X para marcar a foto como ruim / rejeitá-la,
+e U para remover o sinalizador. Caso queira acessar pelo menu, vá em Foto ->
+Definir sinalizador e escolha a opção desejada.
+As fotos rejeitadas ficam marcadas com uma pequena bandeira com um “X” no
+meio (vide imagem 4.14), enquanto as fotos sinalizadas como boas através da tecla
+P recebem uma bandeira branca, conforme imagem 4.15. As fotos sem qualquer
+sinalizador ficam com uma bandeira vazia.
+37
+
+Casa do Código
+
+4.7. Sinalizadores
+
+Figura 4.14: Bandeira de foto rejeitada com ‘X’
+
+Figura 4.15: Bandeira de foto boa, com ‘P’
+
+A bandeira não aparece?
+Caso a bandeira não esteja aparecendo, tente apertar a tecla J, que
+alterna a quantidade de informações exibidas na miniatura da imagem.
+Os sinalizadores são, de longe, a opção mais utilizada, tanto pela simplicidade
+quanto pela eficiência, pois através dele é muito fácil encontrar as fotos boas (as chamadas keepers, em inglês).
+38
+
+Casa do Código
+
+Capítulo 4. Organize-se com o módulo Biblioteca
+
+Marcar no modo grade
+Utilizar o modo grade para sinalizar as fotos é útil quando você já tem uma certa
+noção de quais são boas e quais são ruins – ou então se tiver visão de águia, já que
+as fotos são exibidas em miniaturas. Se desejar, aumente ou diminua o tamanho
+das miniaturas, utilizando o slider no canto direito da barra de ferramentas ( T).
+Em seguida, selecione a primeira foto da lista, aperte uma das teclas de atalho dos
+sinalizadores, e mova para o arquivo seguinte utilizando as setas da esquerda ou
+direita no teclado, repetindo o processo.
+Alternativamente, selecione várias fotos de uma única vez utilizando CTRL/CMD
++ clique esquerdo na foto, ou então selecione um arquivo, segure SHIFT, e clique em um arquivo mais adiante, que o Lightroom irá selecionar todos intermediários.
+Para desfazer a seleção aperte CTRL/CMD + D.
+
+Marcar no modo lupa
+A vantagem de sinalizar as fotos no modo lupa em relação ao mesmo processo
+no modo grade é que somente uma foto é exibida por vez, ocupando todo o espaço
+disponível na tela, sendo possível ainda fazer zoom (duplo clique ou tecla Z) para
+verificar os detalhes. De resto, o fluxo é o mesmo: veja a foto, sinalize-a de acordo
+com o seu gosto, e avance para a próxima utilizando as setas no teclado.
+
+Dica: combine a sinalização com SHIFT
+Caso ache a sequência “tecla de sinalização seguido de seta do teclado”
+ruim, opcionalmente você pode segurar a tecla SHIFT e apertar uma
+das teclas de sinalização, que o Lightroom irá marcar a foto e automaticamente avançar para a próxima (exemplo: SHIFT + P). Pessoalmente
+acho mais prático com as setas do teclado.
+
+4.8
+
+Exclua facilmente fotos rejeitadas por sinalizador
+
+Uma enorme conveniência de sinalizar uma foto como rejeitada ( X) é a possibilidade
+de excluir tais fotos do catálogo do Lightroom ou mesmo enviá-las diretamente para
+39
+
+4.9. Rótulos de cor
+
+Casa do Código
+
+a lixeira. Este é um outro exemplo da grande utilidade do Lightroom no fluxo de
+trabalho de qualquer fotógrafo.
+Após sinalizar as fotos como rejeitadas, vá até o menu Foto -> Excluir
+fotos rejeitadas... (tecla de atalho CTRL/CMD + Backspace) e o Lightroom irá mostrar uma janela conforme exibida na imagem 4.16 com as fotos que
+serão removidas, e uma mensagem perguntando o que você quer fazer: excluir do
+disco ou apenas remover do catálogo? A ação mais comum é excluir do disco, pois
+geralmente não há muita razão para manter uma foto que foi considerada ruim.
+
+Figura 4.16: Janela de confirmação de exclusão via sinalizador
+
+4.9
+
+Rótulos de cor
+
+Os rótulos de cor é a mais subjetiva das formas de categorização das fotos no Lightroom – cada pessoa com quem você conversar terá uma maneira distinta de tirar
+proveito delas. De uma maneira geral, elas são utilizadas como uma forma temporária de organização, para indicar coisas ou tipos de cosias a serem feitas. Por exemplo,
+40
+
+Casa do Código
+
+Capítulo 4. Organize-se com o módulo Biblioteca
+
+você pode associar uma cor diferente para cada parte do fluxo de trabalho, como azul
+para fotos que ainda precisam de ajustes, amarelo para fotos em que o cliente pediu
+modificações, e verde para fotos finalizadas. Ou então amarelo para indicar as fotos
+que já foram exportadas, e azul para as fotos que já foram pós-produzidas, mas ainda
+precisam ser catalogadas. As combinações são grandes, e não existe uma forma certa
+ou errada, e sim a forma que funciona para você.
+
+Atribuir cor a foto
+Existem três formas de atribuir cor a alguma foto: através das teclas de atalho 6 a
+9, através do menu Foto -> Definir rótulo de cor -> cor desejada,
+ou por um botão na miniatura da foto. São 5 as cores possíveis: vermelho ( 6), amarelo ( 7), verde ( 8), azul ( 9) e roxo, a qual não tem tecla de atalho, sendo acessível
+apenas pelo menu.
+A terceira forma de atribuir cor é através de um pequeno botão no canto inferior
+direito da miniatura da foto, o qual abre um menu com as cores, conforme mostra a
+imagem 4.17.
+
+Figura 4.17: Localização do botão de escolha do rótulo de cor
+
+41
+
+Casa do Código
+
+4.9. Rótulos de cor
+
+O box de miniatura da foto ficará pintado com a cor escolhida, conforme a imagem 4.18.
+
+Figura 4.18: Miniaturas com as respectivas cores
+
+Editar o conjunto de rótulos de cor
+Como dito anteriormente, rótulos de cor é algo com uso bastante subjetivo,
+sendo que cada pessoa atribui uma forma de uso que lhe faça mais sentido. O Lightroom permite atribuir nomes às cores, para que representem mais fielmente o uso
+que você faz delas. Desta maneira, você pode dizer que vermelho “Precisa editar”,
+amarelo é “Aguardando aprovação”, e verde é “Finalizada”.
+Para isso, acesse o menu Metadados -> Conjunto de rótulos de cor
+-> Editar..., que abrirá uma janela com um campo de texto editável ao lado de
+cada cor (vide imagem 4.19). Modifique como quiser e clique no botão Alterar.
+
+42
+
+Casa do Código
+
+Capítulo 4. Organize-se com o módulo Biblioteca
+
+Figura 4.19: Tela de edição dos rótulos de cor
+
+Você pode criar diversos conjuntos de predefinições de cor, um para cada tipo
+de trabalho que quiser fazer. Para isso, basta abrir o menu Predefinição na
+mesma janela e escolher a opção Salvar configurações atuais como nova
+predefinição..., e inserir um nome facilmente identificável. Veja a imagem
+4.20.
+
+43
+
+4.10. Avaliação com estrelas
+
+Casa do Código
+
+Figura 4.20: Menu para salvar a predefinição de cor
+
+4.10
+
+Avaliação com estrelas
+
+A última forma de avaliação e classificação é com estrelas, que talvez seja a forma
+mais conhecida pela internet afora, dado que diversos sites usam ou já usaram estrelas de alguma maneira. Embora fácil de reconhecer como classificar por estrelas – 1
+geralmente é algo ruim, 5 é excelente –, elas costumam ser mais complicadas de ter
+um uso não-subjetivo. Se assumirmos que 1 é ruim e 5 excelente, 3 é o que? Bom?
+Médio? e 2 então, seria “mais ou menos ruim"? 4 é “boa, mas nem tanto?” É algo que
+rende uma boa conversa de bar, com diversas opiniões contrastantes. Sinalizadores,
+por outro lado, são apenas “bons” ou “ruins”, nada mais, como vimos anteriormente.
+Por outro lado, existem algumas vantagens em avaliar as fotos com estrelas, e
+elas têm sim seu grupo de adeptos. Além disso, da mesma forma como é feito com
+a classificação por cores, a subjetividade das estrelas permite um uso mais criativo
+que pode otimizar o seu fluxo de trabalho, como veremos.
+Em primeiro lugar, as estrelas são gravadas nos metadados do arquivo, independentemente dele ser JPG ou RAW, o que permite a leitura por outros programas, além
+do próprio Windows Explorer e Finder. Sites de compartilhamento de imagens também têm acesso a tais informações, o que pode ser bem útil quando você exporta
+44
+
+Casa do Código
+
+Capítulo 4. Organize-se com o módulo Biblioteca
+
+as imagens para tais serviços. Já os sinalizadores são algo específico do Lightroom,
+tornando seu uso restrito ao programa.
+
+Como atribuir
+As teclas de atalho para avaliar uma foto certo número de estrelas vão de 0 a 5,
+além do menu Foto -> Definir avaliação, e elas aparecem visualmente na
+parte inferior de cada miniatura, conforme a imagem 4.21. Lembre-se que, caso o
+seu Lightroom não as esteja mostrando, aperte a tecla J.
+
+Figura 4.21: Localização das estrelas. 3, zero e 5 respectivamente
+
+Formas de uso
+Mas enfim, como classificar as fotos com estrelas de maneira eficiente? A mais
+comum é uma para fotos apenas “OK”, três para as boas, que se destacam, e cinco
+para as excepcionais, que devem fazer parte do seu portfólio. Note que neste caso
+“duas” e “quatro” foram deixadas de lado, por serem valores intermediários e difíceis
+de categorizar efetivamente.
+Se desejar utilizar todos os valores, uma estrela pode ser as “OK”, duas são as fotos
+que vão para o cliente, três para as melhores no geral, quatro as suficientemente boas
+para imprimir, e cinco as excepcionais, dignas de portfólio. Ou então uma é para
+manter, duas para as fotos com potencial, três são as boas, quatro para o cliente, e
+cinco as absolutamente boas.
+
+45
+
+4.11. Teclas de atalho
+
+Casa do Código
+
+Combine com sinalizadores
+Uma grande vantagem dos sinalizadores sobre estrelas e cores é que eles permitem facilmente deletar as fotos rejeitadas, o que é uma grande mão na roda para
+fazer uma limpeza naquelas fotos que realmente não têm salvação. Tendo isso em
+mente, você pode fazer uma primeira filtragem com sinalizadores, e depois classificar com estrelas utilizando algumas das sugestões descritas aqui no livro. Assim
+você combina duas funcionalidades e otimiza o seu trabalho.
+Lembre-se sempre que na prática você é livre para dar o uso que achar melhor.
+O importante é ter um método e segui-lo.
+
+4.11
+
+Teclas de atalho
+
+Como regra geral, virtualmente todos os atalhos que utilizam a tecla CTRL no Windows deverão ser substituídos pela tecla COMMAND no Mac. Para não complicar demais a leitura e nem obrigar você a se lembrar disso o tempo todo, os atalhos serão
+mostrados com ambas as teclas, separadas por uma barra, como em CTRL/COMMAND
++ SHIFT + I (CTRL no Windows, Command no Mac, junto com a tecla Shift e
+“I”).
+A relação de atalhos comentada aqui inclui apenas algumas mais muito existentes no Lightroom, e especificamente do módulo Biblioteca. Para a relação completa
+utilize SHIFT + H no Windows (dica: “H” vem de “Help”, do inglês “ajuda”), ou
+COMMAND + / no Mac.
+
+Visualizar em grade
+Para ver todas as fotos em grade (imagens pequenas lado a lado) utilize a tecla
+G, em qualquer lugar do Lightroom. Note que, ao utilizar este atalho, o módulo Bi-
+
+blioteca será ativado, mesmo que você esteja em algum outro módulo no momento.
+É um atalho bem conveniente.
+
+Aumentar área de visualização
+A tecla de atalho TAB esconde os painéis laterais, tornando assim maior a área
+de visualização da imagem; para mostrar novamente os painéis, aperte Tab uma
+segunda vez. Já para esconder (ou mostrar) todos os painéis, incluindo os laterais,
+superiores e inferiores, utilize a combinação SHIFT + TAB.
+
+46
+
+Casa do Código
+
+Capítulo 4. Organize-se com o módulo Biblioteca
+
+Mostrar / esconder o painel direito
+Para alternar entre a visualização ou não do painel localizado no lado direito da
+tela, utilize a tecla F8.
+
+Mostrar / esconder o painel esquerdo
+Já para o painel esquerdo utilize a tecla F7.
+
+Painel de miniaturas
+O painel de miniaturas (chamado oficialmente de “tira de filme”, ou filmstrip em
+inglês), localizado na parte inferior da tela, pode ser exibido ou escondido através da
+tecla F6.
+
+Visualizar uma imagem em tamanho grande
+No modo de visualização em grade (tecla G) aperte ENTER/RETURN para visualizar a foto em tamanho grande. Para voltar ao modo grade utilize a tecla ESC.
+Aperte ENTER/RETURN seguidas vezes para alternar entre tamanho grande, zoom
+e de volta ao modo grade. ESC sempre volta ao estado anterior. A tecla E também
+serve para mostrar a imagem em tamanho grande.
+
+Aumentar e diminuir o zoom
+Para aumentar o zoom de qualquer foto utilize a combinação CTRL/COMMAND
++ = – note que é a tecla CTRL ou COMMAND mais a tecla com o caractere de igual
+( =), que geralmente também é a mesma tecla que tem o caractere de soma. Para
+voltar um nível, utilize a tecla de subtração ( -): CTRL/COMMAND + -. O que elas
+fazem é alternar entre os diferentes níveis de zoom disponíveis no navegador, indo
+de Ajustar à tela para Preencher todo espaço disponível, passando por Tamanho
+real (proporção 1 para 1) e por último chegando no nível de zoom customizado. Veja
+a imagem 4.22.
+
+47
+
+4.11. Teclas de atalho
+
+Casa do Código
+
+Figura 4.22: Níveis de zoom que são alternados. No caso 2:1 é o customizável
+
+Girar a foto
+Para girar a foto no sentido horário utilize CTRL/COMMAND + ], e
+CTRL/COMMAND + [ para girar no sentido anti-horário.
+
+Empilhar / desempilhar fotos
+Para empilhar fotos (stack na versão em inglês, é um tipo de agrupamento) selecione dois ou mais arquivos e aperte CTRL/COMMAND + G. Para fazer o processo
+inverso utilize CTRL/COMMAND + SHIFT + G.
+
+Expandir um empilhamento
+Para abrir ou fechar um empilhamento utilize a tecla S.
+
+Mostrar / esconder a barra de ferramentas
+A barra de ferramentas (imagem 4.23) é ativada com a tecla T – e novamente para
+desativar. Esta barra é uma das que frequentemente somem de forma misteriosa, pois
+eventualmente apertamos a tecla por descuido, sem reparar no que foi feito.
+
+48
+
+Casa do Código
+
+Capítulo 4. Organize-se com o módulo Biblioteca
+
+Figura 4.23: A barra de ferramentas - tecla ‘T’
+
+Alternar entre as informações da foto exibidas na grade
+Cada foto mostrada na grade da biblioteca pode exibir alguns pequenos pedaços
+de informação sobre a foto, como dados da captura (ISO, abertura etc.), nome do
+arquivo, se houve edição ou não, classificação (estrelas) e algumas outras, conforme
+a imagem 4.24. A tecla para alternar entre tais dados é a J.
+
+Figura 4.24: Repare nos detalhes de cada foto
+
+Exibir a foto no disco
+De vez em quando há a necessidade de fazer alguma coisa com o arquivo original
+da foto, mas como localizá-la no Windows Explorer ou Finder no meio de tantos
+49
+
+4.11. Teclas de atalho
+
+Casa do Código
+
+outros milhares de arquivos? É em situações como esta que o Lightroom mostra
+de novo o seu grande valor em nos ajudar a manter tudo organizado e facilmente
+acessível. Para exibir a localização da foto no disco basta selecioná-la na biblioteca e
+apertar CTRL/COMMAND + R, e voilà!
+
+Escurecer a tela
+Para escurecer a tela (como se fosse um efeito de desligar as luzes) utilize a tecla
+L, apertando mais vezes para alternar entre os diferentes modos. Este atalho é especialmente útil quando estamos visualizando uma única foto (tecla E), pois assim é
+possível mostrar a imagem à outra pessoa sem os menus e barras do Lightroom para
+causar distração.
+
+Itens do painel da direita
+É possível acessar rapidamente os itens do painel da direita (tecla F8) através
+da combinação CTRL/COMMAND + <número>, onde <número> vai de 0 a 5, de
+acordo com a posição do item. Veja a imagem 4.25 para a referência visual.
+
+Figura 4.25: Índice de cada item do painel. Use CTRL + o número
+
+Por exemplo, para abrir ou fechar o item Metadados utilize CTRL/COMMAND
++ 4.
+
+50
+
+Capítulo 5
+
+Cores e efeitos essenciais
+Neste capítulo vamos trabalhar com diferentes ajustes nas imagens, como preto e
+branco, equilíbrio de branco, sombras, realces, e vinhetas, que é aquele efeito com o
+qual as bordas da imagem ficam mais escuras.
+É possível ler as seções em qualquer ordem, não há necessidade de seguir a ordem
+do livro caso prefira mexer com uma coisa antes de outra.
+
+5.1
+
+Preto e branco
+
+Há quem goste, e há quem odeie. Mas uma coisa não há como negar: quase duzentos anos após a primeira fotografia, o preto e branco continua em total evidência
+e importância, e mesmo na era digital muitas pessoas fazem carreira em P&B. Da
+icônica frase “se a foto ficou ruim, converta para P&B que ela se tornará mais interessante”, passando pela fase de negação e então aceitação, e chegando finalmente na
+compreensão da sua linguagem, dominar o P&B é algo de vital importância.
+
+5.1. Preto e branco
+
+Casa do Código
+
+Vá para o módulo Revelação
+As funcionalidades descritas neste capítulo são referentes ao módulo
+Revelação.
+Existem duas maneiras de tornar uma imagem preto e branco no Lightroom:
+a primeira delas é via o painel Básico, através do item Preto e branco, e a
+segunda é clicando na opção P&B do painel HSL / Cor / P&B. A imagem 5.1
+mostra a localização deles.
+
+Figura 5.1: As duas formas de converter uma imagem para preto e branco
+
+Não existe diferença técnica entre converter a imagem em um painel ou outro,
+utilize o que preferir. Contudo, os ajustes possíveis dependem da escolha. No painel Básico você tem disponíveis todos os controles, com exceção de Vibração
+e Saturação, e dois controles especialmente interessantes para fotos P&B são o
+Pretos e Brancos – mas lembre-se, não existem valores certos ou errados, tudo
+varia de acordo com a foto e com o seu estilo.
+Já na seção HSL / Cor / P&B é possível fazer ajustes finos na mistura de cores
+de preto e branco – ok, esta é uma frase que ficou estranha, mas faça o teste com uma
+foto bem colorida e os sliders mostrados na imagem 5.2 passarão a fazer sentido.
+A tecla de atalho para converter entre P&B e cor é a V.
+
+52
+
+Casa do Código
+
+Capítulo 5. Cores e efeitos essenciais
+
+Figura 5.2: Coleção de sliders para ajustes finos na imagem P&B
+
+Por exemplo, repare na sequência de fotos da imagem 5.3: note que a versão colorida contém bastante vermelho, e quando convertida para P&B o slider Vermelho
+tem grande impacto no resultado final.
+
+Figura 5.3: Resultado de diferentes aplicações de vermelho na foto P&B
+
+Da mesma forma, note que o céu está bem azul. Neste caso, mostrado na imagem
+5.4, as diferenças também podem ser dramáticas.
+
+53
+
+5.1. Preto e branco
+
+Casa do Código
+
+Figura 5.4: Repare na diferença causada no céu, com a utilização do slider ‘Azul’
+
+Dicas para uma melhor conversão para P&B
+Enquanto transformar uma imagem colorida em preto e branco requer apenas
+uma tecla (a V), deixar a imagem interessante o suficiente pode requerer um pouco
+mais de trabalho, caso você não queira ficar com uma foto com efeito “lavado”, onde
+nada tem destaque. Algumas dicas rápidas:
+• Primeiramente corrija a foto ainda quando estiver em cor, ajustando os equilíbrios de branco, exposição, pretos, contraste e afins.
+• Crie uma cópia virtual da foto original através da tecla de atalho CTRL/CMD +
+' (um apóstrofo) ou pelo menu Foto -> Criar cópia virtual. Cópias
+virtuais existem apenas dentro do Lightroom, mas para efeitos práticos funcionam como se fossem uma foto totalmente distinta, com suas próprias edições
+e correções. Desta forma, você não precisa modificar a imagem original e pode
+ter inúmeras variações da mesma foto, cada uma com diferentes ajustes.
+• Adicione uma vinheta (note que é apenas uma sugestão, não siga à risca caso
+não goste do efeito ou mesmo se não ficar interessante na foto).
+• Tente fazer ajustes na mistura utilizando a ferramenta de arrastar, localizada
+no canto superior esquerdo do painel, conforme mostra a imagem 5.5. Simplesmente selecione a ferramenta, clique no lugar da foto que deseja ajustar e
+arraste o mouse, e o Lightroom posicionará os sliders de acordo com os tons
+daquela área.
+
+54
+
+Casa do Código
+
+Capítulo 5. Cores e efeitos essenciais
+
+Figura 5.5: Localização da ferramenta de ajuste localizado. Clique e arraste na foto
+
+Bônus: converta para P&B com as predefinições
+O Lightroom já vem com algumas predefinições para P&B, disponíveis no painel
+esquerdo através da tecla de atalho F7. Note que, mesmo na versão em português,
+alguns nomes de predefinições estão em inglês – parece que esqueceram de traduzir.
+A imagem 5.6 mostra o painel com a seção B&W (do inglês Black & White). Você
+pode usá-las como um ponto de partida para as suas fotos, quando estiver na dúvida
+de como fazer a edição.
+
+Figura 5.6: Predefinições de preto e branco que vem com o Lightroom
+
+55
+
+5.2. Mais estilo com vinhetas
+
+5.2
+
+Casa do Código
+
+Mais estilo com vinhetas
+
+Vinheta é aquele efeito de sombras (ou claridades) nas bordas da foto, como se fosse
+um arco. A imagem 5.7 mostra uma foto sem vinheta e outra com.
+
+Figura 5.7: A imagem da esquerda não tem vinheta, e a da direita tem. Repare nos
+cantos
+
+As vinhetas são adicionadas como um efeito criativo às fotos, dando um certo
+destaque para o assunto principal, e não precisam ser utilizadas em exagero para
+que fique bonito. Na imagem 5.7 acima foi utilizada uma vinheta forte apenas para
+demonstrar o efeito.
+
+Vinhetas criadas pela lente da máquina
+Algumas lentes podem registrar a imagem com o efeito de vinheta,
+porém isso não é recurso especial, e sim uma característica da construção da própria lente. Neste caso, costuma ser algo indesejado, já que todas as fotos sairão com vinhetas. Como veremos, é possível corrigir este
+problema no Lightroom.
+
+Adicionar vinhetas
+Para adicionar vinhetas acesse a seção Vinheta de corte posterior no
+painel Efeitos do módulo Revelação, conforme mostra a imagem 5.8, onde há
+uma série de sliders. O slider Intensidade controla a força do efeito, sendo que
+quanto mais negativo o valor, mais preto a vinheta ficará, e quanto mais positivo,
+mais branca, dando aquele efeito de “sonho”.
+56
+
+Casa do Código
+
+Capítulo 5. Cores e efeitos essenciais
+
+Figura 5.8: Localização do efeito de vinheta
+
+O slider Difusão controla a dureza do efeito: quanto maior o valor, mais suave
+será, sendo que acima de 50 o efeito é mais natural. Já Ponto médio controla a
+distância da vinheta das bordas da foto, e Arredondamento faz justamente o que
+o nome diz: deixa mais ou menos redonda.
+Brinque um pouco com os valores para ver como eles atuam na foto. Depois, na
+prática, você quase sempre acabará utilizando os mesmos valores.
+
+5.3
+
+Remover o efeito de vinheta causado pela lente
+
+Nem sempre o efeito de vinheta é algo desejado, seja pelo estilo das fotos em questão,
+seja por gosto pessoal mesmo. Contudo, pode ocorrer de alguma lente registrar as
+fotos com os cantos escuros, e aí é necessário remover isso, o que pode ser feito
+facilmente pelo Lightroom. Para corrigir este problema (note que, quando gerado
+pela lente, a vinheta passa a ser um problema) acesse a seção Vinhetas da lente
+no painel Correções da lente, conforme mostra a imagem 5.9, e ajuste o valor
+do slider Intensidade até que o efeito desapareça.
+
+57
+
+5.3. Remover o efeito de vinheta causado pela lente
+
+Casa do Código
+
+Figura 5.9: Remover efeito de vinheta causado pela lente
+
+Bônus: predefinições de vinheta
+O Lightroom já vem com duas predefinições de vinheta, localizadas no painel
+esquerdo do módulo Revelação (tecla de atalho F7), na seção Predefinições,
+conforme mostra a imagem 5.10. Simplesmente clique em uma das duas opções, e
+pronto. A Vinheta 1 é um pouco mais fraca que a Vinheta 2.
+
+58
+
+Casa do Código
+
+Capítulo 5. Cores e efeitos essenciais
+
+Figura 5.10: Predefinição de vinheta, que já vem com o Lightroom
+
+Bônus 2: cantos arredondados
+É possível tirar proveito do efeito de vinhetas para adicionar cantos arredondados na imagem. Para conseguir isso, arraste a Intensidade para a extrema direita
+(valor 100), e todos os outros sliders para a esquerda. A imagem 5.11 mostra o resultado final.
+
+Figura 5.11: Imagem com cantos arredondados criados a partir do efeito de vinheta
+
+59
+
+5.4. Equilíbrio de branco
+
+5.4
+
+Casa do Código
+
+Equilíbrio de branco
+
+Ao examinar fotos, você já deve ter notado que algumas vezes elas saem azuis ou
+amareladas demais, ou talvez o céu ficou com uma cor totalmente diferente do que
+deveria ser. Virtualmente todo mundo que utilizou uma máquina fotográfica com
+mais recursos passou por esta situação, que ocorre devido a configurações em como
+as máquinas leem informações da fonte de luz.
+O equilíbrio de branco é como a máquina fotográfica lê e ajusta a temperatura da
+luz, de tal forma que algo branco no “mundo real” seja interpretado também como
+branco na foto. Toda fonte de luz tem uma “cor” ou temperatura associada, e o olho
+humano naturalmente se ajusta para interpretar da forma correta. Contudo, o sensor
+digital das máquinas precisam de uma pequena ajuda para completar esta tarefa.
+As máquinas fotográficas digitais mais simples (como as de celular) utilizam um
+controle de branco automático, enquanto outros modelos (incluindo todas DSLR)
+permitem ajustes finos. A imagem 5.13 mostra o menu de configurações da Nikon.
+A imagem 5.12 mostra o efeito de diferentes equilíbrios de branco para a mesma
+fotografia.
+
+Figura 5.12: Diferentes equilíbrios de branco para a mesma fotografia
+
+60
+
+Casa do Código
+
+Capítulo 5. Cores e efeitos essenciais
+
+Figura 5.13: Menu de configurações de equilíbrio de branco da Nikon
+
+Fazendo ajustes no equilíbrio de branco
+Os ajustes no equilíbrio de branco são feitos no painel Básico do módulo Revelação, conforme mostra a imagem 5.14.
+
+Figura 5.14: Painel para ajustes de equilíbrio de branco
+
+Não existem grandes segredos: arraste o slider Temp para a esquerda ou para
+a direita para modificar a temperatura da cor até que fique do seu agrado. O slider
+Colorir faz o que o próprio nome sugere: muda a cor da luz, indo de tons esverdeados para o magenta. O menu EB contêm algumas predefinições, que variam se
+o arquivo é RAW ou JPG.
+
+61
+
+5.4. Equilíbrio de branco
+
+Casa do Código
+
+As diferenças entre RAW e JPG no equilíbrio de branco
+Sem entrar nos méritos das diferenças entre fotografar utilizando RAW ou JPG,
+a escolha entre um ou outro formato tem impacto significativo na hora da pósprodução: como arquivos RAW armazenam todo conjunto de informações obtido
+pela máquina na hora de registrar a foto, é possível ter controle total sobre o equilíbrio de branco ao editar o arquivo no Lightroom. Isso significa que, mesmo que
+você tenha errado na configuração da máquina, é possível reverter a situação sem
+qualquer tipo de perda. Já arquivos JPG não têm estes dados todos, o que restringe
+os ajustes e a qualidade.
+A imagem 5.15 mostra as predefinições possíveis para JPG, enquanto a imagem
+5.16 mostra as de arquivos RAW.
+
+Figura 5.15: Opções de equilíbrio de branco para JPG
+
+Figura 5.16: Arquivos RAW tem muito mais opções de ajustes de equilíbrio de branco
+
+62
+
+Casa do Código
+
+Capítulo 5. Cores e efeitos essenciais
+
+O quanto isso lhe afetará na prática é difícil dizer com exatidão, pois o Lightroom
+faz um excelente trabalho ao editar o equilíbrio de branco de maneira customizada,
+e talvez você nem consiga apontar perdas significativas com arquivos JPG. Contudo,
+a natureza de aquivos RAW permite possibilidades maiores, sem dúvida.
+
+Equilíbrio de branco no dia a dia
+Equilíbrio de branco é talvez um dos aspectos da fotografia que mais passam despercebidos pelos fotógrafos, especialmente os mais casuais. É um conceito que não
+tem equivalência direta para os seres humanos, pois o olho sempre lê a luz corretamente, contudo é de extrema importância tanto para fotografia quanto para vídeo.
+De uma maneira geral, o equilíbrio de branco é utilizado para obter as cores
+mais fiéis possíveis. É uma forma de medir a temperatura da luz e balancear as cores
+da fotografia para obter os melhores resultados. Teoricamente, é ensinado que se
+deve procurar o balanço “correto”, porém na prática a sua visão artística tem total
+liberdade para fazer do jeito que achar melhor.
+Equilíbrios de branco que são considerados incorretos têm tons de amarelo, vermelho ou azuis muito evidentes, o que faz o nosso cérebro associar isso como algo
+não natural, já que ele “sabe” que a cor deveria ser diferente.
+
+Ajuste rápido com tons neutros
+Uma maneira rápida de ajustar o equilíbrio de branco sem precisar ficar na tentativa e erro com o slider de temperatura é utilizar o seletor de tom neutro indicado
+na imagem 5.17 (tecla de atalho W) e clicar em uma parte da foto que tenha cor neutra
+– ou seja, valores R, G e B muito próximos, conforme a imagem 5.18.
+
+Figura 5.17: Ferramenta para indicar a área neutra
+
+63
+
+5.4. Equilíbrio de branco
+
+Casa do Código
+
+Figura 5.18: Tom muito próximo do neutro. Repare que o R, G e B são quase iguais
+
+Na teoria, deveríamos apontar um tom cinza 18%, mas ao menos que você tenha
+se preparado, isso muitas vezes não é possível porque a foto simplesmente não tem
+cinza. Nestas situações escolha a cor mais neutra que conseguir. A imagem 5.19
+mostra resultado da correção automática feita através deste método.
+
+Figura 5.19: Antes e depois da correção com indicação de tom neutro
+
+64
+
+Casa do Código
+
+Capítulo 5. Cores e efeitos essenciais
+
+Toques artísticos
+Deixando de lado toda a teoria sobre o que seria um equilíbrio de branco correto,
+podemos utilizá-lo de maneira mais artística simplesmente mudando os valores do
+slider Temp. Por exemplo, a imagem 5.20 mostra a mesma foto com dois equilíbrios
+de branco distintos – um mais frio e outro mais quente, o que muda totalmente o
+aspecto e informação passada sobre o ambiente.
+
+Figura 5.20: Equilíbrios de branco distintos, passando informação de frio ou quente.
+
+5.5
+
+Sombras e realces
+
+Em imagens com alto contraste frequentemente o desafio é ajustar a área clara sem
+afetar a escura, e vice-versa, e uma maneira muito eficiente de fazer isso é utilizar os
+controles de Realces e Sombras do Lightroom. As sombras e realces (em inglês, Highlights e Shadows respectivamente) ficam no painel Básico do módulo Revelação,
+logo abaixo das configurações de equilíbrio de branco, conforme mostra a imagem
+5.21.
+
+65
+
+5.5. Sombras e realces
+
+Casa do Código
+
+Figura 5.21: Localização das opções de sombras e realces
+
+Se você nao encontrar os sliders Realces e Sombras muito provavelmente a
+imagem está configurada para utilizar um processo de edição antigo do Lightroom.
+Neste caso, verifique se no canto inferior direito da foto existe um ícone de exclamação, como o mostrado na imagem 5.22 e clique nele, e em seguida clique no botão
+Atualizar na caixa de diálogo que será apresentada.
+
+Figura 5.22: Botão indicando a necessidade de atualizar a versão do processo de edição
+
+Até a versão 3 do Lightroom, os controles que hoje são chamados de Realces e
+66
+
+Casa do Código
+
+Capítulo 5. Cores e efeitos essenciais
+
+Sombras eram chamados de Recuperação e Luz de preenchimento (Recovery e Fill
+light, em inglês), conforme mostra a imagem 5.23. Os atuais são muito mais eficientes, especialmente na qualidade do resultado obtido, além do que as mudanças feitas
+em um controle não afetam as feitas no outro, criando assim melhores imagens.
+
+Figura 5.23: À esquerda os controles até a versão 3 do Lightroom, ou com images no
+processo ‘PV2010’, e à direita os novos controles
+
+Corrigir os realces
+O controle Realces corrige os tons claros, as “altas-luzes” (do inglês highlights):
+arrastando o slider para a esquerda, diminuem-se os tons, e arrastando para a direita,
+aumentamos. O quanto será possível recuperar depende bastante da foto. A imagem
+5.24 mostra o antes e depois da aplicação desta ferramenta.
+
+67
+
+5.5. Sombras e realces
+
+Casa do Código
+
+Figura 5.24: Antes e depois da utilização do controle Realces. Note a diferença no
+céu
+
+Como você pode ver, é possível recuperar uma grande parte dos detalhes, especialmente se for registrado em RAW, devido à maior quantidade de informações que
+este formato de arquivo armazena.
+
+Verifique os pontos onde a imagem estoura
+Uma implicação de certos controles, incluindo o Realces, é que ele pode estourar a luz em certos pontos da imagem – ou estourar mais, obviamente. Para ajudar a
+identificar tais áreas, o Lightroom permite visualizar a área de recorte (do inglês clipping) de duas maneiras: segure a tecla ALT enquanto move o slider para qualquer
+direção, ou então clique no pequeno triângulo no canto superior direito do histograma, conforme mostra a imagem 5.25.
+
+68
+
+Casa do Código
+
+Capítulo 5. Cores e efeitos essenciais
+
+Figura 5.25: A área em vermelho é a região onde a imagem está estourada
+
+Clicar no triângulo mostra as áreas estouradas o tempo todo, enquanto se você
+apenas repousar o cursor do mouse por alguns segundos, a área será mostrada apenas enquanto o mouse estiver sobre o triângulo.
+Tenha em mente que áreas estouradas não significam necessariamente um erro
+– aliás, é algo perfeitamente aceitável em diversas fotos. A opção de mostrar tais
+pontos existe principalmente para você poder saber exatamente onde isso ocorre, e
+fazer os devidos ajustes caso ache necessário.
+
+Ajustar as sombras
+O controle de sombras funciona da mesma forma que o de realces. Você arrasta
+o slider para a esquerda ou direita para efetuar as correções – não tem segredo, e
+no início é normal ser um processo de tentativa e erro. Aliás, mesmo na prática é
+comum ver os fotógrafos experientes irem na tentativa e erro, pois não existe uma
+fórmula mágica nem um “valor correto”. A imagem 5.26 mostra o antes e depois de
+uma imagem que teve as sobras modificadas.
+
+69
+
+5.5. Sombras e realces
+
+Casa do Código
+
+Figura 5.26: Antes e depois do uso do controle de sombras. Neste caso o slider foi
+arrastado para a extrema direita
+
+De maneira análoga, a opção de mostrar as regiões claras que estouraram na foto,
+o pequeno triângulo do canto superior esquerdo do histograma, conforme a imagem
+5.27, mostra em azul as regiões que ficaram totalmente pretas, sem qualquer detalhe.
+Às vezes pode ser o que você deseja, mas por via das dúvidas esta opção pode lhe
+dizer com precisão o dos tons claros e escuros.
+
+Figura 5.27: As regiões em azul representam preto total, sem qualquer nível de detalhe
+
+70
+
+Capítulo 6
+
+Exportar fotos – o “Salvar” do
+Lightroom
+À medida que o trabalho de edição nas fotos é finalizado, surge a necessidade de
+exportar as fotos por diversas necessidades: enviar uma cópia em alta resolução para
+o cliente, para compartilhar em alguma rede social, enviar por e-mail. Seja qual for
+o motivo, utiliza-se a funcionalidade de exportação no Lightroom para salvar em
+disco as fotos no formato JPG, PSD, TIFF ou DNG com todos os ajustes feitos no
+programa.
+
+6.1. Definir como as fotos serão exportadas
+
+Casa do Código
+
+Exportar, ao invés de salvar
+Enquanto em programas tradicionais salvamos as fotos geralmente
+pelo menu Arquivo -> Salvar como..., o processo no Lightroom
+é chamado de Exportar, da mesma forma que não abrimos um arquivo
+específico para trabalhar, mas sim Importamos, como visto nos capítulos
+iniciais.
+O processo de exportar faz-se da seguinte maneira: no módulo “Biblioteca” selecione as fotos que deseja exportar, e em seguida selecione o menu Arquivo ->
+Exportar... (tecla de atalho CTRL/CMD + SHIFT + E), ou através do botão
+Exportar... no canto inferior direito do painel esquerdo (tecla de atalho F7),
+conforme mostra a imagem 6.1.
+
+Figura 6.1: Localização do botão Exportar, no módulo Biblioteca
+
+6.1
+
+Definir como as fotos serão exportadas
+
+Ao selecionar a funcionalidade de exportar as fotos, será aberta uma janela com uma
+série de opções, que é onde toda a mágica ocorre. Nesta janela, mostrada na imagem
+6.2, é possível definir uma série de configurações para a exportação, como onde os
+arquivo deverão ser salvos, a nomenclatura, tamanho, metadados, adicionar marca
+d’água e afins.
+
+72
+
+Casa do Código
+
+Capítulo 6. Exportar fotos – o “Salvar” do Lightroom
+
+Figura 6.2: Tela com as configurações para exportar as fotos
+
+O primeiro dos itens é o Local da exportação. No item Exportar para
+é possível escolher uma pasta específica como destino, deixar para selecionar mais
+tarde, na hora de exportar de fato (útil para predefinições, como veremos logo mais),
+ou salvar uma cópia no mesmo diretório da foto original.
+
+6.2
+
+Nomeação de arquivos
+
+Na seção Nomeação de arquivos marque o item Renomear para caso deseje
+que o nome dos arquivos siga um certo conjunto de regras, tais como “Data + nome
+original”, “texto personalizado + número sequencial”, “nome original + sequência” e
+assim por diante. Ao selecionar qualquer uma das opções, é mostrado logo a seguir
+um exemplo de como ficará o nome dos arquivos.
+
+6.3
+
+Vídeo
+
+Seção específica para arquivos de vídeo, caso a seleção feita no módulo biblioteca inclua algum. Selecione o item Incluir arquivos de vídeo, informe o formato
+73
+
+6.4. Selecionar o formato do arquivo
+
+Casa do Código
+
+e qualidade para exportar.
+
+6.4
+
+Selecionar o formato do arquivo
+
+Em Configurações de arquivo você pode escolher o formato no qual as imagens serão salvas, com algumas opções distintas por tipo. Por exemplo, o formato
+JPEG permite especificar a qualidade entre 0 e 100, o espaço de cores (que, na dúvida, selecione RGB), e opcionalmente especificar o tamanho máximo em KB que o
+arquivos deverão ter. Neste caso, o Lightroom irá ajustar a qualidade de cada arquivo
+de tal forma que respeite o valor informação neste campo.
+
+6.5
+
+Especificar as dimensões e resolução
+
+Em Dimensionamento de imagem selecione a opção Redimensionar para
+ajustar caso queira limitar o tamanho em pixels dos arquivos. As possibilidades
+são:
+1) Altura e largura: serve para especificar dimensões máximas para cada um
+dos lados, sempre respeitando as proporções. Marque o item Não ampliar
+caso não queira que a imagem seja ampliada caso tenha dimensões menores que
+o especificado;
+2) Dimensões: é bastante parecido com Altura e largura, com a diferença que o
+Lightroom leva em consideração a orientação da imagem;
+3) Aresta longa: determina o comprimento do maior lado da imagem. Fotos horizontais terão a largura especifica e altura proporcional, enquanto fotos verticais
+terão a altura especificada e largura proporcional.
+4) Aresta curta: funciona da mesma forma que Aresta longa, porém levando em
+consideração o lado mais curto da imagem;
+5) Megapixels: redimensiona a imagem para o equivalente em megapixels especificado.
+
+6.6
+
+Nitidez, metadados e pós-processamento
+
+Em Nitidez da saída, escolha as opções para o filtro de nitidez, com intensidades predefinidas “Baixa”, “Padrão” e “Alta”, e em Metadados informe a
+74
+
+Casa do Código
+
+Capítulo 6. Exportar fotos – o “Salvar” do Lightroom
+
+quantidade de metadados que deverá ser incluído em cada foto. Já na seção
+Pós-processamento escolha o que deverá ser feito quando o processo de exportação terminar, como mostrar as fotos no explorer.
+
+6.7
+
+Bônus: crie suas próprias predefinições
+
+Ainda na tela de exportar, repare no painel no painel Predefinição, localizado
+à esquerda, que você pode utilizar para salvar diversas configurações de exportação
+que utilize frequentemente, evitando assim inserir manualmente os parâmetros toda
+vez.
+Clique no botão Adicionar e informe o nome da predefinição que achar mais
+conveniente, e então clique no botão Criar. Por exemplo, você pode criar uma chamada “Web” que salva as imagens em 75 de qualidade e no máximo 1400 de largura,
+com nitidez padrão, para ser utilizado em redes sociais, e uma outra chamada “Alta
+resolução” que salva em 100% de qualidade, na maior dimensão possível.
+Para utilizar a predefinição simplesmente clique uma vez no nome dela no painel
+esquerdo.
+
+75
+
+Capítulo 7
+
+Ajustes estruturais
+Não raramente as fotos saem tortas ou com alguma coisa que não deveria estar lá, e
+é justamente disso que este capítulo trata.
+
+7.1
+
+Remover manchas e elementos indesejados
+
+Não é difícil acontecer que nossas fotos, por melhor que estejam, contenham algumas coisas que seria bom se não estivessem lá. Pontos de sujeira da lente ou do
+sensor da máquina fotográfica, itens do ambiente como tomadas, pessoas indesejadas ou imperfeições na pele. Aliás, sujeira na lente ou no sensor é algo que precisa de
+constante atenção, pois toda foto que você tirar terá aqueles mesmos pontos, e isso
+além de ser ruim para a vida útil do equipamento, torna o processo de pós-produção
+bem mais oneroso.
+A ferramenta Remoção de mancha (Spot Removal, tecla de atalho Q) está localizada no módulo Revelação, no ícone indicado pelo símbolo de um círculo com
+uma seta apontando para a direita, conforme mostra a imagem 7.1.
+
+7.1. Remover manchas e elementos indesejados
+
+Casa do Código
+
+Figura 7.1: Localização da ferramenta Remoção de mancha
+
+A imagem 7.2 mostra alguns dos elementos a serem removidos da foto, a fim de
+torná-la mais limpa.
+
+78
+
+Casa do Código
+
+Capítulo 7. Ajustes estruturais
+
+Figura 7.2: Elementos que devem ser removidos
+
+Para utilizar a ferramenta selecione o tamanho do círculo através do slider
+Tamanho no painel da direita – ou pela tecla [ para diminuir e ] para aumentar o
+diâmetro. Além disso, sempre que possível utilize um diâmetro que cubra toda a área
+a ser removida, o que facilita bastante o trabalho. Em seguida clique apenas uma vez
+com o botão esquerdo e o Lightroom automaticamente irá procurar a melhor área
+para cobrir a região, conforme mostra a imagem 7.3.
+
+79
+
+7.1. Remover manchas e elementos indesejados
+
+Casa do Código
+
+Figura 7.3: Resultado da ferramenta
+
+Um segundo círculo será automaticamente criado em outra região da imagem,
+que é de onde o Lightroom pega as informações para substituir a área marcada. Note
+que este segundo círculo tem uma pequena seta apontando para o elemento removido.
+
+Domine a ferramenta sem traumas
+Ao contrário das ferramentas Clone Stamp, Healing Brush ou similares
+existentes no Photoshop, a Remoção de manchas do Lightroom trabalha de maneira um pouco diferente, que pode até parecer contraintuitiva em um primeiro momento, porém é extremamente simples e mais rápida em diversos casos.
+
+Para os usuários de Photoshop
+Se você está acostumado a fazer a mesma tarefa no Photoshop,
+lembre-se sempre que, apesar de elas terem o mesmo objetivo, a maneira
+de utilização no Lightroom é bastante diferente, conforme explicado a
+seguir.
+Como mencionado anteriormente, após a marcação da área, um segundo círculo
+com uma seta aparece, indicando a origem da substituição. Acontece que se você
+80
+
+Casa do Código
+
+Capítulo 7. Ajustes estruturais
+
+clicar e arrastar este segundo círculo para outra parte da imagem, poderá alterar a
+origem da substituição, indicando assim ao Lightroom uma área mais apropriada.
+A imagem 7.4 mostra este conceito sendo aplicado, utilizando propositalmente um
+ponto ruim para melhor demonstrar o conceito.
+
+Figura 7.4: Área de origem modificada
+
+Alternar a visualização de sobreposição
+À medida que as correções vão sendo feitas, mais e mais informações sobre o
+estado delas são armazenadas na área da imagem, o que pode ser bastante útil em
+certos momentos, enquanto, em outros, pode atrapalhar. A imagem 7.5 mostra os
+diversos pontos de edição na imagem, identificados pelas setas amarelas.
+
+81
+
+7.1. Remover manchas e elementos indesejados
+
+Casa do Código
+
+Figura 7.5: Localização das remoções de manchas
+
+Para modificar o comportamento da visualização deste itens, selecione uma das
+opções do painel Sobreposição de ferramentas, localizado no canto inferior
+esquerdo da tela, conforme mostra a imagem 7.6, a qual tem quatro itens:
+• Automático: automaticamente mostra os círculos quando o mouse está sobre
+a imagem, e esconde-os quando o mouse vai para outra parte da tela;
+• Sempre: sempre mostra os círculos, independentemente de onde esteja o
+mouse;
+• Selecionado: exibe apenas o círculo previamente selecionado, escondendo todos os outros;
+• Nunca: nunca exibe os círculos.
+Uma alternativa é utilizar a tecla de atalho H para alternar entre os modos Sempre e Nunca.
+
+82
+
+Casa do Código
+
+Capítulo 7. Ajustes estruturais
+
+Figura 7.6: Localização e opções de visualização dos círculos
+
+Opções da ferramenta
+As opções da ferramenta de remover manchas são poucas, porém úteis, conforme demonstrado na imagem 7.7. A primeira é o tipo de pincel, que pode
+ser Clonar (Clone), para utilizar exatamente o conteúdo da área de origem, e
+Recuperar (Heal) que faz um esforço para manter uma transição mais suave com
+a região de destino, utilizando informações de textura, sombras e highlights da área.
+Em seguida, há o slider para modificar o tamanho da ferramenta (também ativado
+pelas teclas [ e ]), e a opacidade, ou nível de transparência (quanto menor o
+valor, mais transparente será).
+
+Figura 7.7: Opções da ferramenta
+
+Caso haja a necessidade de alterar o diâmetro de algum dos círculos já criados,
+você pode optar por redimensioná-lo ao posicionar e arrastar o mouse na borda (o
+83
+
+7.1. Remover manchas e elementos indesejados
+
+Casa do Código
+
+que torna o cursor do mouse duas setas apontando para direções opostas). Para
+deletar, clique dentro da área quando o cursor virar uma mãozinha e aperte a tecla
+deletar.
+
+Ajustes avançados
+Até o Lightroom 4, a ferramenta de remoção de manchas somente permitia ajustes circulares, o que muitas vezes não era prático para diversas correções. Para corrigir esta limitação, a partir da versão 5 a Adobe passou a permitir que qualquer tipo
+de seleção seja feita, bastando “pintar” (clicar + arrastar) a área a ser removida.
+
+Figura 7.8: Remoção de manchas em área não circular
+
+84
+
+Casa do Código
+
+Capítulo 7. Ajustes estruturais
+
+Teclas de atalho
+
+• ALT + Clique: remove um ponto específico (note que o ícone
+se transforma em uma tesoura);
+• ALT + Arrastar: remove todos os pontos da região selecionada;
+• SHIFT + Clique: clique em um ponto, e segurando SHIFT clique em outra região da imagem, e o Lighroom irá automaticamente fazer uma selecão de remoção entre os pontos pontos. A
+vantagem deste método é não precisar desenhar manualmente, porém somente é útil em linhas retas.
+
+Visualizar pontos escondidos
+O Lightroom 5 introduziu um recurso extremamente útil à ferramenta Remoção
+de Manchas, que é a possibilidade de visualizar pontos de sujeita e imperfeições em
+uma camada parecida com um raio-x, que de outra forma poderiam passar despercebidos quando vistos a olho nu. Veja na imagem 7.9 a funcionalidade em acão.
+
+85
+
+7.1. Remover manchas e elementos indesejados
+
+Casa do Código
+
+Figura 7.9: Ferramenta Visualizar Pontos em ação na imagem da direita
+
+O recurso é ativado ao clicar no check Visualizar pontos, na parte inferior
+da imagem, conforme demonstrado pela figura 7.10, ou então pela tecla de atalho A.
+Obs.: lembre-se de primeiro ativar a ferramenta Remoção de Manchas (tecla Q). Ao
+lado dela, há um slider para controlar o nível de detalhes a filtrar – quanto mais para
+a direita, mais sensivel será.
+
+Figura 7.10: Localizacão do recurso de visualizar pontos
+
+86
+
+Casa do Código
+
+7.2
+
+Capítulo 7. Ajustes estruturais
+
+Recortes, proporções, rotação e linha do horizonte
+
+A ferramenta de corte, chamada pelo Lightroom de sobreposição de corte, o que me
+parece ser um termo bastante estranho, está disponível no módulo “Revelação”, logo
+abaixo do painel Histograma, conforme mostra a imagem 7.11. A tecla de atalho é
+R. O termo em inglês é Crop.
+
+Figura 7.11: Localização da ferramenta de corte
+
+Após selecionar a ferramenta, a maneira mais simples de utilizá-la é arrastar a
+área com o botão esquerdo para indicar a área que deseja manter, e em seguida apertar ENTER. Note que o Lightroom desenha um retângulo com linhas internas para
+indicar a região que será afetada, conforme a imagem 7.12.
+
+Figura 7.12: Área delimitada pelo Lightroom que indica a região de corte
+
+87
+
+7.2. Recortes, proporções, rotação e linha do horizonte
+
+Casa do Código
+
+Em qualquer momento, clique no ícone parecido com um esquadro (indicado
+na imagem 7.13) para poder marcar livremente. Para desfazer todo o corte, clique na
+opção Redefinir, na parte inferior do painel.
+
+Figura 7.13: Botão que seleciona a ferramenta de corte em si
+
+Você sempre pode refazer o corte
+A ferramenta de corte no Lightroom não é destrutiva, o que significa
+que você tem total liberdade para refazer a qualquer momento, mesmo
+depois que o programa tenha sido fechado e aberto novamente em algum outro dia. Simplesmente selecione a ferramenta e faça os ajustes
+desejados. Para efeitos de comparação, no Photoshop esta operação seria impossível.
+
+Manter o aspecto do corte
+A operação normal de corte permite fazer qualquer tipo de seleção, porém algumas vezes é necessário manter um aspecto fixo, 4x3 (4 partes de largura para 3 de
+altura), 16x9 (muito utilizado em conteúdo widescreen) e afins. Para manter o aspecto, é necessário ativar o ícone de cadeado, que por padrão vem aberto, conforme
+mostra as imagens 7.14 e 7.15. Clique uma vez no cadeado para travá-lo, e clique novamente para destravar. Alternativamente segure a tecla SHIFT enquanto arrasta o
+mouse.
+
+Figura 7.14: Cadeado aberto, indicando que não há trava de aspecto de corte
+
+88
+
+Casa do Código
+
+Capítulo 7. Ajustes estruturais
+
+Figura 7.15: Cadeado fechado, que trava o aspecto de corte
+
+Ao travar o cadeado, o Lightroom irá permitir apenas cortes no aspecto da imagem – faça o teste, trave o cadeado e tente fazer um novo corte; você verá que o
+tamanho do retângulo agora respeita uma certa proporção.
+Do lado esquerdo do cadeado existe um menu de opções, mostrado na imagem
+7.16, com uma série de aspectos predefinidos. Se for necessário ter um valor diferente
+dos existentes, selecione a opção Inserir personalizado no fim do menu.
+
+Figura 7.16: Aspectos de recorte pré-definidos
+
+89
+
+7.2. Recortes, proporções, rotação e linha do horizonte
+
+Casa do Código
+
+Aspecto é diferente de tamanho
+Lembre-se sempre que o aspecto da imagem é totalmente diferente do
+seu tamanho – o primeiro especifica apenas as proporções entre largura
+e altura, enquanto que o outro refere-se às dimensões em pixel propriamente ditas.
+
+Girar a foto
+Para girar a foto em qualquer ângulo leve o mouse para perto de um dos cantos,
+conforme mostra a imagem 7.17, clique e arraste para a posição que desejar. Note que
+o cursor do mouse se transforma em uma seta arredondada nestes casos. A mesma
+operação pode ser obtida através do slider Ângulo localizado abaixo do cadeado,
+embora seja mais comum utilizar o mouse diretamente.
+
+Figura 7.17: Girar a foto com a ferramenta de corte
+
+Corrigir a linha de horizonte
+Eventualmente acontece de termos fotos onde a linha do horizonte está torta, e a
+90
+
+Casa do Código
+
+Capítulo 7. Ajustes estruturais
+
+ferramenta de corte do Lightroom tem uma função muito prática para auxiliar nesta
+correção. Por exemplo, veja que a imagem 7.18 tem a linha do horizonte visivelmente
+incorreta (inclinada):
+
+Figura 7.18: Linha do horizonte incorreta
+
+Embora seja possível solucionar o problema manualmente, o Lightroom disponibiliza uma ferramenta específica para esta tarefa, localizada à esquerda da palavra
+“Ângulo”, conforme mostra imagem 7.19. Selecione-a, clique e arraste para traçar
+uma linha onde o horizonte se encontra atualmente, que o Lightroom irá cuidar da
+correção.
+Note que a operação consiste em desenhar a linha em cima do horizonte errado, e não onde você “acha” que ele deveria ficar. Usando o exemplo da imagem
+7.18, você deve traçar a linha exatamente por onde a faixa amarela da foto está, e o
+Lightroom fará a mágica sozinho.
+
+Figura 7.19: Ferramenta para corrigir o horizonte
+
+91
+
+7.2. Recortes, proporções, rotação e linha do horizonte
+
+Casa do Código
+
+Correcão automática de perspectiva com a ferramenta Upright
+O Lightroom introduziu na versão 5 a ferramenta Upright (o termo esta em
+inglês mesmo na versão em português do programa), a qual tenta corrigir automaticamente tanto linhas horizontais, como no caso de paisagens, quando verticais,
+bastante comuns em fotos de arquitetura. A maior vantagem do Upright é no ganho
+de produtividade, já que na maior parte dos casos a taxa de acerto é grande. Veja a
+imagem 7.20, com a linha do horizonte bastante errada.
+
+Figura 7.20: Paisagem com a linha do horizonte incorreta
+
+Para utilizar o Upright, vá ao painel Correções lente no módulo Revelação,
+na seção Básico, conforme demonstrado na imagem 7.21. Há botões para corrigir
+linhas verticais, horizontais, ou mesmo ambas, além de desativá-la. Geralmente o
+botão Automático faz um excelente trabalho, conforme mostra a imagem 7.22.
+
+92
+
+Casa do Código
+
+Capítulo 7. Ajustes estruturais
+
+Figura 7.21: Localizacão da ferramenta Upright
+
+93
+
+7.3. Corrigir olhos vermelhos
+
+Casa do Código
+
+Figura 7.22: Resultado da ferramenta Upright no modo Automático
+
+Restrição de corte
+Em algumas situacões, a imagem pode ficar com áreas brancas após
+o uso da ferramenta Upright, sendo necessário realizar um recorte para
+contornar. Ao invés de fazer isso manualmente, você pode tentar marcar
+a opção Restringir corte no painel de Correções da Lente.
+
+Diferentes tipos de grade
+Se você é do tipo de pessoa que gosta de fazer cortes levando em consideração
+regra dos terços, fibonacci ou outra abordagem mais peculiar, experimente apertar
+a tecla O (letra “O”) algumas vezes – existem 6 opções distintas.
+
+7.3
+
+Corrigir olhos vermelhos
+
+Todos nós já saímos ou vimos alguém com olhos vermelhos em fotografias, e por
+mais assustador que isso possa parecer, a correção é muito fácil. O módulo Revelação
+contém uma ferramenta muito útil para corrigir olhos vermelhos. Ela é representada
+pelo ícone de uma íris, no painel de correções, indicado na imagem 7.23.
+94
+
+Casa do Código
+
+Capítulo 7. Ajustes estruturais
+
+Figura 7.23: Ferramenta para correção de olhos vermelhos
+
+A maneira mais fácil de usar a ferramenta é selecioná-la e clicar com o mouse
+em cima do olho vermelho, que o Lightroom fará o resto automaticamente. Alternativamente você pode clicar e arrastar o mouse para cima ou para baixo para ajustes
+mais precisos (que raramente são necessários). Na imagem 7.24 o olho da esquerda
+já foi corrigido, enquanto o da direita está com a ferramenta posicionada no lugar a
+ser corrigido.
+
+Figura 7.24: Correção de olhos vermelhos em ação. O da esquerda já está pronto
+
+Uma opção de ajuste fino é o slider escurecer, mostrado na imagem 7.25, que
+95
+
+7.3. Corrigir olhos vermelhos
+
+Casa do Código
+
+serve para definir a intensidade da correção caso você ache que o o olho tenha ficado
+com a aparência estranha.
+
+Figura 7.25: Opções da ferramenta. O mais útil é ‘Escurecer’
+
+Como ocorrem os olhos vermelhos
+A ocorrência ou não de olhos vermelhos nas fotos depende da claridade do ambiente, o que tem impacto direto sobre o tamanho da pupila.
+Quando o ambiente está mais escuro, ela se expande para captar mais
+luz, e ao disparar o flash incide sobre ela, alcançando as veias sanguíneas
+e, portanto, causando o efeito de olhos avermelhados.
+
+96
+
+Capítulo 8
+
+Encontre qualquer foto com filtros
+Encontrar aquela foto que tanto procuramos e que tínhamos “certeza” de que jamais esqueceríamos qual seria e onde estaria é algo que facilmente pode consumir
+horas do nosso tempo – tempo que poderia estar sendo utilizado para qualquer outra coisa mais interessante. Para auxiliar nesta árdua tarefa, o Lightroom dispõe de
+uma excelente ferramenta de busca que permite não apenas procurar por nome e
+data, mas por virtualmente qualquer tipo de informação que possa ser associado a
+alguma fotografia, como a máquina e lente que foram utilizadas, o zoom, extensão,
+palavras-chave, por dados de GPS e tantas outras.
+A barra de filtros, mostrada na imagem 8.1, é acessível pela tecla de atalho xxx,
+ou então pelo menu Exibir -> Mostrar barra de filtros.
+
+Casa do Código
+
+8.1. Pesquisa por texto
+
+Figura 8.1: Barra de filtros
+
+São três os tipos de pesquisa que podemos fazer: texto, atributo e metadados.
+
+Não se esqueça de limpar os filtros após o uso
+Um problema muito comum é utilizar os filtros da biblioteca e esquecer de removê-los, pois o Lightroom não faz isso automaticamente. Isso
+significa que, mesmo mudando de diretório ou coleção, os filtros continuarão sendo aplicados até que você os limpe, clicando na opção Nada,
+exemplificado na imagem 8.2.
+
+Figura 8.2: Clique em ‘Nada’ para remover os filtros
+
+8.1
+
+Pesquisa por texto
+
+A primeira forma de pesquisa é em cima de dados de texto, como nome do arquivo
+ou cópia, título, legenda ou palavras-chave, além de metadados e informações gerais
+gravadas no arquivo da imagem. Esta pesquisa é textual na forma em que ela procura
+por qualquer texto que você informe, sem maiores distinções.
+É necessário preencher 3 campos, conforme mostra a imagem 8.3: o primeiro
+98
+
+Casa do Código
+
+Capítulo 8. Encontre qualquer foto com filtros
+
+é onde queremos buscar, o segundo campo é o tipo de filtro a aplicar, e em terceiro lugar é o texto a ser pesquisado. O segundo campo serve para especificar com
+mais precisão o filtro que o Lightroom deverá usar; por exemplo, a opção padrão
+é “contém tudo”, que procura pela palavra informada no campo 3 em qualquer lugar. Já os elementos Começa com ou Termina com irão retornar resultados em
+que a palavra informada apenas esteja no início ou fim do texto que for analisado,
+respectivamente. As outras opções seguem o mesmo raciocínio.
+
+Figura 8.3: Pesquisa textual
+
+Pesquisa por atributo
+A pesquisa por atributos, mostrada na imagem 8.4, é talvez a funcionalidade de
+busca mais utilizada, pois atua em conjunto diretamente com a categorização por
+sinalizadores, estrelas e cores que vimos anteriormente.
+
+Figura 8.4: Pesquisa por atributos
+
+8.2
+
+Filtro de atributos utilizando sinalizadores
+
+O primeiro tipo de filtro por atributo é o de sinalizador, representado por três bandeiras: imagens sinalizadas (com a tecla de atalho P), não sinalizadas, e as rejeitadas
+(com a tecla de atalho X). Clique uma vez em cima da bandeira desejada para aplicar
+o filtro, e clique outra vez para removê-lo. É possível combinar os filtros também,
+clicando em mais de uma bandeira. Repare que não é muito fácil distinguir quando
+99
+
+8.3. Filtro de atributos utilizando estrelas
+
+Casa do Código
+
+e qual das bandeiras está selecionada; a imagem 8.5 mostra a diferença entre os estados.
+
+Figura 8.5: As bandeiras de cima não estão selecionadas; as de baixo estão.
+
+8.3
+
+Filtro de atributos utilizando estrelas
+
+O filtro por estrelas, mostrado na imagem 8.6, é bem autodescritivo: mostrará apenas
+as imagens que tenham no mínimo a quantidade de estrelas marcadas, ou seja, se
+você selecionar 3, serão fotos com 3 ou mais estrelas. Clique de novo em cima de
+qualquer estrela já marcada para desfazer o filtro.
+
+Figura 8.6: Filtro por estrelas – no caso, 3 ou mais
+
+8.4
+
+Filtro de atributos utilizando rótulos de cor
+
+O filtro por cores, mostrado na figura 8.7 com a cor azul selecionada (note que há
+uma pequena borda branca), faz o Lightroom mostrar apenas as fotos que tenham
+rótulos com as cores selecionadas. Clique em mais de uma para mostrar fotos com
+uma ou outra cor; clique novamente em cima dela para desfazer o filtro.
+
+Figura 8.7: Filtro por cores. No caso, a azul está selecionada
+
+100
+
+Casa do Código
+
+8.5
+
+Capítulo 8. Encontre qualquer foto com filtros
+
+Pesquisa por metadados
+
+A pesquisa por metadados é a mais abrangente possível, permitindo aplicar até quatro filtros de pesquisa, conforme mostrado na imagem 8.8. Na parte superior de
+cada bloco (indicados em amarelo na imagem) podemos selecionar o que será filtrado, como data, rótulo de cor, ISO, fabricante da máquina, tipo e marca da lente,
+cidade, proporções e afins. Caso não queira um dos filtros selecione Nada, no fim
+da lista.
+
+Figura 8.8: Filtros por metadados. Até 4 podem ser aplicados
+
+101
+
+Capítulo 9
+
+Organize-se com coleções
+O Lightroom é uma ferramenta excepcional para ajudar a organizar e – tão importante quanto – manter organizada a vida dos fotógrafos. Como vimos anteriormente,
+é muito fácil importar imagens de qualquer pasta do computador ou diretamente do
+cartão de memória da máquina fotográfica e trabalhar em cima dos arquivos. Mas o
+Lightroom vai muito além de simplesmente importar fotos de diretórios já existentes, permitindo organizar as fotos em diversas coleções.
+Pense em coleções como se fossem um álbum sobre um determinado tema, e
+que ao contrário de pastas físicas do sistema operacional, são como “pastas virtuais”
+dentro do Lightroom, o que é uma grande vantagem. É uma maneira fácil e prática
+de encontrar as fotos de um assunto específico. Uma outra grande vantagem é que,
+ao contrário de pastas normais, as coleções são visíveis no módulo Revelação, o que
+evita ficar voltando constantemente ao módulo Biblioteca durante a edição das fotos.
+Prosseguindo com a relação de vantagens, as coleções não duplicam as fotos – elas
+permanecem apenas como uma referência, um apontador para a foto original, sendo
+possível inclusive ter a mesma foto em diversas coleções.
+
+Casa do Código
+
+9.1. Coleções manuais
+
+Existem dois tipos de coleções: as manuais, nas quais você mesmo mantém quais
+fotos fazem parte, e as inteligentes, nas quais o Lightroom automaticamente mantém
+organizada a coleção de acordo com um conjunto de regras predefinido. Ambas são
+bastante úteis, e seu uso varia de acordo com cada caso.
+
+9.1
+
+Coleções manuais
+
+Uma coleção manual, ou simplesmente coleção, é aquela em que manualmente fazemos o gerenciamento de quais fotos fazem parte dela, tanto para adicionar novos
+arquivos quanto para remover. É possível ter inúmeras coleções, inclusive aninhadas
+em conjuntos.
+Para criar uma coleçãoç selecione as fotos que deseja que façam parte dela e clique no ícone com o símbolo + no elemento Coleções do painel direito, e em
+seguida escolha a opção Criar coleção (vide imagem 9.1). A tecla de atalho é
+CTRL/CMD + N, ou então pelo menu Biblioteca -> Nova coleção....
+
+Figura 9.1: Local para criar uma nova coleção
+
+Na janela que abrir, informe um nome descritivo para a nova coleção, e
+certifique-se de que a opção Incluir fotos selecionadas esteja marcada,
+104
+
+Casa do Código
+
+Capítulo 9. Organize-se com coleções
+
+conforme a imagem 9.2.
+
+Figura 9.2: Janela para criar nova coleção
+
+No box Posicionamento é possível definir se ela deverá ser de nível superior,
+ou se ficará ficar aninhada dentro de um conjunto de coleções, que pode ser especialmente útil para organizar em subtópicos de um determinado evento. Por exemplo,
+você pode optar por colocar todas as fotos de uma viagem em uma única coleção
+de nível superior, o que gera um resultado como o da imagem 9.3, ou então separar
+dentro de um conjunto, com um resultado como o da imagem 9.4.
+
+Figura 9.3: Coleção de nível superior
+
+105
+
+9.2. Maior organização com conjunto de coleções
+
+Casa do Código
+
+Figura 9.4: Imagens organizadas em coleções dentro de um conjunto
+
+9.2
+
+Maior organização com conjunto de coleções
+
+Quando se tem um grande número de fotos relativas a um mesmo assunto principal, como um casamento, aniversário ou viagem, mas com registros de diferentes
+momentos, como “Dia da noiva”, “Igreja”, “Recepção”, “Primeira dança” etc. (no caso
+de um casamento) pode ser muito interessante utilizar um conjunto de coleções, que
+nada mais é que o agrupamento de coleções normais.
+Para organizar as fotos desta maneira primeiro crie o conjunto através da opção Criar conjunto de coleções, no ícone + ao lado de Coleções no painel da esquerda (vide imagem 9.5), ou através do menu Biblioteca -> Novo
+conjunto de coleções.
+
+106
+
+Casa do Código
+
+Capítulo 9. Organize-se com coleções
+
+Figura 9.5: Localização do menu para criar um novo conjunto de coleções
+
+Na janela que abrir informe o nome do conjunto e se ele deve ser aninhado
+a outro conjunto já existente, ou se deve ser de nível superior (que é a opção padrão). Feito isso, crie uma nova coleção padrão como visto anteriormente, e no box
+Posicionamento selecione o conjunto no item Dentro de um conjunto de
+coleções, conforme exemplificado na imagem 9.6.
+
+107
+
+9.3. Adicionar e remover fotos de uma coleção
+
+Casa do Código
+
+Figura 9.6: Criar nova coleção associada a um conjunto
+
+9.3
+
+Adicionar e remover fotos de uma coleção
+
+Para adicionar novas fotos em uma coleção já existente basta arrastar o arquivo com
+o mouse até a coleção desejada, conforme mostra a imagem 9.7. Uma mesma foto
+pode estar em diversas coleções ao mesmo tempo. Já para remover, primeiro entre
+na coleção da qual deseja retirar a foto e aperte a tecla DELETE, ou então clique com
+o botão direito e selecione o item Remover da coleção (vide imagem 9.8).
+
+108
+
+Casa do Código
+
+Capítulo 9. Organize-se com coleções
+
+Figura 9.7: Clique e arraste a foto para a coleção desejada
+
+Figura 9.8: Menu para remover foto da coleção, acessível via menu do botão direito
+do mouse
+
+Remover da coleção não remove do catálogo
+Note que, ao remover fotos de uma determinada coleção, o arquivo
+não é deletado do catálogo do Lightroom (muito menos do disco), e sim
+apenas do catálogo em si, mesmo que você utilize a tecla DELETE. Contudo, tenha certeza se estar dentro da coleção em si.
+
+Apagar a coleção inteira
+Caso você queria remover a coleção por completo, em vez de fotos individuais
+nela contidas, clique com o botão direito do mouse em cima do nome da coleção
+109
+
+9.4. Coleções inteligentes
+
+Casa do Código
+
+e escolha a opção Excluir..., conforme a imagem 9.9. Se ainda existirem fotos
+associadas será apresentada uma mensagem perguntando se é para prosseguir. Confirme, clicando no botão Excluir. Como explicado acima, nenhuma imagem será
+removida de fato do programa.
+
+Figura 9.9: Mensagem pedindo confirmação para deletar a coleção. Aceite sem medo
+de perder fotos
+
+9.4
+
+Coleções inteligentes
+
+Além das coleções criadas manualmente como já vimos, o Lightroom contém um
+tipo especial chamado de Coleções Inteligentes, que automaticamente adicionam ou removem fotos de acordo com um conjunto de regras predeterminado
+por você. As regras podem ser simples e diretas como “todas as fotos que tenham
+5 estrelas”, quanto como com condições bem mais complexas, como “Todas as fotos
+que tenham pelo menos 3 estrelas, com cor de rótulo verde, fotografadas com uma
+Nikon, mas sem utilizar a lente de 50mm”.
+
+Como criar
+Para exemplificar melhor a ideia, vamos criar uma coleção inteligente que automaticamente agrupe todas as fotos que tenham exatamente cinco estrelas. Clique no
+ícone com o símbolo + ao lado da palavra “Coleções” no painel esquerdo, ou através
+do menu Biblioteca -> Nova coleção inteligente, o que abrirá uma janela com algumas opções. Não se assuste se parecer complicado, pois na prática é
+bem fácil.
+O primeiro campo a preencher é o nome da coleção em si, que preferencialmente
+deve ser bem descritivo – no caso, nomeie “5 estrelas”. O box Posicionamento
+funciona exatamente como descrito na seção de coleções manuais. Neste caso, deixe
+110
+
+Casa do Código
+
+Capítulo 9. Organize-se com coleções
+
+marcada a opção Nível superior. Logo abaixo, em Correspondência, também aceite o valor padrão do menu, que é o item tudo. Veremos depois as outras
+variações.
+A parte mais importante, que faz todo o trabalho em si, está logo abaixo, em uma
+caixa bem grande, onde as regras de filtragem são criadas. Por enquanto, precisamos
+apenas de uma única regra, que é “avaliação maior ou igual a cinco estrelas”. Note
+que, para informar a quantidade de estrelas, basta clicar nos pequenos pontos ao lado
+do menu é maior do que ou igual a. Feito isso, clique no botão Criar.
+Repare que coleções inteligentes tem um minúsculo ícone de engrenagem junto ao
+ícone da coleção em si.
+
+Tudo é automático
+Ao contrário de coleções criadas manualmente, as inteligentes automaticamente adicionam ou removem fotos de acordo com o filtro configurado. Portanto, o Lightroom não permite que uma foto qualquer seja
+arrastada para dentro da coleção inteligente. Da mesma forma, para excluir a foto da coleção é necessário modificar os atributos que fazem parte
+do filtro – por exemplo, para que uma foto deixe de fazer parte da coleção “5 estrelas” que acabamos de criar, você deve ir até a foto que deseja
+remover e alterar a quantidade de estrelas, e o programa cuidará do resto.
+
+Para editar as propriedades da coleção, incluindo as regras de filtros, clique com
+o botão direito nela e selecione Editar Coleção Inteligente.
+
+Filtros mais elaborados
+O filtro “5 estrelas” que criamos contém um único filtro (5 ou mais estrelas),
+porém podemos ir muito além disso. Embora a quantidade de combinações seja
+gigantesca, o funcionamento é simples, consistindo de três campos para cada filtro.
+O primeiro deles é a informação (item 1 da imagem 9.10) que queremos filtrar,
+como quantidade de estrelas (determinado pelo item Avaliação), cor do rótulo,
+nome ou tipo do arquivo, data de captura, palavras-chave e assim por diante.
+Em segundo lugar vem a condição (item 2 da imagem 9.10) que será aplicada
+a informação. Este campo varia de acordo com o item 1, e você deve ler com
+111
+
+Casa do Código
+
+9.4. Coleções inteligentes
+
+calma as opções que o Lightroom lhe apresentará, e geralmente é algo bem fácil de
+entender. São, por exemplo, “contém” (alguma coisa), “maior que” (determinado
+valor), “começa com” (palavra) e assim por diante.
+O último campo (item 3) também varia um pouco de acordo com o elemento
+escolhido no item 1. Pode ser que você tenha que selecionar uma cor (no caso de filtro
+por rótulo de cor), clicar na quantidade de estrelas desejadas conforme vimos no
+primeiro exemplo, ou digitar alguma palavra. Lembre-se sempre que os três campos
+são diretamente relacionados, e a união deles representa um filtro em si.
+Em alguns raros casos será necessário informar um quarto campo, porém o funcionamento segue a mesma lógica dos outros três.
+
+Figura 9.10: Composição de um filtro
+
+Para adicionar mais filtros a uma mesma coleção inteligente, basta clicar no botão com o texto +, no canto direito de algum filtro já existente. Para remover, clique
+no botão com o texto -.
+
+A coleção está sem fotos?
+Caso nenhuma foto apareça na sua coleção inteligente, isso significa
+que nenhuma das fotos atende aos filtros criados por você. Primeiro,
+certifique-se de que as regras estão corretas, e então edite as propriedades de alguma foto para atender a elas. Por exemplo, se você criou uma
+coleção inteligente para fotos com “3 ou mais estrelas, que tenham um
+rótulo de cor vermelho”, você precisa ter uma mesma foto tanto com 3
+(ou mais) estrelas E o rótulo vermelho – não um OU outro (ao menos
+que você tenha explicitamente configurado para ser assim, conforme a
+próxima seção).
+112
+
+Casa do Código
+
+Capítulo 9. Organize-se com coleções
+
+Correspondência das regras
+Existe uma configuração adicional que se aplica a todos os filtros de uma determinada coleção, que é a maneira como eles devem ser aplicados, conforme demonstra a imagem 9.11. Existem três opções: Qualquer, Tudo e Nenhum, que significam
+“pegue as fotos onde qualquer um dos filtros seja válido” (ou seja, é suficiente que apenas um deles seja válido, podendo ser todos); “pegue apenas as fotos onde todos os
+filtros sejam válidos"; ou então, “somente as fotos onde nenhum dos filtros se aplique”,
+respectivamente.
+
+Figura 9.11: Correspondência dos filtros
+
+9.5
+
+Ideias criativas para coleções inteligentes
+
+É possível atribuir usos bem criativos e práticos a coleções inteligentes, de tal forma
+que facilitem o seu fluxo de trabalho. Por exemplo, você pode criar uma coleção chamada “Preferidas do cliente” para todas as fotos que tenham um rótulo de cor roxo e
+a palavra-chave “preferida”. Ou então uma chamada “Atrasadas para editar” com um
+filtro Data da captura -> não está no último -> 30 -> dias e outro
+filtro Tem ajustes -> é falso (vide imagem 9.12), na qual, hipoteticamente,
+consideramos que qualquer foto não editada em 30 dias é considerada atrasada.
+
+113
+
+9.6. Agrupe fotos temporariamente com a Coleção rápida
+
+Casa do Código
+
+Figura 9.12: Composição do filtro de fotos em atraso para edição
+
+Coleções inteligentes pré-configuradas
+O Lightroom vem com algumas coleções inteligentes por padrão, como para todas as fotos marcadas com o rótulo vermelho, fotografadas no último mês ou que
+não tenham palavras-chave associadas – veja imagem 9.13. Você pode ver como
+são criadas clicando com o botão direito e escolher a opção “ Editar coleção
+inteligente.
+
+Figura 9.13: Coleções inteligentes pré-configuradas
+
+9.6
+
+Agrupe fotos temporariamente com a Coleção
+rápida
+
+Volta e meia você pode se encontrar em uma situação em que precisa agrupar determinadas fotos para algum trabalho rápido, como selecionar fotos para imprimir ou
+separar as que o cliente mais gostou para exportar logo em seguida, mas não encontra uma maneira realmente eficiente de fazer isso. Uma possibilidade seria atribuir
+114
+
+Casa do Código
+
+Capítulo 9. Organize-se com coleções
+
+algum conjunto de palavras-chave, estrelas ou mesmo separar por cor e criar uma
+coleção inteligente com tais filtros. Porém, além do trabalho de ter que pensar no
+tipo de filtro e criar a coleção em si, ainda existe a possibilidade de outras fotos coincidirem com as regras e você acabar com fotos indesejadas. Uma coleção manual
+resolve o problema de ter fotos indesejadas, contudo é necessário ficar arrastando as
+fotos de um lado para o outro.
+Para atender a estas situações de trabalho temporário, o Lightroom tem o conceito de coleção rápida, que é um tipo especial de coleção pré-configurado, único
+em todo o programa, que agrupa quaisquer fotos até que você limpe-a. Ela fica na
+seção Catálogo do painel esquerdo (vide imagem 9.14).
+
+Figura 9.14: Localização da coleção rápida
+
+Adicione fotos à coleção rápida
+Para adicionar fotos à coleção rápida basta apertar a tecla B, ou então pelo menu
+Foto -> Adicionar à coleção rápida. Ainda é possível arrastar e soltar diretamente nela, embora este procedimento não seja tão prático quanto utilizar a tecla
+de atalho diretamente.
+O Lightroom marca as fotos que estão dentro da coleção rápida com um pequeno
+círculo preenchido, no canto superior direito da miniatura da foto, conforme mostra
+a imagem 9.15. Repare que as fotos que estão na coleção têm um círculo preenchido,
+enquanto as que não fazem parte têm um círculo vazio (ou ele nem aparece). Caso
+115
+
+9.6. Agrupe fotos temporariamente com a Coleção rápida
+
+Casa do Código
+
+não esteja conseguindo identificar, tente apertar a tecla J algumas vezes.
+
+Figura 9.15: A foto da esquerda está na coleção rápida, a da direta não. Repare no
+preenchimento dos círculos.
+
+Quando você não precisar mais das fotos que estão na coleção rápida, basta clicar com o botão direito em cima dela e escolher a opção Apagar a coleção
+rápida. Note que as fotos em si não são deletadas de forma alguma, apenas a ligação delas com a coleção é que é desfeita.
+
+Utilize uma coleção de verdade como sendo a rápida
+Existe um recurso interessante que é o de definir uma coleção de verdade (exceto as inteligentes) como destino da coleção rápida. Em outras palavras, ao invés
+de as fotos irem para o item Coleção rápid demonstrado na imagem 9.14, elas
+podem ir para outro lugar. Um bom uso para tal recurso é tirar proveito da rapidez
+de trabalho que a coleção rápida permite, através da tecla de atalho B, para catalogar
+fotos de um mesmo tema, que precisam estar organizadas em determinar coleção
+(que não seja a rápida, obviamente).
+Para fazer isso, apenas clique com o botão direito no nome da coleção que
+deseja definir como “destino”, e escolha ao opção Definir como coleção de
+destino, conforme demonstra a imagem 9.16.
+
+116
+
+Casa do Código
+
+Capítulo 9. Organize-se com coleções
+
+Figura 9.16: Definir uma coleção manual como sendo a destino das operações da
+coleção rápida
+
+Feito isso, as fotos irão para este lugar até que você desfaça a configuração da
+mesma forma (botão direito, e desmarque o item). Note que a coleção de destino
+passa a ter o sinal de soma ( +) ao lado do nome.
+
+117
+
+Capítulo 10
+
+Categorização por palavras-chave
+Dentre as várias maneiras de organizar e catalogar fotos, o Lightroom permite ainda
+a associação de palavras-chave nas fotos, o que é especialmente útil para encontrar
+arquivos similares de um mesmo assunto. O uso de palavras-chave pode ser bem
+aproveitado como um complemento às coleções.
+Palavras-chave são pequenas informações de texto associadas a cada foto. Algumas pessoas usam o termo tags para se referir ao mesmo conceito. Elas são interessantes para associar características às fotos, e permitem facilmente encontrar todas
+que tenham um mesmo conjunto de palavras-chave.
+Utilize para características, como “mar”, “férias”, “vermelho”, “comida”, “preto e
+branco”, nome do cliente etc.
+
+10.1
+
+Como inserir palavras-chave
+
+A inserção de palavras-chave dá-se pela seção Atrib. palavras-chave localizada no painel direito, conforme mostra a imagem 10.1, a qual contém dois campos
+
+10.2. Procurar fotos por palavras-chave
+
+Casa do Código
+
+para a mesma função. Você pode inserir uma única palavra, como “verão”, ou então algo mais descritivo, como “férias de verão”. Utilize vírgula para separar uma
+palavra-chave de outra.
+
+Figura 10.1: Painel de inserção de palavras-chave
+
+10.2
+
+Procurar fotos por palavras-chave
+
+A maior vantagem de catalogar fotos utilizando palavras-chave é a possibilidade
+de buscar pelos arquivos utilizando tais informações, através da barra de filtros
+(vide imagem 10.2). Selecione a opção Texto, no primeiro menu marque o item
+Palavras-chave e, por último, digite o texto a procurar no campo à direita com
+uma pequena lupa, conforme mostra a imagem 10.3.
+A barra de filtros é acessível pela tecla de atalho \, ou pelo menu Exibir ->
+Mostrar barra de filtros.
+
+120
+
+Casa do Código
+
+Capítulo 10. Categorização por palavras-chave
+
+Figura 10.2: Barra de filtros
+
+Figura 10.3: Busca de fotos por palavra-chave
+
+O Lightroom automaticamente começa a filtrar as fotos da biblioteca à medida
+que digitamos alguma coisa no campo de busca, mostrando somente aquelas que se
+encaixem nas configurações dos filtros. Separe por vírgula caso queira procurar por
+mais de uma palavra-chave ao mesmo tempo.
+O filtro é aplicado levando em consideração o tipo de combinação selecionada
+no menu do meio da barra de filtros, conforme mostra a imagem 10.4.
+
+121
+
+10.2. Procurar fotos por palavras-chave
+
+Casa do Código
+
+Figura 10.4: Opções do tipo de combinação das palavras-chave do filtro
+
+As combinação tem nomes bem claros, e são aplicados às palavras-chaves inseridas no campo de texto ao lado. Por exemplo, a opção padrão Contém tudo significa que somente serão consideradas as fotos que contenham todas as palavras-chave
+informadas (lembrando que você deve separar por vírgula quando houver mais de
+uma); já a opção Contém considera qualquer uma das palavras — ou seja, basta a
+foto ter uma da lista, ao invés de todas —, enquanto Não contém encontra arquivos
+que tenham quaisquer palavras exceto as da lista.
+Para limpar a busca clique no ícone de X do lado direito no campo de texto,
+conforme mostra a imagem 10.5.
+
+Figura 10.5: Botão para limpar todos os filtros de busca
+
+122
+
+Casa do Código
+
+10.3
+
+Capítulo 10. Categorização por palavras-chave
+
+Sugestões de palavras-chave
+
+À medida que você utiliza o recurso de palavras-chave, o Lightroom vai criando por conta própria um banco de informações com as palavras mais relevantes, disponibilizando-as na seção Sugestões de palavras-chave, conforme a
+imagem 10.5.
+
+Figura 10.6: Palavras-chave sugeridas pelo Lightroom. Clique em uma para adicionar à lista
+
+.
+Simplesmente clique em uma das sugestões para adicioná-la à caixa de texto
+acima. Repare que, ao fazer isso, a palavra é automaticamente removida da lista de
+sugestões, pois a foto passa a possuí-la.
+
+10.4
+
+Conjunto de palavras-chave
+
+Com o passar do tempo, você notará que sempre atribui um mesmo conjunto de
+palavras-chave para fotos similares — o que é algo perfeitamente normal e esperado,
+inclusive, pois demonstra um bom uso da funcionalidade. Para auxiliar nesta tarefa que, muitas vezes, é repetitiva, o Lightroom permite criar de antemão um con123
+
+10.4. Conjunto de palavras-chave
+
+Casa do Código
+
+junto com algumas palavras-chave mais utilizadas para uma determinada categoria, definida por você. Esta funcionalidade está disponível na seção Conjunto de
+palavras-chave mostrado na imagem 10.7.
+
+Figura 10.7: Conjuntos de palavras-chave
+
+Note que há alguns conjuntos já predefinidos, como “Fotografia ao ar livre”, que
+na prática existem mais para exemplificar o recurso. A opção Palavras-chave
+recentes mostra as últimas palavras utilizadas por você, o que é uma grande mão
+na roda quando estamos catalogando um grande número de fotos. Para criar o seu
+próprio conjunto, escolha a opção Editar conjunto... (é o último item do
+menu) e insira até 9 palavras-chave, clicando em Alterar para salvar os dados,
+conforme a imagem 10.8.
+
+124
+
+Casa do Código
+
+Capítulo 10. Categorização por palavras-chave
+
+Figura 10.8: Inserir palavras-chave personalizadas em um conjunto
+
+Opcionalmente, você pode salvar o conjunto com um nome personalizado.
+Para isso, selecione a opção Salvar configurações atuais como nova
+predefinição enquanto estiver na tela de edição do conjunto, e insira o novo que
+achar mais apropriado, conforme a imagem 10.9
+
+Figura 10.9: Salvar o conjunto com um nome personalizado
+
+Feito isso o seu conjunto personalizado irá aparecer na lista de opções do menu
+Conjunto de palavras-chave.
+125
+
+10.5. Gerencie tudo na seção Lista de palavras-chave
+
+10.5
+
+Casa do Código
+
+Gerencie tudo na seção Lista de palavraschave
+
+Na seção Lista de palavras-chave, mostrada na imagem 10.10, você encontrará a relação completa de palavras-chave cadastrados no Lightroom, com um indicador de quantas fotos têm uma determinada palavra (à direita). No caso de uma ou
+mais fotos estarem selecionadas, haverá uma marca parecida com um “V” do lado
+esquerdo, a qual indica que o arquivo em questão contém aquela palavra.
+
+Figura 10.10: Seção com a lista completa de palavras-chave.
+
+Se quiser remover uma das palavras, basta clicar em cima do “V”. Para associar
+a palavra à imagem, clique no pequeno quadrado que aparece do lado esquerdo da
+palavra quando você passa o mouse em cima de alguma delas, conforme a imagem
+10.11.
+
+126
+
+Casa do Código
+
+Capítulo 10. Categorização por palavras-chave
+
+Figura 10.11: Clique no quadrado apontado pela seta para associar a palavra a imagem
+
+Mostrar todas as fotos com uma palavra
+Já se você quiser encontrar todas as fotos que tenham uma determinada palavrachave, passe o mouse em cima da palavra e clique em uma pequena seta que aponta
+para o lado direito, ao lado da palavra, conforme mostra a imagem 10.12.
+
+Figura 10.12: Clique na seta indicada para filtrar as fotos que contenham a palavrachave em questão
+
+Editar e deletar palavras
+Para editar qualquer palavra-chave, dê um duplo clique nela, ou então use o botão direito e selecione a opção Editar marca de palavra-chave. Para deletar
+a palavra, clique com o botão direito e selecione a opção Excluir — note que isso
+não remove a foto em si, apenas a palavra-chave. Uma outra forma de remover é
+clicar no símbolo - ao lado do nome da seção Lista palavras-chave.
+
+127
+
+10.6. Organizar as palavras por hierarquia
+
+10.6
+
+Casa do Código
+
+Organizar as palavras por hierarquia
+
+Da mesma forma que é fácil e rápido associar palavras-chave a imagens, é também
+muito fácil ter um cadastro com literalmente centenas de palavras, o que pode tornar
+o gerenciamento uma tarefa bem confusa. Pensando em casos assim, o Lightroom
+permite organizar as palavras em uma estrutura hierárquica, em que uma palavra
+está “dentro” de outra, da mesma maneira como as pastas do computador são organizadas, conforme exemplificado na imagem 10.13.
+
+Figura 10.13: Estrutura de palavras-chave organizadas por hierarquia
+
+A vantagem de manter uma organização por hierarquia é que isso torna mais
+fácil o trabalho de encontrar determinada palavra, além de ocupar menos espaço
+na interface do Lightroom. Por último, e talvez o mais interessante de tudo, é que
+quando se atribui uma palavra de um nível mais baixo, todas as palavras intermediárias também serão associadas à imagem.
+
+Como criar e organizar por hierarquia
+A primeira coisa a fazer é definir qual será a sua palavra-chave de nível superior,
+a qual conterá outras palavras-chave dentro de si. Por exemplo, no caso da imagem
+10.13, há duas de nível superior, “Férias” e “Pessoas”. Vamos usar a de “Férias”.
+Clique no botão + no canto superior esquerdo e insira o valor “Férias” no campo
+Nome da palavra-chave. Caso a caixa Opções de criação esteja disponí128
+
+Casa do Código
+
+Capítulo 10. Categorização por palavras-chave
+
+vel para você, não selecione o item Colocar dentro de .... Clique no botão
+Criar.
+Agora, selecione o item Férias na lista de palavras e clique novamente no botão +. Insira o nome “Cidade” e, desta vez, marque o item Colocar dentro de
+'Férias', conforme mostra a imagem 10.14, o que criará a palavra-chave aninhada.
+
+Figura 10.14: Opção para criar uma palavra-chave aninhada a outra
+
+Repita o processo tantas vezes quanto forem necessárias. Repare que agora a
+setinha que fica à esquerda da palavra “Férias” pode ser clicada para revelar as outras
+que estiverem aninhadas.
+
+Crie também com arrastar e soltar
+Uma outra maneira de aninhar palavras-chave é arrastá-las para dentro de alguma outra, caso você já tenha um grande número de palavras.
+Esta opção é bem prática; simplesmente clique com o botão esquerdo e
+arraste para onde desejar aninhar.
+
+129
+
+Capítulo 11
+
+Registre sua assinatura com Marca
+d’água
+Há quem goste e há quem odeie, mas é inegável que marca d’água é uma funcionalidade bem popular — para o bem ou para o mal, pois muitos fotógrafos perdem a
+mão e adicionam marcas extremamente feias ou exageradas. Gostos pessoais à parte,
+no Lightroom esta assinatura é adicionada no momento de exportar as fotos (vide
+capítulo anterior), na seção marca d'água, conforme mostra a imagem 11.1.
+
+Casa do Código
+
+Figura 11.1: Localização da marca d’água na janela de exportar fotos
+
+Clique na opção Editar marca d'água... para abrir o editor, como mostra a imagem 11.2. Nesta tela é possível inserir tanto marcas de texto quanto imagens, através da opção Estilo da marca d'água, localizada no canto superior
+direito.
+
+Figura 11.2: Editor de marca d’água
+
+132
+
+Casa do Código
+
+11.1
+
+Capítulo 11. Registre sua assinatura com Marca d’água
+
+Inserir marcas de texto
+
+O editor de textos para a marca é relativamente completo: na seção Opções de
+texto selecione a fonte e estilo (negrito, itálico etc.), o alinhamento e a cor do texto.
+É possível também adicionar sombras ao texto, definindo a opacidade, distância do
+texto e afins.
+O texto da marca propriamente dito pode ter a opacidade definida, e geralmente
+é interessante deixar um valor mais baixo, para que o efeito fique mais sutil. Claro,
+isso é algo de cunho totalmente pessoal, porém frequentemente fotos muito boas
+são arruinadas por marcas d’água mal colocadas. Caso marque a opção de tamanho
+proporcional, utilize o slider para definir o tamanho do texto.
+O texto somente pode ser colocado em lugares predefinidos pelo Lightroom: nos
+cantos ou no meio, através da opção Âncora conforme mostra a imagem 11.3.
+
+Figura 11.3: Opção de alinhamento do texto
+
+11.2
+
+Inserir marcas de gráfico
+
+Caso você queira inserir uma marca mais elaborada, utilize a opção Gráfico, e selecione a imagem que deverá ser adicionada em todas as fotos. Dica: utilize arquivos
+.PNG com fundo transparente.
+O restante funciona exatamente como o modo texto: defina a opacidade, a posição e pronto.
+Ao clicar em Salvar o Lightroom pedirá para você inserir um nome para as
+definições feitas, permitindo reutilizar em outras ocasiões sem a necessidade de configurar tudo novamente.
+
+133
+
+Capítulo 12
+
+Gerenciamento avançado das fotos
+Histórico de ações — o “voltar no tempo” do Lightroom
+A capacidade de desfazer e refazer ações é uma funcionalidade vital em qualquer
+programa, pois além de permitir corrigir nossos erros, permite testar diversas combinações com tranquilidade.
+No Lightroom o histórico de alterações feitas na imagem fica no módulo Revelação, indicado na imagem 12.1, ou pela tecla de atalho CTRL + SHIFT + 3 no
+Windows, ou CMD + CTRL + 3 no Mac.
+
+Casa do Código
+
+Figura 12.1: Localização do painel Histórico
+
+Toda e qualquer modificação que você fizer na imagem ficará registada no histórico, sendo que o item mais recente localiza-se no topo. Para desfazer uma determinada ação, basta clicar em cima de qualquer elemento anterior a ela, ou utilizar a
+tecla de atalho CTRL/CMD + Z, enquanto com CTRL/CMD + Y, você refaz a ação.
+A imagem 12.2 mostra o histórico com uma série de registros.
+
+Figura 12.2: Itens no histórico
+
+136
+
+Casa do Código
+
+Capítulo 12. Gerenciamento avançado das fotos
+
+A respeito de performance
+No Lightroom, as ações do histórico não são armazenadas na memória do computador (ao contrário, de novo, do Photoshop), o que inclusive é o motivo pelo qual ele continua a existir mesmo quando fechamos
+o programa.
+Se você estiver com o painel Navegador aberto (localizado logo acima do
+Histórico), poderá visualizar uma prévia de cada modificação simplesmente passando o mouse em cima dos itens do histórico.
+O tamanho do histórico é ilimitado, não sendo perdido nem mesmo quando
+você fecha o programa. Isso significa que você pode fazer os ajustes que quiser na
+imagem, desfazer e refazer, e quando voltar um mês mais tarde todo o histórico ainda
+estará lá. Isso é uma grande vantagem inclusive em relação ao Photoshop, que perde
+o histórico quando fechamos o programa.
+Embora o histórico no Lightroom seja ilimitado e persistente, tenha em mente
+que se você selecionar uma posição anterior a mais recente e fizer uma nova modificação, ela passará a ser a última, mantendo apenas as anteriores a ela. A imagem
+12.3 exemplifica este funcionamento.
+
+Figura 12.3: A seta amarela indica o item selecionado, e o box verde indica o histórico
+que será sobrescrito caso você faça mudanças neste ponto
+
+Para limpar todo o histórico, clique no botão X do lado direito do painel —
+contudo, se você clicar por acidente neste botão, simplesmente desfaça a ação através
+do menu Editar -> Desfazer.
+137
+
+Casa do Código
+
+Instantâneos
+Uma funcionalidade que recebe pouca atenção, mas que tem grande potencial
+para certas tarefas, é a capacidade de registrar instantâneos da imagem — ou seja,
+gravar o estado de edição em que ela se encontra em determinado momento, como
+se fosse uma cópia da foto. Instantâneos podem ser úteis para salvar o seu trabalho de tempos em tempos, como forma de precaução contra um eventual deslize de
+remoção do histórico, para preparar diferentes versões de edição para mostrar ao
+cliente, ou para comparação posterior.
+Para criar um instantâneo, clique com o botão direito em algum item do histórico
+e selecione a opção Criar instantâneo, ou então clique no botão + no painel
+Instantâneos, conforme mostra a imagem 12.4.
+
+Figura 12.4: Maneiras de criar um instantâneo
+
+Dê um nome fácil de identificar e ele irá aparecer no painel próprio logo acima
+do histórico. Cada instantâneo é associado com a sua própria imagem.
+
+138
+
+Casa do Código
+
+Capítulo 12. Gerenciamento avançado das fotos
+
+Instantâneos não são cópias
+Tenha sempre em mente que instantâneos não são cópias das fotos,
+mas sim apenas uma referência para um determinado ponto de edição
+dela. Isso significa que, na prática, você continuará tendo um único arquivo físico em disco, e portanto cada instantâneo ocupa pouco espaço.
+
+Para remover, clique com o botão direito em cima do nome e selecione
+Excluir.
+
+12.1
+
+Alta produtividade com edição de várias fotos
+simultaneamente
+
+Uma das grandes eficiências do Lightroom é permitir trabalharmos de maneira
+muito mais eficiente que em outros programas. Historicamente, o processo de edição consistia em ajustar uma imagem, então repetir o processo na próxima, então na
+próxima, e assim por diante — tudo manualmente e mecanicamente. Usuários do
+Photoshop são bem familiarizados com as “ações” (Actions, em inglês), que podem
+ser gravadas para repetir virtualmente qualquer passo em fotos distintas.
+Contudo, o Photoshop não foi feito com este tipo de tarefa em mente, e enquanto
+é possível obter um grau de otimização do trabalho, ele nem de longe é tão rápido e
+simples quanto o mecanismo do Lightroom, que desde o início foi criado com foco
+em fluxos de trabalho em lote — lembre-se, o Lightroom é um programa criado por
+fotógrafos para fotógrafos.
+A capacidade do Lightroom de aplicar ajustes, quaisquer que sejam, em lote é
+um dos grandes diferenciais da ferramenta, e funciona excepcionalmente bem principalmente se as fotos foram registradas de maneiras parecidas, como nas mesmas
+condições de luz. Ensaios em estúdio se enquadram muito bem neste perfil; já fotos
+de uma determinada viagem, registradas em diversos ambientes, podem exigir um
+pouco mais de trabalho.
+Edição em lote nos livra do trabalho de ter que aplicar manualmente as correções
+para cada foto.
+Para aplicar ajustes em lote, selecione primeiro a foto que tem as correções que
+deverão ser aplicadas às demais, e em seguida selecione as fotos que receberão os
+139
+
+12.1. Alta produtividade com edição de várias fotos simultaneamente
+
+Casa do Código
+
+ajustes. Lembre-se que é essencial que todas as fotos sejam selecionadas simultaneamente, especialmente a que for utilizada para copiar os ajustes. Você pode selecionar
+múltiplas fotos segurando a tecla SHIFT ou CTRL/CMD.
+Importante: lembre-se que a primeira foto selecionada será a utilizada como
+referência para as outras. É dela de onde serão copiados os ajustes.
+
+Selecione na grade ou tira de filmes
+Os lugares mais apropriados para fazer este tipo de seleção múltipla
+é através do modo de visualização em grade (tecla de atalho G), ou pela
+tira de filmes (tecla F6).
+Depois que você tiver selecionado as fotos, clique no botão Sincr. config
+se você estiver no módulo biblioteca, conforme mostra a imagem 12.5, ou
+Sincronizar caso esteja no módulo Revelação, conforme a imagem 12.6.
+
+Figura 12.5: Botão para sincronizar os ajustes, através do módulo Biblioteca
+
+140
+
+Casa do Código
+
+Capítulo 12. Gerenciamento avançado das fotos
+
+Figura 12.6: Localização do botão no módulo Revelação
+
+Ao clicar no botão de sincronizar, irá aparecer uma janela com todos os ajustes
+que poderão ser aplicados nas demais imagens (vide imagem 12.7). Note que há
+virtualmente tudo lá, do equilíbrio de branco, passando por correções de cores, até
+remoção de manchas e recorte. Selecione os que forem apropriados para o seu caso.
+
+Figura 12.7: Tela de seleção dos ajustes que serão aplicados em lote nas imagens
+
+141
+
+12.1. Alta produtividade com edição de várias fotos simultaneamente
+
+Casa do Código
+
+Atenção com o recorte
+Note que é possível aplicar o recorte feito na primeira imagem nas demais. Contudo, tenha em mente que ele será feito exatamente nas mesmas coordenadas.
+
+Uma outra maneira de editar em lote
+Além do método que vimos, em que a edição é feita em uma foto e posteriormente replicada para outras, existe uma outra maneira de editar em lote as fotos.
+No módulo Revelação, selecione na tira de filmes (tecla F6) todas as fotos que
+deseja que tenham os mesmos ajustes, e então clique no pequeno botão do lado esquerdo do do botão Sincronizar, e veja que ele passa a ser chamado de Sincr.
+autom., conforme a imagem 12.8. Uma vez feito isso, à medida que você edita a foto
+selecionada, o Lightroom automaticamente aplica as mesmas correções nas demais.
+
+Figura 12.8: Botão que ativa a sincronização automática de ajustes nas fotos previamente selecionadas
+
+Esta maneira de trabalho funciona bem quando sabemos de antemão que as edições feitas em uma imagem com certeza deverão ser aplicadas nas demais, pois o
+Lightroom aplica os ajustes enquanto editamos, ao invés de aplicar após a correção
+da primeira foto. Na prática, utilizar um método ou outro depende exclusivamente
+da sua preferência, de como você trabalha. Se ficar na dúvida, o que grande parte dos
+142
+
+Casa do Código
+
+Capítulo 12. Gerenciamento avançado das fotos
+
+fotógrafos faz é editar uma foto individualmente, e somente então replicar os ajustes
+para as demans, conforme vimos anteriormente.
+
+Bônus — copie as configurações e cole em outras fotos
+Uma maneira alternativa de aplicar ajustes de uma foto em diversas outras é
+copiar manualmente os itens desejados, e colar nas fotos selecionadas. No módulo Biblioteca, clique com o botão direito em cima da foto que deseja copiar
+as correções e selecione a opção Configurações de revelação -> Copiar
+configurações..., que irá abrir a mesma tela da imagem 12.7. Marque os elementos desejados e clique no botão Copiar.
+Em seguida, selecione as fotos que irão receber os ajustes, clique novamente com
+o botão direito e selecione o menu Configurações de revelação -> Colar
+configurações.
+
+12.2
+
+Ajustes pontuais de cores com HSL
+
+HSL, do inglês “Hue, Saturation e Luminance” — Matiz, Saturação e Luminância —
+permite fazer ajustes pontuais em uma série de cores na fotografia, muito útil quando
+queremos mexer em uma parte sem afetar outra. Esta ferramenta fica no painel HSL
+/ Cor / P&B do módulo Revelação, conforme mostra a imagem 12.9.
+
+Figura 12.9: Localização do painel HSL no módulo Revelação
+
+143
+
+12.2. Ajustes pontuais de cores com HSL
+
+Casa do Código
+
+Note que esta não é uma ferramenta para substituição completa de cor. Logo
+no início do painel, abaixo do nome dele, você encontrará as opções para “Matiz”,
+“Saturação”, “Luminância” e “Todos”.
+O ajuste de Matiz, a primeira das opções, serve para alterar a cor indicada pelo
+slider para algum dos espectros possíveis. Por exemplo, o slider “Vermelho” alterna
+entre algo próximo de pink (extrema esquerda) até o laranja (na extrema direita).
+A imagem 12.10 mostra o resultado da modificação das matizes de vermelho,
+amarelo e verde.
+
+Figura 12.10: Antes e depois da modificação da Matiz de vermelho, verde e amarelo
+
+A saturação representa a intensidade da cor, e funciona da mesma forma que a
+matiz: simplesmente arraste os sliders correspondentes as cores que deseja alterar a
+intensidade.
+Por último, luminância permite clarear ou escurecer uma determinada cor. Repare a diferença na imagem 12.11, na qual principalmente os tons azuis foram escurecidos. Os controles foram exagerados para demonstrar mais facilmente o resultado.
+
+144
+
+Casa do Código
+
+Capítulo 12. Gerenciamento avançado das fotos
+
+Figura 12.11: Antes e depois de modificações na luminância. O efeito no céu foi exagerado para demonstrar
+
+A diferença com o box Básico
+O box Básico, também no módulo Revelação, contém controles para
+ajustes de saturação e vibração, e a principal diferença é que HSL permite
+um controle muito mais preciso das áreas que serão afetadas, enquanto as
+opções do módulo Básico afetam a imagem como se fosse um único conjunto — o que é perfeitamente válido para diversas situações, pois nem
+sempre precisamos aplicar ajustes tão granulados quanto HSL permite.
+
+145
+
+Capítulo 13
+
+Edição sem os arquivos originais
+com as Visualizações Inteligentes
+Se alguma vez você se deparou com a mensagem “Não foi possível encontrar a pasta”
+ao tentar editar alguma foto, ou se deparou com um ícone de exclamação (vide imagem 13.1), você irá adorar a funcionalidade de visualizações inteligentes do Lightroom, introduzida na versão 5.
+
+Casa do Código
+
+Figura 13.1: Mensagem de pasta da foto não encontrada
+
+A ideia por trás das visualizações inteligentes é permitir que você possa editar
+as fotos mesmo quando o arquivo original não esteja acessivel, o que geralmente
+ocorre quando eles são armazenados em um HD externo. Internamente, o Lightroom mantém num banco de dados (que é o arquivo de Catálogo) uma ligação com
+o arquivo físico, que ocorre no momento de importar as fotos para dentro do programa. Quando o arquivo é movido de lugar, ou quando o HD dele é removido, esta
+ligação se perde. Em versões anteriores, era possível editar as fotos somente quando
+o arquivo fosse colocado de volta no seu lugar, ou quando o drive fosse reconectado.
+Já a partir do Lightroom 5, o recurso de Visualizações Inteligentes foi criado
+justamente para permitir que as fotos possam ser editadas mesmo quando o arquivo
+original não esteja disponível no momento. Por exemplo, imagine que você tem um
+Notebook e armazene todas as fotos em um HD externo, porém não carrega este HD
+para todos os lugares.
+
+148
+
+Casa do Código
+
+Capítulo 13. Edição sem os arquivos originais com as Visualizações Inteligentes
+
+Figura 13.2: Indicação de que a pasta em questão não esta mais no lugar original
+
+13.1
+
+O que são as visualizações inteligentes
+
+O termo “Visualização Inteligente” (Smart Preview, em inglês) é um pouco ambíguo
+e pode causar certa confusão. Na prática, é uma cópia em tamanho reduzido do arquivo original (e em alta resolução), salva no formato DNG e com dimensão máxima
+por volta de 2400 pixels, no catálogo do Lightroom. Por estar no formato DNG e por
+ter dimensões reduzidas, o tamanho do arquivo também é bastante reduzido.
+A vantagem disso é que você pode manter os arquivos RAW originais no disco
+externo, e as visualizações inteligentes no disco local do computador, e trabalhar
+mesmo sem ter o HD externo por perto. Quando ele for conectado novamente, o
+Lightroom automaticamente sincronizará o que tiver sido editado.
+Por exemplo, 100 arquivos RAW de uma câmera moderna podem facilmente
+ocupar 3GB de espaço, enquanto as visuzalicações inteligentes ocupam em torno
+de 80MB, uma diferença de quase 90%.
+
+13.2
+
+Diferenças e limitações com outra funcionalidade do Lightroom
+
+Tenha em mente que as “visualizações inteligentes” são diferentes e têm outra finalidade do que o recurso de cache de visualização que o Lightroom faz para cada
+imagem, conforme descrito no capítulo de importar fotos. Recapitulando, para visualizar uma foto em tamanho grande no Lightroom, ele primeiro precisa ter um cache
+da imagem em tamanho apropriado para mostrar, o que pode ser feito na hora de
+149
+
+13.2. Diferenças e limitações com outra funcionalidade do Lightroom
+
+Casa do Código
+
+importar as fotos ou quando fazemos zoom pela primeira vez. Contudo, o processo
+de edição depende do arquivo original, conforme demonstrado na imagem 13.12.
+
+Figura 13.3: Opções de edição desabilitadas, quando o arquivo original não existe
+
+Já as visualizações inteligentes permitem editar a foto sem ter o arquivo original
+disponível o tempo todo. É possivel inclusive exportar as fotos a partir da visualização inteligente. Veja a imagem 13.3.
+Contudo, existem algumas limitações: as dimensões reduzidas do arquivo podem não ser suficientes para grandes impressões, não é possivel fazer ajustes através
+da integração com o Photoshop, e ajustes na nitidez e redução de ruído não são traduzidos perfeitamente de volta ao arquivo RAW original. Neste caso, é recomedável
+trabalhar com o arquivo original. Contudo, é possível fazer todo o resto.
+
+150
+
+Casa do Código
+
+Capítulo 13. Edição sem os arquivos originais com as Visualizações Inteligentes
+
+Figura 13.4: Foto com visualização inteligente habilitada, o que permite fazer modificações na edição
+
+13.3
+
+Quando utilizar
+
+Neste ponto deve estar bem claro para você que usar as visualizações inteligentes
+somente faz sentido em algumas situações. Mais especificamente, se você mantém
+o catálogo do Lightroom e as fotos no mesmo disco, não haverá qualquer benefício
+— pelo contrário, apenas estará desperdiçando espaço. Por outro lado, se as fotos
+ficam em um disco diferente do catálogo — por exemplo, fotos em um HD externo,
+e o catálogo no disco interno do computador —, há um grande potencial de uso,
+principalmente se você costuma não ter o disco externo o tempo todo conectado ao
+computador.
+Por serem arquivos menores e otimizados, é possivel pensar em alguns usos criativos para a funcionalidade. Por exemplo, após importar as fotos para dentro do
+Lightroom e criar as visualizações inteligentes, desconecte o disco externo e faça as
+edições em cima delas, o que em certos casos permitirá ganhos de performance.
+
+151
+
+13.4. Como criar visualizacões inteligentes
+
+13.4
+
+Casa do Código
+
+Como criar visualizacões inteligentes
+
+Existe mais de uma maneira para criar visualização inteligente: individualmente,
+para várias fotos através da biblioteca, ou na hora de importar para dentro do catálogo do Lightroom. O resultado final é o mesmo para todos os casos.
+
+Criar individualmente
+Quando você estiver na Biblioteca ou em Revelação, selecione um arquivo e clique em um pequeno retângulo vazado no histograma, conforme mostra a imagem
+13.8. Lá deverá estar escrito “Foto original”, o que significa que ainda não existe a
+visualização inteligente para aquele arquivo. Em seguida, clique no botão Criar
+visualização inteligente na caixa de diálogo que aparecer.
+
+Figura 13.5: Botão para criar visualização inteligente
+
+152
+
+Casa do Código
+
+Capítulo 13. Edição sem os arquivos originais com as Visualizações Inteligentes
+
+Figura 13.6: Diálogo de confirmação para criar a visualização
+
+Caso você selecione mais de uma foto, o número de arquivos marcados irá aparecer ao lado do retângulo. O procedimento é o mesmo: clique lá, e confirme a
+operação no diálgo que aparecer.
+
+Criar pelo menu Biblioteca
+Selecione uma ou mais fotos, e em seguida acesse o menu Biblioteca ->
+Visualizações -> Criar visualizações inteligentes. Neste caso, o
+Lightroom irá executar a ação imediatamente, sem solicitar confirmação.
+
+Criar no momento de importar as fotos
+Além dos dois métodos citados, que são úteis para quando as fotos já estão
+no catálogo, ou quando as visualizações inteligentes são removidas (vide seção
+mais adiante), é possível criá-las logo no momento de importar as fotos para dentro do catálogo do Lightroom. Para isso, simplesmente marque a opção Criar
+visualizações inteligentes no painel Tratamento de arquivos, como
+na imagem 13.7.
+
+153
+
+13.5. Como identificar quando existem
+
+Casa do Código
+
+Figura 13.7: Criar as visualizações inteligentes no momento de importar as fotos para
+dentro do Lightroom
+
+13.5
+
+Como identificar quando existem
+
+A maneira mais fácil de identificar quando existe ou não visualização inteligente é
+olhar o painel de histograma. Quando não houver, o retângulo vazio do canto inferior esquerdo irá apresentar o texto “Foto original”, conforme a imagem 13.8.
+
+Figura 13.8: Versão original apenas, sem visualização inteligente
+
+Quando existir a visualização inteligente e o arquivo original também estiver em
+seu local de origem (por exemplo, quando o HD externo estiver conectado), aparecerá o texto “Original + visualização inteligente”, em um retângulo preenchido,
+assim como na imagem 13.9.
+154
+
+Casa do Código
+
+Capítulo 13. Edição sem os arquivos originais com as Visualizações Inteligentes
+
+Figura 13.9: Indicação da existência do arquivo original e da visualização inteligente.
+Repare no ícone
+
+Quando o arquivo original não existir, porém houver a visualização inteligente, o
+ícone mudará para um retângulo pontilhado e o preenchido, como se vê na imagem
+13.10.
+
+Figura 13.10: Apenas a visualização inteligente foi encontrada
+
+Contudo, quando nem o arquivo original nem a visualização inteligente existirem, será mostrado um retângulo pontilhado com uma exclamação, como a imagem
+13.11. Neste caso não há o que fazer: você precisará localizar o arquivo original para
+editar a foto.
+
+155
+
+13.6. Remover visualizações inteligentes
+
+Casa do Código
+
+Figura 13.11: Inexistência tanto do arquivo original quanto da visualização inteligente
+
+Por último, quando vários arquivos são selecionados na Biblioteca, é possivel
+identificar os status pelos mesmos ícones, conforme a imagem 13.12. Da esquerda
+para a direita, o retângulo vazio significa imagens originais existentes porém sem
+visualização inteligente, o retângulo preenchido é a original mais visualização inteligente, já o retângulo pontilhado é apenas visualização inteligente, e ainda, o pontilhado com exclamação é inexistência de ambos.
+
+Figura 13.12: Ícones de status para múltiplas imagens
+
+13.6
+
+Remover visualizações inteligentes
+
+Para remover, é bastante simples: selecione uma ou mais fotos, e acesse
+o menu Biblioteca -> Visualizações -> Descartar visualizações
+inteligentes.... Se você selecionar apenas uma foto, o Lightroom ira lhe perguntar se deseja remover para apenas aquele arquivo, ou para todos os existentes na
+156
+
+Casa do Código
+
+Capítulo 13. Edição sem os arquivos originais com as Visualizações Inteligentes
+
+biblioteca.
+
+157
+
+Capítulo 14
+
+Tutorial — deixando o pôr do sol
+ainda mais bonito
+Nada melhor que colocar a teoria em prática com exemplos reais. O objetivo deste
+tutorial é mostrar passo a passo a edição de uma imagem, fazendo uso de diversos
+sliders de correção, juntamente com o pincel de ajustes. Na imagem 14.1 você pode
+conferir de onde partiremos e onde iremos chegar.
+
+Casa do Código
+
+Figura 14.1: Antes e depois. O objetivo deste tutorial
+
+Como o Lightroom é um programa de edição não destrutivo — ou seja, qualquer
+ajuste feito nele não altera a imagem original, sendo que a imagem é gerada apenas na
+hora de exportá-la —, não importa muito por onde você comece a edição. Algumas
+pessoas gostam de ter um fluxo mais bem definido, outras preferem fazer primeiro
+um conjunto específico.
+Talvez uma das únicas coisas que você deve deixar por último é aplicar os filtros de nitidez, pois, do contrário, os outros filtros e ajustes acabarão atrapalhando a
+nididez.
+O principal objetivo deste tutorial é demonstrar um fluxo completo de edição,
+passando por algumas das principais ferramentas que vimos durante o livro. Ao
+término, você verá que não há necessidade de recorrer a outros softwares, como o
+Photoshop.
+O quanto e como uma pessoa edita suas fotos é puramente uma questão de
+gosto e estilo pessoal. Há quem preria mais saturado, há quem somente faça preto
+e branco, há os estilos retro, fofos, fashion e tantos outros. Se você ainda não sabe
+o que mais lhe agrade, tudo bem. Continue editando, testando e, principalmente,
+acompanhando o trabalho de outras pessoas.
+
+160
+
+Casa do Código
+
+Capítulo 14. Tutorial — deixando o pôr do sol ainda mais bonito
+
+Teste, teste e teste
+Não tenha medo de mexer nos controles e ver o que acontece, pois
+sempre é possivel voltar atrás ( CTRL/CMD + Z), ou voltar a imagem
+inteira para o seu estado inicial, através do botão Redefinir, localizado
+no canto inferior direito do módulo Revelação. A prática leva à perfeição.
+
+A imagem original tem uma grande diferença de luminosidade entre o céu e o
+chão, portanto vamos editar em camadas. Além disso, há um bonito pôr do sol, que
+será destacado.
+Comece selecionando o Pincel de Ajuste ( K, item 1 da imagem) e pinte por toda
+a região do céu. Para isso, primeiro clique uma vez em qualquer lugar da imagem (
+2), para adicionar a referência de edição do pincel, conforme mostrado na imagem
+14.2. Se você pintar alguma região que não deveria, segure a tecla ALT/OPTION para
+tornar o pincel numa borracha.
+
+Figura 14.2: Início da edição
+
+Além disso, uma coisa que sempre faço nesta primeira parte é marcar o check
+161
+
+Casa do Código
+
+Mostrar sobreposição de máscara selecionada, indicado pelo item 3,
+
+o que faz aparecer uma camada vermelha em cima de onde é pintado, conforme
+mostra a imagem 14.3. A tecla de atalho é a letra O para alternar a visibilidade da
+máscara.
+
+Figura 14.3: Layer vermelho indicando a região que será afetada
+
+Por causa do pôr do sol forte, as nuvens saíram com um tom laranja também,
+porém quero que fique mais próximo do azul, portanto diminua a temperatura para
+-35, conforme a imagem 14.4.
+
+162
+
+Casa do Código
+
+Capítulo 14. Tutorial — deixando o pôr do sol ainda mais bonito
+
+Figura 14.4: Diminua a temperatura para deixar o céu mais azul
+
+Agora vamos acentuar as cores do pôr do sol, com um processo bastante similar.
+Crie uma nova camada clicando no botão Novo, como mostra a imagem 14.5. Clique
+em algum lugar da imagem, e marque apenas a região onde o sol encontra-se. Depois
+disso, aumente a temperatura para “60”.
+
+163
+
+Casa do Código
+
+Figura 14.5: Ajuste inicial da região do sol
+
+Ainda nesta camada, defina a exposição para -0,90, contraste para 15, realces -5,
+e saturacão 10. Confira o resultado na imagem 14.6.
+
+164
+
+Casa do Código
+
+Capítulo 14. Tutorial — deixando o pôr do sol ainda mais bonito
+
+Figura 14.6: Ajuste da região do sol
+
+Vamos melhorar a parte com grama, que esta bastante escura, com a mesma
+técnica. Clique em Novo para criar uma nova camada, então pinte sobre a região
+verde (lembre novamente de primeiro clicar na região antes de começar a pintar) e
+faça os seguintes ajustes: Temp -15, Colorir -52, Exposição 1,28, Contraste 2, Realces
+2, Sombras -15, Claridade 10, Saturacão 28. O resultado esta na imagem 14.7.
+
+165
+
+Casa do Código
+
+Figura 14.7: Grama mais verde
+
+Estamos quase no final, faltando apenas alguns ajustes gerais. Feche o painel dos
+pincéis clicando em cima do ícone ou então apertando a tecla K, e expanda o painel
+Básico. Em seguida diminuia a Exposição em 0,25 pontos e Sombras para +30.
+Para finalizar, expanda o painel Detalhe e coloque o valor 60 em Intensidade
+e 40 em Máscara, na seção Nitidez. Já em Redução de ruído informe 30 para
+Luminância e 10 para Contraste.
+A edição esta pronta. O resultado deverá ser como o da imagem 14.8.
+
+166
+
+Casa do Código
+
+Capítulo 14. Tutorial — deixando o pôr do sol ainda mais bonito
+
+Figura 14.8: Resultado final da edição
+
+Desafio
+Um pequeno desafio: a linha do horizonte está um pouco torta.
+Corrija-a utilizando a ferramenta Upright.
+
+167
+
+

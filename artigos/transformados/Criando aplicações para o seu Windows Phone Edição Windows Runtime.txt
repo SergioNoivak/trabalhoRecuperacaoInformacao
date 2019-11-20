@@ -1,0 +1,4993 @@
+62598
+
+© Casa do Código
+Todos os direitos reservados e protegidos pela Lei nº9.610, de
+10/02/1998.
+Nenhuma parte deste livro poderá ser reproduzida, nem transmitida, sem
+autorização prévia por escrito da editora, sejam quais forem os meios:
+fotográficos, eletrônicos, mecânicos, gravação ou quaisquer outros.
+Casa do Código
+Livros para o programador
+Rua Vergueiro, 3185 - 8º andar
+04101-300 – Vila Mariana – São Paulo – SP – Brasil
+
+E-book gerado especialmente para
+
+E-book gerado especialmente para
+
+E-book gerado especialmente para
+
+Casa do Código
+
+Sumário
+
+Sumário
+1
+
+Antes de tudo
+1.1 Sobre o autor . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.2 Agradecimentos . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1
+1
+2
+
+2
+
+Estamos na Era Mobile
+2.1 E esse tal de Windows Phone? . . . . . . . .
+2.2 Por que desenvolver para Windows Phone?
+2.3 O que você encontrará neste livro . . . . . .
+2.4 Antes de começarmos . . . . . . . . . . . . .
+
+3
+4
+5
+6
+7
+
+3
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+Conhecendo o SDK e criando nossa primeira aplicação
+9
+3.1 Criando nossa primeira aplicação e conhecendo o emulador
+11
+3.2 Configurando seu dispositivo e sua conta como desenvolvedor 15
+3.3 Blend . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+16
+
+4 Utilizando componentes do sistema para melhorar a experiência
+do usuário
+4.1 Princípios de design . . . . . . . . . . . . . . . . . . . . . . . .
+4.2 Começando nosso aplicativo . . . . . . . . . . . . . . . . . . .
+4.3 Gerenciadores de layout . . . . . . . . . . . . . . . . . . . . . .
+4.4 Criando a página de boas-vindas . . . . . . . . . . . . . . . .
+5
+
+Design de aplicações
+5.1 Melhorias de usabilidade . . . . . . . . . . . . . . . . . . . . .
+5.2 Conhecendo os controles do Windows Phone . . . . . . . . .
+
+19
+20
+21
+22
+28
+41
+41
+45
+i
+
+E-book gerado especialmente para
+
+Casa do Código
+
+Sumário
+
+6 Gerenciamento de dados em um aplicativo Windows Phone
+6.1 Carregando os dados para a aplicação . . . . . . . . . . . . .
+6.2 Vinculando os dados com os controles de usuário . . . . . .
+6.3 Armazenando dados em arquivos JSON no Windows Phone
+6.4 Armazenando configurações e os impactos em nosso aplicativo
+
+55
+56
+62
+79
+90
+
+7
+
+.
+.
+.
+.
+
+95
+95
+103
+105
+111
+
+.
+.
+.
+.
+
+117
+118
+124
+129
+134
+
+9 Mapas e localização
+9.1 Criando a página para finalizar compra . . . . . . . . . . . . .
+9.2 Entendendo o componente Map . . . . . . . . . . . . . . . . .
+9.3 Finalizando nosso aplicativo . . . . . . . . . . . . . . . . . . .
+
+139
+139
+144
+148
+
+10 Dicas para publicação na loja do Windows Phone
+10.1 Passos para publicação . . . . . . . . . . . . . . . . . . . . . .
+10.2 Conclusão . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+155
+155
+156
+
+8
+
+Navegação e ciclo de vida
+7.1 Navegação entre páginas . . . . . . . . .
+7.2 Ciclo de vida da aplicação . . . . . . . .
+7.3 NavigationHelper e SuspensionManager
+7.4 Inicialização rápida . . . . . . . . . . . .
+
+.
+.
+.
+.
+
+Integração com o sistema operacional
+8.1 Finalizando as funcionalidades já criadas .
+8.2 Entendendo os Live tiles . . . . . . . . . .
+8.3 Criando tiles secundários . . . . . . . . . .
+8.4 Conhecendo o Share Contract . . . . . . .
+
+Versão: 17.4.23
+
+ii
+E-book gerado especialmente para
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+.
+.
+.
+.
+
+Capítulo 1
+
+Antes de tudo
+Esta obra é resultado do trabalho e esforço direto e indireto de diversas pessoas. Este primeiro capítulo é dedicado a agradecimentos às pessoas envolvidas e também para que você possa saber mais sobre o autor.
+
+1.1
+
+Sobre o autor
+
+Eu, Gabriel Schade Cardoso, sou um jovem de 23 anos (2014), graduado em
+Ciência da Computação, estudante de mestrado em Inteligência Artificial e
+amante da tecnologia, em especial da área de desenvolvimento de software.
+Meu primeiro computador foi aos 10 anos de idade, um presente que mudou
+minha vida. Como quase todos os garotos dessa idade, eu gostava muito de
+vídeo games e de jogar RPG com meus amigos. Isso me influenciou a utilizar
+meu computador para pesquisar sobre como os jogos eram criados e, mesmo
+sem perceber, aos 11 anos eu já estava estudando programação e criando jogos
+
+E-book gerado especialmente para
+
+1.2. Agradecimentos
+
+Casa do Código
+
+simples.
+Depois disso não foi difícil decidir o que eu queria fazer da vida. Comecei
+a explorar a programação fora da área de jogos e sou fascinado por isso até
+hoje. Tenho sorte de conseguir trabalhar com o que gosto, estou com cinco
+anos de experiência na área de desenvolvimento de software e nesse tempo
+acumulei conhecimentos nas linguagens Java, C++, Javascript e, claro, C#.
+Atualmente,
+além de trabalhar na área de desenvolvimento de software, também escrevo com frequência no blog:
+www.programadorpoliglota.com.br e busco participar de eventos na
+comunidade técnica e científica, através de artigos, palestras e apresentações.
+
+1.2
+
+Agradecimentos
+
+Seria muito egoísmo de minha parte não agradecer a todas as pessoas que me
+ajudam direta e indiretamente em todas as minhas tarefas.
+Agradeço: À minha mãe, Eulália, por sempre estar comigo e por conseguir suportar pesos absurdos para manter seus filhos seguros e saudáveis,
+mesmo nos momentos mais difíceis.
+À minha melhor amiga e irmã Daniela, por ser minha conselheira e confidente.
+A toda minha família, por ser a luz que me guia, até nos momentos mais
+escuros.
+Aos meus amigos da época de faculdade, Jhony, Rodrigo e João, pessoas
+das quais eu tenho orgulho de chamar de amigo e com certeza as pessoas mais
+brilhantes que eu conheço.
+A todos os meus amigos e pessoas queridas, que são a estrutura vital que
+me empurra para cima e me faz ser quem eu sou.
+À Editora Casa do Código, por oferecer mais uma oportunidade, criar
+toda a estrutura necessária para a realização desta obra e por acreditar em
+mim e neste projeto.
+A todas essas pessoas fica o meu mais sincero obrigado.
+
+2
+E-book gerado especialmente para
+
+Capítulo 2
+
+Estamos na Era Mobile
+Estamos na era mobile: hoje em dia não é nada surpreendente ter um smartphone. O atual cenário despertaria bastante curiosidade pouco tempo atrás,
+mas o fato é que agora carregar um smartphone em um bolso da calça é quase
+tão comum quanto a carteira que se carrega no outro bolso. As pessoas estão
+cada vez mais conectadas, compartilhando coisas, lendo notícias e e-mails,
+gravando vídeos, conversando com os amigos distantes e fazendo até videoconferências.
+Com um dispositivo razoavelmente pequeno conseguimos fazer grande
+parte das tarefas que executamos em um computador, que é bem mais pesado
+e menos portátil. De acordo com a Forbes, estima-se que em 2017 mais de
+80% dos dispositivos conectados à internet serão tablets e smartphones. Para
+nós, desenvolvedores de software, é importantíssimo investir nesse mercado
+e manter-se atualizado para este novo paradigma.
+
+E-book gerado especialmente para
+
+2.1. E esse tal de Windows Phone?
+
+2.1
+
+Casa do Código
+
+E esse tal de Windows Phone?
+
+Você já ouviu falar do Windows Phone? Caso não, saiba que ele é o sistema
+operacional para dispositivos smartphones da Microsoft, sendo uma alternativa aos sistemas mais conhecidos e já consolidados, como o IOS da Apple e
+Android da Google.
+Apesar de serem diferentes, dispositivos Android e IOS possuem muitas
+similaridades em questão de interface e de experiência com o usuário. O Windows Phone chegou praticamente três anos depois desses sistemas com uma
+proposta bem diferente. Na figura 2.1 podemos comparar a tela inicial das últimas versões até a data da publicação deste livro dos sistemas supracitados,
+Android, IOS e Windows Phone, respectivamente.
+
+Figura 2.1: Sistemas operacionais móveis
+
+Este sistema foca bastante na experiência do usuário e em uma proposta
+diferenciada de interface. Na tela inicial podemos ver diversos quadros, no
+lugar de ícones — estes quadros são conhecidos por tiles. Estes tiles podem
+mostrar informações atualizadas a todo momento, tanto com informações
+locais do sistema, quanto com informações online.
+Diferente dos ícones das aplicações, os tiles não se limitam a um por
+4
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 2. Estamos na Era Mobile
+
+aplicativo. O usuário pode decidir fixar tiles diversos para o mesmo aplicativo.
+Um exemplo disso seria o aplicativo pessoas, que agrupa as informações sobre
+seus contatos. Caso você queira, pode inserir um tile para abrir este aplicativo,
+ou até mesmo para abri-lo diretamente no perfil de determinada pessoa. Por
+estes motivos a Microsoft considera seu sistema operacional como o sistema
+mais personalizável do mercado.
+Antes deste sistema, a Microsoft já havia criado uma proposta para sistemas operacionais móveis, tanto para smartphones quanto para pocket PCs.
+Este sistema era conhecido como Windows Mobile. Diferente do que muitas
+pessoas pensam, o Windows Phone não é uma continuação do Windows Mobile; ele é um sistema novo, totalmente reescrito e até mesmo incompatível
+com seu “irmão mais velho”. Entretanto, a partir do Windows Phone 8, o
+sistema possui um kernel compartilhado com o próprio sistema operacional
+Windows, conhecido como Windows NT.
+
+2.2
+
+Por que desenvolver para Windows Phone?
+
+Essa é uma pergunta muito válida e que todo desenvolvedor deve se fazer
+antes de investir tempo para aprender uma nova plataforma. A resposta para
+esta pergunta pode parecer simplória, mas é totalmente válida. Este é um
+sistema novo e pouco explorado, diferente das lojas de aplicativos já saturadas nos concorrentes. Claro que isso não quer dizer que você não deva
+desenvolver para as outras plataformas, pelo contrário, na minha opinião, as
+três plataformas que citei são totalmente válidas para um desenvolvedor nelas
+apostar.
+Além disso, o marketshare do Windows Phone vem aumentando mais de
+100% ao ano desde 2011, o que faz com que ele se torne o segundo sistema operacional mais popular em diversos países (incluindo Brasil), perdendo apenas para o Android da Google. Algumas pesquisas indicam que o Windows
+Phone deve ultrapassar o IOS da Apple em larga escala até 2015.
+Caso você já conheça C# e a plataforma .NET, você já possui uma grande
+vantagem, pois como há este kernel compartilhado entre o Windows e o Windows Phone, é possível compartilhar boa parte de seu código entre as diferentes plataformas. Se já conhece aplicações WPF ou aplicações Windows 8/8.1
+5
+E-book gerado especialmente para
+
+2.3. O que você encontrará neste livro
+
+Casa do Código
+
+que utilizam a linguagem XAML como interface, você só terá de aprender
+como utilizar as APIs disponíveis para consumir os recursos do dispositivo.
+É possível publicar seus aplicativos facilmente através da loja Windows
+Store. Todos os usuários podem acessá-la através de seus dispositivos e encontrar seus aplicativos lá. Caso você já possua uma conta de desenvolvedor
+para a loja de aplicativos do Windows 8/8.1, você pode utilizar a mesma conta
+para publicar seus aplicativos móveis.
+
+2.3
+
+O que você encontrará neste livro
+
+Este livro é escrito para desenvolvedores que já possuem conhecimento dos
+principais conceitos relacionados à orientação a objetos e que já tiveram contato com a linguagem C# e preferencialmente com a Windows Runtime.
+Para facilitar a compreensão de desenvolvedores menos experientes nessa
+linguagem, serão dadas pequenas explicações sobre alguns aspectos da linguagem.
+No capítulo inicial iremos desenvolver uma aplicação de teste para termos
+nossa primeira experiência, e depois vamos construir uma aplicação até o fim
+do livro.
+Os capítulos seguintes irão abordar conceitos que envolvem desde a criação de uma boa interface até a conexão com dados, GPS, integração de sistemas e muito mais. É importante fomentar que as aplicações neste livro não
+vão considerar todos os possíveis padrões arquiteturais e melhorias de performance. Como este é um guia para iniciantes na plataforma, serão priorizados
+exemplos com clareza, facilidade e funcionalidades diversas do sistema.
+Todos os exemplos apresentados aqui poderão ser encontrados no
+repositório:
+https://github.com/gabrielschade/LivroWindowsPhone8.1.
+Qualquer dúvida que você encontrar você é só buscar ajuda no grupo de
+discussão:
+http://bit.ly/WPgrupo
+A meta deste livro é encorajar e iniciar o leitor a criar aplicações móveis,
+não só no sistema abordado, mas em qualquer outro, sendo um primeiro
+passo para o desenvolvimento nesta nova era de dispositivos. Espero que você
+6
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 2. Estamos na Era Mobile
+
+consiga aproveitar o conteúdo deste livro de forma fluida, simples e divertida,
+e que ele possa ser um bom guia para sua nova jornada.
+
+2.4
+
+Antes de começarmos
+
+Antes de começarmos a falar de aplicações móveis, paradigmas de programação e tudo mais, é necessário que você já tenha feito o download das ferramentas necessárias. Primeiro precisamos ter um ambiente de desenvolvimento: neste livro será utilizado o Visual Studio 2013 Ultimate — caso não
+possua esta ferramenta, você pode baixar uma versão gratuita do Visual Studio 2012:
+http://www.visualstudio.com/en-us/downloads#
+d-express-windows-phone
+E o SDK (software development kit) pode ser baixado aqui:
+http://dev.windowsphone.com/en-us/downloadsdk
+É importante salientar que você não precisa de um dispositivo Windows
+Phone para testar suas aplicações, já que o Visual Studio possui um emulador
+que irá nos ajudar com isso. Entretanto, apesar de ser um bom emulador, eu
+aconselho ao desenvolvedor ter, sim, um dispositivo com este sistema para
+testar suas aplicações que possuam fins comerciais, bem como para garantir
+uma boa experiência e usabilidade.
+Tendo essas ferramentas em mãos e uma boa noção de programação, você
+estará apto a seguir neste livro, criando no próximo capítulo sua primeira
+aplicação para Windows Phone.
+
+7
+E-book gerado especialmente para
+
+E-book gerado especialmente para
+
+Capítulo 3
+
+Conhecendo o SDK e criando
+nossa primeira aplicação
+Neste capítulo iremos conhecer um pouco melhor o kit de desenvolvimento
+para Windows Phone (SDK) e seus principais recursos. Teremos uma introdução ao ambiente de desenvolvimento no Visual Studio e criaremos uma
+primeira aplicação. Dessa forma, vamos ter a experiência de testar nosso
+aplicativo e conhecer o emulador, bem como outras ferramentas que nos ajudarão ao longo do processo de desenvolvimento.
+No Visual Studio, você deve ser capaz de criar projetos que possuem a
+plataforma Windows Phone como alvo. Para fazer isso, selecione a opção
+File -> New -> Project, e depois, o tipo de projeto Windows Phone
+Apps, conforme a figura 3.1.
+
+E-book gerado especialmente para
+
+Casa do Código
+
+Figura 3.1: Novo projeto para Windows Phone
+
+Você verá que existem diversos templates de aplicativos, mas não se assuste: todos eles têm um propósito definido — alguns irão apenas criar atalhos para projetos, como por exemplo, Hub App ou Pivot App. Mas mesmo
+que você escolha a opção Blank App, você não estará privado destes recursos. Abordaremos estes componentes ao longo do livro, porém agora iremos
+escolher a opção Blank App como template para nosso primeiro projeto.
+Após criar seu projeto, você verá que esta IDE fornece tudo o que precisamos para construirmos nossa App, desde a criação da interface, de seu
+code behind e até ferramentas de teste. Ao longo do livro iremos explorar
+vários destes recursos para que você possa criar o melhor aplicativo possível.
+Agora você já pode executar sua aplicação! Quando fizer isso, será aberto
+um emulador do Windows Phone em seu Windows Desktop, que ficará em
+um ambiente isolado e virtualizado, imitando um dispositivo totalmente separado de seu computador. O botão para iniciar o emulador também é uma
+lista de seleção; nela poderemos escolher diversas opções diferentes de emulador e até mesmo testar em nosso dispositivo. A figura 3.2 ilustra isso.
+
+10
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 3. Conhecendo o SDK e criando nossa primeira aplicação
+
+Figura 3.2: Emuladores para Windows Phone
+
+3.1 Criando nossa primeira aplicação e conhecendo o emulador
+Como você deve ter notado ao criar o projeto, também foi criado o arquivo
+MainPage.xaml. Como o nome sugere, ele é a página principal do nosso
+aplicativo, mas como você pode ver, não é o único arquivo que possuímos no
+projeto. Vamos agora conhecer a estrutura básica de um aplicativo Windows
+Phone.
+O arquivo MainPage não é o único que possui extensão XAML (eXtensible Application Markup Language), nosso projeto também conta com
+o arquivo App.xaml. Ele permite que declaremos recursos globais, ou
+seja, que poderão ser acessados através de diferentes páginas e controles
+em nosso aplicativo. Este arquivo por padrão vem preenchido apenas
+com as declarações de namespaces. Além do App.xaml também há um
+App.xaml.cs, que é o code-behind deste arquivo, isto é, é nele que estão as
+definições dos métodos C# que afetam toda a aplicação em um contexto mais
+amplo. Por exemplo, é neste arquivo que são definidos os manipuladores dos
+eventos disparados durante o ciclo de vida da aplicação, tais como, Closing e
+Deactivated.
+11
+E-book gerado especialmente para
+
+3.1. Criando nossa primeira aplicação e conhecendo o emulador
+
+Casa do Código
+
+Você também poderá notar a pasta Assets na raiz de seu aplicativo. Ela já
+estará com alguns arquivos, como as imagens que serão utilizadas nos tiles e
+como ícone de sua aplicação.
+Além dos já citados, há um componente importantíssimo para qualquer
+aplicação Windows Phone: trata-se do arquivo Package.appxmanifest.
+Ele possui os metadados sobre sua aplicação, o que envolve o ícone de sua
+aplicação, o tipo do tile que será exibido, quais recursos do sistema operacional sua aplicação precisa para funcionar corretamente (lista de contatos,
+por exemplo), recursos de hardware (giroscópio ou NFC, por exemplo) e até
+os dados sobre o pacote de seu aplicativo na loja. O Visual Studio possui uma
+interface bastante amigável para alterar estas configurações, como ilustra a
+figura 3.3.
+
+Figura 3.3: Arquivo Manifest
+
+Agora que já conhecemos a estrutura de nosso projeto, vamos abrir novamente o arquivo MainPage.xaml e adicionar o título de nossa página como
+“Hello World”. Também explore um pouco a caixa de ferramentas e insira alguns controles na página do aplicativo. É interessante incluir um campo de
+12
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 3. Conhecendo o SDK e criando nossa primeira aplicação
+
+texto para vermos o comportamento do teclado. No exemplo a seguir foram
+adicionados alguns elementos na página:
+<Grid>
+<Grid.RowDefinitions>
+<RowDefinition Height="Auto"/>
+<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+<StackPanel x:Name="TitlePanel" Grid.Row="0"
+Margin="12,17,0,28">
+<TextBlock Text="PRIMEIRA APP"
+Style="{ThemeResource TitleTextBlockStyle}" Margin="12,0"/>
+<TextBlock Text="Hello World" Margin="9,-7,0,0"
+Style="{ThemeResource HeaderTextBlockStyle}"/>
+</StackPanel>
+<StackPanel x:Name="TitlePanel" Grid.Row="0"
+Margin="12,17,0,28">
+<TextBlock Text="PRIMEIRA APP"
+Style="{ThemeResource TitleTextBlockStyle}"
+Margin="12,0"/>
+<TextBlock Text="Hello World"
+Style="{ThemeResource HeaderTextBlockStyle}"
+Margin="9,-7,0,0"/>
+</StackPanel>
+<StackPanel Grid.Row="1" Margin="12,0">
+<StackPanel Orientation="Horizontal">
+<TextBox TextWrapping="Wrap" Text="TextBox"
+Margin="10" Width="220"/>
+<Button Content="Button" Foreground="White"/>
+</StackPanel>
+<RadioButton Margin="10,0" Content="RadioButton" />
+<CheckBox Margin="10,0" Content="CheckBox"/>
+
+13
+E-book gerado especialmente para
+
+3.1. Criando nossa primeira aplicação e conhecendo o emulador
+
+Casa do Código
+
+</StackPanel>
+</Grid>
+
+Agora vamos começar a conhecer o emulador, para isso precisamos executar nossa aplicação!
+
+Figura 3.4: Primeira aplicação executando
+
+Neste momento é interessante que você explore um pouco o emulador e
+dê uma passeada pelo sistema. Para voltar à tela inicial do smartphone emulado, pressione a tecla Windows. Você também pode utilizar o mouse para
+simular eventos de touch; ao clicar, manter o clique pressionado e mover o
+mouse para a esquerda, você verá a lista de aplicativos instalados no emu14
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 3. Conhecendo o SDK e criando nossa primeira aplicação
+
+lador e irá encontrar, inclusive, a nossa aplicação.
+
+Dica: utilizar o teclado do computador
+Na figura 3.4, você pode notar que o teclado está visível e que para
+digitar você pode pressionar as teclas correspondentes no emulador com
+o mouse. Mas o teclado do seu computador também é uma alternativa
+para digitar textos. Além disso, há uma maneira de ocultar o teclado
+virtual do emulador, para isso você deve pressionar a tecla Page Down.
+Caso queira ativar o teclado do emulador novamente, utilize a tecla Page
+Up. Apesar de ser um recurso interessante, não é bom mantê-lo sempre
+ligado, pois você poderá esquecer de utilizar o teclado correto para determinado campo. Falaremos disso quando abordarmos o assunto User
+Experience 4.
+Observe que ao lado do emulador do smartphone há uma série de botões
+que executam funções como girar o smartphone virtual, simular multitouch
+ou aplicar zoom. O último botão abre uma nova janela chamada Additional
+Tools, na qual você pode testar o acelerômetro, GPS, bater screenshots de seu
+aplicativo e outros.
+
+3.2 Configurando seu dispositivo e sua conta
+como desenvolvedor
+Certo, agora nós já experimentamos de uma forma muito breve como é desenvolver para Windows Phone e testar o aplicativo através de um emulador.
+Entretanto, como eu já havia mencionado, pode ser importante testar seus
+aplicativos em um dispositivo real, principalmente operações que envolvem
+câmeras e sensores do smartphone. Mas para isso, você precisará de uma
+conta de desenvolvedor Windows Phone, o que lhe dará direito a fazer o
+deploy de sua aplicação em um dispositivo real e, claro, permitirá que você
+publique seu aplicativo na loja.
+Primeiro, é necessário ter uma conta Microsoft, como um e-mail do Outlook, por exemplo. Tendo isso, basta preencher o registro na página http:
+15
+E-book gerado especialmente para
+
+Casa do Código
+
+3.3. Blend
+
+//migre.me/hCf N4 e pagar a quantia necessária. Após já ter uma conta de
+desenvolvedor, você pode procurar pelo aplicativo Windows Phone Developer
+Registration, que foi instalado junto com o SDK. Conectando seu dispositivo
+e informando os dados de sua conta de desenvolvedor, é possível cadastrálo, de modo que você possa fazer os testes de seu aplicativo em seu próprio
+dispositivo.
+Com a conta de desenvolvedor ativa, você também pode acessar um
+dashboard no portal de desenvolvedores do Windows Phone, no link http:
+//dev.windowsphone.com/. Nela é possível publicar suas aplicações e verificar relatórios sobre suas vendas.
+
+3.3
+
+Blend
+
+Um outro componente do SDK que você também vai gostar de conhecer é o
+Blend for Visual Studio. Esta ferramenta deve ser utilizada para projetar e
+criar todo o design de sua aplicação. O Blend e o Visual Studio são totalmente
+integrados, ou seja, trabalham com os mesmos tipos de arquivos e manipulam
+os mesmos elementos de interface. Você pode, por exemplo, abrir a aplicação
+que acabou de criar no Blend e verá uma tela parecida com a da figura 3.5.
+
+Figura 3.5: Blend para Windows Phone
+
+16
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 3. Conhecendo o SDK e criando nossa primeira aplicação
+
+Apesar deste visual de “software para designers”, não se engane: o Blend
+também é, sim, um componente importantíssimo para desenvolvedores. Assim como o Visual Studio, ele faz parte da construção de seu aplicativo, durante as mudanças na sua interface. Você pode testar e executá-lo no emulador, assim como faz no Visual Studio.
+Apesar de ser possível criar animações através de código no Visual Studio,
+você pode criar um Story Board e trabalhar com animações de forma visual e
+mais amigável no Blend. As abas Projects e Assets são muito similares às abas
+existentes no Visual Studio, então você pode explorá-las por si só e perceber
+as pequenas diferenças entre elas.
+A aba States serve para criar estados diferentes em sua interface, sendo
+que cada estado possui um conjunto de valores para um determinado grupo
+de propriedades. Lá você também pode criar transições entre eles, o que é
+outra funcionalidade interessante para se testar agora.
+Por fim, na aba Device, pode-se alterar as configurações do dispositivo
+virtual exibido para testar sua interface em diferentes temas e configurações.
+Faça algumas alterações em sua página e teste-a novamente. Caso você volte
+para o Visual Studio, será notificado de que houve mudanças no projeto e que
+ele será recarregado.
+Esta foi nossa primeira aplicação! Você pode encontrá-la em http://bit.ly/
+primeiraApp8-1.
+
+17
+E-book gerado especialmente para
+
+Casa do Código
+
+3.3. Blend
+
+Figura 3.6: Primeira aplicação para Windows Phone
+
+18
+E-book gerado especialmente para
+
+Capítulo 4
+
+Utilizando componentes do
+sistema para melhorar a
+experiência do usuário
+Você já ouviu falar do conceito UX (User eXperience)? Este conceito, muito
+difundido na área de engenharia de usabilidade, trata-se de como sua aplicação interage com o usuário e de como ele se sente ao usar seu aplicativo. A
+experiência do usuário é algo importantíssimo para qualquer aplicação, mas
+no mercado de aplicativos móveis isso é ainda mais crítico, pois você concorre
+com outros milhares de aplicativos que são muito fáceis de serem instalados e
+testados. Você precisa garantir que a experiência do usuário com seu aplicativo seja ótima. Neste capítulo veremos alguns pontos que podem ajudá-lo
+nisso.
+
+E-book gerado especialmente para
+
+4.1. Princípios de design
+
+Casa do Código
+
+É importante você sempre ter em mente que os princípios de design e UX
+definidos para o Windows Phone não são regra, e sim, um guia. Aplicativos
+como o Facebook, por exemplo, utilizam poucos componentes do sistema,
+mas trazem uma experiência agradável. Então lembre-se, são guias e dicas,
+não padrões e regras.
+
+4.1
+
+Princípios de design
+
+Caso você possua um smartphone Windows Phone ou já tenha utilizado um,
+você deve ter notado que a tipografia e as páginas desenhadas para Windows
+Phone possuem um aspecto semelhante. Elas utilizam muito do conceito de
+clean, ou seja, a tela possui poucas linhas, grades, bordas etc., focando mais
+no conteúdo que deve ser mostrado. As animações e transições também são
+amplamente utilizadas nas aplicações e no próprio sistema operacional, o que
+você pode notar utilizando o emulador.
+Nosso aplicativo já está apto para ser executado tanto no modo retrato
+quanto no modo paisagem. Ao alternar entre um e outro através do emulador
+você verá que há uma animação de transição, isso tudo para que o sistema
+pareça mais vivo e melhore a experiência do usuário ao utilizar os aplicativos. As próprias live tiles das aplicações também estão constantemente se
+alterando para mostrar novas informações ao usuário. Isso cria uma interação mútua, do usuário com o sistema e do sistema com o usuário.
+O último ponto e talvez o mais importante para a experiência do usuário
+nesta plataforma é: tire proveito do sistema operacional. Existem alguns
+recursos conhecidos como Contracts, que permitem que você interaja com
+as outras aplicações já instaladas no dispositivo de forma indireta através
+do sistema operacional ao longo deste livro veremos o Share Contract 8.4.
+Por exemplo, se você criar um aplicativo de fotos, não precisará criar integrações com o Facebook ou Instagram, mas sim apenas se comunicar com o
+sistema operacional e ele saberá onde você pode publicar suas fotos, sendo
+uma maneira bastante simples e conveniente de integrar seus aplicativos.
+Os princípios de design não terminam aqui. Vamos vê-los a partir da
+construção de um aplicativo ao longo deste livro, mas agora iremos começar
+o nosso novo aplicativo.
+20
+E-book gerado especialmente para
+
+Casa do Código
+
+4.2
+
+Capítulo 4. Utilizando componentes do sistema para melhorar a. . .
+
+Começando nosso aplicativo
+
+Vamos começar a construir nosso aplicativo real. Ele será desenvolvido
+ao longo de todo o livro e com ele exemplificarei as principais funcionalidades para o desenvolvimento de aplicativos nesta plataforma. Criaremos um
+aplicativo de compras, no qual você poderá procurar por produtos, cadastrar
+um perfil de comprador, indicar os produtos a um amigo e uma série de funcionalidades que iremos ver ao longo do livro.
+Um aplicativo móvel nesta linha normalmente vem acompanhado de
+uma infraestrutura para os web services, para, por exemplo, fazer a consulta dos produtos. Estas informações precisam estar em alguma base de
+dados — geralmente localizada na nuvem — para que possa ser acessada
+de qualquer local a partir do smartphone. Vamos criar uma estrutura local com poucos dados para que você possa visualizar como seria a aplicação
+real, mas deixaremos claro via comentário no código-fonte os pontos chaves
+onde chamaríamos os serviços web, para que você compreenda como seria o
+cenário em uma aplicação real.
+Para começar, criaremos uma página inicial, na qual o usuário poderá
+decidir entre criar uma conta de comprador, entrar com uma conta já existente, ou ainda entrar na loja sem criar uma conta (neste último modo ele
+não poderá fazer compras sem efetuar o login). Como você deve ter percebido, esta tela será extremamente simples, precisando apenas de três botões
+e do título da nossa aplicação. Vamos criar um novo projeto e construir a
+página do zero.
+Já vimos o processo de criação anteriormente. Você deverá repeti-lo selecionando novamente o template Blank Apps no módulo Windows Phone Apps,
+mas desta vez daremos o nome CompreAqui para o aplicativo. Ao fazer isso,
+teremos a mesma estrutura de projeto que conhecemos no capítulo anterior.
+Vamos editar o arquivo MainPage.xaml para que cumpra nossas necessidades, mas antes de sair alterando o layout como fizemos na outra aplicação,
+vamos conhecer os gerenciadores de layout.
+
+21
+E-book gerado especialmente para
+
+4.3. Gerenciadores de layout
+
+4.3
+
+Casa do Código
+
+Gerenciadores de layout
+
+Os gerenciadores de layout são componentes de tela não visuais que nos auxiliam na organização dos itens na página. Eles são especialmente úteis quando
+falamos de dispositivos que podem conter tamanhos e resoluções de tela diferentes. Para que os controles não fiquem distorcidos ou em locais de difícil
+acesso para o usuário, nós os utilizamos.
+Todos os gerenciadores de layout se encontram na mesma caixa de ferramenta que você utiliza para adicionar um botão na página, por exemplo.
+Eles são tratados da mesma forma que os outros controles; além disso, cada
+gerenciador funciona de uma forma particular. Irei explicá-los para que você
+possa aproveitar o melhor de cada um deles.
+O controle Grid é um gerenciador de layout bastante utilizado. Ao criar
+uma página padrão, já podemos ver que ela utiliza este componente. Ele
+serve basicamente para separar a sua página em um layout tabular, ou seja,
+em formato de tabela. Você pode definir linhas e colunas e cada controle irá
+preencher o conteúdo de sua respectiva célula, como a figura 4.1 ilustra.
+
+22
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 4. Utilizando componentes do sistema para melhorar a. . .
+
+Figura 4.1: Gerenciador de layout Grid
+
+Como você pôde ver na figura anterior, o Grid está definido para ter duas
+linhas e duas colunas, e cada célula possui um retângulo de uma cor diferente.
+Isso tudo é definido no código XAML a seguir.
+<Grid x:Name="ContentPanel">
+<Grid.ColumnDefinitions>
+<ColumnDefinition/>
+<ColumnDefinition/>
+</Grid.ColumnDefinitions>
+<Grid.RowDefinitions>
+
+23
+E-book gerado especialmente para
+
+4.3. Gerenciadores de layout
+
+Casa do Código
+
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+<Rectangle Fill="blue"></Rectangle>
+<Rectangle Grid.Column="1" Fill="green"></Rectangle>
+<Rectangle Grid.Row="1" Fill="Red"></Rectangle>
+<Rectangle Grid.Row="1" Grid.Column="1" Fill="yellow">
+</Rectangle>
+</Grid>
+
+Não há nenhum mistério no código para gerar um gerenciador deste tipo:
+basta criá-lo, definir suas configurações para linhas e colunas e inserir os componentes. Entretanto, algumas observações devem ser levadas em conta. Note
+que na definição de colunas eu não especifiquei a propriedade Width; desta
+forma, elas ocupam exatamente o mesmo espaço. O mesmo acontece com
+a altura das linhas definidas com o caractere * (asterisco), que é utilizado
+como coringa para informar que a altura da linha (ou largura da coluna) deverá ocupar todo o espaço restante. No caso de as duas utilizarem esse recurso,
+o espaço restante é compartilhado entre elas.
+Um ponto importante que deve ser lembrado sempre é que estes gerenciadores de layout comumente são aninhados, ou seja, é muito comum que
+haja vários destes componentes dentro de outros gerenciadores ou até dentro
+de um componente do mesmo tipo. No exemplo a seguir veremos os comportamentos do StackPanel e o aninharemos a um componente Grid.
+O StackPanel, como o próprio nome já sugere, é um painel para empilhar
+componentes. O comportamento deste componente está fortemente vinculado à sua propriedade Orientation, que define se ele vai empilhar os componentes um acima do outro ou um ao lado do outro.
+Neste gerenciador de layout, diferente do Grid, é obrigatório o preenchimento das propriedades de dimensões dos elementos. No exemplo anterior,
+não precisamos definir nem a altura e nem a largura dos retângulos no Grid
+— eles ocuparam a célula toda automaticamente. Mas como não há o conceito de célula em um StackPanel, é necessário informarmos a propriedade
+referente à orientação do painel, ou seja, caso o painel esteja na vertical, pre24
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 4. Utilizando componentes do sistema para melhorar a. . .
+
+cisamos preencher o valor de altura, e caso esteja na horizontal, precisamos
+informar ao menos o valor da largura.
+A figura 4.2 ilustra dois painéis deste tipo, cada um com a orientação diferente, e ambos estão separados em linhas de um Grid que os circunda.
+
+Figura 4.2: Gerenciador de layout StackPanel
+
+Apesar de não ter sido exemplificado, quando a orientação do painel está
+definida como Horizontal, nós podemos escolher se os componentes são empilhados da esquerda para a direita ou da direita para a esquerda, através da
+propriedade FlowDirection. Veja o código para criar a página ilustrada:
+<Grid>
+
+25
+E-book gerado especialmente para
+
+4.3. Gerenciadores de layout
+
+Casa do Código
+
+<Grid.RowDefinitions>
+<RowDefinition Height="*"/>
+<RowDefinition Height="*"/>
+<Grid.RowDefinitions>
+<StackPanel Grid.Row="1">
+<Rectangle
+<Rectangle
+<Rectangle
+<Rectangle
+
+Fill="blue" Width="75" Height="75"></Rectangle>
+Fill="green" Width="75" Height="75"></Rectangle>
+Fill="Red" Width="75" Height="75"></Rectangle>
+Fill="yellow" Width="75" Height="75"></Rectangle>
+
+</StackPanel>
+<StackPanel Grid.Row="2" Orientation="Horizontal">
+<Rectangle
+<Rectangle
+<Rectangle
+<Rectangle
+
+Fill="blue" Width="75" Height="75"></Rectangle>
+Fill="green" Width="75" Height="75"></Rectangle>
+Fill="Red" Width="75" Height="75"></Rectangle>
+Fill="yellow" Width="75" Height="75"></Rectangle>
+
+</StackPanel>
+</Grid>
+
+O terceiro componente que iremos mostrar aqui é o Canvas. Ele possui
+layout livre, ou seja, a posição dos elementos é absoluta e é definida pelas
+propriedades Canvas.Top e Canvas.Left, que indicam o deslocamento do elemento da borda superior e da borda esquerda, respectivamente.
+Este gerenciador geralmente é utilizado para painéis onde há movimentação dos itens por meio de um gesto, ou para fazer desenhos. Deve-se ter
+cuidado ao utilizar este tipo de componente, pois ele pode se comportar de
+maneira inesperada, devido à posição absoluta dos elementos nele contidos.
+A figura 4.3 mostra os retângulos em um painel do tipo Canvas.
+
+26
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 4. Utilizando componentes do sistema para melhorar a. . .
+
+Figura 4.3: Gerenciador de layout Canvas
+
+O Canvas é bastante livre e, como podemos ver, o código para inserir elementos nele é bem simples: basta colocar o elemento aninhado e definir as
+propriedades supracitadas. Também é possível mover os componentes livremente com o mouse através da interface do Visual Studio. Para gerar a figura
+4.3, foi utilizado o código a seguir.
+<Canvas Grid.Row="1">
+<Rectangle Fill="blue" Width="175" Height="175"
+Canvas.Left="272" Canvas.Top="262"></Rectangle>
+<Rectangle Fill="green" Width="175" Height="175"
+
+27
+E-book gerado especialmente para
+
+4.4. Criando a página de boas-vindas
+
+Casa do Código
+
+Canvas.Left="38" Canvas.Top="45"></Rectangle>
+<Rectangle Fill="Red" Width="175" Height="175"
+Canvas.Left="272" Canvas.Top="45"></Rectangle>
+<Rectangle Fill="yellow" Width="175" Height="175"
+Canvas.Left="38" Canvas.Top="262"></Rectangle>
+</Canvas>
+
+4.4
+
+Criando a página de boas-vindas
+
+Com isso, nós já conhecemos os principais gerenciadores de layout que iremos utilizar para a criação das páginas de nosso aplicativo. Como citamos
+anteriormente, a primeira página será a página de título do aplicativo. Nela,
+o usuário poderá escolher entre fazer login, criar uma conta de usuário ou
+entrar na loja sem criar uma conta.
+Não será exigido que você crie a página exatamente igual à que iremos
+mostrar como exemplo, mas lembre-se de utilizar os gerenciadores para que
+seu layout comporte-se de maneira correta. Ao terminar sua página, ela deve
+se parecer com a figura a seguir.
+
+28
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 4. Utilizando componentes do sistema para melhorar a. . .
+
+Figura 4.4: Página de boas-vindas
+<Page>
+<!--Declaração de Namespaces-->
+<Grid.RowDefinitions>
+<RowDefinition Height="Auto"/>
+<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+<StackPanel Grid.Row="0" Margin="10,15,0,0">
+<TextBlock Text="COMPREAQUI"
+Style="{ThemeResource TitleTextBlockStyle}"/>
+<TextBlock Text="Bem-vindo"
+
+29
+E-book gerado especialmente para
+
+4.4. Criando a página de boas-vindas
+
+Casa do Código
+
+Style="{StaticResource HeaderTextBlockStyle}"/>
+</StackPanel>
+<StackPanel Grid.Row="1" Margin="0,40,0,0" >
+<Button HorizontalAlignment="Stretch">
+Entrar com uma conta
+</Button>
+<Button HorizontalAlignment="Stretch">
+Entrar sem uma conta
+</Button>
+<Button HorizontalAlignment="Stretch">
+Criar uma conta
+</Button >
+</StackPanel>
+</Page>
+
+O projeto pode ser encontrado no meu github pelo link: http://bit.ly/
+8-1GITcap4ParteI
+Observe a figura 4.4, ela é a nossa primeira página do aplicativo. Como
+você pode ver, ela segue corretamente o template de páginas disponíveis e
+utiliza os gerenciadores de layout, conforme o código citado anteriormente.
+Entretanto, esta página não é atrativa para o usuário, ela está sem vida, extremamente simplória e sem nenhum atrativo.
+Podemos melhorar isso através de imagens, cores e, claro, ideias. Novamente peço para que tente pensar em algo antes de seguir com o livro — tente
+pensar em como esta tela pode se tornar mais atraente para o usuário e tente
+implementar o que você pensou utilizando o Visual Studio e o Blend. Apesar
+de este livro ser um guia inicial, é bastante importante você confiar em suas
+ideias e experimentar por conta própria.
+A primeira coisa que faremos é utilizar uma imagem de fundo e criar um
+ícone para nossa aplicação. Também vamos alterar um pouco o formato do
+layout da página, remover o cabeçalho com o nome da aplicação e os dizeres
+“Bem-vindo”. Deixemos que o Grid principal que já é criado por padrão continue tendo duas linhas, mas vamos fixar o tamanho da linha inferior para
+30
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 4. Utilizando componentes do sistema para melhorar a. . .
+
+270.
+O painel inferior com os botões de interação deverão ser jogados para a
+segunda linha do Grid, o que faz com que eles fiquem na parte inferior da
+página, sobrando um espaço em branco considerável. Vamos preencher esse
+espaço com o plano de fundo e com o título da aplicação “CompreAqui”. Veja
+na figura 4.5 como nossa página já melhorou bastante.
+
+Figura 4.5: Página de boas vindas 2.0
+
+Link do projeto no meu github: http://bit.ly/8-1GITcap4ParteII
+No link do projeto supracitado, você poderá encontrar as imagens que
+foram utilizadas para o plano de fundo e como ícone. Como já vimos anteriormente, elas estarão na pasta Assets do nosso projeto. Até agora fizemos
+31
+E-book gerado especialmente para
+
+4.4. Criando a página de boas-vindas
+
+Casa do Código
+
+alterações baseadas em layout e inserimos algumas imagens, o que já muda
+bastante a aparência desta janela.
+Ainda assim, podemos ver que os botões de ação permanecem iguais e
+também podemos dar-lhes uma aparência diferente do padrão. Para isso,
+podemos utilizar dois conceitos diferentes: estilo e template.
+Se você já trabalhou com web, você deve estar familiarizado com este conceito. Ele também está presente no XAML através da tag Style. Com novos
+estilos, podemos criar aparências diferenciadas para componentes já existentes, e esses estilos podem ser utilizados em diferentes níveis. Podemos criar
+um estilo para um único componente (quando alteramos suas propriedades,
+como por exemplo, Background), podemos criar um estilo e reutilizá-lo em
+uma página toda ou podemos criar um estilo que poderemos acessar em todas
+as páginas da aplicação.
+Template de componentes também é um estilo — é um conceito parecido, porém mais poderoso. O estilo vai se limitar a definir as propriedades
+dos componentes do sistema. Por exemplo, você pode alterar a cor de fundo
+do botão, mas com templates você poderá alterar a forma do botão, ou até
+mesmo inserir novos componentes nele. A definição de um template para
+um componente também é feita através da tag Style.
+Agora vamos utilizar um template de componente para alterarmos os
+botões de nossa página. Para fazer isso, utilize a janela Document Outline
+do Visual Studio (o atalho para abri-la é Ctrl + Alt + T). Esta janela é
+muito útil para visualizarmos a organização dos controles e gerenciadores de
+layout em nossa página. Para facilitar a criação de um template, procure por
+um dos botões de nossa página e pressione o botão direito do mouse. No
+menu flutuante, selecione a opção Edit Template > Edit a Copy...
+conforme figura 4.6.
+
+32
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 4. Utilizando componentes do sistema para melhorar a. . .
+
+Figura 4.6: Editar uma cópia do template de um componente
+
+Document Outline
+Esta janela nos ajuda a organizarmos os controles visuais e os gerenciadores de layout de nossa página. Além disso, através dela, utilizando
+o botão direito do mouse podemos editar templates e estilos. Pode ser
+bastante útil caso você não conheça os estilos que fazem parte do sistema operacional — você pode, por exemplo, selecionar um controle
+TextBlock e escolher a cor, tamanho ou nome da fonte através deste
+atalho.
+A personalização de templates é algo excelente pois você poderá fazer as
+33
+E-book gerado especialmente para
+
+4.4. Criando a página de boas-vindas
+
+Casa do Código
+
+edições no componente a partir do componente padrão, garantindo que só
+perderá o comportamento dos componentes que remover. Ao selecioná-la,
+será exibida uma janela para que sejam informados alguns dados a respeito
+do template que pretende criar. Insira o nome do template que preferir e selecione a opção Application no grupo Define in, isso irá garantir que
+o template possa ser usado por toda a aplicação.
+Você será redirecionado para o arquivo App.xaml, já que é lá onde ficam
+todos os recursos que podem ser utilizados em toda a aplicação. Você verá que
+há um estilo definido com a propriedade TargetType, com o valor Button, e
+com a propriedade x:Key, com o valor que você informou na janela anterior.
+Esta é a definição do template que estamos editando. Vamos fazer algumas
+modificações para que o botão fique da maneira como pretendemos.
+Antes de fazermos as alterações, vamos conhecer um pouco mais sobre os
+estilos. Segue o código-fonte resumido do estilo que define o template padrão
+dos botões:
+<Style x:Key="LargeButton" TargetType="Button">
+<Setter Property="Background" Value="Transparent"/>
+<Setter Property="BorderBrush"
+Value="{ThemeResource PhoneForegroundBrush}"/>
+<Setter Property="Template">
+<Setter.Value>
+<ControlTemplate TargetType="Button">
+<Grid Background="Transparent">
+<VisualStateManager.VisualStateGroups>
+<VisualStateGroup x:Name="CommonStates">
+<VisualState x:Name="Normal"/>
+<VisualState x:Name="Pressed">
+<Storyboard>
+<PointerDownThemeAnimation
+
+34
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 4. Utilizando componentes do sistema para melhorar a. . .
+
+Storyboard.TargetName="Grid"/>
+<ObjectAnimationUsingKeyFrames
+Storyboard.TargetProperty="Foreground"
+Storyboard.TargetName="ContentPresenter">
+<DiscreteObjectKeyFrame KeyTime="0"
+Value="{ThemeResource
+ButtonPressedForegroundThemeBrush}"/>
+</ObjectAnimationUsingKeyFrames>
+<ObjectAnimationUsingKeyFrames
+Storyboard.TargetProperty="Background"
+Storyboard.TargetName="Border">
+<DiscreteObjectKeyFrame KeyTime="0"
+Value="{ThemeResource
+ButtonPressedBackgroundThemeBrush}"/>
+</ObjectAnimationUsingKeyFrames>
+</Storyboard>
+</VisualState>
+<Border x:Name="ButtonBackground"
+BorderBrush="{TemplateBinding BorderBrush}">
+<ContentPresenter x:Name="ContentPresenter"
+ContentTemplate="{TemplateBinding ContentTemplate}"
+Content="{TemplateBinding Content}"
+Foreground="{TemplateBinding Foreground}" />
+</Border>
+</Grid>
+</ControlTemplate>
+</Setter.Value>
+</Setter>
+
+35
+E-book gerado especialmente para
+
+4.4. Criando a página de boas-vindas
+
+Casa do Código
+
+</Style>
+
+Agora vamos destrinchar este código para compreendermos o significado
+de cada coisa. As primeiras tags que aparecem são os Setters, que simplesmente aplicam o valor a alguma propriedade. O exemplo anterior indica que
+a propriedade Background do botão inicia com o valor Transparent. Alguns
+Setters utilizam uma notação um pouco diferente (“ThemeResource ~”), que
+serve para obter as cores, tamanhos e padrões do próprio sistema operacional.
+Note que também podemos estender a tag Setter, para o caso de editarmos o
+template do botão. Dentro desta tag, nós definimos os componentes visuais
+que formam o botão, como por exemplo, o Grid principal e suas bordas (Border).
+Você também notará que há um grupo de tags chamado VisualState, sobre
+os quais falaremos melhor nos capítulos futuros. Por enquanto, basta sabermos que ele trata de um estado do componente. Isso quer dizer que cada VisualState pode conter diferentes valores para as mesmas propriedades, e durante
+o fluxo de nossa aplicação podemos alterar entre estes estados, que a página
+irá se reorganizar completamente de acordo com as novas propriedades.
+Também há a tag StoryBoard, que se refere a animações de elementos. No
+caso do exemplo anterior, a cor da fonte do botão é alterada para uma determinada fonte quando ele é pressionado. Também falaremos melhor disso
+futuramente.
+Após esta explicação sobre os estilos, você deve estar apto a fazer pequenas mudanças na aparência do botão. Em nosso exemplo, vamos remover
+o Setter da propriedade Padding, pois queremos que o botão ocupe todo o
+espaço disponível. Também criaremos um Setter para a propriedade Height
+e definiremos seu valor padrão como 90. Além disso, vamos alterar o valor
+dos Setters FontFamily e FontSize para PhoneFontFamilyLight e PhoneFontSizeLarge, respectivamente.
+Removeremos os estados (VisualState) Pressed e Disabled, pois não vamos criar uma situação em que este botão possa ser desabilitado e ele não
+deverá alterar sua cor para os padrões do sistema ao ser pressionado. Por
+fim, removeremos todas as propriedades do componente Border, exceto pela
+propriedade Background.
+
+36
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 4. Utilizando componentes do sistema para melhorar a. . .
+
+Voltando ao nosso formulário e aplicando o template para todos os
+botões, podemos ver mudanças em sua aparência, mas eles estão todos com
+o fundo transparente, dando uma sensação de vazio. Para finalizar esta etapa,
+vamos preencher a propriedade Background dos botões com os respectivos
+valores: #B2C80000, #B20000C8 e #BF0E6400. Estes valores são tons transparentes de vermelho, azul e verde, dando um pouco mais de vida à nossa tela
+inicial, que neste ponto deve estar parecida com a figura 4.7.
+
+Figura 4.7: Página de boas-vindas versão final
+<StackPanel Grid.Row="1" Margin="0,40,0,0"
+VerticalAlignment="Bottom">
+<Button Style="{StaticResource BotaoSemBorda}"
+Background="#B2C80000" HorizontalAlignment="Stretch">
+
+37
+E-book gerado especialmente para
+
+4.4. Criando a página de boas-vindas
+
+Casa do Código
+
+Entrar com uma conta
+</Button>
+<Button Style="{StaticResource BotaoSemBorda}"
+Background="#B20000C8" HorizontalAlignment="Stretch">
+Entrar sem uma conta
+</Button>
+<Button Style="{StaticResource BotaoSemBorda}"
+Background="#BF0E6400."
+HorizontalAlignment="Stretch">
+Criar uma conta
+</Button >
+</StackPanel>
+
+Link do projeto no meu github: http://bit.ly/8-1GITcap4ParteIII
+O principal objetivo deste capítulo é que você consiga dominar os conceitos básicos sobre templates e estilos, além de entender que os protótipos
+que o Visual Studio entrega feito não são regras, ele são apenas guias. Pode
+ser interessante para seu aplicativo utilizar as cores do sistema operacional e o
+tema do usuário — isso pode sim oferecer uma ótima experiência e com uma
+boa imersão —, mas neste capítulo quis mostrar que esta não é a única forma
+correta.
+Existem diversos tutoriais pela internet falando sobre como seguir os
+padrões e guias de interface do Windows Phone, mas podemos ver claramente que aplicativos como o Facebook, Twitter e tantos outros possuem sua
+própria identidade. É mais importante ser um aplicativo que oferece uma
+boa experiência do que seguir todos os padrões já propostos.
+A figura 4.8 ilustra como as páginas para criar conta e entrar com uma
+conta devem se parecer. Tente fazê-las sozinhos e no próximo capítulo passaremos por alguns pontos explicando melhor como podemos criar as páginas deste tipo.
+
+38
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 4. Utilizando componentes do sistema para melhorar a. . .
+
+Figura 4.8: Páginas para criar uma conta e entrar no aplicativo
+
+39
+E-book gerado especialmente para
+
+E-book gerado especialmente para
+
+Capítulo 5
+
+Design de aplicações
+Já falamos sobre experiência de usuário e design de aplicações, mas vamos
+continuar seguindo esta trilha para que nossos aplicativos transmitam uma
+boa experiência para o usuário. No capítulo anterior foram mostradas duas
+páginas já criadas, agora vamos avaliar a aplicação sendo executada e após
+isso faremos melhorias no código-fonte.
+Neste ponto, peço que execute a aplicação que se encontra em meu github
+através do link: http://bit.ly/8-1GITcap5ParteI
+E faça alguns testes com ela, como por exemplo, navegar nas páginas,
+preencher os formulários etc.
+
+5.1
+
+Melhorias de usabilidade
+
+Depois de fazer estes testes, apontarei alguns problemas de usabilidade que
+talvez você também tenha percebido.
+
+E-book gerado especialmente para
+
+5.1. Melhorias de usabilidade
+
+Casa do Código
+
+Navegação: é bastante fácil detectar um problema com a navegação entre as páginas, após entrar em uma das páginas que foram criadas não conseguimos voltar para a página inicial. Quando pressionamos o botão voltar
+do emulador o aplicativo está sendo fechado. Felizmente é bastante simples
+solucionar este problema, basta capturarmos o momento em que o usuário
+pressiona este botão e fazermos a ação de voltar a página.
+Abra o arquivo App.xaml.cs, nele há um manipulador para
+o evento
+OnLaunched.
+Neste método você precisa vincular um manipulador ao evento
+BackPressed da classe
+HardwareButtons
+(
+HardwareButtons.BackPressed +=
+HardwareButtons_BackPressed;).
+O código para implementar
+esta funcionalidade é bastante simples.
+private void HardwareButtons_BackPressed(object sender,
+BackPressedEventArgs e)
+{
+Frame rootFrame = Window.Current.Content as Frame;
+if (rootFrame != null && rootFrame.CanGoBack)
+{
+rootFrame.GoBack();
+e.Handled = true;
+}
+}
+
+Apesar de não ser um código complicado, você não precisa se preocupar
+em entendê-lo agora, ao decorrer do livro iremos entender como funciona a
+navegação entre as páginas do aplicativo e este conceito ficará claro para você.
+Orientação: nestas novas páginas, a orientação do dispositivo influencia a organização dos elementos na página. A página Entrar.xaml
+não possui nenhum problema, entretanto as páginas MainPage.xaml e
+CriarConta.xaml possuem um problema seriíssimo. Quando o dispositivo se encontra no modo paisagem, ou seja, está na horizontal, alguns campos estão se tornando inalcançáveis ao usuário.
+Felizmente, há um gerenciador de layout do qual ainda não falamos,
+chamado ScrollViewer, que circunda elementos ou outros gerenciadores e
+ativa barras de rolagem quando necessário. Ao circundar o painel que contém
+os elementos nesta página, nosso problema estará resolvido.
+42
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 5. Design de aplicações
+
+<!-- Início da página -->
+<ScrollViewer>
+<StackPanel Margin="10,0">
+<TextBlock FontSize="{ThemeResource
+TextStyleExtraLargeFontSize}">
+Email
+</TextBlock>
+<TextBox></TextBox>
+<!--Outros componentes-->
+</StackPanel>
+</ScrollViewer>
+<!-- Continuação da página -->
+
+Nesta mesma página, também há um outro pequeno problema: ao selecionar o campo e-mail, é exibido o teclado convencional, mas existem outros
+tipos de teclado. O contexto da situação poderá definir qual tipo de informação que o teclado deverá inserir, por exemplo, para um campo somente
+numérico não faz sentido que o teclado apresente letras.
+Para definir o tipo de teclado que será exibido, utilizaremos a propriedade InputScope. Quando selecionamos o valor desta propriedade como
+EmailSmtpAddress, ao ser exibido, o teclado exibe uma tecla para @ e outra
+para .com, conforme ilustra figura 5.1.
+
+43
+E-book gerado especialmente para
+
+Casa do Código
+
+5.1. Melhorias de usabilidade
+
+Figura 5.1: Escopos de teclado
+
+No capítulo anterior, vimos o conceito de estilo e template de componentes. Várias propriedades definidas nos templates dos componentes
+padrões do Windows Phone possuem sua coloração vinculada ao próprio
+smartphone. Em nossa aplicação não é diferente: entrando nas configurações
+do dispositivo e alterando as cores do tema poderemos ver mudanças em
+nossa interface.
+Caso você prefira que os componentes se mantenham iguais mesmo com
+a alteração do tema, é necessário que você crie estilos/templates que não estejam vinculados ao sistema operacional. Como já vimos a forma de criar um
+template para um componente e definir padrões para as propriedades dele,
+não iremos entrar em detalhes agora.
+44
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 5. Design de aplicações
+
+Já podemos ver todas estas melhorias em nosso aplicativo. Para ver o
+código-fonte do projeto completo com estas implementações acesse: http://
+bit.ly/8-1GITcap5ParteII.
+Vamos seguir adiante, mas fique à vontade para fazer ainda mais melhorias no aplicativo, como por exemplo, fazer com que seja possível acessar a
+página de criação de conta através da página para entrar com uma conta existente (isso é bem comum, pois cria um atalho para o usuário que ainda não
+possui conta e entrou nesta página).
+
+5.2
+
+Conhecendo os controles do Windows
+Phone
+
+Até este ponto já construímos nossas páginas de boas-vindas, criação de conta
+e para entrar no aplicativo utilizando uma conta. Agora iremos construir a
+página principal de nosso aplicativo, onde o usuário poderá ver os produtos,
+as promoções e tudo mais que faz parte do conceito principal da aplicação.
+Para a tela principal, utilizaremos um Hub (nas versões anteriores este
+componente é conhecido como Panorama). Este é um controle bastante característico do Windows Phone que já engloba boa parte dos conceitos de design do sistema operacional.
+O conceito do Hub é bastante simples de compreender: basta imaginar
+que a página da aplicação é mais larga que o próprio smartphone. Apesar
+de você ter de navegar nela na horizontal, trata-se do mesmo conteúdo. Este
+conceito é utilizado em diversos aplicativos nativos, como por exemplo, o hub
+de pessoas ou de fotos, que está ilustrado na figura 5.2.
+
+45
+E-book gerado especialmente para
+
+5.2. Conhecendo os controles do Windows Phone
+
+Casa do Código
+
+Figura 5.2: Hub de fotos do Windows Phone
+
+Toda a implementação de gestos para navegar através do Hub é implementada nativamente no controle, então é bastante simples de usá-lo e você
+verá que o efeito visual dele é muito bacana. Vamos agora criar uma nova
+página em nosso aplicativo e chamá-la de ProdutosHub.
+Após criar a página basta adicionar o controle Hub e adicionar as seções
+de hub. Cada seção corresponde a uma “subpágina” dentro do Hub. Criaremos os seguintes: “classificações”, “promoção” e “produtos”, conforme o
+código a seguir.
+<Hub Header="CompreAqui">
+<HubSection Header="classificações">
+</HubSection>
+<HubSection Header="promoção">
+</HubSection>
+
+46
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 5. Design de aplicações
+
+<HubSection Header="produtos">
+</HubSection>
+</Hub>
+
+Por padrão, o fundo do Hub é vazio, assumindo a cor de fundo do seu
+tema (preto ou branco), mas podemos preenchê-lo com uma imagem para
+melhorar sua aparência. Por enquanto, deixaremos os itens sem nenhum conteúdo, e o resultado deve ser semelhante à figura 5.3.
+
+Figura 5.3: Hub
+
+Agora vamos conhecer o controle CommandBar, que, como o nome sugere, é uma barra de comandos para sua aplicação. Esta barra de comandos fica
+na parte inferior da página no modo retrato, e ou no canto direito no modo
+paisagem.
+47
+E-book gerado especialmente para
+
+5.2. Conhecendo os controles do Windows Phone
+
+Casa do Código
+
+Na CommandBar devemos inserir ações que, apesar de fazerem parte do
+contexto, não se encaixam em algum ponto na página. Em nosso exemplo,
+vamos colocar em nosso componente um botão para acessarmos a página de
+pesquisa e um item de menu para acessarmos a página para gerenciamento de
+conta. Para adicionarmos este componente, precisamos acessar a propriedade
+BottomAppBar da página. Para fazer isso, utilizamos o trecho de código a
+seguir.
+<Page.BottomAppBar>
+<CommandBar >
+</CommandBar>
+</Page.BottomAppBar>
+
+Dentro da CommandBar, podemos inserir nossos componentes. Como já
+dito antes, será feito um botão para pesquisa e um item de menu para acessar
+as configurações de sua conta. Nesta barra, os componentes são classificados
+como primários e secundários. Os itens secundários só serão mostrados ao
+usuário caso ele pressione o “...” no canto direito da barra, ou seja, são classificados como ações menos importantes.
+Para criar o botão de pesquisa (primário), você deve usar o componente
+AppBarButton, um botão circular que foi projetado para ser utilizado neste
+componente, dentro do qual é necessário incluir um BitmapIcon com o
+ícone do botão. Este ícone se encontra no grupo features icons do SDK do
+Windows Phone. Neste ponto, sua CommandBar deve estar similar ao código
+que segue.
+<Page.BottomAppBar>
+<CommandBar>
+<CommandBar.PrimaryCommands>
+<AppBarButton Label="pesquisar">
+<AppBarButton.Icon>
+<BitmapIcon
+UriSource=
+"ms-appx:///Assets/CommandBar/feature.search.png"/>
+</AppBarButton.Icon>
+
+48
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 5. Design de aplicações
+
+</AppBarButton>
+</CommandBar.PrimaryCommands>
+</CommandBar>
+</Page.BottomAppBar>
+
+Para finalizar, vamos incluir mais um AppBarButton, mas desta vez
+como comando secundário. Após fazer isso diminuiremos a opacidade da
+CommandBar em 50%, dando um efeito transparente. Agora nossa barra de
+ações está finalizada, conforme o código e a figura 5.4.
+<Page.BottomAppBar>
+<CommandBar Opacity="0.5">
+<CommandBar.PrimaryCommands>
+<AppBarButton Label="pesquisar">
+<AppBarButton.Icon>
+<BitmapIcon
+UriSource=
+"ms-appx:///Assets/CommandBar/feature.search.png" />
+</AppBarButton.Icon>
+</AppBarButton>
+</CommandBar.PrimaryCommands>
+<CommandBar.SecondaryCommands>
+<AppBarButton Label="sua conta"/>
+</CommandBar.SecondaryCommands>
+</CommandBar>
+</Page.BottomAppBar>
+
+49
+E-book gerado especialmente para
+
+5.2. Conhecendo os controles do Windows Phone
+
+Casa do Código
+
+Figura 5.4: CommandBar
+
+O último componente do sistema operacional que iremos explicar é o
+Pivot, que é um agrupador de páginas com um funcionamento parecido
+com o Hub, porém com propósitos diferentes. Enquanto o Hub serve como
+uma central de informações, o Pivot serve como um separador de conteúdos, fazendo com que cada item seu possua itens relacionados em um contexto mais amplo, mas diferentes entre si.
+Vamos criar agora a página para gerenciamento de conta. Ela contará com
+um componente do tipo Pivot para organizar seus conteúdos. Nesta página,
+vamos utilizar o mesmo plano de fundo da página anterior, e por hora haverá
+um item chamado “Senha” e outro chamado “Entrega”. Sua página deve conter
+o trecho de código semelhante ao que segue:
+50
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 5. Design de aplicações
+
+<Grid>
+<Grid.Background>
+<ImageBrush Stretch="UniformToFill"
+ImageSource="/Assets/Images/Background.jpg"/>
+</Grid.Background>
+<Pivot Title="SUA CONTA">
+<PivotItem Header="Senha">
+</PivotItem>
+<PivotItem Header="Entrega">
+</PivotItem>
+</Pivot>
+</Grid>
+
+Neste ponto, vamos preencher o item “Senha” com os campos para que
+o usuário digite sua senha atual, uma nova senha e uma confirmação para a
+nova senha. Além disso, é claro, vamos fazer um botão para efetuar a troca
+de senha, conforme a figura 5.5.
+
+51
+E-book gerado especialmente para
+
+5.2. Conhecendo os controles do Windows Phone
+
+Casa do Código
+
+Figura 5.5: Pivot
+
+Agora vamos fazer com que o botão que inserimos nos comandos secundários da Command nos leve até este formulário. Para isso precisamos
+inserir um manipulador para o evento Click. Isso é feito tanto no arquivo
+XAML quanto no arquivo C#. Veja os códigos a seguir:
+<CommandBar.SecondaryCommands>
+<AppBarButton Label="sua conta" Click="btnSuaConta_Click"/>
+</CommandBar.SecondaryCommands>
+private void btnSuaConta_Click(object sender, RoutedEventArgs e)
+{
+this.Frame.Navigate(typeof(SuaConta));
+}
+
+52
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 5. Design de aplicações
+
+Falaremos melhor sobre navegação nos capítulos futuros, então não se
+preocupe com todos os conceitos envolvidos nesta funcionalidade. Neste
+ponto, basta você saber que há um objeto encarregado deste tipo de função.
+Ele se chama Frame e, nele, há o método Navigate, no qual temos de
+informar o tipo da página por parâmetro, conforme código mostrado anteriormente.
+Você pode acessar o código-fonte do aplicativo até aqui através do meu
+github: http://bit.ly/8-1GITcap5ParteIII
+
+53
+E-book gerado especialmente para
+
+E-book gerado especialmente para
+
+Capítulo 6
+
+Gerenciamento de dados em um
+aplicativo Windows Phone
+Apesar de já termos criado diversas páginas, nosso aplicativo ainda não possui nenhuma ligação com os dados. Como já foi mencionado, vamos criar
+uma base de dados fictícia simulando o acesso a um serviço. Para fazer isso,
+vamos resgatar os dados de um arquivo JSON que, junto com XML, são as
+formas mais comuns de entregas de dados através de serviços. No caso de
+aplicativos móveis, a utilização de JSON é mais recomendada devido a um
+consumo menor de banda.
+
+E-book gerado especialmente para
+
+6.1. Carregando os dados para a aplicação
+
+Casa do Código
+
+JSON: JavaScript Object Notation
+JSON é um padrão aberto para transferência de dados muito comum.
+É utilizado principalmente para transferir dados de um servidor para
+um aplicativo web ou móvel. Este padrão utiliza uma linguagem simples através do formato chave:valor e é uma alternativa ao padrão XML.
+
+6.1
+
+Carregando os dados para a aplicação
+
+Antes de podermos utilizar os dados, precisamos de uma representação deles
+em nossa aplicação. Para fazer isso, criaremos classes C# que definam nossos
+dados. Em alguns padrões arquiteturais, esses dados são chamados de modelos, e o padrão mais comum utilizado em aplicativos para Windows Phone
+é o MVVM.
+
+MVVM: Model-View-ViewModel
+MVVM é um padrão de arquitetura de aplicativos que pode ser utilizado na plataforma .NET. Ele consiste em três camadas principais:
+Model, que é a camada de dados, View, que é a camada de interface (podendo ser páginas web, Windows ou Windows Phone) e ViewModel,
+que é uma abstração de um modelo que possui interação com a interface
+da aplicação. É um padrão similar aos mais conhecidos: MVC (ModelView-Controller) e MVP (Model-View-Presenter).
+É recomendado, porém não obrigatório, separar as camadas do aplicativo em pastas, como já fizemos com nossas páginas. Vamos criar a pasta
+Modelos e os modelos: Produto, Categoria e Loja, conforme o código
+a seguir.
+public class Produto
+{
+public int Id { get; set; }
+
+56
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+public string Descricao { get; set; }
+public double Preco { get; set; }
+public string DescricaoDetalhada { get; set; }
+public double AvaliacaoMedia { get; set; }
+public Categoria Categoria { get; set; }
+}
+
+public string Icone { get; set; }
+
+public class Categoria
+{
+public int Id { get; set; }
+public int Descricao { get; set; }
+public int DescricaoDetalhada { get; set; }
+}
+
+public List<Produto> Produtos { get; set; }
+
+public class Loja
+{
+private Loja()
+{}
+private static Loja dados;
+public static Loja Dados
+{
+get
+{
+if (dados == null)
+dados = new Loja();
+return dados;
+
+57
+E-book gerado especialmente para
+
+6.1. Carregando os dados para a aplicação
+
+}
+set
+{
+}
+
+}
+
+Casa do Código
+
+dados = value;
+
+public List<Produto> Produtos { get; set; }
+
+}
+
+A classe Loja declarada aqui utiliza o padrão de projeto Singleton, que
+é utilizado para garantir que a classe possua somente uma instância durante
+toda a aplicação. Caso você queira saber mais sobre isso, acesse o link: http:
+//bit.ly/padraoSingleton.
+Além destas classes, também precisamos criar uma forma de extrair os
+dados do arquivo JSON que será embutido em nosso aplicativo. Para isso,
+utilizamos as classes Stream e StreamReader do .NET — não entrarei em
+detalhes para explicar esta funcionalidade, pois ela será feita da mesma forma
+que qualquer outra aplicação .NET. Veja o código a seguir.
+public static class LeitorArquivo
+{
+public async static Task<string> LerAsync()
+{
+try
+{
+var arquivo =
+await Package.Current.InstalledLocation
+.GetFileAsync(@"Resources\dados.txt");
+
+}
+
+}
+
+return await FileIO.ReadTextAsync(arquivo);
+}
+catch
+{
+throw;
+}
+
+58
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+A classe LeitorArquivo possui a declaração de static e async.
+Caso você não esteja familiarizado com estes termos:
+
+Static
+Trata-se de uma classe que não pode ser instanciada;
+você utiliza seus métodos a partir dela própria, por exemplo:
+LeitorArquivo.Ler("caminhoArquivo").
+Se quiser obter
+mais informações, sugiro a leitura em: http://bit.ly/staticClass.
+
+Async e Await
+No C#, podemos utilizar os comandos async e await para executar tarefas em paralelo. Esta é uma característica bastante singular da linguagem: ao criarmos um método que retorna uma Task como o código
+anterior, podemos defini-lo como método assíncrono através da palavra
+reservada async. Apesar de não ser regra, por convenção estes método
+possuem o sufixo Async em seu nome. Para entender melhor o funcionamento de processamento paralelo, acesse: http://bit.ly/msdnAsyncAwait.
+
+Para continuar a desenvolver a aplicação, é necessário que você faça
+download do arquivo que contém nossos dados. Ele pode ser baixado através
+do link http://bit.ly/dataJSON e deve ser incluído na pasta Resources de
+seu aplicativo. Além disso, também é necessário fazer o download da pasta
+que contém os ícones dos nossos produtos, que podem ser encontrados no
+link http://bit.ly/dataIcones.
+Com isso feito, já conseguiremos trabalhar com os dados do arquivo, então devemos inserir o trecho de código que carrega os dados durante a inicialização de nossa aplicação. Isso seria feito da mesma forma caso estivéssemos
+chamando um serviço real — a diferença é que, em vez de fazermos uma requisição para uma URL na internet, vamos utilizar um leitor de arquivo local.
+59
+E-book gerado especialmente para
+
+6.1. Carregando os dados para a aplicação
+
+Casa do Código
+
+Agora vamos criar um novo método na classe MainPage.xaml.cs.
+Este método irá utilizar o nosso leitor de arquivo de forma assíncrona, conforme o código:
+private static async Task<string> LerArquivoDadosAsync()
+{
+return await LeitorArquivo.LerAsync();
+}
+
+Neste ponto faremos uma chamada para o método descrito anteriormente, que deve ser inserida no método OnNavigatedTo da classe
+MainPage.xaml.cs.
+protected override void OnNavigatedTo(NavigationEventArgs e)
+{
+string dados = LerArquivoDadosAsync().Result;
+}
+
+Com esse código, já possuímos uma string contendo todo o JSON de nossos dados, entretanto ainda precisamos converter este texto para objetos C#.
+É o que faremos utilizando a classe JsonConvert. Ela não é disponibilizada
+no pacote inicial, então teremos de buscá-la em pacotes NuGet.
+
+NuGet
+O NuGet é um gerenciador de pacotes incorporado ao Visual Studio,
+que é capaz de buscar bibliotecas através da internet em um repositório,
+incorporando as referências mais atualizadas da biblioteca ao seu projeto
+no Visual Studio.
+Pressione o botão direito sobre as referências de seu projeto e selecione
+a opção Manage NuGet Packages. Após isso, pesquise por Json.NET
+— atualmente ela está na lista de bibliotecas mais baixadas, de modo que é
+bastante fácil encontrá-la. Feito isso, podemos finalmente concluir nossa extração de dados do arquivo com o seguinte código:
+
+60
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+protected async override void
+OnNavigatedTo(NavigationEventArgs e)
+{
+string dados = await LerArquivoDadosAsync();
+Loja.Dados = JsonConvert.DeserializeObject<Loja>(dados);
+}
+
+Antes de prosseguirmos, vamos ver mais uma dica de usabilidade: em
+um cenário real, nós poderíamos estar carregando uma grande quantidade de
+dados neste momento, portanto, podemos adicionar uma tela de boas-vindas
+para evitar a frustração do usuário de permanecer na página de carregamento
+de nossa aplicação.
+Esta tela é chamada de Splash Screen. No Windows Phone existem três
+tipos de Splash Screen. Você pode escolher criar uma imagem diferente para
+cada possível resolução do sistema operacional, ou criar apenas uma imagem
+e deixar que o sistema a redimensione para cada resolução.
+Vamos optar pela segunda forma, utilizando apenas uma imagem. Em
+nossa aplicação já existe uma Splash Screen padrão que está sendo exibida,
+então você terá de alterar a imagem dela para a imagem correta.
+A figura 6.1 já apresenta a Splash Screen de nossa aplicação sendo exibida!
+
+61
+E-book gerado especialmente para
+
+6.2. Vinculando os dados com os controles de usuário
+
+Casa do Código
+
+Figura 6.1: Splash Screen
+
+Você pode encontrar o código-fonte da aplicação já apta a carregar os
+dados e com a Splash Screen pronta em meu github através do link: http:
+//bit.ly/8-1GITcap6ParteI.
+
+6.2
+
+Vinculando os dados com os controles de
+usuário
+
+Neste ponto, já estamos aptos para utilizar os dados em nosso aplicativo. A
+primeira coisa a fazer é voltarmos à nossa página ProdutosHub.xaml e adicionarmos um manipulador para o evento Loaded de alguns componentes.
+62
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+Este evento é disparado quando o componente termina de ser construído e
+neste momento vamos buscar as informações para preencher as páginas do
+nosso hub.
+Vamos ao HubSection classificações. Aqui exibiremos uma lista
+contendo a descrição das categorias dos produtos de nossa loja. Um controle
+de usuário excelente para este tipo de necessidade é o ListView, que permite ao
+usuário visualizar uma lista de informações, onde cada elemento irá replicar
+um template criado na página.
+Para inserir elementos em alguns tipos de controles é necessário criar um
+DataTemplate, estes templates definem os elementos que estão dentro do
+controle de tela, o código a seguir mostra como criar um template para um
+HubSection e adicionar uma lista.
+<HubSection Header="classificações">
+<DataTemplate>
+<Grid>
+<ScrollViewer>
+<Grid Margin="10,0">
+<ListView x:Name="Categorias">
+<ListView.ItemTemplate>
+<DataTemplate>
+</DataTemplate>
+</ListView.ItemTemplate>
+</ListView>
+</Grid>
+</ScrollViewer>
+</Grid>
+</DataTemplate>
+</HubSection>
+
+Dentro da tag DataTemplate podemos criar uma forma de visualização de nosso dado. Neste exemplo, iremos aninhar dois elementos deste tipo
+de forma bastante simples, pois como desejamos mostrar apenas a descrição
+das categorias na lista, vamos adicionar somente um componente do tipo
+TextBlock.
+63
+E-book gerado especialmente para
+
+6.2. Vinculando os dados com os controles de usuário
+
+Casa do Código
+
+Já sabemos que temos que adicionar um TextBlock como template da
+lista, mas como vamos preencher o valor do texto deste componente? A resposta para essa pergunta está no conceito de Binding implementado pelo
+XAML. O valor do texto será vinculado com a propriedade Descricao dos
+dados que serão conectados a este componente. Para fazer isso, utilize o trecho de código a seguir:
+<HubSection Header="classificações">
+<DataTemplate>
+<Grid>
+<ScrollViewer>
+<Grid Margin="10,0">
+<ListView>
+<ListView.ItemTemplate>
+<DataTemplate>
+<TextBlock Text="{Binding Path=Descricao}"
+Style=
+"{ThemeResource ListViewItemTextBlockStyle}"/>
+</DataTemplate>
+</ListView.ItemTemplate>
+</ListView>
+</Grid>
+</ScrollViewer>
+</Grid>
+</DataTemplate>
+</HubSection>
+
+Agora só precisamos conectar nossos dados a este componente no manipulador método OnNavigatedTo que vimos anteriormente. Todos os nossos
+dados estão armazenados em memória na propriedade Dados do nosso objeto Loja. Há uma forma bastante simples de buscá-los no C#, conhecida
+como LINQ.
+
+64
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+LINQ: Linguage-Integrated Query
+LINQ é um padrão de consulta desenvolvido na plataforma .NET para
+buscar, unir, armazenar e atualizar dados. Através dele você pode manipular dados tanto em coleções de objetos, banco de dados e até XMLs. Para
+saber mais sobre LINQ acesse: http://bit.ly/msdnLINQ.
+Nesta primeira consulta, iremos selecionar o Id e a descrição das categorias dos produtos, mas sem repeti-las, portanto lembre-se de utilizar o método
+Distinct(), conforme o exemplo.
+private void ListaCategoria_Loaded(object sender,
+RoutedEventArgs e)
+{
+ListView lista = sender as ListView;
+lista.ItemsSource = (from produtos in Loja.Dados.Produtos
+select new
+{
+Id = produtos.Categoria.Id,
+Descricao =
+produtos.Categoria.Descricao
+}).Distinct().ToList();
+}
+
+Com isso, já podemos ver os dados em nossa aplicação!
+
+65
+E-book gerado especialmente para
+
+6.2. Vinculando os dados com os controles de usuário
+
+Casa do Código
+
+Figura 6.2: Primeiros dados em nossa aplicação
+
+Como você pode ver no código anterior, a lista de objetos vinculada à lista
+de categorias é de um objeto anônimo, ou seja, um objeto resultante de uma
+consulta que não possui uma classe definida. Entretanto, é interessante que
+você utilize objetos tipados, e é importante lembrar-se de que os objetos de
+modelo não devem possuir nenhuma ligação com a página. Neste momento,
+entra o já apresentado view model.
+Vamos criar uma pasta chamada ViewModels e adicionar nela a classe
+ViewModelBase. Esta classe será utilizada como base para todos os view
+models de nossa aplicação. Para que um objeto view model notifique a interface quando o valor de suas propriedades for alterado, é necessário que a
+classe implemente a interface INotifyPropertyChanged. Além disso, já
+66
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+criaremos um método para notificar a propriedade que foi alterada, conforme
+o código a seguir.
+public class ViewModelBase : INotifyPropertyChanged
+{
+protected void NotificarAlteracao(string propriedade)
+{
+if (PropertyChanged != null)
+PropertyChanged(this,
+new PropertyChangedEventArgs(propriedade));
+}
+}
+
+public event PropertyChangedEventHandler PropertyChanged;
+
+Neste primeiro exemplo de view model, não será necessária a utilização
+do método NotificarAlteracao, pois o usuário não vai conseguir alterar
+os dados dos produtos ou das categorias, então a nossa classe ficará bastante
+similar a uma classe comum. Veja o código.
+public class CategoriaVM : ViewModelBase
+{
+public int Id { get; set; }
+public string Descricao { get; set; }
+public override bool Equals(object obj)
+{
+if (obj is CategoriaVM)
+return Id == ((CategoriaVM)obj).Id;
+}
+
+}
+
+return false;
+
+public override int GetHashCode()
+{
+return this.Id;
+}
+
+67
+E-book gerado especialmente para
+
+6.2. Vinculando os dados com os controles de usuário
+
+Casa do Código
+
+Além das propriedades, nós sobrescrevemos os métodos Equals e
+GetHashCode, para alterar a forma com que o C# compara objetos deste
+tipo. Portanto, não teremos repetição ao utilizar o método Distinct.
+Agora já podemos alterar a consulta LINQ para retornar dados do tipo
+CategoriaVM, conforme o código:
+private void ListaCategoria_Loaded(object sender,
+RoutedEventArgs e)
+{
+ListView lista = sender as ListView;
+lista.ItemsSource = (from produtos in Loja.Dados.Produtos
+select new CategoriaVM
+{
+Id = produtos.Categoria.Id,
+Descricao =
+produtos.Categoria.Descricao
+}).Distinct().ToList();
+}
+
+Agora vamos criar um template de dados mais complexo para o item promoção. Aqui vamos listar todos os itens que possuem preço promocional,
+com seu título, sua imagem e com o percentual de desconto.
+Uma boa prática para desenvolver templates mais complexos é criá-los
+fora da lista, como se fossem componentes fixos, até você ficar contente com
+o design. Somente depois disso insira-o no template e altere o valor das propriedades para as respectivas propriedades via Binding.
+Primeiro vamos criar um Grid e dividi-lo em duas colunas: na esquerda
+ficará a imagem do produto e na direita ficarão os dados que citamos anteriormente. Na coluna da imagem, vamos inserir um Grid com a cor branca,
+para dar um fundo ao ícone do produto. Observe o código:
+<Grid Height="150">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="130"/>
+<ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+<Grid Background="White">
+
+68
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+<Image Source="/Icones/camera.png" Height="75" />
+</Grid>
+</Grid>
+
+Agora vamos inserir os componentes na coluna da direita. Como exibiremos diversos dados, vamos criar um Grid aninhado da mesma forma que
+fizemos com a imagem, conforme o código a seguir.
+<Grid Grid.Column="1" Margin="10">
+<Grid.RowDefinitions>
+<RowDefinition Height="90"/>
+<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+<TextBlock Text="Teste produto exemplo exemplo"
+FontSize="24" TextWrapping="Wrap" Grid.RowSpan="2"/>
+<StackPanel Orientation="Horizontal" Grid.Row="1">
+<TextBlock Text="Desconto de: "
+VerticalAlignment="Center"/>
+<TextBlock Text="50" FontSize="24"
+VerticalAlignment="Center"/>
+<TextBlock Text="%" FontSize="24"
+VerticalAlignment="Center"/>
+</StackPanel>
+</Grid>
+
+Perceba como o conceito de gerenciadores de layout aninhados é utilizado
+com bastante frequência. Para criarmos uma simples listagem já utilizamos
+diversos Grids e StackPanels. Com os códigos finalizados, já temos nosso
+template de dados, basta fazer o binding das informações.
+O primeiro item é o TextBlock com a fonte maior, que representa a descrição do produto, logo, faremos o binding com a propriedade Descricao.
+Neste ponto você já deve ter notado que precisamos fazer o binding com o
+69
+E-book gerado especialmente para
+
+6.2. Vinculando os dados com os controles de usuário
+
+Casa do Código
+
+percentual de desconto do produto e, na verdade, não temos este dado do
+produto.
+No entanto, podemos extrair esta informação a partir das propriedades
+Preco e PrecoPromocao. Para podermos fazer o binding, vamos criar um
+view model para a classe Produto que possua esta propriedade, sendo que
+ela será somente leitura e deve retornar o valor calculado pelos preços. Veja
+o código:
+public class ProdutoVM : ViewModelBase
+{
+public int Id { get; set; }
+public string Descricao { get; set; }
+public double Preco { get; set; }
+public double PrecoPromocao { get; set; }
+public string DescricaoDetalhada { get; set; }
+public double AvaliacaoMedia { get; set; }
+public int CategoriaId { get; set; }
+public string CategoriaDescricao { get; set; }
+public string Icone { get; set; }
+
+}
+
+public double Desconto
+{
+get
+{
+return Math.Round(100 - (PrecoPromocao * 100 / Preco), 2);
+}
+}
+
+Como você pode ver, nossa propriedade possui apenas o método get,
+já que não é possível inserir um valor nela. Agora você pode utilizar esta
+70
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+propriedade para fazer o binding normalmente.
+Por fim, teremos que vincular a imagem do produto ao componente
+Image. Aqui temos um problema diferente no momento de fazer o binding. O componente espera que o valor vinculado seja uma Uri ou algum
+outro tipo de fonte de imagens, enquanto que a propriedade do nosso objeto
+é um tipo string.
+Para solucionar esse problema, utilizaremos um recurso chamado Value
+Converter, que facilita o vínculo de dados de tipos diferentes. Vamos criar
+uma pasta chamada Converter e adicionar nela uma classe chamada
+ImageSourceConverter — não há nenhuma obrigatoriedade quanto à
+palavra “Converter” no nome da classe, mas é muito comum que elas se
+chamem assim.
+Nossa classe deve implementar a interface IValueConverter, que está
+no namespace Windows.UI.Xaml.Data;. Ao fazer isso, você terá de implementar os dois métodos dessa interface, conforme o código:
+public class ImageSourceConverter :IValueConverter
+{
+public object Convert(object value, Type targetType,
+object parameter, string language)
+{
+throw new NotImplementedException();
+}
+
+}
+
+public object ConvertBack(object value, Type targetType,
+object parameter, string language)
+{
+throw new NotImplementedException();
+}
+
+Estes métodos são utilizados para converter o valor para a interface
+XAML e converter novamente para o código C#, respectivamente. Em nosso
+exemplo, não precisaremos implementar o método ConvertBack, mas o
+método Convert é essencial. Teremos de utilizar o valor da propriedade
+que virá através do parâmetro value e transformá-lo em uma Uri para
+encontrar o ícone do produto, conforme codificação a seguir.
+71
+E-book gerado especialmente para
+
+6.2. Vinculando os dados com os controles de usuário
+
+Casa do Código
+
+public object Convert(object value, Type targetType,
+object parameter, string language)
+{
+string valor = value as string;
+return new BitmapImage(
+new Uri(string.Concat(@"ms-appx:/Icones/", valor),
+UriKind.Absolute));
+}
+
+É um código bastante simples, porém altamente necessário para o funcionamento de nosso binding. Agora voltaremos à página que estávamos implementando e adicionaremos o namespace de nosso converter.
+xmlns:converter="using:CompreAqui.Converter"
+
+Para finalizar, devemos preencher a propriedade Source do objeto
+Image fazendo o binding com a propriedade Icone. Porém, utilizaremos
+nosso conversor de valores também e, para fazer isso, é preciso declará-lo
+como recurso da aplicação, página ou componente. Neste caso, optaremos
+por fazer dele um recurso apenas do componente, como ilustra o código a
+seguir.
+<Grid Background="White">
+<Grid.Resources>
+<converter:ImageSourceConverter x:Key="converter"/>
+</Grid.Resources>
+<Image Source="{Binding Path=Icone,
+Converter={StaticResource converter}}" Height="75" />
+</Grid>
+
+Por fim, criaremos mais um manipulador para o evento Loaded, desta
+vez para a nova lista, e faremos a consulta para encontrar os produtos que
+estão com o preço em promoção, ordenando-os do maior desconto para o
+menor:
+private void ListaPromocoes_Loaded(object sender,
+RoutedEventArgs e)
+{
+
+72
+E-book gerado especialmente para
+
+Casa do Código
+
+}
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+ListView lista = sender as ListView;
+lista.ItemsSource = (from produtos in Loja.Dados.Produtos
+where produtos.PrecoPromocao != 0
+select new ProdutoVM
+{
+Id = produtos.Id,
+Descricao = produtos.Descricao,
+Preco = produtos.Preco,
+PrecoPromocao = produtos.PrecoPromocao,
+Icone = produtos.Icone
+})
+.OrderByDescending(
+produto => produto.Desconto)
+.ToList();
+
+Agora já podemos ver os dados dos produtos que estão em promoção,
+como ilustra a figura 6.3.
+
+73
+E-book gerado especialmente para
+
+6.2. Vinculando os dados com os controles de usuário
+
+Casa do Código
+
+Figura 6.3: Produtos em promoção
+
+Como você deve ter notado na imagem, a lista de produtos ultrapassa a altura da página, então não se esqueça de adicionar o componente
+ScrollViewer neste ponto, como já fizemos anteriormente.
+Os dois primeiros itens do nosso Hub já estão montados. Agora vamos
+preencher o terceiro item com uma nova lista, porém com um template semelhante ao template de promoções. Mostraremos a imagem e o título, mas em
+vez de exibir a quantidade de desconto, vamos mostrar o preço.
+Apesar do nome deste item ser produtos, não vamos mostrar todos os
+produtos nesta tela, mas apenas pegar dois produtos sorteados e adicionar
+um link para que o usuário possa visualizar todos os produtos em uma outra
+página. Em um cenário real, esta técnica é geralmente utilizada para que o
+74
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+usuário não espere muito tempo durante a consulta de dados.
+A primeira coisa a fazer é adicionar o Grid neste item e dividi-lo em duas
+linhas. Já podemos preencher a linha inferior com um TextBlock com o
+texto “todos os produtos”.
+<HubSection Header="produtos">
+<DataTemplate>
+<ScrollViewer>
+<Grid Margin="10,0">
+<Grid.RowDefinitions>
+<RowDefinition Height="*"/>
+<RowDefinition Height="50"/>
+</Grid.RowDefinitions>
+<TextBlock Text="todos os produtos"
+FontSize=
+"{ThemeResource TextStyleExtraLargePlusFontSize}"
+Grid.Row="1" Margin="0"/>
+</Grid>
+</ScrollViewer>
+</DataTemplate>
+</HubSection>
+
+Agora vamos utilizar o mesmo template na linha superior, fazendo algumas pequenas modificações para que ele encaixe melhor nesta página. Altere
+a altura do Grid que define o template de cada item da lista de 150 para 130,
+e diminua as margens verticais de 10 para 5. Por último, altere o conteúdo do
+StackPanel que exibia o desconto para exibir o preço do produto.
+<Grid Grid.Column="1" Margin="10">
+<Grid.RowDefinitions>
+<RowDefinition Height="90"/>
+<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+<TextBlock Text="{Binding Path=Descricao}" FontSize="24"
+TextWrapping="Wrap" Grid.RowSpan="2"/>
+
+75
+E-book gerado especialmente para
+
+6.2. Vinculando os dados com os controles de usuário
+
+Casa do Código
+
+<StackPanel Orientation="Horizontal" Grid.Row="1">
+<TextBlock Text="por: " VerticalAlignment="Center"/>
+<TextBlock Text="{Binding Path=PrecoAPagar}" FontSize="24"
+VerticalAlignment="Center"/>
+<TextBlock Text=" R$" FontSize="24"
+VerticalAlignment="Center"/>
+</StackPanel>
+</Grid>
+
+Neste trecho, a parte que não teve alterações em relação ao template utilizado no item “promoção” foi suprimida para facilitar a leitura do código e
+para dar mais ênfase ao que foi alterado. Você pode ter notado que um dos
+textos está vinculado à propriedade PrecoAPagar e ela ainda não existe em
+nossa classe ProdutoVM.
+Vamos criá-la para retornar o preço que o comprador irá pagar no produto. A regra é bastante simples: esta propriedade vai retornar o valor
+da propriedade Preco do produto quando PrecoPromocao estiver com
+o valor zero; caso contrário, o valor retornado deve ser o da propriedade
+PrecoPromocao.
+public double PrecoAPagar
+{
+get
+{
+double valor;
+if (PrecoPromocao != 0)
+valor = PrecoPromocao;
+else
+valor = Preco;
+return Math.Round(valor, 2);
+}
+
+Agora vamos criar mais um manipulador do evento Loaded e adicionar a
+fonte de dados para esta lista. Esteja à vontade para desenvolver um algoritmo
+76
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+que busque produtos aleatórios, mas para fins de demonstração vamos apenas
+selecionar os produtos com os identificadores 3 e 4. Dessa forma, sempre
+serão selecionados os mesmos produtos, já que nossa base de dados é estática.
+private void ListaProdutos_Tapped(object sender,
+TappedRoutedEventArgs e)
+{
+ListView lista = sender as ListView;
+lista.ItemsSource = (from produtos in Loja.Dados.Produtos
+where produtos.Id == 3 ||
+produtos.Id == 4
+select new ProdutoVM
+{
+Id = produtos.Id,
+Descricao = produtos.Descricao,
+Icone = produtos.Icone,
+Preco = produtos.Preco,
+PrecoPromocao = produtos.PrecoPromocao
+})
+.ToList();
+}
+
+A figura 6.4 ilustra o resultado de nossa implementação.
+
+77
+E-book gerado especialmente para
+
+6.2. Vinculando os dados com os controles de usuário
+
+Casa do Código
+
+Figura 6.4: Listagem de produtos
+
+É sempre uma boa prática circundar as listas com gerenciadores de layout do tipo ScrollViewer, pois as listam podem aumentar de tamanho ao
+decorrer do uso da aplicação.
+Caso você queira acessar o código-fonte do projeto até este ponto, você
+pode encontrá-lo no github através do link: http://bit.ly/8-1GITcap6ParteII
+Já mostramos como utilizar dados para exibir informações. Agora vamos
+verificar como um aplicativo Windows Phone pode armazenar informações
+localmente. Em um cenário real, toda a parte de criação de contas de usuários
+deveria ser armazenada em um banco de dados na nuvem. Para fins de exemplo, utilizaremos armazenamento de dados local do Windows Phone para
+guardar este tipo de informação.
+78
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+Cada aplicativo em um dispositivo Windows Phone possui alguns recursos para armazenamento de dados, entre eles: local utilizado para armazenar configurações Local/Roaming Settings, acesso a arquivos, cartão SD
+e o Credential Locker. Caso seja de seu interesse, você também pode
+utilizar o banco de dados SQLite, um banco de dados que é amplamente
+utilizado em outras plataformas, como Android e IOs.
+Este banco de dados é individual por aplicativo, o que impossibilita o
+compartilhamento de dados armazenados neste banco de dados entre diferentes aplicativos.
+
+6.3
+
+Armazenando dados em arquivos JSON no
+Windows Phone
+
+O Windows Phone possui uma API completa para manipulação de arquivos.
+Esta API facilita o gerenciamento de arquivos em três principais diretórios:
+local,roaming e temp, são respectivamente armazenamento no dispositivo,
+armazenamento na nuvem e armazenamento em uma pasta temporário.
+Estes caminhos são acessíveis via API C# ou através de URIs como (“msappdata:///local/”) por exemplo.
+Agora vamos voltar para nosso aplicativo e criar as classes Usuario, na
+pasta Modelos, e BancoDados (utilizando o já visto padrão Singleton, na
+pasta Resources, conforme o código:
+public class Usuario
+{
+public int Id { get; set; }
+public string Email { get; set; }
+public string NomeUsuario { get; set; }
+public string Senha { get; set; }
+public bool EntrarAutomaticamente { get; set; }
+}
+public class BancoDados
+{
+private BancoDados()
+
+79
+E-book gerado especialmente para
+
+6.3. Armazenando dados em arquivos JSON no Windows Phone
+
+Casa do Código
+
+{}
+private static BancoDados instancia;
+public static BancoDados Instancia
+{
+get
+{
+if (instancia == null)
+instancia = new BancoDados();
+
+}
+}
+
+return instancia;
+}
+set
+{
+instancia = value;
+}
+
+public List<Usuario> Usuarios { get; private set; }
+
+A classe BancoDados será responsável por manter a lista de usuário enquanto a aplicação estiver no ar e também será a classe que fornecerá os
+métodos de leitura e escrita dos dados para JSON. Por ser uma aplicação
+fechada, não iremos nos preocupar com segurança e armazenaremos todos
+os dados em arquivos JSON. No caso de uma aplicação real utilize o recurso
+Credential Locker.
+Este recurso é basicamente um pequeno espaço de memória
+que é utilizado para armazenar nomes de usuário e senhas de uma
+forma segura. A API é bastante simples funcionando como a maior
+parte dos dicionários de dados, esta API se encontra no namespace
+Windows.Security.Credentials.
+Antes de colocarmos nosso banco de dados em prática precisamos criar os
+método para armazenamento e busca destes dados, faremos isso na classe que
+criamos anteriormente. Primeiro vamos fazer o método para armazenamento
+de informações, ele se chamará GravarDados, conforme o código a seguir.
+public async Task GravarDados()
+
+80
+E-book gerado especialmente para
+
+Casa do Código
+
+{
+
+}
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+StorageFolder pasta = ApplicationData.Current.LocalFolder;
+StorageFile arquivo =
+await pasta.CreateFileAsync(DATA_FILE,
+CreationCollisionOption.OpenIfExists);
+await FileIO.WriteTextAsync(arquivo,
+JsonConvert.SerializeObject(Usuarios),
+Windows.Storage.Streams.UnicodeEncoding.Utf8);
+
+Note que, no código exibido, o nome do arquivo se encontra em uma
+constante chamada “DATA_FILE”, é necessário que você inclua esta constante
+na classe. Ela será utilizada para garantir que existirá somente um arquivo
+para controlar os dados. Você pode escolher o nome que quiser para seus
+dados, mas esta é a declaração utilizada no livro private const string
+DATA_FILE = "data.JSON";.
+Agora vamos criar um método para a busca de nossos dados, que será
+executada durante a inicialização da aplicação. Faremos isso para acessar o
+arquivo somente uma vez caso não haja alterações e também iremos garantir
+que sempre haja pelo menos um usuário na base de dados, o qual nomearemos de admin.
+public async Task BuscarDados()
+{
+StorageFolder pasta = ApplicationData.Current.LocalFolder;
+StorageFile arquivo =
+await pasta.CreateFileAsync
+(DATA_FILE, CreationCollisionOption.OpenIfExists);
+string resultado = await FileIO.ReadTextAsync(arquivo);
+if (string.IsNullOrEmpty(resultado))
+{
+Usuario admin = new Usuario();
+admin.NomeUsuario = "admin";
+admin.Senha = "admin";
+admin.Email = "admin@compreaqui.com.br";
+
+81
+E-book gerado especialmente para
+
+6.3. Armazenando dados em arquivos JSON no Windows Phone
+
+Casa do Código
+
+admin.Id = 1;
+Usuarios.Add(admin);
+await GravarDados();
+await BuscarDados();
+
+}
+
+}
+else
+Usuarios = JsonConvert
+.DeserializeObject<List<Usuario>>(resultado);
+
+Vamos destrinchar esse código. Primeiro, acessamos a memória local e
+dela criamos ou abrimos o arquivo dos dados. Após isso, a leitura dos dados é
+feita e, caso o arquivo JSON esteja vazio, é necessário criar o usuário fixo que
+nomeamos como “admin”, depois de criar lemos os dados novamente, para
+que dessa vez a lista de usuários seja carregada.
+Também é necessário inicializar a lista de usuários quando a instância do
+banco de dados é criada, conforme código.
+public static BancoDados Instancia
+{
+get
+{
+return CriarOuObterInstancia();
+}
+set
+{
+instancia = value;
+}
+}
+public static BancoDados CriarOuObterInstancia()
+{
+if (instancia == null)
+{
+instancia = new BancoDados();
+instancia.Usuarios = new List<Usuario>();
+}
+
+82
+E-book gerado especialmente para
+
+Casa do Código
+
+}
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+return instancia;
+
+Por
+
+fim
+
+devemos
+
+incluir
+
+uma
+
+chamada
+
+para
+
+o
+
+método
+
+CriarOuObterInstancia na classe App.xaml.cs, no mesmo local
+onde criamos o manipulador do evento BackPressed.
+
+Agora com nosso gerenciador pronto, vamos voltar para a página de
+criação de contas e fazer a ligação dos dados. Assim faremos com que o
+nosso objeto receba os valores da página, seguindo o já mencionado padrão
+MVVM. Vamos criar mais uma classe na pasta ViewModels que se chamará
+UsuarioVM.
+Lembre-se de que o view model deve conter apenas as propriedades
+que são acessíveis pela interface, então esta classe possuirá uma propriedade para o campo “confirmação de senha”. O código a seguir mostra
+a estrutura que as propriedades devem seguir, exceto pela propriedade
+EntrarAutomaticamente, pois ela possui o valor true como padrão.
+public class UsuarioVM : ViewModelBase
+{
+private string _email;
+public string Email
+{
+get { return _email; }
+set
+{
+_email = value;
+NotificarAlteracao("Email");
+}
+}
+//Outras propriedades
+//...
+private bool _entrarAutomaticamente = true;
+public bool EntrarAutomaticamente
+{
+get { return _entrarAutomaticamente; }
+set
+
+83
+E-book gerado especialmente para
+
+6.3. Armazenando dados em arquivos JSON no Windows Phone
+
+{
+
+}
+
+}
+
+Casa do Código
+
+_entrarAutomaticamente = value;
+NotificarAlteracao("EntrarAutomaticamente");
+
+}
+
+Com a classe UsuarioVM criada, já estamos aptos a vincular os dados
+na página de criação de contas. Como já vimos como fazer o binding das
+propriedades, não precisamos entrar em detalhes neste ponto.
+Depois de ligar os controles de usuário com as devidas propriedades da
+classe, você precisa criar um manipulador para o evento Tapped do botão
+“Criar conta” e introduzir um trecho de código para ser executado quando a
+página for carregada. No código C# de nossa página, vamos criar um atributo
+do tipo UsuarioVM, que será atribuído na propriedade DataContext da
+página durante o evento Loaded.
+protected override void OnNavigatedTo(NavigationEventArgs e)
+{
+if (_usuarioVM == null)
+_usuarioVM = new UsuarioVM();
+}
+
+this.DataContext = _usuarioVM;
+
+Após
+
+fazer
+
+isso,
+
+vamos criar um método chamado
+ValidarCamposCadastro na classe UsuarioVM. Ele deve ser do
+tipo string e deverá validar o preenchimento de todas as propriedades,
+bem como a igualdade entre os campos Senha e ConfirmacaoSenha.
+Vamos concatenar uma mensagem com os problemas que encontrarmos e
+retornar a mensagem completa no método.
+public string ValidarCamposCadastro()
+{
+StringBuilder validacoes = new StringBuilder();
+if (string.IsNullOrEmpty(Email))
+
+84
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+validacoes.AppendLine(
+"- É necessário preencher o campo Email");
+if (string.IsNullOrEmpty(Nome))
+validacoes.AppendLine(
+"- É necessário preencher o campo Usuário");
+if (string.IsNullOrEmpty(Senha) ||
+string.IsNullOrEmpty(ConfirmacaoSenha))
+validacoes.AppendLine(
+"- É necessário preencher os campos Senha e
+Confirmação de Senha");
+else
+if (Senha != ConfirmacaoSenha)
+validacoes.AppendLine(
+"- Os campos Senha e Confirmação de senha estão com
+valores diferentes");
+}
+
+return validacoes.ToString();
+
+A criação do método ValidarCamposCadastro na classe de view
+model pode ser questionável — alguns desenvolvedores preferem criar um
+método dentro da classe modelo — mas, pessoalmente, prefiro que a classe
+modelo tenha responsabilidade pelas regras de negócio e pelas informações,
+enquanto o view model faz todo o intermédio da página com o modelo, inclusive em sua validação.
+Agora voltaremos para o código da página de criação de contas e
+preencheremos o método Button_Tapped. A primeira parte deste método
+consiste em utilizar a validação que criamos e exibir uma mensagem ao
+usuário quando houver algum problema.
+private async void Button_Tapped(object sender,
+TappedRoutedEventArgs e)
+{
+string validacoes = _usuarioVM.ValidarCamposCadastro();
+if (!string.IsNullOrEmpty(validacoes))
+
+85
+E-book gerado especialmente para
+
+6.3. Armazenando dados em arquivos JSON no Windows Phone
+
+{
+
+Casa do Código
+
+string mensagem = string.Concat(
+"Não foi possível gravar esta conta por um ou mais motivos
+abaixo:",
+Environment.NewLine, validacoes);
+MessageDialog messageDialog = new MessageDialog(mensagem);
+await messageDialog.ShowAsync();
+
+}
+else
+{
+}
+
+}
+
+Vamos testar nossa aplicação para verificar como ela se comporta.
+Se você tentou executar os testes de validação, vai perceber que mesmo
+preenchendo os campos a mensagem ainda é preenchida, como ilustra a
+figura 6.5.
+
+86
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+Figura 6.5: Problema com validação
+
+Isso acontece porque o modo padrão do binding apenas vincula os dados
+no momento em que o contexto de dados é atribuído. Para que o objeto receba
+atualizações conforme o valor dos campos, precisamos de mais um detalhe
+em nossa interface. Após selecionarmos a propriedade Path do binding,
+também vamos atribuir a propriedade Mode com o valor TwoWay, conforme
+o exemplo:
+<TextBox InputScope="EmailUserName"
+Text="{Binding Path=Email,Mode=TwoWay}"/>
+
+Se fizermos um teste parecido, mas deixando apenas o campo “Usuário”
+em branco, teremos o resultado correto.
+87
+E-book gerado especialmente para
+
+6.3. Armazenando dados em arquivos JSON no Windows Phone
+
+Casa do Código
+
+Figura 6.6: Validação correta
+
+Agora vamos adicionar o método AdicionarUsuario em nossa classe
+BancoDados. Ele deve receber o view model por parâmetro e transformar
+suas informações em um dado para ser armazenado, conforme o código:
+public async void AdicionarUsuario(UsuarioVM usuarioVM)
+{
+Usuario novoUsuario = new Usuario();
+novoUsuario.Email = usuarioVM.Email;
+novoUsuario.NomeUsuario = usuarioVM.Nome;
+novoUsuario.Senha = usuarioVM.Senha;
+novoUsuario.EntrarAutomaticamente =
+
+88
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+usuarioVM.EntrarAutomaticamente;
+
+}
+
+novoUsuario.Id = Usuarios.Count + 1;
+Usuarios.Add(novoUsuario);
+await GravarDados();
+
+Agora vamos completar o método para armazenar o usuário criado na
+página CriarConta e direcioná-lo para a página ProdutosHub.xaml.
+private async void Button_Tapped(object sender,
+TappedRoutedEventArgs e)
+{
+string validacoes = _usuarioVM.ValidarCamposCadastro();
+if (!string.IsNullOrEmpty(validacoes))
+{
+string mensagem = string.Concat(
+"Não foi possível gravar esta conta por um ou mais motivos
+abaixo:",
+Environment.NewLine, validacoes);
+await ExibirMensagem(mensagem);
+}
+else
+{
+try
+{
+BancoDados.Instancia.AdicionarUsuario(_usuarioVM);
+this.Frame.Navigate(typeof(ProdutosHub));
+}
+catch
+{
+string mensagem =
+"Houve um problema ao tentar criar sua conta,
+tente novamente mais tarde.";
+
+}
+
+}
+
+ExibirMensagem(mensagem);
+
+89
+E-book gerado especialmente para
+
+6.4. Armazenando configurações e os impactos em nosso aplicativo
+
+Casa do Código
+
+}
+private async Task ExibirMensagem(string mensagem)
+{
+MessageDialog messageDialog =
+new MessageDialog(mensagem);
+}
+
+await messageDialog.ShowAsync();
+
+Utilizamos as instruções try e catch para exibir uma mensagem mais
+amigável ao usuário caso aconteça algum problema, mas você deve ter notado
+que estamos apenas passando as informações do view model para o modelo.
+Em uma aplicação real, a senha jamais deve ser armazenada desta forma — é
+extremamente importante que você utilize uma criptografia no momento de
+armazená-la ou utilize o Credential Locker.
+Outra coisa que ainda está em aberto é o usuário autenticado. Apesar
+de fazermos a autenticação no momento da criação da conta, não estamos armazenando esta informação em nenhum lugar, o que nos impede de conhecer
+qual o usuário que está autenticado em nossa aplicação.
+Utilizaremos um outro conceito para armazenar esta informação: trata-se
+do armazenamento local de configurações.
+
+6.4
+
+Armazenando configurações e os impactos
+em nosso aplicativo
+
+Neste ponto será abordado um conceito que é utilizado para armazenar
+informações simples em um modelo chave-valor. Nós o utilizaremos
+para armazenar qual usuário está autenticado no momento. Essas configurações são acessíveis através da propriedade Settings da classe
+IsolatedStorageSettings.
+Vamos simplesmente armazenar a propriedade Id do usuário autenticado. O mecanismo é tão simples que podemos fazer isso utilizando apenas
+uma linha de código, entretanto, é sempre necessário verificar se a chave já
+existe, pois o usuário pode cadastrar mais de uma conta no mesmo dispositivo.
+90
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+Este método será criado dentro da classe
+Autenticar, conforme o código:
+
+Usuario e se chamará
+
+public void Autenticar()
+{
+Windows.Storage.ApplicationDataContainer configuracoes =
+Windows.Storage.ApplicationData.Current.LocalSettings;
+
+}
+
+if (configuracoes.Values.ContainsKey("usuarioId"))
+{
+configuracoes.Values["usuarioId"] = this.Id;
+}
+else
+{
+configuracoes.Values.Add("usuarioId", this.Id);
+}
+
+Teremos de fazer uma chamada para este método logo após armazenar
+o usuário no banco de dados, para garantir que teremos o identificador do
+usuário criado e autenticado.
+Com isso, já conseguiremos detectar se há um usuário autenticado no
+aplicativo e agora precisamos cercar os pontos onde isso é importante. O
+primeiro passo é uma nova regra em nossa aplicação: caso o usuário esteja
+autenticado no aplicativo e pressione o botão voltar do dispositivo, temos
+de fechar o aplicativo, pois assumiremos que ele está saindo.
+Atualmente, se criarmos um usuário, conectarmos na aplicação e pressionarmos o botão voltar do dispositivo, seremos redirecionado para a
+página de criação de usuário. Para alterar o comportamento padrão do botão
+voltar temos de modificar a pilha de navegação de nossa aplicação. Faremos
+isso logo após a instrução para navegarmos para a página de produtos.
+private async void Button_Tapped(object sender,
+TappedRoutedEventArgs e)
+{
+// Código inalterado
+try
+{
+
+91
+E-book gerado especialmente para
+
+6.4. Armazenando configurações e os impactos em nosso aplicativo
+
+}
+}
+
+Casa do Código
+
+BancoDados.Instancia.AdicionarUsuario(_usuarioVM);
+this.Frame.Navigate(typeof(ProdutosHub));
+this.Frame.BackStack.Clear();
+
+// Código inalterado
+
+Dessa forma evitamos o problema de o usuário retornar até a página de
+criação de contas ou mesmo até a página inicial. Ele terá de sair da conta
+atual para poder visualizar estas páginas novamente, e esta opção será criada na página “sua conta”. Mas antes disso, vamos fazer com que a marcação
+“Lembrar-me” funcione.
+Para isso, teremos que voltar até nossa página inicial e inserir um trecho de código no método OnNavigatedTo, que é disparado sempre que o
+usuário é enviado para a página, seja qual for o motivo, inclusive por ele abrir
+a aplicação. Vamos interceptar este método e fazer com que o usuário vá para
+a página ProdutosHub quando a regra se cumprir.
+protected async override void
+OnNavigatedTo(NavigationEventArgs e)
+{
+string dados = await LerArquivoDadosAsync();
+Loja.Dados = JsonConvert.DeserializeObject<Loja>(dados);
+await BancoDados.Instancia.BuscarDados();
+Windows.Storage.ApplicationDataContainer configuracoes =
+Windows.Storage.ApplicationData.Current.LocalSettings;
+if (configuracoes.Values.ContainsKey("usuarioId") &&
+Convert.ToInt32(configuracoes.Values["usuarioId"]) != 0)
+{
+Usuario ultimoUsuario =
+BancoDados.Instancia
+.Usuarios
+.FirstOrDefault
+(usuario =>
+
+92
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 6. Gerenciamento de dados em um aplicativo Windows Phone
+
+usuario.Id ==
+Convert.ToInt32(
+configuracoes.Values["usuarioId"]));
+
+}
+
+}
+
+if (ultimoUsuario.EntrarAutomaticamente)
+{
+this.Frame.Navigate(typeof(ProdutosHub));
+this.Frame.BackStack.Clear();
+}
+else
+configuracoes.Values["usuarioId"] = 0;
+
+Com esta implementação, caso o usuário tenha deixado a opção
+“Lembrar-me” marcada, sempre que ele entrar no aplicativo já será redirecionado diretamente para o hub de produtos.
+Agora você já está apto a modificar a página Entrar.xaml para validar o
+usuário e senha e também armazenar a autenticação. Além disso, você deverá
+criar um novo item de Pivot na página SuaConta.xaml com o título de
+“Informações”.
+Este item deve ser o primeiro da página e deverá mostrar os dados do
+usuário autenticado no momento, bem como a opção para sair, que deve cancelar a autenticação do usuário na aplicação. Para esta segunda opção, você
+deve utilizar a CommandBar. É importante que você faça isso antes de seguir
+no livro, pois no próximo capítulo estas alterações já estarão implementadas.
+Caso queira acessar o código-fonte do projeto até o fim deste capítulo, você pode encontrá-lo no github através do link: http://bit.ly/
+8-1GITcap6ParteIII.
+
+93
+E-book gerado especialmente para
+
+E-book gerado especialmente para
+
+Capítulo 7
+
+Navegação e ciclo de vida
+Até este capítulo, nossa aplicação já está boa parte implementada, mas ainda
+temos que criar a página para visualizar todos os produtos e para organizálos por categorias. Entretanto, estas duas páginas podem ser apenas uma. Isso
+pode ser feito através de passagem de parâmetros entre as páginas.
+
+7.1
+
+Navegação entre páginas
+
+Nós já utilizamos os princípios básicos de navegação nos capítulos anteriores.
+Agora vamos compreender melhor como isso funciona.
+Cada aplicação Windows Phone possui uma instância de um Frame. Este
+componente torna possível a navegabilidade entre as páginas através de uma
+pilha de navegação, que faz com que o botão voltar do dispositivo direcione
+o usuário para a página correta ao utilizar o método GoBack.
+
+E-book gerado especialmente para
+
+Casa do Código
+
+7.1. Navegação entre páginas
+
+Existem basicamente dois tipos de navegação: forward e backward. A
+navegação forward é utilizada sempre que direcionamos o usuário para uma
+página através do Frame ou quando o usuário abre nosso aplicativo. Já a
+navegação backward é ativada quando utilizamos o método GoBack, como
+por exemplo quando o usuário pressiona o botão voltar de seu dispositivo.
+Vamos criar uma página chamada Produtos.xaml. Aplique a ela o
+mesmo plano de fundo das páginas Pivot e Hub e deixe apenas como título
+o texto “produtos”, como ilustra a figura 7.1.
+
+Figura 7.1: Nova página
+
+Para acessar esta página o usuário deve pressionar o texto “todos os produtos” da HubSection “Produtos”, então também implemente a navegação
+96
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 7. Navegação e ciclo de vida
+
+para esta página, conforme o código:
+private void TodosProdutos_Tapped(object sender,
+TappedRoutedEventArgs e)
+{
+this.Frame.Navigate(typeof(Produtos));
+}
+
+Para listar os produtos, criaremos um template semelhante ao utilizado
+no HubSection “produtos”, mas vamos fazer pequenas alterações na forma de
+exibir as informações, mostrando além do nome e do preço a avaliação média
+do produto. Veja o código.
+<DataTemplate>
+<Grid Height="150" VerticalAlignment="Top" Margin="0,5">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="110"/>
+<ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+<Grid Background="White">
+<Grid.Resources>
+<converter:ImageSourceConverter x:Key="converter"/>
+</Grid.Resources>
+<Image Source="{Binding Path=Icone,
+Converter={StaticResource converter}}" Height="75" />
+</Grid>
+<StackPanel Grid.Column="1" Margin="10">
+<TextBlock Text="{Binding Path=Descricao}"
+FontSize="{ThemeResource TextStyleExtraLargeFontSize}"
+TextWrapping="Wrap"/>
+<StackPanel Orientation="Horizontal">
+<TextBlock Text="por: " VerticalAlignment="Center"/>
+
+97
+E-book gerado especialmente para
+
+7.1. Navegação entre páginas
+
+Casa do Código
+
+<TextBlock Text="{Binding Path=PrecoAPagar}"
+FontSize="24" VerticalAlignment="Center"/>
+<TextBlock Text=" R$" FontSize="24"
+VerticalAlignment="Center"/>
+<TextBlock Text="Avaliação média: "
+VerticalAlignment="Center" Margin="10,0,0,0"/>
+<TextBlock Text="{Binding Path=AvaliacaoMedia}"
+FontSize="24" VerticalAlignment="Center"/>
+</StackPanel>
+</StackPanel>
+</Grid>
+</DataTemplate>
+
+Agora que já temos o design desta página criado vamos vincular os dados
+para exibir a listagem. Faremos isso criando um manipulador para o evento
+Loaded da lista, como já fizemos em outras páginas.
+private void ListaProdutos_Loaded
+(object sender, RoutedEventArgs e)
+{
+ListView lista = sender as ListView;
+List<ProdutoVM> produtos =
+( from produto in Loja.Dados.Produtos
+select new ProdutoVM
+{
+Id = produto.Id,
+Descricao = produto.Descricao,
+Preco = produto.Preco,
+PrecoPromocao = produto.PrecoPromocao,
+AvaliacaoMedia = produto.AvaliacaoMedia,
+CategoriaId = produto.Categoria.Id,
+CategoriaDescricao = produto.Categoria.Descricao,
+
+98
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 7. Navegação e ciclo de vida
+
+Icone = produto.Icone
+}).ToList();
+}
+
+lista.ItemsSource = produtos;
+
+Com esta implementação, já podemos ver a listagem de todos os produtos, como ilustra a figura 7.2
+
+Figura 7.2: Listagem dos produtos
+
+Agora precisamos criar uma forma para reutilizar esta página com filtros
+por categoria. É a hora de utilizar passagem de parâmetro entre as páginas.
+Primeiro, vamos voltar até o item
+Categorias na página
+ProdutosHub.xaml. Vamos adicionar ao template que lista a descrição das
+categorias um manipulador para o evento Tapped, conforme o código.
+<ListView Loaded="ListaCategoria_Loaded">
+<ListView.ItemTemplate>
+<DataTemplate>
+<TextBlock Text="{Binding Path=Descricao}"
+Style="{ThemeResource ListViewItemTextBlockStyle}"
+Tapped="Categoria_Tapped"/>
+</DataTemplate>
+</ListView.ItemTemplate>
+</ListView>
+
+Dentro deste método C#, teremos que obter todas as informações que
+vamos passar por parâmetro. Isso é feito através do parâmetro sender, que
+99
+E-book gerado especialmente para
+
+7.1. Navegação entre páginas
+
+Casa do Código
+
+é enviado no método disparado pelo evento Tapped. Vamos converter o
+objeto sender para seu tipo original ( TextBlock) para então extrairmos
+as informações.
+Para fazer a filtragem e alteração do título na página, precisaremos do
+Id da categoria. Entretanto, nosso componente TextBlock não possui esta
+informação. Existem diversas maneiras diferentes de fazer isso, vamos selecionar uma bastante simples.
+Da mesma forma que armazenamos a descrição da categoria na propriedade Text, vamos armazenar seu identificador na propriedade Tag
+através do binding.
+<TextBlock Text="{Binding Path=Descricao}"
+Style="{ThemeResource ListViewItemTextBlockStyle}"
+Tag="{Binding Path=Id}" Tapped="Categoria_Tapped"/>
+
+Com isso, já podemos extrair as informações do componente e enviá-las.
+Para enviarmos o usuário para uma página, utilizamos o método Navigate,
+como já vimos anteriormente. Ele possui uma sobrecarga onde é possível enviar parâmetros para recuperá-los em outra página, conforme código a seguir.
+private void Categoria_Tapped(object sender,
+TappedRoutedEventArgs e)
+{
+TextBlock categoriaClicada = sender as TextBlock;
+int categoriaId = Convert.ToInt32(categoriaClicada.Tag);
+this.Frame.Navigate(typeof(Produtos), categoriaId);
+}
+
+Precisamos voltar mais uma vez para o código da página
+Produtos.xaml para capturarmos os parâmetros enviados a ela. Os
+parâmetros são armazenados na propriedade Parameter do objeto
+NavigationEventArgs. Este objeto pode ser recuperado no método
+OnNavigatedTo da página, então criaremos um atributo privado para esta
+classe e iremos preencher seu valor com o parâmetro recebido, conforme o
+código:
+protected override void OnNavigatedTo(NavigationEventArgs e)
+{
+
+100
+E-book gerado especialmente para
+
+Casa do Código
+
+}
+
+Capítulo 7. Navegação e ciclo de vida
+
+_categoriaId = Convert.ToInt32(e.Parameter);
+
+Agora que já vimos a forma de obtermos o valor, vamos alterar o manipulador do evento Loaded de nossa lista para pegarmos o parâmetro e utilizá-lo
+para modificar os itens que serão exibidos na página.
+private void ListaProdutos_Loaded
+(object sender, RoutedEventArgs e)
+{
+ListView lista = sender as ListView;
+List<ProdutoVM> produtos =
+( from produto in Loja.Dados.Produtos
+select new ProdutoVM
+{
+Id = produto.Id,
+Descricao = produto.Descricao,
+Preco = produto.Preco,
+PrecoPromocao = produto.PrecoPromocao,
+AvaliacaoMedia = produto.AvaliacaoMedia,
+CategoriaId = produto.Categoria.Id,
+CategoriaDescricao = produto.Categoria.Descricao,
+Icone = produto.Icone
+}).ToList();
+if (_categoriaId != 0)
+{
+produtos =
+produtos.Where(produto =>
+produto.CategoriaId ==
+Convert.ToInt32(_categoriaId)).ToList();
+}
+}
+
+Titulo.Text = produtos.FirstOrDefault().CategoriaDescricao;
+
+lista.ItemsSource = produtos;
+
+Nossa página já está pronta para se ajustar conforme os parâmetros uti101
+E-book gerado especialmente para
+
+7.1. Navegação entre páginas
+
+Casa do Código
+
+lizados! A figura 7.3 ilustra as diferentes formas desta página.
+
+Figura 7.3: Página recebendo parâmetros
+
+Por fim iremos acrescentar uma animação de continuidade em nossa
+página para melhorar a experiência do usuário. Dessa forma, quando o
+usuário pressionar um item da lista de categorias o campo sairá da página
+e voltará quando a próxima página abrir, dando a sensação de continuidade
+no aplicativo.
+Na página Produtos.xaml você terá de incluir um código para transição de página, após a declaração do componente Page.
+<Page.Transitions>
+<TransitionCollection>
+<NavigationThemeTransition>
+<NavigationThemeTransition
+.DefaultNavigationTransitionInfo>
+<ContinuumNavigationTransitionInfo/>
+</NavigationThemeTransition
+.DefaultNavigationTransitionInfo>
+</NavigationThemeTransition>
+</TransitionCollection>
+</Page.Transitions>
+
+102
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 7. Navegação e ciclo de vida
+
+Agora é necessário identificar os controles de tela que fazem esta transição contínua. Na página Produtos.xaml basta incluir a propriedade
+ContinuumNavigationTransitionInfo.IsEntranceElement com
+o valor true no componente de título da página.
+Na página
+ProdutosHub.xaml é necessário identificar a lista e o item da lista, conforme o trecho de código:
+<ListView Loaded="ListaCategoria_Loaded"
+ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+<ListView.ItemTemplate>
+<DataTemplate>
+<TextBlock Text="{Binding Path=Descricao}"
+Style="{ThemeResource ListViewItemTextBlockStyle}"
+Tag="{Binding Path=Id}" Tapped="Categoria_Tapped"
+ContinuumNavigationTransitionInfo.IsExitElement="True"/>
+</DataTemplate>
+</ListView.ItemTemplate>
+</ListView>
+
+Com isso você já possui a transição de páginas! Caso você queira ver o
+código-fonte da aplicação até este momento, acesse meu github através do
+link: http://bit.ly/8-1GITcap7ParteI.
+
+7.2
+
+Ciclo de vida da aplicação
+
+É muito importante que você entenda o ciclo de vida de uma aplicação Windows Phone para que você possa manter uma experiência agradável para o
+usuário. Cada aplicativo possui um ciclo de quatro eventos: launch, suspend
+e resume.
+Originalmente, todo aplicativo está em seu estado fechado. Neste estado,
+o aplicativo não consome memória e recursos do smartphone.
+Quando o usuário abre o aplicativo, ele passa pelo evento launch. Você
+pode injetar código C# durante esta transição criando um manipulador para
+o evento Launched na classe App.xaml.cs.
+103
+E-book gerado especialmente para
+
+7.2. Ciclo de vida da aplicação
+
+Casa do Código
+
+Depois de aberto, o aplicativo pode consumir recursos do dispositivo ativamente, conforme sua demanda. Este estado permanece ativo enquanto o
+usuário utiliza o software. Caso o usuário pressione o botão voltar do dispositivo e feche seu aplicativo, ele passará pelo evento suspend, ou seja, seu
+aplicativo estará em background no sistema operacional.
+Caso o usuário pressione o botão “windows” do dispositivo ou clique em
+algum link para outro aplicativo, sua aplicação também entrará em suspensão.
+Independente da forma que isso ocorra, o evento Suspending sempre é
+disparado.
+O estado suspenso pode ser considerado um estado de pausa, ou seja, ele
+não está sendo executado, porém todo o estado atual permanece armazenado
+na memória. Dessa forma, caso o usuário pressione o botão voltar e retorne
+para seu aplicativo, ele é aberto rapidamente, como se nunca tivesse sido pausado.
+Conforme o usuário navega entre diferentes aplicativos, mais aplicativos
+passam para o estado de suspensão, fazendo com que mais memória e recursos sejam consumidos. Caso o usuário retorne para seu aplicativo enquanto
+ele está no estado de suspensão, o evento Resuming é disparado.
+Enquanto sua aplicação se encontra em background, o Windows Phone
+irá fazer de tudo para que o aplicativo corrente receba todos os recursos
+necessários para que ele seja executado de forma fluida e isso inclui alterar
+o estado de seu aplicativo estado para terminado.
+O estado terminado pode ser considerado um estado final do aplicativo,
+entretanto, a página na qual você estava, o estado da aplicação e o estado da
+navegação são armazenados. Caso seja aberto novamente estando nesse estado, é possível recuperar as informações do aplicativo na memória, passando
+a impressão ao usuário de que nunca foi fechado.
+Para recuperar as informações, podemos utilizar os manipuladores para
+os eventos OnLaunched, que é disparado quando o usuário retorna a sua aplicação. Você deve ter notado que ao passar para o estado terminado nenhum
+evento é disparado, o que torna o evento Suspending extremamente importante.
+A figura 7.4 ilustra o fluxo descrito nos parágrafos anteriores.
+
+104
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 7. Navegação e ciclo de vida
+
+Figura 7.4: Ciclo de vida de um aplicativo
+
+7.3
+
+NavigationHelper e SuspensionManager
+
+Neste ponto, você já aprendeu a teoria sobre o ciclo de vida do seu aplicativo.
+Agora está na hora de vermos o que podemos implementar para melhorar a
+experiência do usuário com o este novo conhecimento.
+Os componentes NavigationHelper e SuspensionManager são
+fundamentais para aplicarmos estes conceitos. Eles são utilizados para armazenamento e gerenciamento do estado atual da página, ou seja, as propriedades de cada campo. Quando uma aplicação entra no estado suspenso,
+estas propriedades permanecem, mas quando ela entra no estado terminado
+perdemos estes valores, algo que pode causar frustração ao usuário final.
+Vamos visualizar como isso funciona na página para criação de contas. Vá
+até ela em seu emulador, preencha os campos e pressione a tecla pesquisar
+do dispositivo. Depois disso, pressione o botão voltar e veja o que acontece.
+
+105
+E-book gerado especialmente para
+
+7.3. NavigationHelper e SuspensionManager
+
+Casa do Código
+
+Figura 7.5: Aplicativo sendo restaurado do estado de suspensão
+
+Como podemos ver na figura anterior, todo o estado da página continuava
+salvo, mesmo após sair do aplicativo. Isso aconteceu pois o aplicativo entrou
+apenas no modo suspenso. Felizmente conseguiremos simular o aplicativo
+no modo terminado com a ajuda do Visual Studio.
+Quando seu aplicativo estiver em execução você poderá visualizar um
+botão chamado “Lifecycle Events” com as seguintes opções: Suspend, Resume
+e Suspend and shutdown (para fazer sua aplicação entrar no estado terminado), conforme ilustra figura 7.6
+
+106
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 7. Navegação e ciclo de vida
+
+Figura 7.6: Colocando sua aplicação no estado terminada
+
+Após fazer isso, refaça o teste anterior e você perceberá que, ao voltar, seu
+aplicativo será aberto como da primeira vez. Vamos resolver isso utilizando
+armazenando o estado de sua aplicação utilizando os componentes citados
+anteriormente.
+Anteriormente no livro nós já sobrescrevemos o método
+OnNavigatedTo, que ocorre quando o usuário é direcionada para
+esta página. Agora, além dele, também vamos sobrescrever o método
+OnNavigatedFrom, que é chamado quando o usuário sai da página, ou
+seja, vamos armazenar as informações quando o usuário sair e inseri-las
+novamente quando o usuário retornar para ela.
+Antes de mais nada precisamos incorporar os componentes mencionados. Eles são adicionados automaticamente quando você cria uma página do
+tipo BasicPage iremos criá-la para visualizarmos como é feita a utilização
+destes componentes.
+Ao criar a página o Visual Studio irá criar em nosso projeto a pasta
+Common, que conterá os componentes citados. Agora vamos abrir o código
+da nossa BasicPage e visualizar alguns pontos.
+No construtor dessa página há a inicialização de um atributo pri107
+E-book gerado especialmente para
+
+7.3. NavigationHelper e SuspensionManager
+
+Casa do Código
+
+vado do tipo NavigationHelper e também há a assinatura dos eventos LoadState e SaveState deste componente. Além disso, no fim de
+cada método OnNavigateTo/From há uma chamada para um método do
+mesmo nome para o NavigationHelper. Isso é necessário para que seja
+possível armazenar o estado da página e do aplicativo. Agora veremos como
+fazer isso em nossas páginas já existentes.
+Antes de implementarmos o NavigationHelper precisamos fazer com
+que a aplicação consiga identificar a página em que o usuário estava quando o
+modo suspensão foi ativado, para isso utilizamos o SuspensionManager.
+Vamos até o arquivo App.xaml.cs no método OnLaunched.
+Após a inicialização do Frame de seu aplicativo, é necessário registrálo no SuspensionManager, você pode fazer isso através do método
+RegisterFrame. Além disso, você precisará fazer uma chamada ao método
+RestoreAsync() quando a aplicação estiver com o estado anterior igual a
+terminado, conforme o código:
+// Código padrão já implementado na criação do projeto
+// Create a Frame to act as the navigation context and navigate
+// to the first page
+rootFrame = new Frame();
+SuspensionManager.RegisterFrame(rootFrame, "AppFrame");
+rootFrame.CacheSize = 1;
+if (e.PreviousExecutionState ==
+ApplicationExecutionState.Terminated)
+{
+try
+{
+await SuspensionManager.RestoreAsync();
+}
+catch (SuspensionManagerException)
+{
+}
+
+}
+
+108
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 7. Navegação e ciclo de vida
+
+// Place the frame in the current Window
+Window.Current.Content = rootFrame;
+
+Como agora há uma chamada a um método assíncrono, é necessário
+incluir a palavra reservada async na assinatura do método. Por fim,
+será necessário fazer uma chamada ao método SaveAsync() no método
+OnSuspending também da classe App.xaml.cs.
+private async void OnSuspending(object sender,
+SuspendingEventArgs e)
+{
+var deferral = e.SuspendingOperation.GetDeferral();
+
+}
+
+await SuspensionManager.SaveAsync();
+deferral.Complete();
+
+Com isso já garantimos que algumas informações da aplicação serão salvas quando ela entrar em modo de suspensão. Mas agora vamos voltar à
+página de criação de contas e implementar o momento em que ocorre a saída
+do usuário desta página.
+O primeiro passo é incluir um atributo privado do tipo
+NavigationHelper, inicializá-lo no construtor, criar um manipulador para os eventos LoadState e SaveState e fazer a chamada para os
+métodos OnNavigateTo/From do mesmo modo que na página de exemplo. Tendo isto verificado, vamos armazenar as informações na propriedade
+PageState.
+private void NavigationHelper_SaveState
+(object sender, SaveStateEventArgs e)
+{
+e.PageState["email"] = _usuarioVM.Email;
+e.PageState["usuario"] = _usuarioVM.Nome;
+e.PageState["senha"] = _usuarioVM.Senha;
+e.PageState["confirmacao"] = _usuarioVM.ConfirmacaoSenha;
+e.PageState["lembrarme"] = _usuarioVM.EntrarAutomaticamente;
+}
+
+109
+E-book gerado especialmente para
+
+7.3. NavigationHelper e SuspensionManager
+
+Casa do Código
+
+O código anterior obtém todos os dados através do view model da
+página. Da mesma forma, vamos preencher as informações do objeto
+quando o usuário voltar para a página. Anteriormente havíamos utilizado
+o evento SaveState, mas para o carregamento dos dados utilizaremos o
+LoadState.
+private void NavigationHelper_LoadState(object sender,
+LoadStateEventArgs e)
+{
+if (e.PageState != null)
+{
+_usuarioVM = new UsuarioVM();
+if (e.PageState.ContainsKey("email"))
+_usuarioVM.Email = e.PageState["email"] as string;
+if (e.PageState.ContainsKey("usuario"))
+_usuarioVM.Nome = e.PageState["usuario"] as string;
+if (e.PageState.ContainsKey("senha"))
+_usuarioVM.Senha = e.PageState["senha"] as string;
+if (e.PageState.ContainsKey("confirmacao"))
+_usuarioVM.ConfirmacaoSenha =
+e.PageState["confirmacao"] as string;
+
+}
+
+}
+
+if (e.PageState.ContainsKey("lembrarme"))
+_usuarioVM.EntrarAutomaticamente =
+Convert.ToBoolean(e.PageState["lembrarme"]);
+
+Agora, caso você refaça o teste proposto no começo desta seção, verá que
+os dados são recuperados assim que a página é reaberta, oferecendo uma sensação de que ela nunca havia sido fechada.
+O código do aplicativo até este ponto pode ser encontrado em meu github
+através do link: http://bit.ly/8-1GITcap7ParteII
+
+110
+E-book gerado especialmente para
+
+Casa do Código
+
+7.4
+
+Capítulo 7. Navegação e ciclo de vida
+
+Inicialização rápida
+
+Caso você tenha testado o SuspensionManager em todas as páginas
+verá que acontece um problema ao tentar abrir automaticamente a página
+ProdutosHub. Isso ocorre pois estamos carregando os dados apenas na
+página principal e não durante a inicialização do aplicativo.
+Você pode pensar em inserir o método de busca dos dados no manipulador do evento Launched, mas infelizmente isso pode se tornar um problema em um cenário real quando a conexão estiver lenta, por exemplo. Caso
+este evento demore tempo demais para executar, o sistema operacional irá
+fechar seu aplicativo e provavelmente ele não irá passar pelas baterias de testes
+antes de entrar oficialmente na loja para download.
+Outro ponto interessante é que não precisamos carregar os dados do
+aplicativo até que o usuário precise deles, então vamos fazer com que
+os dados sejam carregados somente quando o usuário entrar na página
+ProdutosHub.xaml. Como já mostramos anteriormente, faremos isso
+através do método OnNavigatedTo.
+Vamos criar um método chamado CarregarDadosAsync (na classe
+Loja), que irá fazer o que nós estávamos fazendo no evento de abertura da
+aplicação. Porém, já vamos prepará-lo para ser chamado de forma assíncrona,
+através das palavras-chaves async e await, que vimos ao decorrer do livro.
+public async Task CarregarDadosAsync()
+{
+string dados = await LeitorArquivo.LerAsync();
+Loja.Dados = JsonConvert.DeserializeObject<Loja>(dados);
+await Task.Delay(3000);
+}
+
+Note que no código anterior foi inserida uma espera de três segundos,
+apenas para que nosso carregamento fique um pouco mais lento e parecido
+com um cenário com maior quantidade de dados. Agora teremos de alterar
+um pouco nosso código na página ProdutosHub. Primeiro, criaremos três
+atributos privados para armazenar os componentes do tipo ListView.
+public sealed partial class ProdutosHub : Page
+{
+
+111
+E-book gerado especialmente para
+
+7.4. Inicialização rápida
+
+Casa do Código
+
+private ListView listaCategorias;
+private ListView listaProdutos;
+private ListView listaPromocoes;
+}
+
+//Código já existente ...
+
+Agora criaremos o método VincularDados onde iremos fazer o vínculo dessas listas utilizando os LINQs que atualmente estão no manipulador
+de evento de Loaded de cada uma das listas. Além disso, removeremos
+o código destes manipuladores, fazendo com que eles sirvam apenas para
+preencher os atributos internos da classe, e validem o momento em que todos
+os atributos estão preenchidos para que os dados possam ser conectados.
+private void ListaCategoria_Loaded(object sender,
+RoutedEventArgs e)
+{
+listaCategorias = sender as ListView;
+CarregarDadosAsync();
+}
+private void ListaPromocoes_Loaded(object sender,
+RoutedEventArgs e)
+{
+listaPromocoes = sender as ListView;
+CarregarDadosAsync();
+}
+private void ListaProdutos_Loaded(object sender,
+RoutedEventArgs e)
+{
+listaProdutos = sender as ListView;
+CarregarDadosAsync();
+}
+public void VincularDados()
+{
+listaCategorias.ItemsSource =
+
+112
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 7. Navegação e ciclo de vida
+
+( from produtos in Loja.Dados.Produtos
+select new CategoriaVM
+{
+Id = produtos.Categoria.Id,
+Descricao = produtos.Categoria.Descricao
+}).Distinct().ToList();
+listaPromocoes.ItemsSource =
+( from produtos in Loja.Dados.Produtos
+where produtos.PrecoPromocao != 0
+select new ProdutoVM
+{
+Id = produtos.Id,
+Descricao = produtos.Descricao,
+Preco = produtos.Preco,
+PrecoPromocao = produtos.PrecoPromocao,
+Icone = produtos.Icone
+})
+.OrderByDescending(produto => produto.Desconto)
+.ToList();
+listaProdutos.ItemsSource =
+( from produtos in Loja.Dados.Produtos
+where produtos.Id == 3 || produtos.Id == 4
+select new ProdutoVM
+{
+Id = produtos.Id,
+Descricao = produtos.Descricao,
+Icone = produtos.Icone,
+Preco = produtos.Preco,
+PrecoPromocao = produtos.PrecoPromocao
+})
+.ToList();
+}
+
+Note
+
+que
+
+estamos utilizando em nosso código o método
+CarregarDadosAsync da página e não do objeto Loja. Neste método,
+vamos verificar se as listas já estão prontas e se os dados estão carregados.
+113
+E-book gerado especialmente para
+
+7.4. Inicialização rápida
+
+Casa do Código
+
+Caso não estejam, faremos com que eles sejam carregados de forma assíncrona, ou seja, em uma thread diferente da thread principal da aplicação.
+Dessa forma, não iremos bloquear nossa interface, evitando a impressão de
+que o aplicativo está travado.
+Para fazer isso, vamos criar mais um método async, chamado
+CarregarDadosAsync, ainda na página ProdutosHub.xaml. Ele irá verificar se os dados já estão carregados e, caso não estejam, irá chamar o método
+assíncrono da classe Loja para carregá-los e então chamaremos o método
+VincularDados para fazer a ligação das informações. Veja o código:
+private async void CarregarDadosAsync()
+{
+if (listaCategorias != null &&
+listaPromocoes != null &&
+listaProdutos != null)
+{
+if (Loja.Dados.Produtos == null)
+{
+await Loja.Dados.CarregarDados();
+VincularDados();
+}
+else
+{
+VincularDados();
+}
+}
+}
+
+Neste ponto você já poderá ver os dados sendo carregados quando abrir
+a página. Ainda não remova o delay inserido durante o carregamento, pois
+ele será útil para vermos a importância do armazenamento do estado da aplicação.
+Ainda temos uma melhoria de usabilidade para fazer: enquanto os dados estiverem sendo carregados, o usuário não verá nenhuma mensagem
+avisando o motivo de os dados não estarem aparecendo. Vamos criar uma
+mensagem e uma barra de progresso que ficará em um painel sobre a página
+enquanto os dados estiverem sendo carregados.
+114
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 7. Navegação e ciclo de vida
+
+Faremos isso adicionando um componente que irá conter um
+TextBlock e um ProgressRing, que estarão visíveis por padrão e
+serão escondidos após a execução do método que vincula os dados.
+<Grid x:Name="pnlCarregando">
+<Grid.RowDefinitions>
+<RowDefinition Height="*"/>
+<RowDefinition Height="150"/>
+<RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+<StackPanel Grid.Row="1" Background="#7F000000">
+<TextBlock Margin="20"
+FontSize="{ThemeResource TextStyleExtraExtraLargeFontSize}"
+HorizontalAlignment="Center">
+Carregando dados...
+</TextBlock>
+<ProgressRing IsActive="True" Background="{x:Null}" />
+</StackPanel>
+</Grid>
+
+Com isso, temos um resultado bastante agradável ao usuário, como ilustra
+a figura 7.7.
+
+115
+E-book gerado especialmente para
+
+Casa do Código
+
+7.4. Inicialização rápida
+
+Figura 7.7: Carregando Dados
+
+O código do aplicativo até este ponto se encontra em meu github através
+do link: http://bit.ly/8-1GITcap7ParteIII.
+
+116
+E-book gerado especialmente para
+
+Capítulo 8
+
+Integração com o sistema
+operacional
+Neste capítulo vamos criar diversas formas de integrar nosso aplicativo com
+o sistema operacional para disponibilizar uma melhor experiência para o
+usuário. Mas antes de partirmos para este tópico, vamos finalizar as funcionalidades em aberto em nossa aplicação, isto é, vamos fazer uma nova
+página no aplicativo. Será uma página para detalhamento de produto, que
+deverá ser chamada quando o usuário selecionar um produto de qualquer
+lista. Além disso, faremos com que a pesquisa de produtos na página de hub
+passe a funcionar.
+
+E-book gerado especialmente para
+
+8.1. Finalizando as funcionalidades já criadas
+
+8.1
+
+Casa do Código
+
+Finalizando as funcionalidades já criadas
+
+Vamos começar criando uma página para o detalhamento do produto. Ela
+deve conter todas as propriedades de um produto, e será utilizada sempre
+que o usuário selecionar um produto em uma das listas. É claro que criaremos
+apenas uma página e buscaremos os seus dados de acordo com o parâmetro
+que recebermos ao abri-la.
+Não entraremos em muitos detalhes, pois já fizemos todas estas implementações anteriormente. Vamos criar uma página que recebe como
+parâmetro o Id do produto e exibe suas propriedades, algo que você, neste
+ponto, já está apto a fazer. Tente fazê-la semelhante à ilustrada pela figura 8.1.
+
+Figura 8.1: Detalhes de um produto
+
+118
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 8. Integração com o sistema operacional
+
+Também devemos criar uma página para que o usuário possa pesquisar
+os produtos. Nos capítulos anteriores, criamos um botão na CommandBar no
+hub de produtos; agora criaremos a sua funcionalidade.
+Neste caso, não é necessária uma página nova, já que temos a página
+que lista todos os produtos, ou mesmo os produtos por categoria. Vamos aproveitá-la também para listar os resultados da pesquisa, então vamos
+prepará-la para receber um novo tipo de parâmetro, chamado Pesquisa.
+Para fazer isso devemos criar a classe Pesquisa em nossa pasta
+Auxiliar, ele deverá conter propriedades para armazenar o identificador
+de uma categoria e a descrição de um produto, conforme o código:
+public class Pesquisa
+{
+public int CategoriaId { get; set; }
+public string DescricaoProduto { get; set; }
+}
+
+Agora nosso parâmetro que antes era do tipo int e continha apenas o
+identificador da categoria possui um tipo mais complexo, mas o princípio
+de funcionamento continua igual. Para melhorar a experiência, faremos com
+que a pesquisa por texto não seja sensível a maiúsculas, ou seja, vamos sempre
+comparar as informações em minúsculo (utilizando o método ToLower),
+tornando esta diferença irrelevante. Veja o código:
+if (_parametrosPesquisa != null)
+{
+if (_parametrosPesquisa.CategoriaId != 0)
+{
+produtos = produtos.Where(produto =>
+produto.CategoriaId ==
+_parametrosPesquisa.CategoriaId).ToList();
+Titulo.Text = produtos.FirstOrDefault().CategoriaDescricao;
+}
+else
+if (!string.IsNullOrEmpty(
+_parametrosPesquisa.DescricaoProduto))
+{
+
+119
+E-book gerado especialmente para
+
+8.1. Finalizando as funcionalidades já criadas
+
+Casa do Código
+
+produtos = produtos.Where
+(produto =>
+produto.Descricao.ToLower()
+.Contains(
+_parametrosPesquisa.DescricaoProduto.ToLower()))
+.ToList();
+}
+
+}
+
+Titulo.Text = "resultados";
+
+Esta segunda parte será um pouco mais detalhada, pois ainda não fizemos
+nada parecido. Criaremos um painel com visibilidade dinâmica, ou seja, ela
+ficará invisível na maior parte do tempo, mas quando o usuário pressionar o
+botão pesquisar da barra da aplicação, ele se tornará visível e o usuário
+poderá digitar sua pesquisa em um campo.
+A primeira coisa a fazer é circundar todo o componente de Hub com um
+Grid dividido em duas linhas, uma para o Hub já existente e outra para o
+painel de pesquisa. Vamos permitir que o Hub ocupe as duas linhas, pois na
+maior parte do tempo o painel de pesquisa estará oculto. Isso é feito através
+da propriedade Grid.RowSpan.
+Na segunda linha deste novo Grid, adicionaremos mais um Grid que
+ficará oculto por padrão. Neste componente, deve haver um TextBox que o
+usuário possa utilizar em suas pesquisas. Você também deve criar um manipulador para os eventos KeyUp e LostFocus deste TextBox, além, é claro,
+de criar um manipulador para o evento de Click do botão pesquisar da
+barra da aplicação.
+<Grid>
+<Grid.RowDefinitions>
+<RowDefinition Height="*"/>
+<RowDefinition Height="90"/>
+</Grid.RowDefinitions>
+<Hub Title="CompreAqui" Grid.RowSpan="2">
+<!--<Componente Hub já existente >-->
+</Hub>
+
+120
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 8. Integração com o sistema operacional
+
+<Grid Grid.Row="1" x:Name="PainelPesquisa"
+Background="#FF1F1F1F" Visibility="Collapsed">
+<TextBox Margin="10"
+VerticalAlignment="Top" x:Name="CampoPesquisa"
+KeyUp="CampoPesquisa_KeyUp"
+LostFocus="CampoPesquisa_LostFocus" />
+</Grid>
+</Grid>
+
+A parte visual desta página já está pronta. Agora precisamos implementar
+o código C#. Vamos começar criando dois métodos: ExecutarPesquisa
+e DesaparecerPainelPesquisa.
+Ambos
+são
+bastante
+simples:
+no
+método
+DesaparecerPainelPesquisa, basta limparmos o campo de texto
+da pesquisa e voltarmos a visibilidade do painel para Collapse.
+Já no método ExecutarPesquisa, devemos obter as informações do
+TextBox, direcionar o usuário para a página Produtos.xaml passando
+os parâmetros de pesquisa e, por fim, desaparecer com o painel de pesquisa
+utilizando o método citado anteriormente. Observe o código:
+private void ExecutarPesquisa()
+{
+Pesquisa pesquisa = new Pesquisa();
+pesquisa.DescricaoProduto = CampoPesquisa.Text;
+
+}
+
+this.Frame.Navigate(typeof(Produtos), pesquisa);
+DesaparecerPainelPesquisa();
+
+private void DesaparecerPainelPesquisa()
+{
+CampoPesquisa.Text = string.Empty;
+PainelPesquisa.Visibility = Visibility.Collapsed;
+}
+
+121
+E-book gerado especialmente para
+
+8.1. Finalizando as funcionalidades já criadas
+
+Casa do Código
+
+Com isso, já temos as duas principais funções para pesquisa implementadas; agora devemos saber o momento de utilizá-las. Quando o usuário
+pressionar (evento KeyUp) a tecla Enter do teclado, devemos confirmar a
+pesquisa e, quando o usuário selecionar outro campo na página, fora o campo
+de texto da pesquisa e o botão da CommandBar (evento LostFocus), devemos fazer o painel desaparecer, conforme o código:
+private void CampoPesquisa_LostFocus
+(object sender, RoutedEventArgs e)
+{
+if ( btnAppBar.FocusState ==
+Windows.UI.Xaml.FocusState.Unfocused)
+}
+
+DesaparecerPainelPesquisa();
+
+private void CampoPesquisa_KeyUp
+(object sender, KeyRoutedEventArgs e)
+{
+if (e.Key ==
+Windows.System.VirtualKey.Enter)
+{
+ExecutarPesquisa();
+}
+}
+
+Agora, para finalizarmos a implementação nesta página, precisamos implementar o manipulador do evento Click do botão da barra da aplicação.
+Este método terá comportamentos distintos conforme a visibilidade do painel
+de pesquisa: caso ele esteja invisível, devemos mostrá-lo ao usuário; caso ele
+já esteja visível, devemos executar a pesquisa com as informações já inseridas
+no campo.
+private void ApplicationBarIconButton_Click
+(object sender, EventArgs e)
+{
+if (PainelPesquisa.Visibility ==
+System.Windows.Visibility.Collapsed)
+
+122
+E-book gerado especialmente para
+
+Casa do Código
+
+{
+
+}
+
+Capítulo 8. Integração com o sistema operacional
+
+PainelPesquisa.Visibility =
+System.Windows.Visibility.Visible;
+CampoPesquisa.Focus();
+
+}
+else
+{
+ExecutarPesquisa();
+}
+
+Agora já podemos fazer nossas pesquisas, como ilustra a figura 8.2.
+
+Figura 8.2: Pesquisando produtos
+
+Mesmo com a funcionalidade pronta, ainda temos trabalho a fazer:
+quando o usuário executar uma pesquisa que não retorna nenhum dado, ele
+será enviado para esta página vazia. É sempre mais agradável ao usuário receber uma mensagem de que não foram encontrados dados com a pesquisa
+digitada — veja a diferença na figura 8.3.
+123
+E-book gerado especialmente para
+
+Casa do Código
+
+8.2. Entendendo os Live tiles
+
+Figura 8.3: Pesquisa sem dados
+
+Esta será uma implementação muito simples, basta circundar a lista de
+produtos com um StackPanel e inserir o componente de texto com a mensagem. Este componente ficará invisível por padrão e, no momento de vincular os dados, basta fazer uma verificação. Caso não haja dados, tornamos o
+campo visível.
+Agora que terminamos nossas implementações pendentes, voltaremos ao
+assunto principal deste capítulo. Caso você deseja obter ou verificar o código
+do projeto até este ponto, ele se encontra no meu github no link: http://bit.ly/
+8-1GITcap8ParteI.
+
+8.2 Entendendo os Live tiles
+Se você já está acostumado ou já conhece o Windows Phone, provavelmente
+já ouviu falar das live tiles. Tratam-se de retângulos que representam os ícones
+da aplicação como nos outros sistemas operacionais. Entretanto, os live tiles
+vão além do que só abrir o aplicativo: eles podem ser uma boa fonte de co124
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 8. Integração com o sistema operacional
+
+municação entre o aplicativo e o usuário, mesmo quando o usuário está com
+o aplicativo fechado.
+Os live tiles podem receber atualizações de informações contínuas,
+mesmo com o aplicativo fechado. O usuário também pode escolher entre
+tamanhos diferentes para o tile de seu aplicativo.
+Além disso, uma aplicação pode gerar mais de um tipo de live tile, ou seja,
+dentro da mesma aplicação você pode ter tiles secundários. Um bom exemplo
+de utilização deste recurso é o aplicativo pessoas, com o qual você pode gerar
+um tile diferente para cada contato do seu smartphone.
+Antes de começarmos a implementar é necessário compreendermos as
+terminologias que envolvem o termo tile. Em vários casos os live tiles possuem uma animação, em geral esta animação consiste em girar o tile e mostrar
+a parte de trás do tile. A esta segunda parte damos o nome de Peek.
+Em alguns casos os live tiles também precisam exibir um número grande,
+este número é conhecido como Block, ele é utilizado para fazer uma contagem de e-mails por exemplo. Alguns aplicativos possuem forte ligação com
+imagens ou fotos, para estes casos há um objeto chamado Image Collection,
+a figura 8.4 ilustra estes componentes em um live tile.
+
+Figura 8.4: Tile utilizando o template Iconic
+
+125
+E-book gerado especialmente para
+
+Casa do Código
+
+8.2. Entendendo os Live tiles
+
+Existem diversos tipos diferentes de templates de tiles para a plataforma
+Windows, não cabe ao escopo deste livro descrever cada um deles, mas é
+aconselhável que para a criação de uma aplicação real você busque por mais
+informações. Através do link: http://bit.ly/tileTemplate você pode visualizar
+um catálogo de templates disponibilizado pela Microsoft.
+No exemplo do livro, vamos implementar um template simples, mas esteja
+à vontade caso queira testar as outras possibilidades. Isso é fácil de fazer, uma
+vez que você conhece as propriedades referenciadas na figura anterior.
+Primeiro, vamos abrir o arquivo Package.appxmanifest que já vimos
+anteriormente. Ele se encontra no diretório raiz de sua aplicação. Na aba Visual Assets, podemos ver diversas propriedades de nosso aplicativo, conforme
+a figura 8.5:
+
+Figura 8.5: Arquivo Manifest
+
+Iremos fazer diversas modificações em nosso aplicativo. Primeiro, vamos
+escolher um novo ícone para nossa aplicação — é necessário utilizar as imagens com o tamanho indicado para cada template, dessa forma ela não sofrerá
+126
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 8. Integração com o sistema operacional
+
+nenhuma distorção —, então iremos aproveitar o ícone que já criamos para
+colocarmos na página de abertura e vamos redimencioná-los para as dimensões corretas em cada tile.
+Note também que, ao fazer com que o fundo da imagem seja transparente,
+o sistema faz com que o tile automaticamente receba a cor do tema do usuário,
+caso queira utilizar uma cor de fundo específica é só preencher a propriedade
+Background também exibida nesta tela.
+Vamos selecionar para todos os templates os campos ShowName, isso irá
+fazer com que o nome de nossa aplicação seja exibido nos tiles.
+Com isso já conseguimos visualizar o ícone e os diferentes formatos de tile
+de nossa aplicação, inclusive com temas diferentes selecionados pelo usuário,
+conforme ilustra a figura 8.6
+
+Figura 8.6: Tiles
+
+Apesar de que não iremos utilizar esta técnica para benefício de nosso
+aplicativo, é importante que você conheça uma forma de atualizar os dados
+de seu live tile. Portanto, vamos criar um exemplo, apenas para fins de aprendizagem.
+Vamos fazer com que, quando o usuário criar uma nova conta no aplicativo, ele possa ver o seu nome de usuário e e-mail no tile. Então, vamos
+voltar à página CriarConta.xaml e adicionar um novo método, chamado
+AtualizarLiveTile. Este método receberá o nome e o e-mail do usuário
+por parâmetro e fará suas atualizações.
+Diretamente pelo SDK é necessário criar o XML do live tile através de
+strings. Felizmente há uma biblioteca que já automatiza este processo, a qual
+podemos obter via NuGet. Ela chama-se NotificationExtensions e também
+estará incorporada no projeto disponível no github.
+127
+E-book gerado especialmente para
+
+8.2. Entendendo os Live tiles
+
+Casa do Código
+
+Há um objeto chamado TileContentFactory, que possui diversos
+métodos para criação de tiles nos templates disponíveis. Iremos utilizá-lo
+para criar um tile largo (wide) e o tile quadrado de tamanho médio. Nesta
+biblioteca você deve sempre criar do maior para o menor, já que um engloba
+o outro. Depois utilizaremos o objeto TileUpdateManager da API nativa
+para atualizar os dados de nosso tile.
+private void AtualizarLiveTile(string usuario, string email)
+{
+ITileWide310x150ImageAndText01 wideTile =
+TileContentFactory.CreateTileWide310x150ImageAndText01();
+wideTile.TextCaptionWrap.Text =
+string.Concat(usuario, " - ",email);
+wideTile.Image.Src =
+@"ms-appx:/Assets/WideLogo.scale-240.png";
+ITileSquare150x150PeekImageAndText01 squareTile =
+TileContentFactory
+.CreateTileSquare150x150PeekImageAndText01();
+squareTile.TextBody1.Text = usuario;
+squareTile.TextBody2.Text = email;
+squareTile.Image.Src =
+@"ms-appx:/Assets/Square71x71Logo.scale-240.png";
+wideTile.Square150x150Content = squareTile;
+
+}
+
+TileUpdateManager.CreateTileUpdaterForApplication().
+Update(wideTile.CreateNotification());
+
+Agora colocaremos uma chamada a este método após enviar o usuário
+para a página ProdutosHub. A figura 8.7 mostra a diferença entre os tiles
+da aplicação antes e depois desta atualização.
+
+128
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 8. Integração com o sistema operacional
+
+Figura 8.7: Atualização do live tile
+
+É importante ter em mente que esta atualização não seria bem-vinda em
+um aplicativo real, pois devem ser exibidas apenas informações relevantes ao
+usuário. Lembramos que esse exemplo foi criado apenas para aprendizagem.
+
+8.3
+
+Criando tiles secundários
+
+Já aprendemos a criar o tile principal de nosso aplicativo e a fazer atualizações
+neste tile. Agora vamos ver como criar tiles secundários, com os quais poderemos direcionar o usuário para uma página específica em nosso aplicativo.
+Nós criaremos tiles secundários para as páginas Produtos.xaml e
+ProdutoDetalhe.xaml. Na página de listagem de produtos, o usuário
+poderá armazenar um atalho para verificar os produtos de uma categoria ou
+de um resultado de pesquisa. Já na página de detalhamento de produto, o
+usuário poderá criar um atalho para um único produto, para acompanhar,
+por exemplo, o momento em que ele entra em uma promoção.
+129
+E-book gerado especialmente para
+
+8.3. Criando tiles secundários
+
+Casa do Código
+
+Vamos começar com a página Produtos.xaml. Primeiro, habilitamos
+a CommandBar desta página e inserimos um botão para fixar na tela inicial.
+Você também deve criar um manipulador para o evento Click deste botão.
+Nós utilizamos anteriormente o objeto TileUpdateManager, cuja
+função é gerenciar o tile principal, mas agora precisaremos de um componente conhecido como SecundaryTile, que gerencia os tiles secundários
+de sua aplicação. Vamos criar o método CriarTileSecundaria no código
+desta página, que deve criar uma live tile conforme fizemos anteriormente.
+O título do novo tile será o mesmo que o título desta página, além de
+conter algumas informações sobre o nosso aplicativo, conforme o código:
+public async void CriarTileSecundaria()
+{
+SecondaryTile tileSecundaria =
+new SecondaryTile("pesquisa");
+tileSecundaria.DisplayName =
+string.Concat("Pesquisa: ", Titulo.Text);
+tileSecundaria.Arguments =
+string.Concat("Produtos:",
+_parametrosPesquisa.CategoriaId, ":",
+_parametrosPesquisa.DescricaoProduto);
+tileSecundaria.VisualElements
+.ShowNameOnSquare150x150Logo = true;
+tileSecundaria.VisualElements
+.Square150x150Logo =
+new Uri("ms-appx:///Assets/Logo.scale-240.png");
+if (SecondaryTile.Exists(tileSecundaria.TileId))
+{
+await tileSecundaria.UpdateAsync();
+}
+else
+{
+await tileSecundaria.RequestCreateAsync();
+
+130
+E-book gerado especialmente para
+
+Casa do Código
+
+}
+
+Capítulo 8. Integração com o sistema operacional
+
+}
+
+Note que na criação desse tile nós preenchemos uma propriedade
+chamada Argument, que é utilizada para que possamos passar os parâmetros
+que o aplicativo irá receber quando ele for aberto. Por fim vamos completar o
+manipulador do evento de Click, simplesmente fazendo uma chamada para
+o método anterior, veja o código:
+private void Fixar_Click(object sender, RoutedEventArgs e)
+{
+CriarTileSecundaria();
+}
+
+Você já conseguirá fixar seus tiles secundários através da página de
+listagem de produtos, entretanto ele terá a mesma funcionalidade que o tile
+padrão da aplicação, em nosso exemplo é desejável que o usuário seja direcionado para a página de listagem. Para fazer isso, precisamos alterar o
+comportamento do método manipulador do evento Launched e capturar os
+parâmetros enviados por nossa tile.
+Você já poderá fixar seus tiles secundários através da página de listagem
+de produtos através do botão da ApplicationBar, conforme ilustra a figura
+8.8.
+
+131
+E-book gerado especialmente para
+
+Casa do Código
+
+8.3. Criando tiles secundários
+
+Figura 8.8: Arquivo Manifest
+
+O método OnLaunched da classe App.xaml.cs em um determinado
+momento avalia se o conteúdo do frame do aplicativo está nulo, o que significaria que o aplicativo está sendo aberto agora sem restauração de estado. Após
+esta verificação a classe direciona o usuário para a MainPage do aplicativo.
+Vamos alterar esta verificação para também verificar se existem parâmetros de inicialização, caso existam devemos validar os parâmetros e enviar o
+usuário para a página correta. Esta modificação foi feita com o trecho de
+código a seguir.
+protected async override void OnLaunched
+(LaunchActivatedEventArgs e)
+{
+// Código inalterado ..
+
+132
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 8. Integração com o sistema operacional
+
+// ...
+if ( rootFrame.Content == null ||
+!string.IsNullOrEmpty(e.Arguments))
+{
+// Código inalterado ..
+// ...
+rootFrame.Navigated += this.RootFrame_FirstNavigated;
+if (string.IsNullOrEmpty(e.Arguments))
+IrParaPagina(rootFrame, typeof(MainPage),e.Arguments);
+else
+{
+string[] argumentos = e.Arguments.Split(':');
+if (argumentos[0] == "Produtos")
+{
+Type pagina = typeof(Produtos);
+Pesquisa pesquisa = new Pesquisa();
+pesquisa.CategoriaId = Convert.ToInt32(argumentos[1]);
+pesquisa.DescricaoProduto = argumentos[2];
+}
+
+}
+
+}
+
+IrParaPagina(rootFrame, pagina, pesquisa);
+
+}
+
+private static void IrParaPagina
+(Frame rootFrame, Type page, object arguments)
+{
+if (!rootFrame.Navigate(page, arguments))
+throw new Exception("Failed to create initial page");
+}
+
+Apesar de a funcionalidade de criar um tile secundário ter sido feita com
+sucesso, ainda nos resta resolver alguns problemas. Agora, caso o usuário entre no aplicativo através de uma tile secundária, ele irá receber uma exceção
+não tratada, isso ocorre porque só estamos verificando se os dados estão carregados na página ProdutosHub.
+133
+E-book gerado especialmente para
+
+8.4. Conhecendo o Share Contract
+
+Casa do Código
+
+Basta inserir uma verificação simples e criar um painel para notificar que
+os dados estão sendo carregados, como já fazemos no hub de produtos. Também há outro caso, quando o usuário entra no aplicativo através de uma tile
+secundária e o aplicativo estiver em modo terminado, ele não irá conseguir
+acessar o resto da aplicação, caso ele pressione o botão voltar a aplicação será
+fechada, pois não existe nada na pilha de navegação. Isso pode ser contornado adicionando um comando secundário na barra de comandos para levar
+o usuário até a página inicial.
+Este item de menu deve ser visível apenas quando a aplicação for aberta
+através do tile secundário. Vamos adicioná-lo e fazer com que o usuário seja
+direcionado para a página MainPage.xaml, lembrando que, se ele já estiver
+autenticado, ele será redirecionado para a página ProdutosHub.xaml.
+Este mesmo procedimento deverá ser feito na página de detalhamento de
+produto, desde a criação da tile até o tratamento na carga dos dados. Não é
+necessário me prolongar explicando como fazer este mesmo procedimento
+na página de detalhamento de produto, pois o procedimento será o mesmo.
+Apenas altere os dados do tile que você julgar importante e tente implementar isso sozinho. Se precisar, volte algumas páginas e releia o modo de
+criação. Lembre-se: programar se aprende praticando!
+Caso você tenha mais experiência em programação, sugiro que todas estas funções repetidas sejam implementadas em um objeto. Neste livro, elas
+são implementadas separadamente para fins didáticos, mas em uma implementação real, o reaproveitamento do código é bastante importante.
+Depois de já ter implementado essa funcionalidade, você pode conferir o código que se encontra em meu github através do link: http://bit.ly/
+8-1GITcap8ParteII .
+
+8.4
+
+Conhecendo o Share Contract
+
+Os contratos ou Contracts fazem parte de um conceito muito importante
+no desenvolvimento para a plataforma Windows/Windows Phone. Através
+deles, é possível reutilizar funções que já existem no dispositivo em outros
+aplicativos. Por exemplo, caso seja necessário enviarmos um e-mail através
+de nosso aplicativo, não precisaríamos implementar esta funcionalidade no
+134
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 8. Integração com o sistema operacional
+
+próprio aplicativo, pois já existem alguns que tratam especificamente este
+problema.
+Basicamente, reaproveitamos funcionalidades que outros aplicativos já
+fazem para que nosso aplicativo se preocupe somente em resolver o problema
+que ele se propõe a resolver. Dessa forma, não retiramos o foco do desenvolvimento.
+Como já vimos no capítulo anterior, sobre navegação, sempre que uma
+nova aplicação é aberta, o estado da nossa aplicação é alterada. Portanto,
+tenha ciência de que seu aplicativo pode entrar no estado terminated (apesar
+de não ser comum) e você precisará restaurar seu estado.
+Os contratos citados anteriormente são subdivididos em dois tipos: Target e Source. Eles têm uma diferença bastante significativa entre si: as aplicações que implementam o contrato do tipo target são as publicadoras de
+conteúdo, ou seja, Facebook, Twitter, e-mails etc. em geral existirão menos
+aplicações deste tipo que do tipo source. As implementações do tipo source
+se baseiam em compartilhar dados ou arquivos, ou seja, sua aplicação é utilizada como fonte de dados por alguma outra.
+Para termos a experiência de implementar um contrato do tipo source,
+vamos explorar um exemplo bastante simples. Na página de detalhamento do
+produto, vamos inserir uma opção na CommandBar para compartilharmos
+o produto em redes sociais (share targets). Você verá que isso pode ser feito
+de uma maneira incrivelmente simples.
+Primeiro, vamos alterar a página para inserir o botão para compartilhar,
+conforme o código:
+<AppBarButton
+Label="compartilhe"
+Click="Compartilhar_Click"
+Icon="ReShare">
+</AppBarButton>
+
+No código C# da página, teremos de fazer algumas modificações, lembrase que foi dito que o compartilhamento de informações é feita de forma indireta através do sistema operacional? Agora é exatamente isso que teremos
+de fazer, precisamos notificar o sistema que iremos compartilhar dados nesta
+135
+E-book gerado especialmente para
+
+8.4. Conhecendo o Share Contract
+
+Casa do Código
+
+página, para que quando for selecionado um target do contrato ele saiba onde
+buscar os dados.
+Para fazer isso, vamos criar um método chamado OnDataRequested, que
+recebe dois parâmetros: um objeto do tipo DataTransferManager e outro
+do tipo DataRequestedEventArgs. Este será o método que será chamado
+pelo sistema operacional para requisitar os dados de nosso aplicativo.
+private void OnDataRequested
+(DataTransferManager sender, DataRequestedEventArgs args)
+{
+}
+
+Antes de inserirmos algum código neste método precisamos notificar o
+sistema operacional que esta página compartilha dados. Além disso também é necessário notificar o sistema quando ela deixa de compartilhar dados, ou seja, quando o usuário sai desta página. Para fazer isso vamos inserir um trecho de código no método OnNavigatedTo e sobrescrever o
+método OnNavigatedFrom vinculando o método recém-criado ao evento
+DataRequested.
+protected async override void
+OnNavigatedTo(NavigationEventArgs e)
+{
+// Código já existente
+
+}
+
+DataTransferManager
+.GetForCurrentView()
+.DataRequested += OnDataRequested;
+
+protected override void OnNavigatedFrom(NavigationEventArgs e)
+{
+base.OnNavigatedFrom(e);
+DataTransferManager
+.GetForCurrentView()
+.DataRequested -= OnDataRequested;
+}
+
+136
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 8. Integração com o sistema operacional
+
+Com isso feito já podemos implementar o método criado, vamos criar
+um chamado “pacote de dados” para compartilhamento, o que é feito através
+do objeto DataRequest disponível no parâmetro args. Você pode compartilhar tipos diferentes de conteúdos: imagens, Uris, links para aplicações e
+textos. Para mantermos o exemplo simples, vamos compartilhar apenas textos.
+private void OnDataRequested
+(DataTransferManager sender, DataRequestedEventArgs args)
+{
+ProdutoVM dataContext = DataContext as ProdutoVM;
+DataRequest dataRequest = args.Request;
+dataRequest.Data.Properties.Title = txtTitulo.Text;
+dataRequest
+.Data
+.Properties
+.Description = string.Concat("Compartilhamento do produto ",
+dataContext.Descricao);
+string texto = string.Concat( "Confiram o produto ",
+dataContext.Descricao, " no aplicativo CompreAqui,
+está custando apenas ", dataContext.PrecoAPagar, " R$.");
+}
+
+dataRequest.Data.SetText(texto);
+
+Também é necessário fazer a chamada para o sistema operacional ativar
+os share targets quando o usuário pressionar o botão na CommandBar, basta
+inserir a seguinte linha de código:
+private void Compartilhar_Click(object sender,
+RoutedEventArgs e)
+{
+DataTransferManager.ShowShareUI();
+}
+
+Com este código-fonte, você já estará apto a compartilhar nas redes sociais e em todos os outros share targets aos quais seu smartphone está conec137
+E-book gerado especialmente para
+
+8.4. Conhecendo o Share Contract
+
+Casa do Código
+
+tado, como por exemplo, Facebook, Twitter, OneNote, SMS etc. Infelizmente,
+você precisará de um dispositivo físico para testar esta funcionalidade por
+completo, já que o emulador não possui uma conta Microsoft vinculada e,
+por sua vez, não haverá autenticação em nenhuma rede social. Entretanto,
+você estará apto a compartilhar as informações via SMS e via OneNote conforme a figura 8.9.
+
+Figura 8.9: Compartilhamento de conteúdo
+
+Você pode conferir o código que se encontra em meu github através do
+link: http://bit.ly/8-1GITcap8ParteIII.
+
+138
+E-book gerado especialmente para
+
+Capítulo 9
+
+Mapas e localização
+Até este momento já criamos diversas funcionalidades em nosso aplicativo,
+como consulta de produtos, criação de contas de usuário, compartilhamento
+informações etc. Entretanto, você deve ter percebido que, apesar de se tratar
+de um aplicativo de compra, ainda não fizemos a funcionalidade para o
+usuário poder efetuar sua compra.
+
+9.1
+
+Criando a página para finalizar compra
+
+Vamos voltar à nossa página ProdutoDetalhe.xaml. Nela, o usuário consegue verificar as informações detalhadas de um determinado produto, bem
+como compartilhar informações e criar um live tile para entrar no aplicativo
+direto na página deste produto.
+Agora vamos adicionar um último botão na CommandBar desta página,
+que será utilizado para iniciar o processo de compra. Como o foco de nossa
+
+E-book gerado especialmente para
+
+9.1. Criando a página para finalizar compra
+
+Casa do Código
+
+aplicação é meramente didático, vamos limitar a compra para apenas um produto, eliminando toda a criação de funcionalidades para gerenciar um carrinho de compras.
+Quando o usuário pressionar este botão, ele será direcionado para a
+página onde irá informar o endereço para entrega da mercadoria, e já finalizará a compra. Claro que, antes de direcionarmos o usuário para
+esta página, precisamos verificar se ele está autenticado no aplicativo, pois
+usuários anônimos não podem realizar compras.
+Já implementamos este tipo de validação antes: basta verificarmos se há a
+configuração usuarioId armazenada e se o Id é válido. Dependendo da resolução desta condição, vamos direcionar o usuário para a página de finalizar
+compras ou para a página de efetuar login, conforme o código:
+private async void Comprar_Click(object sender,
+RoutedEventArgs e)
+{
+Windows.Storage.ApplicationDataContainer configuracoes =
+Windows.Storage.ApplicationData.Current.LocalSettings;
+if ( configuracoes.Values.ContainsKey("usuarioId") &&
+Convert.ToInt32(configuracoes.Values["usuarioId"]) != 0)
+{
+this.Frame.Navigate(typeof(FinalizarCompra));
+}
+else
+{
+await ExibirMensagem(
+"Ops, desculpe, mas você não pode efetuar uma
+compra sem estar autenticado no aplicativo." );
+
+}
+
+}
+
+this.Frame.Navigate(typeof(Entrar));
+
+Perceba que no trecho de código anterior nós estamos direcionando o
+usuário para a página FinalizarCompra.xaml. Esta página ainda não
+existe, então temos de criá-la.
+140
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 9. Mapas e localização
+
+Ela será criada no mesmo diretório das demais. Além disso, você deve
+executar algumas das tarefas que já aprendeu, como, por exemplo, preparar a
+página para abrir de forma animada e alterar o Background para manter a
+consistência da interface do aplicativo.
+Esta página deve possuir os campos: logradouro e cidade, para que o
+usuário possa informar o endereço de entrega e, para fins didáticos, adicionaremos um mapa que mostrará a posição atual do usuário e o endereço
+que ele digitar. Isso será feito utilizando o componente Map.
+Como já foi explicado no começo livro, é necessário informar no arquivo Package.appxmanifest todas as permissões para que seu aplicativo possa utilizar funcionalidades do sistema operacional. Para podermos
+utilizar o mapa e o gerenciamento de localização, precisamos ativar a Capabilitie Location, ilustrada pela figura 9.1.
+
+Figura 9.1: Capabilitie para localização
+
+141
+E-book gerado especialmente para
+
+9.1. Criando a página para finalizar compra
+
+Casa do Código
+
+Caso você não habilite este capabilitie, sua aplicação irá disparar uma exceção do tipo Exception com a mensagem indicando falta de permissão
+para utilizar o recurso.
+Com elas habilitadas, podemos voltar à nossa página e começar a criar
+os componentes. Vamos projetar o layout baseado em um StackPanel,
+envolvendo todos os componentes do conteúdo da página. Não se esqueça
+de circundar este painel com um ScrollViewer para evitar problemas de
+navegação.
+A primeira parte da criação será bastante simples e similar ao que já fizemos até agora: vamos empilhar os campos para o usuário digitar o logradouro
+e a cidade e, depois destes campos, teremos o botão Adicionar Endereço,
+conforme o trecho a seguir.
+<ScrollViewer Grid.Row="1" Margin="10">
+<StackPanel>
+<TextBlock FontSize="{ThemeResource
+TextStyleExtraLargeFontSize}">
+Logradouro
+</TextBlock>
+<TextBox x:Name="Logradouro"/>
+<TextBlock FontSize="{ThemeResource
+TextStyleExtraLargeFontSize}">
+Cidade
+</TextBlock>
+<TextBox x:Name="Cidade"/>
+<Button HorizontalAlignment="Stretch">
+Adicionar Endereço
+</Button>
+</StackPanel>
+</ScrollViewer>
+
+Com isso, os primeiros componentes da página já foram inseridos. Agora
+142
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 9. Mapas e localização
+
+utilizaremos alguns componentes um pouco diferentes do que fizemos até
+agora, mas não será nada complicado. A próxima coisa a fazer é incluir o
+namespace para mapas em seu XAML.
+xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+
+Feito isso, podemos utilizar o componente MapControl que foi citado
+anteriormente. Vamos incluir este mapa dentro do painel já existente e, além
+disso, mesmo o componente MapControl já possuindo um recurso de zoom
+através do gesto de pinça, criaremos botões para facilitar o aumento e a
+diminuição do zoom.
+<maps:MapControl x:Name="Mapa" Height="400" Grid.ColumnSpan="2">
+<StackPanel Margin="10">
+<Button Height="90" FontSize="32">+</Button>
+<Button Height="90" FontSize="32">-</Button>
+</StackPanel>
+</maps:MapControl>
+
+Para completar nossa página teremos o botão para finalizar a compra.
+<StackPanel>
+...
+<maps:MapControl x:Name="Mapa" Height="400"
+Grid.ColumnSpan="2">
+<StackPanel Margin="10">
+<Button Height="90" FontSize="32">+</Button>
+<Button Height="90" FontSize="32">-</Button>
+</StackPanel>
+</maps:MapControl>
+<Button HorizontalAlignment="Stretch">
+Finalizar Compra
+</Button>
+</StackPanel>
+
+143
+E-book gerado especialmente para
+
+9.2. Entendendo o componente Map
+
+Casa do Código
+
+Com este layout definido, sua página deve estar bastante similar à
+ilustrada na figura 9.2.
+
+Figura 9.2: Página para finalizar compra
+
+9.2 Entendendo o componente Map
+Antes de seguirmos com a implementação de nossa página, é interessante
+que você conheça algumas das funcionalidades e comportamentos do componente MapControl.
+144
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 9. Mapas e localização
+
+Este componente é bastante rico em termos de funcionalidades. É possível incluir diferentes tipos de conteúdo em um mapa em um aplicativo para
+Windows Phone. No próprio mapa nativamente já existem os nomes das ruas
+e alguns ícones de locais importantes, como por exemplo metrôs, conforme
+ilustra a figura 9.3.
+
+Figura 9.3: Locais no mapa
+
+Você também pode alterar o esquema de cores do mapa através da propriedade ColorScheme. Ela possui dois valores possíveis, Dark e Light
+(padrão). A figura 9.4 mostra isso.
+
+145
+E-book gerado especialmente para
+
+9.2. Entendendo o componente Map
+
+Casa do Código
+
+Figura 9.4: Locais no mapa
+
+Além disso, também há opções para que possamos visualizar as construções importantes em uma visão tridimensional com legendas, indicativos para pedestres, como por exemplo passarelas ou escadas e fluxo do tráfico. Essas funcionalidades podem ser ativadas alterando o valor para true
+das propriedades LandmarksVisible, PedestrianFeaturesVisible
+e TrafficFlowVisible respectivamente. A figura 9.5 ilustra todas as funcionalidades ativas simultaneamente.
+
+146
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 9. Mapas e localização
+
+Figura 9.5: Funcionalidades ativas no mapa
+
+Também é possível adicionar elementos no mapa em tempo de execução,
+devido ao conceito de camadas que existe no componente MapControl.
+A visualização do componente MapControl pode ser considerada
+uma somatória de diferentes camadas, cada uma com uma responsabilidade
+própria para exibição de conteúdos. A camada mais inferior é responsável
+por substituir o background caso sua aplicação precise alterar isto. A camada
+sobre esta é o background padrão, que se encarrega de exibir os terrenos e os
+mares. Por padrão toda camada possui uma sobrecamada para customização,
+então, acima do background há a sobrecamada de background.
+Após estas três, temos a camada de áreas, que é responsável por exibir
+informações sobre indústrias, parques, e locais importantes, e acima dela (e
+de sua sobrecamada) há a camada que exibe as rodovias. Depois delas, existe
+ainda a camada que mostra os textos de identificação, para dar mais sentido
+147
+E-book gerado especialmente para
+
+9.3. Finalizando nosso aplicativo
+
+Casa do Código
+
+às demais camadas.
+Por fim, temos a camada dos elementos que são adicionados via programação e dos elementos adicionados via XAML. A figura 9.6 exibe todas em
+ordem.
+
+Figura 9.6: Camadas do mapa
+
+Agora iremos finalizar nosso aplicativo adicionando itens na camada de
+elementos do mapa.
+
+9.3 Finalizando nosso aplicativo
+Vamos criar um método em nossa página FinalizarCompra.xaml.cs
+para marcar uma posição no mapa. Este método deverá receber por
+parâmetro dois valores: a posição na qual o objeto deve ser marcado (
+Geopoint) e o texto que será exibido sobre o objeto no mapa. Veja o código:
+private void MarcarPosicaoNoMapa
+(Geopoint posicao, string texto)
+{
+MapIcon marcacao = new MapIcon();
+marcacao.Title = texto;
+marcacao.Location = posicao;
+}
+
+Mapa.MapElements.Add(marcacao);
+
+148
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 9. Mapas e localização
+
+Veja que nesse código utilizamos a camada MapElements para adicionarmos o nosso MapIcon. Agora criaremos o método para alterar o zoom do
+mapa. Ele será utilizado no evento Tapped dos botões “+” e “-”. Este método
+é bem simples: basta acumular um valor ao zoom atual do mapa e validar se o
+valor acumulado não ultrapassa os limites de zoom do mapa (1-20), conforme
+o código:
+private void AlterarAcumulativoZoom(double zoomLevel)
+{
+double zoomLevelLimite = Mapa.ZoomLevel + zoomLevel;
+if (zoomLevel > 0)
+zoomLevelLimite = Math.Min(20, zoomLevelLimite);
+else
+zoomLevelLimite = Math.Max(1, zoomLevelLimite);
+}
+
+Mapa.ZoomLevel = zoomLevelLimite;
+
+Note que sempre estamos somando o valor ao zoom atual e isso funcionará tanto para o aumento quanto para a diminuição do zoom — para
+fazer isso, basta informar um número negativo na soma. Agora vamos fazer
+com que os botões de auxílio do mapa funcionem. Para isso, você deve criar
+um método manipulador do evento Tapped para cada um deles e fazer uma
+chamada a este método informando o aumento ou a diminuição que será aplicada.
+private void AumentarZoom_Tapped
+(object sender, TappedRoutedEventArgs e)
+{
+AlterarAcumulativoZoom(3);
+}
+private void DiminuirZoom_Tapped
+(object sender, TappedRoutedEventArgs e)
+{
+AlterarAcumulativoZoom(-3);
+}
+
+149
+E-book gerado especialmente para
+
+9.3. Finalizando nosso aplicativo
+
+Casa do Código
+
+Primeiro vamos implementar a função para obter a localização do
+usuário, utilizando um objeto do tipo Geolocator. Este objeto nos permite
+buscar a posição do usuário em coordenadas, ou seja, latitude e longitude.
+A precisão desta busca varia de acordo com a propriedade
+DesiredAccuracy. Ele poderá buscar a posição do usuário através
+de métodos diferentes, como IP ou triangulação de antenas. Para nosso
+exemplo, vamos deixar o valor Default.
+O
+método
+para
+obtermos
+a
+localização
+se
+chama
+GetGeopositionAsync. Como já foi dito, por convenção os métodos assíncronos utilizam o sufixo Async, logo este é um método assíncrono.
+Depois de obter a posição geográfica, vamos utilizar o método para criar uma
+marcação no mapa — mas não se esqueça de circundar tudo isso com uma
+cláusula try-catch, pois o usuário pode estar com o recurso de localização
+desligado em seu dispositivo. O código a seguir ilustra este método:
+private async void ObterPosicaoAtual()
+{
+Geolocator localizador = new Geolocator();
+localizador.DesiredAccuracy = PositionAccuracy.Default;
+try
+{
+Geoposition posicaoAtual =
+await localizador.GetGeopositionAsync();
+BasicGeoposition posicao =
+new BasicGeoposition();
+posicao.Latitude =
+posicaoAtual.Coordinate
+.Point
+.Position.Latitude;
+posicao.Longitude =
+posicaoAtual.Coordinate
+.Point
+.Position.Longitude;
+
+150
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 9. Mapas e localização
+
+Geopoint posicaoEspacial = new Geopoint(posicao);
+MarcarPosicaoNoMapa(posicaoEspacial, "VOCÊ");
+Mapa.Center = posicaoEspacial;
+Mapa.ZoomLevel = 15.5;
+localizacaoUsuario = posicaoEspacial;
+
+}
+catch
+{
+MessageDialog dialogo =
+new MessageDialog("Não foi possível encontrar sua
+localização.Por favor, verifique se suas configurações de
+localização estão habilitadas.");
+
+}
+
+}
+
+dialogo.ShowAsync();
+
+Note que o código também centraliza o mapa, aplica o zoom em torno da
+posição atual do usuário e guarda a localização do usuário em um atributo da
+classe iremos utilizá-lo mais tarde. Agora devemos fazer uma chamada deste
+método no método OnNavigatedTo desta página.
+Vamos implementar o botão Adicionar Endereço para que ele crie
+um ponto identificando no mapa o endereço que o usuário digitar. Para executarmos a pesquisa, utilizaremos o objeto GeocodeQuery, que busca por
+localizações utilizando termos de linguagem natural, conforme o código:
+private async void BuscarPorEndereco
+(string logradouro, string cidade)
+{
+MapLocationFinderResult resultado =
+await MapLocationFinder
+.FindLocationsAsync(
+string.Concat(logradouro,", " ,cidade),
+localizacaoUsuario, 1);
+foreach (MapLocation local in resultado.Locations)
+
+151
+E-book gerado especialmente para
+
+9.3. Finalizando nosso aplicativo
+
+Casa do Código
+
+MarcarPosicaoNoMapa(local.Point, "ENDEREÇO BUSCADO");
+
+}
+
+Logradouro.Text = string.Empty;
+Cidade.Text = string.Empty;
+
+Agora basta que você adicione um manipulador ao evento Tapped no
+botão e faça uma chamada para o método BuscarPorEndereco, passando
+por parâmetro os textos dos componentes da página, como ilustra a figura
+9.7.
+
+Figura 9.7: Endereço adicionado
+
+Por fim, vamos fazer a última funcionalidade de nosso aplicativo: exibir
+uma mensagem quando o usuário pressionar o botão para finalizar uma com152
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 9. Mapas e localização
+
+pra.
+private async void FinalizarCompra_Tapped
+(object sender, TappedRoutedEventArgs e)
+{
+MessageDialog dialogo =
+new MessageDialog("Compra efetuada com sucesso!");
+
+}
+
+await dialogo.ShowAsync();
+this.Frame.GoBack();
+
+O código completo do aplicativo que desenvolvemos ao longo deste livro
+se encontra em meu github no link: http://bit.ly/8-1GITversaoFinal.
+
+153
+E-book gerado especialmente para
+
+E-book gerado especialmente para
+
+Capítulo 10
+
+Dicas para publicação na loja do
+Windows Phone
+Após completar seu aplicativo, você poderá publicá-lo na loja do Windows
+Phone! Este último capítulo é dedicado a explicar brevemente quais passos
+você deve executar para que esta publicação seja feita e algumas dicas e sugestões a respeito disso.
+
+10.1
+
+Passos para publicação
+
+O primeiro passo para que você efetue sua publicação é ter uma conta Microsoft e cadastrá-la como uma conta de desenvolvedor. É necessário efetuar
+um pagamento anual, então crie uma conta somente quando estiver certo de
+que irá publicar algum aplicativo.
+
+E-book gerado especialmente para
+
+10.2. Conclusão
+
+Casa do Código
+
+O segundo passo é você validar se o conteúdo de sua aplicação é aceito
+pelas políticas da Microsoft, ou seja, seu aplicativo não pode conter logos
+ou nomes de terceiros, nenhum conteúdo ofensivo, apologia a algum crime
+(sob a legislação do país que o aplicativo está submetido) e vários outros
+problemas de conteúdo. Você pode verificar a lista completa no link: http:
+//bit.ly/WPvalidacaoConteudo.
+Você também terá de validar todos os aspectos técnicos de seu aplicativo.
+Todas as regras podem ser encontradas neste link: http://bit.ly/WPregras.
+O terceiro passo é promover seu aplicativo da forma correta: dê um título
+que encaixe com sua funcionalidade e que seja chamativo, utilize a categorização dos aplicativos na loja para que ele seja encontrado com facilidade,
+dê as palavras-chaves mais importantes para seu aplicativo e faça uso de uma
+versão gratuita para testes. Isso auxiliará a promover seu app.
+O quarto passo é você pensar com cuidado a forma de receber retorno
+financeiro. Escolha entre propagandas, aplicativos pagos ou compras de funcionalidades dentro do aplicativo. Sempre tenha em mente o público que você
+quer atingir e se foque nisso.
+Talvez o quinto passo seja pensar em seu aplicativo para a plafatorma
+Windows, afinal, você desenvolveu um aplicativo completo sobre a Windows
+Runtime, o compartilhamento de código será bastante grande, tente tirar
+proveito disto.
+Por fim, submeta seu aplicativo na loja do Windows Phone (https://
+dev.windowsphone.com) e faça correções tanto para que seu aplicativo seja
+aprovado na loja quanto para tornar a experiência do usuário cada vez melhor.
+
+10.2
+
+Conclusão
+
+Neste livro, você passou pelas principais funcionalidades introdutórias
+necessárias para se criar um aplicativo para Windows Phone baseado na Windows Runtime, focando sempre na didática e tentando trazer essas funcionalidades da forma mais simples possível.
+Neste ponto você já deve estar apto a criar seus aplicativos sozinho, utilizando processamentos assíncronos, vínculo de dados, uma boa live tile e
+156
+E-book gerado especialmente para
+
+Casa do Código
+
+Capítulo 10. Dicas para publicação na loja do Windows Phone
+
+tudo mais. É importante ressaltar que vários padrões arquiteturais de aplicação foram ignorados com o objetivo de fazer com que o leitor se concentre
+apenas no conteúdo principal abordado.
+Espero que este livro seja apenas um gatilho para sua busca por conhecimento para aplicativos para Windows Phone. Este material possui um foco
+bastante introdutório e não cobre de forma nenhuma todas as áreas possíveis
+do Windows Phone. Além disso, não se prenda a uma única plataforma, é
+uma boa dica você conhecer o máximo de plataformas que conseguir.
+O desenvolvimento de aplicação para Windows Phone é bastante prático e
+divertido. Acredito que unir desenvolvimento com todas as noções de experiência de usuário seja um trabalho bastante rico e proveitoso para um desenvolvedor. Busque também por funcionalidades e códigos não mencionados
+neste livro, como a abordagem de compras in-app, processamento em background, push notifications e várias outras.
+Como autor, eu busquei compartilhar meu conhecimento da forma mais
+didática, simples e enxuta. Espero que este livro seja proveitoso para você e
+que, a partir de agora, você se torne oficialmente um desenvolvedor para a
+plataforma Windows Phone.
+
+157
+E-book gerado especialmente para
+
+

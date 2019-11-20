@@ -1,0 +1,2417 @@
+© Casa do Código
+Todos os direitos reservados e protegidos pela Lei nº9.610, de
+10/02/1998.
+Nenhuma parte deste livro poderá ser reproduzida, nem transmitida, sem
+autorização prévia por escrito da editora, aseja quais forem os meios: fotográficos, eletrônicos, mecânicos, gravação ou quaisquer outros.
+
+Edição
+Adriano Almeida
+Vivian Matsui
+Revisão e diagramação
+Bianca Hubert
+Vivian Matsui
+
+[2015]
+Casa do Código
+Livro para o programador
+Rua Vergueiro, 3185 – 8º andar
+04101-300 – Vila Mariana – São Paulo – SP – Brasil
+www.casadocodigo.com.br
+
+© Casa do Código
+Todos os direitos reservados e protegidos pela Lei nº9.610, de
+10/02/1998.
+Nenhuma parte deste livro poderá ser reproduzida, nem transmitida, sem
+autorização prévia por escrito da editora, aseja quais forem os meios: fotográficos, eletrônicos, mecânicos, gravação ou quaisquer outros.
+
+Edição
+Adriano Almeida
+Vivian Matsui
+Revisão e diagramação
+Bianca Hubert
+Vivian Matsui
+
+[2015]
+Casa do Código
+Livro para o programador
+Rua Vergueiro, 3185 – 8º andar
+04101-300 – Vila Mariana – São Paulo – SP – Brasil
+www.casadocodigo.com.br
+
+COMO LER ESTE LIVRO
+
+Do começo ao fim! Este é um livro curto e prático. Conforme o próprio
+título diz: Direto ao Ponto. Logo, você o deve ler todo, e na sequência.
+O livro está estruturado em três partes: contexto, receita e apêndices.
+
+PARTE I – CONTEXTO
+O contexto é formado pelo prefácio e pelos capítulos Produto mínimo
+viável e Inception Enxuta.
+O prefácio fornece o contexto sobre as influências que me levaram a
+escrever este livro. É muito importante tê-lo em mente para compreender a minha visão sobre o assunto.
+O livro se baseia no conceito de MVP, em inglês Minimum Viable Product. O capítulo Produto mínimo viável apresenta tal ideia com o seu
+histórico e a minha visão sobre o tema, bem como a evolução de produtos enxutos.
+
+5
+
+O capítulo de Inception Enxuta explica em detalhes o formato de
+workshop colaborativo que vai ajudá-lo a entender, alinhar e planejar
+o produto enxuto a ser construído. Talvez seja o início de um projeto
+ágil em uma grande corporação, ou o alinhamento sobre o que construir em uma pequena start-up. O estilo colaborativo e dinâmico da
+Inception Enxuta é o segredo do chef desta receita.
+
+PARTE II – RECEITA
+Direto ao Ponto é uma receita, uma sequência de atividades colaborativas e dinâmicas que gerarão o canvas MVP, uma representação
+visual do plano de criação e evolução do produto enxuto. Todos os
+passos desta receita estão detalhados seguindo a ordem dos capítulos, começando pelo capítulo 3 – O produto e terminando no capítulo
+8 – Calculando esforço, tempo e custo,
+
+PARTE III – APÊNDICES
+Um livro com título Direto ao Ponto obriga o autor a fazer uso do
+apêndice. Considero todo o conteúdo do livro essencial, entretanto
+ficou no apêndice o que foi acrescentado com o tempo, baseado no
+feedback dos leitores.
+Apêndice A traz um exemplo real do entendimento e planejamento
+de um produto enxuto a partir da receita Direto ao Ponto aplicada em
+uma Inception superenxuta: realizada em apenas seis horas! Alguns
+leitores me relataram que primeiro leram este apêndice (disponível no
+6
+
+meu blog e na revista InfoQ) e depois leram o livro a partir do início.
+Os apêndices B, C, D e E fornecem, respectivamente, o glossário dos
+termos do livro, uma classificação sobre os níveis de competência do
+facilitador, um detalhamento sobre a agenda burn-up, e algumas atividades quebra-gelo.
+
+Boa leitura e seja bem-vindo ao grupo dos facilitadores Direto ao
+Ponto.
+
+7
+
+8
+
+PREFÁCIO
+
+Neste livro, compartilho uma receita: uma sequência de atividades
+rápidas e efetivas para entender e planejar a criação de produtos
+enxutos, baseadas no conceito de produto mínimo viável (em inglês,
+Minimum Viable Product, MVP).
+Venho utilizando e compartilhando-a desde 2010 e percebi que,
+quanto mais o fazia, mais pessoas interessavam-se pelo assunto e
+retribuíam, compartilhando os seus resultados. O desfecho é este livro, que agora está fundamentado na experiência prática de muitas
+empresas (de startups a grandes corporações) e pessoas interessadas em criar e evoluir produtos de forma enxuta.
+Com o sucesso de tal receita, resolvi parar e refletir sobre o caminho
+que me levou a criá-la e, consequentemente, conceber este livro.
+Olhando para minha própria linha de tempo profissional (de 2000
+até 2015), destaquei os três principais movimentos que julgo terem
+influenciado na criação de ambos: Lean startup, métodos ágeis e
+design thinking.
+
+9
+
+De 2000 a 2007, vivi no Vale de Silício, na Califórnia (Estados
+Unidos), trabalhei em seis diferentes startups, e tive contato
+com inúmeras pessoas de várias outras. Nessa época, senti
+na pele o longo ciclo para criação de produtos, mesmo nas
+startups, e esse sentimento acabou afastando-me delas. Virei
+consultor e passei a trafegar por grandes corporações. Todavia, segui como expectador e torcedor do movimento Lean
+startup, o qual culminou com Eric Ries publicando seu incrível
+livro, The Lean Startup, em 2010.
+Desde 2000, tenho utilizado (e abusado) de metodologias
+ágeis. A minha primeira sessão em uma conferência internacional foi na Object-Oriented Programming, Systems, Languages & Applications 2000 (OOPSLA), na qual apresentei
+o resultado de minha tese de mestrado sobre Orientação a
+Objetos e design patterns. Lá, tietei Kent Beck por admirá-lo
+na questão de design patterns e acabei comprando seu livro
+recém-lançado, eXtreme Programming explained. Assim, deu-se início um caminho sem volta: estava exposto e infectado
+pela primeira de muitas metodologias ágeis.
+Em 2006, entrei na ThoughtWorks e fui apresentado a brilhantes agilistas (Martin Fowler, Jez Humble, Jim Highsmith, dentre
+vários outros). Lá, usei e divaguei sobre metodologias ágeis,
+como: Lean, Scrum, Kanban, continuous delivery etc. Depois
+de alguns anos aplicando métodos ágeis, meu entendimento
+foi além de práticas e ferramentas – princípios e valores começaram a ser naturais a mim.
+
+10
+
+Fui pela primeira vez apresentado para design thinking vários
+anos atrás, por Jeff Patton, e foi na ThoughtWorks que tive a
+oportunidade de trabalhar com ele. Fiquei impressionado com
+sua habilidade de conduzir reuniões e atividades colaborativas e visuais. Aprendi e utilizei atividades sobre personas, jornadas de usuários e mapeamento de história. Hoje, entendo
+que fui influenciado e segui utilizando ideias e práticas que
+foram denominadas design thinking. Isso explica (e muito) o
+estilo colaborativo e visual que adotei como ferramental básico em meu trabalho, que fica evidenciado neste livro.
+
+11
+
+12
+
+AGRADECIMENTOS
+
+Gostaria de expressar o meu muito obrigado a todos que leram as
+primeiras versões do e-book e forneceram valiosos feedbacks. Vocês participaram ativamente deste projeto colaborativo e de melhoria contínua. A nossa experiência coletiva gerou um resultado muito
+melhor e mais fundamentado do que a minha isolada.
+Muito obrigado a TC Caetano, coautor do livro FunRetrospectives.
+Nesse trabalho, TC foi também organizador de várias ideias sobre
+Inception e atividades de Inception. Junto com TC, Mauricio Sanches e eu escrevemos um capítulo sobre Inception de uma semana
+para o livro Thoughtworks Brasil - Antologia (2014).
+Aos colegas coaches e facilitadores de Inceptions e todos tipos de
+reuniões e workshops desafiadores. A Bethlem Migot, Rafael Magrin, Nelice Heck, Lourenço Soares, Alexandre Klaser, dentre vários
+outros colegas da Thoughtworks Brasil por participarem e compartilharem de interesses comuns nesta área de Inception e criação de
+produtos enxutos. Seguimos crescendo profissionalmente, aprendendo e compartilhando conhecimento juntos.
+13
+
+A Alexandre Klaser, criador do nome deste livro, bem como colaborador em várias ideias sobre melhorias em análise de negócios e
+gerenciamento de projeto.
+À equipe de User eXperience & Design thinking da Thoughtworks
+Brasil, especialmente Natalia Arsand, Juliana Dorneles, Gabriel
+Albo, Glauber Ramos, e Tassia Spinelli. Pelas inúmeras conversas e
+compartilhamento de conhecimento nesta área.
+A Gabriela Guerra, pelo exemplo de profissional e por me motivar a
+organizar e a lecionar o primeiro workshop sobre o assunto.
+A Ronaldo Ferraz por motivar e acreditar no meu trabalho. Suas palavras inspiradoras alimentaram meu interesse e empenho em compartilhar conhecimento e escrever este livro.
+A Martin Fowler pelas conversas e sessões de coaching. Muito obrigado pelos conselhos, direcionamento e interesse sobre este e outros assuntos relacionados. É uma honra e privilégio desfrutar do
+seu apoio e aconselhamento.
+A todos colegas e amigos da Thoughtworks que me convidaram
+para facilitar Inceptions, ou a ajudar em projetos, seja para produtos enxutos ou não-enxutos. Aprendi e continuo aprendendo graças
+aos desafios e conquistas que alcançamos juntos.
+À minha família, em especial ao meu pai, Carlos Caroli, pelo carinho e apoio ao meu trabalho. É com muito orgulho que compartilho
+cada conquista com quem sempre acompanhou e comemorou cada
+14
+
+passo deste caminho. Não é apenas que o fruto não cai longe da
+árvore, mas sim que carrega em si o DNA, e desfruta da sombra e
+influência daquela.
+
+15
+
+16
+
+SUMÁRIO
+
+1
+
+Produto Mínimo Viável21
+
+2
+
+Inception Enxuta33
+
+3
+
+Produto49
+
+4
+
+Personas61
+
+1.1
+1.2
+1.3
+1.4
+
+2.1
+2.2
+2.3
+2;4
+2.5
+2.6
+2.7
+2.8
+2.9
+2.10
+2.11
+2.12
+
+3.1
+3.2
+3.3
+3.4
+
+4.1
+
+Origem
+Incrementos do MVP
+Pequenas hipóteses, grandes negócios
+Um exemplo de evolução via MVP
+
+O que é uma Inception Enxuta
+Direto ao Ponto, a técnica
+Colaboração
+Divirta-se com quebra-gelos
+Paulo Pontual
+Colocação
+A sala de guerra
+Post-its coloridos
+A agenda burn-up
+Agenda planejada e a agenda burn-up
+Parque em lote
+Checklist para a Inception
+
+Escrevendo a visão do produto colaborativamente
+O Produto É / Não é / Faz / Não faz
+Esclarecendo o objetivo
+Entendendo os trade-offs
+
+Quadrantes para identificar tipos de personas
+
+22
+23
+25
+29
+
+34
+35
+36
+37
+38
+39
+40
+42
+42
+44
+46
+48
+
+50
+53
+55
+57
+
+62
+
+17
+
+4.2 Criando mapas de empatia
+
+65
+
+5
+
+Features69
+
+6
+
+Jornada do usuário85
+
+7
+
+Planejando MVPs95
+
+8
+
+Calculando esforço, tempo e custo105
+
+5.1
+5.2
+5.3
+5.4
+
+Descobrindo as features
+Entendimento técnico e entendimento de negócio
+Esforço e valor de negócio
+Features mais bem compreendidas
+
+6.1 Descrevendo jornadas
+6.2 Features nas jornadas
+
+7.1
+7.2
+7.3
+7.4
+7.5
+
+8.1
+8.2
+8.3
+8.4
+8.5
+
+O canvas MVP
+As ondas no canvas MVP
+As regras para cada onda
+Convergindo regras e jornadas
+Identificando MVP no canvas MVP
+Detalhando a amostra de features
+Estimativa comparativa
+Definindo tamanhos
+Entendendo custo e tempo
+Tirando a média
+
+70
+73
+77
+82
+
+87
+90
+
+97
+98
+98
+99
+102
+
+106
+111
+112
+113
+116
+
+APÊNDICES
+A. Exemplo de Inception Enxuta121
+9.1
+9.2
+9.3
+9.4
+9.5
+9.6
+
+18
+
+Introdução
+Kick-off
+Visão do produto
+O Produto É - Não é - Faz - Não faz
+Esclarecendo objetivos
+Identificando personas
+
+123
+124
+124
+127
+129
+129
+
+9.7
+9.8
+9.9
+9.10
+9.11
+
+Descobrindo as features
+Features mais bem compreendidas
+Descrevendo jornadas
+Features nas jornadas
+O Canvas MVP
+
+132
+134
+138
+140
+142
+
+B. Glossário145
+10.1
+10.2
+10.3
+10.4
+10.5
+10.6
+
+MVP
+Visão do produto
+Objetivos
+Personas
+Feature
+Jornada
+
+146
+146
+147
+147
+147
+149
+
+C. Facilitador151
+11.1
+
+Níveis de competência
+
+152
+
+D. Agenda burn-up155
+12.1
+12.2
+12.3
+12.4
+12.5
+12.6
+12.7
+
+Os eixos da agenda
+Os tópicos da agenda
+Os intervalos de tempo
+A linha de escopo
+O ritmo da Inception
+Verificando o progresso
+Fazendo escolhas
+
+157
+158
+158
+159
+160
+161
+162
+
+E. Atividades quebra-gelo165
+13.1
+13.2
+13.3
+13.4
+13.5
+13.6
+13.7
+13.8
+13.9
+
+Localização geográfica
+Telefone visual
+Um Dois Ping Quatro Pong
+Formando triângulos
+Zip Zap Zoom
+Desembaracem-se
+Peças complexas
+Costas com costas
+Encontre seu par
+
+166
+168
+170
+172
+174
+176
+178
+180
+181
+
+Referências bibliográficas185
+19
+
+20
+
+PRODUTO
+MÍNIMO
+VIÁVEL
+1.
+
+Produto mínimo viável (em inglês, Minimum Viable Product, MVP) é
+a versão mais simples de um produto que pode ser disponibilizada
+para a validação de um pequeno conjunto de hipóteses sobre um
+negócio.
+Basicamente, você não quer desperdiçar tempo, dinheiro e esforço
+construindo um produto que não vai atender às suas expectativas.
+Para isso, é preciso entender e validar as hipóteses sobre o negócio. O MVP ajuda nessa validação e no aprendizado da forma mais
+rápida possível.
+Seu objetivo é somente a validação do primeiro passo do produto mínimo, bem menos elaborado do que sua versão final, o que é bem
+diferente quando comparamos com produtos criados da forma tradicional, que normalmente têm um período longo de criação de protótipo, de análise e de elaboração. O MVP foca no produto mínimo, mas
+que já é viável para verificar se o direcionamento está correto; ou seja,
+o conjunto inicial de funcionalidades necessárias para o processo de
+validação de hipóteses e aprendizagem sobre o negócio.
+
+ORIGEM
+A ideia de MVP está originalmente vinculada aos conceitos popularizados pelo estilo Toyota de manufatura enxuta (WOMACK, 1990, 2003;
+OHNO, 1988). Steve Blank (2006), um empreendedor do Vale do Silício, criou uma metodologia baseada no desenvolvimento do cliente.
+22
+
+Este foi o início do movimento Lean Startup, o qual teve seu ápice com
+Eric Ries (2011) e o lançamento de seu livro de mesmo nome.
+Acredita-se que Eric Ries popularizou o MVP a partir da publicação
+de sua obra. Entretanto, o termo já estava em uso vários anos antes do surgimento desse movimento, especialmente entre as startups com seus empreendedores e investidores do Vale do Silício. A
+expressão Minimum Viable Product apareceu pela primeira vez em
+2000 em um artigo de Willian Junk (2000), de título O equilíbrio
+dinâmico entre custo, cronograma, recursos e qualidade em projetos
+de desenvolvimento de software, em português.
+
+INCREMENTOS DO MVP
+MVP não significa que o produto não vá evoluir e incrementar suas
+funcionalidades; muito pelo contrário, sua ideia é o incremento validado e guiado pelos resultados iniciais. A correção ou a confirmação do curso é que guiará os incrementos a seguir. Incrementos,
+estes, que são MVP: novos produtos mínimos adicionados aos produtos mínimos já validados.
+Mais uma vez: produtos mínimos, mas, ao mesmo tempo, viáveis
+para fazer novas verificações sobre seu direcionamento. O produto,
+agora, é mais elaborado, talvez com uma base maior de usuários,
+permitindo validar novas hipóteses ainda mais aprimoradas. É muito
+importante compreender que o MVP promove uma criação evoluti23
+
+va. Logo, a arquitetura, bem como o ferramental da construção do
+produto, devem permitir essa característica de evolução gradual e
+contínua.
+Em 2010, Jez Humble e David Farley (2010) publicaram o livro Continuous Delivery, no qual elaboram sobre um processo de entrega rápido e de baixo custo, permitindo a criação incremental de produtos
+de software. Eles definem Continuous Delivery (em português, Entrega Contínua) como uma disciplina de desenvolvimento de software
+que promove entregas mais rápidas e com maior frequência.
+Apesar de o livro entrar em detalhes sobre produtos de software e
+o fluxo de trabalho para sua criação, a essência da ideia de Entrega Contínua é a mesma que Eric Ries recomenda em seu livro Lean
+StartUp: ciclos rápidos para validação das hipóteses.
+Ciclos rápidos e frequentes permitem tempos de liberação muito
+curtos e com baixos custos de experimentação. Porém, não é fácil
+implementar esse tipo de abordagem, já que os criadores de produtos no estilo MVP precisarão de estruturas e práticas diferentes daquelas utilizadas tradicionalmente para produtos com um ciclo lento.
+Este livro tem o foco em atividades de análise e planejamento efetivo baseado em MVP. Continuous Delivery é a bíblia para entender
+o ferramental necessário para produtos de software; mesmo que,
+para outros tipos de produto, ainda devam-se aplicar as técnicas e o
+aprendizado compartilhado pelos autores Jez Humble e David Farley.
+
+24
+
+PEQUENAS HIPÓTESES,
+GRANDES NEGÓCIOS
+O produto é construído de forma incremental com MVPs recém-criados sendo adicionados ao produto consolidado já existente. A
+entrega contínua e incremental proporciona o aumento do valor do
+produto ao longo do tempo, enquanto que o processo de criação de
+produto tradicional não fornece qualquer valor até o final, quando
+ele todo está pronto.
+
+Você precisa ganhar altura? Subiria um degrau para isso?
+
+Você precisa ganhar mais altura? Subiria mais um degrau para isso?
+
+25
+
+Você precisa ganhar ainda mais altura? Subiria outro degrau para isso?
+
+Você precisa ganhar mais altura? Espera a construção de um elevador?
+
+Resultado final: para subir, use a escada ou o elevador!
+
+26
+
+Em essência, uma ideia (ou grandes hipóteses de negócio) é sequenciada em uma série de hipóteses menores, mais simples e,
+logo, mais fáceis de entender. Como resultado, elas são elaboradas
+mais rapidamente e disponibilizadas no produto para o usuário final.
+Por exemplo: se houvesse uma ponte neste local, quantos pedestres
+a usariam por semana?
+Nesse caso, o usuário final (ou quem valida o MVP) fornece dados
+para a validação do incremento do produto. Isso é essencial por
+duas razões:
+
+28
+
+1
+
+Correções e mudanças podem ser feitas em
+um estágio inicial do produto, em vez de só
+aparecerem no final da concepção, reduzindo, assim, seu risco;
+
+2
+
+A complexidade de análise das hipóteses é reduzida, e os idealizadores do produto e o usuário final têm acesso antecipado a algo funcional e viável. Dessa forma, as decisões dos
+próximos passos e seus incrementos são baseados no próprio produto, em vez de serem
+hipóteses sobre outras hipóteses. Esse padrão
+de trabalho permite a construção de produtos
+bem elaborados, com passos pequenos, porém bem fundamentados.
+
+Essa figura mostra como MVP oferece validações pequenas
+ao longo do tempo, ao passo que a forma tradicional de
+criação de produtos só o validaria em sua versão final.
+Por exemplo, o trator cortador de grama (MVP 8) representa
+o produto final e o tesourão de cortar grama é o primeiro
+MVP. Existe alguma grama para cortar? Existe alguém para
+lidar com um aparelho de cortar grama? A validação das
+hipóteses conduz a evolução do produto para o próximo
+MVP. Talvez, algo mais conveniente: um aparelho de cortar grama com um cabo. E se tal aparelho tivesse rodas? E
+assim por diante, até que o produto evolua de MVP a MVP.
+A validação mais importante, apesar de indesejada, é a resposta negativa. Existe alguma grama para cortar? Não. Em
+tal caso, o tesourão não vai ser usado. E digo mais, um excelente (e caro) trator de cortar grama também não o seria.
+A hipótese é falsa; portanto, um produto totalmente evoluído teria sido um grande desperdício de tempo e dinheiro!
+Esse exemplo ilustra como o mínimo produto viável promove uma abordagem gradual em que apenas uma pequena parte de uma ideia mais abrangente é tratada naquele tempo. Cada um desses MVPs é concebido, criado
+e preparado para ser adicionado ao produto. Em essência,
+uma ideia do produto é sequenciada em uma série de validações menores, mais simples e mais fáceis de se entender, criar e validar.
+
+30
+
+Vale a pena lembrar que, felizmente, produtos de software
+não são manufaturados. No mundo do software, um trator
+de cortar grama pode ser criado por meio da adição de
+rodas, volante, motor e cadeira a um tesourão.
+
+31
+
+32
+
+INCEPTION
+ENXUTA
+
+2.
+
+Durante a Inception Enxuta, são realizadas atividades dinâmicas
+para definição dos objetivos, das estratégias e do escopo do produto, bem como o mapeamento e a priorização das funcionalidades desejáveis para serem entregues gradualmente, construindo os
+MVPs. O principal objetivo do workshop é fazer com que a equipe
+descubra e compreenda coletivamente o que vai ser desenvolvido.
+Ao seu final, o time deve estar mais entrosado e com uma visão mais
+clara do caminho a seguir.
+
+DIRETO AO PONTO,
+A TÉCNICA
+Direto ao Ponto é uma técnica que ajuda a entender e a planejar a
+entrega incremental de MVPs. Ela organiza ideias e recursos em um
+modelo que busca compreender a principal finalidade do produto
+ao considerar as jornadas de seus usuários, para realizar as entregas incrementais de produtos viáveis. Como um livro de receitas que
+contém uma sequência de atividades rápidas e eficazes, a técnica
+vai permitir que a equipe:
+Descreva a visão do produto;
+Priorize os objetivos do produto;
+Descreva os principais usuários, seus perfis e suas necessidades;
+35
+
+Entenda as principais funcionalidades;
+Compreenda os níveis de incerteza, esforço e valor de negócio por
+funcionalidade;
+Descreva as jornadas mais importantes dos usuários;
+Crie um plano de entrega incremental do produto, impulsionado
+pelo conceito de MVP;
+Estime o esforço por amostragem;
+Calcule os custos e especifique datas e cronograma de entrega.
+As seções a seguir exploram conceitos fundamentais para a Inception Enxuta, enquanto os próximos capítulos detalham as atividades que alcançam cada uma dessas ações.
+
+COLABORAÇÃO
+Colaboração é o ato de trabalhar em conjunto para fazer uma tarefa e alcançar objetivos comuns. O sucesso de uma Inception está
+diretamente ligado à capacidade do grupo envolvido em colaborar efetivamente em cada atividade descrita neste livro. A Inception
+propõe um processo colaborativo de descoberta e esclarecimento
+em que as pessoas envolvidas trabalham juntas em uma sequência
+36
+
+de atividades, com o objetivo de compreender opções e elaborar
+MVPs. As práticas apresentadas nos capítulos seguintes representam métodos estruturados de colaboração, buscando um ambiente criativo com partilha de conhecimento, aprendizagem e construção de consenso. Elas visam aumentar o sucesso da equipe e
+melhorar como ela envolve-se no esclarecimento e na resolução
+de cada passo na direção ao MVP.
+
+DIVIRTA-SE COM
+QUEBRA-GELOS
+Nunca subestime o poder da diversão. Por meio do divertimento e
+do riso, seus níveis de estresse diminuem significativamente e você
+estará muito mais aberto a trabalhar com outras pessoas. Quando
+você está feliz e relaxado, está muito mais receptivo para tentar coisas novas e, assim, aumentar a sua participação nesse workshop
+altamente interativo: a Inception Enxuta.
+Pessoas altamente envolvidas, participativas, contentes e ativas nas
+atividades colaborativas: com isso em mente, você precisa quebrar
+o gelo e elevar o estado de espírito dos participantes. Quebra-gelos ajudam a criar um ambiente amigável e tornar as pessoas mais
+confortáveis para participar das atividades.
+Elas são rápidas, divertidas e podem ser executadas para aquecer
+37
+
+a equipe e promover sua interação. São excelentes para se começar
+qualquer tipo de reunião do grupo, e ainda mais valiosas para os
+estágios iniciais de suas formações, quando as pessoas pouco se
+conhecem, o que tipicamente é o caso para Inceptions Enxutas.
+Você deve selecionar uma atividade quebra-gelo coesa para o momento em questão. Nos primeiros dias, eu recomendo exercícios
+que se concentrem em compartilhamento de informações, tais
+como nomes e hobbies. Já após o almoço, você deve selecionar um
+para despertar as pessoas. Finalmente, você também deve conhecer
+os quebra-gelos que ajudam a transmitir mensagens simples, como
+“sistemas complexos são difíceis de lidar”, ou “documentação escrita
+não é o suficiente”. Além de serem divertidos e enérgicos, eles comunicam ideias importantes.
+Segue um exemplo de quebra-gelo bom para compartilhar nomes.
+No apêndice D você encontrará mais atividades e ideias.
+
+PAULO PONTUAL
+Esta é uma atividade rápida para ajudar os membros da equipe a
+lembrarem os nomes uns dos outros. Como funciona:
+
+1
+
+38
+
+Solicite aos participantes para pensarem em
+um adjetivo que comece com a mesma letra
+de seus nomes;
+
+2
+
+Forme um círculo e peça para cada participante dizer seu nome com o adjetivo, um de cada
+vez (“Oi, eu sou o Paulo Pontual!”);
+
+3
+
+Depois que todos falarem, peça para que, em
+sentido horário, falem o nome e o adjetivo da
+pessoa ao seu lado;
+
+4
+
+Depois de algumas voltas, peça que os participantes repitam o passo 3, agora no sentido
+anti-horário.
+
+Além de darem algumas risadas e quebrarem o gelo, essa atividade
+também ajuda a equipe a associar os nomes das pessoas a algum
+adjetivo, o que torna mais fácil lembrá-los.
+
+COLOCAÇÃO
+Não subestime o valor da interação face a face. Tecnologias inovadoras, como videoconferência e documentos compartilhados, facilitam o trabalho remoto entre as pessoas. No entanto, durante a
+Inception, essa interação possibilita o árduo trabalho nas atividades.
+É a garantia de que todos estarão presentes e participativos.
+Quando todos estão na mesma sala, o nível de participação aumenta. Você não pode simplesmente sentar-se em um canto e virar as
+39
+
+POST-ITS COLORIDOS
+Faça as anotações em post-its ou cartões coloridos. Escreva e coloque-os ou na mesa, ou na parede. Reúna as pessoas ao seu redor,
+fale sobre eles e, então, escreva um pouco mais. Agrupe-os. Separe-os. Rasgue-os e escreva de novo. Faça uso de cores. Reorganize-os. A colaboração gerada a partir de tal aparato tão simples não
+tem como ser alcançada por qualquer alternativa digital.
+Não há substituto para as ações de escrever, reescrever, agrupar ou
+rasgar post-its coloridos. Isso promove a interação entre as pessoas
+e ajuda no processo criativo de experimentação, construindo um
+caminho, sem medo de tentar, errar ou refazer. Logo que a informação vai para o computador, ela não volta ao papel. Isso reduz a
+interação entre as pessoas, pois não há nada em cima da mesa ou
+nas paredes visíveis a todos e que possa facilmente ser rasgado,
+reagrupado ou reescrito.
+
+A AGENDA BURN-UP
+A agenda burn-up (em detalhes no apêndice C) ajuda com o gerenciamento de tempo e escopo de um workshop de Inception. Ter a agenda visível constrói a confiança na gestão do tempo e no progresso das
+atividades como um todo. É uma ferramenta simples e eficaz para planejar e facilitar o workshop e, também, para chegar direto ao ponto.
+42
+
+O modelo de agenda planejada apresenta dois tipos de
+sessões (em cores laranja e azul), que correspondem aos
+níveis de participação: stakeholders e membros ativos.
+Stakeholder é qualquer pessoa impactada pelo projeto. São
+pessoas altamente interessadas no direcionamento e resultado da Inception, mas que não têm tempo para participar
+de todas as sessões. Elas podem ser os patrocinadores, os
+usuários finais, jurídico, vendas e marketing.
+Já o membro ativo é qualquer pessoa diretamente envolvida
+pela compreensão e implementação do produto. Estas são
+as que devem participar ativamente de todas as sessões do
+workshop, podendo ser: product owners, desenvolvedores,
+testadores, gerentes de projeto e experiência do usuário.
+Note na agenda planejada que as atividades de kick-off
+e showcase do workshop estão marcadas em cor laranja,
+respectivamente no início e no final da semana. No mundo
+ideal, todos estarão presentes na sala de guerra durante a
+semana. Entretanto, raramente temos a disponibilidade de
+agenda dos stakeholders. O mínimo necessário é que eles
+participem das sessões de kick-off e showcase, nas quais
+são apresentadas as expectativas do negócio para a semana, bem como o resultado obtido pelo time dedicado ao
+workshop. Os demais dias são tomados por uma sequência
+de atividades intensas, seguidas por períodos de consolidação. As atividades a serem seguidas devem estar listadas
+na agenda burn-up.
+45
+
+uma parede na sala de guerra. Se o item em discussão ainda não
+estiver escrito em um post-it, faça-o e coloque-o no Parque em lote.
+Certifique-se de explicar brevemente o conceito da ferramenta, e
+retorne a atividade em questão. É importante ser bem assertiva com
+os participantes da Inception Enxuta sobre o Parque em lote:
+
+A conversa estava desviando do foco da atividade em
+questão, e por isso tal item foi para o Parque em lote.
+
+Todavia é igualmente importante ouvir e respeitar as opiniões, ideias
+e pensamentos dos participantes da Inception. Portanto, o Parque
+em lote deve ser utilizado conforme prometido:
+
+Este item está estacionado por agora; mas vamos voltar
+a ele mais tarde.
+
+De fato, no final de cada dia da Inception, você deve usar 10 minutos
+para rever os itens no Parque em lote. Desta forma, uma destas duas
+ações é tomada para cada item: (1) o item é removido do Parque em
+lote (o tema já foi abordado ou não precisa mais ser tratado); ou (2)
+o item permanece no Parque em lote para a próxima revisão.
+A última revisão deve acontecer no final da Inception. Nessa última
+avaliação é muito importante esclarecer todos itens remanescentes
+e compartilhar com todos o que vai acontecer com eles.
+47
+
+CHECKLIST PARA
+A INCEPTION
+A lista a seguir é projetada para auxiliar o processo de planejamento
+do workshop de Inception. Por favor, certifique-se de ter todos os
+itens programados antes de iniciar uma inception.
+Participantes selecionados e convidados (stakeholders e membros
+ativos);
+Facilitador experiente (ver o apêndice B);
+Reserva de sala (manter a mesma sala durante o período da Inception);
+Flipchart, cartões, post-it, papel A4 e canetas para todos;
+Coffee break.
+
+48
+
+PRODUTO
+
+3.
+
+Com a ajuda de uma visão clara
+do produto, você pode determinar
+quais e como as primeiras peças
+do seu quebra-cabeça do negócio
+se juntarão. Você deve decidir sobre qual característica do produto
+o caminho inicial será trilhado e
+qual será a sua estratégia de posicionamento.
+
+ESCREVENDO A
+VISÃO DO PRODUTO
+COLABORATIVAMENTE
+Em algum lugar entre a ideia e o lançamento, a visão do produto
+ajuda a trilhar o caminho inicial. Ela define a essência do seu valor
+de negócio e deve refletir uma mensagem clara e convincente para
+seus clientes. Essa atividade ajudará a definir colaborativamente a
+visão do produto.
+
+50
+
+Template visão do produto
+Para [cliente final],
+cujo [problema que precisa ser resolvido],
+o [nome do produto]
+é um [categoria do produto]
+que [benefício-chave, razão para adquiri-lo].
+Diferentemente da [alternativa da concorrência],
+o nosso produto [diferença-chave].
+
+A visão do produto, foi descrita no livro Crossing the chasm: marketing and selling high-tech products to mainstream customers, de
+Geoffrey A. Moore (1999).
+
+COMO FUNCIONA:
+
+1
+
+2
+
+3
+
+Escreva o template visão do produto em um
+quadro branco ou flipchart de forma que seja
+visível para toda a equipe;
+Divida a equipe em grupos menores e solicite
+que cada um deles preencha uma lacuna separadamente (ou mais, dependendo do seu
+tamanho);
+Reúna o resultado de cada grupo, formando
+uma única frase.
+51
+
+O PRODUTO É / NÃO É /
+FAZ / NÃO FAZ
+A atividade É / Não é / Faz / Não faz ajuda a definir um produto. Por
+vezes, é mais fácil descrever algo pelo que tal coisa não é ou deixa
+de fazer. Ela busca clarificações ao indagar especificamente cada
+aspecto positivo e negativo sobre o produto ser ou fazer algo.
+
+PASSO A PASSO DA ATIVIDADE:
+
+1
+
+Divida um quadro branco ou flipchart em
+quatro áreas (É / Não é / Faz / Não faz);
+
+2
+
+Escreva o nome do produto em destaque acima dos quadrantes;
+
+3
+
+Solicite que cada participante descreva o
+produto em post-its e colocando-os nas áreas devidas;
+
+4
+
+Leia e agrupe as notas semelhantes.
+
+53
+
+ESCLARECENDO O OBJETIVO
+Cada membro da equipe deve compartilhar o que entende como
+objetivo para quem usa o produto e os vários pontos de vista devem
+ser discutidos para que se chegue a um consenso sobre o que é
+realmente importante. Essa atividade auxilia no levantamento e esclarecimento desses objetivos.
+
+PASSO A PASSO DA ATIVIDADE:
+
+1
+
+Solicite a cada membro da equipe que escreva, individualmente, três respostas para a
+seguinte pergunta: *Se você tiver que resumir
+este produto em três objetivos para seus usuários, quais seriam eles?*;
+
+2
+
+Solicite aos participantes que compartilhem
+o que escreveram em um _canvas_ comum,
+agrupando-os por similaridade;
+
+3
+
+Solicite à equipe que reescreva os objetivos,
+agora coletivamente. Nesse momento, ficará
+claro que alguns dos elementos listados não
+são realmente objetivos do produto, devendo,
+portanto, ser descartados. Com isso, ficará nítido para a equipe qual o foco do projeto.
+
+55
+
+PASSO A PASSO DA ATIVIDADE:
+
+58
+
+1
+
+Descreva todas as categorias relevantes para
+o produto em post-its (exemplo: segurança,
+usabilidade, escalabilidade);
+
+2
+
+Coloque as categorias no quadro branco ou flipchart como títulos de linhas. Em seguida, desenhe uma linha horizontal para cada categoria;
+
+3
+
+Desenhe linhas verticais (o mesmo número de
+linhas horizontais). Escrever mais (importante)
+em cima da linha, mais à esquerda, e menos em
+cima da linha, mais à direita;
+
+4
+
+Peça aos participantes para marcar suas iniciais
+em vários post-its e colocar um por linha. A restrição é que cada coluna deve ter um com suas
+iniciais (por exemplo, apenas uma das categorias vai ser marcada como mais importante);
+
+5
+
+Equalize os trade-offs. Com um post-it de cor
+diferente (uma tira de post-it verde na foto
+ilustrativa), faça a marcação devida para cada
+categoria de mais a menos importante. Essa
+marcação será relativamente fácil, já que são
+considerados os post-its com os votos de todos.
+
+60
+
+PERSONAS
+
+4.
+
+Para identificar efetivamente as funcionalidades de um sistema, é
+importante ter em mente seus usuários e objetivos. A maneira normalmente utilizada para representar estes usuários é por meio de
+personas (PATTON, 2010).
+Uma persona representa um usuário do sistema, descrevendo não
+só o seu papel, mas também suas necessidades específicas. Isto cria
+uma representação realística, auxiliando o time a descrever funcionalidades do ponto de vista de quem interagirá com o produto final.
+
+QUADRANTES PARA
+IDENTIFICAR TIPOS
+DE PERSONAS
+A seguinte atividade é utilizada para descrição de tipos de personas.
+Ela é simples, ilustrativa, divertida e rápida.
+
+PASSO A PASSO DA ATIVIDADE:
+
+1
+
+62
+
+Solicite ao time que se divida em pares ou trios
+e entregue o seguinte template de personas
+para cada grupo;
+
+CRIANDO MAPAS DE
+EMPATIA
+O mapa de empatia é um template visual para identificação e visualização de uma persona. Criado originalmente
+para análise de segmentos de consumidores, ele é uma
+excelente ferramenta para classificar, explorar e entender
+os diferentes tipos de personas.
+Foi originalmente descrito por Dave Gray como um dos
+métodos da XPLANE – empresa de visual thinking fundada
+em 1993 – para compreender usuários, clientes e outros
+envolvidos no negócio. Ficou ainda mais conhecido desde que foi destacado no livro Business model generation,
+de Osterwalder e Pigneur (2009), como uma ferramenta
+para descobrir insights sobre os clientes.
+O mapa apresenta quatro áreas principais, as quais preenchem a frase:
+O que eu ____ (vejo / penso / ouço / falo)?
+Além dessas quatro áreas principais, a versão original
+apresenta mais duas: as dores (pain, em inglês) e ganhos
+(gain) para tal persona.
+
+65
+
+FEATURES
+
+5.
+
+Feature é a descrição de uma ação ou interação de um usuário com
+o produto. Por exemplo: imprimir nota fiscal, consultar extrato detalhado, e convidar amigos do facebook.
+A descrição de uma feature deve ser o mais simples possível. O usuário está tentando fazer uma coisa. O produto dever ter uma feature
+para isso. Que feature é essa?
+Dado que já temos as personas e os principais objetivos do produto.
+A seguinte pergunta ajuda com a descoberta de features:
+O que precisa ter no produto para que tal persona alcance tal
+objetivo?
+
+DESCOBRINDO
+AS FEATURES
+A seguinte atividade é utilizada para descoberta de features. Note
+que ela depende da lista de objetivos e personas que já devem ser
+artefatos adquiridos em atividades anteriores:
+
+PASSO A PASSO DA ATIVIDADE:
+
+1
+70
+
+Solicite que a equipe coloque os objetivos em
+
+um canvas comum, em ordem de prioridade, da
+esquerda para direita, como títulos de colunas;
+
+2
+
+Peça à equipe que coloque as personas no
+mesmo canvas, em ordem de prioridade, de
+cima para baixo, como títulos de linhas;
+
+3
+
+Promova um brainstorm de features. A discussão deve ser guiada para que se descubram
+quais são necessárias para atender os objetivos
+e as personas. Uma pergunta para ajudar nesse processo é: O que se precisa ter no produto
+para que tal persona alcance tal objetivo?.
+
+A equipe deve guiar-se no canvas, repetindo essa pergunta para
+cada combinação de persona e objetivo, começando com os de
+mais alta prioridade. Desse modo, as candidatas a features de alta
+prioridade surgirão primeiro.
+O controle de tempo é essencial para todas as atividades, mas
+esta requer atenção especial. Se um grande número de objetivos
+e personas for selecionado (nos passos 1 e 2), inúmeras features
+poderão ser levantadas pela equipe. Isso será contraprodutivo e
+pode levá-la a gastar muito tempo falando sobre as que não farão
+parte dos primeiros MVPs.
+Para evitar tal cenário, é altamente recomendável que o número
+de objetivos e personas seja limitado para poucos (como três ou
+quatro principais).
+71
+
+Embora o canvas seja semelhante a uma matriz, não
+necessariamente haverá uma feature para cada interseção. Pode haver múltiplas features para uma
+persona alcançar um objetivo específico, assim
+como é possível haver personas que não necessitem de uma feature para determinado objetivo.
+Caso sejam identificados objetivos e features que
+não atendem as necessidades de nenhuma persona, estes devem ser descartados ou repensados, pois o seu valor não está claramente associado a um usuário.
+
+ENTENDIMENTO TÉCNICO E
+ENTENDIMENTO DE NEGÓCIO
+Esta atividade tem o objetivo de discutir como a
+equipe se sente em relação ao entendimento técnico e o entendimento de negócio para cada feature.
+A partir dela, novas notas são capturadas, e discordâncias e dúvidas ficam mais aparentes.
+
+73
+
+2
+
+Solicite a um membro da equipe que leia uma
+feature em voz alta e a posicione no gráfico
+de acordo com o seu entendimento sobre ela
+(técnico e de negócio);
+
+3
+
+Questione a equipe se todos compartilham
+daquela opinião. Se alguém não concordar,
+ela deve discutir os requisitos e a tecnologia
+envolvidos de forma que haja um consenso
+sobre a feature. Tudo o que for mencionado e
+que ajude a alcançar uma melhor compreensão deve ser anotado e anexado nela;
+
+4
+
+Anote na feature o nível de entendimento. Por
+exemplo, a figura a seguir mostra features em
+post-it que foram colados em index cards verdes, amarelos ou vermelhos, indicando, respectivamente, um nível alto, médio ou baixo de
+entendimento;
+
+Para cada feature capturada anteriormente, repita os passos de 2 a 4.
+No eixo X, o objetivo é verificar o entendimento da equipe em relação aos desafios técnicos, às dependências e aos requisitos de
+infraestrutura. No eixo Y, a proposta é verificar a clareza sobre seu
+objetivo, o benefício para o negócio e o que deve ser feito.
+Seguem alguns exemplos de features categorizadas em relação ao entendimento técnico de negócio – verde, amarelo ou vermelho, respectivamente, representando níveis de entendimento alto, médio e baixo.
+75
+
+Ao final da atividade, as features marcadas com um index card vermelho com um X representam riscos altíssimos para o projeto. Normalmente, a equipe decide dividi-las em pedaços menores de trabalho.
+
+ESFORÇO E
+VALOR DE NEGÓCIO
+Esta atividade tem o objetivo de discutir como a equipe entende o
+esforço para fazer a feature, bem como seu valor de negócio associado. A partir dela, novas marcações serão feitas para a cada uma.
+
+77
+
+PASSO A PASSO DA ATIVIDADE:
+
+78
+
+1
+
+Crie, em um canvas comum, um gráfico, onde
+o eixo X representa o esforço (o nível de trabalho para fazer), e o Y, o entendimento sobre
+o valor de negócio (qual retorno ou economia
+isso vai trazer);
+
+2
+
+Solicite a um membro da equipe que leia uma
+feature em voz alta e a posicione no gráfico
+de acordo com o seu entendimento sobre ela
+(esforço e valor de negócio);
+
+3
+
+Questione a equipe se todos compartilham
+daquela opinião. Se alguém não concordar,
+ela deve discutir os requisitos e a tecnologia
+envolvidos de forma que haja um consenso
+sobre a feature. Tudo o que for mencionado e
+que ajude a alcançar uma melhor compreensão deve ser anotado e anexado nela;
+
+4
+
+Anote, na feature, o nível de esforço e o valor de negócio. Por exemplo, a figura abaixo
+mostra features em index cards, nas quais foram adicionadas marcações de $, $$ ou $$$,
+para valor de negócio alto, muito alto e altíssimo respectivamente; bem como E, EE, ou EEE,
+para nível de esforço baixo, médio e alto;
+
+JORNADA DO
+USUÁRIO
+
+6.
+
+A jornada do usuário descreve seu percurso por uma
+sequência de passos dados para alcançar um objetivo.
+Alguns desses passos representam diferentes pontos de
+contato com o produto, caracterizando a interação do
+usuário com ele.
+Seguindo uma abordagem simples e eficaz, a descrição
+do percurso começa por identificar um usuário e um objetivo. Ações descritas em post-its demonstram os pequenos passos dados no percurso para alcançar o objetivo. A
+jornada fica aparente quando eles são alinhados em uma
+ordem lógica e sequencial, representando o comportamento do cliente e fluxo das interações com o produto.
+Questionamentos, acordos e desacordos conduzirão a
+conversa para a construção da jornada. Talvez, mais de
+uma opção de jornada será levantada, por exemplo: a
+jornada otimista, a realista, a pessimista, a principal, a
+excepcional caso isso, a excepcional caso aquilo etc. As
+opções vão forçar a priorização e a definição clara do
+objetivo e, com isso, o foco em algumas delas. As priorizadas complementarão e ajudarão na busca do MVP.
+Seu nível de detalhamento não deve ser nem muito alto,
+nem muito baixo. Ao mesmo tempo que uma jornada
+proporciona um passo a passo da interação do usuário, ela também é uma síntese; um nível mais elevado e
+simplificado do fluxo, sem as informações redundantes
+e os detalhes mais profundos.
+86
+
+94
+
+PLANEJANDO
+MVPS
+
+7.
+
+Esta feature é importante?
+Sempre obtive uma resposta positiva quando fiz tal pergunta. Por
+isso, não a faço mais. A pergunta mais relevante para ajudá-lo a planejar a ordem das features a serem criadas seria, então: Qual dessas
+duas é a mais prioritária?
+Dessa forma, as features são priorizadas em relação umas às outras.
+Essa pergunta é muito útil e deve ser usada; entretanto, antes é necessário um ponto de partida.
+Previamente, você apontou o usuário mais importante, bem como
+a jornada preferencial. Logo, o melhor ponto de partida seria a primeira feature desta jornada. Talvez, haja mais de uma nela ou em
+várias que possam ser criadas ao mesmo tempo. Daí sim, em tal
+cenário, você deve perguntar qual das duas features em questão
+é prioritária.
+Felizmente, nas etapas anteriores, alguns parâmetros já foram adicionados às features, como: o valor de negócio ($, $$ ou $$$), o esforço (E, EE ou EEE) e a marcação de nível de incerteza (cartão verde
+para baixo, amarelo para médio ou vermelho para alto). Eles o ajudarão com o seu planejamento e com as suas prioridades relativas.
+Então, qual é a combinação mínima de features que devem ser disponibilizadas para validar um pequeno conjunto de hipóteses sobre
+o negócio? Agora é a hora de visualizar e conceituar o primeiro MVP
+e seus incrementos subsequentes.
+
+96
+
+Regra 3: Uma onda não pode conter três features, somente em cartões amarelos e vermelho.
+Regra 4: A soma de esforço das features não pode ultrapassar 5 Es.
+Regra 5: A soma de valor das features não pode ser menos de 4 $s.
+Regra 6: Uma onda tem de conter no mínimo 2 features.
+A regra 1 limita o número de features que estão sendo trabalhadas
+ao mesmo tempo. Isso evita o acúmulo de features parcialmente
+completas, aumentando o foco para as poucas features priorizadas
+por onda. Já as regras 2, 3 e 4 evitam um período de trabalho desequilibrado com muita incerteza, ou muito esforço; e as 5 e 6 garantem o foco constante na entrega de alto valor para o negócio.
+
+CONVERGINDO
+REGRAS E JORNADAS
+Regras simples são adicionadas ao template com as ondas. Agora,
+basta buscar a primeira feature da primeira jornada. Aí você deve
+buscar a próxima. Respeitando as regras, você decide se tal feature
+entra na onda n ou n+1.
+Caso você fique em dúvida entre duas delas que respeitam as regras, basta responder a pergunta: Qual delas é mais prioritária?.
+A seguir, mostro uma sequência com duas fotos, na qual a primeira
+99
+
+Duplicar ou utilizar o mesmo post-it/cartão?
+Uma feature com suas marcações está posicionada
+em uma jornada. Você está prestes a pegar tal cartão e colocá-lo em outro template, o canvas MVP.
+Além das informações descritas nele, o seu posicionamento no template carrega mais dados, sendo
+que isso também ocorre com a feature na jornada e
+no Canvas MVP. Neste momento, você acaba perguntando-se: duplico ou utilizo o mesmo cartão?
+Minha sugestão é que tire uma foto antes de qualquer
+coisa para, então, considerar a replicar o cartão, desde
+que isso não deixe a atividade mais lenta e o ambiente
+mais confuso (com inúmeros papéis coloridos).
+
+Adiante, uma foto típica de um time utilizando o canvas MVP. Note
+seu envolvimento e como ele posiciona-se em frente ao template.
+Nesse momento, todos estão bem alinhados em relação às principais jornadas e suas features (com suas marcações de incerteza,
+valor de negócio e esforço).
+
+101
+
+CALCULANDO
+ESFORÇO,
+TEMPO
+E CUSTO
+8.
+
+Os incrementos de MVP e as ondas do canvas MVP
+deixam visíveis e tangíveis as entregas do produto.
+Mesmo assim, ainda precisamos definir o esforço, tempo e custos associados a cada MVP.
+A sequência de atividades até este momento, bem
+como as regras do canvas MVP, geram ondas de tamanho similar. Isso simplifica a estimativa do produto e
+seus MVPs, pois nos permite usar seu tamanho médio.
+Em vez de tentar detalhar todas as features em relação
+ao esforço, ao tempo e ao custo, você as utilizará apenas como amostras para entender tais parâmetros.
+
+DETALHANDO A
+AMOSTRA DE FEATURES
+O tamanho das ondas é parecido. Logo, escolha três delas e use-as
+para gerar informação detalhada de esforço, tempo e custo. Três
+são suficientes para dar uma boa noção de tais parâmetros e gerar
+uma média efetiva.
+
+PASSO A PASSO DA ATIVIDADE:
+
+1
+106
+
+Selecione três ondas a serem detalhadas;
+
+Ao selecionar as ondas de amostragem (passo 1), lembre-se que,
+neste momento, você está interessado na estimativa do todo e no
+seu tamanho médio, e não no detalhamento do trabalho em si. Por
+isso, as ondas a serem escolhidas devem prover boa combinação
+do nível de incerteza (marcados pelas cores dos cartões), bem como
+uma boa variação na soma dos níveis de esforço (marcados com Es).
+As primeiras ondas são boas candidatas, pois tal detalhamento
+será útil não apenas para estimar o todo, mas também para ajudar
+na descrição dos pedaços menores para a construção das features iniciais do MVP.
+O pedaço menor (passo 3) deve ser algo que faz sentido para o
+time. Times de desenvolvimento de software que seguem a metodologia Scrum costumam usar histórias do usuário como tais pedaços menores (SABBAGH, 2013; SCHWABER & BEEDLE, 2001;
+COHN, 2004; HELM & WILDT, 2015). Já outros times preferem
+chamá-los de tarefas e descrevê-los sem um formato predefinido.
+O mais importante é que o time esteja confortável com o detalhamento desses pedaços menores e, logo, consiga estimar seu
+tamanho e esforço.
+Seguem dois exemplos de dois times diferentes detalhando uma
+feature em pedaços menores. No primeiro exemplo, os pedaços
+menores seguem o padrão de histórias de usuário, enquanto no
+segundo, os pedaços menores são descritos como tarefas.
+
+108
+
+Ao final dessa atividade, as features selecionadas como amostra estarão detalhadas com suas várias tarefas.
+
+ESTIMATIVA COMPARATIVA
+Esta atividade é usada para o entendimento do esforço relativo das
+tarefas.
+
+PASSO A PASSO DA ATIVIDADE:
+
+1
+
+Em uma canvas comum (tipicamente, uma mesa
+ou no chão), identifique um extremo como sendo + (mais), e outro como sendo – (menos);
+
+2
+
+Selecione duas tarefas e faça a seguinte pergunta: Como essa tarefa compara-se (em esforço)
+com esta outra? Mais, menos ou parecido?;
+
+3
+
+Coloque ambas as tarefas no canvas, indicando como se comparam em relação ao nível de
+esforço. Coloque uma ao lado da outra, caso
+ambas exigirem o mesmo nível, ou uma abaixo
+da outra, caso uma requeira mais esforço;
+
+4
+
+Enquanto houver tarefas a serem comparadas,
+111
+
+coloque-as no canvas ao lado de uma outra e
+repita os passos 2 e 3.
+Ao final da atividade, todas as tarefas estarão no canvas, onde podem ser compreendidas em relação ao nível de esforço e como se
+comparam umas com as outras.
+
+DEFININDO TAMANHOS
+Esta atividade é muito simples e essencial para ser efetiva com o
+tempo e gerar números para cálculo.
+
+PASSO A PASSO DA ATIVIDADE:
+
+112
+
+1
+
+Escreva em post-it os seguintes tamanhos de
+camisa: pequeno, médio, grande e extragrande;
+
+2
+
+Coloque essa marcações de tamanho no canvas, sendo o pequeno mais próximo à extremidade de menos esforço e o extragrande mais
+próximo à extremidade de mais esforço;
+
+3
+
+Defina as demarcações entre os tamanhos e
+reposicione as tarefas para ficar claro seu tamanho.
+
+Ao final da atividade, todas as tarefas possuirão uma
+estimativa de tempo e custo. Por exemplo, o resultado
+mostrado na figura anterior foi obtido em uma instância
+dessa atividade: um dia para tarefas pequenas, três dias
+para médias, e quatro para tarefas grandes.
+As respostas de tempo vão influenciar o resultado final.
+Por isso, seja bem enfático em relação à pergunta. Se
+possível, compare com trabalhos passados, e tente entender a motivação e a capacidade das pessoas respondendo tal pergunta.
+Desenvolvedores não gostam de responder tal pergunta:
+
+Quanto tempo leva para uma pessoa completar
+tal tarefa?
+
+Por isso, é muito importante que todos estejam muito à
+vontade com a descrição da tarefa. Caso haja qualquer
+desconforto em relação a uma tarefa, reescreva-a e considere quebrá-la em pedaços ainda menores.
+Outra forma de fazer tal pergunta é colocá-la no plural:
+
+115
+
+Considere um par de desenvolvedores. Um sabe
+mais do negócio, outro menos. Um mais sênior,
+outro mais júnior. Um mais experiente na tecnologia, outro mais novato. Quanto tempo leva para
+um par de desenvolvedores completar tal tarefa?
+
+Na minha experiência, todos ficam mais à vontade dando tal resposta considerando pares de desenvolvedores atuando juntos para
+completar uma tarefa.
+
+TIRANDO A MÉDIA
+A partir do entendimento de esforço da atividade anterior, somamos
+o tempo estimado para cada tarefa de cada feature, e com isso somamos a duração prevista por features de cada onda escolhida do
+canvas MVP. Dessa forma, chegamos a uma média de esforço para
+cada onda, definido por pessoa e por unidade de tempo.
+As duas fotos a seguir demonstram como o cálculo foi realizado
+para um time. Elas mostram, respectivamente, as ondas escolhidas
+para amostragem e o cálculo realizado para obter a média do tempo
+estimado por onda.
+
+116
+
+Podemos escolher trabalhar com um par de desenvolvedores e entregar uma onda de features
+em, aproximadamente, um mês (ou 20 dias úteis).
+Outra opção seria dobrar o custo mensal, tendo
+dois pares de desenvolvedores entregando, aproximadamente, duas ondas mensais.
+
+120
+
+EXEMPLO DE
+INCEPTION
+ENXUTA
+apêndice A
+
+“Gostaria de ver um exemplo completo de uma Inception Enxuta”.
+Este foi um pedido recorrente que recebi de leitores deste livro.
+Imagino que a leitura seja mais fácil para quem já participou de um
+workshop, ou de uma Inception no estilo Direto ao Ponto. Por mais
+que o livro explique os itens da receita e o passo a passo de cada
+atividade, entendo que ainda seja válido demonstrar um exemplo
+completo. É como seguir uma receita para fazer um brownie especial
+de chocolate após ter experimentado o tal brownie especial de chocolate. É isto que venho compartilhar neste capítulo.
+Por motivos de confidencialidade das empresas que me contrataram para facilitar as tais Inceptions Enxutas, não posso compartilhar o resultado das atividades para os seus produtos. Muitos deles
+começaram como produtos enxutos, com seus MVPs incrementais,
+e hoje são produtos diferenciadores nos seus ramos de atuação.
+Por tal motivo, selecionei um exemplo real, bem ilustrativo, e que
+pode ser compartilhado. Este produto enxuto foi idealizado durante
+um workshop Direto Ao Ponto em uma conferência nacional. Como
+havia mais de 20 participantes, o produto foi idealizado e compartilhado entre todos os presentes.
+Como o workshop duraria 8 horas, a agenda semanal típica de
+uma Inception Enxuta foi compactada de forma a caber em poucas
+horas. A agenda burn-up foi essencial para manter todos alinhados sobre quão rápido seria o ritmo que teríamos que seguir para
+aquele evento.
+Reitero que o conteúdo e fotos que seguem é de um exemplo ilustrativo realizado em um dia, portanto, provavelmente reduzido na
+122
+
+os nomes. Começamos o dia com bastante energia e dando boas
+risadas.
+
+KICK-OFF
+Em vez do kick off típico, geralmente realizado por stakeholders falando sobre o produto ou ideia a ser concebida durante a Inception Enxuta, o kick off do workshop de simulação teve outro estilo.
+Perguntei aos participantes quem tinha ideia de produto e queria
+explorá-lo como exemplo do workshop durante o dia. Três ideias
+foram apresentadas, e em seguida todos participantes votaram em
+qual queriam utilizar.
+
+VISÃO DO PRODUTO
+O produto mais votado era um app para peladeiros. Aquelas pessoas que gostam de jogar futebol com seus amigos do trabalho, da
+academia, ou de algum grupo que esteja marcando uma pelada.
+Para (1) ajudar os três idealizadores a descrever suas ideias, (2) fomentar a participação de todos, e (3) prover uma votação com um
+bom entendimento de cada opção, utilizamos o template de visão
+do produto para cada ideia de produto, em grupos de sete pessoas.
+124
+
+Veja a transcrição dos textos nos post-its da foto:
+
+128
+
+O produto é...
+
+O produto não é...
+
+•
+
+app
+
+•
+
+FB, Twitter, Whatsapp
+
+•
+
+app mobile
+
+•
+
+site
+
+•
+
+multiplataforma
+
+•
+
+site
+
+•
+
+facilitador para organizar
+
+•
+
+não é chat
+
+peladas
+
+•
+
+messenger (chat)
+
+•
+
+gratuito
+
+•
+
+gratuito
+
+O produto faz...
+
+O produto não faz...
+
+•
+
+marca jogos (agenda)
+
+•
+
+organiza jogos
+
+•
+
+agenda quadras
+
+•
+
+define times por ordem de
+
+•
+
+lista partidas
+
+•
+
+localiza peladas próximas
+
+•
+
+organiza jogos e times
+
+•
+
+geolocalização
+
+•
+
+cria times
+
+•
+
+avisos sobre ocorrências
+
+•
+
+gerencia pagamentos
+
+•
+
+notifica usuários
+
+•
+
+pagamento online da pelada
+
+•
+
+rating usuário
+
+•
+
+não faz jogos privados
+
+•
+
+guarda reputação
+
+•
+
+não organiza campeonatos
+
+•
+
+campeonatos
+
+pedido
+
+ESCLARECENDO OBJETIVOS
+Após as atividades Visão do Produto e O Produto É - Não é - Faz - Não
+faz, realizamos a atividade para esclarecer os objetivos do produto.
+Neste momento, foi solicitado a todos os participantes que compartilhassem o entendimento que tinham para os três principais objetivos do produto. Cada um escreveu três post-its. Ao recolhê-los e
+colocá-los em grupos de afinidade, foram identificados três principais objetivos para o produto:
+Encontrar peladas
+Divulgação
+Opções de partidas
+
+IDENTIFICANDO
+PERSONAS
+Após um bom entendimento do produto, foi a hora de mudar o foco
+e buscar um bom entendimento em relação às personas, os usuário
+do sistema. Para isso, utilizamos o template dos quadrantes para
+identificar os tipos de personas. Com tal template, criamos apelidos
+para cada tipo, descrevemos seus respectivos perfis, suas características comportamentais e suas necessidades específicas. Mesmo
+com o tempo curto, todos os participantes participaram de grupos
+129
+
+Apelido
+Gordinho bom de bola
+Perfil
+28 anos
+casado
+jogador frustrado
+bancário
+formado
+Comportamento
+reclamão
+competitivo
+assíduo
+exigente com a quadra
+passa horas nas redes sociais
+Necessidade
+jogar toda semana com qualquer pessoa e local
+mas procura partidas de alto nível
+jogar à noite nos fins de semana
+
+131
+
+vas para que as features sejam descobertas. Com isso, o facilitador
+pode promover um brainstorm sobre as features:
+O que precisa ter no sistema para que tal persona alcance tal
+objetivo?
+Com essa pergunta, a discussão é guiada para que se descubram
+quais features são necessárias para atender objetivos e personas.
+Elas são anotadas em post-it e colocadas no canvas. A pergunta é
+repetida para cada combinação de persona e objetivo, com isso,
+priorizamos os principais objetivos e as principais personas.
+Segue a transcrição dos post-its de features:
+
+consulta de peladas com geolocation
+consulta de peladas sem geolocation
+classificação de quadras
+rankear um jogador
+detalhamento da pelada (local, horário e data)
+ranking dos jogadores (visualização)
+detalhes financeiros da pelada
+cadastro do peladeiro
+cadastro da pelada
+convidar amigo para pelada
+filtro detalhado
+módulo de notificação
+confirmação de presença
+
+133
+
+notificação de pelada confirmada
+notificação de pelada cancelada
+cancelar presença
+cancelar pelada
+
+FEATURES MAIS
+BEM COMPREENDIDAS
+As features foram descobertas, entretanto foram
+aceitas sem ressalvas, sem perder muito tempo
+entendendo-as em detalhes, fazendo anotações
+e conversando sobre incertezas, esforço e valor
+para o negócio. Entretanto, essas conversas e informações mais detalhadas são muito úteis para
+uma melhor compreensão e planejamento de criação de produtos enxutos. As atividades e gráficos
+Entendimento técnico e entendimento de negócio e
+Esforço e valor de negócio buscam tais informações
+de forma rápida e eficiente.
+
+134
+
+Seguem dois exemplos de jornadas:
+Gordinho bom de bola: cadastra uma pelada
+1.
+
+acorda cedo para o trabalho
+
+2.
+
+exagera no café da manhã
+
+3.
+
+chega ao trabalho às 9:00 am
+
+4.
+
+durante uma reunião decide fazer alguma atividade física
+
+5.
+
+no almoço convence um amigo do trabalho a jogar futebol no fim do dia
+
+6.
+
+liga e reserva uma quadra
+
+7.
+
+abre o easy-bola
+
+8.
+
+cadastra a pelada para 8:00 pm naquele mesmo dia
+
+9.
+
+coloca informação da quadra
+
+10. envia convite para os amigos
+
+Amigo do trampo: aceita convite para uma pelada
+1.
+
+acorda atrasado para o trabalho
+
+2.
+
+come uma barra de cereal no metrô
+
+3.
+
+chega no trabalho as 9:30 am
+
+4.
+
+vai para a academia na hora do almoço
+
+5.
+
+durante uma reunião, recebe uma notificação do easy-bola
+
+6.
+
+verifica as informações da pelada
+
+7.
+
+verifica a classificação da quadra
+
+8.
+
+confirma sua presença na pelada
+
+9.
+
+sai da reunião para outra reunião
+
+10. às 5:14 pm recebe a confirmação da pelada
+
+139
+
+Segue a transcrição do canvas MVP do easy-bola apresentado na
+foto, com seus MVPs identificados e suas respectivas features.
+Feature
+cadastro da pelada
+cadastro do peladeiro
+consulta de peladas sem geolocation
+confirmação de presença
+detalhamento da pelada (local, horário e data)
+cancelar presença
+cancelar pelada
+módulo de notificação
+notificação de pelada confirmada
+notificação de pelada cancelada
+detalhes financeiros da pelada
+convidar amigo para pelada
+ranking dos jogadores (visualização)
+
+144
+
+MVP
+1
+1
+1
+2
+2
+2
+3
+3
+3
+3
+3
+4
+4
+
+GLOSSÁRIO
+
+apêndice B
+
+Segue uma breve lista de termos utilizados neste livro. Cada um dos
+conceitos é explorado em detalhes nos capítulos. Entretanto, julgo necessário um esclarecimento em âmbito geral para esses termos desde
+o início.
+Essa lista deve estar visível durante o workshop de Inception. Sugiro
+que imprima esse glossário e coloque-o na parede da sala de guerra.
+
+MVP
+O produto mínimo viável – em inglês, Minimum Viable Product
+(MVP) – é a versão mais simples de um produto que pode ser disponibilizada para o negócio. Ele determina quais são as funcionalidades mais essenciais para que se tenha o mínimo de produto
+funcional que possa agregar valor para o negócio (produto mínimo) e que possa ser efetivamente utilizado e validado pelo usuário
+final (produto viável).
+
+VISÃO DO PRODUTO
+A visão do produto é uma breve descrição de para onde você quer
+levar sua ideia do produto.
+
+146
+
+OBJETIVOS
+Um objetivo é um resultado desejado previsto para o produto. Compreender os objetivos do produto serve como uma ferramenta eficaz
+para estabelecer um acordo do que ele deve ter para cumprir a visão
+do produto.
+
+PERSONAS
+Uma persona representa um usuário do sistema, descrevendo não
+só o seu papel, mas também suas características e necessidades
+específicas. Isto cria uma representação realística de usuários, auxiliando o time a descrever funcionalidades do ponto de vista de
+quem interagirá com o produto final.
+
+FEATURE
+Feature é um agrupamento de funcionalidades semelhantes. Isso
+o ajuda com a compreensão sobre o requisito como um todo, bem
+como das suas partes menores e complementares. O entendimento de feature variará de time para time. O importante é que tal
+agrupamento faça sentido para sua equipe e que estejam alinha147
+
+dos com os objetivos do produto.
+
+ENTENDIMENTO TÉCNICO DA FEATURE
+O entendimento da feature de acordo com os desafios técnicos e
+os requisitos de infraestrutura. Se ao responder: Você já fez isso
+antes? Você sabe como fazê-lo?, você obtiver uma resposta positiva bem firme, isso indica elevado nível de entendimento técnico.
+
+ENTENDIMENTO DE NEGÓCIO DA
+FEATURE
+A clareza do objetivo da feature, o benefício para o negócio e o
+que deve ser feito. O que fazer? Uma resposta direta e clara indica
+um alto nível de concordância.
+
+NÍVEL DE INCERTEZA DA FEATURE
+O nível de incerteza da feature refere-se ao grau em que ela é incerta, a partir do ponto de vista do entendimento de negócio e do
+entendimento técnico. Isso é indicado pela cor do cartão de índice:
+verde, amarelo ou rosa, indicando níveis baixo, médio ou alto de
+incerteza, respectivamente.
+
+148
+
+ESFORÇO DA FEATURE
+O nível do trabalho que precisa ser feito para a feature. O entendimento da equipe de acordo com a dificuldade e o trabalho que vai
+ser necessário para completá-la.
+
+VALOR DO NEGÓCIO DA FEATURE
+O valor de negócio associado à feature; uma medida do negócio
+sobre o valor previsto para ela. Qual é o retorno no investimento
+– ROI (Return On Investment) – ou a economia que a feature vai
+trazer? A resposta deve variar entre alto, muito alto ou altíssimo.
+
+JORNADA
+A jornada do usuário descreve o seu percurso por uma sequência
+de passos dados para alcançar um objetivo. Alguns desses passos
+representam diferentes pontos de contato com o produto, caracterizando sua interação com ele.
+
+149
+
+150
+
+FACILITADOR
+
+apêndice C
+
+1
+
+Facilitador iniciante: pessoas que estão participando do workshop Inception pela primeira
+vez;
+
+2
+
+Facilitador intermediário: pessoas que já participaram, mas ainda não facilitaram nenhuma
+atividade durante um workshop Inception;
+
+3
+
+Facilitador aprendiz: pessoas que já participaram e facilitaram uma ou mais das atividades
+realizadas em workshops;
+
+4
+
+Facilitador: pessoas que já facilitaram um
+workshop e sentem-se seguras para fazê-lo;
+
+5
+
+Facilitador avançado: pessoas que já facilitaram pelo menos cinco workshops Inception e
+sentem-se seguras para serem coachs de facilitadores aprendizes;
+
+6
+
+Facilitador evangelista: pessoas que já facilitaram mais de dez e, atualmente, estão compartilhando as técnicas para o público interessado
+em workshops Inception.
+
+153
+
+154
+
+AGENDA
+BURN-UP
+
+apêndice D
+
+OS TÓPICOS DA AGENDA
+Os tópicos e atividades a serem realizadas devem ser agrupados de
+forma que suas durações sejam semelhantes. Por exemplo, se sua
+agenda tem 5 tópicos e você espera que os tópicos 1 e 2 levem meia
+hora cada, os 3 e 4 levem uma hora e o 5 leve duas horas, então
+você deve considerar ter os tópicos agrupados da seguinte forma:
+Tópico 1 e 2
+Tópico 3
+Tópico 4
+Tópico 5.1
+Tópico 5.2
+Note que, dessa forma, cada agrupamento tem uma expectativa
+de duração semelhante. Outro aspecto importante é que eles sigam uma ordem cronológica: primeiro vamos cobrir isso, depois
+aquilo, e assim por diante. Sua sequência e atividade devem ser
+claramente definidas.
+
+OS INTERVALOS DE
+TEMPO
+Os intervalos de tempo no eixo horizontal devem ser simétricos, co158
+
+meçando no início da Inception e terminando no seu final esperado.
+Nos exemplos de agenda burn-up, tal intervalo é de meia hora. Sua
+unidade de tempo (minutos, horas ou dias) deve estar relacionada à
+duração esperada para os tópicos e suas atividades.
+Considere que você está construindo uma agenda para um
+workshop de 5 dias com 10 tópicos. Usar intervalos de tempo com
+base em horas seria muito pequeno. Nesse caso, intervalos de um
+ou meio dia seria mais apropriado.
+
+A LINHA DE ESCOPO
+Uma informação importante da agenda burn-up é a linha de escopo: a linha horizontal acima do último tópico planejado. Ela define
+claramente se e quando novos tópicos foram adicionados ou removidos durante a Inception. Ela também permite que você visualize a
+interseção dessa linha horizontal para a vertical, que representa o
+fim do workshop.
+Tudo em discussão deve ser um tópico. Se novos temas surgem, eles
+devem ser adicionados à lista de tópicos, e a linha de escopo deve
+ser ajustada. Dessa forma, a nova linha permite identificar facilmente quando eles estão sendo adicionados, o que afetará o tempo de
+conclusão da Inception.
+O ato de adicionar um novo tópico é um sinal importante de que o
+159
+
+Quando as duas linhas se encontram, a agenda planejada estará
+completa. A distância entre elas é uma medida poderosa de quão
+perto você está de completar a agenda planejada.
+Verificar regularmente o progresso é uma parte importante da gestão do tempo. Há dois movimentos básicos para os post-its e ambos
+são horizontais:
+
+1
+
+O tempo mudou; o post-it com uma grande
+seta que representa a hora atual deve ser movido para a direita até a posição que representa a hora atual;
+
+2
+
+A discussão sobre um tópico da agenda terminou; o respectivo post-it deve ser movido para
+a direita para a hora atual.
+
+Esse mecanismo de movimento dos post-its permite identificar, de
+imediato, um desvio na duração esperada para os tópicos da agenda. Assim que constatado, esse problema deve ser discutido e ações
+corretivas devem ser tomadas ainda em um estágio inicial, e não
+quando for tarde demais.
+
+FAZENDO ESCOLHAS
+Considere o instantâneo da agenda burn-up representado na próxi162
+
+164
+
+ATIVIDADES
+QUEBRA-GELO
+
+apêndice E
+
+Quebra-gelo são atividades que servem para aquecer e promover
+a interação do grupo. São um ótimo começo para qualquer reunião
+de equipe, e muito valiosos para fases iniciais de formação de times
+e Inceptions Enxutas. Uma atividade, chamada Paulo Pontual, já foi
+demonstrada no capítulo 2: Inception Enxuta.
+Este apêncide traz mais nove atividades, completando uma dezena
+de atividades quebra-gelo para sua Inception Enxuta. Tais atividades
+foram cedidas do site e livro Fun Retrospectives [CAROLI e CAETANO, 2014].
+
+LOCALIZAÇÃO GEOGRÁFICA
+Esta atividade é ótima para quebrar o gelo e também ajuda os membros da equipe a saberem um pouco sobre cada um.
+
+COMO FUNCIONA:
+
+1
+
+166
+
+Explique aos participantes que cada um será
+uma localização geográfica (por exemplo, seu
+país, cidade ou bairro);
+
+2
+
+Mostre onde é o Norte e o Sul na sala;
+
+3
+
+Peça a cada participante para ir para onde ele
+
+se localiza, fazendo, um mapa o mais realista
+possível;
+
+4
+
+Depois que todos estiverem em seus lugares,
+peça a um voluntário desenhar um mapa representando a sala.
+
+Desenho ilustrativo: localização geográfica
+
+167
+
+TELEFONE VISUAL
+Telefone visual é um ótimo estímulo para deixar todos engajados e
+promover uma discussão sobre comunicação e suas interpretações.
+
+COMO FUNCIONA:
+Divida o grupo maior em conjuntos de três pessoas (um ou dois grupos podem ter 4 pessoas);
+Coloque três post-its e uma caneta na frente de
+cada um;
+Peça para todo mundo escrever uma frase (no
+post-it) e, então, coloque um post-it em branco
+em cima do primeiro (neste ponto, apenas o autor da frase a conhece);
+Todo mundo passa o post-it para o lado, no
+sentido horário;
+
+168
+
+5
+
+Cada um lê a frase do post-it à sua frente e
+cria um desenho no post-it em branco, representando-a;
+
+6
+
+Todo mundo passa o post-it para o lado no sentido horário;
+
+7
+
+Em um novo post-it, cada pessoa escreve uma
+frase sobre o desenho a sua frente e coloca em
+cima do conjunto de post-its (agora, este tem
+três: um com a frase original, um com o desenho e um com a nova frase);
+
+8
+
+Todos passam os post-its para o lado no sentido horário (para os grupos de três pessoas, o
+conjunto deve parar na frente do autor da primeira frase);
+
+9
+
+Abra o conjunto de post-its para que todos possam ver as frases e seus desenhos respectivos.
+
+Desenho ilustrativo: telefone visual
+
+169
+
+Normalmente, os participantes riem e divertem-se comparando os
+desenhos e as frases.
+Essa é um ótima atividade com uma mensagem sutil sobre comunicação (visual e escrita), contexto e interpretações. Ela é uma
+adaptação de uma atividade que aprendemos em um workshop UX
+(User eXperience), dos meus queridos amigos Natalia Arsand, Glauber Ramos, Juliana Dorneles e Gabriel Albo. Eles a aprenderam no
+workshop da IDEO, Human Centered Design.
+
+UM DOIS PING
+QUATRO PONG
+Esta é uma atividade curta para começar uma reunião em um bom
+clima e deixar os participantes engajados.
+
+COMO FUNCIONA:
+
+1
+
+2
+3
+170
+
+Peça para os participantes formarem um círculo;
+Os participantes devem decidir em que sentido seguir (horário ou anti-horário);
+Alguém começa dizendo qualquer número po-
+
+sitivo que não seja múltiplo de 3 ou 5;
+
+4
+
+A próxima pessoa, seguindo a direção decidida por todos, mentalmente adiciona 1 ao
+número. Então:
+
+Se o número não é múltiplo de 3 ou 5: ela diz o número.
+Se o número é múltiplo de 3: diz ping e bate palma.
+Se o número é múltiplo de 5: diz pong e pula.
+
+Desenho ilustrativo:
+um dois ping quatro pong
+
+171
+
+Para grandes grupos, é recomendado remover uma pessoa dele
+caso ela erre ou acuse alguém erroneamente. Logo, todos estarão
+rindo e torcendo para os que permanecerem no círculo.
+
+FORMANDO TRIÂNGULOS
+Esta atividade é um ótimo _energizer_ com uma mensagem valiosa,
+sendo muito útil para começar uma conversa sobre equipes auto-organizadas. Ela é divida em duas partes.
+
+COMO FUNCIONA:
+Primeira parte
+Peça aos membros do grupo para andarem individualmente em uma direção aleatória;
+Depois de um tempo, diga a palavra mágica
+“triângulo”: cada membro do grupo terá que
+achar outras duas pessoas e formar um triângulo equilátero (cada um é um vértice do triângulo e deve apontar o braço em direção às
+outras duas pessoas, representando os outros
+vértices. Cada pessoa é um vértice de apenas
+um triângulo);
+172
+
+3
+
+Cronometre quanto tempo levou para o grupo
+formar os triângulos.
+
+Desenho ilustrativo: formando triângulos
+
+Segunda parte
+
+1
+
+Selecione uma pessoa para ser o orientador
+do grupo;
+
+2
+
+Peça aos membros do grupo para andar em
+uma direção qualquer;
+
+3
+
+Depois de um tempo, diga a palavra mágica
+“triângulo”: o orientador do grupo tem de formar triângulos equiláteros com todos os mem173
+
+bros do grupo (incluindo ele mesmo em um
+dos triângulos);
+
+4
+
+Cronometre quanto tempo levou para o grupo
+formar os triângulos.
+
+A primeira parte mostra um grupo auto-organizado; a segunda, um
+grupo guiado por um organizador.
+Normalmente, a formação do triângulo auto-organizado é mais
+rápida que sua contrapartida, e a equipe sente-se mais engajada
+na atividade.
+Ela foi feita por Heitor Roriz (https://twitter.com/hroriz), um colega e coach de equipes. Deixo aqui meus parabéns a ele por
+aplicar uma atividade divertida que ajuda a promover a discussão
+sobre um conceito essencial para equipes ágeis bem-sucedidas:
+a auto-organização.
+
+ZIP ZAP ZOOM
+Este é um bom início para reuniões, especialmente para novas equipes. Traz energia para a sala e a dinâmica da atividade ajuda os
+participantes a lembrar os nomes uns dos outros.
+
+174
+
+COMO FUNCIONA:
+
+1
+
+2
+3
+
+Peça ao time para formar um círculo e a cada
+participante para fechar suas mãos, enquanto
+apontam com seus dedos indicadores.
+Explique os comandos Zip, Zap e Zoom.
+Peça para um participante fazer o primeiro
+movimento, dizendo um dos comandos verbais e escolhendo a direção inicial (horário ou
+anti-horário).
+
+Os comandos:
+Zip: aponte para a pessoa exatamente ao seu lado, mantendo a direção anterior.
+Zap: aponte para a pessoa exatamente ao seu lado, mudando a direção anterior.
+Zoom: aponte para qualquer pessoa no círculo, dizendo seu nome. O
+receptor deve decidir a direção para o próximo movimento na sua vez.
+Quando um participante executar um comando errado, um que não
+existe ou apontar para a direção errada em um comando zip/zap,
+ele deve ser removido do círculo.
+
+175
+
+Desenho ilustrativo: zip zap zoom
+
+Essa atividade não é apenas um bom estímulo, mas também dá aos
+participantes foco e os ajuda a lembrar os nomes uns dos outros.
+
+DESEMBARACEM-SE
+Desembaracem-se é um ótimo estímulo para movimentar as pessoas e passa uma mensagem muito interessante sobre achar uma
+solução em uma situação complicada.
+
+176
+
+COMO FUNCIONA:
+
+1
+
+Peça ao grupo para formar um círculo (o tamanho do grupo tem de ser mais que seis pessoas.
+Para grupos muito grandes, separe em menores, com aproximadamente 12 pessoas cada);
+
+2
+
+Peça para todo mundo colocar as mãos para
+cima;
+
+3
+
+Dê as instruções para se embaraçarem: Com
+sua mão direita, pegue a mão esquerda de alguém. Com sua mão esquerda, pegue a mão direita de alguém. Você não pode pegar a mão de
+pessoas ao seu lado.
+
+4
+
+Peça ao grupo para se desembaraçar sem soltar as mãos e tentar formar um círculo.
+
+Desenho ilustrativo: desembaracem-se
+
+177
+
+O grupo vai pular as mãos, alternar-se e achar uma saída, seja formando um ou mais círculos. Às vezes, é impossível desembaraçar-se. Neste cenário, peça ao grupo para remover uma pessoa. As
+mãos que ficarem livres devem conectar-se com a pessoa remanescente no grupo embaraçado.
+
+PEÇAS COMPLEXAS
+Peças complexas é um ótimo _energizer_ para fazer as pessoas interagirem enquanto conversam sobre sistemas complexos e peças
+interconectadas.
+
+COMO FUNCIONA:
+
+178
+
+1
+
+Todos ficam em pé e andando.
+
+2
+
+Cada pessoa pensa em duas outras pessoas.
+
+3
+
+Sem dizer nomes, cada pessoa deve ficar
+igualmente distante das duas pessoas em
+quem pensou. Isso deve levar um minuto, enquanto elas se movem.
+
+4
+
+Depois que todos pararem, peça para a pessoa mais alta do grupo ir a um canto da sala.
+
+4
+
+Peça para todos encontrarem suas distâncias
+iguais de novo.
+
+Desenho ilustrativo: peças complexas
+
+Aprendi esta atividade com Bethlem Migot. Ela a usava como energizer durante um workshop de análise. A atividade deixou todos
+energizados antes de ela ter uma breve conversa sobre sistemas
+complexos, mudanças e requerimentos interconectados. Vale apontar que ela funciona melhor em grupos de dez a trinta pessoas.
+179
+
+COSTAS COM COSTAS
+Costas com Costas é uma atividade enérgica e divertida que passa
+uma mensagem forte e simples sobre trabalho colaborativo.
+
+COMO FUNCIONA:
+
+1
+
+Diga para os participantes acharem um par
+com altura e peso parecidos com o seu.
+
+2
+
+Peça para todos sentarem-se no chão, com os
+pares um de costas para o outro.
+
+3
+
+Peça para os pares entrelaçarem os braços,
+enquanto ficam de costas um para o outro.
+
+4
+
+Diga para todos que o objetivo é ficar em pé,
+mantendo braços e costas juntos.
+
+Desenho ilustrativo:
+costas com costas
+
+180
+
+Essa atividade é muito divertida e fará as pessoas rirem. Normalmente, poucos pares conseguirão ficar em pé rapidamente, enquanto outros terão dificuldade. Considere não fazê-la se você
+perceber que algum participante não é capaz de ficar em pé, ou
+que não gostará de sentar-se no chão.
+
+ENCONTRE SEU PAR
+Este é um energizer muito divertido para mover as pessoas e fazê-las rir.
+
+COMO FUNCIONA:
+
+1
+
+Conte o número de participantes (um número
+par de participantes é necessário, então decida se participará ou não baseando-se nisso).
+
+2
+
+Divida o número de participantes em dois para
+decidir quantos animais existirão (se forem 20
+participantes, então existirão 10 animais diferentes).
+
+3
+
+Para cada animal, escreva o nome em dois
+post-its.
+
+181
+
+4
+5
+6
+
+Distribua os post-its para os participantes e
+diga a eles não os mostrarem para ninguém.
+Peça para todo mundo andar pela sala.
+Diga a todos para cobrirem os olhos com as
+mãos, fazerem o som do animal e tentarem
+descobrir onde está seu par.
+
+Desenho ilustrativo: encontre seu par
+
+182
+
+Aprendi essa atividade com Bethelm Migot. Confesso que demorei
+um pouco para usá-la, mas decidi tentar depois de vê-la sendo usada várias vezes e, então, perceber como as pessoas gostavam. Apenas recomendo cuidado com diferenças culturais e tenha certeza
+que os participantes estão acostumados com energizers.
+
+183
+
+184
+
+REFERÊNCIAS
+BIBLIOGRÁFICAS
+
+BLANK, Steve G. The four steps to the epiphany: successful strategies
+for products that win. 2. ed. K&S Ranch, 2013.
+CAROLI, Paulo et al. Thoughtworks Antologia Brasil: Histórias de
+aprendizado e inovação. São Paulo: Casa do Código, 2014.
+CAROLI, Paulo e CAETANO, Tainã. Fun Retrospectives: activities and
+ideas for making agile retrospectives more engaging. LeanPub, 2014.
+Disponível em www.FunRetrospectives.com.
+COHN, Mike. User stories applied: for agile software development.
+Indiana: Addison-Wesley Professional, 2004.
+
+HELM, Rafael; WILDT, Daniel. Histórias de Usuário — Por que e como
+escrever requisitos de forma ágil?. Porto Alegre: Wildtech, 2015. Disponível em http://www.wildtech.com.br/historias-de-usuario
+
+HUMBLE, Jez; FARLEY, David. Continuous delivery. Indiana: Addison-Wesley Professional, 2010.
+
+MOORE, Geoffrey A. Crossing the chasm: marketing and selling high-tech products to mainstream customers. New York: Harper Business Essentials, 1999.
+
+OHNO, Taiichi. Toyota production system: beyond large-scale pro186
+
+duction. London: Productivity Press, 1988.
+
+OSTERWALDER, A.; PIGNEUR, Y. Business model generation: a handbook for visionaries, game changers, and challengers. Amsterdam:
+OSF, 2009.
+
+PATTON, Jeff. Pragmatic personas. StickyMinds, jan. 2010. Disponível em http://www.stickyminds.com/article/pragmatic-personas.
+
+RIES, Eric. The Lean startup: how today’s entrepreneurs use continuous innovation to create radically successful businesses. Crown
+Publishing, 2011.
+
+SABBAGH, Rafael. Scrum: gestão ágil para projetos de sucesso. São
+Paulo: Casa do Código, 2013.
+
+SCHWABER, Ken; BEEDLE, Mike. Agile software development with
+Scrum. New York: Pearson, 2001.
+
+WILLIAM, S. Junk. The dynamic balance between cost, schedule, features, and quality in software development projects. Moscow:
+Computer Science Department, University of Idaho, SEPM-001,
+abr. 2000. Disponível em http://www.researchgate.net/publica187
+
+tion/267550205_The_Dynamic_Balance_Between_Cost_Schedule_Features_and_Quality_in_Software_Development_Projects
+
+WOMACK, James P.; JONES, Daniel T.; ROOS, Daniel. The machine
+that changed the world: the story of lean production. New York: Harper Perennial, 1990.
+
+WOMACK, James P.; JONES, Daniel T. Lean thinking: banish waste
+and create wealth in your corporation. London: Productivity Press,
+2003.
+
+188
+
+
